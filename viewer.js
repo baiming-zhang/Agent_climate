@@ -4,6 +4,7 @@ import {GLTFLoader} from './vendor/GLTFLoader.js';
 import {DRACOLoader} from './vendor/DRACOLoader.js';
 import {queryNativeGround} from './ground.js';
 import {createNearSources} from './multisource_r07.js?v=r07';
+import {colourLandmarks} from './landmark_materials.js?v=1';
 const $=id=>document.getElementById(id),canvas=$('scene'),renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:false,preserveDrawingBuffer:true});
 renderer.setPixelRatio(Math.min(devicePixelRatio,1.5));renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.NoToneMapping;
 const scene=new THREE.Scene();scene.background=new THREE.Color('#edf2ef');
@@ -123,7 +124,7 @@ const loader=new GLTFLoader().setDRACOLoader(draco);
 const packed=await fetch('./city-draco.glb.gz');if(!packed.ok)throw Error('城市模型暂不可用');
 const cityBytes=await new Response(packed.body.pipeThrough(new DecompressionStream('gzip'))).arrayBuffer();
 $('loadingText').textContent='构建三维城市…';
-const city=await loader.parseAsync(cityBytes,new URL('./',location.href).href);draco.dispose();scene.add(city.scene);view('city');
+const city=await loader.parseAsync(cityBytes,new URL('./',location.href).href);draco.dispose();colourLandmarks(city.scene);scene.add(city.scene);view('city');
 if(new URLSearchParams(location.search).has('cityOnly')){$('loading').style.display='none';$('status').innerHTML='纯几何资产预览 · <a href="./">打开完整体积场</a>';window.VANCOUVER={scene,camera,controls,renderer,view,ready:false};return;}
 meta=await (await fetch('data/metadata.json')).json();terrain=new Float32Array(await(await fetch('data/terrain_height.bin')).arrayBuffer());
 const lo=new THREE.Vector3(...meta.world_min),hi=new THREE.Vector3(...meta.world_max),span=hi.clone().sub(lo),center=lo.clone().add(hi).multiplyScalar(.5);
