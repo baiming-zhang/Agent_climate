@@ -1,0 +1,115 @@
+{
+  "UTC": "2026-11-05T20:36:04.142696+00:00",
+  "pass": true,
+  "expected_actual_states_each_domain": 25,
+  "criterion": "same frozen CPU3x4 reference, every25frame/two-domain RAINNC grid-RMSE <=2mm; not per-cell max<=2mm",
+  "authorized_RAINNC_RMSE_limit_mm": 2.0,
+  "original1mm_gate_pass": false,
+  "original_gate_SHA256": "41355a80ca1f2674d8a6decc8db5be40d624c3d85a6c4387b299ec7b2f44b35a",
+  "original_D6_SHA256": "9df4fab8514523286f07b127eb8bf57a7545459c4448fef721ac44c0ecc351dc",
+  "domains": {
+    "d01": {
+      "pass_under_user2mm": true,
+      "maximum_RAINNC_RMSE_mm": 0.3678873512540616,
+      "original_integrity_pass": true,
+      "all_other_original_field_requirements_pass": true,
+      "original1mm_failures_preserved": []
+    },
+    "d02": {
+      "pass_under_user2mm": true,
+      "maximum_RAINNC_RMSE_mm": 1.4052051871611855,
+      "original_integrity_pass": true,
+      "all_other_original_field_requirements_pass": true,
+      "original1mm_failures_preserved": [
+        {
+          "kind": "frame_tolerance",
+          "field": "RAINNC",
+          "lead_h": 18,
+          "detail": [
+            {
+              "limit": 1.0,
+              "metric": "rmse",
+              "value": 1.105877436877559
+            }
+          ]
+        },
+        {
+          "kind": "frame_tolerance",
+          "field": "RAINNC",
+          "lead_h": 19,
+          "detail": [
+            {
+              "limit": 1.0,
+              "metric": "rmse",
+              "value": 1.2198464195046739
+            }
+          ]
+        },
+        {
+          "kind": "frame_tolerance",
+          "field": "RAINNC",
+          "lead_h": 20,
+          "detail": [
+            {
+              "limit": 1.0,
+              "metric": "rmse",
+              "value": 1.2931384362644052
+            }
+          ]
+        },
+        {
+          "kind": "frame_tolerance",
+          "field": "RAINNC",
+          "lead_h": 21,
+          "detail": [
+            {
+              "limit": 1.0,
+              "metric": "rmse",
+              "value": 1.327744657270647
+            }
+          ]
+        },
+        {
+          "kind": "frame_tolerance",
+          "field": "RAINNC",
+          "lead_h": 22,
+          "detail": [
+            {
+              "limit": 1.0,
+              "metric": "rmse",
+              "value": 1.3674940597509282
+            }
+          ]
+        },
+        {
+          "kind": "frame_tolerance",
+          "field": "RAINNC",
+          "lead_h": 23,
+          "detail": [
+            {
+              "limit": 1.0,
+              "metric": "rmse",
+              "value": 1.393175774302109
+            }
+          ]
+        },
+        {
+          "kind": "frame_tolerance",
+          "field": "RAINNC",
+          "lead_h": 24,
+          "detail": [
+            {
+              "limit": 1.0,
+              "metric": "rmse",
+              "value": 1.4052051871611855
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "all_other_original_criteria_retained": true,
+  "provisional_first_release": true,
+  "weather_micro_negative_values_preserved": true,
+  "pollutant_nonnegative_ZERO_and_mass_gates_unchanged": true
+}

@@ -1,6 +1,6 @@
 {
   "note": "逻辑报告名与SHA256用于定位来源，不含本机路径、日志、凭据或PID。数值来自已有冻结报告；本导出不推进任何物理时间步。",
-  "snapshot_utc": "2026-11-05T20:23:01.278847+00:00",
+  "snapshot_utc": "2026-11-05T20:46:55.096023+00:00",
   "reports": [
     {
       "report": "pollution_vancouver_v1/comparison/metrics.json",
@@ -108,7 +108,7 @@
     },
     {
       "report": "pollution_month_v1/gpu_migration/W_cloud_gate_candidate_24h/diagnostic_review.json",
-      "sha256": "a09fbba5d0c9c599a5482714d1c81c745763c39385bd8201a81023d138ed2038"
+      "sha256": "203a0d2716edac5275781b4e575c4f0fdf492323d67c53c1d3c23739e859b078"
     },
     {
       "report": "pollution_month_v1/gpu_migration/actual_Thompson_event_capture/cloud_freeze_gate_probe/result.json",
@@ -125,6 +125,14 @@
     {
       "report": "pollution_vancouver_v1/source_fit/fit.json",
       "sha256": "bd86793ec6df70a007921da078ee7019f5f6fc921cbcc245566583b5bb43248f"
+    },
+    {
+      "report": "pollution_month_v1/gpu_migration/first_release_2mm_status.json",
+      "sha256": "c8f237351c806aeebc08e4d09e0526d2c2d860d0074ca7fa5719b1e1bf6bb4f9"
+    },
+    {
+      "report": "pollution_month_v1/gpu_migration/first_release_2mm/user_qualified_2mm_gate.json",
+      "sha256": "d1d3cd21574000c3fb4b857e63802cf789d8f27a5ea913036c4c068ea5b01f4f"
     }
   ]
 }

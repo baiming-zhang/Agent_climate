@@ -8,6 +8,8 @@
   <title>计算与结果 · Agent Climate</title>
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./results.css">
+  <link rel="stylesheet" href="./vendor/katex/katex.min.css">
+  <script defer src="./vendor/katex/katex.min.js"></script>
 </head>
 <body>
   <a class="skip" href="#content">跳到内容</a>
@@ -24,7 +26,7 @@
     <div class="scope-note"><span class="status-dot"></span><p><strong>目前没有可播放的连续30天结果。</strong> 不把120秒演示循环、拉长或拼接成一个月。新月试验通过气象与污染输送验证后，才会替换为真实720小时序列。</p><a href="#month">查看验证记录 ↓</a></div>
 
     <section class="section" id="method">
-      <div class="section-head"><div><p class="eyebrow">01 / METHOD</p><h2>每一步，如何模拟</h2></div><p>以下为已完成历史案例的计算链。<br>近源演示与新30天计划单独标注。</p></div>
+      <div class="section-head"><div><p class="eyebrow">01 / METHOD</p><h2>每一步，如何模拟</h2></div><p>含展开式方程、符号和单位。<br>历史案例、近源演示与新月版分开说明。</p></div>
       <div class="flow" aria-label="计算流程"><span>输入与冻结</span><b>→</b><span>三维气象</span><b>→</b><span>释放与浮升</span><b>→</b><span>输送与沉降</span><b>→</b><span>训练与留出</span><b>→</b><span>三维展示</span></div>
       <div class="method-list">
         <details open><summary><span class="step">01</span><span><strong>冻结输入与评价规则</strong><small>排放清单、气象边界、观测分组</small></span><span class="expand">＋</span></summary><div class="detail-body"><p>历史天气由同次GFS 2021-12-26 18 UTC预报驱动，模拟72小时。SO₂原始小时报告来自ECCC NAPS：17站固定分为12训练站与5留出站，分别574与238条有效报告；零值保留、缺测不填零。两种方案使用同一批观测交集。</p><p>源位置、排放年量、物理配置和误差门在留出评价前冻结。这是使用同期训练观测的历史空间留出重建，不是未来盲测。</p></div></details>
@@ -34,6 +36,7 @@
         <details><summary><span class="step">05</span><span><strong>只用训练站估计源组合与背景</strong><small>同一输送场上的A / G对照</small></span><span class="expand">＋</span></summary><div class="detail-body"><p>A：年库存乘子固定为1，只拟合非负常数背景。G：用相同12训练站拟合五个常数源组系数和背景；正则化由整站留一交叉验证选择，λ=0.01。固定预测后才评分5个留出站。</p><div class="equation">预测 = b + Σ a<sub>j</sub> H<sub>j</sub> Q<sub>j</sub><span>H为冻结的源—受体输送响应</span></div><p>系数是本次模型假设下的条件估计，不是真实逐小时排放。地图显示源贡献，评分预测包含拟合背景，两者不能混称总环境浓度。网页外观第一版与年库存基线A是不同概念。</p><details class="nested"><summary>查看五组系数与名义年量</summary><div class="table-scroll"><table><thead><tr><th>源组</th><th>条件乘子</th><th>名义年量 t</th></tr></thead><tbody id="source-factors"></tbody></table></div></details></div></details>
         <details><summary><span class="step">06</span><span><strong>把真实浓度映射到可交互三维场景</strong><small>标量插值、浓度透明度、地表查询</small></span><span class="expand">＋</span></summary><div class="detail-body"><p>区域体积读取16层浓度；相邻时刻在浓度、位置或轨迹层面插值，再绘制当前场景。近源Gaussian核按视线积分求浓度并映射透明度。SO₂本身无色，灰色和自选颜色只用于显示，不是黑烟的光学预测。</p><p>地表查询读取真实原生0–20 m层并按经纬网格采样，范围外返回空值。近源查询则为局部平地0–20 m模型求积，二者在界面中区分。NRCan建筑轮廓与简化高度、地形显示×1.8仅用于景观，不让气象自动获得逐栋建筑分辨率。</p><div class="equation">目标月动画：t<sub>模拟</sub> = t<sub>播放</sub> × (720 h / 15 s)<span>压缩播放时间，不缩短物理积分时长</span></div></div></details>
       </div>
+      <div id="equations"></div>
     </section>
 
     <section class="section" id="history">
@@ -54,13 +57,13 @@
     </section>
 
     <section class="section month-section" id="month">
-      <div class="section-head"><div><p class="eyebrow">04 / THE 30-DAY EXPERIMENT</p><h2>连续一个月，仍在验证</h2></div><span class="badge pending" id="latest-gate">尚未准入月生产</span></div>
+      <div class="section-head"><div><p class="eyebrow">04 / THE 30-DAY EXPERIMENT</p><h2 id="month-title">连续一个月，首版正在计算</h2></div><span class="badge pending" id="latest-gate">读取首版进度…</span></div>
       <div class="month-intro"><div><h3>目标是720小时，不是120秒。</h3><p>冻结起报 <b>2026-11-04 18:00 UTC</b>，目标结束 <b>2026-12-04 18:00 UTC</b>。以真实连续天气状态驱动持续排放、三维输送与干湿沉降，再把整段720小时映射为15秒播放。</p><p>前384小时GFS与390–720小时CFS预报相接；远期是预报情景，不是未来实测，也不承诺逐小时可靠。未来月份不会通过循环历史片段生成。</p></div><div class="month-plan"><div><span>01</span><p>合格气象</p><small>721时次 × 2域</small></div><div><span>02</span><p>连续污染输送</p><small>720小时 · 质量收支</small></div><div><span>03</span><p>查询与播放</p><small>地表／3D／沉降／15秒</small></div></div></div>
       <div class="experiment-note"><strong id="active-experiment">本轮24小时对照正在验证</strong><p id="active-description">等待完整评分快照。</p><p id="new-failures"></p><p>新天气使用获准的Noah-MP配置。GPU为独立JAX版WRF兼容实现；私有修复分支明确标注。FLEXPART输送仍为CPU并行，未宣称全链GPU。</p></div>
       <details class="research-detail"><summary>查看新月气象与污染计算配置</summary><div class="table-scroll"><table><tbody><tr><th>气象网格／步长</th><td>9 / 3 km两域，18 / 6秒，50个大气层</td></tr><tr><th>主要物理配置</th><td>Thompson 8云微物理、RRTMG 4辐射、YSU 1边界层、Noah-MP 4陆面；GF积云外域3／子域0</td></tr><tr><th>初始化与边界</th><td>冻结GFS 2026110418起报；GFS至384h、CFS有效390–720h，真实连续状态接续，不每日清零</td></tr><tr><th>源与背景计划</th><td>三源实际位置、已核2024年量；350,000个NASA初始背景粒子，未来新增1,000,000粒子；不是实时排放／实测背景</td></tr><tr><th>输送计划</th><td>CPU 8线程；16层输出顶20–10,000 m；连续720h，粒子年龄上限2,592,060秒，避免11.6天截断</td></tr><tr><th>验收与产品</th><td>721气象时次×两域；720h污染Times完整、有限非负、ZERO精确0；沉降／出流质量预算后才生成月均和交互数据</td></tr></tbody></table></div><p class="fine">这里列出已冻结的计划与接口，不代表已运行完该月。Briggs终高释放不是已解析的热烟羽CFD；湍流采用合格TURB1 / SFC0路径，云量4D接口单独验证，雪冰和氧化仍有局限。</p></details>
-      <figure class="chart-card wide"><div class="card-head"><div><h3>24小时降水一致性验证</h3><p>GPU 对固定CPU参考 · d02累计RAINNC · RMSE / mm</p></div><span class="badge">原门：每帧 ≤ 1 mm</span></div><div id="rain-chart" class="chart" role="img" aria-label="各GPU版本对同一CPU参考的逐时累计降水RMSE"></div><div id="rain-legend" class="legend"></div><figcaption>这检验CPU／GPU一致性，不是对真实雨量观测评分。完整门还检查两域、全部字段、25时次及完整性；曲线通过单项不等于完整门通过。</figcaption></figure>
+      <figure class="chart-card wide"><div class="card-head"><div><h3>24小时降水一致性验证</h3><p>GPU 对固定CPU参考 · d02累计RAINNC · RMSE / mm</p></div><span class="badge" id="first-release-limit">原1 mm保留 · 首版 ≤ 2 mm</span></div><div id="rain-chart" class="chart" role="img" aria-label="各GPU版本对同一CPU参考的逐时累计降水RMSE"></div><div id="rain-legend" class="legend"></div><figcaption>这检验CPU／GPU一致性，不是对真实雨量观测评分。用户授权首版仅将RAINNC逐帧RMSE放宽至2 mm；其它原字段与完整性门保留。原1 mm结论仍单独展示。</figcaption></figure>
       <div class="table-scroll"><table><caption>所有已测试版本 · 原d02第19–24小时 · RMSE / mm</caption><thead id="rain-table-head"></thead><tbody id="rain-table-body"></tbody></table></div>
-      <div class="table-scroll"><table><caption>分支变化与完整门状态</caption><thead><tr><th>版本</th><th>源码变化／分支关系</th><th>d01</th><th>d02</th><th>完整门</th></tr></thead><tbody id="gpu-versions"></tbody></table></div>
+      <div class="table-scroll"><table><caption>分支变化与原完整门状态（原RAINNC上限1 mm，不改写）</caption><thead><tr><th>版本</th><th>源码变化／分支关系</th><th>d01</th><th>d02</th><th>原完整门</th></tr></thead><tbody id="gpu-versions"></tbody></table></div>
       <p class="fine" id="field-changes"></p>
       <details class="research-detail"><summary>查看所有版本的全部验收失败项</summary><div class="table-scroll failure-scroll"><table><thead><tr><th>版本</th><th>域</th><th>变量</th><th>小时</th><th>指标</th><th>实际值</th><th>原上限</th></tr></thead><tbody id="failure-table"></tbody></table></div></details>
       <details class="research-detail"><summary>查看原始天气负迹（未截零）</summary><div class="table-scroll"><table><caption>有派生导出记录的完成候选 · d02全25时次最小值 · 水凝物kg/kg</caption><thead><tr><th>候选</th><th>QCLOUD</th><th>QRAIN</th><th>QICE</th><th>QSNOW</th><th>QGRAUP</th></tr></thead><tbody id="negative-table"></tbody></table></div><p class="fine">这些是天气水凝物的微小负迹，保留原数值与记录；不等于SO₂结果允许负浓度。污染非负、ZERO和质量门保持严格。</p></details>
@@ -72,6 +75,8 @@
   </main>
   <footer><a href="../">← 返回三维场景</a><p>Agent Climate · 可视化、计算与验证</p><a href="#content">回到顶部 ↑</a></footer>
   <div id="data-error" role="alert" hidden>报告数据未能载入。请刷新，或直接下载本页数据文件。</div>
+  <div id="math-error" role="alert" hidden>公式排版未能完成，请刷新页面。</div>
   <script src="./results.js" defer></script>
+  <script src="./methods.js" defer></script>
 </body>
 </html>

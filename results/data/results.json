@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "snapshot_utc": "2026-11-05T20:23:01.278847+00:00",
+  "snapshot_utc": "2026-11-05T20:46:55.096023+00:00",
   "status_semantics": "Static report snapshot, not live telemetry; pending never means passed.",
   "history": {
     "year": 2021,
@@ -4051,7 +4051,142 @@
       "scope": "Same actual10h+6s14400x50input columns; zero new forecast steps; not month verification."
     },
     "D6_sha256": "9df4fab8514523286f07b127eb8bf57a7545459c4448fef721ac44c0ecc351dc",
-    "source_revision": "wrf_gpu v0.4.6 /72dbdd753246c660a696972acc6eed9695d8273f; private research candidates explicitly marked"
+    "source_revision": "wrf_gpu v0.4.6 /72dbdd753246c660a696972acc6eed9695d8273f; private research candidates explicitly marked",
+    "first_release_2mm": {
+      "qualification": {
+        "UTC": "2026-11-05T20:36:04.142696+00:00",
+        "pass": true,
+        "expected_actual_states_each_domain": 25,
+        "criterion": "same frozen CPU3x4 reference, every25frame/two-domain RAINNC grid-RMSE <=2mm; not per-cell max<=2mm",
+        "authorized_RAINNC_RMSE_limit_mm": 2.0,
+        "original1mm_gate_pass": false,
+        "original_gate_SHA256": "41355a80ca1f2674d8a6decc8db5be40d624c3d85a6c4387b299ec7b2f44b35a",
+        "original_D6_SHA256": "9df4fab8514523286f07b127eb8bf57a7545459c4448fef721ac44c0ecc351dc",
+        "domains": {
+          "d01": {
+            "pass_under_user2mm": true,
+            "maximum_RAINNC_RMSE_mm": 0.3678873512540616,
+            "original_integrity_pass": true,
+            "all_other_original_field_requirements_pass": true,
+            "original1mm_failures_preserved": []
+          },
+          "d02": {
+            "pass_under_user2mm": true,
+            "maximum_RAINNC_RMSE_mm": 1.4052051871611855,
+            "original_integrity_pass": true,
+            "all_other_original_field_requirements_pass": true,
+            "original1mm_failures_preserved": [
+              {
+                "kind": "frame_tolerance",
+                "field": "RAINNC",
+                "lead_h": 18,
+                "detail": [
+                  {
+                    "limit": 1.0,
+                    "metric": "rmse",
+                    "value": 1.105877436877559
+                  }
+                ]
+              },
+              {
+                "kind": "frame_tolerance",
+                "field": "RAINNC",
+                "lead_h": 19,
+                "detail": [
+                  {
+                    "limit": 1.0,
+                    "metric": "rmse",
+                    "value": 1.2198464195046739
+                  }
+                ]
+              },
+              {
+                "kind": "frame_tolerance",
+                "field": "RAINNC",
+                "lead_h": 20,
+                "detail": [
+                  {
+                    "limit": 1.0,
+                    "metric": "rmse",
+                    "value": 1.2931384362644052
+                  }
+                ]
+              },
+              {
+                "kind": "frame_tolerance",
+                "field": "RAINNC",
+                "lead_h": 21,
+                "detail": [
+                  {
+                    "limit": 1.0,
+                    "metric": "rmse",
+                    "value": 1.327744657270647
+                  }
+                ]
+              },
+              {
+                "kind": "frame_tolerance",
+                "field": "RAINNC",
+                "lead_h": 22,
+                "detail": [
+                  {
+                    "limit": 1.0,
+                    "metric": "rmse",
+                    "value": 1.3674940597509282
+                  }
+                ]
+              },
+              {
+                "kind": "frame_tolerance",
+                "field": "RAINNC",
+                "lead_h": 23,
+                "detail": [
+                  {
+                    "limit": 1.0,
+                    "metric": "rmse",
+                    "value": 1.393175774302109
+                  }
+                ]
+              },
+              {
+                "kind": "frame_tolerance",
+                "field": "RAINNC",
+                "lead_h": 24,
+                "detail": [
+                  {
+                    "limit": 1.0,
+                    "metric": "rmse",
+                    "value": 1.4052051871611855
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "all_other_original_criteria_retained": true,
+        "provisional_first_release": true,
+        "weather_micro_negative_values_preserved": true,
+        "pollutant_nonnegative_ZERO_and_mass_gates_unchanged": true
+      },
+      "progress": {
+        "status": "running_continuous_GPU24to720h_user2mm",
+        "started_UTC": "2026-11-05T20:36:11.396992+00:00",
+        "updated_UTC": "2026-11-05T20:46:35.326154+00:00",
+        "actual_start_hour": 24,
+        "target_hours": 720,
+        "available_hour_not_final_validation": 44.0,
+        "weather_started_UTC": "2026-11-05T20:36:52.746935+00:00",
+        "weather_program_seconds": null,
+        "weather_ETA_UTC_extrapolated": "2026-11-06T00:16:59.037138+00:00",
+        "weather_remaining_seconds_extrapolated": 12623.71098943759,
+        "recent_wall_seconds_per_simulated_hour": 18.674128682599985,
+        "completed_stages": [],
+        "entire_user_task_complete": false
+      }
+    },
+    "weather_first_release_admitted": true,
+    "first_release_products_complete": false,
+    "original_1mm_gate_remains_failed": true
   },
   "provenance": [
     {
@@ -4160,7 +4295,7 @@
     },
     {
       "report": "pollution_month_v1/gpu_migration/W_cloud_gate_candidate_24h/diagnostic_review.json",
-      "sha256": "a09fbba5d0c9c599a5482714d1c81c745763c39385bd8201a81023d138ed2038"
+      "sha256": "203a0d2716edac5275781b4e575c4f0fdf492323d67c53c1d3c23739e859b078"
     },
     {
       "report": "pollution_month_v1/gpu_migration/actual_Thompson_event_capture/cloud_freeze_gate_probe/result.json",
@@ -4177,6 +4312,14 @@
     {
       "report": "pollution_vancouver_v1/source_fit/fit.json",
       "sha256": "bd86793ec6df70a007921da078ee7019f5f6fc921cbcc245566583b5bb43248f"
+    },
+    {
+      "report": "pollution_month_v1/gpu_migration/first_release_2mm_status.json",
+      "sha256": "c8f237351c806aeebc08e4d09e0526d2c2d860d0074ca7fa5719b1e1bf6bb4f9"
+    },
+    {
+      "report": "pollution_month_v1/gpu_migration/first_release_2mm/user_qualified_2mm_gate.json",
+      "sha256": "d1d3cd21574000c3fb4b857e63802cf789d8f27a5ea913036c4c068ea5b01f4f"
     }
   ]
 }

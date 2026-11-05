@@ -5,6 +5,7 @@ const seriesColours = ['#728b78','#929577','#bd946f','#537e83','#8d7187'];
 const escapeHTML = value => String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fmt = (value,digits=6) => Number.isFinite(value) ? value.toFixed(digits) : '—';
 const num = value => Number.isFinite(value) ? (Math.abs(value)<.00001&&value!==0?value.toExponential(3):fmt(value,6)) : '—';
+const utcStamp=value=>new Date(value).toISOString().slice(0,19).replace('T',' ')+' UTC';
 const names = {all:'全部留出',Burrard_15km:'Burrard 15 km',regional:'区域站'};
 const modelNames = {annual_inventory_prior:'A · 年库存',training_inferred_sources:'G · 源约束',constant:'训练均值常数'};
 function svg(width,height,inside,label){return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" role="img" aria-label="${escapeHTML(label)}"><title>${escapeHTML(label)}</title>${inside}</svg>`;}
@@ -44,11 +45,12 @@ function stationChart(station){
 }
 function rainChart(data){
   const versions=data.month.versions,done=versions.filter(v=>v.complete),width=1000,height=315,L=50,R=22,T=22,B=40;
-  const maximum=Math.max(1.4,Math.ceil(Math.max(...done.flatMap(v=>v.rain.d02.map(r=>r.rmse)))*5)/5);
+  const maximum=Math.max(data.month.first_release_2mm?2.2:1.4,Math.ceil(Math.max(...done.flatMap(v=>v.rain.d02.map(r=>r.rmse)))*5)/5);
   const x=h=>L+h/24*(width-L-R),y=v=>height-B-v/maximum*(height-T-B);let s='';
   for(let i=0;i<=4;i++){const value=maximum*i/4,py=y(value);s+=`<line class="grid" x1="${L}" x2="${width-R}" y1="${py}" y2="${py}"/><text x="${L-9}" y="${py+4}" text-anchor="end">${value.toFixed(2)}</text>`;}
   for(const hour of [0,6,12,18,24])s+=`<text x="${x(hour)}" y="${height-B+23}" text-anchor="middle">${hour} h</text>`;
   s+=`<line class="threshold" x1="${L}" x2="${width-R}" y1="${y(1)}" y2="${y(1)}"/><text x="${width-R-5}" y="${y(1)-8}" text-anchor="end" style="fill:#a47756">原逐帧门 1 mm</text>`;
+  if(data.month.first_release_2mm)s+=`<line class="threshold" x1="${L}" x2="${width-R}" y1="${y(2)}" y2="${y(2)}" style="stroke:#567c55"/><text x="${width-R-5}" y="${y(2)-8}" text-anchor="end" style="fill:#567c55">用户授权首版 2 mm</text>`;
   versions.forEach((version,i)=>{if(!version.complete)return;const d=version.rain.d02.map((r,j)=>`${j?'L':'M'}${x(r.lead_h).toFixed(2)},${y(r.rmse).toFixed(2)}`).join(' ');s+=`<path class="series" stroke="${seriesColours[i]}" d="${d}"><title>${escapeHTML(version.label)} · d02 RAINNC RMSE，完整门${version.pass?'通过':'未通过'}</title></path>`;});
   $('rain-chart').innerHTML=svg(width,height,s,'不同GPU版本对同一CPU参考的逐小时降水RMSE，阈值1mm');
   $('rain-legend').innerHTML=legend(versions.map((v,i)=>[v.label+(v.complete?'':' · 未完整评分'),seriesColours[i]]));
@@ -95,7 +97,21 @@ function render(data){
   }else{
     const active=data.month.active_snapshot;
     $('active-experiment').textContent='W＋云水冻结条件 · 本轮24小时对照待完整评分';
-    $('active-description').textContent=`状态截至 ${String(active.report_updated_utc||data.snapshot_utc).slice(0,19).replace('T',' ')}。${active.native_exit_code===0?'数值积分已结束，尚待完整门结果。':'积分／编译或评分尚在进行。'} 页面为静态快照，暂无合格的720小时输出。`;
+    $('active-description').textContent=`状态截至 ${utcStamp(active.report_updated_utc||data.snapshot_utc)}。${active.native_exit_code===0?'数值积分已结束，尚待完整门结果。':'积分／编译或评分尚在进行。'} 页面为静态快照，暂无合格的720小时输出。`;
+  }
+  if(data.month.first_release_2mm){
+    const release=data.month.first_release_2mm,progress=release.progress;
+    $('month-status').textContent='2 mm首版已准入 · 连续720h计算中';
+    $('month-title').textContent='连续一个月，首版正在计算';
+    $('latest-gate').textContent='2 mm首版通过 · 原1 mm失败保留';
+    $('latest-gate').className='badge pass';
+    $('active-experiment').textContent='用户授权2 mm首版：同一24h检查点继续到720h';
+    const lead=progress.available_hour_not_final_validation;
+    const stamp=utcStamp(progress.updated_UTC||data.snapshot_utc);
+    $('active-description').textContent=`截至报告快照 ${stamp}，${lead==null?'尚无新输出时刻':'可用天气输出推进到 '+lead+' / 720 模拟小时（存在性进度，非最终验证）'}。正式完成后还需721时次完整检查、真实污染输送和产品核验。`;
+    $('new-failures').textContent+=' 用户明确允许逐帧RAINNC网格RMSE≤2 mm后，最新候选已另行通过首版准入；原1 mm门没有被改写。';
+    $('first-release-limit').textContent='原1 mm保留 · 首版 ≤ 2 mm';
+    const download=document.createElement('a');download.href='./data/first-release-qualification.json';download.download='first-release-qualification.json';download.innerHTML='<strong>2 mm首版准入</strong><span>JSON · 新条件、原失败与适用范围 ↗</span>';document.querySelector('.download-links').append(download);
   }
   const ni=data.month.local_cloud_test.Ni;$('ni-comparison').textContent=fmt(ni.original_RMSE,3)+' → '+fmt(ni.private_RMSE,3);
   window.RESULTS_READY=true;

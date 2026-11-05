@@ -8,3 +8,5 @@
 - UBC crest: official UBC CLF image sprite, used as a geographic campus identifier. It does not indicate affiliation, endorsement, a pollution source or an actual painted surface. https://cdn.ubc.ca/clf/7.0.5/img/ubc7-clf-sprite-blue-2x.png . UBC retains its trademark rights.
 
 The3D display assets preserve their underlying source licenses; this repository does not relicense third-party data or trademarks.
+
+- Mathematical typesetting: KaTeX0.19.1, MIT, self-hosted browser build andWOFF2 fonts under `results/vendor/katex/`; license and source receipts included. Script/CSS verified against the official browser documentation SHA384. https://katex.org/docs/browser.html .
