@@ -1,0 +1,8 @@
+reports/
+city.glb
+city.glb.gz
+viewer_r07.js
+__pycache__/
+*.pyc
+src/
+data/near_source_r06.json.gz

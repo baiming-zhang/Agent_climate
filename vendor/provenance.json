@@ -1,0 +1,13 @@
+{
+  "library": "three.js",
+  "version": "0.180.0",
+  "license": "MIT",
+  "source": "https://github.com/mrdoob/three.js/tree/r180",
+  "files": {
+    "BufferGeometryUtils.js": "3c791672cadb6796d633adc62445a10357da3ad2f816abda928dafd29817b514",
+    "GLTFLoader.js": "6851a68b2c32cd98162948d11be66b5ac2027a96a3923e67457826eff1c5e715",
+    "OrbitControls.js": "678066c7c32676a376102d57749ea1d8bc7711bd16388cf03e414586502feb20",
+    "three.core.js": "7c075bd6b2414b6c4ed4b3416b180df2984051118c2b89965de066ce99307f1c",
+    "three.module.js": "9e06b55afc5c845ad8663d0dba7dc8f4e815c218bedae8a9917fac5972e5314f"
+  }
+}
