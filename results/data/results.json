@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "snapshot_utc": "2026-11-05T20:46:55.096023+00:00",
+  "snapshot_utc": "2026-11-05T20:51:03.294311+00:00",
   "status_semantics": "Static report snapshot, not live telemetry; pending never means passed.",
   "history": {
     "year": 2021,
@@ -1866,7 +1866,7 @@
     "playback_seconds": 15,
     "simulation_hours_per_playback_second": 48,
     "transport_started": false,
-    "production_admitted": false,
+    "production_admitted": true,
     "forcing": "GFS 2026110418 through384h + CFS2026110412 at390..720h",
     "versions": [
       {
@@ -4171,20 +4171,21 @@
       "progress": {
         "status": "running_continuous_GPU24to720h_user2mm",
         "started_UTC": "2026-11-05T20:36:11.396992+00:00",
-        "updated_UTC": "2026-11-05T20:46:35.326154+00:00",
+        "updated_UTC": "2026-11-05T20:50:46.203769+00:00",
         "actual_start_hour": 24,
         "target_hours": 720,
-        "available_hour_not_final_validation": 44.0,
+        "available_hour_not_final_validation": 56.0,
         "weather_started_UTC": "2026-11-05T20:36:52.746935+00:00",
         "weather_program_seconds": null,
-        "weather_ETA_UTC_extrapolated": "2026-11-06T00:16:59.037138+00:00",
-        "weather_remaining_seconds_extrapolated": 12623.71098943759,
-        "recent_wall_seconds_per_simulated_hour": 18.674128682599985,
+        "weather_ETA_UTC_extrapolated": "2026-11-06T00:32:12.534237+00:00",
+        "weather_remaining_seconds_extrapolated": 13286.330473506861,
+        "recent_wall_seconds_per_simulated_hour": 20.009533845642864,
         "completed_stages": [],
         "entire_user_task_complete": false
       }
     },
     "weather_first_release_admitted": true,
+    "production_admission_policy": "user_authorized_RAINNC_grid_RMSE2mm_provisional; not final720h product completion",
     "first_release_products_complete": false,
     "original_1mm_gate_remains_failed": true
   },
@@ -4315,7 +4316,7 @@
     },
     {
       "report": "pollution_month_v1/gpu_migration/first_release_2mm_status.json",
-      "sha256": "c8f237351c806aeebc08e4d09e0526d2c2d860d0074ca7fa5719b1e1bf6bb4f9"
+      "sha256": "032f67f20e36bbc9e6cdc2c604fe51bd81313cc213b7081a8ab2e098279cbc42"
     },
     {
       "report": "pollution_month_v1/gpu_migration/first_release_2mm/user_qualified_2mm_gate.json",

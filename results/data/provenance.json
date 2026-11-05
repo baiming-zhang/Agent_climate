@@ -1,6 +1,6 @@
 {
   "note": "逻辑报告名与SHA256用于定位来源，不含本机路径、日志、凭据或PID。数值来自已有冻结报告；本导出不推进任何物理时间步。",
-  "snapshot_utc": "2026-11-05T20:46:55.096023+00:00",
+  "snapshot_utc": "2026-11-05T20:51:03.294311+00:00",
   "reports": [
     {
       "report": "pollution_vancouver_v1/comparison/metrics.json",
@@ -128,7 +128,7 @@
     },
     {
       "report": "pollution_month_v1/gpu_migration/first_release_2mm_status.json",
-      "sha256": "c8f237351c806aeebc08e4d09e0526d2c2d860d0074ca7fa5719b1e1bf6bb4f9"
+      "sha256": "032f67f20e36bbc9e6cdc2c604fe51bd81313cc213b7081a8ab2e098279cbc42"
     },
     {
       "report": "pollution_month_v1/gpu_migration/first_release_2mm/user_qualified_2mm_gate.json",
