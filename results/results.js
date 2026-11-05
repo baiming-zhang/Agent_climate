@@ -86,7 +86,7 @@ function render(data){
   $('negative-table').innerHTML=versions.filter(v=>v.complete&&v.weather_negative_traces_d02).map(v=>`<tr><td>${escapeHTML(v.label)}</td>`+['QCLOUD','QRAIN','QICE','QSNOW','QGRAUP'].map(field=>`<td>${v.weather_negative_traces_d02[field]?.minimum?.toExponential(3)??'记录未列出'}</td>`).join('')+'</tr>').join('');
   const latest=versions.at(-1);
   const changes=data.month.latest_d02_field_RMSE_changes_vs_original;
-  if(changes)$('field-changes').textContent=`最新候选相对原GPU的d02全字段RMSE：${changes.improved}项改善、${changes.worsened}项恶化、${changes.unchanged}项相同。另${changes.missing}项是Times元数据，无数值指标；实际缺失字段为空。各字段RMSE／最大误差及原单位见下载，未挑选改善项。`;
+  if(changes)$('field-changes').textContent=`最新候选相对原GPU的d02全字段RMSE：${changes.improved}项改善、${changes.worsened}项恶化、${changes.unchanged}项相同。另${changes.no_numeric_metric??changes.missing??0}项是Times元数据，无数值指标；实际缺失字段为空。各字段RMSE／最大误差及原单位见下载，未挑选改善项。`;
   if(latest.complete){
     $('active-experiment').textContent='W＋云水冻结条件 · 完整24小时门'+(latest.pass?'通过，待资格复核':'未通过');
     $('active-description').textContent='已按同一CPU参考、全部字段、两域、25时次和原阈值评分。'+(latest.pass?'这仍不等于720小时生产和污染输送完成。':'失败结果保留，未将此版本准入月生产。');
@@ -112,6 +112,17 @@ function render(data){
     $('new-failures').textContent+=' 用户明确允许逐帧RAINNC网格RMSE≤2 mm后，最新候选已另行通过首版准入；原1 mm门没有被改写。';
     $('first-release-limit').textContent='原1 mm保留 · 首版 ≤ 2 mm';
     const download=document.createElement('a');download.href='./data/first-release-qualification.json';download.download='first-release-qualification.json';download.innerHTML='<strong>2 mm首版准入</strong><span>JSON · 新条件、原失败与适用范围 ↗</span>';document.querySelector('.download-links').append(download);
+  }
+  if(data.month.first_release360){
+    const completed=data.month.completed_period;
+    $('month-status').textContent=completed?'连续360h产品已完成':'360h气象完成 · SO₂输送中';
+    $('month-title').textContent=completed?'连续15天，完整小时场':'连续15天首版';
+    $('active-experiment').textContent='用户授权：360h → 默认15秒';
+    $('active-description').textContent=completed?'实际360个连续小时平均场、16高度层；原生有限非负、ZERO对照与干湿／出域质量预算均通过。源与初始背景分别保留。':'气象前361时次×2域已完整冻结；不重算已有天气，后续连续输送和产品独立验证。';
+    if(completed){
+      const block=document.createElement('div');block.className='table-scroll';block.innerHTML='<table><caption>本次360h真实质量收支 · kg</caption><thead><tr><th>质量标签</th><th>初始</th><th>排放</th><th>保留</th><th>干沉降</th><th>湿沉降</th><th>出域</th><th>残差</th></tr></thead><tbody>'+completed.mass_ledger.map(r=>'<tr><td>'+escapeHTML(r.species)+'</td>'+['initial_kg','emitted_kg','retained_kg','dry_kg','wet_kg','boundary_outflow_kg','residual_kg'].map(k=>'<td>'+Number(r[k]).toPrecision(5)+'</td>').join('')+'</tr>').join('')+'</tbody></table><p class="fine">全部360时次有限非负，ZERO严格为0；累计沉降取末张累计，不重复累加。质量守恒通过不等于未来观测精度已验证。</p>';document.getElementById('month').append(block);
+      for(const [file,label]of [['period360-mass-ledger.json','15天完整期与质量检查'],['period360-mass-ledger.csv','15天质量收支CSV']]){const a=document.createElement('a');a.href='./data/'+file;a.download=file;a.innerHTML='<strong>'+label+'</strong><span>实际360h · 原始数值与适用范围 ↗</span>';document.querySelector('.download-links').append(a);}
+    }
   }
   const ni=data.month.local_cloud_test.Ni;$('ni-comparison').textContent=fmt(ni.original_RMSE,3)+' → '+fmt(ni.private_RMSE,3);
   window.RESULTS_READY=true;
