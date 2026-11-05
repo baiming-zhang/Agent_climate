@@ -1,0 +1,130 @@
+{
+  "note": "逻辑报告名与SHA256用于定位来源，不含本机路径、日志、凭据或PID。数值来自已有冻结报告；本导出不推进任何物理时间步。",
+  "snapshot_utc": "2026-11-05T20:23:01.278847+00:00",
+  "reports": [
+    {
+      "report": "pollution_vancouver_v1/comparison/metrics.json",
+      "sha256": "50af384a3f0eb4b3362a36b6b0a1d458c8f9480b0dde01df343832618d864dbf"
+    },
+    {
+      "report": "pollution_vancouver_v1/comparison/accuracy_gate.json",
+      "sha256": "ec2d7b5f844f637f2552107d87faf78ead4f33cc4f9bea6164d71a88a4127509"
+    },
+    {
+      "report": "pollution_vancouver_v1/comparison/context_benchmark_scores.json",
+      "sha256": "b52224ca2ede233e2fd7e68db8df14e96d93aa94375460f4b75fedd1ffdaaaca"
+    },
+    {
+      "report": "pollution_vancouver_v1/comparison/station_scores.csv",
+      "sha256": "8b6e9c813661fd9ddceba50d2deb33beeaf8e246368ce705283e25d2f1d05562"
+    },
+    {
+      "report": "pollution_vancouver_v1/comparison/paired_original_reports.csv",
+      "sha256": "e8dd403da16e61035a7e61065f834796fc62892349666b4ed83c90ebbb298f6e"
+    },
+    {
+      "report": "pollution_vancouver_v1/source_fit/conditional_source_factors.csv",
+      "sha256": "7479377cfeadbd69ab78ecdc53944051060c22f764773c134aa6f0cc586e03e2"
+    },
+    {
+      "report": "pollution_month_v1/gpu_migration/qualification_24h_gate.json",
+      "sha256": "45987408f5ebdc1f6457099b32f118160bf9861a861f7a4fdc1989e70de29e57"
+    },
+    {
+      "report": "pollution_month_v1/gpu_migration/qualification_24h_comparison/d01.json",
+      "sha256": "7ed136151989c4149fb1bc01efa8aaa64144ef0d55ff24c890184e0b421d0879"
+    },
+    {
+      "report": "pollution_month_v1/gpu_migration/qualification_24h_comparison/d02.json",
+      "sha256": "21a579cbe59a3fa1d09328a3024d5121939b1b9739c4d890c428a7b9b3b1b578"
+    },
+    {
+      "report": "pollution_month_v1/gpu_migration/REAL32_candidate_24h/qualification_24h_gate.json",
+      "sha256": "bfcc883753d486d5234427bfb182e3e93be036e7febc5ea15897b9730ff6529b"
+    },
+    {
+      "report": "pollution_month_v1/gpu_migration/REAL32_candidate_24h/comparison/d01.json",
+      "sha256": "f6990e9f02ecb69dd77ce50d1a18726b242356c380e69dbb7633f75448a589d2"
+    },
+    {
+      "report": "pollution_month_v1/gpu_migration/REAL32_candidate_24h/comparison/d02.json",
+      "sha256": "660391a8815154cf2bfd42f371fe97913779a6b2d1bb012713444d45a7dac150"
+    },
+    {
+      "report": "pollution_month_v1/gpu_migration/REAL32_candidate_24h/derived_export.json",
+      "sha256": "a6a2c33fc74a4f8b3467f33735a66635d125659a9639b31ac489475e620d4d7b"
+    },
+    {
+      "report": "pollution_month_v1/gpu_migration/REAL32_surface_candidate_24h/qualification_24h_gate.json",
+      "sha256": "e8d78d8f059ebf36df696f27c0b468f1426929c06c5f0f815ac1f7d616c37837"
+    },
+    {
+      "report": "pollution_month_v1/gpu_migration/REAL32_surface_candidate_24h/comparison/d01.json",
+      "sha256": "afa5bb5217b0c8f082cebcac914a349d638fbbb52779af3fb9849ae33bad9b3b"
+    },
+    {
+      "report": "pollution_month_v1/gpu_migration/REAL32_surface_candidate_24h/comparison/d02.json",
+      "sha256": "f3f713e012dbd64a687eab16a8da04a8a5f98976d38eccfa37a0f1848184d949"
+    },
+    {
+      "report": "pollution_month_v1/gpu_migration/REAL32_surface_candidate_24h/derived_export.json",
+      "sha256": "0b67ed5916643840d47613e583cea77130fa780db794920a7613aabd42b60b27"
+    },
+    {
+      "report": "pollution_month_v1/gpu_migration/W_boundary_candidate_24h/qualification_24h_gate.json",
+      "sha256": "004bd3767b24feb0b0bfe7340b0aeaa136d7395acc2afb4f2d1c33e535c74fe1"
+    },
+    {
+      "report": "pollution_month_v1/gpu_migration/W_boundary_candidate_24h/comparison/d01.json",
+      "sha256": "55bf6dca61fd00ac3a8d897468defa2b4aeeca0dc87a49f8c26961ac4e4c7f6a"
+    },
+    {
+      "report": "pollution_month_v1/gpu_migration/W_boundary_candidate_24h/comparison/d02.json",
+      "sha256": "2768ca8d6bdf840b98d1fb3bcb9446e238f8a244f73f2d7c9c73c6f941e6ab6c"
+    },
+    {
+      "report": "pollution_month_v1/gpu_migration/W_boundary_candidate_24h/derived_export.json",
+      "sha256": "37e2f31b26f50b15f33149a69801b68690f903fb45cd45748b7fda7660ad8927"
+    },
+    {
+      "report": "pollution_month_v1/gpu_migration/W_cloud_gate_candidate_24h/qualification_24h_gate.json",
+      "sha256": "41355a80ca1f2674d8a6decc8db5be40d624c3d85a6c4387b299ec7b2f44b35a"
+    },
+    {
+      "report": "pollution_month_v1/gpu_migration/W_cloud_gate_candidate_24h/comparison/d01.json",
+      "sha256": "eb878d13acc9d9c1a1d0e967631e31b44d3991e29e4242e3b430cde83a82ca62"
+    },
+    {
+      "report": "pollution_month_v1/gpu_migration/W_cloud_gate_candidate_24h/comparison/d02.json",
+      "sha256": "67949d25c50f2703587764d399db3da3ad529bc24cf1aeb1c5fe26bc427d1f1c"
+    },
+    {
+      "report": "pollution_month_v1/gpu_migration/W_cloud_gate_candidate_24h/derived_export.json",
+      "sha256": "742c68f6c590fd92cf5b30a122843d1a758628fecc752cdb07ecf9d6208b8471"
+    },
+    {
+      "report": "pollution_month_v1/gpu_migration/W_cloud_gate_candidate_24h_status.json",
+      "sha256": "c0bb038b92bd3c097341fbff51619888d74fad806b45137da8848e87d0d8aeab"
+    },
+    {
+      "report": "pollution_month_v1/gpu_migration/W_cloud_gate_candidate_24h/diagnostic_review.json",
+      "sha256": "a09fbba5d0c9c599a5482714d1c81c745763c39385bd8201a81023d138ed2038"
+    },
+    {
+      "report": "pollution_month_v1/gpu_migration/actual_Thompson_event_capture/cloud_freeze_gate_probe/result.json",
+      "sha256": "fe23379df50ed484afff2b59eb940736b384c17b935256e833fc5a6678661f92"
+    },
+    {
+      "report": "published_sources_r07.json.gz",
+      "sha256": "5fced4d89c15ae6da072a4de836658a8c023518dc100baaa03a07be01a81c3ac"
+    },
+    {
+      "report": "pollution_vancouver_v1/meteorology_diagnostics/metrics.json",
+      "sha256": "8312b42d06f06220f98c4cccfe87f740b3cd30fbee64b7bf717acee5ab87b3ae"
+    },
+    {
+      "report": "pollution_vancouver_v1/source_fit/fit.json",
+      "sha256": "bd86793ec6df70a007921da078ee7019f5f6fc921cbcc245566583b5bb43248f"
+    }
+  ]
+}
