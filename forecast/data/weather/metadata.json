@@ -1,0 +1,127 @@
+{
+  "status": "display_assets_from_actual360h_frozen_weather",
+  "shape_time_y_x_fields": [
+    360,
+    46,
+    48,
+    7
+  ],
+  "fields": [
+    "precipitation_mm_h_water_equivalent",
+    "snow_ice_graupel_mm_h_water_equivalent",
+    "u10_m_s",
+    "v10_m_s",
+    "selected_source_wet_removal_mg_m2_h",
+    "HGT_m",
+    "wet_removal_coverage_valid"
+  ],
+  "bounds_east_north_km": [
+    -58.68767206726654,
+    -47.42325565084163,
+    51.344385605691876,
+    52.90401919303462
+  ],
+  "chunks": [
+    {
+      "first_index": 0,
+      "count": 24,
+      "file": "weather_00.f32.gz",
+      "SHA256": "d007f57fbf3d42506168d2b0342ba90d121251b44fa5b281f4b8e82fc68c6499"
+    },
+    {
+      "first_index": 24,
+      "count": 24,
+      "file": "weather_01.f32.gz",
+      "SHA256": "3a8b90688acd5bdbd4ac747fa78bd985893e2e5a2f7bc81ff6dccd6578f24442"
+    },
+    {
+      "first_index": 48,
+      "count": 24,
+      "file": "weather_02.f32.gz",
+      "SHA256": "4673fa6a7f0e035fcd49186c1f53b5038a0ed9997397bbc4a407dfddef355f50"
+    },
+    {
+      "first_index": 72,
+      "count": 24,
+      "file": "weather_03.f32.gz",
+      "SHA256": "ef33eda8488d436defd532ed255bc69c0b6de76a754b2eb1cd18b74674984c94"
+    },
+    {
+      "first_index": 96,
+      "count": 24,
+      "file": "weather_04.f32.gz",
+      "SHA256": "f0c89a85bca7dcd499ac0f79597e31b720cf91dd852555d2aa4cbea71b05f100"
+    },
+    {
+      "first_index": 120,
+      "count": 24,
+      "file": "weather_05.f32.gz",
+      "SHA256": "857dad1694aa520dee7ea92a59a4f0beddc2a78ee9e452c2c06116e42dcb27e1"
+    },
+    {
+      "first_index": 144,
+      "count": 24,
+      "file": "weather_06.f32.gz",
+      "SHA256": "524461360ce3c6d59fa72af013495b24b2fd976b30f2c03eab892a189f3ee66b"
+    },
+    {
+      "first_index": 168,
+      "count": 24,
+      "file": "weather_07.f32.gz",
+      "SHA256": "9bd56edec0d62c4d16099720438682b83f814848d402c440648b9c00d090b6a8"
+    },
+    {
+      "first_index": 192,
+      "count": 24,
+      "file": "weather_08.f32.gz",
+      "SHA256": "07cffa4c9336a3cfd0b244a48403ddfe0621288d9ddd0f15ea6116a1fa5fe8ed"
+    },
+    {
+      "first_index": 216,
+      "count": 24,
+      "file": "weather_09.f32.gz",
+      "SHA256": "3bf5308fe2c251a6059fe902a200f3a76e2301bf8c7032e8cc73bb551adb22a7"
+    },
+    {
+      "first_index": 240,
+      "count": 24,
+      "file": "weather_10.f32.gz",
+      "SHA256": "2eafa3f7e0272e826066b075d0cc69351c081f75ac85c834e17ee18140449cc2"
+    },
+    {
+      "first_index": 264,
+      "count": 24,
+      "file": "weather_11.f32.gz",
+      "SHA256": "ff3510a6e9b5d6fbb4e97a52e795b7a63fb929e39ee84267dcd4f6b4f1d6a9b8"
+    },
+    {
+      "first_index": 288,
+      "count": 24,
+      "file": "weather_12.f32.gz",
+      "SHA256": "74c709dad0f75bda8113f61526764de550bdd5071e4401e00d0e1114c465daee"
+    },
+    {
+      "first_index": 312,
+      "count": 24,
+      "file": "weather_13.f32.gz",
+      "SHA256": "b3b9684709e41f286db8b76f8d377bd5c7a525d061ca4f5a8df44ff8c18d3ed4"
+    },
+    {
+      "first_index": 336,
+      "count": 24,
+      "file": "weather_14.f32.gz",
+      "SHA256": "c04a1535bb68dc4920b13694f27d17c1f7c89008081be7e6745317e4b469590e"
+    }
+  ],
+  "source_file": "sources.json",
+  "sampling": "Actual parent-independent d02 Lambert bilinear; hourly differences of native cumulative precipitation and native source wet deposition",
+  "precipitation_is_forecast_not_observed": true,
+  "snow_and_graupel_retained_as_phase_diagnostic": true,
+  "city_rectangle_rainy_hours_above_0_1mm_any_cell": 133,
+  "city_rectangle_area_mean_total_mm": 71.96113938435245,
+  "city_rectangle_max_hourly_mm": 7.130127231424339,
+  "wet_visual_semantics": "Falling tinted rain glyphs encode actual selected-source wet-removal rate, not gravitational SO2 gas particles or a new sink",
+  "outside_native_wet_domain_display_cells_masked_not_computed_zero": 184,
+  "new_forecast_steps": 0,
+  "seconds": 65.6024397120018
+}

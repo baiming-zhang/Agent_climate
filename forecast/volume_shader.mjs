@@ -5,7 +5,7 @@ export const monthShader={
  varying vec3 vWorld;out vec4 fragColor;
  uniform sampler3D field0;uniform sampler3D field1;uniform sampler2D terrain;uniform sampler2D coverage;uniform sampler2D depthMap;
  uniform vec3 lo;uniform vec3 hi;uniform vec2 horizontalShape;uniform vec3 eye;uniform vec2 resolution;uniform mat4 inverseVP;
- uniform float heights[16];uniform float topAGL;uniform float timeWeight;uniform float gain;uniform float enabled;uniform float contribution;uniform vec3 pigment;
+ uniform float heights[16];uniform float topAGL;uniform float timeWeight;uniform float gain;uniform float enabled;uniform float contribution;uniform float raySteps;uniform vec3 pigment;
  float sampleScalar(vec3 p){
   vec2 q=vec2((p.x-lo.x)/(hi.x-lo.x),(hi.z-p.z)/(hi.z-lo.z));
   if(any(lessThan(q,vec2(0.)))||any(greaterThan(q,vec2(1.))))return 0.;
@@ -28,8 +28,9 @@ export const monthShader={
   vec4 wp=inverseVP*vec4(pixel*2.-1.,depth*2.-1.,1.);
   if(depth<.999999)exit=min(exit,length(wp.xyz/wp.w-eye));
   if(exit<=entry)discard;
-  float ds=(exit-entry)/224.,alpha=0.;
-  for(int i=0;i<224;i++){
+  float ds=(exit-entry)/raySteps,alpha=0.;
+  for(int i=0;i<256;i++){
+   if(float(i)>=raySteps)break;
    float c=sampleScalar(eye+direction*(entry+(float(i)+.5)*ds));
    float da=1.-exp(-c*gain*ds);
    alpha+=(1.-alpha)*da;if(alpha>.99)break;

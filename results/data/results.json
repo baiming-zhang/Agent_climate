@@ -1705,7 +1705,7 @@
     "near_sources": [
       {
         "key": "FCC",
-        "name": "本拿比炼厂 FCC",
+        "name": "\u672c\u62ff\u6bd4\u70bc\u5382 FCC",
         "annual_prior_tonnes": 160.3,
         "vertical": {
           "kind": "reported_ordinary_stack_with_Briggs_final_rise",
@@ -1729,7 +1729,7 @@
       },
       {
         "key": "WTE",
-        "name": "本拿比垃圾焚烧发电厂",
+        "name": "\u672c\u62ff\u6bd4\u5783\u573e\u711a\u70e7\u53d1\u7535\u5382",
         "annual_prior_tonnes": 138.9,
         "vertical": {
           "kind": "historical_scenario_stack_with_Briggs_final_rise",
@@ -1753,7 +1753,7 @@
       },
       {
         "key": "CEMENT",
-        "name": "列治文水泥厂",
+        "name": "\u5217\u6cbb\u6587\u6c34\u6ce5\u5382",
         "annual_prior_tonnes": 225.0,
         "vertical": {
           "kind": "reported_ordinary_stack_with_Briggs_final_rise",
@@ -1852,7 +1852,7 @@
       "transport_corrected_program": 780.2603834030015,
       "volume_diagnostic_program": 6361.63
     },
-    "timing_note": "WRF/原输送与新增16层诊断是不同任务；非CPU时间，不相加解释为单次积分。",
+    "timing_note": "WRF/\u539f\u8f93\u9001\u4e0e\u65b0\u589e16\u5c42\u8bca\u65ad\u662f\u4e0d\u540c\u4efb\u52a1\uff1b\u975eCPU\u65f6\u95f4\uff0c\u4e0d\u76f8\u52a0\u89e3\u91ca\u4e3a\u5355\u6b21\u79ef\u5206\u3002",
     "ground_check": {
       "web_ppb": 4.233205760319171,
       "independent_absolute_error_ppb": 6.744876017705792e-07
@@ -1871,8 +1871,8 @@
     "versions": [
       {
         "key": "original",
-        "label": "原始 GPU",
-        "change": "固定原版；Noah-MP 配置，同一 CPU 参考。",
+        "label": "\u539f\u59cb GPU",
+        "change": "\u56fa\u5b9a\u539f\u7248\uff1bNoah-MP \u914d\u7f6e\uff0c\u540c\u4e00 CPU \u53c2\u8003\u3002",
         "complete": true,
         "pass": false,
         "domains": {
@@ -2272,8 +2272,8 @@
       },
       {
         "key": "startup",
-        "label": "REAL32 初始化",
-        "change": "单独修正初始化运算精度；未叠加 W 或云水修复。",
+        "label": "REAL32 \u521d\u59cb\u5316",
+        "change": "\u5355\u72ec\u4fee\u6b63\u521d\u59cb\u5316\u8fd0\u7b97\u7cbe\u5ea6\uff1b\u672a\u53e0\u52a0 W \u6216\u4e91\u6c34\u4fee\u590d\u3002",
         "complete": true,
         "pass": false,
         "domains": {
@@ -2707,8 +2707,8 @@
       },
       {
         "key": "surface",
-        "label": "初始化＋地表运算",
-        "change": "在初始化分支上修正原生常数与压力乘法；未叠加 W 修复。",
+        "label": "\u521d\u59cb\u5316\uff0b\u5730\u8868\u8fd0\u7b97",
+        "change": "\u5728\u521d\u59cb\u5316\u5206\u652f\u4e0a\u4fee\u6b63\u539f\u751f\u5e38\u6570\u4e0e\u538b\u529b\u4e58\u6cd5\uff1b\u672a\u53e0\u52a0 W \u4fee\u590d\u3002",
         "complete": true,
         "pass": false,
         "domains": {
@@ -3130,8 +3130,8 @@
       },
       {
         "key": "w",
-        "label": "W 边界修复",
-        "change": "从原版仅移除 W 边界贡献的额外地图因子除法。",
+        "label": "W \u8fb9\u754c\u4fee\u590d",
+        "change": "\u4ece\u539f\u7248\u4ec5\u79fb\u9664 W \u8fb9\u754c\u8d21\u732e\u7684\u989d\u5916\u5730\u56fe\u56e0\u5b50\u9664\u6cd5\u3002",
         "complete": true,
         "pass": false,
         "domains": {
@@ -3565,8 +3565,8 @@
       },
       {
         "key": "cloud",
-        "label": "W＋云水冻结条件",
-        "change": "保留 W 修复，补体积云水 rc>R1；未叠加初始化／地表分支。",
+        "label": "W\uff0b\u4e91\u6c34\u51bb\u7ed3\u6761\u4ef6",
+        "change": "\u4fdd\u7559 W \u4fee\u590d\uff0c\u8865\u4f53\u79ef\u4e91\u6c34 rc>R1\uff1b\u672a\u53e0\u52a0\u521d\u59cb\u5316\uff0f\u5730\u8868\u5206\u652f\u3002",
         "complete": true,
         "pass": false,
         "domains": {
@@ -4274,41 +4274,39 @@
           "small_mass_kg": 0.0,
           "age_termination_kg": 0.0,
           "residual_kg": 5.958448127785232e-06
-        },
-        {
-          "species_index": "4",
-          "species": "SO2_INIT",
-          "initial_kg": 2312811.5360392258,
-          "emitted_kg": 0.0,
-          "retained_kg": 0.0,
-          "dry_kg": 189680.1468020875,
-          "wet_kg": 154711.64337259845,
-          "boundary_outflow_kg": 1968419.7449316015,
-          "other_termination_kg": 0.0,
-          "small_mass_kg": 0.0,
-          "age_termination_kg": 0.0,
-          "residual_kg": 0.0009329384192824364
-        },
-        {
-          "species_index": "5",
-          "species": "ZERO",
-          "initial_kg": 0.0,
-          "emitted_kg": 0.0,
-          "retained_kg": 0.0,
-          "dry_kg": 0.0,
-          "wet_kg": 0.0,
-          "boundary_outflow_kg": 0.0,
-          "other_termination_kg": 0.0,
-          "small_mass_kg": 0.0,
-          "age_termination_kg": 0.0,
-          "residual_kg": 0.0
         }
       ],
       "continuous_without_daily_reset": true,
-      "source_freeze_sha256": "6de1b0163636979ba1b7a8c1ab20ab83843b241fe9832b1a46d812723b2bef17",
+      "source_freeze_sha256": "5efa0782cee6e38bb4778e18b1452a59aba192054c0195eee8e87b6d140bfcf3",
       "product_seconds": 2.2977675769998314,
       "transport_validation_seconds": 6.686387161000312,
-      "query_scope": "Selected3source contributions and separate initial background; not complete ambient SO2"
+      "query_scope": "Only three selected-source increments, initial propagation excluded; static original NASA T0 reference is separate",
+      "background_evolution_qualified": false,
+      "background_sampling_diagnostic": "initial-sampling-failure.json"
+    },
+    "background_sampling_failure": {
+      "status": "rejected_local_concentration_fidelity_not_CFL_failure",
+      "controlled_stop_due_to_confirmed_sampling_spikes": true,
+      "first12h_actual_times": [
+        "20261104_190000",
+        "20261104_200000",
+        "20261104_210000",
+        "20261104_220000",
+        "20261104_230000",
+        "20261105_000000",
+        "20261105_010000",
+        "20261105_020000",
+        "20261105_030000",
+        "20261105_040000",
+        "20261105_050000",
+        "20261105_060000"
+      ],
+      "firsthour_city_max_ppb": 9.5738828125,
+      "first12h_city_max_ppb": 134.165953125,
+      "first12h_domain_ground_max_ppb": 179.974859375,
+      "unmodified_NASA_T0_global_max_ppb": 4.3655745685100555,
+      "new_weather_or_source_runs": 0,
+      "candidate_not_published": true
     }
   },
   "provenance": [

@@ -48,39 +48,13 @@
       "small_mass_kg": 0.0,
       "age_termination_kg": 0.0,
       "residual_kg": 5.958448127785232e-06
-    },
-    {
-      "species_index": "4",
-      "species": "SO2_INIT",
-      "initial_kg": 2312811.5360392258,
-      "emitted_kg": 0.0,
-      "retained_kg": 0.0,
-      "dry_kg": 189680.1468020875,
-      "wet_kg": 154711.64337259845,
-      "boundary_outflow_kg": 1968419.7449316015,
-      "other_termination_kg": 0.0,
-      "small_mass_kg": 0.0,
-      "age_termination_kg": 0.0,
-      "residual_kg": 0.0009329384192824364
-    },
-    {
-      "species_index": "5",
-      "species": "ZERO",
-      "initial_kg": 0.0,
-      "emitted_kg": 0.0,
-      "retained_kg": 0.0,
-      "dry_kg": 0.0,
-      "wet_kg": 0.0,
-      "boundary_outflow_kg": 0.0,
-      "other_termination_kg": 0.0,
-      "small_mass_kg": 0.0,
-      "age_termination_kg": 0.0,
-      "residual_kg": 0.0
     }
   ],
   "continuous_without_daily_reset": true,
-  "source_freeze_sha256": "6de1b0163636979ba1b7a8c1ab20ab83843b241fe9832b1a46d812723b2bef17",
+  "source_freeze_sha256": "5efa0782cee6e38bb4778e18b1452a59aba192054c0195eee8e87b6d140bfcf3",
   "product_seconds": 2.2977675769998314,
   "transport_validation_seconds": 6.686387161000312,
-  "query_scope": "Selected3source contributions and separate initial background; not complete ambient SO2"
+  "query_scope": "Only three selected-source increments, initial propagation excluded; static original NASA T0 reference is separate",
+  "background_evolution_qualified": false,
+  "background_sampling_diagnostic": "initial-sampling-failure.json"
 }

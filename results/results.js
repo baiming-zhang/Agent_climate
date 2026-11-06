@@ -118,9 +118,9 @@ function render(data){
     $('month-status').textContent=completed?'连续360h产品已完成':'360h气象完成 · SO₂输送中';
     $('month-title').textContent=completed?'连续15天，完整小时场':'连续15天首版';
     $('active-experiment').textContent='用户授权：360h → 默认15秒';
-    $('active-description').textContent=completed?'实际360个连续小时平均场、16高度层；原生有限非负、ZERO对照与干湿／出域质量预算均通过。源与初始背景分别保留。':'气象前361时次×2域已完整冻结；不重算已有天气，后续连续输送和产品独立验证。';
+    $('active-description').textContent=completed?'实际360个连续小时平均场、16高度层；原生有限非负、ZERO对照与干湿／出域质量预算均通过。本次动态发布仅含三源增量；背景粒子传播因局部浓度异常暂停采用，NASA起报场单独提供静态参考。':'气象前361时次×2域已完整冻结；不重算已有天气，后续连续输送和产品独立验证。';
     if(completed){
-      const block=document.createElement('div');block.className='table-scroll';block.innerHTML='<table><caption>本次360h真实质量收支 · kg</caption><thead><tr><th>质量标签</th><th>初始</th><th>排放</th><th>保留</th><th>干沉降</th><th>湿沉降</th><th>出域</th><th>残差</th></tr></thead><tbody>'+completed.mass_ledger.map(r=>'<tr><td>'+escapeHTML(r.species)+'</td>'+['initial_kg','emitted_kg','retained_kg','dry_kg','wet_kg','boundary_outflow_kg','residual_kg'].map(k=>'<td>'+Number(r[k]).toPrecision(5)+'</td>').join('')+'</tr>').join('')+'</tbody></table><p class="fine">全部360时次有限非负，ZERO严格为0；累计沉降取末张累计，不重复累加。质量守恒通过不等于未来观测精度已验证。</p>';document.getElementById('month').append(block);
+      const block=document.createElement('div');block.className='table-scroll';block.innerHTML='<table><caption>本次360h三源质量收支 · kg</caption><thead><tr><th>质量标签</th><th>初始</th><th>排放</th><th>保留</th><th>干沉降</th><th>湿沉降</th><th>出域</th><th>残差</th></tr></thead><tbody>'+completed.mass_ledger.map(r=>'<tr><td>'+escapeHTML(r.species)+'</td>'+['initial_kg','emitted_kg','retained_kg','dry_kg','wet_kg','boundary_outflow_kg','residual_kg'].map(k=>'<td>'+Number(r[k]).toPrecision(5)+'</td>').join('')+'</tr>').join('')+'</tbody></table><p class="fine">全部360时次有限非负，ZERO严格为0；累计沉降取末张累计，不重复累加。质量守恒通过不等于未来观测精度已验证。</p>';document.getElementById('month').append(block);
       for(const [file,label]of [['period360-mass-ledger.json','15天完整期与质量检查'],['period360-mass-ledger.csv','15天质量收支CSV']]){const a=document.createElement('a');a.href='./data/'+file;a.download=file;a.innerHTML='<strong>'+label+'</strong><span>实际360h · 原始数值与适用范围 ↗</span>';document.querySelector('.download-links').append(a);}
     }
   }

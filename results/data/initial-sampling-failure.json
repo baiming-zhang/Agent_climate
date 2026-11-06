@@ -1,0 +1,24 @@
+{
+  "status": "rejected_local_concentration_fidelity_not_CFL_failure",
+  "controlled_stop_due_to_confirmed_sampling_spikes": true,
+  "first12h_actual_times": [
+    "20261104_190000",
+    "20261104_200000",
+    "20261104_210000",
+    "20261104_220000",
+    "20261104_230000",
+    "20261105_000000",
+    "20261105_010000",
+    "20261105_020000",
+    "20261105_030000",
+    "20261105_040000",
+    "20261105_050000",
+    "20261105_060000"
+  ],
+  "firsthour_city_max_ppb": 9.5738828125,
+  "first12h_city_max_ppb": 134.165953125,
+  "first12h_domain_ground_max_ppb": 179.974859375,
+  "unmodified_NASA_T0_global_max_ppb": 4.3655745685100555,
+  "new_weather_or_source_runs": 0,
+  "candidate_not_published": true
+}

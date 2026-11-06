@@ -60,6 +60,7 @@ export function createMonthQuery(meta,loadGround,loadAggregate,worldToLonLat){
   const all=await aggregate;
   for(let i=0;i<meta.aggregate.fields.length;i++)result[meta.aggregate.fields[i]]=bilinear(all,0,meta.aggregate.fields.length,i,x,y);
   result.aggregate_actual_hours=nt;result.quantity_scope=meta.source_scope;
+  if(meta.initial_background_evolution_included===false){result.initial_background_ppb=null;result.month_mean_initial_ppb=null;result.initial_background_evolution_included=false;}
   return result;
  };
 }

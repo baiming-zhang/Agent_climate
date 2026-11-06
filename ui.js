@@ -8,4 +8,4 @@ $('about').addEventListener('click',e=>{if(e.target===$('about')){const r=$('abo
 $('fullscreen').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await document.documentElement.requestFullscreen();}catch{}};
 for(const b of document.querySelectorAll('[data-view]'))b.addEventListener('click',()=>{for(const x of document.querySelectorAll('[data-view]'))x.classList.toggle('active',x===b);if(innerWidth<700)panel(false);});
 document.addEventListener('keydown',e=>{if(e.code==='Space'&&!['INPUT','SELECT','BUTTON'].includes(document.activeElement.tagName)&&!$('about').open){e.preventDefault();$('play').click();}if(e.code==='Escape')panel(false);});
-if(!window.WebGL2RenderingContext){$('loading').style.display='none';$('error').hidden=false;$('error').textContent='此浏览器需要支持 WebGL 2。请使用更新版 Chrome、Edge 或 Safari。';}
+if(!window.WebGL2RenderingContext){$('loading').style.display='none';$('error').hidden=false;$('error').textContent='WebGL2 is required. Use a recent Chrome, Edge or Safari browser.';}

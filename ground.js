@@ -9,8 +9,8 @@ export function worldLonLat(world,origin){
  return[lon*180/Math.PI,lat*180/Math.PI];
 }
 const fields=new Map();let metadata;
-async function getMeta(){return metadata??=fetch('./data/ground.json').then(r=>{if(!r.ok)throw Error('地表数据暂不可用');return r.json();});}
-async function field(model){if(!fields.has(model))fields.set(model,(async()=>{const r=await fetch(`./data/ground_${model}.f32.gz`);if(!r.ok)throw Error('地表数据暂不可用');return new Float32Array(await new Response(r.body.pipeThrough(new DecompressionStream('gzip'))).arrayBuffer());})());return fields.get(model);}
+async function getMeta(){return metadata??=fetch('./data/ground.json').then(r=>{if(!r.ok)throw Error('Surface data unavailable');return r.json();});}
+async function field(model){if(!fields.has(model))fields.set(model,(async()=>{const r=await fetch(`./data/ground_${model}.f32.gz`);if(!r.ok)throw Error('Surface data unavailable');return new Float32Array(await new Response(r.body.pipeThrough(new DecompressionStream('gzip'))).arrayBuffer());})());return fields.get(model);}
 export async function queryNativeGround(world,time,model){
  const m=await getMeta(),[lon,lat]=worldLonLat(world,m.origin_UTM10N_m),[nt,ny,nx]=m.shape,
  x=(lon-m.longitude[0])/(m.longitude[1]-m.longitude[0])*(nx-1),y=(lat-m.latitude[0])/(m.latitude[1]-m.latitude[0])*(ny-1);
