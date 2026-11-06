@@ -8,7 +8,7 @@ import {createMonthQuery} from './native_query.mjs?v=en-source-r02';
 import {makeScalarLookup,prepareDisplayFrame} from './display_codec.mjs';
 import {monthShader} from './volume_shader.mjs?v=performance-r02';
 import {formatPpb} from './format_ppb.mjs';
-import {createWeatherEffects} from './weather_effects.mjs';
+import {createWeatherEffects} from './weather_effects.mjs?v=continuous-r03';
 import {loadInitialReference} from './initial_reference.mjs';
 const $=id=>document.getElementById(id),canvas=$('scene');
 const renderer=new THREE.WebGLRenderer({canvas,antialias:true,preserveDrawingBuffer:true});
@@ -69,7 +69,8 @@ async function play(){
 }
 function view(which){
  const facility=meta.facilities?.find(f=>f.key===which);
- let p,t;if(facility){t=[facility.world_east_north_km[0],.15,-facility.world_east_north_km[1]];p=[t[0]+.7,1.0,t[2]+1.3];}
+ let p,t;if(facility){const s=weather?.sources.find(s=>facility.component_ids.includes(s.id)),row=s?.hourly[Math.min(meta.actual_hours-1,Math.floor(currentHours))],wind=row?Math.hypot(row.u,row.v):0,distance=row?Math.min(2,(row.distance_m||0)*.001)*.3:0;
+  t=[facility.world_east_north_km[0]+(wind?row.u/wind*distance:0),row?s.base+Math.max(.15,(s.stack.height_AGL_m+row.final_height_m)*.0009):.2,-facility.world_east_north_km[1]-(wind?row.v/wind*distance:0)];p=[t[0]+1,t[1]+1.3,t[2]+2];}
  else if(which==='UBC'){const u=meta.crest?.world_east_north_km||[-21.937,-2.305];t=[u[0],.15,-u[1]];p=[t[0]+1.2,1.6,t[2]+2.5];}
  else if(which==='all'){const[x0,y0,x1,y1]=meta.display.bounds_east_north_km;t=[(x0+x1)/2,0,-(y0+y1)/2];p=[t[0]+15,43,t[2]+50];}
  else{const fs=meta.facilities||[],cx=fs.length?fs.reduce((a,b)=>a+b.world_east_north_km[0],0)/fs.length:-4,cy=fs.length?-fs.reduce((a,b)=>a+b.world_east_north_km[1],0)/fs.length:7;t=[cx,.1,cy];p=[cx+12,15,cy+20];}
@@ -186,7 +187,7 @@ async function init(){
   const draco=new DRACOLoader().setDecoderPath('../vendor/draco/').setWorkerLimit(2),loader=new GLTFLoader().setDRACOLoader(draco);
   $('loadingText').textContent='Loading city geometry…';const city=await loader.parseAsync(await bytes('../city-draco.glb.gz'),new URL('../',location.href).href);draco.dispose();
   colourLandmarks(city.scene);city.scene.traverse(o=>{if(/^Diorama[ _]base/.test(o.name))o.visible=false;});scene.add(city.scene);await makeContextTerrain();await makeCrest();
-  weather=await createWeatherEffects(scene,city.scene,meta,bytes);
+  weather=await createWeatherEffects(scene,city.scene,meta,bytes,{overlay:volumeScene,depthTexture:target.depthTexture,renderer,sampleConcentration:sampleDisplay});
   // Background reference is deferred; no extra background asset is loaded.
   const [x0,y0,x1,y1]=meta.display.bounds_east_north_km,lo=new THREE.Vector3(x0,0,-y1),hi=new THREE.Vector3(x1,(Math.max(...terrain)+meta.display.height_tops_AGL_m.at(-1))*.001*1.8,-y0),span=hi.clone().sub(lo);
   function texture(a){const t=new THREE.DataTexture(a,nx,ny,THREE.RedFormat,THREE.FloatType);t.minFilter=t.magFilter=THREE.LinearFilter;t.needsUpdate=true;return t;}
@@ -206,7 +207,7 @@ function animate(now){
  if(ready&&++perfFrames%120===0){const desired=frameEMA>30?Math.max(.65,renderScale-.1):frameEMA<19?Math.min(1,renderScale+.05):renderScale;if(desired!==renderScale){renderScale=desired;renderer.setPixelRatio(Math.min(devicePixelRatio,renderScale));resize();}}
  if(ready&&playing){const h=Math.min(meta.actual_hours,startHours+(now-playStart)/1000*meta.actual_hours/duration),i=indices(h),a=frameFromLoaded(i.a),b=frameFromLoaded(i.b);if(a&&b)commit(h,a,b,i.weight);if(h>=meta.actual_hours)stop();}
  camera.near=Math.max(.004,Math.min(.15,camera.position.distanceTo(controls.target)*.001));camera.updateProjectionMatrix();
- if(ready){weather.update(currentHours,now*.001,camera,controls.target,material.uniforms.contribution.value,new THREE.Color().setRGB(...material.uniforms.pigment.value.toArray()));if(perfFrames%30===0)$('weatherValue').textContent=`At view centre ${weather.state.rain_mm_h.toFixed(2)} mm/h`;}
+ if(ready){weather.update(currentHours,now*.001,camera,controls.target,material.uniforms.contribution.value,new THREE.Color().setRGB(...material.uniforms.pigment.value.toArray()),15/duration,material.uniforms.gain.value);if(perfFrames%30===0)$('weatherValue').textContent=`At view centre ${weather.state.rain_mm_h.toFixed(2)} mm/h`;}
  renderer.setRenderTarget(target);renderer.clear();renderer.render(scene,camera);renderer.setRenderTarget(null);renderer.clear();renderer.render(copyScene,copyCamera);
  if(ready){material.uniforms.inverseVP.value.multiplyMatrices(camera.matrixWorld,camera.projectionMatrixInverse);renderer.autoClear=false;renderer.render(volumeScene,camera);renderer.autoClear=true;}
 }
