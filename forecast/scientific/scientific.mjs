@@ -1,9 +1,10 @@
 const $=id=>document.getElementById(id);
-const meta=await fetch('./diagnostics.json').then(r=>{if(!r.ok)throw Error('Metadata unavailable');return r.json()});
+const meta=await fetch('./diagnostics.json?v=blue-white-r03').then(r=>{if(!r.ok)throw Error('Metadata unavailable');return r.json()});
 const state={hour:335.5,playing:false,duration:Number($('duration').value),mode:$('curve-mode').value,visible:meta.receptors.map(()=>true),ready:false};
 const [nt,ny,nx,nc]=meta.field_shape_time_y_x_channels;
 const [dt,dy,dx,dc]=meta.display_shape_time_y_x_channels;
-let raw,display,views=[],lastStamp;
+let raw=new Float32Array(nt*ny*nx*nc),display=new Float32Array(dt*dy*dx*dc),views=[],lastStamp;
+const displayDays=new Map(),nativeDays=new Map(),displayReady=new Set(),nativeReady=new Set();
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 const fmt=v=>v===0?'0':v<.001?v.toExponential(2):v.toPrecision(4);
 const utc=h=>new Date(Date.parse(meta.initialization_UTC)+h*3600000);
@@ -11,6 +12,18 @@ const dateFormat=new Intl.DateTimeFormat('en-GB',{day:'2-digit',month:'short',ye
 function indices(hour){const t=clamp(hour-.5,0,359),i=Math.floor(t);return[i,Math.min(i+1,359),t-i]}
 async function loadF32(path,expected){const response=await fetch(path);if(!response.ok)throw Error(`${path}: HTTP ${response.status}`);const bytes=await new Response(response.body.pipeThrough(new DecompressionStream('gzip'))).arrayBuffer();const a=new Float32Array(bytes);if(a.length!==expected)throw Error(`Incorrect shape for ${path}`);return a}
 async function loadDisplay(path,expected){const r=await fetch(path);if(!r.ok)throw Error('Display unavailable');const bytes=await new Response(r.body.pipeThrough(new DecompressionStream('gzip'))).arrayBuffer();const q=new Uint8Array(bytes);if(q.length!==expected)throw Error('Display shape mismatch');const a=new Float32Array(q.length),lut=Float32Array.from({length:256},(_,i)=>.001*Math.expm1(i/255*Math.log(25001)));for(let i=0;i<q.length;i++)a[i]=lut[q[i]];return a}
+function loadDay(day,kind='display'){
+ const cache=kind==='display'?displayDays:nativeDays,ready=kind==='display'?displayReady:nativeReady;
+ if(!cache.has(day)){
+  const chunk=meta.time_chunks[day],stride=kind==='display'?dy*dx*2:ny*nx*2;
+  const pending=(kind==='display'?loadDisplay('./'+chunk.display.file,chunk.count*stride):loadF32('./'+chunk.native.file,chunk.count*stride)).then(a=>{(kind==='display'?display:raw).set(a,chunk.first_index*stride);ready.add(day);return a}).catch(error=>{cache.delete(day);throw error});
+  cache.set(day,pending);
+ }
+ return cache.get(day);
+}
+async function ensureHour(hour){const[i,j]=indices(hour);await Promise.all([loadDay(Math.floor(i/24)),loadDay(Math.floor(j/24))])}
+function readyStatus(){const complete=displayReady.size===15;$('play').disabled=!complete;$('load-status').textContent=complete?'360 hourly fields ready · GPU scalar rendering · hover values use unfiltered native cells':`Current hour ready · loading remaining hours in background (${displayReady.size*24}/360)`}
+async function prefetchPeriod(){try{for(let start=0;start<15;start+=3){await Promise.all([start,start+1,start+2].filter(day=>day<15).map(day=>loadDay(day)));readyStatus()}}catch(error){$('load-status').textContent='Current frame ready. Some hours could not load; choose a time to retry or use the4K video.';console.warn(error.message)}}
 function shader(gl,type,source){const s=gl.createShader(type);gl.shaderSource(s,source);gl.compileShader(s);if(!gl.getShaderParameter(s,gl.COMPILE_STATUS))throw Error(gl.getShaderInfoLog(s));return s}
 const vertex=`#version 300 es
 out vec2 uv;void main(){vec2 p=vec2((gl_VertexID<<1)&2,gl_VertexID&2);uv=p;gl_Position=vec4(p*2.-1.,0.,1.);}`;
@@ -32,7 +45,7 @@ for(const[key,label]of [['dry_kg','Dry deposition'],['wet_kg','Wet deposition'],
 function drawChart(){const canvas=$('receptor-chart'),ctx=canvas.getContext('2d'),W=canvas.clientWidth,H=W<500?200:245,dpr=window.devicePixelRatio||1;canvas.width=Math.round(W*dpr);canvas.height=Math.round(H*dpr);canvas.style.height=H+'px';ctx.setTransform(dpr,0,0,dpr,0,0);const L=40,R=12,T=20,B=40,plotW=W-L-R,plotH=H-T-B;ctx.clearRect(0,0,W,H);ctx.font='11px Arial';ctx.fillStyle='#61788b';const ymax=state.mode==='rolling'?.4:1.5,step=state.mode==='rolling'?.1:.3;ctx.strokeStyle='#e7edf2';ctx.lineWidth=1;for(let value=0;value<ymax+.00001;value+=step){const y=T+plotH*(1-value/ymax);ctx.beginPath();ctx.moveTo(L,y);ctx.lineTo(W-R,y);ctx.stroke();ctx.textAlign='right';ctx.fillText(value===0?'0':value.toFixed(state.mode==='rolling'?2:1),L-12,y+6)}ctx.textAlign='center';for(let h=0;h<=360;h+=W<500?72:48){const x=L+h/360*plotW;ctx.fillText(String(h),x,H-25)}ctx.textAlign='right';ctx.fillText('ppb',L-12,T-10);ctx.textAlign='center';ctx.fillText('Hours since 4 Nov 2026,18:00 UTC',W/2,H-1);const dashes=[[],[10,5],[14,5,3,5],[3,5],[]];
 for(const[r,n]of meta.receptors.map((r,i)=>[r,i])){if(!state.visible[n])continue;const values=state.mode==='rolling'?r.rolling24_ppb:r.hourly_ppb;ctx.strokeStyle=r.color;ctx.lineWidth=1.25;ctx.setLineDash(dashes[n].map(x=>x*.5));ctx.beginPath();let open=false;for(let i=0;i<360;i++){const value=values[i];if(value===null){open=false;continue}const x=L+(i+(state.mode==='rolling'?1:.5))/360*plotW,y=T+plotH*(1-value/ymax);if(!open){ctx.moveTo(x,y);open=true}else ctx.lineTo(x,y)}ctx.stroke();ctx.setLineDash([])}const cx=L+state.hour/360*plotW;ctx.strokeStyle='#345872';ctx.setLineDash([3,3]);ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(cx,T);ctx.lineTo(cx,T+plotH);ctx.stroke();ctx.setLineDash([])}
 function draw(){for(const view of views)view.draw(state.hour);$('time').textContent=dateFormat.format(utc(state.hour))+' UTC';$('hour').textContent=`t + ${state.hour.toFixed(1)} h · scalar display interpolation`;$('timeline').value=state.hour;drawChart()}
-function setHour(h){state.hour=clamp(Number(h),0,360);draw()}
+async function setHour(h){const selected=clamp(Number(h),0,360);state.hour=selected;document.body.classList.add('loading-pair');$('load-status').textContent='Loading the selected hour…';try{await ensureHour(selected);if(state.hour!==selected)return;document.body.classList.remove('loading-pair');draw();readyStatus()}catch(error){$('load-status').textContent='Could not load this hour. Please choose it again to retry.'}}
 function setPlaying(on){state.playing=on;lastStamp=undefined;$('play').textContent=on?'Ⅱ Pause':'▶ Play';if(on)requestAnimationFrame(tick)}
 function tick(stamp){if(!state.playing)return;if(lastStamp!==undefined)state.hour=Math.min(360,state.hour+(stamp-lastStamp)/1000*360/state.duration);lastStamp=stamp;draw();if(state.hour>=360){setPlaying(false);return}requestAnimationFrame(tick)}
 $('play').onclick=()=>{if(state.hour>=360)setHour(0);setPlaying(!state.playing)};
@@ -41,9 +54,20 @@ $('previous').onclick=()=>{setPlaying(false);setHour(Math.max(.5,Math.ceil(state
 $('next').onclick=()=>{setPlaying(false);setHour(Math.min(359.5,Math.floor(state.hour-.5)+1.5))};
 $('duration').onchange=e=>{state.duration=Number(e.target.value)};
 $('curve-mode').onchange=e=>{state.mode=e.target.value;$('receptor-chart').setAttribute('aria-label',state.mode==='rolling'?'Five fixed receptors: complete preceding24-hour SO2 means':'Five fixed receptors: native hourly SO2 means');drawChart()};
-$('receptor-chart').onclick=e=>{const box=e.currentTarget.getBoundingClientRect(),x=e.clientX-box.left;setPlaying(false);setHour((x-40)/(box.width-40-12)*360)};
-for(const[id,channel]of [['surface-map',0],['elevated-map',1]])$(id).onpointermove=e=>{if(!raw)return;const box=e.currentTarget.getBoundingClientRect(),u=(e.clientX-box.left)/box.width,v=1-(e.clientY-box.top)/box.height,lon=bounds[0]+u*(bounds[1]-bounds[0]),lat=bounds[2]+v*(bounds[3]-bounds[2]);const x=clamp(Math.round((lon-meta.longitude[0])/(meta.longitude.at(-1)-meta.longitude[0])*(nx-1)),0,nx-1),y=clamp(Math.round((lat-meta.latitude[0])/(meta.latitude.at(-1)-meta.latitude[0])*(ny-1)),0,ny-1),t=clamp(Math.round(state.hour-.5),0,359),value=raw[((t*ny+y)*nx+x)*2+channel];$('hover-value').textContent=`Native cell · ${fmt(value)} ppb · interval ${t}–${t+1} h`};
+$('receptor-chart').onclick=e=>{if(!state.ready)return;const box=e.currentTarget.getBoundingClientRect(),x=e.clientX-box.left;setPlaying(false);setHour((x-40)/(box.width-40-12)*360)};
+for(const[id,channel]of [['surface-map',0],['elevated-map',1]])$(id).onpointermove=async e=>{
+ if(!state.ready)return;
+ const box=e.currentTarget.getBoundingClientRect(),u=(e.clientX-box.left)/box.width,v=1-(e.clientY-box.top)/box.height,lon=bounds[0]+u*(bounds[1]-bounds[0]),lat=bounds[2]+v*(bounds[3]-bounds[2]);
+ const x=clamp(Math.round((lon-meta.longitude[0])/(meta.longitude.at(-1)-meta.longitude[0])*(nx-1)),0,nx-1),y=clamp(Math.round((lat-meta.latitude[0])/(meta.latitude.at(-1)-meta.latitude[0])*(ny-1)),0,ny-1),t=clamp(Math.round(state.hour-.5),0,359),day=Math.floor(t/24);
+ try{if(!nativeReady.has(day)){$('hover-value').textContent='Loading native cells for this hour…';await loadDay(day,'native')}if(clamp(Math.round(state.hour-.5),0,359)!==t)return;const value=raw[((t*ny+y)*nx+x)*2+channel];$('hover-value').textContent=`Native cell · ${fmt(value)} ppb · interval ${t}–${t+1} h`}catch(error){$('hover-value').textContent='Native cells unavailable; receptor curves and downloads remain available.'}
+};
 $('curve-mode').disabled=false;$('duration').disabled=false;draw();
 window.addEventListener('resize',drawChart);
 window.scientific={setHour,state,meta,getNativeValue(t,y,x,k){return raw?.[((t*ny+y)*nx+x)*2+k]}};
-try{const image=new Image();image.src='./terrain_basemap.png';const pendingImage=image.decode();const assets=await Promise.all([loadF32('./fields.f32.gz',nt*ny*nx*nc),loadDisplay('./display.u8.gz',dt*dy*dx*dc),pendingImage]);[raw,display]=assets;views=[makeView('surface-map',0,image),makeView('elevated-map',1,image)];state.ready=true;for(const id of ['play','previous','next','timeline'])$(id).disabled=false;$('load-status').textContent='360 hourly fields ready · GPU scalar rendering · hover values use unfiltered native cells';draw()}catch(error){$('load-status').textContent=`Interactive field unavailable: ${error.message} The complete4K video and source downloads remain below.`;console.error(error)}
+try{
+ const image=new Image();image.src='./terrain_basemap.png';$('load-status').textContent='Loading the current hourly pair…';
+ await Promise.all([ensureHour(state.hour),image.decode()]);
+ views=[makeView('surface-map',0,image),makeView('elevated-map',1,image)];state.ready=true;document.body.classList.add('maps-ready');
+ for(const id of ['previous','next','timeline'])$(id).disabled=false;
+ draw();readyStatus();void prefetchPeriod();
+}catch(error){$('load-status').textContent=`Interactive field unavailable: ${error.message} The complete4K video and source downloads remain below.`;console.error(error)}
