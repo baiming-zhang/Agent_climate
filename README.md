@@ -13,3 +13,10 @@ The current release shows **three-source increments**, not total ambient concent
 Weather uses frozen GFS0–360h,9/3 km domains, Noah-MP and a documented private WRF-compatible JAX research implementation. Native FLEXPART transport uses8 CPU threads. The authorized24h precipitation consistency criterion is per-frame grid-RMSE≤2 mm; the maximum is1.405205 mm. The original1 mm failures are preserved. None of these checks validate future observations.
 
 Buildings and terrain are simplified display geometry with1.8× vertical exaggeration. Source stack paths are Briggs identification guides, not resolved CFD or additional queried concentration. SO₂ is invisible; colour and opacity are artificial display choices. See THIRD_PARTY.md for data and software attribution.
+
+
+## Scientific360h
+
+Scientific view: https://baiming-zhang.github.io/Agent_climate/forecast/scientific/
+
+Blue-white concentration maps with cached Mapzen shaded terrain and no location labels; all360 hourly selected-source fields, synchronized five-receptor hourly/24h curves, source mass balance,3840x2160/24fps/30s MP4, vector SVG and native F32/CSV/JSON downloads. Maps use declared scalar sigma0.6-cell filtering and shape-preserving interpolation; native numeric products and curves remain unchanged. No image-frame blending. Initial background evolution and future observations are excluded from this scientific view.
