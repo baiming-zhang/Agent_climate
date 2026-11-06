@@ -4,9 +4,9 @@ import {GLTFLoader} from '../vendor/GLTFLoader.js';
 import {DRACOLoader} from '../vendor/DRACOLoader.js';
 import {worldLonLat} from '../ground.js';
 import {colourLandmarks} from '../landmark_materials.js?v=1';
-import {createMonthQuery} from './native_query.mjs';
+import {createMonthQuery} from './native_query.mjs?v=en-source-r02';
 import {makeScalarLookup,prepareDisplayFrame} from './display_codec.mjs';
-import {monthShader} from './volume_shader.mjs';
+import {monthShader} from './volume_shader.mjs?v=performance-r02';
 import {formatPpb} from './format_ppb.mjs';
 import {createWeatherEffects} from './weather_effects.mjs';
 import {loadInitialReference} from './initial_reference.mjs';
@@ -22,7 +22,7 @@ const copyScene=new THREE.Scene(),copyCamera=new THREE.OrthographicCamera(-1,1,1
 const volumeScene=new THREE.Scene();const qBlocks=new Map(),textures=new Map(),groundBlocks=new Map();
 let meta,material,terrain,coverage,queryNative,currentHours=0,duration=15,playing=false,ready=false,preparing=false,playStart=0,startHours=0,request=0,currentPair=[],marker,crest;
 let lookups,weather,initialReference,referenceMode=false,savedSourceHours=0,lastClock=-Infinity,renderScale=1,lastFrame=0,frameEMA=16.7,perfFrames=0;const frameSize=()=>meta.display.shape_time_z_y_x_fields.slice(1).reduce((a,b)=>a*b,1);
-async function bytes(url){const r=await fetch(url);if(!r.ok)throw Error('Data request failed '+r.status+': '+url);const b=new Uint8Array(await r.arrayBuffer());return b[0]===31&&b[1]===139?await new Response(new Blob([b]).stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer():b.buffer;}
+async function bytes(url){const address=new URL(url,location.href);if(address.pathname.includes('/forecast/data/'))address.searchParams.set('rev','en-source-r02');const r=await fetch(address);if(!r.ok)throw Error('Data request failed '+r.status+': '+url);const b=new Uint8Array(await r.arrayBuffer());return b[0]===31&&b[1]===139?await new Response(new Blob([b]).stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer():b.buffer;}
 function resize(){renderer.setSize(innerWidth,innerHeight);camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();const s=renderer.getDrawingBufferSize(new THREE.Vector2());target.setSize(s.x,s.y);if(material)material.uniforms.resolution.value.copy(s);}
 addEventListener('resize',resize);resize();
 function clearProbe(){if(marker)marker.visible=false;$('inspector').hidden=true;$('probe').textContent='';if(window.MONTH_CLIMATE)window.MONTH_CLIMATE.lastProbe=null;}
@@ -172,7 +172,7 @@ function controlsUI(){
 }
 async function init(){
  try{
-  const response=await fetch('./data/metadata.json');if(!response.ok)throw Error('Complete 15-day data unavailable');meta=await response.json();
+  const response=await fetch('./data/metadata.json?rev=en-source-r02');if(!response.ok)throw Error('Complete 15-day data unavailable');meta=await response.json();
   const engineering=new URLSearchParams(location.search).get('engineering')==='1';
   if(!engineering&&(!meta.scientific_period_complete||meta.actual_hours!==360))throw Error('Production requires all 360 actual hours');
   if(engineering){$('caseTag').textContent=`Engineering input ${meta.actual_hours} h · not a production forecast`;document.querySelector('.brand h1').firstChild.textContent='Engineering preview';}
