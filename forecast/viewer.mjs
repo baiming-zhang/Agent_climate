@@ -6,9 +6,10 @@ import {worldLonLat} from '../ground.js';
 import {colourLandmarks} from '../landmark_materials.js?v=1';
 import {createMonthQuery} from './native_query.mjs?v=en-source-r02';
 import {makeScalarLookup,prepareDisplayFrame} from './display_codec.mjs';
-import {monthShader} from './volume_shader.mjs?v=performance-r02';
+import {monthShader} from './volume_shader.mjs?v=outlet-r04';
+import {createNearVolume} from './near_volume.mjs?v=outlet-r04';
 import {formatPpb} from './format_ppb.mjs';
-import {createWeatherEffects} from './weather_effects.mjs?v=continuous-r03';
+import {createWeatherEffects} from './weather_effects.mjs?v=outlet-r04';
 import {loadInitialReference} from './initial_reference.mjs';
 const $=id=>document.getElementById(id),canvas=$('scene');
 const renderer=new THREE.WebGLRenderer({canvas,antialias:true,preserveDrawingBuffer:true});
@@ -16,13 +17,13 @@ renderer.setPixelRatio(Math.min(devicePixelRatio,1));renderer.outputColorSpace=T
 const scene=new THREE.Scene();scene.background=new THREE.Color('#edf2ef');
 scene.add(new THREE.HemisphereLight('#ffffff','#b4c4b9',2.5));const light=new THREE.DirectionalLight('#fff7e6',2.3);light.position.set(-12,25,8);scene.add(light);
 const camera=new THREE.PerspectiveCamera(43,innerWidth/innerHeight,.004,350),controls=new OrbitControls(camera,canvas);
-controls.enableDamping=true;controls.dampingFactor=.09;controls.minDistance=.1;controls.maxDistance=150;controls.maxPolarAngle=Math.PI*.49;
+controls.enableDamping=true;controls.dampingFactor=.09;controls.minDistance=.01;controls.maxDistance=150;controls.maxPolarAngle=Math.PI*.49;
 const target=new THREE.WebGLRenderTarget(1,1,{depthBuffer:true});target.depthTexture=new THREE.DepthTexture(1,1,THREE.UnsignedIntType);
 const copyScene=new THREE.Scene(),copyCamera=new THREE.OrthographicCamera(-1,1,1,-1,0,1);copyScene.add(new THREE.Mesh(new THREE.PlaneGeometry(2,2),new THREE.MeshBasicMaterial({map:target.texture,depthTest:false,depthWrite:false})));
 const volumeScene=new THREE.Scene();const qBlocks=new Map(),textures=new Map(),groundBlocks=new Map();
 let meta,material,terrain,coverage,queryNative,currentHours=0,duration=15,playing=false,ready=false,preparing=false,playStart=0,startHours=0,request=0,currentPair=[],marker,crest;
-let lookups,weather,initialReference,referenceMode=false,savedSourceHours=0,lastClock=-Infinity,renderScale=1,lastFrame=0,frameEMA=16.7,perfFrames=0;const frameSize=()=>meta.display.shape_time_z_y_x_fields.slice(1).reduce((a,b)=>a*b,1);
-async function bytes(url){const address=new URL(url,location.href);if(address.pathname.includes('/forecast/data/'))address.searchParams.set('rev','en-source-r02');const r=await fetch(address);if(!r.ok)throw Error('Data request failed '+r.status+': '+url);const b=new Uint8Array(await r.arrayBuffer());return b[0]===31&&b[1]===139?await new Response(new Blob([b]).stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer():b.buffer;}
+let lookups,weather,nearVolume,initialReference,referenceMode=false,savedSourceHours=0,lastClock=-Infinity,renderScale=1,lastFrame=0,frameEMA=16.7,perfFrames=0;const frameSize=()=>meta.display.shape_time_z_y_x_fields.slice(1).reduce((a,b)=>a*b,1);
+async function bytes(url){const address=new URL(url,location.href);if(address.pathname.includes('/forecast/data/'))address.searchParams.set('rev','outlet-r04');const r=await fetch(address);if(!r.ok)throw Error('Data request failed '+r.status+': '+url);const b=new Uint8Array(await r.arrayBuffer());return b[0]===31&&b[1]===139?await new Response(new Blob([b]).stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer():b.buffer;}
 function resize(){renderer.setSize(innerWidth,innerHeight);camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();const s=renderer.getDrawingBufferSize(new THREE.Vector2());target.setSize(s.x,s.y);if(material)material.uniforms.resolution.value.copy(s);}
 addEventListener('resize',resize);resize();
 function clearProbe(){if(marker)marker.visible=false;$('inspector').hidden=true;$('probe').textContent='';if(window.MONTH_CLIMATE)window.MONTH_CLIMATE.lastProbe=null;}
@@ -48,20 +49,20 @@ function frameFromLoaded(index){
 function indices(hours){const i=Math.max(0,Math.min(meta.actual_hours-1,hours-.5)),a=Math.floor(i);return{a,b:Math.min(meta.actual_hours-1,a+1),weight:i-a};}
 function commit(hours,a,b,weight){
  material.uniforms.field0.value=a.texture;material.uniforms.field1.value=b.texture;material.uniforms.timeWeight.value=weight;
- currentPair=[a,b];currentHours=hours;clock();
+ nearVolume.commit(a.index,b.index);currentPair=[a,b];currentHours=hours;clock();
  // Dispose only after both new textures and all corresponding uniforms are ready.
  for(const[index,entry]of textures)if(textures.size>4&&index!==a.index&&index!==b.index){entry.texture.dispose();textures.delete(index);}
 }
 async function setHours(hours){
  const id=++request;hours=Math.max(0,Math.min(meta.actual_hours,Number(hours)));const{a,b,weight}=indices(hours);
  for(const index of new Set([a,b])){const block=await blockFor(index);block.chunk.loaded=block.packed;}
- if(weather)await Promise.all([...new Set([a,b])].map(i=>weather.prepare(i)));
+ await Promise.all([...new Set([a,b])].flatMap(i=>[weather?.prepare(i),nearVolume?.prepare(i)]));
  if(id!==request)return;const fa=frameFromLoaded(a),fb=frameFromLoaded(b);commit(hours,fa,fb,weight);clock(true);clearProbe();
 }
 async function preload(){
  let done=0,cursor=0;
  async function worker(){while(cursor<meta.display.chunks.length){const chunk=meta.display.chunks[cursor++],item=await blockFor(chunk.first_index);chunk.loaded=item.packed;done++;$('status').textContent=`Preparing playback ${done}/${meta.display.chunks.length} blocks`;}}
- await Promise.all([...Array.from({length:3},worker),weather?.preload()]);
+ await Promise.all([...Array.from({length:3},worker),weather?.preload(),nearVolume?.preload()]);
 }
 async function play(){
  if(playing){stop();return;}if(preparing)return;preparing=true;$('play').textContent='Preparing…';
@@ -69,8 +70,8 @@ async function play(){
 }
 function view(which){
  const facility=meta.facilities?.find(f=>f.key===which);
- let p,t;if(facility){const s=weather?.sources.find(s=>facility.component_ids.includes(s.id)),row=s?.hourly[Math.min(meta.actual_hours-1,Math.floor(currentHours))],wind=row?Math.hypot(row.u,row.v):0,distance=row?Math.min(2,(row.distance_m||0)*.001)*.3:0;
-  t=[facility.world_east_north_km[0]+(wind?row.u/wind*distance:0),row?s.base+Math.max(.15,(s.stack.height_AGL_m+row.final_height_m)*.0009):.2,-facility.world_east_north_km[1]-(wind?row.v/wind*distance:0)];p=[t[0]+1,t[1]+1.3,t[2]+2];}
+ let p,t;if(facility){const source=weather.sources.find(s=>facility.component_ids.includes(s.id)),e=source.world_east_north_km;
+  t=[e[0],source.base+source.stack.height_AGL_m*.001*1.8+.12,-e[1]];p=[t[0]+.4,t[1]+.25,t[2]+.7];}
  else if(which==='UBC'){const u=meta.crest?.world_east_north_km||[-21.937,-2.305];t=[u[0],.15,-u[1]];p=[t[0]+1.2,1.6,t[2]+2.5];}
  else if(which==='all'){const[x0,y0,x1,y1]=meta.display.bounds_east_north_km;t=[(x0+x1)/2,0,-(y0+y1)/2];p=[t[0]+15,43,t[2]+50];}
  else{const fs=meta.facilities||[],cx=fs.length?fs.reduce((a,b)=>a+b.world_east_north_km[0],0)/fs.length:-4,cy=fs.length?-fs.reduce((a,b)=>a+b.world_east_north_km[1],0)/fs.length:7;t=[cx,.1,cy];p=[cx+12,15,cy+20];}
@@ -142,7 +143,8 @@ function sampleDisplay(p){
   const s=entry.reference?entry.values[index]:lookups.source_ppb.values[entry.packed[base+index]],b=entry.reference?entry.values[index+1]:lookups.initial_ppb.values[entry.packed[base+index+1]];
   c+=(mode===0?s+b:mode===1?s:b)*(i?wx:1-wx)*(j?wy:1-wy)*(k?wz:1-wz);
  }return c;}
- return{ppb:field(currentPair[0])*(1-tw)+field(currentPair[1])*tw,AGL_m:agl,display_approximation:true,simulation_hours:currentHours};
+ const coarse=field(currentPair[0])*(1-tw)+field(currentPair[1])*tw,fine=nearVolume?.sample(p,agl);
+ return{ppb:fine?coarse*fine.regional_weight+fine.ppb:coarse,AGL_m:agl,near_weight:fine?.near_weight||0,display_approximation:true,simulation_hours:currentHours};
 }
 let down;canvas.addEventListener('pointerdown',e=>down=[e.clientX,e.clientY]);
 canvas.addEventListener('pointerup',e=>{
@@ -152,8 +154,8 @@ canvas.addEventListener('pointerup',e=>{
  if($('probeMode').value==='ground'){if(hit)queryGround(hit.point).catch(fail);return;}
  const box=new THREE.Box3(material.uniforms.lo.value,material.uniforms.hi.value),entry=ray.ray.intersectBox(box,new THREE.Vector3());if(!entry)return;
  const start=box.containsPoint(camera.position)?0:entry.distanceTo(camera.position),end=hit?hit.distance:180;let best=null,bp;
- for(let d=start;d<end;d+=.04){const p=ray.ray.at(d,new THREE.Vector3());if(!box.containsPoint(p))continue;const q=sampleDisplay(p);if(q&&(!best||q.ppb>best.ppb)){best=q;bp=p.clone();}}
- if(best&&best.ppb>0){marker.position.copy(bp);marker.visible=true;window.MONTH_CLIMATE.lastProbe=best;$('inspector').hidden=false;$('probe').innerHTML=`<strong>${formatPpb(best.ppb)}</strong> ppb<br>Display approximation · AGL ${best.AGL_m.toFixed(1)} m<br>Use surface mode for native ground values`;}
+ for(let d=start;d<end;){const p=ray.ray.at(d,new THREE.Vector3());if(!box.containsPoint(p)){d+=.04;continue;}const q=sampleDisplay(p);if(q&&(!best||q.ppb>best.ppb)){best=q;bp=p.clone();}const r=Math.min(...nearVolume.metadata.groups.map(g=>Math.hypot(p.x-g.center_world_east_north_km[0],-p.z-g.center_world_east_north_km[1])));d+=r<.5?.0005:r<4?.005:.04;}
+ if(best&&best.ppb>0){marker.position.copy(bp);marker.visible=true;window.MONTH_CLIMATE.lastProbe=best;$('inspector').hidden=false;$('probe').innerHTML=`<strong>${formatPpb(best.ppb)}</strong> ppb<br>${best.near_weight>.5?'Local3D residence estimate':'Regional display approximation'} · AGL ${best.AGL_m.toFixed(1)} m<br>Use surface mode for native ground values`;}
  else{clearProbe();$('probe').textContent='No contribution along this view';}
 });
 function fail(error){console.error(error);stop();$('error').hidden=false;$('error').textContent='Loading failed: '+error.message;$('loading').style.display='none';}
@@ -173,7 +175,7 @@ function controlsUI(){
 }
 async function init(){
  try{
-  const response=await fetch('./data/metadata.json?rev=en-source-r02');if(!response.ok)throw Error('Complete 15-day data unavailable');meta=await response.json();
+  const response=await fetch('./data/metadata.json?rev=outlet-r04');if(!response.ok)throw Error('Complete 15-day data unavailable');meta=await response.json();
   const engineering=new URLSearchParams(location.search).get('engineering')==='1';
   if(!engineering&&(!meta.scientific_period_complete||meta.actual_hours!==360))throw Error('Production requires all 360 actual hours');
   if(engineering){$('caseTag').textContent=`Engineering input ${meta.actual_hours} h · not a production forecast`;document.querySelector('.brand h1').firstChild.textContent='Engineering preview';}
@@ -187,17 +189,19 @@ async function init(){
   const draco=new DRACOLoader().setDecoderPath('../vendor/draco/').setWorkerLimit(2),loader=new GLTFLoader().setDRACOLoader(draco);
   $('loadingText').textContent='Loading city geometry…';const city=await loader.parseAsync(await bytes('../city-draco.glb.gz'),new URL('../',location.href).href);draco.dispose();
   colourLandmarks(city.scene);city.scene.traverse(o=>{if(/^Diorama[ _]base/.test(o.name))o.visible=false;});scene.add(city.scene);await makeContextTerrain();await makeCrest();
-  weather=await createWeatherEffects(scene,city.scene,meta,bytes,{overlay:volumeScene,depthTexture:target.depthTexture,renderer,sampleConcentration:sampleDisplay});
   // Background reference is deferred; no extra background asset is loaded.
   const [x0,y0,x1,y1]=meta.display.bounds_east_north_km,lo=new THREE.Vector3(x0,0,-y1),hi=new THREE.Vector3(x1,(Math.max(...terrain)+meta.display.height_tops_AGL_m.at(-1))*.001*1.8,-y0),span=hi.clone().sub(lo);
   function texture(a){const t=new THREE.DataTexture(a,nx,ny,THREE.RedFormat,THREE.FloatType);t.minFilter=t.magFilter=THREE.LinearFilter;t.needsUpdate=true;return t;}
   material=new THREE.ShaderMaterial({vertexShader:monthShader.vertex,fragmentShader:monthShader.fragment,glslVersion:THREE.GLSL3,transparent:true,depthTest:false,depthWrite:false,side:THREE.BackSide,
    uniforms:{field0:{value:null},field1:{value:null},terrain:{value:texture(terrain)},coverage:{value:texture(coverage)},depthMap:{value:target.depthTexture},lo:{value:lo},hi:{value:hi},horizontalShape:{value:new THREE.Vector2(nx,ny)},eye:{value:camera.position},resolution:{value:renderer.getDrawingBufferSize(new THREE.Vector2())},inverseVP:{value:new THREE.Matrix4()},heights:{value:meta.display.height_centers_AGL_m},topAGL:{value:meta.display.height_tops_AGL_m.at(-1)},timeWeight:{value:0},gain:{value:.35},enabled:{value:1},contribution:{value:1},raySteps:{value:144},pigment:{value:new THREE.Vector3(.467,.490,.510)}}});
   const mesh=new THREE.Mesh(new THREE.BoxGeometry(span.x,span.y,span.z),material);mesh.position.copy(lo).addScaledVector(span,.5);volumeScene.add(mesh);
+  nearVolume=await createNearVolume(volumeScene,material,renderer,bytes);
+  function displayGround(e,n){const u=(e-x0)/(x1-x0)*(nx-1),v=(n-y0)/(y1-y0)*(ny-1),i=Math.max(0,Math.min(nx-2,Math.floor(u))),j=Math.max(0,Math.min(ny-2,Math.floor(v))),a=Math.max(0,Math.min(1,u-i)),b=Math.max(0,Math.min(1,v-j));return terrain[j*nx+i]*(1-a)*(1-b)+terrain[j*nx+i+1]*a*(1-b)+terrain[(j+1)*nx+i]*(1-a)*b+terrain[(j+1)*nx+i+1]*a*b;}
+  weather=await createWeatherEffects(scene,city.scene,meta,bytes,{actualOutlets:nearVolume.metadata.groups,sampleGround:displayGround});
   marker=new THREE.Mesh(new THREE.SphereGeometry(.045,12,8),new THREE.MeshBasicMaterial({color:'#d5a85e',depthTest:false}));marker.visible=false;marker.renderOrder=4;scene.add(marker);
   $('timeline').max=meta.actual_hours;$('startLabel').textContent=formatUTC(initialTime());$('endLabel').textContent=formatUTC(initialTime()+meta.actual_hours*3600000);$('periodLabel').textContent=`${meta.actual_hours}h → 15 s`;$('aboutScope').textContent=`Actual ${meta.actual_hours} continuous hourly means, 16 layers. Only selected-source increments are shown.${engineering?'Engineering input only.':'The full 360 hours play in 15 seconds by default.'}`;
   controlsUI();await setHours(0);view('FCC');ready=true;
-  window.MONTH_CLIMATE={ready:true,meta,scene,camera,controls,renderer,material,weather,initialReference,setHours,queryGround,sampleDisplay,view,play,stop,lastProbe:null,get hours(){return currentHours;},get playback(){return{playing,duration,preparing};},get currentPair(){return currentPair;},get performance(){return{frame_ms:frameEMA,renderScale,raySteps:material.uniforms.raySteps.value};}};
+  window.MONTH_CLIMATE={ready:true,meta,scene,camera,controls,renderer,material,weather,nearVolume,initialReference,setHours,queryGround,sampleDisplay,view,play,stop,lastProbe:null,get hours(){return currentHours;},get playback(){return{playing,duration,preparing};},get currentPair(){return currentPair;},get performance(){return{frame_ms:frameEMA,renderScale,raySteps:material.uniforms.raySteps.value};}};
   $('loading').style.display='none';$('status').textContent=`${meta.actual_hours} actual hours · 16 layers · native surface query`;
  }catch(error){fail(error);}
 }
@@ -206,7 +210,9 @@ function animate(now){
  if(lastFrame){const dt=now-lastFrame;if(dt<200)frameEMA=frameEMA*.95+dt*.05;}lastFrame=now;
  if(ready&&++perfFrames%120===0){const desired=frameEMA>30?Math.max(.65,renderScale-.1):frameEMA<19?Math.min(1,renderScale+.05):renderScale;if(desired!==renderScale){renderScale=desired;renderer.setPixelRatio(Math.min(devicePixelRatio,renderScale));resize();}}
  if(ready&&playing){const h=Math.min(meta.actual_hours,startHours+(now-playStart)/1000*meta.actual_hours/duration),i=indices(h),a=frameFromLoaded(i.a),b=frameFromLoaded(i.b);if(a&&b)commit(h,a,b,i.weight);if(h>=meta.actual_hours)stop();}
- camera.near=Math.max(.004,Math.min(.15,camera.position.distanceTo(controls.target)*.001));camera.updateProjectionMatrix();
+ camera.near=Math.max(.0001,Math.min(.15,camera.position.distanceTo(controls.target)*.001));camera.updateProjectionMatrix();
+ // Keep the query point legible without covering the actual nearby plume.
+ if(marker?.visible){const radius=camera.position.distanceTo(marker.position)*2*Math.tan(camera.fov*Math.PI/360)*5/innerHeight;marker.scale.setScalar(radius/.045);}
  if(ready){weather.update(currentHours,now*.001,camera,controls.target,material.uniforms.contribution.value,new THREE.Color().setRGB(...material.uniforms.pigment.value.toArray()),15/duration,material.uniforms.gain.value);if(perfFrames%30===0)$('weatherValue').textContent=`At view centre ${weather.state.rain_mm_h.toFixed(2)} mm/h`;}
  renderer.setRenderTarget(target);renderer.clear();renderer.render(scene,camera);renderer.setRenderTarget(null);renderer.clear();renderer.render(copyScene,copyCamera);
  if(ready){material.uniforms.inverseVP.value.multiplyMatrices(camera.matrixWorld,camera.projectionMatrixInverse);renderer.autoClear=false;renderer.render(volumeScene,camera);renderer.autoClear=true;}

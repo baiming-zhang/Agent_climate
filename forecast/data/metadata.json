@@ -2438,106 +2438,106 @@
         "first_index": 0,
         "count": 24,
         "file": "ground_00.f32.gz",
-        "bytes": 1794151,
-        "sha256": "b6060e34ccadd76ff7ec09ab0804e9872a91a5b2f017c4ecf1777f828f9015c7"
+        "bytes": 1860062,
+        "sha256": "63228f56d115416293c0e08fdec22dfdb444960e7f8fd43f23f1f686aad0a4d6"
       },
       {
         "first_index": 24,
         "count": 24,
         "file": "ground_01.f32.gz",
-        "bytes": 2560999,
-        "sha256": "1db5538696432d136338aea2f3fc49fb653a85075e0c781ca5b99aa715e0cb0f"
+        "bytes": 2584737,
+        "sha256": "f2886ed07eaf3dc952cf20d55eb0d673235b3747721f37c49b0bd24a07cdb380"
       },
       {
         "first_index": 48,
         "count": 24,
         "file": "ground_02.f32.gz",
-        "bytes": 2504296,
-        "sha256": "7555a7577cadaa92b71d4c69b8c5ba6e014af40424222c26019c3e933e3cfc5b"
+        "bytes": 2507101,
+        "sha256": "60bfb422a9ae3a92f7ce18171b20a1ed901324cfc7543926b1738974ed12b582"
       },
       {
         "first_index": 72,
         "count": 24,
         "file": "ground_03.f32.gz",
-        "bytes": 2343288,
-        "sha256": "46a7cbab88b30d3970980dcb8a8f0e2a38a6dbe6b01f6852480057cef7b86cdb"
+        "bytes": 2317607,
+        "sha256": "a16a35030394e2883f0dffce0d6f6c2c5f2874db24a1e99d24d24eab4194be39"
       },
       {
         "first_index": 96,
         "count": 24,
         "file": "ground_04.f32.gz",
-        "bytes": 2647920,
-        "sha256": "dd82f04a78e59ac1cc0793140f1f9c748fd334d34fdfb28cdf360c90010528f2"
+        "bytes": 2626602,
+        "sha256": "b50887165984804536628874f8a94a26886bf8d1b08bd3b9aceed667c9794fea"
       },
       {
         "first_index": 120,
         "count": 24,
         "file": "ground_05.f32.gz",
-        "bytes": 2840568,
-        "sha256": "34d09a421a2268822712b5cee21bda2e23502aa78466bfa9560660731ffa54cb"
+        "bytes": 2833693,
+        "sha256": "ed81f9745556c4ebfe62ff3adf975a5a54b71ea258edd34daa23af2bd0a1891c"
       },
       {
         "first_index": 144,
         "count": 24,
         "file": "ground_06.f32.gz",
-        "bytes": 2814753,
-        "sha256": "8182e39a40e300c322e73172509c3bcb0148424030e9a599829f78a72b7c6519"
+        "bytes": 2846089,
+        "sha256": "98eb50d88a190ea8c89e7ec538e4e3d4c769bb8566c83c9ec4419242ff6889a5"
       },
       {
         "first_index": 168,
         "count": 24,
         "file": "ground_07.f32.gz",
-        "bytes": 2679580,
-        "sha256": "88c181c0620c727501734fb7adb28ae138ba846489e67c800389e1a98b3733b4"
+        "bytes": 2734890,
+        "sha256": "081bcd861e01517fed4be0cab032c80fc86fa835b087a33358ee59e9e4424b11"
       },
       {
         "first_index": 192,
         "count": 24,
         "file": "ground_08.f32.gz",
-        "bytes": 2968479,
-        "sha256": "f4c73e696884778273c9c7b9d19b6e5d0232b31bde00692e6393b97e71f9f9e5"
+        "bytes": 2940252,
+        "sha256": "c68eec7b337bcabd9199fa11e6e94e88d5b812f28a91a9d02e54d4b052cd892a"
       },
       {
         "first_index": 216,
         "count": 24,
         "file": "ground_09.f32.gz",
-        "bytes": 2886729,
-        "sha256": "40d78c24b3b3f0a9a3bd59233621c037407ffca87c7364a28e7eaecf54213f2b"
+        "bytes": 2897065,
+        "sha256": "504867c47c775da2f1bd4ed33fc1593addf1802a7ed72b8dbd44b22060c09e95"
       },
       {
         "first_index": 240,
         "count": 24,
         "file": "ground_10.f32.gz",
-        "bytes": 2765328,
-        "sha256": "e4f07b8ad4be16daa8c7b7e80a7ddeb854f18d3eebc4346c4b3a133dfe4e33a0"
+        "bytes": 2794785,
+        "sha256": "fcb6747480edae2f43a7384efd746f031fda09643c7b5273a7f9e3300502d208"
       },
       {
         "first_index": 264,
         "count": 24,
         "file": "ground_11.f32.gz",
-        "bytes": 3356569,
-        "sha256": "a90f410ac00e7a44f7258c37349534b31b82fbb20f8b3dc6494df0d4ce6ebb5c"
+        "bytes": 3384439,
+        "sha256": "b94ddbd9a92bd5adac4d2a32956da38785da2e0a1733005e6f16606c6bfbefb3"
       },
       {
         "first_index": 288,
         "count": 24,
         "file": "ground_12.f32.gz",
-        "bytes": 2955005,
-        "sha256": "41d1e5e24552206f69478a1d6da9ee2337635bf26964f0351a2cfd48e4be07eb"
+        "bytes": 2999983,
+        "sha256": "44673849319a858a36b21de4290507c273b4fe7c0f9ec551e66263fe85f6196f"
       },
       {
         "first_index": 312,
         "count": 24,
         "file": "ground_13.f32.gz",
-        "bytes": 2844697,
-        "sha256": "b842b93e47ee0cf8e1d8e9a3cdedecd4c14f200d796e25315f556de7d257ded3"
+        "bytes": 2877010,
+        "sha256": "44d8f381f8a124886b45420bc7235c99092dc5fe1558b56227c19fff17754036"
       },
       {
         "first_index": 336,
         "count": 24,
         "file": "ground_14.f32.gz",
-        "bytes": 2789299,
-        "sha256": "882eb7162c0c4e3f19dd4c37e7907dadebf8098c8ca9c81d158179157612c075"
+        "bytes": 2800715,
+        "sha256": "abbbf63fede71dae6924ce7b4e6e696b6c66828e81df1f0edc8165d24c807d34"
       }
     ],
     "stored_type": "little-endian IEEE754 float32; native product bits preserved",
@@ -2562,8 +2562,8 @@
       5
     ],
     "file": "aggregates.f32.gz",
-    "bytes": 170943,
-    "sha256": "9ba44079285bfb04c48b13c5a97808d2bd65b81f216d5cd0a1da9f2fabfd33d3",
+    "bytes": 170963,
+    "sha256": "90c6931f3af11da8da026944f1e88798ef889897d4bd4954768678aa97111837",
     "deposition_policy": "Final cumulative snapshot, never sum cumulative snapshots",
     "mean_policy": "Equal actual one-hour intervals"
   },
@@ -2584,112 +2584,112 @@
         "first_index": 0,
         "count": 24,
         "file": "display_00.u8.gz",
-        "bytes": 591444,
-        "sha256": "4fdf3da9e29871270fce1a60b6301de5a7fdefd79b8099ddf540512ddf6c9e8a"
+        "bytes": 630830,
+        "sha256": "6b28af1740416203ea7224ba3395686507597f23cebd75e45c2fe188f2dbe767"
       },
       {
         "first_index": 24,
         "count": 24,
         "file": "display_01.u8.gz",
-        "bytes": 675337,
-        "sha256": "b92aa66c474c174db342a4b494855328352e00b3a3a14a2a56c3baf8d5ae7e06"
+        "bytes": 710760,
+        "sha256": "eeb3eca0de2db03e1667a5bec4da467991b7c6108bd00a4833d37a1c28bd150c"
       },
       {
         "first_index": 48,
         "count": 24,
         "file": "display_02.u8.gz",
-        "bytes": 511141,
-        "sha256": "416585c9ffc05383fbda51ce112ba00ed67467f0d00e89728aa64933d8129cf3"
+        "bytes": 533291,
+        "sha256": "6c9dce248e7da68c76166796a4e486b6c572ba249c2adee4cdeaf874629be788"
       },
       {
         "first_index": 72,
         "count": 24,
         "file": "display_03.u8.gz",
-        "bytes": 476801,
-        "sha256": "3fc0208436ec6c471833e549cc1a22d08d096d556cc6b18e3ed5d17f114a7673"
+        "bytes": 491078,
+        "sha256": "993ca33e9fc466fd279e6b634fcc6618c81dc0f56c4f3a3e834ce04b5e6e864f"
       },
       {
         "first_index": 96,
         "count": 24,
         "file": "display_04.u8.gz",
-        "bytes": 578588,
-        "sha256": "16a0d26f73352bf05e74ddecdcc2a604c12282b2b8022e64df7fc3fd41f77988"
+        "bytes": 606673,
+        "sha256": "2158958e59a6e0748fe6d56a75b3fab41468e0fd212b54164568d6fd7faacbd3"
       },
       {
         "first_index": 120,
         "count": 24,
         "file": "display_05.u8.gz",
-        "bytes": 531664,
-        "sha256": "b1f8285bc18e86c0c4c06d3c6078701572ac1bb920e395ede4043230dbca575c"
+        "bytes": 581749,
+        "sha256": "24799413b9e9dce4315352cb11b4ac445d7510dbc6380df2dca7918904d55bc3"
       },
       {
         "first_index": 144,
         "count": 24,
         "file": "display_06.u8.gz",
-        "bytes": 394712,
-        "sha256": "ca82f2351b017ac7e6c558b63fd64f7022f97e39b680fff16b173f2d4d6079c2"
+        "bytes": 466773,
+        "sha256": "56d6b48397f052dd35a2c5cf3296144f6b8d3601831f36b270fe2bb0ef3687ff"
       },
       {
         "first_index": 168,
         "count": 24,
         "file": "display_07.u8.gz",
-        "bytes": 253941,
-        "sha256": "1ea33cccc28c94418a5a59c5d14eadd8e8e10173e57b6e9adb7ec241dcecc7dd"
+        "bytes": 339664,
+        "sha256": "4f6bcb9567c41b52ef43bafc0e7e4e6cbbb8f33bd3cb5079dad4403d0841fd70"
       },
       {
         "first_index": 192,
         "count": 24,
         "file": "display_08.u8.gz",
-        "bytes": 514381,
-        "sha256": "05689332433342279ea3d4a121665d5bc4b9079bdf539665eb85af6017f0a2a3"
+        "bytes": 524687,
+        "sha256": "8afb2abd1238ea09601b3162b0c0ad8e2deeafea4602d4e5570abbacd8c11d62"
       },
       {
         "first_index": 216,
         "count": 24,
         "file": "display_09.u8.gz",
-        "bytes": 506063,
-        "sha256": "d8470a545f50aba3dc0b52015169e57dab199b011176aae75a62f4e4b841ac6f"
+        "bytes": 521413,
+        "sha256": "d3c6196c8ac18b10d8a2581416732116afd52d0609b6a034614ae48f303701c8"
       },
       {
         "first_index": 240,
         "count": 24,
         "file": "display_10.u8.gz",
-        "bytes": 404682,
-        "sha256": "f43a668bc419e67cfb1277df76375fc77210b45e5bcecdd4ba124b068b3eaf81"
+        "bytes": 431960,
+        "sha256": "2b8270b92a15a3d10b8b32f7d650391a849c8e85657c9189e31fc1064af842e2"
       },
       {
         "first_index": 264,
         "count": 24,
         "file": "display_11.u8.gz",
-        "bytes": 1046787,
-        "sha256": "940582774e8088de0ed22eeb63aeaef7d1e8f0fbe0477bfecfbd1f8ab73e68cd"
+        "bytes": 1094072,
+        "sha256": "0cb981d661cc35c80f12b08b4b52bc90be06b6e907ae806e482ea5211e010f59"
       },
       {
         "first_index": 288,
         "count": 24,
         "file": "display_12.u8.gz",
-        "bytes": 657098,
-        "sha256": "bb6a74cca61683b9fdf223d13e17416c8012c5b0aa76f2ee7450a9d73b82cd7d"
+        "bytes": 709201,
+        "sha256": "7f63b21ff109a9862397bd6d9da97f9a0f344bb09092a6a91344414f67c6af34"
       },
       {
         "first_index": 312,
         "count": 24,
         "file": "display_13.u8.gz",
-        "bytes": 731491,
-        "sha256": "d1b6a7937023600d1b4de51938366f39e2e409e94bf81b4abf92c21ec455fd85"
+        "bytes": 787059,
+        "sha256": "6564f2dc41282322ddfc0fce09629db3874ba6c0c7e321f1e5365c83fe6dd674"
       },
       {
         "first_index": 336,
         "count": 24,
         "file": "display_14.u8.gz",
-        "bytes": 587994,
-        "sha256": "c664b4fe6de69d5a17970d9ebba19fc70268f85268ec83e1a9d955f285b7b8ed"
+        "bytes": 640268,
+        "sha256": "c90a63560b71ca6b1ce8bd46226a36d2a2ad9be9d7fa6716dbac88ee4a848b0b"
       }
     ],
     "quantizers": {
       "source_ppb": {
-        "native_maximum_ppb": 21.376023017883302,
-        "scale_ppb": 0.00213760230178833,
+        "native_maximum_ppb": 15.503640625,
+        "scale_ppb": 0.0015503640625,
         "log_max": 9.210440366976517,
         "decode": "C=scale*expm1(q/255*log_max); decode to scalar BEFORE spatial/time interpolation",
         "codes": 256
@@ -2704,8 +2704,8 @@
     },
     "measured_quantization_error": {
       "source_ppb": {
-        "maximum_absolute_ppb": 0.2812652587890625,
-        "maximum_relative_above_one_percent_native_max": 0.01877940259873867
+        "maximum_absolute_ppb": 0.1600503921508789,
+        "maximum_relative_above_one_percent_native_max": 0.018715253099799156
       },
       "initial_ppb": {
         "maximum_absolute_ppb": 0.0,
@@ -2763,13 +2763,13 @@
     "projection": "RegularUTM display regrid, native ground queries remain unchanged"
   },
   "time_policy": "360actual preceding hourly means; interpolate means at centers0.5..359.5h, hold first/last half-hour, report averaging window. Cumulative deposition uses hourly ends with known initial deposition0.",
-  "source_scope": "Three selected-source increments only; no initial or external chemical background. Not total ambient SO2.",
+  "source_scope": "Three outlet-origin selected-source increments only; background excluded. Not total ambient SO2",
   "forecast_not_future_observations": true,
   "SO2_colour_is_artificial": true,
   "original_model_and_native_products_unchanged": true,
   "old2021_fitted_weights_used": false,
   "new_forecast_steps_executed": 0,
-  "scientific_source_freeze_SHA256": "5efa0782cee6e38bb4778e18b1452a59aba192054c0195eee8e87b6d140bfcf3",
+  "scientific_source_freeze_SHA256": "025c6fe8ad74e05eb50da1e4c7e0ef9b23853f106d4323e7ebb4dd759fa109c4",
   "facilities": [
     {
       "key": "FCC",
@@ -51422,9 +51422,13 @@
     "elapsed_seconds": 0.21013064199996734,
     "UTC": "2026-11-05T21:42:21.417577+00:00"
   },
-  "UI_role": "Actual360h_selected_source_release_with_static_T0_reference",
+  "UI_role": "Actual360h_outlet_origin_selected_source_release",
   "initial_background_evolution_included": false,
   "static_initial_reference": "./initial_reference/metadata.json",
-  "background_status": "Particle-derived background propagation withheld after local concentration fidelity failure; static dated NASA reference only",
-  "quantity_type": "selected_source_increment_only"
+  "background_status": "Deferred at user request; not part of current source increments",
+  "quantity_type": "selected_source_increment_only",
+  "release_version": "outlet-origin-r04",
+  "near_field": "./near/metadata.json",
+  "source_transport_model": "Native3D outlet-origin + finite-density parameterized thermal rise",
+  "near_field_role": "Fine trajectory-residence reconstruction, not resolved CFD or high-precision near-stack exposure; native ground queries unchanged by display reconstruction"
 }

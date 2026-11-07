@@ -1,7 +1,7 @@
 import * as THREE from 'three';
-import {createSourceBridge} from './source_bridge.mjs?v=continuous-r03';
 
-// Rain glyphs and source-origin indicators. They do not add SO2 mass or alter
+
+// Rain glyphs and reported open-stack geometry. They do not add SO2 mass or alter
 // native concentration/ground queries. All intensities and source paths use
 // the actual frozen weather / wet removal / reported stack parameters.
 export async function createWeatherEffects(scene,city,meta,bytes,sourceOptions){
@@ -40,22 +40,23 @@ export async function createWeatherEffects(scene,city,meta,bytes,sourceOptions){
   void main(){vec2 xz=anchor+(seed.xy-.5)*radius*2.;vec2 uv=vec2((xz.x-bounds.x)/(bounds.z-bounds.x),(-xz.y-bounds.y)/(bounds.w-bounds.y));vec4 w=mix(texture2D(weather0,uv),texture2D(weather1,uv),weight);float frozen=clamp(w.g/max(w.r,.000001),0.,1.);float phase=fract(seed.z-clock*mix(.045,.012,frozen));float h=.02+phase*.30+end*mix(.014,.002,frozen);vec3 p=vec3(xz.x,w.a*.001*1.8+h,xz.y);opacity=(1.-exp(-max(w.r,0.)*.65))*.62;opacity*=step(0.,uv.x)*step(uv.x,1.)*step(0.,uv.y)*step(uv.y,1.);wash=1.-exp(-max(w.b,0.)*150.);gl_Position=projectionMatrix*modelViewMatrix*vec4(p,1.);}`,
   fragmentShader:`uniform vec3 pigment;varying float opacity;varying float wash;void main(){if(opacity<.002)discard;gl_FragColor=vec4(mix(vec3(.37,.51,.62),pigment,wash*.85),opacity);}`});
  const rain=new THREE.LineSegments(rg,rm);rain.frustumCulled=false;rain.name='Actual hourly precipitation and selected-source wet-removal glyphs';rain.userData.nonQuery=true;scene.add(rain);
- const sources=sourceData.sources.map(s=>{
-  const industrial=city.getObjectByName('Industrial_NPRI_'+s.npri)||city.getObjectByName('Industrial NPRI_'+s.npri);const base=industrial?.position.y??0;
+ const sources=sourceData.sources.map(original=>{
+  const s={...original},actual=sourceOptions.actualOutlets.find(g=>g.group===s.group);if(actual)s.world_east_north_km=actual.center_world_east_north_km;
+  const industrial=city.getObjectByName('Industrial_NPRI_'+s.npri)||city.getObjectByName('Industrial NPRI_'+s.npri);const base=sourceOptions.sampleGround(s.world_east_north_km[0],s.world_east_north_km[1])*.001*1.8;
   const p=[s.world_east_north_km[0],base,-s.world_east_north_km[1]];
   const h=s.stack.height_AGL_m*.001*1.8;
-  const stack=new THREE.Mesh(new THREE.CylinderGeometry(s.stack.diameter_m*.0005,s.stack.diameter_m*.0006,h,12),new THREE.MeshStandardMaterial({color:'#8d8a7b',roughness:.9}));stack.position.set(p[0],base+h/2,p[2]);stack.name=s.id+' reported-position stack schematic';scene.add(stack);
-  const cap=new THREE.Mesh(new THREE.TorusGeometry(Math.max(.004,s.stack.diameter_m*.001),.001,6,16),new THREE.MeshBasicMaterial({color:'#be9460'}));cap.rotation.x=Math.PI/2;cap.position.set(p[0],base+h,p[2]);cap.userData.nonQuery=true;scene.add(cap);
+  const stack=new THREE.Mesh(new THREE.CylinderGeometry(s.stack.diameter_m*.0005,s.stack.diameter_m*.0005,h,32,1,true),new THREE.MeshStandardMaterial({color:'#8d8a7b',roughness:.9,side:THREE.DoubleSide}));stack.position.set(p[0],base+h/2,p[2]);stack.name=s.id+' reported-position stack schematic';scene.add(stack);
+  const cap=new THREE.Mesh(new THREE.TorusGeometry(s.stack.diameter_m*.00048,s.stack.diameter_m*.00003,8,32),new THREE.MeshBasicMaterial({color:'#be9460'}));cap.rotation.x=Math.PI/2;cap.position.set(p[0],base+h,p[2]);cap.userData.nonQuery=true;scene.add(cap);
   return{...s,base,cap};
  });
- const bridge=createSourceBridge(sourceOptions.overlay,sources,sourceOptions),emit=bridge.mesh;let last={rain_mm_h:0,wet_mg_m2_h:0};
+ const emit=new THREE.Group();emit.name='Open outlets; concentration is sampled from actual3D fields';let last={rain_mm_h:0,wet_mg_m2_h:0};
  function update(hours,seconds,camera,target,contribution,pigment,playbackRate=1,gain=.35){
   const f=Math.max(0,Math.min(nt-1,hours-.5)),a=Math.floor(f),b=Math.min(nt-1,a+1),w=f-a;
   const ta=texture(a,[a,b],contribution),tb=texture(b,[a,b],contribution);if(!ta||!tb)return;
   rm.uniforms.weather0.value=ta;rm.uniforms.weather1.value=tb;rm.uniforms.weight.value=w;rm.uniforms.clock.value=seconds;rm.uniforms.anchor.value.set(target.x,target.z);rm.uniforms.radius.value=Math.min(30,Math.max(1,camera.position.distanceTo(target)*.45));
   rm.uniforms.pigment.value.setRGB(pigment.r,pigment.g,pigment.b,THREE.SRGBColorSpace);emit.visible=contribution!==2;
   last={rain_mm_h:sample(a,target.x,target.z,0)*(1-w)+sample(b,target.x,target.z,0)*w,wet_mg_m2_h:sample(a,target.x,target.z,4)*(1-w)+sample(b,target.x,target.z,4)*w};
-  bridge.update(a,b,w,seconds,pigment,playbackRate,gain,camera.position);
+
  }
- return{prepare,preload:prepareAll,update,metadata:wm,sources,objects:{rain,emit},get state(){return last;},get bridgeState(){return bridge.state;},set rainVisible(value){rain.visible=value;},set sourcesVisible(value){emit.visible=value;}};
+ return{prepare,preload:prepareAll,update,metadata:wm,sources,objects:{rain,emit},get state(){return last;},get bridgeState(){return{mode:'actual_native_3D_volume',billboard:false};},set rainVisible(value){rain.visible=value;},set sourcesVisible(value){emit.visible=value;}};
 }

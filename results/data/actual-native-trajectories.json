@@ -1,0 +1,70 @@
+{
+  "role": "Explanation of actual native3D paths, not renderer-created smoke",
+  "particle_identities": [
+    {
+      "particle_slot": 1,
+      "birth_s": 0,
+      "release": 1
+    },
+    {
+      "particle_slot": 2,
+      "birth_s": 0,
+      "release": 1
+    },
+    {
+      "particle_slot": 3,
+      "birth_s": 0,
+      "release": 1
+    },
+    {
+      "particle_slot": 13,
+      "birth_s": 60,
+      "release": 1
+    },
+    {
+      "particle_slot": 14,
+      "birth_s": 60,
+      "release": 1
+    },
+    {
+      "particle_slot": 15,
+      "birth_s": 60,
+      "release": 1
+    },
+    {
+      "particle_slot": 16,
+      "birth_s": 60,
+      "release": 1
+    },
+    {
+      "particle_slot": 17,
+      "birth_s": 60,
+      "release": 1
+    },
+    {
+      "particle_slot": 18,
+      "birth_s": 60,
+      "release": 1
+    },
+    {
+      "particle_slot": 37,
+      "birth_s": 120,
+      "release": 1
+    },
+    {
+      "particle_slot": 38,
+      "birth_s": 120,
+      "release": 1
+    },
+    {
+      "particle_slot": 39,
+      "birth_s": 120,
+      "release": 1
+    }
+  ],
+  "max_age_s": 900,
+  "physical_period_hours": 360,
+  "logged_scope": "Native slots<=100, only first1800 s of parcel age; keyed by release+slot+birth, figure shows FCC first900 s",
+  "source_file": "production360/stack_trajectories.csv",
+  "new_model_steps": 0
+}

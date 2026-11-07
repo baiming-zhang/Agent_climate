@@ -1,3 +1,4 @@
+import {nearPartitionGLSL} from './near_volume.mjs?v=outlet-r04';
 // Actual16AGL layers, two concentration scalars. Colours never carry data.
 export const monthShader={
  vertex:`varying vec3 vWorld;void main(){vWorld=(modelMatrix*vec4(position,1.)).xyz;gl_Position=projectionMatrix*viewMatrix*vec4(vWorld,1.);}`,
@@ -6,6 +7,7 @@ export const monthShader={
  uniform sampler3D field0;uniform sampler3D field1;uniform sampler2D terrain;uniform sampler2D coverage;uniform sampler2D depthMap;
  uniform vec3 lo;uniform vec3 hi;uniform vec2 horizontalShape;uniform vec3 eye;uniform vec2 resolution;uniform mat4 inverseVP;
  uniform float heights[16];uniform float topAGL;uniform float timeWeight;uniform float gain;uniform float enabled;uniform float contribution;uniform float raySteps;uniform vec3 pigment;
+ ${nearPartitionGLSL}
  float sampleScalar(vec3 p){
   vec2 q=vec2((p.x-lo.x)/(hi.x-lo.x),(hi.z-p.z)/(hi.z-lo.z));
   if(any(lessThan(q,vec2(0.)))||any(greaterThan(q,vec2(1.))))return 0.;
@@ -13,11 +15,14 @@ export const monthShader={
   if(texture(coverage,uv).r<.5)return 0.;
   float agl=p.y/1.8*1000.-texture(terrain,uv).r;
   if(agl<0.||agl>topAGL)return 0.;
+  float regionalWeight=max(0.,1.-sumNearWeights(p,agl));
+  if(regionalWeight==0.)return 0.;
   float layer=0.;
   for(int k=0;k<15;k++){if(agl>=heights[k+1])layer=float(k+1);else if(agl>=heights[k]){layer=float(k)+(agl-heights[k])/(heights[k+1]-heights[k]);break;}}
   vec3 nativeUV=vec3(uv,(layer+.5)/16.);
   vec2 pair=mix(texture(field0,nativeUV).rg,texture(field1,nativeUV).rg,timeWeight);
-  return contribution<.5?pair.r+pair.g:(contribution<1.5?pair.r:pair.g);
+  float c=contribution<.5?pair.r+pair.g:(contribution<1.5?pair.r:pair.g);
+  return c*regionalWeight;
  }
  void main(){
   if(enabled<.5)discard;

@@ -1,5 +1,5 @@
 {
-  "note": "逻辑报告名与SHA256用于定位来源，不含本机路径、日志、凭据或PID。数值来自已有冻结报告；本导出不推进任何物理时间步。",
+  "note": "Hashes identify individual historical records. The latest outlet-origin calculation has its own freeze and product hashes; frozen weather was not rerun.",
   "snapshot_utc": "2026-11-05T23:19:32.402630+00:00",
   "reports": [
     {
@@ -145,6 +145,21 @@
     {
       "report": "pollution_month_v1/month_products_status.json",
       "sha256": "f897eb835d82e868269c3e8ab89cbcf7f28fd613264fb1f761ea774873b77346"
+    }
+  ],
+  "latest_outlet_snapshot_utc": "2026-11-07T03:26:55.655133+00:00",
+  "latest_outlet_records": [
+    {
+      "report": "pollution_month_v1/stack_origin_r04/production360_frozen.json",
+      "sha256": "025c6fe8ad74e05eb50da1e4c7e0ef9b23853f106d4323e7ebb4dd759fa109c4"
+    },
+    {
+      "report": "pollution_month_v1/stack_origin_r04/products_status.json",
+      "sha256": "83cade564ba94ae5183af35eb5d487df3ccc7e166f0e703f221f3bb321e9462a"
+    },
+    {
+      "report": "pollution_month_v1/stack_origin_r04/ground_summary.json",
+      "sha256": "fc030eea5efc38b80d23666e63704bd48ca6b202a6b8e24039353a57de8770a7"
     }
   ]
 }

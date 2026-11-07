@@ -1,0 +1,12 @@
+{
+  "role": "Actual outlet-origin360h source-only raw-grid summary",
+  "hours": 360,
+  "units": "ppb",
+  "scope": "Longitude[-123.25,-122.90],latitude[49.10,49.33],native terrain<80m; includes water, not a municipal mask",
+  "area_hour_exact_zero_fraction": 0.6229160308837891,
+  "area_hour_positive_below_0_0005_fraction": 0.010753317674001058,
+  "area_hour_ground_zero_upper_nonzero_fraction": 0.26741229163275826,
+  "selected_rectangle_ground_maximum_ppb": 7.964346885681152,
+  "full_grid_ground_maximum_ppb": 15.503640174865723,
+  "caveat": "Native0..20m hourly mean, finite particle sampling; not street/breathing-height exposure or total ambient concentration"
+}

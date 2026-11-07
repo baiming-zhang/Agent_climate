@@ -1,0 +1,60 @@
+{
+  "actual_hours": 360,
+  "frames": 360,
+  "layers": 16,
+  "actual_first_time": "20261104_190000",
+  "actual_last_time": "20261119_180000",
+  "all_fields_finite_nonnegative": true,
+  "ZERO_exact": true,
+  "mass_ledger": [
+    {
+      "species_index": "1",
+      "species": "SO2_FCC",
+      "initial_kg": 0.0,
+      "emitted_kg": 5149.315151274204,
+      "retained_kg": 427.92267191448843,
+      "dry_kg": 1951.6040836714883,
+      "wet_kg": 1026.1341359292499,
+      "boundary_outflow_kg": 1743.6542656812064,
+      "other_termination_kg": 0.0,
+      "small_mass_kg": 0.0,
+      "age_termination_kg": 0.0,
+      "residual_kg": -5.922228410781827e-06
+    },
+    {
+      "species_index": "2",
+      "species": "SO2_WTE",
+      "initial_kg": 0.0,
+      "emitted_kg": 4512.328451871872,
+      "retained_kg": 344.2559635470806,
+      "dry_kg": 1857.4781696027321,
+      "wet_kg": 892.1337405707228,
+      "boundary_outflow_kg": 1418.4605715064624,
+      "other_termination_kg": 0.0,
+      "small_mass_kg": 0.0,
+      "age_termination_kg": 0.0,
+      "residual_kg": 6.644873792538419e-06
+    },
+    {
+      "species_index": "3",
+      "species": "SO2_KILN",
+      "initial_kg": 0.0,
+      "emitted_kg": 6144.2872524261475,
+      "retained_kg": 475.15034113630935,
+      "dry_kg": 2344.311358554568,
+      "wet_kg": 1240.5586827759812,
+      "boundary_outflow_kg": 2084.266864000841,
+      "other_termination_kg": 0.0,
+      "small_mass_kg": 0.0,
+      "age_termination_kg": 0.0,
+      "residual_kg": 5.958448127785232e-06
+    }
+  ],
+  "continuous_without_daily_reset": true,
+  "source_freeze_sha256": "5efa0782cee6e38bb4778e18b1452a59aba192054c0195eee8e87b6d140bfcf3",
+  "product_seconds": 2.2977675769998314,
+  "transport_validation_seconds": 6.686387161000312,
+  "query_scope": "Only three selected-source increments, initial propagation excluded; static original NASA T0 reference is separate",
+  "background_evolution_qualified": false,
+  "background_sampling_diagnostic": "initial-sampling-failure.json"
+}

@@ -26,73 +26,73 @@
       "first_index": 0,
       "count": 24,
       "file": "weather_00.f32.gz",
-      "SHA256": "d007f57fbf3d42506168d2b0342ba90d121251b44fa5b281f4b8e82fc68c6499"
+      "SHA256": "23953783da08b25b430f1b0f2581275041f2421ad0a582b57120fd7d8bf0661d"
     },
     {
       "first_index": 24,
       "count": 24,
       "file": "weather_01.f32.gz",
-      "SHA256": "3a8b90688acd5bdbd4ac747fa78bd985893e2e5a2f7bc81ff6dccd6578f24442"
+      "SHA256": "38c39bb759fdf7d1b3446d9233c46e992ad16c946c746034914fa615af6985dd"
     },
     {
       "first_index": 48,
       "count": 24,
       "file": "weather_02.f32.gz",
-      "SHA256": "4673fa6a7f0e035fcd49186c1f53b5038a0ed9997397bbc4a407dfddef355f50"
+      "SHA256": "1284789c964666712a3d5c60532b0814fa61eb71defdb7a9296e0b388ddc2d64"
     },
     {
       "first_index": 72,
       "count": 24,
       "file": "weather_03.f32.gz",
-      "SHA256": "ef33eda8488d436defd532ed255bc69c0b6de76a754b2eb1cd18b74674984c94"
+      "SHA256": "7f93a06ccdf80f242a223f9e2ea7322e696b3894b0c964c49cbd2e509cc884ea"
     },
     {
       "first_index": 96,
       "count": 24,
       "file": "weather_04.f32.gz",
-      "SHA256": "f0c89a85bca7dcd499ac0f79597e31b720cf91dd852555d2aa4cbea71b05f100"
+      "SHA256": "26890eedb98479d05e7e577bc1e4a1c09aba1c9ce532c405dfe50f7d64645ecf"
     },
     {
       "first_index": 120,
       "count": 24,
       "file": "weather_05.f32.gz",
-      "SHA256": "857dad1694aa520dee7ea92a59a4f0beddc2a78ee9e452c2c06116e42dcb27e1"
+      "SHA256": "d0e2cf51ecca5484ae10b6de9906ae5eadb6e5972d12ad5b83b8682d7185cc52"
     },
     {
       "first_index": 144,
       "count": 24,
       "file": "weather_06.f32.gz",
-      "SHA256": "524461360ce3c6d59fa72af013495b24b2fd976b30f2c03eab892a189f3ee66b"
+      "SHA256": "b32eb98f73a6088a6f92ceb31f7f005d417ec959737c11c3871359de47f11bf6"
     },
     {
       "first_index": 168,
       "count": 24,
       "file": "weather_07.f32.gz",
-      "SHA256": "9bd56edec0d62c4d16099720438682b83f814848d402c440648b9c00d090b6a8"
+      "SHA256": "7d932d97dce3baf2f6d51bdf34a798d5ce6d9d3ab96226f3c8ee8d8ff7aeb24b"
     },
     {
       "first_index": 192,
       "count": 24,
       "file": "weather_08.f32.gz",
-      "SHA256": "07cffa4c9336a3cfd0b244a48403ddfe0621288d9ddd0f15ea6116a1fa5fe8ed"
+      "SHA256": "6b86876fbc9bc112e70b1e9a3c9e39bd3a925c434dcf061bb220cd85d996f228"
     },
     {
       "first_index": 216,
       "count": 24,
       "file": "weather_09.f32.gz",
-      "SHA256": "3bf5308fe2c251a6059fe902a200f3a76e2301bf8c7032e8cc73bb551adb22a7"
+      "SHA256": "20a23307579f879ad59456631e678bdfabe711305d2d94736c92878d45b230b9"
     },
     {
       "first_index": 240,
       "count": 24,
       "file": "weather_10.f32.gz",
-      "SHA256": "2eafa3f7e0272e826066b075d0cc69351c081f75ac85c834e17ee18140449cc2"
+      "SHA256": "5fb45e2288f030680109cda9b3b96affef75f3100e23b2c0da6aa366ffcd6758"
     },
     {
       "first_index": 264,
       "count": 24,
       "file": "weather_11.f32.gz",
-      "SHA256": "ff3510a6e9b5d6fbb4e97a52e795b7a63fb929e39ee84267dcd4f6b4f1d6a9b8"
+      "SHA256": "d136e0f3cfd98e008300dbbf0b81cb8a77c9485a33c838d6156786a19ef04626"
     },
     {
       "first_index": 288,
@@ -123,5 +123,9 @@
   "wet_visual_semantics": "Falling tinted rain glyphs encode actual selected-source wet-removal rate, not gravitational SO2 gas particles or a new sink",
   "outside_native_wet_domain_display_cells_masked_not_computed_zero": 184,
   "new_forecast_steps": 0,
-  "seconds": 65.6024397120018
+  "seconds": 1.674962656000389,
+  "source_transport_freeze_SHA256": "025c6fe8ad74e05eb50da1e4c7e0ef9b23853f106d4323e7ebb4dd759fa109c4",
+  "source_origins": "Actual outlet disks + parameterized finite-density thermal rise, native3D transport; no origin bridge",
+  "weather_samples_reused_from_previous_release": true,
+  "wet_removal_recomputed_from_new_native_transport": true
 }
