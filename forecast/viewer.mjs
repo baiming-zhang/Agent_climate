@@ -21,9 +21,9 @@ const target=new THREE.WebGLRenderTarget(1,1,{depthBuffer:true});target.depthTex
 const copyScene=new THREE.Scene(),copyCamera=new THREE.OrthographicCamera(-1,1,1,-1,0,1);copyScene.add(new THREE.Mesh(new THREE.PlaneGeometry(2,2),new THREE.MeshBasicMaterial({map:target.texture,depthTest:false,depthWrite:false})));
 const volumeScene=new THREE.Scene();const qBlocks=new Map(),textures=new Map(),groundBlocks=new Map();
 let meta,material,terrain,coverage,queryNative,currentHours=0,duration=15,playing=false,ready=false,preparing=false,playStart=0,startHours=0,request=0,currentPair=[],marker,crest;
-let lookups,weather,nearVolume,lastClock=-Infinity,renderScale=1,lastFrame=0,frameEMA=16.7,perfFrames=0,exporting=false,lastExport=null;const frameSize=()=>meta.display.shape_time_z_y_x_fields.slice(1).reduce((a,b)=>a*b,1);
+let lookups,weather,nearVolume,lastClock=-Infinity,renderScale=1,qualityMode='auto',lastFrame=0,frameEMA=16.7,perfFrames=0,exporting=false,lastExport=null;const frameSize=()=>meta.display.shape_time_z_y_x_fields.slice(1).reduce((a,b)=>a*b,1);
 async function bytes(url){const address=new URL(url,location.href);if(address.pathname.includes('/forecast/data/'))address.searchParams.set('rev','outlet-r04');const r=await fetch(address);if(!r.ok)throw Error('Data request failed '+r.status+': '+url);const b=new Uint8Array(await r.arrayBuffer());return b[0]===31&&b[1]===139?await new Response(new Blob([b]).stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer():b.buffer;}
-function resize(){if(exporting)return;renderer.setSize(innerWidth,innerHeight);camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();const s=renderer.getDrawingBufferSize(new THREE.Vector2());target.setSize(s.x,s.y);if(material)material.uniforms.resolution.value.copy(s);}
+function resize(){if(exporting)return;const gl=renderer.getContext(),limit=Math.min(renderer.capabilities.maxTextureSize,gl.getParameter(gl.MAX_RENDERBUFFER_SIZE)),viewport=gl.getParameter(gl.MAX_VIEWPORT_DIMS),requested=qualityMode==='auto'?Math.min(devicePixelRatio,renderScale):Number(qualityMode);renderer.setPixelRatio(Math.min(requested,limit/innerWidth,limit/innerHeight,viewport[0]/innerWidth,viewport[1]/innerHeight));renderer.setSize(innerWidth,innerHeight);camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();const s=renderer.getDrawingBufferSize(new THREE.Vector2());target.setSize(s.x,s.y);if(material)material.uniforms.resolution.value.copy(s);$('renderPixels').textContent=`${s.x} × ${s.y} px`;}
 addEventListener('resize',resize);resize();
 function clearProbe(){if(marker)marker.visible=false;$('inspector').hidden=true;$('probe').textContent='';if(window.MONTH_CLIMATE)window.MONTH_CLIMATE.lastProbe=null;}
 function stop(){playing=false;$('play').textContent='▶ Play';}
@@ -165,26 +165,29 @@ async function exportImage({width=3840,height=2160}={}){
  if(!ready||exporting)return null;
  const gl=renderer.getContext(),viewport=gl.getParameter(gl.MAX_VIEWPORT_DIMS),limit=Math.min(renderer.capabilities.maxTextureSize,gl.getParameter(gl.MAX_RENDERBUFFER_SIZE));
  if(!Number.isInteger(width)||!Number.isInteger(height)||width<1||height<1||width>Math.min(limit,viewport[0])||height>Math.min(limit,viewport[1]))throw Error('Image dimensions exceed this device’s rendering limit');
- const button=$('save'),old={raySteps:material.uniforms.raySteps.value,status:$('status').textContent,button:button.textContent},started=performance.now(),hours=currentHours;
- const output=new THREE.WebGLRenderTarget(width,height,{depthBuffer:false,samples:4});output.texture.colorSpace=THREE.SRGBColorSpace;
+ const button=$('save'),old={raySteps:material.uniforms.raySteps.value,depthMap:material.uniforms.depthMap.value,status:$('status').textContent,button:button.textContent},started=performance.now(),hours=currentHours;
+ let exporter,exportTarget,exportCopy,exportPlane,exportBlit;
  exporting=true;button.disabled=true;button.setAttribute('aria-busy','true');button.textContent='…';$('status').textContent='Rendering 4K PNG…';
  try{
   // Re-render geometry, depth and both scalar-volume passes at the export size.
   // Never enlarge the performance-scaled screen image or blend rendered frames.
-  // Keep the visible canvas unchanged while rendering to an off-screen target.
-  target.setSize(width,height);
-  camera.aspect=width/height;camera.updateProjectionMatrix();material.uniforms.resolution.value.set(width,height);material.uniforms.raySteps.value=320;
-  renderFrame(output);if(gl.isContextLost())throw Error('Graphics context was lost during export');
-  const pixels=new Uint8Array(width*height*4);await renderer.readRenderTargetPixelsAsync(output,0,0,width,height,pixels);
-  const photo=document.createElement('canvas');photo.width=width;photo.height=height;const ctx=photo.getContext('2d'),rgba=ctx.createImageData(width,height),stride=width*4;
-  for(let row=0;row<height;row++)rgba.data.set(pixels.subarray((height-1-row)*stride,(height-row)*stride),row*stride);
-  ctx.putImageData(rgba,0,0);
+  // A detached renderer uses the same display colour/blending pipeline without
+  // changing the visible canvas or interpolating its low-resolution pixels.
+  const photo=document.createElement('canvas');exporter=new THREE.WebGLRenderer({canvas:photo,antialias:true,preserveDrawingBuffer:true});
+  exporter.setPixelRatio(1);exporter.setSize(width,height,false);exporter.outputColorSpace=THREE.SRGBColorSpace;exporter.toneMapping=THREE.NoToneMapping;
+  exportTarget=new THREE.WebGLRenderTarget(width,height,{depthBuffer:true});exportTarget.depthTexture=new THREE.DepthTexture(width,height,THREE.UnsignedIntType);
+  exportPlane=new THREE.PlaneGeometry(2,2);exportBlit=new THREE.MeshBasicMaterial({map:exportTarget.texture,depthTest:false,depthWrite:false});exportCopy=new THREE.Scene();exportCopy.add(new THREE.Mesh(exportPlane,exportBlit));
+  camera.aspect=width/height;camera.updateProjectionMatrix();camera.updateMatrixWorld();material.uniforms.depthMap.value=exportTarget.depthTexture;material.uniforms.resolution.value.set(width,height);material.uniforms.raySteps.value=320;
+  exporter.setRenderTarget(exportTarget);exporter.clear();exporter.render(scene,camera);exporter.setRenderTarget(null);exporter.clear();exporter.render(exportCopy,copyCamera);
+  material.uniforms.inverseVP.value.multiplyMatrices(camera.matrixWorld,camera.projectionMatrixInverse);exporter.autoClear=false;exporter.render(volumeScene,camera);
+  if(exporter.getContext().isContextLost())throw Error('Graphics context was lost during export');
   const blob=await new Promise((resolve,reject)=>photo.toBlob(b=>b?resolve(b):reject(Error('PNG encoding failed')),'image/png'));
   const filename=`Vancouver_SO2_${hours.toFixed(2)}h_${width}x${height}.png`,url=URL.createObjectURL(blob),a=document.createElement('a');
   a.href=url;a.download=filename;a.click();setTimeout(()=>URL.revokeObjectURL(url),60000);
   lastExport={width,height,hours,mime:blob.type,bytes:blob.size,filename,raySteps:320};return lastExport;
  }finally{
-  renderer.setRenderTarget(null);output.dispose();renderer.autoClear=true;material.uniforms.raySteps.value=old.raySteps;
+  exportTarget?.dispose();exportPlane?.dispose();exportBlit?.dispose();exporter?.dispose();exporter?.forceContextLoss();
+  material.uniforms.depthMap.value=old.depthMap;renderer.setRenderTarget(null);renderer.autoClear=true;material.uniforms.raySteps.value=old.raySteps;
   exporting=false;resize();renderFrame();
   // Pause the playback clock while capturing; do not jump to a later model hour.
   if(playing)playStart+=performance.now()-started;
@@ -197,6 +200,7 @@ function controlsUI(){
  $('play').onclick=()=>play().catch(fail);$('timeline').oninput=()=>{stop();setHours(Number($('timeline').value)).catch(fail);};$('duration').oninput=()=>{duration=Number($('duration').value);$('durationValue').textContent=duration+' s';const value=String(15/duration);$('rate').value=[...$('rate').options].some(o=>Number(o.value)===15/duration)?[...$('rate').options].find(o=>Number(o.value)===15/duration).value:'custom';startHours=currentHours;playStart=performance.now();};
  $('rate').onchange=()=>{duration=15/Number($('rate').value);$('duration').value=duration;$('durationValue').textContent=duration+' s';startHours=currentHours;playStart=performance.now();};
  $('gain').oninput=()=>{material.uniforms.gain.value=Number($('gain').value);$('gainValue').textContent=Number($('gain').value).toFixed(2)+'×';};$('smoke').onchange=()=>material.uniforms.enabled.value=$('smoke').checked?1:0;
+ $('renderQuality').onchange=()=>{qualityMode=$('renderQuality').value;renderScale=1;resize();};
  function changeColour(){const hex=$('colour').value;material.uniforms.pigment.value.set(...[1,3,5].map(i=>parseInt(hex.slice(i,i+2),16)/255));}
  $('colour').oninput=changeColour;$('resetColour').onclick=()=>{$('colour').value='#777d82';changeColour();};$('crest').onchange=()=>{if(crest)crest.visible=$('crest').checked;};$('probeMode').onchange=clearProbe;
  document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>view(b.dataset.view));$('save').onclick=()=>exportImage().catch(error=>{$('status').textContent='Image export failed: '+error.message;});
@@ -229,14 +233,14 @@ async function init(){
   marker=new THREE.Mesh(new THREE.SphereGeometry(.045,12,8),new THREE.MeshBasicMaterial({color:'#d5a85e',depthTest:false}));marker.visible=false;marker.renderOrder=4;scene.add(marker);
   $('timeline').max=meta.actual_hours;$('startLabel').textContent=formatUTC(initialTime());$('endLabel').textContent=formatUTC(initialTime()+meta.actual_hours*3600000);$('periodLabel').textContent=`${meta.actual_hours}h → 15 s`;$('aboutScope').textContent=`Actual ${meta.actual_hours} continuous hourly means, 16 layers. Only selected-source increments are shown.${engineering?'Engineering input only.':'The full 360 hours play in 15 seconds by default.'}`;
   controlsUI();await setHours(0);view('FCC');ready=true;
-  window.MONTH_CLIMATE={ready:true,meta,scene,camera,controls,renderer,material,weather,nearVolume,setHours,queryGround,sampleDisplay,view,play,stop,exportImage,lastProbe:null,get lastExport(){return lastExport;},get exporting(){return exporting;},get hours(){return currentHours;},get playback(){return{playing,duration,preparing};},get currentPair(){return currentPair;},get performance(){return{frame_ms:frameEMA,renderScale,raySteps:material.uniforms.raySteps.value};}};
+  window.MONTH_CLIMATE={ready:true,meta,scene,camera,controls,renderer,material,weather,nearVolume,setHours,queryGround,sampleDisplay,view,play,stop,exportImage,lastProbe:null,get lastExport(){return lastExport;},get exporting(){return exporting;},get hours(){return currentHours;},get playback(){return{playing,duration,preparing};},get currentPair(){return currentPair;},get performance(){return{frame_ms:frameEMA,renderScale,qualityMode,pixels:[canvas.width,canvas.height],raySteps:material.uniforms.raySteps.value};}};
   $('loading').style.display='none';$('status').textContent=`${meta.actual_hours} actual hours · 16 layers · native surface query`;
  }catch(error){fail(error);}
 }
 function animate(now){
  requestAnimationFrame(animate);if(exporting)return;controls.update();
  if(lastFrame){const dt=now-lastFrame;if(dt<200)frameEMA=frameEMA*.95+dt*.05;}lastFrame=now;
- if(ready&&++perfFrames%120===0){const desired=frameEMA>30?Math.max(.65,renderScale-.1):frameEMA<19?Math.min(1,renderScale+.05):renderScale;if(desired!==renderScale){renderScale=desired;renderer.setPixelRatio(Math.min(devicePixelRatio,renderScale));resize();}}
+ if(ready&&++perfFrames%120===0&&qualityMode==='auto'){const desired=frameEMA>30?Math.max(.65,renderScale-.1):frameEMA<19?Math.min(1,renderScale+.05):renderScale;if(desired!==renderScale){renderScale=desired;resize();}}
  if(ready&&playing){const h=Math.min(meta.actual_hours,startHours+(now-playStart)/1000*meta.actual_hours/duration),i=indices(h),a=frameFromLoaded(i.a),b=frameFromLoaded(i.b);if(a&&b)commit(h,a,b,i.weight);if(h>=meta.actual_hours)stop();}
  camera.near=Math.max(.0001,Math.min(.15,camera.position.distanceTo(controls.target)*.001));camera.updateProjectionMatrix();
  // Keep the query point legible without covering the actual nearby plume.
