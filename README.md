@@ -5,6 +5,7 @@ Interactive Vancouver SO₂ source scenario, initialized 2026-11-04 at 18:00 UTC
 - [3D viewer](https://baiming-zhang.github.io/Agent_climate/forecast/)
 - [Methods, equations and results](https://baiming-zhang.github.io/Agent_climate/results/)
 - [Historical 2021 case](https://baiming-zhang.github.io/Agent_climate/historical/)
+- [Code and raw results · Climate(Baiming)](https://github.com/wang-mengdi/Agentic-Physical-Worlds/tree/Climate%28Baiming%29/climate)
 
 The complete 360-hour period plays in 15 seconds by default, with 0.25×–4× speed options, actual outlet-origin 3D concentration fields, actual hourly forecast precipitation, wet-removal glyphs and native 0–20 m surface queries. All 16 actual AGL layers are retained. Scalar values and geometry are interpolated; no RGB frame mixing or cross-fading is used.
 

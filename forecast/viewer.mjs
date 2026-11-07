@@ -175,9 +175,9 @@ function controlsUI(){
 }
 async function init(){
  try{
-  const response=await fetch('./data/metadata.json?rev=outlet-r04');if(!response.ok)throw Error('Complete 15-day data unavailable');meta=await response.json();
+  const response=await fetch('./data/metadata.json?rev=outlet-r04',{cache:'no-cache'});if(!response.ok)throw Error('Complete 15-day data unavailable');meta=await response.json();
   const engineering=new URLSearchParams(location.search).get('engineering')==='1';
-  if(!engineering&&(!meta.scientific_period_complete||meta.actual_hours!==360))throw Error('Production requires all 360 actual hours');
+  if(!engineering&&(!meta.scientific_period_complete||meta.actual_hours!==360||meta.release_version!=='outlet-origin-r04'))throw Error('Current outlet-origin data not ready. Reload after the deployment finishes.');
   if(engineering){$('caseTag').textContent=`Engineering input ${meta.actual_hours} h · not a production forecast`;document.querySelector('.brand h1').firstChild.textContent='Engineering preview';}
   else $('caseTag').textContent='15-day source increment · not ambient total';
   const [,nz,ny,nx]=meta.display.shape_time_z_y_x_fields;if(nz!==16)throw Error('All 16 actual vertical layers are required');
