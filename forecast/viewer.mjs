@@ -10,7 +10,6 @@ import {monthShader} from './volume_shader.mjs?v=outlet-r04';
 import {createNearVolume} from './near_volume.mjs?v=outlet-r04';
 import {formatPpb} from './format_ppb.mjs';
 import {createWeatherEffects} from './weather_effects.mjs?v=outlet-r04';
-import {loadInitialReference} from './initial_reference.mjs';
 const $=id=>document.getElementById(id),canvas=$('scene');
 const renderer=new THREE.WebGLRenderer({canvas,antialias:true,preserveDrawingBuffer:true});
 renderer.setPixelRatio(Math.min(devicePixelRatio,1));renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.NoToneMapping;
@@ -22,7 +21,7 @@ const target=new THREE.WebGLRenderTarget(1,1,{depthBuffer:true});target.depthTex
 const copyScene=new THREE.Scene(),copyCamera=new THREE.OrthographicCamera(-1,1,1,-1,0,1);copyScene.add(new THREE.Mesh(new THREE.PlaneGeometry(2,2),new THREE.MeshBasicMaterial({map:target.texture,depthTest:false,depthWrite:false})));
 const volumeScene=new THREE.Scene();const qBlocks=new Map(),textures=new Map(),groundBlocks=new Map();
 let meta,material,terrain,coverage,queryNative,currentHours=0,duration=15,playing=false,ready=false,preparing=false,playStart=0,startHours=0,request=0,currentPair=[],marker,crest;
-let lookups,weather,nearVolume,initialReference,referenceMode=false,savedSourceHours=0,lastClock=-Infinity,renderScale=1,lastFrame=0,frameEMA=16.7,perfFrames=0;const frameSize=()=>meta.display.shape_time_z_y_x_fields.slice(1).reduce((a,b)=>a*b,1);
+let lookups,weather,nearVolume,lastClock=-Infinity,renderScale=1,lastFrame=0,frameEMA=16.7,perfFrames=0;const frameSize=()=>meta.display.shape_time_z_y_x_fields.slice(1).reduce((a,b)=>a*b,1);
 async function bytes(url){const address=new URL(url,location.href);if(address.pathname.includes('/forecast/data/'))address.searchParams.set('rev','outlet-r04');const r=await fetch(address);if(!r.ok)throw Error('Data request failed '+r.status+': '+url);const b=new Uint8Array(await r.arrayBuffer());return b[0]===31&&b[1]===139?await new Response(new Blob([b]).stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer():b.buffer;}
 function resize(){renderer.setSize(innerWidth,innerHeight);camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();const s=renderer.getDrawingBufferSize(new THREE.Vector2());target.setSize(s.x,s.y);if(material)material.uniforms.resolution.value.copy(s);}
 addEventListener('resize',resize);resize();
@@ -32,7 +31,6 @@ function formatUTC(milliseconds){return new Date(milliseconds).toISOString().sli
 function initialTime(){const s=meta.initialization_UTC;return Date.parse(/[zZ]|[+-]\d\d:\d\d$/.test(s)?s:s+'Z');}
 function clock(force=false){
  if(!force&&performance.now()-lastClock<90&&currentHours<meta.actual_hours)return;lastClock=performance.now();
- if(referenceMode){$('time').textContent=formatUTC(initialTime());$('timeScope').textContent='NASA initial field · static reference';$('frame').textContent='T₀';return;}
  $('timeline').value=currentHours;$('time').textContent=formatUTC(initialTime()+currentHours*3600000);
  const index=Math.min(meta.actual_hours-1,Math.max(0,Math.floor(currentHours)));
  $('timeScope').textContent=`${index}–${index+1} h mean · source increment`;$('frame').textContent=`${currentHours.toFixed(1)} / ${meta.actual_hours} h`;
@@ -121,7 +119,6 @@ async function makeContextTerrain(){
  const mesh=new THREE.Mesh(geo,new THREE.MeshStandardMaterial({vertexColors:true,roughness:1,side:THREE.DoubleSide,polygonOffset:true,polygonOffsetFactor:4,polygonOffsetUnits:4}));mesh.name='Frozen parent HGT LANDMASK outer context, display only';scene.add(mesh);
 }
 async function queryGround(world){
- if(referenceMode){const q=initialReference.query(world);if(!q)return null;marker.position.copy(world);marker.visible=true;window.MONTH_CLIMATE.lastProbe=q;$('inspector').hidden=false;$('probe').innerHTML=`<strong>${formatPpb(q.ppb)}</strong> ppb<br>NASA initial near-surface reference<div class="secondary">Interpolated original model field · no particle reconstruction<br>${formatUTC(initialTime())}<br>Not the evolving 15-day background</div>`;return q;}
  const q=await queryNative(world,currentHours);if(!q){clearProbe();$('probe').textContent='Outside the computed space or time range';return null;}
  marker.position.copy(world);marker.visible=true;window.MONTH_CLIMATE.lastProbe=q;$('inspector').hidden=false;
  const avg=q.mean24h_ppb===null?'Less than 24 h':formatPpb(q.mean24h_ppb)+' ppb';
@@ -164,11 +161,7 @@ function controlsUI(){
  $('aboutOpen').onclick=()=>$('about').showModal();$('aboutClose').onclick=()=>$('about').close();$('fullscreen').onclick=()=>document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen();
  $('play').onclick=()=>play().catch(fail);$('timeline').oninput=()=>{stop();setHours(Number($('timeline').value)).catch(fail);};$('duration').oninput=()=>{duration=Number($('duration').value);$('durationValue').textContent=duration+' s';const value=String(15/duration);$('rate').value=[...$('rate').options].some(o=>Number(o.value)===15/duration)?[...$('rate').options].find(o=>Number(o.value)===15/duration).value:'custom';startHours=currentHours;playStart=performance.now();};
  $('rate').onchange=()=>{duration=15/Number($('rate').value);$('duration').value=duration;$('durationValue').textContent=duration+' s';startHours=currentHours;playStart=performance.now();};
- $('contribution').onchange=async()=>{stop();referenceMode=$('contribution').value==='reference';for(const id of ['timeline','play','rate'])$(id).disabled=referenceMode;
-  if(referenceMode){savedSourceHours=currentHours;currentHours=0;const r=initialReference.entry;material.uniforms.field0.value=material.uniforms.field1.value=r.texture;material.uniforms.timeWeight.value=0;material.uniforms.contribution.value=2;currentPair=[r,r];clock(true);}
-  else{material.uniforms.contribution.value=1;await setHours(savedSourceHours);}
-  material.uniforms.gain.value=Number($('gain').value)*(referenceMode?.08:1);weather.objects.rain.visible=!referenceMode;clearProbe();};
- $('gain').oninput=()=>{material.uniforms.gain.value=Number($('gain').value)*(referenceMode?.08:1);$('gainValue').textContent=Number($('gain').value).toFixed(2)+'×';};$('smoke').onchange=()=>material.uniforms.enabled.value=$('smoke').checked?1:0;
+ $('gain').oninput=()=>{material.uniforms.gain.value=Number($('gain').value);$('gainValue').textContent=Number($('gain').value).toFixed(2)+'×';};$('smoke').onchange=()=>material.uniforms.enabled.value=$('smoke').checked?1:0;
  function changeColour(){const hex=$('colour').value;material.uniforms.pigment.value.set(...[1,3,5].map(i=>parseInt(hex.slice(i,i+2),16)/255));}
  $('colour').oninput=changeColour;$('resetColour').onclick=()=>{$('colour').value='#777d82';changeColour();};$('crest').onchange=()=>{if(crest)crest.visible=$('crest').checked;};$('probeMode').onchange=clearProbe;
  document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>view(b.dataset.view));$('save').onclick=()=>{const a=document.createElement('a');a.href=canvas.toDataURL('image/png');a.download='Vancouver_SO2_360h.png';a.click();};
@@ -201,7 +194,7 @@ async function init(){
   marker=new THREE.Mesh(new THREE.SphereGeometry(.045,12,8),new THREE.MeshBasicMaterial({color:'#d5a85e',depthTest:false}));marker.visible=false;marker.renderOrder=4;scene.add(marker);
   $('timeline').max=meta.actual_hours;$('startLabel').textContent=formatUTC(initialTime());$('endLabel').textContent=formatUTC(initialTime()+meta.actual_hours*3600000);$('periodLabel').textContent=`${meta.actual_hours}h → 15 s`;$('aboutScope').textContent=`Actual ${meta.actual_hours} continuous hourly means, 16 layers. Only selected-source increments are shown.${engineering?'Engineering input only.':'The full 360 hours play in 15 seconds by default.'}`;
   controlsUI();await setHours(0);view('FCC');ready=true;
-  window.MONTH_CLIMATE={ready:true,meta,scene,camera,controls,renderer,material,weather,nearVolume,initialReference,setHours,queryGround,sampleDisplay,view,play,stop,lastProbe:null,get hours(){return currentHours;},get playback(){return{playing,duration,preparing};},get currentPair(){return currentPair;},get performance(){return{frame_ms:frameEMA,renderScale,raySteps:material.uniforms.raySteps.value};}};
+  window.MONTH_CLIMATE={ready:true,meta,scene,camera,controls,renderer,material,weather,nearVolume,setHours,queryGround,sampleDisplay,view,play,stop,lastProbe:null,get hours(){return currentHours;},get playback(){return{playing,duration,preparing};},get currentPair(){return currentPair;},get performance(){return{frame_ms:frameEMA,renderScale,raySteps:material.uniforms.raySteps.value};}};
   $('loading').style.display='none';$('status').textContent=`${meta.actual_hours} actual hours · 16 layers · native surface query`;
  }catch(error){fail(error);}
 }

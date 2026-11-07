@@ -51424,7 +51424,6 @@
   },
   "UI_role": "Actual360h_outlet_origin_selected_source_release",
   "initial_background_evolution_included": false,
-  "static_initial_reference": "./initial_reference/metadata.json",
   "background_status": "Deferred at user request; not part of current source increments",
   "quantity_type": "selected_source_increment_only",
   "release_version": "outlet-origin-r04",
