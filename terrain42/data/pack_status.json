@@ -1,0 +1,20 @@
+{
+  "status": "actual24h_static_pack_ready_pending_browser_and_native_review",
+  "role": "production_frozen24h_static_pack_pending_actual_UI_review",
+  "new_forecast_steps": 0,
+  "actual_hours": 24,
+  "completed_frames": 24,
+  "seconds": 0.44509978199994293,
+  "total_bytes": 2194876,
+  "display_error": {
+    "source_ppb": {
+      "maximum_absolute_ppb": 0.06975603103637695,
+      "maximum_relative_above_one_percent_native_max": 0.01882575824856758
+    },
+    "initial_ppb": {
+      "maximum_absolute_ppb": 0.0,
+      "maximum_relative_above_one_percent_native_max": 0.0
+    }
+  },
+  "completed_UTC": "2026-11-10T07:08:26.151764+00:00"
+}

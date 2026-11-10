@@ -1,0 +1,617 @@
+{
+  "schema": 1,
+  "role": "single_synthetic_seed42_24h_physical_case",
+  "scientific_period_complete": true,
+  "actual_hours": 24,
+  "initialization_UTC": "2026-11-05T06:00:00",
+  "frames": [
+    {
+      "index": 0,
+      "time_end": "20261105_070000",
+      "interval_start_hour": 0,
+      "interval_end_hour": 1
+    },
+    {
+      "index": 1,
+      "time_end": "20261105_080000",
+      "interval_start_hour": 1,
+      "interval_end_hour": 2
+    },
+    {
+      "index": 2,
+      "time_end": "20261105_090000",
+      "interval_start_hour": 2,
+      "interval_end_hour": 3
+    },
+    {
+      "index": 3,
+      "time_end": "20261105_100000",
+      "interval_start_hour": 3,
+      "interval_end_hour": 4
+    },
+    {
+      "index": 4,
+      "time_end": "20261105_110000",
+      "interval_start_hour": 4,
+      "interval_end_hour": 5
+    },
+    {
+      "index": 5,
+      "time_end": "20261105_120000",
+      "interval_start_hour": 5,
+      "interval_end_hour": 6
+    },
+    {
+      "index": 6,
+      "time_end": "20261105_130000",
+      "interval_start_hour": 6,
+      "interval_end_hour": 7
+    },
+    {
+      "index": 7,
+      "time_end": "20261105_140000",
+      "interval_start_hour": 7,
+      "interval_end_hour": 8
+    },
+    {
+      "index": 8,
+      "time_end": "20261105_150000",
+      "interval_start_hour": 8,
+      "interval_end_hour": 9
+    },
+    {
+      "index": 9,
+      "time_end": "20261105_160000",
+      "interval_start_hour": 9,
+      "interval_end_hour": 10
+    },
+    {
+      "index": 10,
+      "time_end": "20261105_170000",
+      "interval_start_hour": 10,
+      "interval_end_hour": 11
+    },
+    {
+      "index": 11,
+      "time_end": "20261105_180000",
+      "interval_start_hour": 11,
+      "interval_end_hour": 12
+    },
+    {
+      "index": 12,
+      "time_end": "20261105_190000",
+      "interval_start_hour": 12,
+      "interval_end_hour": 13
+    },
+    {
+      "index": 13,
+      "time_end": "20261105_200000",
+      "interval_start_hour": 13,
+      "interval_end_hour": 14
+    },
+    {
+      "index": 14,
+      "time_end": "20261105_210000",
+      "interval_start_hour": 14,
+      "interval_end_hour": 15
+    },
+    {
+      "index": 15,
+      "time_end": "20261105_220000",
+      "interval_start_hour": 15,
+      "interval_end_hour": 16
+    },
+    {
+      "index": 16,
+      "time_end": "20261105_230000",
+      "interval_start_hour": 16,
+      "interval_end_hour": 17
+    },
+    {
+      "index": 17,
+      "time_end": "20261106_000000",
+      "interval_start_hour": 17,
+      "interval_end_hour": 18
+    },
+    {
+      "index": 18,
+      "time_end": "20261106_010000",
+      "interval_start_hour": 18,
+      "interval_end_hour": 19
+    },
+    {
+      "index": 19,
+      "time_end": "20261106_020000",
+      "interval_start_hour": 19,
+      "interval_end_hour": 20
+    },
+    {
+      "index": 20,
+      "time_end": "20261106_030000",
+      "interval_start_hour": 20,
+      "interval_end_hour": 21
+    },
+    {
+      "index": 21,
+      "time_end": "20261106_040000",
+      "interval_start_hour": 21,
+      "interval_end_hour": 22
+    },
+    {
+      "index": 22,
+      "time_end": "20261106_050000",
+      "interval_start_hour": 22,
+      "interval_end_hour": 23
+    },
+    {
+      "index": 23,
+      "time_end": "20261106_060000",
+      "interval_start_hour": 23,
+      "interval_end_hour": 24
+    }
+  ],
+  "playback_seconds": 15,
+  "simulation_hours_per_playback_second": 1.6,
+  "origin_UTM10N_m": [
+    504038.49045612576,
+    5458760.239796246
+  ],
+  "native_longitudes": [
+    -123.05000305175781,
+    -123.04000091552734,
+    -123.02999877929688,
+    -123.0199966430664,
+    -123.01000213623047,
+    -123.0,
+    -122.98999786376953,
+    -122.9800033569336,
+    -122.97000122070312,
+    -122.95999908447266,
+    -122.94999694824219,
+    -122.94000244140625,
+    -122.93000030517578,
+    -122.91999816894531,
+    -122.91000366210938,
+    -122.9000015258789,
+    -122.88999938964844,
+    -122.87999725341797,
+    -122.87000274658203,
+    -122.86000061035156,
+    -122.8499984741211,
+    -122.83999633789062,
+    -122.83000183105469,
+    -122.81999969482422,
+    -122.80999755859375,
+    -122.80000305175781,
+    -122.79000091552734,
+    -122.77999877929688,
+    -122.7699966430664,
+    -122.76000213623047,
+    -122.75,
+    -122.73999786376953,
+    -122.7300033569336,
+    -122.72000122070312,
+    -122.70999908447266,
+    -122.69999694824219,
+    -122.69000244140625,
+    -122.68000030517578,
+    -122.66999816894531,
+    -122.65999603271484,
+    -122.6500015258789,
+    -122.63999938964844,
+    -122.62999725341797,
+    -122.62000274658203,
+    -122.61000061035156,
+    -122.5999984741211,
+    -122.58999633789062,
+    -122.58000183105469,
+    -122.56999969482422,
+    -122.55999755859375,
+    -122.55000305175781,
+    -122.54000091552734,
+    -122.52999877929688,
+    -122.5199966430664,
+    -122.51000213623047,
+    -122.5,
+    -122.48999786376953,
+    -122.47999572753906,
+    -122.47000122070312,
+    -122.45999908447266,
+    -122.44999694824219,
+    -122.44000244140625,
+    -122.43000030517578,
+    -122.41999816894531,
+    -122.40999603271484,
+    -122.4000015258789,
+    -122.38999938964844,
+    -122.37999725341797,
+    -122.37000274658203,
+    -122.36000061035156,
+    -122.3499984741211,
+    -122.33999633789062,
+    -122.33000183105469,
+    -122.31999969482422,
+    -122.30999755859375,
+    -122.30000305175781,
+    -122.29000091552734,
+    -122.27999877929688,
+    -122.2699966430664,
+    -122.26000213623047,
+    -122.25,
+    -122.23999786376953,
+    -122.22999572753906,
+    -122.22000122070312,
+    -122.20999908447266,
+    -122.19999694824219,
+    -122.19000244140625,
+    -122.18000030517578,
+    -122.16999816894531,
+    -122.15999603271484,
+    -122.1500015258789,
+    -122.13999938964844,
+    -122.12999725341797,
+    -122.12000274658203,
+    -122.11000061035156,
+    -122.0999984741211,
+    -122.08999633789062,
+    -122.08000183105469,
+    -122.06999969482422,
+    -122.05999755859375,
+    -122.04999542236328,
+    -122.04000091552734,
+    -122.02999877929688,
+    -122.0199966430664,
+    -122.01000213623047,
+    -122.0,
+    -121.98999786376953,
+    -121.97999572753906,
+    -121.97000122070312,
+    -121.95999908447266,
+    -121.94999694824219,
+    -121.94000244140625,
+    -121.93000030517578,
+    -121.91999816894531,
+    -121.90999603271484,
+    -121.9000015258789,
+    -121.88999938964844,
+    -121.87999725341797,
+    -121.8699951171875,
+    -121.86000061035156,
+    -121.8499984741211,
+    -121.83999633789062,
+    -121.83000183105469,
+    -121.81999969482422,
+    -121.80999755859375,
+    -121.79999542236328,
+    -121.79000091552734,
+    -121.77999877929688,
+    -121.7699966430664,
+    -121.76000213623047,
+    -121.75,
+    -121.73999786376953,
+    -121.72999572753906,
+    -121.72000122070312,
+    -121.70999908447266,
+    -121.69999694824219,
+    -121.68999481201172,
+    -121.68000030517578,
+    -121.66999816894531,
+    -121.65999603271484,
+    -121.6500015258789,
+    -121.63999938964844,
+    -121.62999725341797,
+    -121.6199951171875,
+    -121.61000061035156,
+    -121.5999984741211,
+    -121.58999633789062,
+    -121.58000183105469,
+    -121.56999969482422,
+    -121.55999755859375,
+    -121.54999542236328
+  ],
+  "native_latitudes": [
+    48.75,
+    48.7599983215332,
+    48.77000045776367,
+    48.779998779296875,
+    48.78999710083008,
+    48.79999923706055,
+    48.80999755859375,
+    48.81999969482422,
+    48.82999801635742,
+    48.84000015258789,
+    48.849998474121094,
+    48.86000061035156,
+    48.869998931884766,
+    48.87999725341797,
+    48.88999938964844,
+    48.89999771118164,
+    48.90999984741211,
+    48.91999816894531,
+    48.93000030517578,
+    48.939998626708984,
+    48.95000076293945,
+    48.959999084472656,
+    48.96999740600586,
+    48.97999954223633,
+    48.98999786376953,
+    49.0,
+    49.0099983215332,
+    49.02000045776367,
+    49.029998779296875,
+    49.03999710083008,
+    49.04999923706055,
+    49.05999755859375,
+    49.06999969482422,
+    49.07999801635742,
+    49.09000015258789,
+    49.099998474121094,
+    49.11000061035156,
+    49.119998931884766,
+    49.12999725341797,
+    49.13999938964844,
+    49.14999771118164,
+    49.15999984741211,
+    49.16999816894531,
+    49.18000030517578,
+    49.189998626708984,
+    49.19999694824219,
+    49.209999084472656,
+    49.21999740600586,
+    49.22999954223633,
+    49.23999786376953,
+    49.25,
+    49.2599983215332,
+    49.27000045776367,
+    49.279998779296875,
+    49.28999710083008,
+    49.29999923706055,
+    49.30999755859375,
+    49.31999969482422,
+    49.32999801635742,
+    49.34000015258789,
+    49.349998474121094,
+    49.36000061035156,
+    49.369998931884766,
+    49.37999725341797,
+    49.38999938964844,
+    49.39999771118164,
+    49.40999984741211,
+    49.41999816894531,
+    49.43000030517578,
+    49.439998626708984,
+    49.44999694824219,
+    49.459999084472656,
+    49.46999740600586,
+    49.47999954223633,
+    49.48999786376953,
+    49.5,
+    49.5099983215332,
+    49.52000045776367,
+    49.529998779296875,
+    49.53999710083008,
+    49.54999923706055,
+    49.55999755859375,
+    49.56999969482422,
+    49.57999801635742,
+    49.59000015258789,
+    49.599998474121094,
+    49.61000061035156,
+    49.619998931884766,
+    49.62999725341797,
+    49.63999938964844,
+    49.64999771118164
+  ],
+  "ground": {
+    "shape_time_y_x_fields": [
+      24,
+      91,
+      151,
+      6
+    ],
+    "fields": [
+      "concentration_ppb",
+      "concentration_ug_m3",
+      "selected_source_ppb",
+      "initial_background_ppb",
+      "drydep_cumulative",
+      "wetdep_cumulative"
+    ],
+    "chunks": [
+      {
+        "first_index": 0,
+        "count": 24,
+        "file": "ground_00.f32.gz",
+        "bytes": 1403251,
+        "sha256": "f6ec08ddc3bdb909c66d24cf076b0ee65db0485f0ac9153bcbc47645d51c09c0"
+      }
+    ],
+    "stored_type": "little-endian IEEE754 float32; native product bits preserved",
+    "layer_AGL_m": [
+      0,
+      20
+    ],
+    "interpolation": "Transform actual UTM world to lon/lat; piecewise actual-axis bilinear; no rectangularUTM substitute",
+    "mean24h_policy": "Query24 actual completed hourly means; before24h return null, never pad or repeat"
+  },
+  "aggregate": {
+    "fields": [
+      "month_mean_ppb",
+      "month_mean_source_ppb",
+      "month_mean_initial_ppb",
+      "month_drydep_kg_m2",
+      "month_wetdep_kg_m2"
+    ],
+    "shape_y_x_fields": [
+      91,
+      151,
+      5
+    ],
+    "file": "aggregates.f32.gz",
+    "bytes": 88848,
+    "sha256": "e000bdf3d291da2a1ffd059ff288c600b7ddf09d58f26f076daa0ecc3969121e",
+    "deposition_policy": "Final cumulative snapshot, never sum cumulative snapshots",
+    "mean_policy": "Equal actual one-hour intervals"
+  },
+  "display": {
+    "shape_time_z_y_x_fields": [
+      24,
+      16,
+      91,
+      96,
+      2
+    ],
+    "fields": [
+      "source_ppb",
+      "initial_ppb"
+    ],
+    "chunks": [
+      {
+        "first_index": 0,
+        "count": 24,
+        "file": "display_00.u8.gz",
+        "bytes": 655940,
+        "sha256": "6063ec119d0fe22a73f9176ef58aced9e0e93d3aa38b45e8bb59d77aaca1f91c"
+      }
+    ],
+    "quantizers": {
+      "source_ppb": {
+        "native_maximum_ppb": 5.08603515625,
+        "scale_ppb": 0.0005086035156250001,
+        "log_max": 9.210440366976515,
+        "decode": "C=scale*expm1(q/255*log_max); decode to scalar BEFORE spatial/time interpolation",
+        "codes": 256
+      },
+      "initial_ppb": {
+        "native_maximum_ppb": 0.0,
+        "scale_ppb": 1e-08,
+        "log_max": 0.0,
+        "decode": "C=scale*expm1(q/255*log_max); decode to scalar BEFORE spatial/time interpolation",
+        "codes": 256
+      }
+    },
+    "measured_quantization_error": {
+      "source_ppb": {
+        "maximum_absolute_ppb": 0.06975603103637695,
+        "maximum_relative_above_one_percent_native_max": 0.01882575824856758
+      },
+      "initial_ppb": {
+        "maximum_absolute_ppb": 0.0,
+        "maximum_relative_above_one_percent_native_max": 0.0
+      }
+    },
+    "quantization_error_includes": "Q8 decoded throughFloat32 LUT then roundedHalfFloat",
+    "height_tops_AGL_m": [
+      20.0,
+      50.0,
+      100.0,
+      150.0,
+      200.0,
+      300.0,
+      450.0,
+      650.0,
+      900.0,
+      1200.0,
+      1600.0,
+      2100.0,
+      2800.0,
+      3600.0,
+      5000.0,
+      10000.0
+    ],
+    "height_centers_AGL_m": [
+      10.0,
+      35.0,
+      75.0,
+      125.0,
+      175.0,
+      250.0,
+      375.0,
+      550.0,
+      775.0,
+      1050.0,
+      1400.0,
+      1850.0,
+      2450.0,
+      3200.0,
+      4300.0,
+      7500.0
+    ],
+    "bounds_east_north_km": [
+      -7.714109378747817,
+      -59.09516667898465,
+      102.5468192919711,
+      41.96624778403342
+    ],
+    "terrain_file": "display_terrain.f32.gz",
+    "coverage_file": "display_coverage.u8.gz",
+    "vertical": "All16 actual native AGL layers retained; shader maps height-above-display-terrain to actual layer centers",
+    "quantization": "Display only, no clipping cap; two8bitlog scalars decoded throughLUT toHalfFloatRG before GPU linear interpolation",
+    "geometry_vertical_exaggeration": 1.8,
+    "projection": "RegularUTM display regrid, native ground queries remain unchanged"
+  },
+  "time_policy": "24actual preceding hourly means; interpolate means at centers0.5..23.5h, hold first/last half-hour, report averaging window. Cumulative deposition uses hourly ends with known initial deposition0.",
+  "source_scope": "Three outlet-origin selected-source increments only; background excluded. Not total ambient SO2",
+  "forecast_not_future_observations": true,
+  "SO2_colour_is_artificial": true,
+  "original_model_and_native_products_unchanged": true,
+  "old2021_fitted_weights_used": false,
+  "new_forecast_steps_executed": 0,
+  "scientific_source_freeze_SHA256": "d57a670fb932fa47a87330b01055c90f605ac40e77cc7e17c5070e074abbc05c",
+  "release_version": "outlet-origin-r04-synthetic-seed42",
+  "terrain_seed": 42,
+  "case_complete": true,
+  "facilities": [
+    {
+      "key": "FCC",
+      "name": "Source A",
+      "component_ids": [
+        "Synthetic_A_NPRI_2776_stack18272"
+      ],
+      "world_east_north_km": [
+        13.064748389823363,
+        -17.462706277468243
+      ],
+      "fictional": true
+    },
+    {
+      "key": "WTE",
+      "name": "Source B",
+      "component_ids": [
+        "Synthetic_B_NPRI_362_flue1",
+        "Synthetic_B_NPRI_362_flue2",
+        "Synthetic_B_NPRI_362_flue3"
+      ],
+      "world_east_north_km": [
+        81.48137001293438,
+        -17.427487366508693
+      ],
+      "fictional": true
+    },
+    {
+      "key": "CEMENT",
+      "name": "Source C",
+      "component_ids": [
+        "Synthetic_C_NPRI_702_stack640"
+      ],
+      "world_east_north_km": [
+        47.25189015157817,
+        22.853225843684747
+      ],
+      "fictional": true
+    }
+  ],
+  "scope": "One artificial terrain and hypothetical sources. Same final r04 solver/renderer. Not a Vancouver geographic forecast.",
+  "weather_spinup_hours": 12,
+  "weather_freeze_SHA256": "92ee492f0e0c4efc4b8dd45ad41de270f0d5f36430d883db4295ba15d8899628",
+  "context_terrain": {
+    "file": "context_terrain.f32.gz",
+    "shape_y_x_fields": [
+      120,
+      120,
+      4
+    ],
+    "source": "Actual synthetic d02 HGT/LANDMASK at weatherhour12; not old Vancouver geometry",
+    "sha256": "39cfb6eeec6db356ca04b905d8b47c46aca2c739cf1608cffe8f41fea9c3354b"
+  }
+}

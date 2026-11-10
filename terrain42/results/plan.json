@@ -1,0 +1,180 @@
+{
+  "status": "frozen_before_single_random_terrain_weather",
+  "UTC": "2026-11-10T06:28:48.540881+00:00",
+  "cases": [
+    "random42"
+  ],
+  "seed": 42,
+  "terrain_parameters": {
+    "seed": 42,
+    "algorithm": "NumPy PCG64;11 rotated anisotropic hills,8 resolved long-wave modes,curved valley; coefficients frozen",
+    "hills": [
+      {
+        "x": 18.629011301805505,
+        "y": -4.156266096860442,
+        "amplitude": 1008.0886479423986,
+        "along": 20.368416348712366,
+        "across": 8.565064087325897,
+        "angle": 2.988423371570267
+      },
+      {
+        "x": 17.757499735344,
+        "y": 19.45237275883286,
+        "amplitude": 533.2738612391048,
+        "along": 17.404631254746803,
+        "across": 10.224788145395488,
+        "angle": 2.6814435075521947
+      },
+      {
+        "x": 9.782828165485192,
+        "y": 21.947789702416436,
+        "amplitude": 738.2192292377653,
+        "along": 14.726864661417324,
+        "across": 11.327508722095008,
+        "angle": -2.740617007691522
+      },
+      {
+        "x": 22.27891969549558,
+        "y": 8.953179140300406,
+        "amplitude": 942.7570310554929,
+        "along": 16.25431161755842,
+        "across": 13.82418814636942,
+        "angle": 2.4700528534335957
+      },
+      {
+        "x": 18.930077801015806,
+        "y": -20.764567866066205,
+        "amplitude": 753.3686524225723,
+        "along": 12.525645189446745,
+        "across": 8.925736952405288,
+        "angle": 1.1501304935075938
+      },
+      {
+        "x": 16.64382660173157,
+        "y": 31.790661805526284,
+        "amplitude": 661.7864827897988,
+        "along": 16.445516472418426,
+        "across": 10.817334867654846,
+        "angle": -1.9511089940600619
+      },
+      {
+        "x": -25.16533763718793,
+        "y": -1.6520650166365058,
+        "amplitude": 597.4910768830747,
+        "along": 20.037767936190125,
+        "across": 10.622911513233984,
+        "angle": 2.0902787534896143
+      },
+      {
+        "x": 13.618026936152937,
+        "y": -12.759068386021209,
+        "amplitude": 990.9688709068807,
+        "along": 21.657172289961622,
+        "across": 10.324870274181047,
+        "angle": -1.3299737473283346
+      },
+      {
+        "x": 12.409694270298331,
+        "y": -24.496831114566934,
+        "amplitude": 579.9403316088204,
+        "along": 12.088347237012066,
+        "across": 12.72154626501283,
+        "angle": 1.0357884800150252
+      },
+      {
+        "x": 13.951245746590786,
+        "y": 19.089574109493817,
+        "amplitude": 748.295254099921,
+        "along": 18.824894351434725,
+        "across": 8.838781988765945,
+        "angle": -2.421978978318367
+      },
+      {
+        "x": 11.451401401752072,
+        "y": -1.9654579822669902,
+        "amplitude": 817.4034692127727,
+        "along": 21.179986288992307,
+        "across": 11.808309920003545,
+        "angle": 0.3366493029818076
+      }
+    ],
+    "modes": [
+      {
+        "kx": 0.2871717362998869,
+        "ky": 0.11204776199510078,
+        "phase": 0.19363416535636802
+      },
+      {
+        "kx": 0.3130295921176176,
+        "ky": -0.13146814917237656,
+        "phase": 2.5668611718126377
+      },
+      {
+        "kx": -0.20097580278025048,
+        "ky": 0.26453506248295633,
+        "phase": 0.3663269299490263
+      },
+      {
+        "kx": 0.06104358370828584,
+        "ky": -0.3055432180665787,
+        "phase": 4.158944119911547
+      },
+      {
+        "kx": 0.19316190687029966,
+        "ky": 0.07234163170545801,
+        "phase": 4.1740050759454945
+      },
+      {
+        "kx": 0.16810978136899304,
+        "ky": -0.1121183813152959,
+        "phase": 1.049121797060959
+      },
+      {
+        "kx": -0.39137341401606845,
+        "ky": -0.056232852753694135,
+        "phase": 4.538717658171404
+      },
+      {
+        "kx": 0.3510609589817683,
+        "ky": -0.08573652338002777,
+        "phase": 3.148157169168554
+      }
+    ]
+  },
+  "center_longitude_latitude": [
+    -122.3,
+    49.2
+  ],
+  "algorithm_scale": "14..35km irregular modes and8..24km hill scales resolved on the final website3km weather grid; no decorative subgrid mountains",
+  "outer_transition_km": [
+    60,
+    85
+  ],
+  "surface": "Same native mixed-forest/soil prototype inside85km; untouched outer land/forcing",
+  "native_initialization": "Original compiled real.exe recalculates terrain-following IC/BC/PSFC from modified metgrid HGT_M and unchanged synoptic3D fields",
+  "start_UTC": "2026-11-04T18:00:00",
+  "weather_hours": 36,
+  "spinup_hours": 12,
+  "pollutant_hours": 24,
+  "pollutant_start_UTC": "2026-11-05T06:00:00",
+  "pollutant_end_UTC": "2026-11-06T06:00:00",
+  "grid_km": [
+    9,
+    3
+  ],
+  "mass_vertical_levels": 50,
+  "dt_s": [
+    18,
+    6
+  ],
+  "compute": "Exactly delivered r04 private W+cloud JAX weather, native FLEX and same finite-density integral thermal-rise equations; no LES/CFD switch",
+  "render": "Final website renderer and controls, actual calculated terrain and fictional source geometry; no Vancouver landmark/city overlay",
+  "weather_spinup_rationale": "12h adjustment before24h source transport; not proof all initialization transients vanish",
+  "qualification": "Reuse qualified solver; original2mm CPU-consistency gate is not a validation error bound for synthetic terrain",
+  "source_facilities": 3,
+  "source_flues": 5,
+  "background": false,
+  "forecasts_are_synthetic_not_observed": true,
+  "long_run_condition": "actual6h stable pilot, official checkpoint check and projected full case<24h before same-carry continuation",
+  "user_scope": "Single irregular case; seed42 explicitly selected; previous three-case pilot stopped by user request"
+}

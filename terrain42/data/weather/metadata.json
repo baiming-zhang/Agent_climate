@@ -1,0 +1,42 @@
+{
+  "status": "actual_single_case24h_weather_display",
+  "shape_time_y_x_fields": [
+    24,
+    46,
+    48,
+    7
+  ],
+  "fields": [
+    "precipitation_mm_h_water_equivalent",
+    "snow_ice_graupel_mm_h_water_equivalent",
+    "u10_m_s",
+    "v10_m_s",
+    "selected_source_wet_removal_mg_m2_h",
+    "HGT_m",
+    "wet_removal_coverage_valid"
+  ],
+  "bounds_east_north_km": [
+    -7.714109378747817,
+    -59.09516667898465,
+    102.5468192919711,
+    41.96624778403342
+  ],
+  "chunks": [
+    {
+      "first_index": 0,
+      "count": 24,
+      "file": "weather_00.f32.gz",
+      "SHA256": "d2cb616bee0e8fcb256f429ba2ba45ff275246d13263a08bb2e4fcfc7b3b090f"
+    }
+  ],
+  "source_file": "sources.json",
+  "weather_reused_from_old_Vancouver": false,
+  "terrain_seed": 42,
+  "rainy_hours_any_display_cell_above_0_1mm": 19,
+  "area_mean_total_rain_mm": 3.1536502838134766,
+  "maximum_hourly_rain_mm": 8.144797325134277,
+  "wet_visual_semantics": "Same final renderer: falling rain glyphs encode actual rain/wet removal, not falling SO2 gas",
+  "raw_cloud_field_location": "All50-level QCLOUD/QICE/CLDFRA in actual case weather history, independent of SO2",
+  "new_forecast_steps": 0,
+  "seconds": 2.939426664999999
+}

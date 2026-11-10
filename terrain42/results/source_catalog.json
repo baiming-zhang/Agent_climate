@@ -1,0 +1,174 @@
+{
+  "status": "frozen_fictional_sites_same_stack_types",
+  "frozen_UTC": "2026-11-10T06:28:48.536503+00:00",
+  "components": [
+    {
+      "component_id": "Synthetic_A_NPRI_2776_stack18272",
+      "group": "FCC",
+      "npri_id": null,
+      "reported_stack_id": 18272,
+      "reported_stack_name": "FCC",
+      "latitude": 49.12428283691406,
+      "longitude": -122.76557922363281,
+      "annual_SO2_tonnes": 125.3,
+      "reporting_year": 2024,
+      "annual_quantity_role": "Numerical emission prior for a hypothetical source; not an emission inventory at this new site.",
+      "kg_s": 0.003973236935565703,
+      "stack": {
+        "height_AGL_m": 76.2,
+        "diameter_m": 2.0,
+        "exit_velocity_m_s": 33.0,
+        "exit_temperature_K": 668.15
+      },
+      "parameter_evidence": "Official current Access bulk database, linked to2024 SO2 report, dictionary units m/m/s/Celsius",
+      "geometry_valid_from_unknown": true,
+      "thermal_parameters_role": "Reported average, not live2026 exhaust measurements",
+      "rise_policy": "Same r04 finite-density dry entraining integral plume + native outlet-origin particles; not Briggs final-height injection.",
+      "group_index": 0,
+      "synthetic_site": "A"
+    },
+    {
+      "component_id": "Synthetic_C_NPRI_702_stack640",
+      "group": "Richmond_kiln",
+      "npri_id": null,
+      "reported_stack_id": 640,
+      "reported_stack_name": "Kiln 3",
+      "latitude": 49.4849967956543,
+      "longitude": -122.29185485839844,
+      "annual_SO2_tonnes": 149.511,
+      "reporting_year": 2024,
+      "annual_quantity_role": "Numerical emission prior for a hypothetical source; not an emission inventory at this new site.",
+      "kg_s": 0.004740962709284627,
+      "stack": {
+        "height_AGL_m": 118.0,
+        "diameter_m": 2.9,
+        "exit_velocity_m_s": 23.742,
+        "exit_temperature_K": 378.15
+      },
+      "parameter_evidence": "Official current Access bulk database, linked to2024 SO2 report, dictionary units m/m/s/Celsius",
+      "geometry_valid_from_unknown": true,
+      "thermal_parameters_role": "Reported average, not live2026 exhaust measurements",
+      "rise_policy": "Same r04 finite-density dry entraining integral plume + native outlet-origin particles; not Briggs final-height injection.",
+      "group_index": 2,
+      "synthetic_site": "C"
+    },
+    {
+      "component_id": "Synthetic_B_NPRI_362_flue1",
+      "group": "Burnaby_WTE",
+      "npri_id": null,
+      "latitude": 49.11888885498047,
+      "longitude": -121.82797241210938,
+      "annual_SO2_tonnes": 36.6,
+      "reporting_year": 2024,
+      "kg_s": 0.0011605783866057838,
+      "annual_quantity_role": "Numerical emission prior for a hypothetical source; not an emission inventory at this new site.",
+      "stack": {
+        "height_AGL_m": 60.0,
+        "diameter_m": 1.25,
+        "exit_velocity_m_s": 16.7,
+        "exit_temperature_K": 420.15
+      },
+      "parameter_evidence": "Official2020 dispersion report operational scenario from2017 data; newer physical table not retrievable yet",
+      "parameter_reference": "https://metrovancouver.org/services/solid-waste/Documents/wtef-air-dispersion-modelling-study.pdf",
+      "geometry_valid_from_unknown": true,
+      "location_role": "Facility reference, not independently surveyed three separate flue coordinates",
+      "thermal_parameters_role": "Historical operational scenario prior, not2026 live exhaust measurements",
+      "rise_policy": "Same r04 finite-density dry entraining integral plume + native outlet-origin particles; not Briggs final-height injection.",
+      "group_index": 1,
+      "synthetic_site": "B"
+    },
+    {
+      "component_id": "Synthetic_B_NPRI_362_flue2",
+      "group": "Burnaby_WTE",
+      "npri_id": null,
+      "latitude": 49.11888885498047,
+      "longitude": -121.82797241210938,
+      "annual_SO2_tonnes": 36.6,
+      "reporting_year": 2024,
+      "kg_s": 0.0011605783866057838,
+      "annual_quantity_role": "Numerical emission prior for a hypothetical source; not an emission inventory at this new site.",
+      "stack": {
+        "height_AGL_m": 60.0,
+        "diameter_m": 1.25,
+        "exit_velocity_m_s": 16.7,
+        "exit_temperature_K": 420.15
+      },
+      "parameter_evidence": "Official2020 dispersion report operational scenario from2017 data; newer physical table not retrievable yet",
+      "parameter_reference": "https://metrovancouver.org/services/solid-waste/Documents/wtef-air-dispersion-modelling-study.pdf",
+      "geometry_valid_from_unknown": true,
+      "location_role": "Facility reference, not independently surveyed three separate flue coordinates",
+      "thermal_parameters_role": "Historical operational scenario prior, not2026 live exhaust measurements",
+      "rise_policy": "Same r04 finite-density dry entraining integral plume + native outlet-origin particles; not Briggs final-height injection.",
+      "group_index": 1,
+      "synthetic_site": "B"
+    },
+    {
+      "component_id": "Synthetic_B_NPRI_362_flue3",
+      "group": "Burnaby_WTE",
+      "npri_id": null,
+      "latitude": 49.11888885498047,
+      "longitude": -121.82797241210938,
+      "annual_SO2_tonnes": 36.6,
+      "reporting_year": 2024,
+      "kg_s": 0.0011605783866057838,
+      "annual_quantity_role": "Numerical emission prior for a hypothetical source; not an emission inventory at this new site.",
+      "stack": {
+        "height_AGL_m": 60.0,
+        "diameter_m": 1.25,
+        "exit_velocity_m_s": 16.7,
+        "exit_temperature_K": 420.15
+      },
+      "parameter_evidence": "Official2020 dispersion report operational scenario from2017 data; newer physical table not retrievable yet",
+      "parameter_reference": "https://metrovancouver.org/services/solid-waste/Documents/wtef-air-dispersion-modelling-study.pdf",
+      "geometry_valid_from_unknown": true,
+      "location_role": "Facility reference, not independently surveyed three separate flue coordinates",
+      "thermal_parameters_role": "Historical operational scenario prior, not2026 live exhaust measurements",
+      "rise_policy": "Same r04 finite-density dry entraining integral plume + native outlet-origin particles; not Briggs final-height injection.",
+      "group_index": 1,
+      "synthetic_site": "B"
+    }
+  ],
+  "groups": [
+    {
+      "group": "FCC",
+      "index": 0,
+      "annual_SO2_tonnes": 125.3,
+      "continuous_kg_s": 0.003973236935565703,
+      "nominal_720h_emitted_kg": 10298.630136986303
+    },
+    {
+      "group": "Burnaby_WTE",
+      "index": 1,
+      "annual_SO2_tonnes": 109.80000000000001,
+      "continuous_kg_s": 0.0034817351598173518,
+      "nominal_720h_emitted_kg": 9024.657534246577
+    },
+    {
+      "group": "Richmond_kiln",
+      "index": 2,
+      "annual_SO2_tonnes": 149.511,
+      "continuous_kg_s": 0.004740962709284627,
+      "nominal_720h_emitted_kg": 12288.575342465754
+    }
+  ],
+  "emission_schedule": "Constant continuous for720h; annual amount /365days is a scenario normalization, not a measured future hourly schedule",
+  "most_recent_verified_reviewed_year": 2024,
+  "latest2025_preliminary_gap": "Official2025 refinery total376.1t was readable via web, not allocated to current FCC; PDF rawHTTP403 and other facility PDF tool timeouts preserved. No2025 values fabricated or split by2021 ratios.",
+  "only_selected_ordinary_stacks": true,
+  "refinery_total_2024_tonnes": 397.1,
+  "omitted_refinery_2024_tonnes": 271.8,
+  "omitted_sources": "Refinery flare185.5t and SRU83.0t and3.3t residual not folded into FCC. Other regional emitters, ships and future external inflow not modeled by these3 selected source groups.",
+  "near_source_decision": "User-authorized fallback FCC/WTE/Richmond retained. Latest database has a near SRU but no second supported ordinary nearby source; flare reported pseudo-parameters do not establish verified flare heat for an ordinary-stack law.",
+  "future_2026_emission_measurement": false,
+  "no_old_2021_fitted_multiplier": true,
+  "old_2021_inventory_not_used_for_new_rates": true,
+  "concentration_scope": "Selected3ordinary-source contributions; initial GEOS-CF background tracked separately, not a complete ambient SO2 forecast",
+  "source_identities": {
+    "stack_rows_sha256": "04ae22593afb85ee0f054757acc9718b8ef76c9521ab4f8db5d6878dffd60b5c",
+    "reviewed_facility_rows_sha256": "b4f7e390e993fa5fa3757a1a12b0bd2130ef4e078f29cdac810768f9365dbb43",
+    "stack_extraction": "data/pollution_month_v1/reviewed_sources/latest_stack_extraction.json"
+  },
+  "uncertainty": "Annual source rate, aged WTE thermal prior, unresolved building wakes,3km met and extended-range weather; no guarantee of pointwise quantitative accuracy",
+  "role": "Hypothetical sources on one seed42 terrain; same final website stack/rate/thermal parameter priors, not real facilities at these positions.",
+  "synthetic_terrain_seed": 42
+}
