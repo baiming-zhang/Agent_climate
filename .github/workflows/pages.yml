@@ -27,4 +27,4 @@ jobs:
         id: deploy
         uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5
         with:
-          timeout: 1800000
+          timeout: 600000 # GitHub Pages enforces a 10-minute deployment maximum.
