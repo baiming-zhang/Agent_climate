@@ -1,11 +1,11 @@
 {
   "sources": [
     {
-      "id": "Synthetic_A_NPRI_2776_stack18272",
+      "id": "MOUNTAIN42_SINGLE_STACK",
       "group": "FCC",
       "world_east_north_km": [
-        13.064928269244382,
-        -17.4619198867362
+        3.7328772487797544,
+        19.73979248389229
       ],
       "stack": {
         "height_AGL_m": 76.2,
@@ -16,80 +16,8 @@
       "kg_s": 0.003973236935565703,
       "npri": null,
       "fictional": true,
-      "site": "A"
-    },
-    {
-      "id": "Synthetic_C_NPRI_702_stack640",
-      "group": "CEMENT",
-      "world_east_north_km": [
-        47.25205862157076,
-        22.85358089335635
-      ],
-      "stack": {
-        "height_AGL_m": 118.0,
-        "diameter_m": 2.9,
-        "exit_velocity_m_s": 23.742,
-        "exit_temperature_K": 378.15
-      },
-      "kg_s": 0.004740962709284627,
-      "npri": null,
-      "fictional": true,
-      "site": "C"
-    },
-    {
-      "id": "Synthetic_B_NPRI_362_flue1",
-      "group": "WTE",
-      "world_east_north_km": [
-        81.48149741469294,
-        -17.426644737716764
-      ],
-      "stack": {
-        "height_AGL_m": 60.0,
-        "diameter_m": 1.25,
-        "exit_velocity_m_s": 16.7,
-        "exit_temperature_K": 420.15
-      },
-      "kg_s": 0.0011605783866057838,
-      "npri": null,
-      "fictional": true,
-      "site": "B"
-    },
-    {
-      "id": "Synthetic_B_NPRI_362_flue2",
-      "group": "WTE",
-      "world_east_north_km": [
-        81.48149741469294,
-        -17.426644737716764
-      ],
-      "stack": {
-        "height_AGL_m": 60.0,
-        "diameter_m": 1.25,
-        "exit_velocity_m_s": 16.7,
-        "exit_temperature_K": 420.15
-      },
-      "kg_s": 0.0011605783866057838,
-      "npri": null,
-      "fictional": true,
-      "site": "B"
-    },
-    {
-      "id": "Synthetic_B_NPRI_362_flue3",
-      "group": "WTE",
-      "world_east_north_km": [
-        81.48149741469294,
-        -17.426644737716764
-      ],
-      "stack": {
-        "height_AGL_m": 60.0,
-        "diameter_m": 1.25,
-        "exit_velocity_m_s": 16.7,
-        "exit_temperature_K": 420.15
-      },
-      "kg_s": 0.0011605783866057838,
-      "npri": null,
-      "fictional": true,
-      "site": "B"
+      "site": "MountainPlant"
     }
   ],
-  "role": "Fictional source sites with exactly inherited final r04 outlet/rate parameters; concentration is actual native3D field, no separate guide smoke"
+  "role": "One hypothetical mountain source with inherited FCC outlet/rate parameters; all other emissions and background disabled; concentration is actual native3D field, no separate guide smoke"
 }

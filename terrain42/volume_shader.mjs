@@ -1,4 +1,4 @@
-import {nearPartitionGLSL} from './near_volume.mjs?v=outlet-r04';
+import {nearPartitionGLSL} from './near_volume.mjs?v=mountain-single42-v4';
 // Actual16AGL layers, two concentration scalars. Colours never carry data.
 export const monthShader={
  vertex:`varying vec3 vWorld;void main(){vWorld=(modelMatrix*vec4(position,1.)).xyz;gl_Position=projectionMatrix*viewMatrix*vec4(vWorld,1.);}`,

@@ -5,8 +5,8 @@ import * as THREE from 'three';
 // native concentration/ground queries. All intensities and source paths use
 // the actual frozen weather / wet removal / reported stack parameters.
 export async function createWeatherEffects(scene,city,meta,bytes,sourceOptions){
- const wm=await(await fetch('./data/weather/metadata.json')).json();
- const sourceData=await(await fetch('./data/weather/sources.json')).json();
+ const wm=await(await fetch('./data/weather/metadata.json?rev=mountain-single42-v4',{cache:'no-cache'})).json();
+ const sourceData=await(await fetch('./data/weather/sources.json?rev=mountain-single42-v4',{cache:'no-cache'})).json();
  const [nt,ny,nx,nf]=wm.shape_time_y_x_fields,cache=new Map(),textures=new Map();
  const [x0,y0,x1,y1]=wm.bounds_east_north_km;
  async function load(index){

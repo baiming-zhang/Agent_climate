@@ -1,0 +1,18 @@
+{
+  "bounds": [
+    -80,
+    -80,
+    80,
+    80
+  ],
+  "shape": [
+    321,
+    321
+  ],
+  "file": "uplift.f32.gz",
+  "units": "m",
+  "seed": 42,
+  "source": "/mnt/c/Users/ASUS/Desktop/Agent_contact/execution/pollution_mountain_single42_v4/random42/history/wrfout_d02_2026-11-05_06:00:00",
+  "source_SHA256": "49ea3b6bc4cc4c1914e1728fe76fe57c04477934a4b3a5dbcaa2dd281ff69232",
+  "new_terrain_plan_SHA256": "3b87e9de45abcbea21d584f6c9c08a0ba9b6781af6063f8aa995479a5e2118f1"
+}

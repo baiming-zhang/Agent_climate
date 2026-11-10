@@ -3,350 +3,343 @@
   "terrain_seed": 42,
   "weather_states": 37,
   "pollutant_frames": 24,
-  "surface_maximum_hourly_ppb": 4.555934906005859,
-  "surface_daily_mean_max_ppb": 1.1192040688280638,
-  "surface_exact_zero_fraction": 0.891765519248963,
-  "native_ground_click_oracle": {
-    "frame": 4,
-    "display_hours": 4.5,
-    "latitude": 49.22999954223633,
-    "longitude": -121.70999908447266,
-    "world_east_north_km": [
-      89.87905595107091,
-      -4.935219516478479
+  "terrain_max_m": 4124.263671875,
+  "source_site": {
+    "longitude": -122.89276123046875,
+    "latitude": 49.4591064453125,
+    "native_cell_y_x": [
+      67,
+      62
     ],
-    "native_ppb": 4.555934906005859,
-    "daily_mean_ppb": 1.0038342079690967,
+    "ground_height_ASL_m": 1305.000244140625,
+    "local_resolved_slope": 0.04778471409701046,
+    "surrounding_5x5_peak_m": 2637.018798828125,
+    "world_east_north_km": [
+      3.7328772487797544,
+      19.73979248389229
+    ],
+    "selected_from_terrain_only": true
+  },
+  "surface_maximum_hourly_ppb": 24.542688369750977,
+  "surface_daily_mean_max_ppb": 2.942271353492591,
+  "surface_exact_zero_fraction": 0.7409192237083662,
+  "native_ground_click_oracle": {
+    "frame": 20,
+    "display_hours": 20.5,
+    "latitude": 49.60410690307617,
+    "longitude": -122.9777603149414,
+    "world_east_north_km": [
+      -2.4315874966307893,
+      35.85500681227445
+    ],
+    "native_ppb": 24.542688369750977,
+    "daily_mean_ppb": 2.0581147707628893,
     "point_role": "Largest native0..20m hourly cell mean, selected solely for an actual nonzero UI value test"
   },
   "source_wind_shear": [
     {
-      "component": "Synthetic_A_NPRI_2776_stack18272",
-      "lowest_highest_layer_wind_difference_RMS_m_s": 8.34107581738438,
-      "minimum_vertical_w_m_s": -0.181334978094773,
-      "maximum_vertical_w_m_s": 0.3282274222332945
-    },
-    {
-      "component": "Synthetic_C_NPRI_702_stack640",
-      "lowest_highest_layer_wind_difference_RMS_m_s": 7.578234527841664,
-      "minimum_vertical_w_m_s": -0.5620917004454558,
-      "maximum_vertical_w_m_s": 0.34204236094373325
-    },
-    {
-      "component": "Synthetic_B_NPRI_362_flue1",
-      "lowest_highest_layer_wind_difference_RMS_m_s": 6.03334056125249,
-      "minimum_vertical_w_m_s": -0.6048702863317763,
-      "maximum_vertical_w_m_s": 0.7816541687427399
-    },
-    {
-      "component": "Synthetic_B_NPRI_362_flue2",
-      "lowest_highest_layer_wind_difference_RMS_m_s": 6.03334056125249,
-      "minimum_vertical_w_m_s": -0.6048702863317763,
-      "maximum_vertical_w_m_s": 0.7816541687427399
-    },
-    {
-      "component": "Synthetic_B_NPRI_362_flue3",
-      "lowest_highest_layer_wind_difference_RMS_m_s": 6.03334056125249,
-      "minimum_vertical_w_m_s": -0.6048702863317763,
-      "maximum_vertical_w_m_s": 0.7816541687427399
+      "component": "MOUNTAIN42_SINGLE_STACK",
+      "lowest_highest_layer_wind_difference_RMS_m_s": 7.051885795670548,
+      "minimum_vertical_w_m_s": -0.39313056603520363,
+      "maximum_vertical_w_m_s": 0.4848656049378922
     }
   ],
   "weather_diagnostics": [
     {
       "hour": 12,
-      "cloud_liquid_max_kg_kg": 0.0018698325147852302,
-      "cloud_ice_max_kg_kg": 0.0001283965102629736,
+      "cloud_liquid_max_kg_kg": 0.0014699334278702736,
+      "cloud_ice_max_kg_kg": 0.00013055934687145054,
       "cldfra_max": 1.0,
-      "vertical_w_min_m_s": -3.9080348014831543,
-      "vertical_w_max_m_s": 3.473063588142395,
+      "vertical_w_min_m_s": -7.641501426696777,
+      "vertical_w_max_m_s": 6.312814712524414,
       "terrain_following_layers": 50,
       "all_dz_positive": true
     },
     {
       "hour": 13,
-      "cloud_liquid_max_kg_kg": 0.001351612969301641,
-      "cloud_ice_max_kg_kg": 0.00012604036601260304,
+      "cloud_liquid_max_kg_kg": 0.0013670239131897688,
+      "cloud_ice_max_kg_kg": 0.00010971564188366756,
       "cldfra_max": 1.0,
-      "vertical_w_min_m_s": -4.1750807762146,
-      "vertical_w_max_m_s": 4.0607664585113525,
+      "vertical_w_min_m_s": -6.492493391036987,
+      "vertical_w_max_m_s": 5.114202499389648,
       "terrain_following_layers": 50,
       "all_dz_positive": true
     },
     {
       "hour": 14,
-      "cloud_liquid_max_kg_kg": 0.0013962441589683294,
-      "cloud_ice_max_kg_kg": 0.00011337406613165513,
+      "cloud_liquid_max_kg_kg": 0.001391751691699028,
+      "cloud_ice_max_kg_kg": 7.622189150424674e-05,
       "cldfra_max": 1.0,
-      "vertical_w_min_m_s": -4.052432537078857,
-      "vertical_w_max_m_s": 3.6465660333633423,
+      "vertical_w_min_m_s": -6.703059911727905,
+      "vertical_w_max_m_s": 4.639138221740723,
       "terrain_following_layers": 50,
       "all_dz_positive": true
     },
     {
       "hour": 15,
-      "cloud_liquid_max_kg_kg": 0.00144809833727777,
-      "cloud_ice_max_kg_kg": 9.234245953848585e-05,
+      "cloud_liquid_max_kg_kg": 0.0014824442332610488,
+      "cloud_ice_max_kg_kg": 0.00010152160393772647,
       "cldfra_max": 1.0,
-      "vertical_w_min_m_s": -3.5141243934631348,
-      "vertical_w_max_m_s": 3.2687965631484985,
+      "vertical_w_min_m_s": -6.110177755355835,
+      "vertical_w_max_m_s": 4.1195597648620605,
       "terrain_following_layers": 50,
       "all_dz_positive": true
     },
     {
       "hour": 16,
-      "cloud_liquid_max_kg_kg": 0.0016356908017769456,
-      "cloud_ice_max_kg_kg": 9.053387475432828e-05,
+      "cloud_liquid_max_kg_kg": 0.0015020271530374885,
+      "cloud_ice_max_kg_kg": 4.911972428089939e-05,
       "cldfra_max": 1.0,
-      "vertical_w_min_m_s": -3.32266628742218,
-      "vertical_w_max_m_s": 2.835640788078308,
+      "vertical_w_min_m_s": -5.17314076423645,
+      "vertical_w_max_m_s": 3.2863630056381226,
       "terrain_following_layers": 50,
       "all_dz_positive": true
     },
     {
       "hour": 17,
-      "cloud_liquid_max_kg_kg": 0.0015073504764586687,
-      "cloud_ice_max_kg_kg": 1.4515441762341652e-05,
+      "cloud_liquid_max_kg_kg": 0.0014696588041260839,
+      "cloud_ice_max_kg_kg": 9.00269969861256e-06,
       "cldfra_max": 1.0,
-      "vertical_w_min_m_s": -3.1482856273651123,
-      "vertical_w_max_m_s": 2.7548282146453857,
+      "vertical_w_min_m_s": -4.569461345672607,
+      "vertical_w_max_m_s": 3.343297600746155,
       "terrain_following_layers": 50,
       "all_dz_positive": true
     },
     {
       "hour": 18,
-      "cloud_liquid_max_kg_kg": 0.0015309698646888137,
-      "cloud_ice_max_kg_kg": 8.169960892701056e-06,
+      "cloud_liquid_max_kg_kg": 0.001457555335946381,
+      "cloud_ice_max_kg_kg": 7.2013554017758e-06,
       "cldfra_max": 1.0,
-      "vertical_w_min_m_s": -4.317490339279175,
-      "vertical_w_max_m_s": 3.4390602111816406,
+      "vertical_w_min_m_s": -4.5798890590667725,
+      "vertical_w_max_m_s": 3.4487977027893066,
       "terrain_following_layers": 50,
       "all_dz_positive": true
     },
     {
       "hour": 19,
-      "cloud_liquid_max_kg_kg": 0.001329030841588974,
-      "cloud_ice_max_kg_kg": 4.451067525224062e-06,
+      "cloud_liquid_max_kg_kg": 0.0014785605017095804,
+      "cloud_ice_max_kg_kg": 6.944103461137274e-06,
       "cldfra_max": 1.0,
-      "vertical_w_min_m_s": -4.6532745361328125,
-      "vertical_w_max_m_s": 3.974692702293396,
+      "vertical_w_min_m_s": -5.156491994857788,
+      "vertical_w_max_m_s": 3.3357337713241577,
       "terrain_following_layers": 50,
       "all_dz_positive": true
     },
     {
       "hour": 20,
-      "cloud_liquid_max_kg_kg": 0.001377153443172574,
-      "cloud_ice_max_kg_kg": 6.904183010192355e-06,
+      "cloud_liquid_max_kg_kg": 0.0015579800819978118,
+      "cloud_ice_max_kg_kg": 4.8514639274799265e-06,
       "cldfra_max": 1.0,
-      "vertical_w_min_m_s": -4.734688758850098,
-      "vertical_w_max_m_s": 2.718084216117859,
+      "vertical_w_min_m_s": -6.222959995269775,
+      "vertical_w_max_m_s": 4.127727031707764,
       "terrain_following_layers": 50,
       "all_dz_positive": true
     },
     {
       "hour": 21,
-      "cloud_liquid_max_kg_kg": 0.001487107016146183,
-      "cloud_ice_max_kg_kg": 2.1939206362731056e-06,
+      "cloud_liquid_max_kg_kg": 0.0014325621305033565,
+      "cloud_ice_max_kg_kg": 3.961489710491151e-06,
       "cldfra_max": 1.0,
-      "vertical_w_min_m_s": -4.5295422077178955,
-      "vertical_w_max_m_s": 2.7295669317245483,
+      "vertical_w_min_m_s": -5.490177631378174,
+      "vertical_w_max_m_s": 3.1852917671203613,
       "terrain_following_layers": 50,
       "all_dz_positive": true
     },
     {
       "hour": 22,
-      "cloud_liquid_max_kg_kg": 0.001342757954262197,
-      "cloud_ice_max_kg_kg": 5.408686320151901e-06,
+      "cloud_liquid_max_kg_kg": 0.0013670283369719982,
+      "cloud_ice_max_kg_kg": 3.197756313966238e-06,
       "cldfra_max": 1.0,
-      "vertical_w_min_m_s": -4.1705780029296875,
-      "vertical_w_max_m_s": 2.619242787361145,
+      "vertical_w_min_m_s": -4.7236833572387695,
+      "vertical_w_max_m_s": 3.3589930534362793,
       "terrain_following_layers": 50,
       "all_dz_positive": true
     },
     {
       "hour": 23,
-      "cloud_liquid_max_kg_kg": 0.001383101916871965,
-      "cloud_ice_max_kg_kg": 2.1462658423843095e-06,
+      "cloud_liquid_max_kg_kg": 0.0013603544794023037,
+      "cloud_ice_max_kg_kg": 9.175565764962812e-07,
       "cldfra_max": 1.0,
-      "vertical_w_min_m_s": -3.4982798099517822,
-      "vertical_w_max_m_s": 2.3625543117523193,
+      "vertical_w_min_m_s": -3.8311867713928223,
+      "vertical_w_max_m_s": 2.913148283958435,
       "terrain_following_layers": 50,
       "all_dz_positive": true
     },
     {
       "hour": 24,
-      "cloud_liquid_max_kg_kg": 0.0012608200777322054,
-      "cloud_ice_max_kg_kg": 7.004664439591579e-06,
+      "cloud_liquid_max_kg_kg": 0.0012886703480035067,
+      "cloud_ice_max_kg_kg": 2.2185929537954507e-07,
       "cldfra_max": 1.0,
-      "vertical_w_min_m_s": -3.220742702484131,
-      "vertical_w_max_m_s": 2.0715566873550415,
+      "vertical_w_min_m_s": -3.594199776649475,
+      "vertical_w_max_m_s": 2.2527984380722046,
       "terrain_following_layers": 50,
       "all_dz_positive": true
     },
     {
       "hour": 25,
-      "cloud_liquid_max_kg_kg": 0.0012911376543343067,
-      "cloud_ice_max_kg_kg": 8.692073606653139e-06,
+      "cloud_liquid_max_kg_kg": 0.001234504277817905,
+      "cloud_ice_max_kg_kg": 4.0359410036217014e-07,
       "cldfra_max": 1.0,
-      "vertical_w_min_m_s": -3.345386028289795,
-      "vertical_w_max_m_s": 2.373859405517578,
+      "vertical_w_min_m_s": -4.215255260467529,
+      "vertical_w_max_m_s": 2.5166265964508057,
       "terrain_following_layers": 50,
       "all_dz_positive": true
     },
     {
       "hour": 26,
-      "cloud_liquid_max_kg_kg": 0.0015714174369350076,
-      "cloud_ice_max_kg_kg": 3.065945202251896e-05,
+      "cloud_liquid_max_kg_kg": 0.0012920323060825467,
+      "cloud_ice_max_kg_kg": 2.176404814235866e-05,
       "cldfra_max": 1.0,
-      "vertical_w_min_m_s": -3.8616011142730713,
-      "vertical_w_max_m_s": 2.598596692085266,
+      "vertical_w_min_m_s": -4.902279615402222,
+      "vertical_w_max_m_s": 3.1909724473953247,
       "terrain_following_layers": 50,
       "all_dz_positive": true
     },
     {
       "hour": 27,
-      "cloud_liquid_max_kg_kg": 0.0013810070231556892,
-      "cloud_ice_max_kg_kg": 8.553640327590983e-06,
+      "cloud_liquid_max_kg_kg": 0.0015337350778281689,
+      "cloud_ice_max_kg_kg": 7.998755791049916e-06,
       "cldfra_max": 1.0,
-      "vertical_w_min_m_s": -4.143299102783203,
-      "vertical_w_max_m_s": 2.601287841796875,
+      "vertical_w_min_m_s": -5.000269412994385,
+      "vertical_w_max_m_s": 3.416247606277466,
       "terrain_following_layers": 50,
       "all_dz_positive": true
     },
     {
       "hour": 28,
-      "cloud_liquid_max_kg_kg": 0.0013110615545883775,
-      "cloud_ice_max_kg_kg": 4.302497109165415e-05,
+      "cloud_liquid_max_kg_kg": 0.00144298339728266,
+      "cloud_ice_max_kg_kg": 8.51933509693481e-05,
       "cldfra_max": 1.0,
-      "vertical_w_min_m_s": -4.747463941574097,
-      "vertical_w_max_m_s": 2.8905603885650635,
+      "vertical_w_min_m_s": -5.298225164413452,
+      "vertical_w_max_m_s": 3.7441588640213013,
       "terrain_following_layers": 50,
       "all_dz_positive": true
     },
     {
       "hour": 29,
-      "cloud_liquid_max_kg_kg": 0.0014623756287619472,
-      "cloud_ice_max_kg_kg": 7.879789336584508e-05,
+      "cloud_liquid_max_kg_kg": 0.0012747645378112793,
+      "cloud_ice_max_kg_kg": 8.943169814301655e-05,
       "cldfra_max": 1.0,
-      "vertical_w_min_m_s": -5.853598356246948,
-      "vertical_w_max_m_s": 3.245025873184204,
+      "vertical_w_min_m_s": -5.574991464614868,
+      "vertical_w_max_m_s": 4.038867950439453,
       "terrain_following_layers": 50,
       "all_dz_positive": true
     },
     {
       "hour": 30,
-      "cloud_liquid_max_kg_kg": 0.00120597705245018,
-      "cloud_ice_max_kg_kg": 5.330296335159801e-05,
+      "cloud_liquid_max_kg_kg": 0.0013367228675633669,
+      "cloud_ice_max_kg_kg": 4.8194851842708886e-05,
       "cldfra_max": 1.0,
-      "vertical_w_min_m_s": -6.609822511672974,
-      "vertical_w_max_m_s": 4.0678606033325195,
+      "vertical_w_min_m_s": -5.962090492248535,
+      "vertical_w_max_m_s": 4.004542350769043,
       "terrain_following_layers": 50,
       "all_dz_positive": true
     },
     {
       "hour": 31,
-      "cloud_liquid_max_kg_kg": 0.0012523476034402847,
-      "cloud_ice_max_kg_kg": 9.12059040274471e-05,
+      "cloud_liquid_max_kg_kg": 0.0011856285855174065,
+      "cloud_ice_max_kg_kg": 6.611572462134063e-05,
       "cldfra_max": 1.0,
-      "vertical_w_min_m_s": -6.193976402282715,
-      "vertical_w_max_m_s": 3.5681124925613403,
+      "vertical_w_min_m_s": -6.525901794433594,
+      "vertical_w_max_m_s": 4.139209032058716,
       "terrain_following_layers": 50,
       "all_dz_positive": true
     },
     {
       "hour": 32,
-      "cloud_liquid_max_kg_kg": 0.0012111443793401122,
-      "cloud_ice_max_kg_kg": 0.00018204560910817236,
+      "cloud_liquid_max_kg_kg": 0.0012093129334971309,
+      "cloud_ice_max_kg_kg": 0.00014253135304898024,
       "cldfra_max": 1.0,
-      "vertical_w_min_m_s": -6.402684926986694,
-      "vertical_w_max_m_s": 3.5446265935897827,
+      "vertical_w_min_m_s": -7.652464151382446,
+      "vertical_w_max_m_s": 4.2910683155059814,
       "terrain_following_layers": 50,
       "all_dz_positive": true
     },
     {
       "hour": 33,
-      "cloud_liquid_max_kg_kg": 0.0012133881682530046,
-      "cloud_ice_max_kg_kg": 9.724098345031962e-05,
+      "cloud_liquid_max_kg_kg": 0.001166289090178907,
+      "cloud_ice_max_kg_kg": 0.00010327716881874949,
       "cldfra_max": 1.0,
-      "vertical_w_min_m_s": -6.850342750549316,
-      "vertical_w_max_m_s": 3.6476855278015137,
+      "vertical_w_min_m_s": -7.856996059417725,
+      "vertical_w_max_m_s": 4.470754384994507,
       "terrain_following_layers": 50,
       "all_dz_positive": true
     },
     {
       "hour": 34,
-      "cloud_liquid_max_kg_kg": 0.0012479164870455861,
-      "cloud_ice_max_kg_kg": 0.00010157366341445595,
+      "cloud_liquid_max_kg_kg": 0.0011779139749705791,
+      "cloud_ice_max_kg_kg": 0.00011842554522445425,
       "cldfra_max": 1.0,
-      "vertical_w_min_m_s": -7.078221082687378,
-      "vertical_w_max_m_s": 3.9397518634796143,
+      "vertical_w_min_m_s": -7.481952905654907,
+      "vertical_w_max_m_s": 5.669802904129028,
       "terrain_following_layers": 50,
       "all_dz_positive": true
     },
     {
       "hour": 35,
-      "cloud_liquid_max_kg_kg": 0.0012055726256221533,
-      "cloud_ice_max_kg_kg": 0.0001340023591183126,
+      "cloud_liquid_max_kg_kg": 0.0012437219265848398,
+      "cloud_ice_max_kg_kg": 0.0001345663913525641,
       "cldfra_max": 1.0,
-      "vertical_w_min_m_s": -7.3493499755859375,
-      "vertical_w_max_m_s": 4.692975997924805,
+      "vertical_w_min_m_s": -7.325672388076782,
+      "vertical_w_max_m_s": 6.264673471450806,
       "terrain_following_layers": 50,
       "all_dz_positive": true
     },
     {
       "hour": 36,
-      "cloud_liquid_max_kg_kg": 0.0011908776359632611,
-      "cloud_ice_max_kg_kg": 0.0001618760434212163,
+      "cloud_liquid_max_kg_kg": 0.001227852306328714,
+      "cloud_ice_max_kg_kg": 0.00010884436051128432,
       "cldfra_max": 1.0,
-      "vertical_w_min_m_s": -6.4892706871032715,
-      "vertical_w_max_m_s": 5.7205116748809814,
+      "vertical_w_min_m_s": -7.766319751739502,
+      "vertical_w_max_m_s": 6.1824517250061035,
       "terrain_following_layers": 50,
       "all_dz_positive": true
     }
   ],
-  "d02_area_mean24h_precipitation_mm": 4.076278175473553,
-  "d02_max24h_precipitation_mm": 44.95001983642578,
+  "d02_area_mean24h_precipitation_mm": 3.3683817361037214,
+  "d02_max24h_precipitation_mm": 46.586660385131836,
   "global_mass_ledger": [
     {
       "species_index": "1",
       "species": "SO2_FCC",
       "initial_kg": "0.0000000000000000",
-      "emitted_kg": "343.28767642378807",
-      "retained_kg": "251.12249227007851",
-      "dry_kg": "71.582603962853000",
-      "wet_kg": "11.681705037317785",
-      "boundary_outflow_kg": "8.9008754203096032",
+      "emitted_kg": "343.28766904771328",
+      "retained_kg": "264.70214469917119",
+      "dry_kg": "73.703795902529464",
+      "wet_kg": "4.3857343440265799",
+      "boundary_outflow_kg": "0.49599393736571074",
       "other_termination_kg": "0.0000000000000000",
       "small_mass_kg": "0.0000000000000000",
       "age_termination_kg": "0.0000000000000000",
-      "residual_kg": "-0.26677082587411860E-6"
+      "residual_kg": "0.16462034579944884E-6"
     },
     {
       "species_index": "2",
       "species": "SO2_WTE",
       "initial_kg": "0.0000000000000000",
-      "emitted_kg": "300.82189679145813",
-      "retained_kg": "227.93072085781023",
-      "dry_kg": "60.971313395663451",
-      "wet_kg": "8.6250355398749807",
-      "boundary_outflow_kg": "3.2948266365565360",
+      "emitted_kg": "0.0000000000000000",
+      "retained_kg": "0.0000000000000000",
+      "dry_kg": "0.0000000000000000",
+      "wet_kg": "0.0000000000000000",
+      "boundary_outflow_kg": "0.0000000000000000",
       "other_termination_kg": "0.0000000000000000",
       "small_mass_kg": "0.0000000000000000",
       "age_termination_kg": "0.0000000000000000",
-      "residual_kg": "0.36155293514639197E-6"
+      "residual_kg": "0.0000000000000000"
     },
     {
       "species_index": "3",
       "species": "SO2_KILN",
       "initial_kg": "0.0000000000000000",
-      "emitted_kg": "409.61915016174316",
-      "retained_kg": "290.06448754854500",
-      "dry_kg": "86.057761353126040",
-      "wet_kg": "17.341863290084213",
-      "boundary_outflow_kg": "16.155037954449654",
+      "emitted_kg": "0.0000000000000000",
+      "retained_kg": "0.0000000000000000",
+      "dry_kg": "0.0000000000000000",
+      "wet_kg": "0.0000000000000000",
+      "boundary_outflow_kg": "0.0000000000000000",
       "other_termination_kg": "0.0000000000000000",
       "small_mass_kg": "0.0000000000000000",
       "age_termination_kg": "0.0000000000000000",
-      "residual_kg": "0.15538262232439592E-7"
+      "residual_kg": "0.0000000000000000"
     },
     {
       "species_index": "4",
@@ -379,7 +372,7 @@
   ],
   "qualification": "All native time/finite/nonnegative/ZERO/mass checks passed; not future-observation skill or synthetic-case truth validation",
   "spinup_warning": "12h adjustment reduces abrupt terrain initialization; does not prove all transients absent",
-  "seconds": 4.334065685000001,
+  "seconds": 3.9824763160004295,
   "display_region_weather": {
     "status": "actual_single_case24h_weather_display",
     "shape_time_y_x_fields": [
@@ -398,38 +391,79 @@
       "wet_removal_coverage_valid"
     ],
     "bounds_east_north_km": [
-      -7.714109378747817,
-      -59.09516667898465,
-      102.5468192919711,
-      41.96624778403342
+      -10.417083755404805,
+      3.614170667002909,
+      18.65615536270477,
+      37.01317006035149
     ],
     "chunks": [
       {
         "first_index": 0,
         "count": 24,
         "file": "weather_00.f32.gz",
-        "SHA256": "d2cb616bee0e8fcb256f429ba2ba45ff275246d13263a08bb2e4fcfc7b3b090f"
+        "SHA256": "0a522e917429030fd7b610ef9ebd755ee897c6755f37d66d7e5151cf0d5395dc"
       }
     ],
     "source_file": "sources.json",
     "weather_reused_from_old_Vancouver": false,
     "terrain_seed": 42,
-    "rainy_hours_any_display_cell_above_0_1mm": 19,
-    "area_mean_total_rain_mm": 3.1536502838134766,
-    "maximum_hourly_rain_mm": 8.144797325134277,
+    "rainy_hours_any_display_cell_above_0_1mm": 9,
+    "area_mean_total_rain_mm": 2.513681173324585,
+    "maximum_hourly_rain_mm": 4.885876655578613,
     "wet_visual_semantics": "Same final renderer: falling rain glyphs encode actual rain/wet removal, not falling SO2 gas",
     "raw_cloud_field_location": "All50-level QCLOUD/QICE/CLDFRA in actual case weather history, independent of SO2",
     "new_forecast_steps": 0,
-    "seconds": 2.939426664999999
+    "seconds": 2.4918928429997322
   },
   "mass_totals_kg": {
-    "emitted_kg": 1053.7287233769894,
-    "retained_kg": 769.1177006764337,
-    "dry_kg": 218.6116787116425,
-    "wet_kg": 37.648603867276975,
-    "boundary_outflow_kg": 28.350740011315793,
-    "residual_kg": 1.1032037150471297e-07
+    "emitted_kg": 343.2876690477133,
+    "retained_kg": 264.7021446991712,
+    "dry_kg": 73.70379590252946,
+    "wet_kg": 4.38573434402658,
+    "boundary_outflow_kg": 0.49599393736571074,
+    "residual_kg": 1.6462034579944884e-07
   },
   "actual_particle_births": 33240,
-  "terrain_max_m": 1845.7257080078125
+  "numerical_dt_parent_child_s": [
+    6,
+    2
+  ],
+  "physics_configuration_unchanged": true,
+  "integration_step_note": "Parent/child18/6s failed vertical CFL in the amplified highlands. Only integration steps changed to6/2s; original terrain/IC/BC and physical parameterizations remain unchanged.",
+  "short_stability_evidence": {
+    "status": "short_control_qualified_for_continuous36h_weather_not_full_result",
+    "UTC": "2026-11-10T09:48:03.683173+00:00",
+    "numerical_dt_parent_child_s": [
+      6,
+      2
+    ],
+    "previous_dt_parent_child_s": [
+      18,
+      6
+    ],
+    "physical_equations_and_terrain_unchanged": true,
+    "native_probe_actual_minutes": 10,
+    "native_probe_runtime_CFL_exceedances": 0,
+    "native_probe_SHA256": "b6ec5c5baae15eff40b4e8f794b59454953a1adfbba8cc52d004f7eb6976fa65",
+    "actual_GPU_pilot_hours": 6,
+    "actual_GPU_states_each_domain": 7,
+    "required3D_finite": true,
+    "GPU_pilot_SHA256": "f458b099e28ad871e2bf03bb3989122787a88a71038b429af92cf1c3bcda3724",
+    "official_checkpoint_SHA256": "9892b2468828c18ee97d79a523b26039c0c8b5a8f1f02e162af5ba712737e071",
+    "official_checkpoint_own_steps": {
+      "d01": 3600,
+      "d02": 10800
+    },
+    "runtime_estimate": {
+      "warm_seconds_per_hour_measured": 64.06304301959999,
+      "conservative_complete_suite_seconds_extrapolated": 9253.314552784199,
+      "excludes_network_publish": true,
+      "under24h": true,
+      "case": "random42",
+      "UTC": "2026-11-10T09:44:03.032021+00:00"
+    },
+    "full36h_weather_complete": false,
+    "SO2_transport_complete": false,
+    "scope": "Stability evidence for the new amplified terrain. Not a new precipitation truth-error bound or building-CFD validation. Original failed runs retained."
+  }
 }

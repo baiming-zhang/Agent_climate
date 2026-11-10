@@ -3,13 +3,13 @@ import * as THREE from 'three';
 // Every sample is a transported 3D scalar. The three overlapping boxes and
 // regional field are alternative resolutions, combined with weights summing1.
 export const nearPartitionGLSL=`
- uniform vec2 nearCenters[3];uniform vec3 nearX0[3],nearY0[3];uniform vec2 nearX1[3],nearY1[3];
+ uniform vec2 nearCenters[1];uniform vec3 nearX0[1],nearY0[1];uniform vec2 nearX1[1],nearY1[1];
  vec2 localXY(vec3 p,int g){vec2 d=vec2(p.x,-p.z)-nearCenters[g];
   vec3 a=vec3(d.x,d.y,d.x*d.x);vec2 b=vec2(d.x*d.y,d.y*d.y);
   return vec2(dot(nearX0[g],a)+dot(nearX1[g],b),dot(nearY0[g],a)+dot(nearY1[g],b));}
  float rawNearWeight(vec3 p,float agl,int g){vec2 xy=localXY(p,g);
   return (1.-smoothstep(3000.,4000.,max(abs(xy.x),abs(xy.y))))*(1.-smoothstep(1500.,2000.,agl))*step(0.,agl);}
- float sumNearWeights(vec3 p,float agl){float s=0.;for(int g=0;g<3;g++)s+=rawNearWeight(p,agl,g);return s;}
+ float sumNearWeights(vec3 p,float agl){float s=0.;for(int g=0;g<1;g++)s+=rawNearWeight(p,agl,g);return s;}
 `;
 
 const fragment=`precision highp float;precision highp sampler3D;
@@ -63,12 +63,12 @@ export function nearPartitionUniforms(meta){return Object.fromEntries([
  ].map(([k,value])=>[k,{value}]));}
 
 export async function createNearVolume(overlay,regional,renderer,bytes,{base='./data/near/',engineering=false}={}){
- const meta=await(await fetch(base+'metadata.json')).json();
+ const meta=await(await fetch(base+'metadata.json?rev=mountain-single42-v4',{cache:'no-cache'})).json();
  if(!engineering&&(!meta.production_complete||meta.actual_hours!==24))throw Error('Full outlet-origin24-hour fields required');
  const blocks=new Map(),textures=new Map(),luts=meta.groups.map(g=>Float32Array.from({length:256},(_,i)=>g.quantizer.scale_ppb*Math.expm1(i/255*g.quantizer.log_max)));
  const partitions=nearPartitionUniforms(meta);Object.assign(regional.uniforms,partitions);
  const materials=[],meshes=[];
- for(let g=0;g<3;g++){
+ for(let g=0;g<1;g++){
   const b=meta.groups[g].world_bounds_east_north_km,rlo=regional.uniforms.lo.value,rhi=regional.uniforms.hi.value,shape=regional.uniforms.horizontalShape.value;
   const data=regional.uniforms.terrain.value.image.data;let groundMin=Infinity,groundMax=-Infinity;
   for(let y=0;y<shape.y;y++)for(let x=0;x<shape.x;x++){
@@ -92,7 +92,7 @@ export async function createNearVolume(overlay,regional,renderer,bytes,{base='./
   if(textures.has(index))return textures.get(index);
   const c=meta.chunks.find(c=>index>=c.first_index&&index<c.first_index+c.count),data=c?.loaded;if(!data)return null;
   const fields=meta.frames[index].fields,result=[];
-  for(let g=0;g<3;g++){
+  for(let g=0;g<1;g++){
    const f=fields[g],view=new DataView(data.buffer,data.byteOffset+f.offset,f.length),count=view.getUint32(0,true),a=new Float32Array(96**3);let p=4;
    if(count!==f.bricks)throw Error('Sparse 3D brick count mismatch');
    for(let k=0;k<count;k++){
@@ -107,14 +107,14 @@ export async function createNearVolume(overlay,regional,renderer,bytes,{base='./
  async function prepareAll(){await preload();for(const c of meta.chunks)c.loaded=await blocks.get(c.file);}
  async function prepareOne(index){await prepare(index);const c=meta.chunks.find(c=>index>=c.first_index&&index<c.first_index+c.count);c.loaded=await blocks.get(c.file);}
  function commit(a,b){const aa=frame(a),bb=frame(b);if(!aa||!bb)return false;
-  for(let g=0;g<3;g++){materials[g].uniforms.fine0.value=aa[g];materials[g].uniforms.fine1.value=bb[g];}
+  for(let g=0;g<1;g++){materials[g].uniforms.fine0.value=aa[g];materials[g].uniforms.fine1.value=bb[g];}
   for(const [i,ts]of textures)if(textures.size>3&&i!==a&&i!==b){ts.forEach(t=>t.dispose());textures.delete(i);}
   return true;
  }
  function sample(point,agl){
   let total=0,value=0;
   const smooth=(a,b,x)=>{const t=Math.max(0,Math.min(1,(x-a)/(b-a)));return t*t*(3-2*t);};
-  for(let g=0;g<3;g++){
+  for(let g=0;g<1;g++){
    const group=meta.groups[g],d=[point.x-group.center_world_east_north_km[0],-point.z-group.center_world_east_north_km[1]],basis=[d[0],d[1],d[0]**2,d[0]*d[1],d[1]**2];
    const xy=group.inverse_projection_coefficients.map(row=>row.reduce((a,v,i)=>a+v*basis[i],0));
    const w=(1-smooth(3000,4000,Math.max(...xy.map(Math.abs))))*(1-smooth(1500,2000,agl))*(agl>=0?1:0);total+=w;
