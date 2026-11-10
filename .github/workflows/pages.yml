@@ -1,7 +1,5 @@
-name: Publish climate viewer
+name: Publish climate viewer (manual fallback)
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 permissions:
   contents: read
