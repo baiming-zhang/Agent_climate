@@ -1,3 +1,4 @@
+import {VERTICAL_SCALE} from './display_geometry.mjs?v=mountain-relief-r05';
 import * as THREE from 'three';
 
 
@@ -5,8 +6,8 @@ import * as THREE from 'three';
 // native concentration/ground queries. All intensities and source paths use
 // the actual frozen weather / wet removal / reported stack parameters.
 export async function createWeatherEffects(scene,city,meta,bytes,sourceOptions){
- const wm=await(await fetch('./data/weather/metadata.json?rev=mountain-single42-v4',{cache:'no-cache'})).json();
- const sourceData=await(await fetch('./data/weather/sources.json?rev=mountain-single42-v4',{cache:'no-cache'})).json();
+ const wm=await(await fetch('./data/weather/metadata.json?rev=mountain-relief-r05',{cache:'no-cache'})).json();
+ const sourceData=await(await fetch('./data/weather/sources.json?rev=mountain-relief-r05',{cache:'no-cache'})).json();
  const [nt,ny,nx,nf]=wm.shape_time_y_x_fields,cache=new Map(),textures=new Map();
  const [x0,y0,x1,y1]=wm.bounds_east_north_km;
  async function load(index){
@@ -37,14 +38,14 @@ export async function createWeatherEffects(scene,city,meta,bytes,sourceOptions){
  const rg=new THREE.BufferGeometry();rg.setAttribute('position',new THREE.Float32BufferAttribute(new Float32Array(count*2*3),3));rg.setAttribute('seed',new THREE.BufferAttribute(seeds,4));rg.setAttribute('end',new THREE.BufferAttribute(ends,1));
  const rm=new THREE.ShaderMaterial({transparent:true,depthWrite:false,uniforms:{weather0:{value:null},weather1:{value:null},weight:{value:0},clock:{value:0},anchor:{value:new THREE.Vector2()},radius:{value:5},bounds:{value:new THREE.Vector4(x0,y0,x1,y1)},pigment:{value:new THREE.Color('#777d82')}},
   vertexShader:`attribute vec4 seed;attribute float end;uniform sampler2D weather0,weather1;uniform float weight,clock,radius;uniform vec2 anchor;uniform vec4 bounds;varying float opacity;varying float wash;
-  void main(){vec2 xz=anchor+(seed.xy-.5)*radius*2.;vec2 uv=vec2((xz.x-bounds.x)/(bounds.z-bounds.x),(-xz.y-bounds.y)/(bounds.w-bounds.y));vec4 w=mix(texture2D(weather0,uv),texture2D(weather1,uv),weight);float frozen=clamp(w.g/max(w.r,.000001),0.,1.);float phase=fract(seed.z-clock*mix(.045,.012,frozen));float h=.02+phase*.30+end*mix(.014,.002,frozen);vec3 p=vec3(xz.x,w.a*.001*1.8+h,xz.y);opacity=(1.-exp(-max(w.r,0.)*.65))*.62;opacity*=step(0.,uv.x)*step(uv.x,1.)*step(0.,uv.y)*step(uv.y,1.);wash=1.-exp(-max(w.b,0.)*150.);gl_Position=projectionMatrix*modelViewMatrix*vec4(p,1.);}`,
+  void main(){vec2 xz=anchor+(seed.xy-.5)*radius*2.;vec2 uv=vec2((xz.x-bounds.x)/(bounds.z-bounds.x),(-xz.y-bounds.y)/(bounds.w-bounds.y));vec4 w=mix(texture2D(weather0,uv),texture2D(weather1,uv),weight);float frozen=clamp(w.g/max(w.r,.000001),0.,1.);float phase=fract(seed.z-clock*mix(.045,.012,frozen));float h=.02+phase*.30+end*mix(.014,.002,frozen);vec3 p=vec3(xz.x,w.a*.001*${VERTICAL_SCALE.toFixed(1)}+h,xz.y);opacity=(1.-exp(-max(w.r,0.)*.65))*.62;opacity*=step(0.,uv.x)*step(uv.x,1.)*step(0.,uv.y)*step(uv.y,1.);wash=1.-exp(-max(w.b,0.)*150.);gl_Position=projectionMatrix*modelViewMatrix*vec4(p,1.);}`,
   fragmentShader:`uniform vec3 pigment;varying float opacity;varying float wash;void main(){if(opacity<.002)discard;gl_FragColor=vec4(mix(vec3(.37,.51,.62),pigment,wash*.85),opacity);}`});
  const rain=new THREE.LineSegments(rg,rm);rain.frustumCulled=false;rain.name='Actual hourly precipitation and selected-source wet-removal glyphs';rain.userData.nonQuery=true;scene.add(rain);
  const sources=sourceData.sources.map(original=>{
   const s={...original},actual=sourceOptions.actualOutlets.find(g=>g.group===s.group);if(actual)s.world_east_north_km=actual.center_world_east_north_km;
-  const industrial=city.getObjectByName('Industrial_NPRI_'+s.npri)||city.getObjectByName('Industrial NPRI_'+s.npri);const base=sourceOptions.sampleGround(s.world_east_north_km[0],s.world_east_north_km[1])*.001*1.8;
+  const industrial=city.getObjectByName('Industrial_NPRI_'+s.npri)||city.getObjectByName('Industrial NPRI_'+s.npri);const base=sourceOptions.sampleGround(s.world_east_north_km[0],s.world_east_north_km[1])*.001*VERTICAL_SCALE;
   const p=[s.world_east_north_km[0],base,-s.world_east_north_km[1]];
-  const h=s.stack.height_AGL_m*.001*1.8;
+  const h=s.stack.height_AGL_m*.001*VERTICAL_SCALE;
   const stack=new THREE.Mesh(new THREE.CylinderGeometry(s.stack.diameter_m*.0005,s.stack.diameter_m*.0005,h,32,1,true),new THREE.MeshStandardMaterial({color:'#8d8a7b',roughness:.9,side:THREE.DoubleSide}));stack.position.set(p[0],base+h/2,p[2]);stack.name=s.id+' reported-position stack schematic';scene.add(stack);
   const cap=new THREE.Mesh(new THREE.TorusGeometry(s.stack.diameter_m*.00048,s.stack.diameter_m*.00003,8,32),new THREE.MeshBasicMaterial({color:'#be9460'}));cap.rotation.x=Math.PI/2;cap.position.set(p[0],base+h,p[2]);cap.userData.nonQuery=true;scene.add(cap);
   return{...s,base,cap};

@@ -1,3 +1,4 @@
+import {VERTICAL_SCALE} from './display_geometry.mjs?v=mountain-relief-r05';
 import * as THREE from 'three';
 
 // Every sample is a transported 3D scalar. The three overlapping boxes and
@@ -20,7 +21,7 @@ const fragment=`precision highp float;precision highp sampler3D;
  ${nearPartitionGLSL}
  float ground(vec3 p){vec2 q=vec2((p.x-lo.x)/(hi.x-lo.x),(hi.z-p.z)/(hi.z-lo.z));
   vec2 uv=(q*(horizontalShape-1.)+.5)/horizontalShape;return texture(terrain,uv).r;}
- vec3 local(vec3 p){return vec3(localXY(p,gridIndex),p.y/1.8*1000.-ground(p));}
+ vec3 local(vec3 p){return vec3(localXY(p,gridIndex),p.y/${VERTICAL_SCALE.toFixed(1)}*1000.-ground(p));}
  float asinh1(float x){return sign(x)*log(abs(x)+sqrt(x*x+1.));}
  vec3 param(vec3 p){float a=asinh1(8000.),qlo=asinh1(-stackHeight/.5),qhi=asinh1((2000.-stackHeight)/.5);
   return vec3((asinh1(p.x/.5)/a+1.)*.5,(asinh1(p.y/.5)/a+1.)*.5,(asinh1((p.z-stackHeight)/.5)-qlo)/(qhi-qlo));}
@@ -63,7 +64,7 @@ export function nearPartitionUniforms(meta){return Object.fromEntries([
  ].map(([k,value])=>[k,{value}]));}
 
 export async function createNearVolume(overlay,regional,renderer,bytes,{base='./data/near/',engineering=false}={}){
- const meta=await(await fetch(base+'metadata.json?rev=mountain-single42-v4',{cache:'no-cache'})).json();
+ const meta=await(await fetch(base+'metadata.json?rev=mountain-relief-r05',{cache:'no-cache'})).json();
  if(!engineering&&(!meta.production_complete||meta.actual_hours!==24))throw Error('Full outlet-origin24-hour fields required');
  const blocks=new Map(),textures=new Map(),luts=meta.groups.map(g=>Float32Array.from({length:256},(_,i)=>g.quantizer.scale_ppb*Math.expm1(i/255*g.quantizer.log_max)));
  const partitions=nearPartitionUniforms(meta);Object.assign(regional.uniforms,partitions);
@@ -77,7 +78,7 @@ export async function createNearVolume(overlay,regional,renderer,bytes,{base='./
    groundMin=Math.min(groundMin,data[y*shape.x+x]);groundMax=Math.max(groundMax,data[y*shape.x+x]);
   }
   if(!Number.isFinite(groundMin)){groundMin=0;groundMax=0;}
-  const lo=new THREE.Vector3(b[0],groundMin*.001*1.8,-b[3]),hi=new THREE.Vector3(b[2],(groundMax+2000)*.001*1.8,-b[1]);
+  const lo=new THREE.Vector3(b[0],groundMin*.001*VERTICAL_SCALE,-b[3]),hi=new THREE.Vector3(b[2],(groundMax+2000)*.001*VERTICAL_SCALE,-b[1]);
   const uniforms={...regional.uniforms,...partitions,fine0:{value:null},fine1:{value:null},boxLo:{value:lo},boxHi:{value:hi},gridIndex:{value:g},stackHeight:{value:meta.groups[g].stack_height_AGL_m}};
   const m=new THREE.ShaderMaterial({vertexShader:regional.vertexShader,fragmentShader:fragment,uniforms,glslVersion:THREE.GLSL3,
    transparent:true,depthTest:false,depthWrite:false,side:THREE.BackSide});

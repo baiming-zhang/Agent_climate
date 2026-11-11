@@ -1,9 +1,10 @@
-// Reuse the original factory geometry; relocate only the explicitly hypothetical plant.
+import {VERTICAL_SCALE} from './display_geometry.mjs?v=mountain-relief-r05';
+// Reuse the original factory geometry with the same display-only height mapping.
 // The one emitting outlet and its base are supplied by actual new concentration metadata.
 export function placeMountainPlant(city,source,THREE){
  const template=city.getObjectByName('Industrial_NPRI_2776')||city.getObjectByName('Industrial NPRI_2776');
  if(!template)throw Error('Original factory geometry is required');
- const factory=template.clone(true);factory.name='Hypothetical_mountain_factory_single_source';city.add(factory);
+ const factory=template.clone(true);factory.name='Hypothetical_mountain_factory_single_source';factory.scale.y*=VERTICAL_SCALE/1.8;city.add(factory);
  const original=[-3.0655980438645347,1.2745481565371155],p=source.world_east_north_km;
  factory.position.x+=p[0]-original[0];factory.position.z-=p[1]-original[1];
  city.updateMatrixWorld(true);const box=new THREE.Box3().setFromObject(factory);factory.position.y+=source.base-box.min.y;
