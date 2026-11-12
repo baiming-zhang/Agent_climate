@@ -1,14 +1,16 @@
 import {VERTICAL_SCALE,AGL_SCALE} from './display_geometry.mjs?v=mountain1km-r06';
-import {nearPartitionGLSL} from './near_volume.mjs?v=mountain1km-r06';
+import {nearPartitionGLSL} from './near_volume.mjs?v=playback-r07';
+import {temporalScalarGLSL} from './temporal_scalar.mjs?v=playback-r07';
 // Actual16AGL layers, two concentration scalars. Colours never carry data.
 export const monthShader={
  vertex:`varying vec3 vWorld;void main(){vWorld=(modelMatrix*vec4(position,1.)).xyz;gl_Position=projectionMatrix*viewMatrix*vec4(vWorld,1.);}`,
  fragment:`precision highp float;precision highp sampler3D;
  varying vec3 vWorld;out vec4 fragColor;
- uniform sampler3D field0;uniform sampler3D field1;uniform sampler2D terrain;uniform sampler2D coverage;uniform sampler2D depthMap;
+ uniform sampler3D fieldPrevious;uniform sampler3D field0;uniform sampler3D field1;uniform sampler3D fieldFollowing;uniform sampler2D terrain;uniform sampler2D coverage;uniform sampler2D depthMap;
  uniform vec3 lo;uniform vec3 hi;uniform vec2 horizontalShape;uniform vec3 eye;uniform vec2 resolution;uniform mat4 inverseVP;
  uniform float heights[16];uniform float topAGL;uniform float timeWeight;uniform float gain;uniform float enabled;uniform float contribution;uniform float raySteps;uniform vec3 pigment;
  ${nearPartitionGLSL}
+ ${temporalScalarGLSL}
  float sampleScalar(vec3 p){
   vec2 q=vec2((p.x-lo.x)/(hi.x-lo.x),(hi.z-p.z)/(hi.z-lo.z));
   if(any(lessThan(q,vec2(0.)))||any(greaterThan(q,vec2(1.))))return 0.;
@@ -21,7 +23,7 @@ export const monthShader={
   float layer=0.;
   for(int k=0;k<15;k++){if(agl>=heights[k+1])layer=float(k+1);else if(agl>=heights[k]){layer=float(k)+(agl-heights[k])/(heights[k+1]-heights[k]);break;}}
   vec3 nativeUV=vec3(uv,(layer+.5)/16.);
-  vec2 pair=mix(texture(field0,nativeUV).rg,texture(field1,nativeUV).rg,timeWeight);
+  vec2 pair=temporalPair(texture(fieldPrevious,nativeUV).rg,texture(field0,nativeUV).rg,texture(field1,nativeUV).rg,texture(fieldFollowing,nativeUV).rg,timeWeight);
   float c=contribution<.5?pair.r+pair.g:(contribution<1.5?pair.r:pair.g);
   return c*regionalWeight;
  }

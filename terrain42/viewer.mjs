@@ -9,10 +9,11 @@ import {worldLonLat} from '../ground.js';
 import {colourLandmarks} from '../landmark_materials.js?v=1';
 import {createMonthQuery} from './native_query.mjs?v=en-source-r02';
 import {makeScalarLookup,prepareDisplayFrame} from './display_codec.mjs';
-import {monthShader} from './volume_shader.mjs?v=mountain1km-r06';
-import {createNearVolume} from './near_volume.mjs?v=mountain1km-r06';
+import {monthShader} from './volume_shader.mjs?v=playback-r07';
+import {createNearVolume} from './near_volume.mjs?v=playback-r07';
+import {temporalScalar} from './temporal_scalar.mjs?v=playback-r07';
 import {formatPpb} from './format_ppb.mjs';
-import {createWeatherEffects} from './weather_effects.mjs?v=mountain1km-r06';
+import {createWeatherEffects} from './weather_effects.mjs?v=playback-r07';
 const $=id=>document.getElementById(id),canvas=$('scene');
 const renderer=new THREE.WebGLRenderer({canvas,antialias:true,preserveDrawingBuffer:true});
 renderer.setPixelRatio(Math.min(devicePixelRatio,1));renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.NoToneMapping;
@@ -23,7 +24,7 @@ controls.enableDamping=true;controls.dampingFactor=.09;controls.minDistance=.01;
 const target=new THREE.WebGLRenderTarget(1,1,{depthBuffer:true});target.depthTexture=new THREE.DepthTexture(1,1,THREE.UnsignedIntType);
 const copyScene=new THREE.Scene(),copyCamera=new THREE.OrthographicCamera(-1,1,1,-1,0,1);copyScene.add(new THREE.Mesh(new THREE.PlaneGeometry(2,2),new THREE.MeshBasicMaterial({map:target.texture,depthTest:false,depthWrite:false})));
 const volumeScene=new THREE.Scene();const qBlocks=new Map(),textures=new Map(),groundBlocks=new Map();
-let meta,material,terrain,coverage,queryNative,currentHours=0,duration=15,playing=false,ready=false,preparing=false,playStart=0,startHours=0,request=0,currentPair=[],marker,crest;
+let meta,material,terrain,coverage,queryNative,currentHours=0,duration=15,playing=false,ready=false,preparing=false,playStart=0,startHours=0,request=0,currentPair=[],currentNeighbors=[],marker,crest;
 let lookups,weather,nearVolume,lastClock=-Infinity,renderScale=1,qualityMode='1.5',lastFrame=0,frameEMA=16.7,perfFrames=0,exporting=false,lastExport=null;const frameSize=()=>meta.display.shape_time_z_y_x_fields.slice(1).reduce((a,b)=>a*b,1);
 async function bytes(url){const address=new URL(url,location.href);if(address.pathname.includes('/terrain42/'))address.searchParams.set('rev','mountain1km-r06');const r=await fetch(address);if(!r.ok)throw Error('Data request failed '+r.status+': '+url);const b=new Uint8Array(await r.arrayBuffer());return b[0]===31&&b[1]===139?await new Response(new Blob([b]).stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer():b.buffer;}
 function resize(){if(exporting)return;const gl=renderer.getContext(),limit=Math.min(renderer.capabilities.maxTextureSize,gl.getParameter(gl.MAX_RENDERBUFFER_SIZE)),viewport=gl.getParameter(gl.MAX_VIEWPORT_DIMS),requested=qualityMode==='auto'?Math.min(devicePixelRatio,renderScale):Number(qualityMode);renderer.setPixelRatio(Math.min(requested,limit/innerWidth,limit/innerHeight,viewport[0]/innerWidth,viewport[1]/innerHeight));renderer.setSize(innerWidth,innerHeight);camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();const s=renderer.getDrawingBufferSize(new THREE.Vector2());target.setSize(s.x,s.y);if(material)material.uniforms.resolution.value.copy(s);$('renderPixels').textContent=`${s.x} × ${s.y} px`;}
@@ -47,27 +48,33 @@ function frameFromLoaded(index){
  const texture=new THREE.Data3DTexture(values,nx,ny,nz);texture.format=THREE.RGFormat;texture.type=THREE.HalfFloatType;texture.minFilter=texture.magFilter=THREE.LinearFilter;texture.unpackAlignment=1;texture.needsUpdate=true;renderer.initTexture(texture);
  const entry={texture,values,index,packed,chunk};textures.set(index,entry);return entry;
 }
-function indices(hours){const i=Math.max(0,Math.min(meta.actual_hours-1,hours-.5)),a=Math.floor(i);return{a,b:Math.min(meta.actual_hours-1,a+1),weight:i-a};}
-function commit(hours,a,b,weight){
+function indices(hours){const i=Math.max(0,Math.min(meta.actual_hours-1,hours-.5)),a=Math.floor(i),b=Math.min(meta.actual_hours-1,a+1);return{a,b,p:Math.max(0,a-1),n:Math.min(meta.actual_hours-1,b+1),weight:i-a};}
+function commit(hours,a,b,weight,previous,following){
  material.uniforms.field0.value=a.texture;material.uniforms.field1.value=b.texture;material.uniforms.timeWeight.value=weight;
- nearVolume.commit(a.index,b.index);currentPair=[a,b];currentHours=hours;clock();
- // Dispose only after both new textures and all corresponding uniforms are ready.
- for(const[index,entry]of textures)if(textures.size>4&&index!==a.index&&index!==b.index){entry.texture.dispose();textures.delete(index);}
+ material.uniforms.fieldPrevious.value=previous.texture;material.uniforms.fieldFollowing.value=following.texture;
+ nearVolume.commit(a.index,b.index,previous.index,following.index);currentPair=[a,b];currentNeighbors=[previous,a,b,following];currentHours=hours;clock();
+ // The bounded24h texture set stays resident; no per-hour decode/upload in play.
 }
 async function setHours(hours){
- const id=++request;hours=Math.max(0,Math.min(meta.actual_hours,Number(hours)));const{a,b,weight}=indices(hours);
- for(const index of new Set([a,b])){const block=await blockFor(index);block.chunk.loaded=block.packed;}
- await Promise.all([...new Set([a,b])].flatMap(i=>[weather?.prepare(i),nearVolume?.prepare(i)]));
- if(id!==request)return;const fa=frameFromLoaded(a),fb=frameFromLoaded(b);commit(hours,fa,fb,weight);clock(true);clearProbe();
+ const id=++request;hours=Math.max(0,Math.min(meta.actual_hours,Number(hours)));const{a,b,p,n,weight}=indices(hours);
+ for(const index of new Set([p,a,b,n])){const block=await blockFor(index);block.chunk.loaded=block.packed;}
+ await Promise.all([...new Set([p,a,b,n])].flatMap(i=>[weather?.prepare(i),nearVolume?.prepare(i)]));
+ if(id!==request)return;commit(hours,frameFromLoaded(a),frameFromLoaded(b),weight,frameFromLoaded(p),frameFromLoaded(n));clock(true);clearProbe();
 }
 async function preload(){
  let done=0,cursor=0;
  async function worker(){while(cursor<meta.display.chunks.length){const chunk=meta.display.chunks[cursor++],item=await blockFor(chunk.first_index);chunk.loaded=item.packed;done++;$('status').textContent=`Preparing playback ${done}/${meta.display.chunks.length} blocks`;}}
  await Promise.all([...Array.from({length:3},worker),weather?.preload(),nearVolume?.preload()]);
+ // Decode scalar volumes and upload while Preparing, then yield to keep controls responsive.
+ for(let i=0;i<meta.actual_hours;i++){
+  frameFromLoaded(i);nearVolume.frame(i);weather.warm(i,renderer,material.uniforms.contribution.value);
+  $('status').textContent=`Preparing smooth playback ${i+1}/${meta.actual_hours}`;
+  await new Promise(requestAnimationFrame);
+ }
 }
 async function play(){
  if(playing){stop();return;}if(preparing)return;preparing=true;$('play').textContent='Preparing…';
- try{await preload();if(currentHours>=meta.actual_hours)await setHours(0);startHours=currentHours;playStart=performance.now();playing=true;$('play').textContent='Ⅱ Pause';$('status').textContent='All hours ready · scalar interpolation';}finally{preparing=false;}
+ try{await preload();if(currentHours>=meta.actual_hours)await setHours(0);startHours=currentHours;playStart=performance.now();playing=true;$('play').textContent='Ⅱ Pause';$('status').textContent='Continuous scalar reconstruction · native hourly means retained';}finally{preparing=false;}
 }
 function view(which){
  const facility=meta.facilities?.find(f=>f.key===which||(which==='sources'&&f.key==='FCC'));
@@ -143,7 +150,7 @@ function sampleDisplay(p){
   const s=entry.reference?entry.values[index]:lookups.source_ppb.values[entry.packed[base+index]],b=entry.reference?entry.values[index+1]:lookups.initial_ppb.values[entry.packed[base+index+1]];
   c+=(mode===0?s+b:mode===1?s:b)*(i?wx:1-wx)*(j?wy:1-wy)*(k?wz:1-wz);
  }return c;}
- const coarse=field(currentPair[0])*(1-tw)+field(currentPair[1])*tw,fine=nearVolume?.sample(p,agl);
+ const coarse=temporalScalar(...currentNeighbors.map(field),tw),fine=nearVolume?.sample(p,agl);
  return{ppb:fine?coarse*fine.regional_weight+fine.ppb:coarse,AGL_m:agl,near_weight:fine?.near_weight||0,display_approximation:true,simulation_hours:currentHours};
 }
 let down;canvas.addEventListener('pointerdown',e=>down=[e.clientX,e.clientY]);
@@ -228,7 +235,7 @@ async function init(){
   const [x0,y0,x1,y1]=meta.display.bounds_east_north_km,lo=new THREE.Vector3(x0,0,-y1),hi=new THREE.Vector3(x1,(Math.max(...terrain)*VERTICAL_SCALE+meta.display.height_tops_AGL_m.at(-1)*AGL_SCALE)*.001,-y0),span=hi.clone().sub(lo);
   function texture(a){const t=new THREE.DataTexture(a,nx,ny,THREE.RedFormat,THREE.FloatType);t.minFilter=t.magFilter=THREE.LinearFilter;t.needsUpdate=true;return t;}
   material=new THREE.ShaderMaterial({vertexShader:monthShader.vertex,fragmentShader:monthShader.fragment,glslVersion:THREE.GLSL3,transparent:true,depthTest:false,depthWrite:false,side:THREE.BackSide,
-   uniforms:{field0:{value:null},field1:{value:null},terrain:{value:texture(terrain)},coverage:{value:texture(coverage)},depthMap:{value:target.depthTexture},lo:{value:lo},hi:{value:hi},horizontalShape:{value:new THREE.Vector2(nx,ny)},eye:{value:camera.position},resolution:{value:renderer.getDrawingBufferSize(new THREE.Vector2())},inverseVP:{value:new THREE.Matrix4()},heights:{value:meta.display.height_centers_AGL_m},topAGL:{value:meta.display.height_tops_AGL_m.at(-1)},timeWeight:{value:0},gain:{value:1.2},enabled:{value:1},contribution:{value:1},raySteps:{value:192},pigment:{value:new THREE.Vector3(.467,.490,.510)}}});
+   uniforms:{fieldPrevious:{value:null},field0:{value:null},field1:{value:null},fieldFollowing:{value:null},terrain:{value:texture(terrain)},coverage:{value:texture(coverage)},depthMap:{value:target.depthTexture},lo:{value:lo},hi:{value:hi},horizontalShape:{value:new THREE.Vector2(nx,ny)},eye:{value:camera.position},resolution:{value:renderer.getDrawingBufferSize(new THREE.Vector2())},inverseVP:{value:new THREE.Matrix4()},heights:{value:meta.display.height_centers_AGL_m},topAGL:{value:meta.display.height_tops_AGL_m.at(-1)},timeWeight:{value:0},gain:{value:1.2},enabled:{value:1},contribution:{value:1},raySteps:{value:192},pigment:{value:new THREE.Vector3(.467,.490,.510)}}});
   const mesh=new THREE.Mesh(new THREE.BoxGeometry(span.x,span.y,span.z),material);mesh.position.copy(lo).addScaledVector(span,.5);volumeScene.add(mesh);
   nearVolume=await createNearVolume(volumeScene,material,renderer,bytes);
   function displayGround(e,n){const u=(e-x0)/(x1-x0)*(nx-1),v=(n-y0)/(y1-y0)*(ny-1),i=Math.max(0,Math.min(nx-2,Math.floor(u))),j=Math.max(0,Math.min(ny-2,Math.floor(v))),a=Math.max(0,Math.min(1,u-i)),b=Math.max(0,Math.min(1,v-j));return terrain[j*nx+i]*(1-a)*(1-b)+terrain[j*nx+i+1]*a*(1-b)+terrain[(j+1)*nx+i]*(1-a)*b+terrain[(j+1)*nx+i+1]*a*b;}
@@ -236,7 +243,7 @@ async function init(){
   marker=new THREE.Mesh(new THREE.SphereGeometry(.045,12,8),new THREE.MeshBasicMaterial({color:'#d5a85e',depthTest:false}));marker.visible=false;marker.renderOrder=4;scene.add(marker);
   $('timeline').max=meta.actual_hours;$('startLabel').textContent=formatUTC(initialTime());$('endLabel').textContent=formatUTC(initialTime()+meta.actual_hours*3600000);$('periodLabel').textContent=`${meta.actual_hours}h → 15 s`;$('aboutScope').textContent=`Actual ${meta.actual_hours} continuous hourly means, 16 layers. Only selected-source increments are shown.${engineering?'Engineering input only.':'The full24 hours play in15 seconds by default.'}`;
   controlsUI();await setHours(0);view('all');ready=true;
-  window.MONTH_CLIMATE={ready:true,verticalScale:VERTICAL_SCALE,aglScale:AGL_SCALE,meta,scene,camera,controls,renderer,material,weather,nearVolume,setHours,queryGround,sampleDisplay,view,play,stop,exportImage,lastProbe:null,get lastExport(){return lastExport;},get exporting(){return exporting;},get hours(){return currentHours;},get playback(){return{playing,duration,preparing};},get currentPair(){return currentPair;},get performance(){return{frame_ms:frameEMA,renderScale,qualityMode,pixels:[canvas.width,canvas.height],raySteps:material.uniforms.raySteps.value};}};
+  window.MONTH_CLIMATE={ready:true,playbackReconstruction:'bounded_C1_scalar_r07',verticalScale:VERTICAL_SCALE,aglScale:AGL_SCALE,meta,scene,camera,controls,renderer,material,weather,nearVolume,setHours,queryGround,sampleDisplay,view,play,stop,exportImage,lastProbe:null,get lastExport(){return lastExport;},get exporting(){return exporting;},get hours(){return currentHours;},get playback(){return{playing,duration,preparing};},get currentPair(){return currentPair;},get performance(){return{frame_ms:frameEMA,renderScale,qualityMode,pixels:[canvas.width,canvas.height],raySteps:material.uniforms.raySteps.value};}};
   $('loading').style.display='none';$('status').textContent=`${meta.actual_hours} actual hours · 16 layers · native surface query`;
  }catch(error){fail(error);}
 }
@@ -244,7 +251,7 @@ function animate(now){
  requestAnimationFrame(animate);if(exporting)return;controls.update();
  if(lastFrame){const dt=now-lastFrame;if(dt<200)frameEMA=frameEMA*.95+dt*.05;}lastFrame=now;
  if(ready&&++perfFrames%120===0&&qualityMode==='auto'){const desired=frameEMA>30?Math.max(.65,renderScale-.1):frameEMA<19?Math.min(1,renderScale+.05):renderScale;if(desired!==renderScale){renderScale=desired;resize();}}
- if(ready&&playing){const h=Math.min(meta.actual_hours,startHours+(now-playStart)/1000*meta.actual_hours/duration),i=indices(h),a=frameFromLoaded(i.a),b=frameFromLoaded(i.b);if(a&&b)commit(h,a,b,i.weight);if(h>=meta.actual_hours)stop();}
+ if(ready&&playing){const h=Math.min(meta.actual_hours,startHours+(now-playStart)/1000*meta.actual_hours/duration),i=indices(h),a=frameFromLoaded(i.a),b=frameFromLoaded(i.b),p=frameFromLoaded(i.p),n=frameFromLoaded(i.n);if(a&&b&&p&&n)commit(h,a,b,i.weight,p,n);if(h>=meta.actual_hours)stop();}
  camera.near=Math.max(.0001,Math.min(.15,camera.position.distanceTo(controls.target)*.001));camera.updateProjectionMatrix();
  // Keep the query point legible without covering the actual nearby plume.
  if(marker?.visible){const radius=camera.position.distanceTo(marker.position)*2*Math.tan(camera.fov*Math.PI/360)*5/innerHeight;marker.scale.setScalar(radius/.045);}

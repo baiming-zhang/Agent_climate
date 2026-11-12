@@ -24,7 +24,6 @@ export async function createWeatherEffects(scene,city,meta,bytes,sourceOptions){
   const f=frame(index);if(!f)return null;const a=new Float32Array(ny*nx*4);
   for(let i=0;i<ny*nx;i++){const k=f.offset+i*nf;a[i*4]=f.a[k];a[i*4+1]=f.a[k+1];const initial=nf>7?f.a[k+7]:0;a[i*4+2]=contribution===0?f.a[k+4]+initial:contribution===2?initial:f.a[k+4];a[i*4+3]=f.a[k+5];}
   const t=new THREE.DataTexture(a,nx,ny,THREE.RGBAFormat,THREE.FloatType);t.minFilter=t.magFilter=THREE.LinearFilter;t.needsUpdate=true;textures.set(key,t);
-  for(const [j,old]of textures)if(textures.size>4&&j!==key&&(!protectedIndices.includes(Number(j.split(':')[0]))||!j.endsWith(':'+contribution))){old.dispose();textures.delete(j);break;}
   return t;
  }
  function sample(index,x,z,field){
@@ -59,5 +58,5 @@ export async function createWeatherEffects(scene,city,meta,bytes,sourceOptions){
   last={rain_mm_h:sample(a,target.x,target.z,0)*(1-w)+sample(b,target.x,target.z,0)*w,wet_mg_m2_h:sample(a,target.x,target.z,4)*(1-w)+sample(b,target.x,target.z,4)*w};
 
  }
- return{prepare,preload:prepareAll,update,metadata:wm,sources,objects:{rain,emit},get state(){return last;},get bridgeState(){return{mode:'actual_native_3D_volume',billboard:false};},set rainVisible(value){rain.visible=value;},set sourcesVisible(value){emit.visible=value;}};
+ return{prepare,preload:prepareAll,warm(index,renderer,contribution){renderer.initTexture(texture(index,[index],contribution));},update,metadata:wm,sources,objects:{rain,emit},get state(){return last;},get bridgeState(){return{mode:'actual_native_3D_volume',billboard:false};},set rainVisible(value){rain.visible=value;},set sourcesVisible(value){emit.visible=value;}};
 }

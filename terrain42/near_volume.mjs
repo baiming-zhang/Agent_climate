@@ -1,5 +1,6 @@
 import {VERTICAL_SCALE,AGL_SCALE} from './display_geometry.mjs?v=mountain1km-r06';
 import * as THREE from 'three';
+import {temporalScalar,temporalScalarGLSL} from './temporal_scalar.mjs?v=playback-r07';
 
 // Every sample is a transported 3D scalar. The three overlapping boxes and
 // regional field are alternative resolutions, combined with weights summing1.
@@ -15,10 +16,11 @@ export const nearPartitionGLSL=`
 
 const fragment=`precision highp float;precision highp sampler3D;
  varying vec3 vWorld;out vec4 fragColor;
- uniform sampler3D fine0,fine1;uniform sampler2D terrain,depthMap;
+ uniform sampler3D finePrevious,fine0,fine1,fineFollowing;uniform sampler2D terrain,depthMap;
  uniform vec3 lo,hi,boxLo,boxHi,eye,pigment;uniform vec2 horizontalShape,resolution;uniform mat4 inverseVP;
  uniform float timeWeight,gain,enabled,stackHeight;uniform int gridIndex;
  ${nearPartitionGLSL}
+ ${temporalScalarGLSL}
  float ground(vec3 p){vec2 q=vec2((p.x-lo.x)/(hi.x-lo.x),(hi.z-p.z)/(hi.z-lo.z));
   vec2 uv=(q*(horizontalShape-1.)+.5)/horizontalShape;return texture(terrain,uv).r;}
  vec3 local(vec3 p){return vec3(localXY(p,gridIndex),(p.y*1000.-ground(p)*${VERTICAL_SCALE.toFixed(1)})/${AGL_SCALE.toFixed(1)});}
@@ -47,7 +49,7 @@ const fragment=`precision highp float;precision highp sampler3D;
    float ds=min(end-t,max(.0000002,probe+min(min(dist.x,dist.y),dist.z)));
    vec3 samplePos=eye+d*(t+ds*.5),s=local(samplePos),uv=param(s);
    if(all(greaterThanEqual(uv,vec3(0.)))&&all(lessThanEqual(uv,vec3(1.)))){
-    float c=mix(texture(fine0,uv).r,texture(fine1,uv).r,timeWeight);
+    float c=temporalScalar(texture(finePrevious,uv).r,texture(fine0,uv).r,texture(fine1,uv).r,texture(fineFollowing,uv).r,timeWeight);
     float w=rawNearWeight(samplePos,s.z,gridIndex)/max(1.,sumNearWeights(samplePos,s.z));
     float da=1.-exp(-c*w*gain*ds);alpha+=(1.-alpha)*da;
    }
@@ -79,7 +81,7 @@ export async function createNearVolume(overlay,regional,renderer,bytes,{base='./
   }
   if(!Number.isFinite(groundMin)){groundMin=0;groundMax=0;}
   const lo=new THREE.Vector3(b[0],groundMin*.001*VERTICAL_SCALE,-b[3]),hi=new THREE.Vector3(b[2],(groundMax*VERTICAL_SCALE+2000*AGL_SCALE)*.001,-b[1]);
-  const uniforms={...regional.uniforms,...partitions,fine0:{value:null},fine1:{value:null},boxLo:{value:lo},boxHi:{value:hi},gridIndex:{value:g},stackHeight:{value:meta.groups[g].stack_height_AGL_m}};
+  const uniforms={...regional.uniforms,...partitions,finePrevious:{value:null},fine0:{value:null},fine1:{value:null},fineFollowing:{value:null},boxLo:{value:lo},boxHi:{value:hi},gridIndex:{value:g},stackHeight:{value:meta.groups[g].stack_height_AGL_m}};
   const m=new THREE.ShaderMaterial({vertexShader:regional.vertexShader,fragmentShader:fragment,uniforms,glslVersion:THREE.GLSL3,
    transparent:true,depthTest:false,depthWrite:false,side:THREE.BackSide});
   const span=hi.clone().sub(lo),mesh=new THREE.Mesh(new THREE.BoxGeometry(...span.toArray()),m);mesh.position.copy(lo).addScaledVector(span,.5);
@@ -107,9 +109,9 @@ export async function createNearVolume(overlay,regional,renderer,bytes,{base='./
  }
  async function prepareAll(){await preload();for(const c of meta.chunks)c.loaded=await blocks.get(c.file);}
  async function prepareOne(index){await prepare(index);const c=meta.chunks.find(c=>index>=c.first_index&&index<c.first_index+c.count);c.loaded=await blocks.get(c.file);}
- function commit(a,b){const aa=frame(a),bb=frame(b);if(!aa||!bb)return false;
-  for(let g=0;g<1;g++){materials[g].uniforms.fine0.value=aa[g];materials[g].uniforms.fine1.value=bb[g];}
-  for(const [i,ts]of textures)if(textures.size>3&&i!==a&&i!==b){ts.forEach(t=>t.dispose());textures.delete(i);}
+ function commit(a,b,p=Math.max(0,a-1),n=Math.min(meta.frame_count-1,b+1)){
+  const pp=frame(p),aa=frame(a),bb=frame(b),nn=frame(n);if(!pp||!aa||!bb||!nn)return false;
+  for(let g=0;g<1;g++){const u=materials[g].uniforms;u.finePrevious.value=pp[g];u.fine0.value=aa[g];u.fine1.value=bb[g];u.fineFollowing.value=nn[g];}
   return true;
  }
  function sample(point,agl){
@@ -123,7 +125,7 @@ export async function createNearVolume(overlay,regional,renderer,bytes,{base='./
    const hs=group.stack_height_AGL_m,qlo=Math.asinh(-hs/.5),qhi=Math.asinh((2000-hs)/.5),q=[(Math.asinh(xy[0]/.5)/Math.asinh(8000)+1)*.5,(Math.asinh(xy[1]/.5)/Math.asinh(8000)+1)*.5,(Math.asinh((agl-hs)/.5)-qlo)/(qhi-qlo)];
    function scalar(t){if(!t)return 0;const f=q.map(v=>Math.max(0,Math.min(95,v*96-.5))),i=f.map(Math.floor),a=f.map((v,k)=>v-i[k]),data=t.image.data;let v=0;
     for(let z=0;z<2;z++)for(let y=0;y<2;y++)for(let x=0;x<2;x++)v+=data[(Math.min(95,i[2]+z)*96+Math.min(95,i[1]+y))*96+Math.min(95,i[0]+x)]*(x?a[0]:1-a[0])*(y?a[1]:1-a[1])*(z?a[2]:1-a[2]);return v;}
-   const u=materials[g].uniforms,tw=u.timeWeight.value;value+=w*(scalar(u.fine0.value)*(1-tw)+scalar(u.fine1.value)*tw);
+   const u=materials[g].uniforms,tw=u.timeWeight.value;value+=w*temporalScalar(scalar(u.finePrevious.value),scalar(u.fine0.value),scalar(u.fine1.value),scalar(u.fineFollowing.value),tw);
   }
   return{ppb:value/Math.max(1,total),regional_weight:Math.max(0,1-total),near_weight:Math.min(1,total)};
  }
