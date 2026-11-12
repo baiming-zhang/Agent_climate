@@ -1,4 +1,4 @@
-import {VERTICAL_SCALE} from './display_geometry.mjs?v=mountain-relief-r05';
+import {VERTICAL_SCALE,AGL_SCALE} from './display_geometry.mjs?v=mountain-terrain6x-r06';
 import * as THREE from 'three';
 
 
@@ -6,8 +6,8 @@ import * as THREE from 'three';
 // native concentration/ground queries. All intensities and source paths use
 // the actual frozen weather / wet removal / reported stack parameters.
 export async function createWeatherEffects(scene,city,meta,bytes,sourceOptions){
- const wm=await(await fetch('./data/weather/metadata.json?rev=mountain-relief-r05',{cache:'no-cache'})).json();
- const sourceData=await(await fetch('./data/weather/sources.json?rev=mountain-relief-r05',{cache:'no-cache'})).json();
+ const wm=await(await fetch('./data/weather/metadata.json?rev=mountain-terrain6x-r06',{cache:'no-cache'})).json();
+ const sourceData=await(await fetch('./data/weather/sources.json?rev=mountain-terrain6x-r06',{cache:'no-cache'})).json();
  const [nt,ny,nx,nf]=wm.shape_time_y_x_fields,cache=new Map(),textures=new Map();
  const [x0,y0,x1,y1]=wm.bounds_east_north_km;
  async function load(index){
@@ -45,7 +45,7 @@ export async function createWeatherEffects(scene,city,meta,bytes,sourceOptions){
   const s={...original},actual=sourceOptions.actualOutlets.find(g=>g.group===s.group);if(actual)s.world_east_north_km=actual.center_world_east_north_km;
   const industrial=city.getObjectByName('Industrial_NPRI_'+s.npri)||city.getObjectByName('Industrial NPRI_'+s.npri);const base=sourceOptions.sampleGround(s.world_east_north_km[0],s.world_east_north_km[1])*.001*VERTICAL_SCALE;
   const p=[s.world_east_north_km[0],base,-s.world_east_north_km[1]];
-  const h=s.stack.height_AGL_m*.001*VERTICAL_SCALE;
+  const h=s.stack.height_AGL_m*.001*AGL_SCALE;
   const stack=new THREE.Mesh(new THREE.CylinderGeometry(s.stack.diameter_m*.0005,s.stack.diameter_m*.0005,h,32,1,true),new THREE.MeshStandardMaterial({color:'#8d8a7b',roughness:.9,side:THREE.DoubleSide}));stack.position.set(p[0],base+h/2,p[2]);stack.name=s.id+' reported-position stack schematic';scene.add(stack);
   const cap=new THREE.Mesh(new THREE.TorusGeometry(s.stack.diameter_m*.00048,s.stack.diameter_m*.00003,8,32),new THREE.MeshBasicMaterial({color:'#be9460'}));cap.rotation.x=Math.PI/2;cap.position.set(p[0],base+h,p[2]);cap.userData.nonQuery=true;scene.add(cap);
   return{...s,base,cap};

@@ -1,5 +1,5 @@
-import {VERTICAL_SCALE} from './display_geometry.mjs?v=mountain-relief-r05';
-import {nearPartitionGLSL} from './near_volume.mjs?v=mountain-relief-r05';
+import {VERTICAL_SCALE,AGL_SCALE} from './display_geometry.mjs?v=mountain-terrain6x-r06';
+import {nearPartitionGLSL} from './near_volume.mjs?v=mountain-terrain6x-r06';
 // Actual16AGL layers, two concentration scalars. Colours never carry data.
 export const monthShader={
  vertex:`varying vec3 vWorld;void main(){vWorld=(modelMatrix*vec4(position,1.)).xyz;gl_Position=projectionMatrix*viewMatrix*vec4(vWorld,1.);}`,
@@ -14,7 +14,7 @@ export const monthShader={
   if(any(lessThan(q,vec2(0.)))||any(greaterThan(q,vec2(1.))))return 0.;
   vec2 uv=(q*(horizontalShape-1.)+.5)/horizontalShape;
   if(texture(coverage,uv).r<.5)return 0.;
-  float agl=p.y/${VERTICAL_SCALE.toFixed(1)}*1000.-texture(terrain,uv).r;
+  float agl=(p.y*1000.-texture(terrain,uv).r*${VERTICAL_SCALE.toFixed(1)})/${AGL_SCALE.toFixed(1)};
   if(agl<0.||agl>topAGL)return 0.;
   float regionalWeight=max(0.,1.-sumNearWeights(p,agl));
   if(regionalWeight==0.)return 0.;

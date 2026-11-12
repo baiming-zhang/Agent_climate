@@ -1,6 +1,6 @@
-import {VERTICAL_SCALE} from './display_geometry.mjs?v=mountain-relief-r05';
-import {makeModelTerrain,groundCityAndPlant} from './model_ground.mjs?v=mountain-relief-r05';
-import {placeMountainPlant,cropMountainScene} from './mountain_plant.mjs?v=mountain-relief-r05';
+import {VERTICAL_SCALE,AGL_SCALE} from './display_geometry.mjs?v=mountain-terrain6x-r06';
+import {makeModelTerrain,groundCityAndPlant} from './model_ground.mjs?v=mountain-terrain6x-r06';
+import {placeMountainPlant,cropMountainScene} from './mountain_plant.mjs?v=mountain-terrain6x-r06';
 import * as THREE from 'three';
 import {OrbitControls} from '../vendor/OrbitControls.js';
 import {GLTFLoader} from '../vendor/GLTFLoader.js';
@@ -9,10 +9,10 @@ import {worldLonLat} from '../ground.js';
 import {colourLandmarks} from '../landmark_materials.js?v=1';
 import {createMonthQuery} from './native_query.mjs?v=en-source-r02';
 import {makeScalarLookup,prepareDisplayFrame} from './display_codec.mjs';
-import {monthShader} from './volume_shader.mjs?v=mountain-relief-r05';
-import {createNearVolume} from './near_volume.mjs?v=mountain-relief-r05';
+import {monthShader} from './volume_shader.mjs?v=mountain-terrain6x-r06';
+import {createNearVolume} from './near_volume.mjs?v=mountain-terrain6x-r06';
 import {formatPpb} from './format_ppb.mjs';
-import {createWeatherEffects} from './weather_effects.mjs?v=mountain-relief-r05';
+import {createWeatherEffects} from './weather_effects.mjs?v=mountain-terrain6x-r06';
 const $=id=>document.getElementById(id),canvas=$('scene');
 const renderer=new THREE.WebGLRenderer({canvas,antialias:true,preserveDrawingBuffer:true});
 renderer.setPixelRatio(Math.min(devicePixelRatio,1));renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.NoToneMapping;
@@ -25,7 +25,7 @@ const copyScene=new THREE.Scene(),copyCamera=new THREE.OrthographicCamera(-1,1,1
 const volumeScene=new THREE.Scene();const qBlocks=new Map(),textures=new Map(),groundBlocks=new Map();
 let meta,material,terrain,coverage,queryNative,currentHours=0,duration=15,playing=false,ready=false,preparing=false,playStart=0,startHours=0,request=0,currentPair=[],marker,crest;
 let lookups,weather,nearVolume,lastClock=-Infinity,renderScale=1,qualityMode='1.5',lastFrame=0,frameEMA=16.7,perfFrames=0,exporting=false,lastExport=null;const frameSize=()=>meta.display.shape_time_z_y_x_fields.slice(1).reduce((a,b)=>a*b,1);
-async function bytes(url){const address=new URL(url,location.href);if(address.pathname.includes('/terrain42/'))address.searchParams.set('rev','mountain-relief-r05');const r=await fetch(address);if(!r.ok)throw Error('Data request failed '+r.status+': '+url);const b=new Uint8Array(await r.arrayBuffer());return b[0]===31&&b[1]===139?await new Response(new Blob([b]).stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer():b.buffer;}
+async function bytes(url){const address=new URL(url,location.href);if(address.pathname.includes('/terrain42/'))address.searchParams.set('rev','mountain-terrain6x-r06');const r=await fetch(address);if(!r.ok)throw Error('Data request failed '+r.status+': '+url);const b=new Uint8Array(await r.arrayBuffer());return b[0]===31&&b[1]===139?await new Response(new Blob([b]).stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer():b.buffer;}
 function resize(){if(exporting)return;const gl=renderer.getContext(),limit=Math.min(renderer.capabilities.maxTextureSize,gl.getParameter(gl.MAX_RENDERBUFFER_SIZE)),viewport=gl.getParameter(gl.MAX_VIEWPORT_DIMS),requested=qualityMode==='auto'?Math.min(devicePixelRatio,renderScale):Number(qualityMode);renderer.setPixelRatio(Math.min(requested,limit/innerWidth,limit/innerHeight,viewport[0]/innerWidth,viewport[1]/innerHeight));renderer.setSize(innerWidth,innerHeight);camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();const s=renderer.getDrawingBufferSize(new THREE.Vector2());target.setSize(s.x,s.y);if(material)material.uniforms.resolution.value.copy(s);$('renderPixels').textContent=`${s.x} × ${s.y} px`;}
 addEventListener('resize',resize);resize();
 function clearProbe(){if(marker)marker.visible=false;$('inspector').hidden=true;$('probe').textContent='';if(window.MONTH_CLIMATE)window.MONTH_CLIMATE.lastProbe=null;}
@@ -72,9 +72,9 @@ async function play(){
 function view(which){
  const facility=meta.facilities?.find(f=>f.key===which||(which==='sources'&&f.key==='FCC'));
  let p,t;if(facility){const source=weather.sources.find(s=>facility.component_ids.includes(s.id)),e=source.world_east_north_km;
-  t=[e[0],source.base+source.stack.height_AGL_m*.001*VERTICAL_SCALE+.04,-e[1]];p=[t[0]+.50,t[1]+.36,t[2]+.90];}
+  t=[e[0],source.base+source.stack.height_AGL_m*.001*AGL_SCALE+.04,-e[1]];p=[t[0]+.50,t[1]+.36,t[2]+.90];}
  else if(which==='UBC'){const u=meta.crest?.world_east_north_km||[-21.937,-2.305];t=[u[0],.15,-u[1]];p=[t[0]+1.2,1.6,t[2]+2.5];}
- else if(which==='all'){const[x0,y0,x1,y1]=meta.display.bounds_east_north_km;t=[(x0+x1)/2,0,-(y0+y1)/2];const s=weather.sources[0],e=s.world_east_north_km;t=[e[0],s.base+.8,-e[1]];p=[e[0]+10,s.base+6,-e[1]+14];}
+ else if(which==='all'){const[x0,y0,x1,y1]=meta.display.bounds_east_north_km;t=[(x0+x1)/2,0,-(y0+y1)/2];const s=weather.sources[0],e=s.world_east_north_km;t=[e[0],s.base+6,-e[1]];p=[e[0]+22,s.base+17,-e[1]+30];}
  else{const fs=meta.facilities||[],cx=fs.length?fs.reduce((a,b)=>a+b.world_east_north_km[0],0)/fs.length:-4,cy=fs.length?-fs.reduce((a,b)=>a+b.world_east_north_km[1],0)/fs.length:7;t=[cx,.1,cy];p=[cx+15,12,cy+22];}
  controls.target.fromArray(t);camera.position.fromArray(p);controls.update();clearProbe();
 }
@@ -135,7 +135,7 @@ function sampleDisplay(p){
  const x=(p.x-x0)/(x1-x0)*(nx-1),y=(-p.z-y0)/(y1-y0)*(ny-1);if(x<0||y<0||x>nx-1||y>ny-1)return null;
  const ix=Math.min(nx-2,Math.floor(x)),iy=Math.min(ny-2,Math.floor(y)),wx=x-ix,wy=y-iy;
  let h=0;for(let j=0;j<2;j++)for(let i=0;i<2;i++)h+=terrain[(iy+j)*nx+ix+i]*(i?wx:1-wx)*(j?wy:1-wy);
- const agl=p.y/VERTICAL_SCALE*1000-h,heights=meta.display.height_centers_AGL_m;if(agl<0||agl>meta.display.height_tops_AGL_m.at(-1))return null;
+ const agl=(p.y*1000-h*VERTICAL_SCALE)/AGL_SCALE,heights=meta.display.height_centers_AGL_m;if(agl<0||agl>meta.display.height_tops_AGL_m.at(-1))return null;
  let z=0;while(z<nz-1&&agl>=heights[z+1])z++;const next=Math.min(nz-1,z+1),wz=next===z?0:Math.max(0,(agl-heights[z])/(heights[next]-heights[z]));
  const mode=Number(material.uniforms.contribution.value),tw=material.uniforms.timeWeight.value;
  function field(entry){let c=0;for(let k=0;k<2;k++)for(let j=0;j<2;j++)for(let i=0;i<2;i++){
@@ -210,7 +210,7 @@ function controlsUI(){
 }
 async function init(){
  try{
-  const response=await fetch('./data/metadata.json?rev=mountain-relief-r05',{cache:'no-cache'});if(!response.ok)throw Error('Complete 15-day data unavailable');meta=await response.json();
+  const response=await fetch('./data/metadata.json?rev=mountain-terrain6x-r06',{cache:'no-cache'});if(!response.ok)throw Error('Complete 15-day data unavailable');meta=await response.json();
   const engineering=new URLSearchParams(location.search).get('engineering')==='1';
   if(!engineering&&(!meta.scientific_period_complete||meta.actual_hours!==24||meta.release_version!=='outlet-origin-r04-mountain-single42-v4'||meta.terrain_seed!==42))throw Error('Current outlet-origin data not ready. Reload after the deployment finishes.');
   if(engineering){$('caseTag').textContent=`Engineering input ${meta.actual_hours} h · not a production forecast`;document.querySelector('.brand h1').firstChild.textContent='Engineering preview';}
@@ -225,7 +225,7 @@ async function init(){
   $('loadingText').textContent='Loading city geometry…';const city=await loader.parseAsync(await bytes('../city-draco.glb.gz'),new URL('../',location.href).href);draco.dispose();
   colourLandmarks(city.scene);city.scene.traverse(o=>{if(/^Diorama[ _]base/.test(o.name))o.visible=false;});scene.add(city.scene);const modelTerrain=makeModelTerrain(scene,meta,terrain,THREE);await makeCrest();
   // Background reference is deferred; no extra background asset is loaded.
-  const [x0,y0,x1,y1]=meta.display.bounds_east_north_km,lo=new THREE.Vector3(x0,0,-y1),hi=new THREE.Vector3(x1,(Math.max(...terrain)+meta.display.height_tops_AGL_m.at(-1))*.001*VERTICAL_SCALE,-y0),span=hi.clone().sub(lo);
+  const [x0,y0,x1,y1]=meta.display.bounds_east_north_km,lo=new THREE.Vector3(x0,0,-y1),hi=new THREE.Vector3(x1,(Math.max(...terrain)*VERTICAL_SCALE+meta.display.height_tops_AGL_m.at(-1)*AGL_SCALE)*.001,-y0),span=hi.clone().sub(lo);
   function texture(a){const t=new THREE.DataTexture(a,nx,ny,THREE.RedFormat,THREE.FloatType);t.minFilter=t.magFilter=THREE.LinearFilter;t.needsUpdate=true;return t;}
   material=new THREE.ShaderMaterial({vertexShader:monthShader.vertex,fragmentShader:monthShader.fragment,glslVersion:THREE.GLSL3,transparent:true,depthTest:false,depthWrite:false,side:THREE.BackSide,
    uniforms:{field0:{value:null},field1:{value:null},terrain:{value:texture(terrain)},coverage:{value:texture(coverage)},depthMap:{value:target.depthTexture},lo:{value:lo},hi:{value:hi},horizontalShape:{value:new THREE.Vector2(nx,ny)},eye:{value:camera.position},resolution:{value:renderer.getDrawingBufferSize(new THREE.Vector2())},inverseVP:{value:new THREE.Matrix4()},heights:{value:meta.display.height_centers_AGL_m},topAGL:{value:meta.display.height_tops_AGL_m.at(-1)},timeWeight:{value:0},gain:{value:1.2},enabled:{value:1},contribution:{value:1},raySteps:{value:192},pigment:{value:new THREE.Vector3(.467,.490,.510)}}});
@@ -236,7 +236,7 @@ async function init(){
   marker=new THREE.Mesh(new THREE.SphereGeometry(.045,12,8),new THREE.MeshBasicMaterial({color:'#d5a85e',depthTest:false}));marker.visible=false;marker.renderOrder=4;scene.add(marker);
   $('timeline').max=meta.actual_hours;$('startLabel').textContent=formatUTC(initialTime());$('endLabel').textContent=formatUTC(initialTime()+meta.actual_hours*3600000);$('periodLabel').textContent=`${meta.actual_hours}h → 15 s`;$('aboutScope').textContent=`Actual ${meta.actual_hours} continuous hourly means, 16 layers. Only selected-source increments are shown.${engineering?'Engineering input only.':'The full24 hours play in15 seconds by default.'}`;
   controlsUI();await setHours(0);view('all');ready=true;
-  window.MONTH_CLIMATE={ready:true,verticalScale:VERTICAL_SCALE,meta,scene,camera,controls,renderer,material,weather,nearVolume,setHours,queryGround,sampleDisplay,view,play,stop,exportImage,lastProbe:null,get lastExport(){return lastExport;},get exporting(){return exporting;},get hours(){return currentHours;},get playback(){return{playing,duration,preparing};},get currentPair(){return currentPair;},get performance(){return{frame_ms:frameEMA,renderScale,qualityMode,pixels:[canvas.width,canvas.height],raySteps:material.uniforms.raySteps.value};}};
+  window.MONTH_CLIMATE={ready:true,verticalScale:VERTICAL_SCALE,aglScale:AGL_SCALE,meta,scene,camera,controls,renderer,material,weather,nearVolume,setHours,queryGround,sampleDisplay,view,play,stop,exportImage,lastProbe:null,get lastExport(){return lastExport;},get exporting(){return exporting;},get hours(){return currentHours;},get playback(){return{playing,duration,preparing};},get currentPair(){return currentPair;},get performance(){return{frame_ms:frameEMA,renderScale,qualityMode,pixels:[canvas.width,canvas.height],raySteps:material.uniforms.raySteps.value};}};
   $('loading').style.display='none';$('status').textContent=`${meta.actual_hours} actual hours · 16 layers · native surface query`;
  }catch(error){fail(error);}
 }

@@ -1,2 +1,3 @@
-// Display geometry only. Never changes native elevation, AGL or concentration values.
-export const VERTICAL_SCALE = 3.0;
+// Display-only mapping: ground altitude6x, height above ground3x. Native data unchanged.
+export const VERTICAL_SCALE=6.0;
+export const AGL_SCALE=3.0;

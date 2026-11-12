@@ -1,4 +1,4 @@
-import {VERTICAL_SCALE} from './display_geometry.mjs?v=mountain-relief-r05';
+import {VERTICAL_SCALE,AGL_SCALE} from './display_geometry.mjs?v=mountain-terrain6x-r06';
 // One visible mountain surface from the actual native/FLEX display-height grid.
 // Geometry is bilinearly subdivided, without adding high-frequency terrain or
 // changing any concentration, deposition, weather or native query value.
@@ -38,7 +38,7 @@ export function groundCityAndPlant(city,factory,source,modelTerrain,THREE){
    }if(Number.isFinite(best))return best;}return c?.[0];}
   for(const o of meshes){o.geometry=o.geometry.clone();const p=o.geometry.attributes.position,inv=o.matrixWorld.clone().invert();
    for(let i=0;i<p.count;i++){v.fromBufferAttribute(p,i).applyMatrix4(o.matrixWorld);const floor=floorAt(v.x,v.z);
-    if(floor===undefined){unresolved++;continue;}v.y=ground(v.x,-v.z)*.001*VERTICAL_SCALE+(v.y-floor)*VERTICAL_SCALE/1.8;v.applyMatrix4(inv);p.setXYZ(i,v.x,v.y,v.z);moved++;
+    if(floor===undefined){unresolved++;continue;}v.y=ground(v.x,-v.z)*.001*VERTICAL_SCALE+(v.y-floor)*AGL_SCALE/1.8;v.applyMatrix4(inv);p.setXYZ(i,v.x,v.y,v.z);moved++;
    }p.needsUpdate=true;o.geometry.computeVertexNormals();o.geometry.computeBoundingBox();o.geometry.computeBoundingSphere();
   }
  }
