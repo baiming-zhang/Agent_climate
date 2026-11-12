@@ -6694,7 +6694,7 @@
   },
   "background_included": false,
   "unqualified_1km_data_used": false,
-  "display_method": "Bilinear scalar interpolation in space and interval-centre scalar interpolation in time, then fixed colour mapping. No Gaussian filtering, RGB blending or adjacent-frame fades.",
+  "display_method": "Bilinear spatial scalar sampling and shape-preserving C1 cubic Hermite temporal display reconstruction, then fixed colour mapping. Original hourly fields and query samples retained. Not a sub-hourly physical integration. No RGB/image mixing.",
   "limitations": [
     "Hypothetical source, seed42 modified terrain and frozen GFS scenario; not observations or a current geographic forecast.",
     "Regional field123x93x16 is output binning on1km weather, not independent observations or resolved building wakes. The3km terrain information was resampled, not replaced by newly measured1km topography.",
