@@ -1,1 +1,29 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Vancouver · Agent Climate</title><script>location.replace(new URL('forecast/',location.href).href+location.search+location.hash)</script></head><body><a href="./forecast/">Open the15-day 3D viewer</a> · <a href="./results/">Methods &amp; results</a> · <a href="./forecast/scientific/">Scientific</a></body></html>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#edf2ef">
+<meta name="description" content="Agent Climate：选择温哥华或人造地形的模型展示与 Scientific 视图。">
+<title>Agent Climate · 选择展示</title>
+<link rel="icon" href="./assets/favicon.svg">
+<style>
+:root{color-scheme:light;--ink:#233f37;--muted:#65776e;--line:#d5dfd7;--accent:#2f6956}*{box-sizing:border-box}body{margin:0;background:#edf2ef;color:var(--ink);font:16px/1.7 system-ui,"Microsoft YaHei",sans-serif}header,main,footer{max-width:1080px;margin:auto;padding-inline:28px}header{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:28px;border-bottom:1px solid var(--line)}a{color:inherit}.brand{font-size:16px;letter-spacing:.14em;text-decoration:none;font-weight:500}.brand b{font-weight:800}header>a:last-child{font-size:13px;text-underline-offset:4px}main{padding-block:65px 70px}.eyebrow{font-size:12px;letter-spacing:.15em;color:var(--accent)}h1{font-size:clamp(32px,5vw,50px);line-height:1.25;letter-spacing:-.03em;margin:15px 0}main>p{color:var(--muted);margin-bottom:36px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.card{display:flex;flex-direction:column;min-height:220px;padding:28px;background:#fafcf9;border:1px solid var(--line);border-radius:16px;text-decoration:none;transition:transform .18s,border-color .18s}.card:hover{transform:translateY(-3px);border-color:var(--accent)}a:focus-visible{outline:3px solid var(--accent);outline-offset:5px}.tag{font-size:11px;letter-spacing:.12em;color:var(--accent)}h2{font-size:23px;line-height:1.4;margin:13px 0 10px}.card p{font-size:14px;color:var(--muted);margin:0 0 22px}.open{margin-top:auto;font-size:14px;color:var(--accent);font-weight:650}footer{border-top:1px solid var(--line);padding-block:20px 30px;color:var(--muted);font-size:12px}@media(max-width:640px){header,main,footer{padding-inline:20px}main{padding-block:36px 45px}.grid{grid-template-columns:1fr}.card{min-height:190px;padding:24px}header{flex-wrap:wrap}}@media(prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
+</style>
+</head>
+<body>
+<header><a class="brand" href="./index.html">AGENT <b>CLIMATE</b></a><a href="https://baiming-zhang.github.io/project/">全部项目 ↗</a></header>
+<main>
+<div class="eyebrow">EXPLORE / 选择展示</div>
+<h1>选择场景与视图。</h1>
+<p>温哥华与人造地形，各提供模型展示和 Scientific 视图。</p>
+<div class="grid">
+<a class="card" href="./forecast/index.html"><span class="tag">VANCOUVER / MODEL</span><h2>温哥华 · 模型</h2><p>探索温哥华城市场景中的 SO₂ 三维输运与连续 15 天情景。</p><span class="open">进入模型展示 ↗</span></a>
+<a class="card" href="./forecast/scientific/index.html"><span class="tag">VANCOUVER / SCIENTIFIC</span><h2>温哥华 · Scientific</h2><p>在温哥华 Scientific 视图中查看浓度场与地形。</p><span class="open">进入 Scientific ↗</span></a>
+<a class="card" href="./terrain42/index.html"><span class="tag">SYNTHETIC TERRAIN / MODEL</span><h2>人造 Terrain · 模型</h2><p>探索人造山地场景中的单源 SO₂ 输运与 24 小时情景。</p><span class="open">进入模型展示 ↗</span></a>
+<a class="card" href="./terrain42/scientific/index.html"><span class="tag">SYNTHETIC TERRAIN / SCIENTIFIC</span><h2>人造 Terrain · Scientific</h2><p>在人造地形 Scientific 视图中查看浓度场与地形。</p><span class="open">进入 Scientific ↗</span></a>
+</div>
+</main>
+<footer>Agent Climate · Baiming Zhang</footer>
+</body>
+</html>
