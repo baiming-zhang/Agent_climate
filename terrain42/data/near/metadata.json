@@ -13,31 +13,31 @@
     {
       "group": "FCC",
       "center_world_east_north_km": [
-        3.732758386433183,
-        19.739806733987294
+        3.73285889760172,
+        19.74045572576672
       ],
       "inverse_projection_coefficients": [
         [
-          997.1900701598122,
-          0.07901939316482678,
-          -0.00010220286331517675,
-          0.010168052470685696,
-          0.00010355704826238844
+          997.2064748831885,
+          0.07902184898291871,
+          -0.00010220579789434322,
+          0.010168236964995025,
+          0.0001035601819649231
         ],
         [
-          -0.08685631312706789,
-          999.9787857487628,
-          -0.005588245063755437,
-          -0.0002062826100655002,
-          0.004577113101888131
+          -0.08686195154407955,
+          1000.0292314464537,
+          -0.0055885357041667305,
+          -0.00020629572293273668,
+          0.004577352462014517
         ]
       ],
-      "projection_max_test_error_m": 0.0006098497400846971,
+      "projection_max_test_error_m": 0.0006098084261579432,
       "world_bounds_east_north_km": [
-        -0.27866591864736984,
-        15.739393007243052,
-        7.744509883720078,
-        23.740260358471424
+        -0.2784994186027325,
+        15.740243785170838,
+        7.744544384897629,
+        23.740707572613843
       ],
       "stack_height_AGL_m": 76.2,
       "shape": [
@@ -245,14 +245,14 @@
       ],
       "quantizer": {
         "scale_ppb": 1e-06,
-        "log_max": 26.204958958577734,
-        "maximum_ppb": 240253.1409953983,
+        "log_max": 25.43373546498091,
+        "maximum_ppb": 111104.32536050376,
         "codes": 256,
         "decode": "scale*expm1(code/255*logmax); decode each scalar BEFORE spatial/time interpolation"
       },
       "measured_display_error": {
-        "maximum_relative_above_1e4_native_peak": 0.05272505617426326,
-        "maximum_absolute_ppb": 9844.112131303089
+        "maximum_relative_above_1e4_native_peak": 0.05113445303102474,
+        "maximum_absolute_ppb": 4886.418837365622
       }
     }
   ],
@@ -264,8 +264,8 @@
       "fields": [
         {
           "offset": 0,
-          "length": 501556,
-          "bricks": 972
+          "length": 396808,
+          "bricks": 769
         }
       ]
     },
@@ -275,9 +275,9 @@
       "interval_end_hour": 2,
       "fields": [
         {
-          "offset": 501556,
-          "length": 514972,
-          "bricks": 998
+          "offset": 396808,
+          "length": 638296,
+          "bricks": 1237
         }
       ]
     },
@@ -287,9 +287,9 @@
       "interval_end_hour": 3,
       "fields": [
         {
-          "offset": 1016528,
-          "length": 616108,
-          "bricks": 1194
+          "offset": 1035104,
+          "length": 815284,
+          "bricks": 1580
         }
       ]
     },
@@ -299,9 +299,9 @@
       "interval_end_hour": 4,
       "fields": [
         {
-          "offset": 1632636,
-          "length": 529420,
-          "bricks": 1026
+          "offset": 1850388,
+          "length": 776068,
+          "bricks": 1504
         }
       ]
     },
@@ -311,9 +311,9 @@
       "interval_end_hour": 5,
       "fields": [
         {
-          "offset": 2162056,
-          "length": 494848,
-          "bricks": 959
+          "offset": 2626456,
+          "length": 655840,
+          "bricks": 1271
         }
       ]
     },
@@ -323,9 +323,9 @@
       "interval_end_hour": 6,
       "fields": [
         {
-          "offset": 2656904,
-          "length": 494848,
-          "bricks": 959
+          "offset": 3282296,
+          "length": 681640,
+          "bricks": 1321
         }
       ]
     },
@@ -335,9 +335,9 @@
       "interval_end_hour": 7,
       "fields": [
         {
-          "offset": 3151752,
-          "length": 574828,
-          "bricks": 1114
+          "offset": 3963936,
+          "length": 814768,
+          "bricks": 1579
         }
       ]
     },
@@ -347,9 +347,9 @@
       "interval_end_hour": 8,
       "fields": [
         {
-          "offset": 3726580,
-          "length": 610432,
-          "bricks": 1183
+          "offset": 4778704,
+          "length": 809608,
+          "bricks": 1569
         }
       ]
     },
@@ -359,9 +359,9 @@
       "interval_end_hour": 9,
       "fields": [
         {
-          "offset": 4337012,
-          "length": 570700,
-          "bricks": 1106
+          "offset": 5588312,
+          "length": 811672,
+          "bricks": 1573
         }
       ]
     },
@@ -371,9 +371,9 @@
       "interval_end_hour": 10,
       "fields": [
         {
-          "offset": 4907712,
-          "length": 497428,
-          "bricks": 964
+          "offset": 6399984,
+          "length": 753880,
+          "bricks": 1461
         }
       ]
     },
@@ -383,9 +383,9 @@
       "interval_end_hour": 11,
       "fields": [
         {
-          "offset": 5405140,
-          "length": 425188,
-          "bricks": 824
+          "offset": 7153864,
+          "length": 830248,
+          "bricks": 1609
         }
       ]
     },
@@ -395,9 +395,9 @@
       "interval_end_hour": 12,
       "fields": [
         {
-          "offset": 5830328,
-          "length": 401452,
-          "bricks": 778
+          "offset": 7984112,
+          "length": 761104,
+          "bricks": 1475
         }
       ]
     },
@@ -407,9 +407,9 @@
       "interval_end_hour": 13,
       "fields": [
         {
-          "offset": 6231780,
-          "length": 351916,
-          "bricks": 682
+          "offset": 8745216,
+          "length": 706408,
+          "bricks": 1369
         }
       ]
     },
@@ -419,9 +419,9 @@
       "interval_end_hour": 14,
       "fields": [
         {
-          "offset": 6583696,
-          "length": 229624,
-          "bricks": 445
+          "offset": 9451624,
+          "length": 610432,
+          "bricks": 1183
         }
       ]
     },
@@ -431,9 +431,9 @@
       "interval_end_hour": 15,
       "fields": [
         {
-          "offset": 6813320,
-          "length": 231688,
-          "bricks": 449
+          "offset": 10062056,
+          "length": 562444,
+          "bricks": 1090
         }
       ]
     },
@@ -443,9 +443,9 @@
       "interval_end_hour": 16,
       "fields": [
         {
-          "offset": 7045008,
-          "length": 229624,
-          "bricks": 445
+          "offset": 10624500,
+          "length": 535096,
+          "bricks": 1037
         }
       ]
     },
@@ -455,9 +455,9 @@
       "interval_end_hour": 17,
       "fields": [
         {
-          "offset": 7274632,
-          "length": 219820,
-          "bricks": 426
+          "offset": 11159596,
+          "length": 450988,
+          "bricks": 874
         }
       ]
     },
@@ -467,9 +467,9 @@
       "interval_end_hour": 18,
       "fields": [
         {
-          "offset": 7494452,
-          "length": 259036,
-          "bricks": 502
+          "offset": 11610584,
+          "length": 404548,
+          "bricks": 784
         }
       ]
     },
@@ -479,9 +479,9 @@
       "interval_end_hour": 19,
       "fields": [
         {
-          "offset": 7753488,
-          "length": 314764,
-          "bricks": 610
+          "offset": 12015132,
+          "length": 376168,
+          "bricks": 729
         }
       ]
     },
@@ -491,9 +491,9 @@
       "interval_end_hour": 20,
       "fields": [
         {
-          "offset": 8068252,
-          "length": 314248,
-          "bricks": 609
+          "offset": 12391300,
+          "length": 509296,
+          "bricks": 987
         }
       ]
     },
@@ -503,9 +503,9 @@
       "interval_end_hour": 21,
       "fields": [
         {
-          "offset": 8382500,
-          "length": 262132,
-          "bricks": 508
+          "offset": 12900596,
+          "length": 672352,
+          "bricks": 1303
         }
       ]
     },
@@ -515,9 +515,9 @@
       "interval_end_hour": 22,
       "fields": [
         {
-          "offset": 8644632,
-          "length": 296704,
-          "bricks": 575
+          "offset": 13572948,
+          "length": 717760,
+          "bricks": 1391
         }
       ]
     },
@@ -527,9 +527,9 @@
       "interval_end_hour": 23,
       "fields": [
         {
-          "offset": 8941336,
-          "length": 336952,
-          "bricks": 653
+          "offset": 14290708,
+          "length": 653776,
+          "bricks": 1267
         }
       ]
     },
@@ -539,9 +539,9 @@
       "interval_end_hour": 24,
       "fields": [
         {
-          "offset": 9278288,
-          "length": 443248,
-          "bricks": 859
+          "offset": 14944484,
+          "length": 791548,
+          "bricks": 1534
         }
       ]
     }
@@ -551,12 +551,12 @@
       "file": "near_00.u8bricks.gz",
       "first_index": 0,
       "count": 24,
-      "sparse_bytes": 9721536,
-      "compressed_bytes": 3327928,
-      "SHA256": "9dee9d75ca27209f3f5d62b0f22e8b89f994716b126d91f24bd3cc50f6aa7740"
+      "sparse_bytes": 15736032,
+      "compressed_bytes": 6708708,
+      "SHA256": "0b0b225d225b9702553336a5d9357a2589b4595ef97218a71d6ff5b3c2bddd64"
     }
   ],
-  "sparse_uncompressed_bytes": 9721536,
+  "sparse_uncompressed_bytes": 15736032,
   "field_layout": "Per field: uint32 brick count, then count*[uint8 bx,by,bz,pad +512 uint8 scalar codes in z,y,x order]; bricks8cubed",
   "native_field_units": "kg m-3; native F32 untouched",
   "display_units": "ambient-equivalent molar ppb",
@@ -566,6 +566,6 @@
   "no_billboard_or_invented_source": true,
   "physical_scope": "Native 3D transport + parameterized finite-density thermal rise/entrainment; not stack/building CFD",
   "composition": "Overlapping alternative estimates; partition weights near/sum(max(1,sumNear)), coarse=max(0,1-sumNear). Never additive concentration.",
-  "source_native_geometry_SHA256": "068ec95a6872f738ad6bf0cb5f33f7c481174a2f380ea4f74e2fc74ae626ef2d",
-  "seconds": 0.9350285040000017
+  "source_native_geometry_SHA256": "438e4a8c739b885db47874aba9fced442e1afebebd64bc7098b0d7ba8e8ed86d",
+  "seconds": 1.2246567010000007
 }

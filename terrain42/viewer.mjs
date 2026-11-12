@@ -1,6 +1,6 @@
-import {VERTICAL_SCALE,AGL_SCALE} from './display_geometry.mjs?v=mountain-terrain6x-r06';
-import {makeModelTerrain,groundCityAndPlant} from './model_ground.mjs?v=mountain-terrain6x-r06';
-import {placeMountainPlant,cropMountainScene} from './mountain_plant.mjs?v=mountain-terrain6x-r06';
+import {VERTICAL_SCALE,AGL_SCALE} from './display_geometry.mjs?v=mountain1km-r06';
+import {makeModelTerrain,groundCityAndPlant} from './model_ground.mjs?v=mountain1km-r06';
+import {placeMountainPlant,cropMountainScene} from './mountain_plant.mjs?v=mountain1km-r06';
 import * as THREE from 'three';
 import {OrbitControls} from '../vendor/OrbitControls.js';
 import {GLTFLoader} from '../vendor/GLTFLoader.js';
@@ -9,10 +9,10 @@ import {worldLonLat} from '../ground.js';
 import {colourLandmarks} from '../landmark_materials.js?v=1';
 import {createMonthQuery} from './native_query.mjs?v=en-source-r02';
 import {makeScalarLookup,prepareDisplayFrame} from './display_codec.mjs';
-import {monthShader} from './volume_shader.mjs?v=mountain-terrain6x-r06';
-import {createNearVolume} from './near_volume.mjs?v=mountain-terrain6x-r06';
+import {monthShader} from './volume_shader.mjs?v=mountain1km-r06';
+import {createNearVolume} from './near_volume.mjs?v=mountain1km-r06';
 import {formatPpb} from './format_ppb.mjs';
-import {createWeatherEffects} from './weather_effects.mjs?v=mountain-terrain6x-r06';
+import {createWeatherEffects} from './weather_effects.mjs?v=mountain1km-r06';
 const $=id=>document.getElementById(id),canvas=$('scene');
 const renderer=new THREE.WebGLRenderer({canvas,antialias:true,preserveDrawingBuffer:true});
 renderer.setPixelRatio(Math.min(devicePixelRatio,1));renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.NoToneMapping;
@@ -25,7 +25,7 @@ const copyScene=new THREE.Scene(),copyCamera=new THREE.OrthographicCamera(-1,1,1
 const volumeScene=new THREE.Scene();const qBlocks=new Map(),textures=new Map(),groundBlocks=new Map();
 let meta,material,terrain,coverage,queryNative,currentHours=0,duration=15,playing=false,ready=false,preparing=false,playStart=0,startHours=0,request=0,currentPair=[],marker,crest;
 let lookups,weather,nearVolume,lastClock=-Infinity,renderScale=1,qualityMode='1.5',lastFrame=0,frameEMA=16.7,perfFrames=0,exporting=false,lastExport=null;const frameSize=()=>meta.display.shape_time_z_y_x_fields.slice(1).reduce((a,b)=>a*b,1);
-async function bytes(url){const address=new URL(url,location.href);if(address.pathname.includes('/terrain42/'))address.searchParams.set('rev','mountain-terrain6x-r06');const r=await fetch(address);if(!r.ok)throw Error('Data request failed '+r.status+': '+url);const b=new Uint8Array(await r.arrayBuffer());return b[0]===31&&b[1]===139?await new Response(new Blob([b]).stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer():b.buffer;}
+async function bytes(url){const address=new URL(url,location.href);if(address.pathname.includes('/terrain42/'))address.searchParams.set('rev','mountain1km-r06');const r=await fetch(address);if(!r.ok)throw Error('Data request failed '+r.status+': '+url);const b=new Uint8Array(await r.arrayBuffer());return b[0]===31&&b[1]===139?await new Response(new Blob([b]).stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer():b.buffer;}
 function resize(){if(exporting)return;const gl=renderer.getContext(),limit=Math.min(renderer.capabilities.maxTextureSize,gl.getParameter(gl.MAX_RENDERBUFFER_SIZE)),viewport=gl.getParameter(gl.MAX_VIEWPORT_DIMS),requested=qualityMode==='auto'?Math.min(devicePixelRatio,renderScale):Number(qualityMode);renderer.setPixelRatio(Math.min(requested,limit/innerWidth,limit/innerHeight,viewport[0]/innerWidth,viewport[1]/innerHeight));renderer.setSize(innerWidth,innerHeight);camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();const s=renderer.getDrawingBufferSize(new THREE.Vector2());target.setSize(s.x,s.y);if(material)material.uniforms.resolution.value.copy(s);$('renderPixels').textContent=`${s.x} × ${s.y} px`;}
 addEventListener('resize',resize);resize();
 function clearProbe(){if(marker)marker.visible=false;$('inspector').hidden=true;$('probe').textContent='';if(window.MONTH_CLIMATE)window.MONTH_CLIMATE.lastProbe=null;}
@@ -210,9 +210,9 @@ function controlsUI(){
 }
 async function init(){
  try{
-  const response=await fetch('./data/metadata.json?rev=mountain-terrain6x-r06',{cache:'no-cache'});if(!response.ok)throw Error('Complete 15-day data unavailable');meta=await response.json();
+  const response=await fetch('./data/metadata.json?rev=mountain1km-r06',{cache:'no-cache'});if(!response.ok)throw Error('Complete 15-day data unavailable');meta=await response.json();
   const engineering=new URLSearchParams(location.search).get('engineering')==='1';
-  if(!engineering&&(!meta.scientific_period_complete||meta.actual_hours!==24||meta.release_version!=='outlet-origin-r04-mountain-single42-v4'||meta.terrain_seed!==42))throw Error('Current outlet-origin data not ready. Reload after the deployment finishes.');
+  if(!engineering&&(!meta.scientific_period_complete||meta.actual_hours!==24||meta.release_version!=='outlet-origin-r04-mountain-sameTerrain1km-v6'||meta.terrain_seed!==42))throw Error('Current outlet-origin data not ready. Reload after the deployment finishes.');
   if(engineering){$('caseTag').textContent=`Engineering input ${meta.actual_hours} h · not a production forecast`;document.querySelector('.brand h1').firstChild.textContent='Engineering preview';}
   else $('caseTag').textContent='One mountain source · 24 h';
   const [,nz,ny,nx]=meta.display.shape_time_z_y_x_fields;if(nz!==16)throw Error('All 16 actual vertical layers are required');

@@ -1,4 +1,4 @@
-import {VERTICAL_SCALE,AGL_SCALE} from './display_geometry.mjs?v=mountain-terrain6x-r06';
+import {VERTICAL_SCALE,AGL_SCALE} from './display_geometry.mjs?v=mountain1km-r06';
 // Reuse the original factory geometry with the same display-only height mapping.
 // The one emitting outlet and its base are supplied by actual new concentration metadata.
 export function placeMountainPlant(city,source,THREE){

@@ -2,8 +2,8 @@
   "status": "actual_single_case24h_weather_display",
   "shape_time_y_x_fields": [
     24,
-    46,
-    48,
+    93,
+    123,
     7
   ],
   "fields": [
@@ -16,27 +16,27 @@
     "wet_removal_coverage_valid"
   ],
   "bounds_east_north_km": [
-    -10.417083755404805,
-    3.614170667002909,
-    18.65615536270477,
-    37.01317006035149
+    -10.902656213076261,
+    2.873292790153064,
+    18.659216921809477,
+    37.01359416644368
   ],
   "chunks": [
     {
       "first_index": 0,
       "count": 24,
       "file": "weather_00.f32.gz",
-      "SHA256": "0a522e917429030fd7b610ef9ebd755ee897c6755f37d66d7e5151cf0d5395dc"
+      "SHA256": "1ee7c6084efb6580dca9fb4d4d696f0f4b29a70d4435a4658481971edf613f5d"
     }
   ],
   "source_file": "sources.json",
   "weather_reused_from_old_Vancouver": false,
   "terrain_seed": 42,
-  "rainy_hours_any_display_cell_above_0_1mm": 9,
-  "area_mean_total_rain_mm": 2.513681173324585,
-  "maximum_hourly_rain_mm": 4.885876655578613,
+  "rainy_hours_any_display_cell_above_0_1mm": 13,
+  "area_mean_total_rain_mm": 9.557679176330566,
+  "maximum_hourly_rain_mm": 7.0410075187683105,
   "wet_visual_semantics": "Same final renderer: falling rain glyphs encode actual rain/wet removal, not falling SO2 gas",
   "raw_cloud_field_location": "All50-level QCLOUD/QICE/CLDFRA in actual case weather history, independent of SO2",
   "new_forecast_steps": 0,
-  "seconds": 2.4918928429997322
+  "seconds": 3.1774530729999952
 }

@@ -1,5 +1,5 @@
-import {VERTICAL_SCALE,AGL_SCALE} from './display_geometry.mjs?v=mountain-terrain6x-r06';
-import {nearPartitionGLSL} from './near_volume.mjs?v=mountain-terrain6x-r06';
+import {VERTICAL_SCALE,AGL_SCALE} from './display_geometry.mjs?v=mountain1km-r06';
+import {nearPartitionGLSL} from './near_volume.mjs?v=mountain1km-r06';
 // Actual16AGL layers, two concentration scalars. Colours never carry data.
 export const monthShader={
  vertex:`varying vec3 vWorld;void main(){vWorld=(modelMatrix*vec4(position,1.)).xyz;gl_Position=projectionMatrix*viewMatrix*vec4(vWorld,1.);}`,

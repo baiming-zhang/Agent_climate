@@ -1,4 +1,4 @@
-import {VERTICAL_SCALE,AGL_SCALE} from './display_geometry.mjs?v=mountain-terrain6x-r06';
+import {VERTICAL_SCALE,AGL_SCALE} from './display_geometry.mjs?v=mountain1km-r06';
 // One visible mountain surface from the actual native/FLEX display-height grid.
 // Geometry is bilinearly subdivided, without adding high-frequency terrain or
 // changing any concentration, deposition, weather or native query value.

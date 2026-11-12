@@ -1,4 +1,4 @@
-import {VERTICAL_SCALE,AGL_SCALE} from './display_geometry.mjs?v=mountain-terrain6x-r06';
+import {VERTICAL_SCALE,AGL_SCALE} from './display_geometry.mjs?v=mountain1km-r06';
 import * as THREE from 'three';
 
 // Every sample is a transported 3D scalar. The three overlapping boxes and
@@ -64,7 +64,7 @@ export function nearPartitionUniforms(meta){return Object.fromEntries([
  ].map(([k,value])=>[k,{value}]));}
 
 export async function createNearVolume(overlay,regional,renderer,bytes,{base='./data/near/',engineering=false}={}){
- const meta=await(await fetch(base+'metadata.json?rev=mountain-terrain6x-r06',{cache:'no-cache'})).json();
+ const meta=await(await fetch(base+'metadata.json?rev=mountain1km-r06',{cache:'no-cache'})).json();
  if(!engineering&&(!meta.production_complete||meta.actual_hours!==24))throw Error('Full outlet-origin24-hour fields required');
  const blocks=new Map(),textures=new Map(),luts=meta.groups.map(g=>Float32Array.from({length:256},(_,i)=>g.quantizer.scale_ppb*Math.expm1(i/255*g.quantizer.log_max)));
  const partitions=nearPartitionUniforms(meta);Object.assign(regional.uniforms,partitions);

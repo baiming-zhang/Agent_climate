@@ -20,9 +20,9 @@
     ],
     "selected_from_terrain_only": true
   },
-  "weather_source": "/mnt/c/Users/ASUS/Desktop/Agent_contact/execution/pollution_synthetic_city42_v3",
-  "weather_source_plan_SHA256": "8ab1ec19e86ca5a69109b93d0c72369fb0e510fb6873f808c5c287e2a0f91456",
-  "weather_reuse": "Unchanged mountain terrain and passive SO2; reuse the active new3D weather after its actual full freeze. No source feedback, so no weather replay.",
+  "weather_source": "C:\\Users\\ASUS\\Desktop\\Agent_contact\\execution\\pollution_mountain_sameTerrain1km_v6\\epssm05\\history",
+  "weather_source_plan_SHA256": null,
+  "weather_reuse": "New same-terrain1km weather after its own complete36h validation, never the prior3km wind trajectory",
   "weather_hours": 36,
   "weather_spinup_hours": 12,
   "pollutant_hours": 24,
@@ -37,10 +37,10 @@
   "kg_s": 0.003973236935565703,
   "hypothetical_source": true,
   "regional_output_grid": {
-    "nx": 41,
-    "ny": 31,
-    "dx_degrees": 0.01,
-    "dy_degrees": 0.01,
+    "nx": 123,
+    "ny": 93,
+    "dx_degrees": 0.0033333333333333335,
+    "dy_degrees": 0.0033333333333333335,
     "longitude_center": -122.89276123046875,
     "latitude_center": 49.4591064453125
   },
@@ -51,5 +51,31 @@
     "default_seconds": 15,
     "adjustable": true
   },
-  "limits": "Hypothetical source and exaggerated terrain;3km meteorology, not building CFD or local LES. Reused frozen20261104 GFS scenario, not current observations."
+  "limits": "Same hypothetical source and inherited FCC prior; same physical HGT sampled from qualified terrain on a1km solver grid. Parameterized YSU/FLEX turbulence, no building CFD/LES. Frozen November4 GFS scenario, not current observations.",
+  "weather_grid_m": [
+    3000,
+    1000
+  ],
+  "numerical_dt_parent_child_s": [
+    3,
+    1
+  ],
+  "epssm": 0.5,
+  "particle_budget": 300000,
+  "original3km_site_sampling": {
+    "longitude": -122.89276123046875,
+    "latitude": 49.4591064453125,
+    "native_cell_y_x": [
+      67,
+      62
+    ],
+    "ground_height_ASL_m": 1305.000244140625,
+    "local_resolved_slope": 0.04778471409701046,
+    "surrounding_5x5_peak_m": 2637.018798828125,
+    "world_east_north_km": [
+      3.7328772487797544,
+      19.73979248389229
+    ],
+    "selected_from_terrain_only": true
+  }
 }
