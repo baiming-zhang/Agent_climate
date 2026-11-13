@@ -1,0 +1,19 @@
+{
+  "status": "official_CALPOST6.221_completed_all5319_hourly_and24h_tables_checked",
+  "started_UTC": "2026-11-13T06:40:08.057028+00:00",
+  "pid": 11252,
+  "run_directory": "C:\\Users\\ASUS\\Desktop\\Agent_contact\\execution\\pollution_BC_reference_v1\\calpost_run_r02",
+  "executable_SHA256": "3621eb97b8973ef19303c6bbd47abdd468c1de4d84b40ed375f4ce1dd43ec097",
+  "input_SHA256": "aeeeaea299ee9e5e6732a761fa0b5248e6ab5beb6e8454494b1ea0e8ab04c95d",
+  "child_pid": 28992,
+  "error": "Missing official complete marker",
+  "UTC": "2026-11-13T06:40:08.300189+00:00",
+  "elapsed_seconds": 0.25,
+  "validated_UTC": "2026-11-13T06:41:30.566444+00:00",
+  "marker": "CALPOST Application Completed",
+  "native_model_or_postprocessor_repeats": 0,
+  "all_point_hourly_max_ug_m3": 10.341,
+  "all_point_24h_mean_max_ug_m3": 1.7608,
+  "binary_decoder_agrees_with_official_CALPOST_summary_to_print_precision": true,
+  "table_SHA256": "21a9b53c4dac2c1f0d31a106616dfa0adfd925d88169a813ca6759ffe3d42b3c"
+}

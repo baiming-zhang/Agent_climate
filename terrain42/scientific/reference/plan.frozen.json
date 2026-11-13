@@ -1,0 +1,119 @@
+{
+  "status": "inputs_frozen_pending_official_CALWRF_and_CALMET",
+  "created_UTC": "2026-11-13T05:51:21.232403+00:00",
+  "guideline": "BC July2022 Table2.1, Sections2.2.2/2.3/6.4.1/9.2",
+  "reference_kind": "Independent model comparison, not analytical truth, observation validation or permitting assessment",
+  "models": {
+    "CALWRF": "2.0.3/190426",
+    "CALMET": "6.4.0/121203",
+    "CALPUFF": "6.42/110325",
+    "CALPOST": "6.221/080724"
+  },
+  "mode": "CALMET No-Obs, IPROG14 initial guess from same25 frozen WRF states; terrain adjustments enabled",
+  "source_period_UTC": [
+    "2026-11-05_06:00:00",
+    "2026-11-06_06:00:00"
+  ],
+  "weather_freeze_SHA256": "6024590bd17369580815a4c268e9af4d3d3ef61e5b58d8aca94533efb0e4eec4",
+  "transport_freeze_SHA256": "c223cd826d5a8dced68e829ea5967e05f4f179171d76f56a066d599f38f23883",
+  "source_catalog_SHA256": "54790955d5bd5e58c2cf0ae5860d10c7941560aebdfe7f67bc5fdd2ec7484fda",
+  "source": {
+    "component_id": "MOUNTAIN42_SINGLE_STACK",
+    "group": "MountainPlant",
+    "npri_id": null,
+    "reported_stack_id": 18272,
+    "reported_stack_name": "FCC",
+    "latitude": 49.4591064453125,
+    "longitude": -122.89276123046875,
+    "annual_SO2_tonnes": 125.3,
+    "reporting_year": 2024,
+    "annual_quantity_role": "Inherited2024 FCC numerical rate prior for a hypothetical mountain source, not a real facility emission inventory.",
+    "kg_s": 0.003973236935565703,
+    "stack": {
+      "height_AGL_m": 76.2,
+      "diameter_m": 2.0,
+      "exit_velocity_m_s": 33.0,
+      "exit_temperature_K": 668.15
+    },
+    "parameter_evidence": "Official current Access bulk database, linked to2024 SO2 report, dictionary units m/m/s/Celsius",
+    "geometry_valid_from_unknown": true,
+    "thermal_parameters_role": "Reported average, not live2026 exhaust measurements",
+    "rise_policy": "Same final r04 finite-density entraining integral plume from the outlet, driven by the actual new mountain source column.",
+    "group_index": 0,
+    "hypothetical": true,
+    "template_npri_id": 2776
+  },
+  "grid": {
+    "projection": "UTM",
+    "EPSG": 32610,
+    "UTM_zone": 10,
+    "datum": "WGS-84",
+    "origin_km": [
+      451.5,
+      5422.5
+    ],
+    "shape_y_x": [
+      224,
+      225
+    ],
+    "spacing_km": 0.5,
+    "physical_terrain_interpolation": "Piecewise linear from actual h12 WRF HGT; no viewer6x exaggeration",
+    "land_use_mapping_MODIS_to_CALMET": {
+      "1": 40,
+      "2": 40,
+      "3": 40,
+      "4": 40,
+      "5": 40,
+      "6": 30,
+      "7": 30,
+      "8": 30,
+      "9": 30,
+      "10": 30,
+      "11": 60,
+      "12": 20,
+      "13": 10,
+      "14": 20,
+      "15": 90,
+      "16": 70,
+      "17": 55,
+      "18": 80,
+      "19": 80,
+      "20": 80,
+      "21": 51
+    },
+    "surface_properties": "Official CALMET default lookup tables; no fitted parameters",
+    "weather_attrs": {
+      "DX": 1000.0,
+      "DY": 1000.0,
+      "MAP_PROJ": 1,
+      "CEN_LAT": 49.4591178894043,
+      "CEN_LON": -122.89276123046875,
+      "TRUELAT1": 30.0,
+      "TRUELAT2": 60.0,
+      "STAND_LON": -123.0,
+      "MMINLU": "MODIFIED_IGBP_MODIS_NOAH"
+    }
+  },
+  "chemical_transformation": false,
+  "background": false,
+  "source_plume_rise": "Each model computes its own plume rise from identical stack exit conditions; do not inject our plume heights into reference",
+  "comparison_primary_units": "microgram/m3; any ppb conversion must use matching pressure/temperature, never a blind STP factor",
+  "receptor_design": "Predeclared every-eighth native output cell plus five existing fixed receptors. Integrate official point predictions with3x3 horizontal and3 vertical Gauss nodes over native0..20m cell support. Nativeage-dependent CIC output-kernel differences remain a stated representativeness uncertainty.",
+  "metrics": [
+    "all-pair RMSE",
+    "MAE",
+    "mean bias/NMB",
+    "paired correlation where defined",
+    "FAC2 with zero cases separately reported",
+    "matched-location hourly and24h maxima/peak timing",
+    "fixed receptor series",
+    "wind changes from CALMET preprocessing"
+  ],
+  "rules": [
+    "No fitting, scaling concentration, changing masks or choosing reference by agreement",
+    "Do not claim BC regulatory compliance for this artificial terrain/frozen24h research case",
+    "Same weather is shared; comparison cannot independently validate forecast meteorology",
+    "No numerical error metrics are available until official model outputs actually exist",
+    "CALPUFF/processor source and documentation remain private under EULA; publish only our adapters/inputs/results/URLs/hashes"
+  ]
+}

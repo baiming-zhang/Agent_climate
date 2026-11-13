@@ -1,0 +1,122 @@
+{
+  "status": "official_CALWRF_completed_validated",
+  "validated_UTC": "2026-11-13T06:27:46.899360+00:00",
+  "physical_weather_steps_added": 0,
+  "stock_normal_termination": "STOP 99999 after CALWRF succeeded; Linux returncode159",
+  "time_count": 28,
+  "times": [
+    "2026-11-05_03:00:00",
+    "2026-11-05_04:00:00",
+    "2026-11-05_05:00:00",
+    "2026-11-05_06:00:00",
+    "2026-11-05_07:00:00",
+    "2026-11-05_08:00:00",
+    "2026-11-05_09:00:00",
+    "2026-11-05_10:00:00",
+    "2026-11-05_11:00:00",
+    "2026-11-05_12:00:00",
+    "2026-11-05_13:00:00",
+    "2026-11-05_14:00:00",
+    "2026-11-05_15:00:00",
+    "2026-11-05_16:00:00",
+    "2026-11-05_17:00:00",
+    "2026-11-05_18:00:00",
+    "2026-11-05_19:00:00",
+    "2026-11-05_20:00:00",
+    "2026-11-05_21:00:00",
+    "2026-11-05_22:00:00",
+    "2026-11-05_23:00:00",
+    "2026-11-06_00:00:00",
+    "2026-11-06_01:00:00",
+    "2026-11-06_02:00:00",
+    "2026-11-06_03:00:00",
+    "2026-11-06_04:00:00",
+    "2026-11-06_05:00:00",
+    "2026-11-06_06:00:00"
+  ],
+  "run_directory": "/mnt/c/Users/ASUS/Desktop/Agent_contact/execution/pollution_BC_reference_v1/calwrf_context_r05",
+  "output_bytes": 1039563788,
+  "output_SHA256": "1d8d72356188bdb6075fec9ec5e78c70594a517b1faafd76e1307f7f65f82978",
+  "data_rows": 20577650,
+  "no_nonfinite_or_numeric_overflow_tokens": true,
+  "actual_stock_range_QC_count": 12,
+  "actual_stock_range_QC_by_variable": {
+    "WCLD": 12
+  },
+  "QC_warnings": [
+    {
+      "rank": "3D",
+      "time": "2026110506",
+      "variable": "WCLD",
+      "details": "          18     1    11     8    0.0000E+00    0.5000E-01   -0.3091E-12"
+    },
+    {
+      "rank": "3D",
+      "time": "2026110507",
+      "variable": "WCLD",
+      "details": "         120    44    10     8    0.0000E+00    0.5000E-01   -0.1438E-11"
+    },
+    {
+      "rank": "3D",
+      "time": "2026110510",
+      "variable": "WCLD",
+      "details": "         120    46    11     8    0.0000E+00    0.5000E-01   -0.4396E-13"
+    },
+    {
+      "rank": "3D",
+      "time": "2026110512",
+      "variable": "WCLD",
+      "details": "           1    91    11     8    0.0000E+00    0.5000E-01   -0.1351E-14"
+    },
+    {
+      "rank": "3D",
+      "time": "2026110513",
+      "variable": "WCLD",
+      "details": "         120    90    13     8    0.0000E+00    0.5000E-01   -0.2925E-11"
+    },
+    {
+      "rank": "3D",
+      "time": "2026110514",
+      "variable": "WCLD",
+      "details": "         120    95    10     8    0.0000E+00    0.5000E-01   -0.1615E-11"
+    },
+    {
+      "rank": "3D",
+      "time": "2026110514",
+      "variable": "WCLD",
+      "details": "         120    96    10     8    0.0000E+00    0.5000E-01   -0.1628E-11"
+    },
+    {
+      "rank": "3D",
+      "time": "2026110515",
+      "variable": "WCLD",
+      "details": "         120    93    11     8    0.0000E+00    0.5000E-01   -0.3187E-11"
+    },
+    {
+      "rank": "3D",
+      "time": "2026110519",
+      "variable": "WCLD",
+      "details": "           1   117    11     8    0.0000E+00    0.5000E-01   -0.6125E-11"
+    },
+    {
+      "rank": "3D",
+      "time": "2026110521",
+      "variable": "WCLD",
+      "details": "         115   120     9     8    0.0000E+00    0.5000E-01   -0.4973E-13"
+    },
+    {
+      "rank": "3D",
+      "time": "2026110600",
+      "variable": "WCLD",
+      "details": "         120    99    10     8    0.0000E+00    0.5000E-01   -0.1029E-12"
+    },
+    {
+      "rank": "3D",
+      "time": "2026110601",
+      "variable": "WCLD",
+      "details": "           7   120    13     8    0.0000E+00    0.5000E-01   -0.1008E-12"
+    }
+  ],
+  "caveat": "Official CALWRF range checks may replace tiny negative cloud water with neighboring values. Original WRF and compatibility numeric arrays remain unchanged. Reference forcing is not bit-identical after this documented official transformation.",
+  "validation_seconds": 48.357804888000004
+}
