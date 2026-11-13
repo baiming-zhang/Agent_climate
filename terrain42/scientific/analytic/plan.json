@@ -1,0 +1,312 @@
+{
+  "status": "frozen_before_any_analytic_benchmark_model_outputs",
+  "created_UTC": "2026-11-13T07:21:02.369855+00:00",
+  "case": "Flat uniform wind / nonzero horizontal free-tropospheric diffusion / vertical-integrated concentration",
+  "exact_equation": "dB/dt +U*dB/dx = K*(d2B/dx2+d2B/dy2)+Q*delta(x)*delta(y); B=integral0infinity C dz",
+  "U_m_s": 5.0,
+  "K_m2_s": 50.0,
+  "source": {
+    "x_native_m": 20000,
+    "y_native_m": 20000,
+    "z_AGL_m": 6000,
+    "Q_kg_s": 0.001,
+    "duration_seconds": 7200,
+    "heat_buoyancy": false,
+    "deposition": false,
+    "chemistry": false,
+    "background": false
+  },
+  "exact_Greens_function": "G=(4*pi*K*age)^-1*exp(-((x-U*age)^2+y^2)/(4*K*age)); B=Q*integral0t G(age)dage",
+  "native_binary": "/mnt/c/Users/ASUS/Desktop/Agent_contact/execution/pollution_mountain_sameTerrain1km_v6/counter_repair_r02/model/flexwrf33_gnu_omp",
+  "native_binary_SHA256": "3f0e253ad511f2053fd725ad7235b0e21f0f2ad1262044dda708d40a4d32f153",
+  "native_source_advance_SHA256": "512074f5ec47a43235717cf0fbedafa079be6d9f14dce70e007a0ff206bd49ae",
+  "physical_native_code_changes": 0,
+  "weather_forecast_integrations": 0,
+  "synthetic_meteorology": true,
+  "Cartesian_map_factors_one": true,
+  "coordinate_projection_is_label_only": "WRF spherical Mercator, true latitude45N, longitude123W, radius6370000m, MAPFAC1 Cartesian metric. No convergence eliminates integer-wind-direction rotation error.",
+  "CALPUFF_dispersion": {
+    "MDISP": 1,
+    "MTAULY_seconds": 60.0,
+    "synthetic_sigma_v_m_s": 0.9128709291752769,
+    "synthetic_sigma_w_m_s": 0.05,
+    "synthetic_profile_not_observations": true,
+    "horizontal_initial_sigma_m": 1.0,
+    "vertical_initial_sigma_m": 200.0,
+    "source_height_m": 6000,
+    "variance_formula": "V(age)=sigma_v^2*(age+t0)^2/(1+0.9*sqrt((age+t0)/(1.62*tau)))^2",
+    "long_time_diffusion_m2_s": 50.0,
+    "finite_age_closure_not_identical_to_constant_K": true,
+    "not_tuned_to_output": true,
+    "Heffter_transition_sigma_m": 1000000.0
+  },
+  "comparison": {
+    "native_time_interval_s": 600,
+    "native_sampling_s": 10,
+    "source_uniform_in_time": true,
+    "output_shape": [
+      12,
+      4,
+      33,
+      73
+    ],
+    "cells": [
+      {
+        "x_relative_m": 1000,
+        "y_relative_m": -1500,
+        "native_i": 4,
+        "native_j": 10
+      },
+      {
+        "x_relative_m": 1000,
+        "y_relative_m": -500,
+        "native_i": 4,
+        "native_j": 14
+      },
+      {
+        "x_relative_m": 1000,
+        "y_relative_m": 0,
+        "native_i": 4,
+        "native_j": 16
+      },
+      {
+        "x_relative_m": 1000,
+        "y_relative_m": 500,
+        "native_i": 4,
+        "native_j": 18
+      },
+      {
+        "x_relative_m": 1000,
+        "y_relative_m": 1500,
+        "native_i": 4,
+        "native_j": 22
+      },
+      {
+        "x_relative_m": 3000,
+        "y_relative_m": -1500,
+        "native_i": 8,
+        "native_j": 10
+      },
+      {
+        "x_relative_m": 3000,
+        "y_relative_m": -500,
+        "native_i": 8,
+        "native_j": 14
+      },
+      {
+        "x_relative_m": 3000,
+        "y_relative_m": 0,
+        "native_i": 8,
+        "native_j": 16
+      },
+      {
+        "x_relative_m": 3000,
+        "y_relative_m": 500,
+        "native_i": 8,
+        "native_j": 18
+      },
+      {
+        "x_relative_m": 3000,
+        "y_relative_m": 1500,
+        "native_i": 8,
+        "native_j": 22
+      },
+      {
+        "x_relative_m": 5000,
+        "y_relative_m": -1500,
+        "native_i": 12,
+        "native_j": 10
+      },
+      {
+        "x_relative_m": 5000,
+        "y_relative_m": -500,
+        "native_i": 12,
+        "native_j": 14
+      },
+      {
+        "x_relative_m": 5000,
+        "y_relative_m": 0,
+        "native_i": 12,
+        "native_j": 16
+      },
+      {
+        "x_relative_m": 5000,
+        "y_relative_m": 500,
+        "native_i": 12,
+        "native_j": 18
+      },
+      {
+        "x_relative_m": 5000,
+        "y_relative_m": 1500,
+        "native_i": 12,
+        "native_j": 22
+      },
+      {
+        "x_relative_m": 9000,
+        "y_relative_m": -1500,
+        "native_i": 20,
+        "native_j": 10
+      },
+      {
+        "x_relative_m": 9000,
+        "y_relative_m": -500,
+        "native_i": 20,
+        "native_j": 14
+      },
+      {
+        "x_relative_m": 9000,
+        "y_relative_m": 0,
+        "native_i": 20,
+        "native_j": 16
+      },
+      {
+        "x_relative_m": 9000,
+        "y_relative_m": 500,
+        "native_i": 20,
+        "native_j": 18
+      },
+      {
+        "x_relative_m": 9000,
+        "y_relative_m": 1500,
+        "native_i": 20,
+        "native_j": 22
+      },
+      {
+        "x_relative_m": 15000,
+        "y_relative_m": -1500,
+        "native_i": 32,
+        "native_j": 10
+      },
+      {
+        "x_relative_m": 15000,
+        "y_relative_m": -500,
+        "native_i": 32,
+        "native_j": 14
+      },
+      {
+        "x_relative_m": 15000,
+        "y_relative_m": 0,
+        "native_i": 32,
+        "native_j": 16
+      },
+      {
+        "x_relative_m": 15000,
+        "y_relative_m": 500,
+        "native_i": 32,
+        "native_j": 18
+      },
+      {
+        "x_relative_m": 15000,
+        "y_relative_m": 1500,
+        "native_i": 32,
+        "native_j": 22
+      },
+      {
+        "x_relative_m": 21000,
+        "y_relative_m": -1500,
+        "native_i": 44,
+        "native_j": 10
+      },
+      {
+        "x_relative_m": 21000,
+        "y_relative_m": -500,
+        "native_i": 44,
+        "native_j": 14
+      },
+      {
+        "x_relative_m": 21000,
+        "y_relative_m": 0,
+        "native_i": 44,
+        "native_j": 16
+      },
+      {
+        "x_relative_m": 21000,
+        "y_relative_m": 500,
+        "native_i": 44,
+        "native_j": 18
+      },
+      {
+        "x_relative_m": 21000,
+        "y_relative_m": 1500,
+        "native_i": 44,
+        "native_j": 22
+      },
+      {
+        "x_relative_m": 27000,
+        "y_relative_m": -1500,
+        "native_i": 56,
+        "native_j": 10
+      },
+      {
+        "x_relative_m": 27000,
+        "y_relative_m": -500,
+        "native_i": 56,
+        "native_j": 14
+      },
+      {
+        "x_relative_m": 27000,
+        "y_relative_m": 0,
+        "native_i": 56,
+        "native_j": 16
+      },
+      {
+        "x_relative_m": 27000,
+        "y_relative_m": 500,
+        "native_i": 56,
+        "native_j": 18
+      },
+      {
+        "x_relative_m": 27000,
+        "y_relative_m": 1500,
+        "native_i": 56,
+        "native_j": 22
+      },
+      {
+        "x_relative_m": 33000,
+        "y_relative_m": -1500,
+        "native_i": 68,
+        "native_j": 10
+      },
+      {
+        "x_relative_m": 33000,
+        "y_relative_m": -500,
+        "native_i": 68,
+        "native_j": 14
+      },
+      {
+        "x_relative_m": 33000,
+        "y_relative_m": 0,
+        "native_i": 68,
+        "native_j": 16
+      },
+      {
+        "x_relative_m": 33000,
+        "y_relative_m": 500,
+        "native_i": 68,
+        "native_j": 18
+      },
+      {
+        "x_relative_m": 33000,
+        "y_relative_m": 1500,
+        "native_i": 68,
+        "native_j": 22
+      }
+    ],
+    "receptor_quadrature": "5x5 horizontal Gauss over500x250m native cells,8 vertical Gauss over5200..6800m;40columns/8000pointreceptors, predeclared. Check quadrature/truncation error analytically.",
+    "primary_units": "ug/m2, vertically integrated hourly-window concentration, not point ug/m3",
+    "limitations": [
+      "Strict analytical truth applies to the specified horizontal constant-K column problem; it does not verify vertical turbulence, thermal rise, deposition, clouds or mountain flow.",
+      "CALPUFF Draxler finite-age variance differs from constantK although its predeclared long-time K matches50m2/s. Report total target error separately from its constitutive-law analytical companion.",
+      "Native point-height and CALPUFF finite vertical Gaussian differ, but vertical integration removes that source-shape difference to the stated truncation bound.",
+      "Native continuous release and time sampling are discretized; quantify temporal/particle error without fitting, changing source strength, tuning masks or changing tolerances."
+    ]
+  },
+  "prephysics_amendment": {
+    "UTC": "2026-11-13T07:27:49.518612+00:00",
+    "no_native_forecast_steps": true,
+    "SFC_OPTION": 0,
+    "source_height_reason": "6000m exceeds original nativehmixmax4500m and remains below prescribed~11km tropopause. No selection by model agreement.",
+    "GRIDTYPE": "C matches staggered manufactured arrays; numeric meteorological arrays unchanged"
+  },
+  "flat_projection_amendment_UTC": "2026-11-13T07:50:28.809413+00:00"
+}
