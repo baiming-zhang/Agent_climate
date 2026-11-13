@@ -1,0 +1,10 @@
+{
+  "stage": 10,
+  "field_source_SHA256": "59b7ed976fd4e12f274a20df2118c6f20820b45abaf5b189a53cceaa78c15edc",
+  "numerical_field_modified": false,
+  "native_queries_unchanged": true,
+  "new_physical_terrain_response": false,
+  "geography_note": "Contextual geography was acquired after freezing this version. It changes no source, weather, trajectory, field, unit or native query. No terrain or building-flow response was computed in the original model.",
+  "field_dimensions": 3,
+  "large_video_rendered": false
+}

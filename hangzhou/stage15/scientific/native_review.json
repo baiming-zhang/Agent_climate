@@ -1,0 +1,424 @@
+{
+  "stage": 15,
+  "source_sha256": "97427bc5a4ec14686870255d47eff8f2ac9529f64e3940dd409d2443d01d4e95",
+  "solver_runs": 0,
+  "physical_data_changed": false,
+  "native_shape": [
+    15,
+    52,
+    368,
+    520
+  ],
+  "grid_m": 500,
+  "height_interval_AGL_m": [
+    0,
+    25
+  ],
+  "primary_particles": 345600,
+  "GPU_strict_gate_pass": false,
+  "local_sampling_convergence_qualified": false,
+  "summary": {
+    "name": "terrain_conditional",
+    "backend": "CPU",
+    "hours": 360,
+    "primary_particles_per_source_event": 8,
+    "terrain": true,
+    "release_enabled": true,
+    "zero_emissions": false,
+    "initial_reversible_kg": 0.0,
+    "surface_override_control": null,
+    "elapsed_seconds": 68.93605160713196,
+    "external_emitted_kg": 1626.8400000002746,
+    "final_airborne_kg": 18.087430682485635,
+    "final_reversible_surface_kg": 0.9138382273541289,
+    "final_irreversible_surface_SO2eq_kg": 224.66816422480014,
+    "chemical_sink_kg": 499.19048922600547,
+    "lateral_export_kg": 883.9800776493313,
+    "top_export_kg": 0.0,
+    "gross_contact_uptake_kg": 185.47890673963383,
+    "gross_wet_deposition_kg": 40.103095712437124,
+    "gross_rereleased_kg": 0.0,
+    "surface_fixation_kg": 17.63405244660934,
+    "max_hourly_mass_residual_kg": 9.70192104432499e-09,
+    "min_accepted_path_clearance_m": 0.0,
+    "contact_count": 7141851,
+    "collision_limit_stops": 9,
+    "penetration_flags": 0,
+    "DDA_failure_flags": 0,
+    "warm_dry_gate_hours": 0,
+    "source_model_ground_m": [
+      6.643596707748393,
+      6.593527295503476,
+      7.298969247882446,
+      6.710257483696232
+    ],
+    "source_outlet_model_AMSL_m": [
+      26.643596707748394,
+      56.59352729550348,
+      87.29896924788244,
+      71.71025748369624
+    ]
+  },
+  "max_mass_residual_kg": 9.702262104838155e-09,
+  "receptors": [
+    {
+      "id": "LS12",
+      "lon": 120.63809991597867,
+      "lat": 30.24894919215468,
+      "ix": 474,
+      "iy": 268,
+      "ground_orthometric_m": 6.643596707262999
+    },
+    {
+      "id": "LS13",
+      "lon": 120.6377333503414,
+      "lat": 30.24820290083626,
+      "ix": 474,
+      "iy": 267,
+      "ground_orthometric_m": 6.593527295236765
+    },
+    {
+      "id": "LS15",
+      "lon": 120.63844788338125,
+      "lat": 30.253077821227393,
+      "ix": 474,
+      "iy": 268,
+      "ground_orthometric_m": 7.298969245380222
+    },
+    {
+      "id": "LJ01",
+      "lon": 120.62871499584624,
+      "lat": 30.250146152461955,
+      "ix": 472,
+      "iy": 268,
+      "ground_orthometric_m": 6.710257482506997
+    },
+    {
+      "id": "Hangzhou reference",
+      "lon": 120.15,
+      "lat": 30.27,
+      "ix": 380,
+      "iy": 272,
+      "ground_orthometric_m": 14.217901717032344
+    }
+  ],
+  "daily_field_mass_checks": [
+    {
+      "day": 1,
+      "field_mass_kg": 21.24704570921687,
+      "hourly_ledger_mean_kg": 21.247045709216867
+    },
+    {
+      "day": 2,
+      "field_mass_kg": 26.45381425450568,
+      "hourly_ledger_mean_kg": 26.453814254505676
+    },
+    {
+      "day": 3,
+      "field_mass_kg": 49.207592883165454,
+      "hourly_ledger_mean_kg": 49.207592883165454
+    },
+    {
+      "day": 4,
+      "field_mass_kg": 45.80102758986391,
+      "hourly_ledger_mean_kg": 45.80102758986391
+    },
+    {
+      "day": 5,
+      "field_mass_kg": 6.023504188185692,
+      "hourly_ledger_mean_kg": 6.023504188185693
+    },
+    {
+      "day": 6,
+      "field_mass_kg": 17.45641919130073,
+      "hourly_ledger_mean_kg": 17.45641919130073
+    },
+    {
+      "day": 7,
+      "field_mass_kg": 9.936416531662731,
+      "hourly_ledger_mean_kg": 9.936416531662731
+    },
+    {
+      "day": 8,
+      "field_mass_kg": 32.683169790869016,
+      "hourly_ledger_mean_kg": 32.683169790869016
+    },
+    {
+      "day": 9,
+      "field_mass_kg": 19.348903239548772,
+      "hourly_ledger_mean_kg": 19.348903239548772
+    },
+    {
+      "day": 10,
+      "field_mass_kg": 29.871746369069513,
+      "hourly_ledger_mean_kg": 29.871746369069513
+    },
+    {
+      "day": 11,
+      "field_mass_kg": 37.89730010951616,
+      "hourly_ledger_mean_kg": 37.89730010951616
+    },
+    {
+      "day": 12,
+      "field_mass_kg": 32.059624516843115,
+      "hourly_ledger_mean_kg": 32.059624516843115
+    },
+    {
+      "day": 13,
+      "field_mass_kg": 22.675946650284764,
+      "hourly_ledger_mean_kg": 22.67594665028476
+    },
+    {
+      "day": 14,
+      "field_mass_kg": 9.988238929201072,
+      "hourly_ledger_mean_kg": 9.988238929201072
+    },
+    {
+      "day": 15,
+      "field_mass_kg": 13.0878462541318,
+      "hourly_ledger_mean_kg": 13.087846254131799
+    }
+  ],
+  "terrain_datum": "EGM2008 orthometric DSM, not surveyed bare earth",
+  "surface_coefficients_calibrated": false,
+  "controls": {
+    "physical_scheme_changes": [
+      "bilinear-terrain segment collision and terrain-normal reflection replace flat z reflection",
+      "wind lookup uses approximate orthometric altitude; turbulence uses local AGL",
+      "contact-based Robin-inspired uptake replaces old25m dry-deposition slab",
+      "contact uptake splits10% reversible /90% retained surface SO2-equivalent",
+      "hourly reversible-pool fixation and gated desorption added; wet deposits retained irreversibly"
+    ],
+    "authoritative_backend": "CPU NumBa; new GPU model failed strict long-run same-scheme agreement and was not promoted",
+    "CPU_GPU_validation_pass": false,
+    "prior_flat_model_GPU_validation_not_transferred": true,
+    "results": [
+      {
+        "name": "zero_emission_control",
+        "backend": "CPU",
+        "hours": 360,
+        "primary_particles_per_source_event": 1,
+        "terrain": true,
+        "release_enabled": true,
+        "zero_emissions": true,
+        "initial_reversible_kg": 0.0,
+        "surface_override_control": null,
+        "elapsed_seconds": 10.29928731918335,
+        "external_emitted_kg": 0.0,
+        "final_airborne_kg": 0.0,
+        "final_reversible_surface_kg": 0.0,
+        "final_irreversible_surface_SO2eq_kg": 0.0,
+        "chemical_sink_kg": 0.0,
+        "lateral_export_kg": 0.0,
+        "top_export_kg": 0.0,
+        "gross_contact_uptake_kg": 0.0,
+        "gross_wet_deposition_kg": 0.0,
+        "gross_rereleased_kg": 0.0,
+        "surface_fixation_kg": 0.0,
+        "max_hourly_mass_residual_kg": 0.0,
+        "min_accepted_path_clearance_m": 1e+30,
+        "contact_count": 0,
+        "collision_limit_stops": 0,
+        "penetration_flags": 0,
+        "DDA_failure_flags": 0,
+        "warm_dry_gate_hours": 0,
+        "source_model_ground_m": [
+          6.643596707748393,
+          6.593527295503476,
+          7.298969247882446,
+          6.710257483696232
+        ],
+        "source_outlet_model_AMSL_m": [
+          26.643596707748394,
+          56.59352729550348,
+          87.29896924788244,
+          71.71025748369624
+        ]
+      },
+      {
+        "name": "warm_dry_surface_control",
+        "backend": "CPU",
+        "hours": 24,
+        "primary_particles_per_source_event": 1,
+        "terrain": true,
+        "release_enabled": true,
+        "zero_emissions": true,
+        "initial_reversible_kg": 1.0,
+        "surface_override_control": [
+          20.0,
+          40.0,
+          0.0,
+          500.0
+        ],
+        "elapsed_seconds": 0.814594030380249,
+        "external_emitted_kg": 0.0,
+        "final_airborne_kg": 0.020317705807380588,
+        "final_reversible_surface_kg": 0.034188484826913765,
+        "final_irreversible_surface_SO2eq_kg": 0.5426130915066826,
+        "chemical_sink_kg": 0.20723214216412383,
+        "lateral_export_kg": 0.195648575694899,
+        "top_export_kg": 0.0,
+        "gross_contact_uptake_kg": 0.17901217151960686,
+        "gross_wet_deposition_kg": 0.09576024631820257,
+        "gross_rereleased_kg": 0.6979708415042141,
+        "surface_fixation_kg": 0.2857418908208331,
+        "max_hourly_mass_residual_kg": 7.951972413877684e-15,
+        "min_accepted_path_clearance_m": 0.0,
+        "contact_count": 71881,
+        "collision_limit_stops": 0,
+        "penetration_flags": 0,
+        "DDA_failure_flags": 0,
+        "warm_dry_gate_hours": 24,
+        "source_model_ground_m": [
+          6.643596707748393,
+          6.593527295503476,
+          7.298969247882446,
+          6.710257483696232
+        ],
+        "source_outlet_model_AMSL_m": [
+          26.643596707748394,
+          56.59352729550348,
+          87.29896924788244,
+          71.71025748369624
+        ]
+      },
+      {
+        "name": "cool_wet_surface_control",
+        "backend": "CPU",
+        "hours": 24,
+        "primary_particles_per_source_event": 1,
+        "terrain": true,
+        "release_enabled": true,
+        "zero_emissions": true,
+        "initial_reversible_kg": 1.0,
+        "surface_override_control": [
+          5.0,
+          95.0,
+          1.0,
+          0.0
+        ],
+        "elapsed_seconds": 0.5961637496948242,
+        "external_emitted_kg": 0.0,
+        "final_airborne_kg": 0.0,
+        "final_reversible_surface_kg": 0.36787944117144233,
+        "final_irreversible_surface_SO2eq_kg": 0.6321205588285577,
+        "chemical_sink_kg": 0.0,
+        "lateral_export_kg": 0.0,
+        "top_export_kg": 0.0,
+        "gross_contact_uptake_kg": 0.0,
+        "gross_wet_deposition_kg": 0.0,
+        "gross_rereleased_kg": 0.0,
+        "surface_fixation_kg": 0.6321205588285579,
+        "max_hourly_mass_residual_kg": 1.3877787807814457e-16,
+        "min_accepted_path_clearance_m": 1e+30,
+        "contact_count": 0,
+        "collision_limit_stops": 0,
+        "penetration_flags": 0,
+        "DDA_failure_flags": 0,
+        "warm_dry_gate_hours": 0,
+        "source_model_ground_m": [
+          6.643596707748393,
+          6.593527295503476,
+          7.298969247882446,
+          6.710257483696232
+        ],
+        "source_outlet_model_AMSL_m": [
+          26.643596707748394,
+          56.59352729550348,
+          87.29896924788244,
+          71.71025748369624
+        ]
+      },
+      {
+        "name": "flat_conditional",
+        "backend": "CPU",
+        "hours": 360,
+        "primary_particles_per_source_event": 8,
+        "terrain": false,
+        "release_enabled": true,
+        "zero_emissions": false,
+        "initial_reversible_kg": 0.0,
+        "surface_override_control": null,
+        "elapsed_seconds": 65.39911150932312,
+        "external_emitted_kg": 1626.8400000002746,
+        "final_airborne_kg": 14.445875304874171,
+        "final_reversible_surface_kg": 0.71386247472771,
+        "final_irreversible_surface_SO2eq_kg": 198.32736679138463,
+        "chemical_sink_kg": 520.5674211505883,
+        "lateral_export_kg": 892.7854742845022,
+        "top_export_kg": 0.0,
+        "gross_contact_uptake_kg": 157.79423648524093,
+        "gross_wet_deposition_kg": 41.24699278081283,
+        "gross_rereleased_kg": 0.0,
+        "surface_fixation_kg": 15.065561173796233,
+        "max_hourly_mass_residual_kg": 8.006281859707087e-09,
+        "min_accepted_path_clearance_m": 0.0,
+        "contact_count": 6356977,
+        "collision_limit_stops": 0,
+        "penetration_flags": 0,
+        "DDA_failure_flags": 0,
+        "warm_dry_gate_hours": 0,
+        "source_model_ground_m": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "source_outlet_model_AMSL_m": [
+          20.0,
+          50.0,
+          80.0,
+          65.0
+        ]
+      },
+      {
+        "name": "terrain_conditional",
+        "backend": "CPU",
+        "hours": 360,
+        "primary_particles_per_source_event": 8,
+        "terrain": true,
+        "release_enabled": true,
+        "zero_emissions": false,
+        "initial_reversible_kg": 0.0,
+        "surface_override_control": null,
+        "elapsed_seconds": 68.93605160713196,
+        "external_emitted_kg": 1626.8400000002746,
+        "final_airborne_kg": 18.087430682485635,
+        "final_reversible_surface_kg": 0.9138382273541289,
+        "final_irreversible_surface_SO2eq_kg": 224.66816422480014,
+        "chemical_sink_kg": 499.19048922600547,
+        "lateral_export_kg": 883.9800776493313,
+        "top_export_kg": 0.0,
+        "gross_contact_uptake_kg": 185.47890673963383,
+        "gross_wet_deposition_kg": 40.103095712437124,
+        "gross_rereleased_kg": 0.0,
+        "surface_fixation_kg": 17.63405244660934,
+        "max_hourly_mass_residual_kg": 9.70192104432499e-09,
+        "min_accepted_path_clearance_m": 0.0,
+        "contact_count": 7141851,
+        "collision_limit_stops": 9,
+        "penetration_flags": 0,
+        "DDA_failure_flags": 0,
+        "warm_dry_gate_hours": 0,
+        "source_model_ground_m": [
+          6.643596707748393,
+          6.593527295503476,
+          7.298969247882446,
+          6.710257483696232
+        ],
+        "source_outlet_model_AMSL_m": [
+          26.643596707748394,
+          56.59352729550348,
+          87.29896924788244,
+          71.71025748369624
+        ]
+      }
+    ],
+    "zero_emission_control_pass": true,
+    "warm_dry_rerelease_control_pass": true,
+    "cool_wet_no_rerelease_control_pass": true,
+    "actual_forcing_rerelease_observed": false,
+    "actual_closed_release_case": "If all actual gates are closed, disabling release is algebraically identical; no redundant full rerun performed.",
+    "limits": "Uncalibrated surface chemistry/film proxy and kinematic terrain blocking; no terrain-resolved meteorological CFD or complete sulfur chemistry."
+  }
+}

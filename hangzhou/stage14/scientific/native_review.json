@@ -1,0 +1,113 @@
+{
+  "stage": 14,
+  "frozen_field": "outputs/timestep_convergence/dt30s_seed20261113_sparse.npz",
+  "source_sha256": "4cde6e9375a258a575baaa0306197db25a9434f9b8bbc06151bd0ff6fe26d0d6",
+  "process_sha256": "21155125d6497703bd6733a2bdf681a48cd6634ac7b673dee45fd5295fc5b324",
+  "native_shape": [
+    15,
+    52,
+    368,
+    520
+  ],
+  "native_grid_m": 500,
+  "vertical_layers": 52,
+  "height_interval_AGL_m": [
+    0,
+    25
+  ],
+  "receptors": [
+    {
+      "id": "LS12",
+      "lon": 120.63809991597867,
+      "lat": 30.24894919215468,
+      "ix": 474,
+      "iy": 268,
+      "cell_lon": 120.63993987923472,
+      "cell_lat": 30.251009964426874,
+      "mean_ug_m3": 0.10762124982230015
+    },
+    {
+      "id": "LS13",
+      "lon": 120.6377333503414,
+      "lat": 30.24820290083626,
+      "ix": 474,
+      "iy": 267,
+      "cell_lon": 120.63993987923472,
+      "cell_lat": 30.24651840855192,
+      "mean_ug_m3": 0.13839579231872123
+    },
+    {
+      "id": "LS15",
+      "lon": 120.63844788338125,
+      "lat": 30.253077821227393,
+      "ix": 474,
+      "iy": 268,
+      "cell_lon": 120.63993987923472,
+      "cell_lat": 30.251009964426874,
+      "mean_ug_m3": 0.10762124982230015
+    },
+    {
+      "id": "LJ01",
+      "lon": 120.62871499584624,
+      "lat": 30.250146152461955,
+      "ix": 472,
+      "iy": 268,
+      "cell_lon": 120.62956707526078,
+      "cell_lat": 30.251009964426874,
+      "mean_ug_m3": 0.20883794777392392
+    },
+    {
+      "id": "Hangzhou reference",
+      "lon": 120.15,
+      "lat": 30.27,
+      "ix": 380,
+      "iy": 272,
+      "cell_lon": 120.15241809245943,
+      "cell_lat": 30.268976187926697,
+      "mean_ug_m3": 0.0045415589083397465
+    }
+  ],
+  "total_emitted_kg": 1626.8400000000001,
+  "final_airborne_kg": 13.002010259518482,
+  "cumulative_process_kg": {
+    "Dry deposition": 194.77299566885503,
+    "Wet deposition": 41.97148611869198,
+    "Chemical loss": 500.9460276540456,
+    "Lateral export": 876.1474802832098,
+    "Model-top export": 0.0
+  },
+  "maximum_mass_residual_kg": 1.7015054254443385e-08,
+  "surface_mass_integral_checks": true,
+  "physical_data_changed": false,
+  "solver_runs": 0,
+  "independent_saved_receptor_checks": [
+    {
+      "outlet": "LS12",
+      "max_error_ug_m3": 5.551115123125783e-17,
+      "independent_saved_samples": 15
+    },
+    {
+      "outlet": "LS13",
+      "max_error_ug_m3": 5.551115123125783e-17,
+      "independent_saved_samples": 15
+    },
+    {
+      "outlet": "LS15",
+      "max_error_ug_m3": 5.551115123125783e-17,
+      "independent_saved_samples": 15
+    },
+    {
+      "outlet": "LJ01",
+      "max_error_ug_m3": 5.551115123125783e-17,
+      "independent_saved_samples": 15
+    }
+  ],
+  "limits": [
+    "500 m is a density estimator, not weather resolution.",
+    "Forecast profiles are horizontally uniform; ambient vertical flow is unresolved.",
+    "Daily field sampling uses 24 hourly endpoint samples.",
+    "Stage 15 terrain is pending; stage 14 has flat physical ground.",
+    "Local concentration and vertical/time convergence are not established.",
+    "The four EIA rates assume operation; actual operation and flow reference basis remain unverified."
+  ]
+}

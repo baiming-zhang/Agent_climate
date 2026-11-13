@@ -1,0 +1,218 @@
+{
+  "CPU_GPU_fine_indexing_validation": [
+    {
+      "dx_m": 1000.0,
+      "CPU_GPU_pass": true,
+      "max_absolute_error_kg": 2.2737367544323206e-13
+    },
+    {
+      "dx_m": 500.0,
+      "CPU_GPU_pass": true,
+      "max_absolute_error_kg": 2.3447910280083306e-13
+    }
+  ],
+  "physical_scheme_changes": [],
+  "numerical_changes": [
+    "horizontal estimation grid 2000 -> 1000 -> 500 m; domain edges unchanged",
+    "particles per source step 2 -> 128 for every study grid; particle mass scaled inversely",
+    "two shared-path seeds across all grid levels"
+  ],
+  "near_surface_height": "0-25 m AGL volume mean",
+  "grid_metrics": [
+    {
+      "grid_m": 2000.0,
+      "seed": 20261113,
+      "particles_per_source_step": 128,
+      "total_emitted_particles": 5529600,
+      "shape": [
+        15,
+        13,
+        92,
+        130
+      ],
+      "GPU_seconds": 2.0668886000057682,
+      "max_hourly_mass_error_kg": 9.413270163349807e-11,
+      "common_2km_cell_mass_max_error_kg": 0.0,
+      "median_nonzero_cell_day_particle_time_count": 19.0,
+      "fraction_nonzero_cell_days_below20_samples": 0.5033384226237951,
+      "native_0_25m_peak_ug_m3": 0.47373306555809824
+    },
+    {
+      "grid_m": 1000.0,
+      "seed": 20261113,
+      "particles_per_source_step": 128,
+      "total_emitted_particles": 5529600,
+      "shape": [
+        15,
+        13,
+        184,
+        260
+      ],
+      "GPU_seconds": 2.073531899994123,
+      "max_hourly_mass_error_kg": 9.57243173616007e-11,
+      "common_2km_cell_mass_max_error_kg": 1.657007864253046e-14,
+      "median_nonzero_cell_day_particle_time_count": 6.0,
+      "fraction_nonzero_cell_days_below20_samples": 0.8146069615379595,
+      "native_0_25m_peak_ug_m3": 0.639504794845273
+    },
+    {
+      "grid_m": 500.0,
+      "seed": 20261113,
+      "particles_per_source_step": 128,
+      "total_emitted_particles": 5529600,
+      "shape": [
+        15,
+        13,
+        368,
+        520
+      ],
+      "GPU_seconds": 2.0584937000094214,
+      "max_hourly_mass_error_kg": 1.1118572729174048e-10,
+      "common_2km_cell_mass_max_error_kg": 1.5737411374061594e-14,
+      "median_nonzero_cell_day_particle_time_count": 2.0,
+      "fraction_nonzero_cell_days_below20_samples": 0.9291382558765476,
+      "native_0_25m_peak_ug_m3": 0.8493551436326775
+    },
+    {
+      "grid_m": 2000.0,
+      "seed": 20261114,
+      "particles_per_source_step": 128,
+      "total_emitted_particles": 5529600,
+      "shape": [
+        15,
+        13,
+        92,
+        130
+      ],
+      "GPU_seconds": 2.1969205000059446,
+      "max_hourly_mass_error_kg": 9.072209650184959e-11,
+      "common_2km_cell_mass_max_error_kg": 0.0,
+      "median_nonzero_cell_day_particle_time_count": 19.0,
+      "fraction_nonzero_cell_days_below20_samples": 0.5029577721150346,
+      "native_0_25m_peak_ug_m3": 0.4522661096261642
+    },
+    {
+      "grid_m": 1000.0,
+      "seed": 20261114,
+      "particles_per_source_step": 128,
+      "total_emitted_particles": 5529600,
+      "shape": [
+        15,
+        13,
+        184,
+        260
+      ],
+      "GPU_seconds": 2.074542599992128,
+      "max_hourly_mass_error_kg": 1.0436451702844352e-10,
+      "common_2km_cell_mass_max_error_kg": 1.5987211554602254e-14,
+      "median_nonzero_cell_day_particle_time_count": 6.0,
+      "fraction_nonzero_cell_days_below20_samples": 0.8143673511990188,
+      "native_0_25m_peak_ug_m3": 0.602274371974334
+    },
+    {
+      "grid_m": 500.0,
+      "seed": 20261114,
+      "particles_per_source_step": 128,
+      "total_emitted_particles": 5529600,
+      "shape": [
+        15,
+        13,
+        368,
+        520
+      ],
+      "GPU_seconds": 2.0781744999985676,
+      "max_hourly_mass_error_kg": 9.208633855450898e-11,
+      "common_2km_cell_mass_max_error_kg": 1.554312234475219e-14,
+      "median_nonzero_cell_day_particle_time_count": 2.0,
+      "fraction_nonzero_cell_days_below20_samples": 0.9294400620484506,
+      "native_0_25m_peak_ug_m3": 0.9238100126106867
+    }
+  ],
+  "grid_sensitivity": {
+    "20261113": [
+      {
+        "coarse_m": 2000,
+        "fine_m": 1000,
+        "native_field_normalized_L1_difference": 0.3016670809770297
+      },
+      {
+        "coarse_m": 1000,
+        "fine_m": 500,
+        "native_field_normalized_L1_difference": 0.41666630088442325
+      }
+    ],
+    "20261114": [
+      {
+        "coarse_m": 2000,
+        "fine_m": 1000,
+        "native_field_normalized_L1_difference": 0.3022335020857571
+      },
+      {
+        "coarse_m": 1000,
+        "fine_m": 500,
+        "native_field_normalized_L1_difference": 0.41961310484060677
+      }
+    ]
+  },
+  "same_grid_seed_sensitivity_L1": {
+    "2000": 0.16982246096146783,
+    "1000": 0.3267676849421575,
+    "500": 0.6036963947008746
+  },
+  "native_receptor_sensitivity": [
+    {
+      "source_receptor": "LS12",
+      "seed": 20261113,
+      "2km_to_1km_normalized_L1_difference": 0.31507056290319774,
+      "1km_to_500m_normalized_L1_difference": 0.19970080366432463
+    },
+    {
+      "source_receptor": "LS12",
+      "seed": 20261114,
+      "2km_to_1km_normalized_L1_difference": 0.3032175933784341,
+      "1km_to_500m_normalized_L1_difference": 0.18286884534053496
+    },
+    {
+      "source_receptor": "LS13",
+      "seed": 20261113,
+      "2km_to_1km_normalized_L1_difference": 0.5740548453081886,
+      "1km_to_500m_normalized_L1_difference": 0.25412409989757484
+    },
+    {
+      "source_receptor": "LS13",
+      "seed": 20261114,
+      "2km_to_1km_normalized_L1_difference": 0.56805650990325,
+      "1km_to_500m_normalized_L1_difference": 0.28483911214713603
+    },
+    {
+      "source_receptor": "LS15",
+      "seed": 20261113,
+      "2km_to_1km_normalized_L1_difference": 0.31507056290319774,
+      "1km_to_500m_normalized_L1_difference": 0.19970080366432463
+    },
+    {
+      "source_receptor": "LS15",
+      "seed": 20261114,
+      "2km_to_1km_normalized_L1_difference": 0.3032175933784341,
+      "1km_to_500m_normalized_L1_difference": 0.18286884534053496
+    },
+    {
+      "source_receptor": "LJ01",
+      "seed": 20261113,
+      "2km_to_1km_normalized_L1_difference": 0.38313901425985686,
+      "1km_to_500m_normalized_L1_difference": 0.31109613646225676
+    },
+    {
+      "source_receptor": "LJ01",
+      "seed": 20261114,
+      "2km_to_1km_normalized_L1_difference": 0.3488280880667591,
+      "1km_to_500m_normalized_L1_difference": 0.335589804533759
+    }
+  ],
+  "declared_diagnostic_criteria": {
+    "native_1km_to_500m_receptor_L1_max": 0.05,
+    "native_1km_to_500m_field_L1_max": 0.1
+  },
+  "local_grid_convergence_demonstrated": false,
+  "caution": "The grid is a particle-density estimator, not an Eulerian dynamics mesh. Conservative common-volume consistency is not a Richardson convergence-order result."
+}

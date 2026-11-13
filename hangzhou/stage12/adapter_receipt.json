@@ -1,0 +1,9 @@
+{
+  "frozen_source_sha256": "196df95f880970e3f17129cbbc9000d27a48d548a395e14108fa5c6edcc322b7",
+  "numerical_solver_rerun": false,
+  "native_data_modified": false,
+  "concentration_conversion": "daily mean cell mass kg *1e9 /actual cell volume m3",
+  "conservative_display_factor": 2,
+  "query_mode": "display",
+  "maximum_rebin_mass_error_kg": 3.552713678800501e-15
+}

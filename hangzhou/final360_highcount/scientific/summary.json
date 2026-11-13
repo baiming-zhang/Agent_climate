@@ -1,0 +1,23 @@
+{
+  "case": "production_cpu12_n8192_v1",
+  "status": "COMPLETE",
+  "hour": 360,
+  "hours": 360,
+  "nper": 8192,
+  "primary_particle_total": 353894400,
+  "elapsed_seconds": 7363.081471199999,
+  "estimated_remaining_seconds": 0.0,
+  "active_particles": 5165597,
+  "peak_working_set_bytes": 5679329280,
+  "mass_closure_kg": -1.929933485807475e-10,
+  "observer_replay_mismatches": 0,
+  "max_mass_closure_kg": 6.228901838767342e-10,
+  "observer_segment_count": 594722,
+  "observer_residence_count": 43362,
+  "observer_max_replay_error": 0.0,
+  "source_mass_rate_kg_h": 4.519,
+  "workers": 12,
+  "precision": "float64",
+  "frozen_scalar_operator": true,
+  "surface_desorbed_kg": 0.0
+}

@@ -1,0 +1,410 @@
+{
+  "updated_UTC": "2026-11-13T13:19:46.449933+00:00",
+  "scope_start_UTC": "2026-11-13T05:34:50.862000+00:00",
+  "method_version": 1,
+  "main_categories": {
+    "worker": {
+      "agent": 7612.166001558304,
+      "data": 8241.582943439484,
+      "rendering": 5.444738149642944,
+      "other": 6942.7672827243805,
+      "total_busy_union_seconds": 20961.782932281494,
+      "cross_category_overlap_seconds": 1840.1780335903168,
+      "logged_reasoning_item_seconds": 4361.886001586914
+    },
+    "controller": {
+      "agent": 23613.277998685837,
+      "data": 450.1707830429077,
+      "rendering": 300.14527583122253,
+      "other": 2412.108895301819,
+      "total_busy_union_seconds": 26543.03293299675,
+      "cross_category_overlap_seconds": 232.670019865036,
+      "logged_reasoning_item_seconds": 11581.309998512268
+    },
+    "all": {
+      "agent": 24352.20999956131,
+      "data": 8338.257061243057,
+      "rendering": 305.5900139808655,
+      "other": 9006.449671506882,
+      "total_busy_union_seconds": 27552.25693321228,
+      "cross_category_overlap_seconds": 14450.249813079834,
+      "logged_reasoning_item_seconds": 15943.196000099182,
+      "between_turns_or_unobserved_seconds": 343.3309998512268,
+      "project_elapsed_seconds": 27895.587933063507
+    }
+  },
+  "subcategories_all_actors": {
+    "agent": {
+      "logged_reasoning_item": 13914.753997802734,
+      "non_tool_activity_proxy": 13770.519999742508
+    },
+    "data": {
+      "CPU_parallel_model_or_control": 257.83499908447266,
+      "acquisition_attempt": 45.0486798286438,
+      "catalogue_research": 210.26799941062927,
+      "data_inspection": 8.677961349487305,
+      "geographic_display_data_acquisition": 347.03066515922546,
+      "instrumented_phase_wrapper": 29.037705421447754,
+      "model_execution": 20.82775592803955,
+      "model_or_numerical_validation": 1687.8232417106628,
+      "real_osm_outlet_display_geography": 28.741561889648438,
+      "source_document_verification": 9.707753419876099,
+      "supervised_CPU_production": 6075.496965169907
+    },
+    "rendering": {
+      "actual_osm_footprints_outlet_geometry_review": 2.467651128768921,
+      "all_preserved_volume_cases_final_shared_UI": 23.631547927856445,
+      "early_stage_english_reference_check": 1.729126214981079,
+      "english_equations_actual_browser_check": 0.9269239902496338,
+      "english_methods_hub_prepare": 0.07863712310791016,
+      "frozen_cpu_terrain_native_field_pack": 9.818082094192505,
+      "frozen_data_presentation_and_review": 157.11070561408997,
+      "image_review": 0.003999948501586914,
+      "initial_stage_video_reference_aspect_check": 1.1370301246643066,
+      "instrumented_phase_wrapper": 107.1363365650177,
+      "mobile_layout_and_native_query_check": 2.237870931625366,
+      "native_3d_schema_units_adapter_check": 1.6158850193023682,
+      "native_grid_scientific_panels": 4.351830959320068,
+      "native_scientific_browser_and_mobile": 2.9860029220581055,
+      "native_tiled_volume_true_click_4k_check": 2.252423048019409,
+      "newer_native3d_lossless_query_and_display_pack": 9.487649917602539,
+      "numerical_review_browser_check": 1.9522500038146973,
+      "numerical_review_from_frozen_receipts": 2.009495973587036,
+      "prepare_frozen_reference_site": 0.568181037902832,
+      "preserved_2d_C1_scalar_browser_check": 1.7736449241638184,
+      "preserved_stages_native_volume_adapters": 22.194744110107422,
+      "real_city_geometry_preparation": 32.60599994659424,
+      "reference_renderer_actual_browser_check": 4.029651165008545,
+      "reference_renderer_binding_fix_check": 3.710052013397217,
+      "render_export_or_UI_review": 8.732971906661987,
+      "scientific_native_saved_receptor_crosscheck": 4.310473918914795,
+      "stage05_same_C1_scalar_renderer": 0.9729719161987305,
+      "updated_illustrative_reference_frames": 1.2393810749053955,
+      "video_reference_frames_before_review": 1.3527929782867432
+    },
+    "other": {
+      "active_turn_unattributed": 1175.4219315052032,
+      "environment_or_file_operations": 586.3707945346832,
+      "file_write": 11.466998815536499,
+      "frozen_presentation_catalog": 0.06354784965515137,
+      "instrumented_phase_wrapper": 6.836179971694946,
+      "intermediate_delivery_code_native_archival": 3.9882521629333496,
+      "mixed_data_and_render": 21.327617406845093,
+      "native_archive_part_and_full_hash_validation": 1.3133621215820312,
+      "other_tool": 1292.6090004444122,
+      "restore_real_split_native_reference": 1.0449509620666504,
+      "tool_non_execution_wait": 6239.883480787277
+    }
+  },
+  "turns": [
+    {
+      "actor": "worker",
+      "turn_id": "01a1d36b-c7a2-74e0-a52f-ed1179611502",
+      "start_UTC": "2026-11-13T05:40:18.492000+00:00",
+      "end_UTC": "2026-11-13T05:52:06.432000+00:00",
+      "seconds": 707.9399998188019,
+      "completed": true,
+      "observed_reasoning_item_seconds": 20.514999866485596
+    },
+    {
+      "actor": "worker",
+      "turn_id": "01a1d387-6200-7e41-85e4-f4aff8d7ff3e",
+      "start_UTC": "2026-11-13T06:10:27.486000+00:00",
+      "end_UTC": "2026-11-13T06:13:42.038000+00:00",
+      "seconds": 194.55200004577637,
+      "completed": true,
+      "observed_reasoning_item_seconds": 13.733999967575073
+    },
+    {
+      "actor": "worker",
+      "turn_id": "01a1d38e-c1af-72e0-8323-7a49a1075b1f",
+      "start_UTC": "2026-11-13T06:18:30.738000+00:00",
+      "end_UTC": "2026-11-13T06:19:28.892000+00:00",
+      "seconds": 58.15400004386902,
+      "completed": true,
+      "observed_reasoning_item_seconds": 10.124000310897827
+    },
+    {
+      "actor": "worker",
+      "turn_id": "01a1d392-6ec8-7d51-84bc-d7cc76a4a73b",
+      "start_UTC": "2026-11-13T06:22:31.682000+00:00",
+      "end_UTC": "2026-11-13T06:27:49.030000+00:00",
+      "seconds": 317.34800004959106,
+      "completed": true,
+      "observed_reasoning_item_seconds": 21.130000114440918
+    },
+    {
+      "actor": "worker",
+      "turn_id": "01a1d39b-8cbb-7831-b0a1-7c5120fc5389",
+      "start_UTC": "2026-11-13T06:32:29.152000+00:00",
+      "end_UTC": "2026-11-13T06:32:40.307000+00:00",
+      "seconds": 11.15499997138977,
+      "completed": true,
+      "observed_reasoning_item_seconds": 3.2710001468658447
+    },
+    {
+      "actor": "worker",
+      "turn_id": "01a1d3a3-63c4-7763-b22d-3083e85102b1",
+      "start_UTC": "2026-11-13T06:41:02.949000+00:00",
+      "end_UTC": "2026-11-13T06:58:22.441000+00:00",
+      "seconds": 1039.4920001029968,
+      "completed": true,
+      "observed_reasoning_item_seconds": 88.7170000076294
+    },
+    {
+      "actor": "worker",
+      "turn_id": "01a1d3b5-a33b-7191-9551-f8754ece901f",
+      "start_UTC": "2026-11-13T07:00:58.839000+00:00",
+      "end_UTC": "2026-11-13T07:03:39.774000+00:00",
+      "seconds": 160.93499994277954,
+      "completed": true,
+      "observed_reasoning_item_seconds": 34.54299974441528
+    },
+    {
+      "actor": "worker",
+      "turn_id": "01a1d3b9-c156-7f61-a079-08e976ed85c6",
+      "start_UTC": "2026-11-13T07:05:28.695000+00:00",
+      "end_UTC": "2026-11-13T07:11:00.547000+00:00",
+      "seconds": 331.85199999809265,
+      "completed": true,
+      "observed_reasoning_item_seconds": 30.02900004386902
+    },
+    {
+      "actor": "worker",
+      "turn_id": "01a1d3c2-95c8-77b2-81d5-bd0cb08fa873",
+      "start_UTC": "2026-11-13T07:15:07.367000+00:00",
+      "end_UTC": "2026-11-13T07:18:08.162000+00:00",
+      "seconds": 180.79499983787537,
+      "completed": true,
+      "observed_reasoning_item_seconds": 51.91799974441528
+    },
+    {
+      "actor": "worker",
+      "turn_id": "01a1d3c6-a894-7770-bf9f-3b9c43cd5c90",
+      "start_UTC": "2026-11-13T07:19:34.323000+00:00",
+      "end_UTC": "2026-11-13T07:28:37.855000+00:00",
+      "seconds": 543.5320000648499,
+      "completed": true,
+      "observed_reasoning_item_seconds": 124.30400061607361
+    },
+    {
+      "actor": "worker",
+      "turn_id": "01a1d3d1-149c-7583-b0a6-6c8d8137f99b",
+      "start_UTC": "2026-11-13T07:30:57.344000+00:00",
+      "end_UTC": "2026-11-13T07:33:01.669000+00:00",
+      "seconds": 124.32499980926514,
+      "completed": true,
+      "observed_reasoning_item_seconds": 39.069000005722046
+    },
+    {
+      "actor": "worker",
+      "turn_id": "01a1d3d4-f53e-7380-8807-805ea50a0de4",
+      "start_UTC": "2026-11-13T07:35:11.450000+00:00",
+      "end_UTC": "2026-11-13T07:37:18.389000+00:00",
+      "seconds": 126.93899989128113,
+      "completed": true,
+      "observed_reasoning_item_seconds": 49.081000089645386
+    },
+    {
+      "actor": "worker",
+      "turn_id": "01a1d3d9-78a6-7752-80fe-a26c303238d8",
+      "start_UTC": "2026-11-13T07:40:07.231000+00:00",
+      "end_UTC": "2026-11-13T07:44:42.665000+00:00",
+      "seconds": 275.4340000152588,
+      "completed": true,
+      "observed_reasoning_item_seconds": 130.80100011825562
+    },
+    {
+      "actor": "worker",
+      "turn_id": "01a1d3df-3514-7ed0-8ecb-3c56e5556721",
+      "start_UTC": "2026-11-13T07:46:23.153000+00:00",
+      "end_UTC": "2026-11-13T07:54:16.745000+00:00",
+      "seconds": 473.5919997692108,
+      "completed": true,
+      "observed_reasoning_item_seconds": 181.10400009155273
+    },
+    {
+      "actor": "worker",
+      "turn_id": "01a1d3e8-ae72-7b42-9897-16e2548aadfa",
+      "start_UTC": "2026-11-13T07:56:44.047000+00:00",
+      "end_UTC": "2026-11-13T08:06:28.834000+00:00",
+      "seconds": 584.7870001792908,
+      "completed": true,
+      "observed_reasoning_item_seconds": 297.34700083732605
+    },
+    {
+      "actor": "worker",
+      "turn_id": "01a1d3f5-d1dc-70f2-9f22-261431cffdd8",
+      "start_UTC": "2026-11-13T08:11:05.081000+00:00",
+      "end_UTC": "2026-11-13T08:27:46.849000+00:00",
+      "seconds": 1001.7679998874664,
+      "completed": true,
+      "observed_reasoning_item_seconds": 474.9089992046356
+    },
+    {
+      "actor": "worker",
+      "turn_id": "01a1d416-202d-7f13-aa6b-8d8934c154d0",
+      "start_UTC": "2026-11-13T08:46:22.278000+00:00",
+      "end_UTC": "2026-11-13T10:41:19.632000+00:00",
+      "seconds": 6897.353999853134,
+      "completed": true,
+      "observed_reasoning_item_seconds": 1351.1050004959106
+    },
+    {
+      "actor": "worker",
+      "turn_id": "01a1d484-7f86-7ea1-a9e9-7e45e3d15ff0",
+      "start_UTC": "2026-11-13T10:46:55.662000+00:00",
+      "end_UTC": "2026-11-13T10:58:40.077000+00:00",
+      "seconds": 704.414999961853,
+      "completed": true,
+      "observed_reasoning_item_seconds": 454.9630002975464
+    },
+    {
+      "actor": "worker",
+      "turn_id": "01a1d4a2-26d9-7a93-9959-3a9b974e224b",
+      "start_UTC": "2026-11-13T11:19:19.036000+00:00",
+      "end_UTC": "2026-11-13T11:41:44.014000+00:00",
+      "seconds": 1344.9779999256134,
+      "completed": true,
+      "observed_reasoning_item_seconds": 728.5959997177124
+    },
+    {
+      "actor": "worker",
+      "turn_id": "01a1d508-dfe6-73a3-90cc-dab89f0b2020",
+      "start_UTC": "2026-11-13T13:11:31.076000+00:00",
+      "end_UTC": "2026-11-13T13:18:00.836000+00:00",
+      "seconds": 389.75999999046326,
+      "completed": true,
+      "observed_reasoning_item_seconds": 256.62600016593933
+    },
+    {
+      "actor": "controller",
+      "turn_id": "01a1d366-b3f4-7fb2-a798-cc878921b8fa",
+      "start_UTC": "2026-11-13T05:34:50.862000+00:00",
+      "end_UTC": "2026-11-13T05:47:14.438000+00:00",
+      "seconds": 743.5759999752045,
+      "completed": true,
+      "observed_reasoning_item_seconds": 431.6450002193451
+    },
+    {
+      "actor": "controller",
+      "turn_id": "01a1d374-ba6c-7b12-8829-fb743601c490",
+      "start_UTC": "2026-11-13T05:50:04.941000+00:00",
+      "end_UTC": "2026-11-13T05:54:06.788000+00:00",
+      "seconds": 241.8470001220703,
+      "completed": true,
+      "observed_reasoning_item_seconds": 157.48799920082092
+    },
+    {
+      "actor": "controller",
+      "turn_id": "01a1d37c-6c35-7400-99f0-e0e9f46a8f8a",
+      "start_UTC": "2026-11-13T05:58:29.191000+00:00",
+      "end_UTC": "2026-11-13T06:36:48.305000+00:00",
+      "seconds": 2299.114000082016,
+      "completed": true,
+      "observed_reasoning_item_seconds": 1158.983999967575
+    },
+    {
+      "actor": "controller",
+      "turn_id": "01a1d39f-9765-7631-94d5-7272028868e3",
+      "start_UTC": "2026-11-13T06:36:54.010000+00:00",
+      "end_UTC": "2026-11-13T06:42:59.103000+00:00",
+      "seconds": 365.09299993515015,
+      "completed": true,
+      "observed_reasoning_item_seconds": 0.6940000057220459
+    },
+    {
+      "actor": "controller",
+      "turn_id": "01a1d3b0-077c-7410-94e0-95cb3c95464b",
+      "start_UTC": "2026-11-13T06:54:51.303000+00:00",
+      "end_UTC": "2026-11-13T06:56:16.106000+00:00",
+      "seconds": 84.80299997329712,
+      "completed": true,
+      "observed_reasoning_item_seconds": 0.5319998264312744
+    },
+    {
+      "actor": "controller",
+      "turn_id": "01a1d3b4-6623-7e83-a78e-e62994b4d83e",
+      "start_UTC": "2026-11-13T06:59:37.664000+00:00",
+      "end_UTC": "2026-11-13T07:06:45.061000+00:00",
+      "seconds": 427.3970000743866,
+      "completed": true,
+      "observed_reasoning_item_seconds": 0.24399995803833008
+    },
+    {
+      "actor": "controller",
+      "turn_id": "01a1d3ba-ebcb-72d2-8e70-baf15b5a7861",
+      "start_UTC": "2026-11-13T07:06:45.086000+00:00",
+      "end_UTC": "2026-11-13T07:24:47.638000+00:00",
+      "seconds": 1082.5520000457764,
+      "completed": true,
+      "observed_reasoning_item_seconds": 154.53100037574768
+    },
+    {
+      "actor": "controller",
+      "turn_id": "01a1d3cb-70a0-7740-a0ab-c2fcfef284ac",
+      "start_UTC": "2026-11-13T07:24:47.671000+00:00",
+      "end_UTC": "2026-11-13T08:01:51.991000+00:00",
+      "seconds": 2224.319999933243,
+      "completed": true,
+      "observed_reasoning_item_seconds": 931.0900008678436
+    },
+    {
+      "actor": "controller",
+      "turn_id": "01a1d3ed-617e-7d81-90de-1b93b9244b4a",
+      "start_UTC": "2026-11-13T08:01:52.022000+00:00",
+      "end_UTC": "2026-11-13T09:47:58.870000+00:00",
+      "seconds": 6366.8479998111725,
+      "completed": true,
+      "observed_reasoning_item_seconds": 3129.4260001182556
+    },
+    {
+      "actor": "controller",
+      "turn_id": "01a1d44e-881c-7e71-9027-39c9e1f9bd8c",
+      "start_UTC": "2026-11-13T09:47:58.898000+00:00",
+      "end_UTC": "2026-11-13T11:26:18.364000+00:00",
+      "seconds": 5899.466000080109,
+      "completed": true,
+      "observed_reasoning_item_seconds": 3211.5269978046417
+    },
+    {
+      "actor": "controller",
+      "turn_id": "01a1d4a8-8d03-75e0-b294-eeda84aaed17",
+      "start_UTC": "2026-11-13T11:26:18.395000+00:00",
+      "end_UTC": "2026-11-13T12:44:03.816000+00:00",
+      "seconds": 4665.421000003815,
+      "completed": true,
+      "observed_reasoning_item_seconds": 1777.1649992465973
+    },
+    {
+      "actor": "controller",
+      "turn_id": "01a1d4ef-bd6f-7be0-a593-a620f060acb5",
+      "start_UTC": "2026-11-13T12:44:03.854000+00:00",
+      "end_UTC": "2026-11-13T13:19:46.449933+00:00",
+      "seconds": 2142.5959329605103,
+      "completed": false,
+      "observed_reasoning_item_seconds": 627.9840009212494
+    }
+  ],
+  "limitations": [
+    "Agent time is a non-tool wall-clock proxy, not a measurement of internal model/GPU reasoning. Logged reasoning-item spans are a separate lower-bound detail.",
+    "Tool non-execution residuals can include approval, queue and runner overhead; do not label the entire residual as approval.",
+    "Baseline simulate.py bundles numerical advancement and drawing: its runtime stays in mixed_data_and_render. Dedicated later rendering and packaging phases are recorded separately when instrumented.",
+    "Per-category busy intervals may overlap. Grand totals use interval union, never a naive sum.",
+    "Incomplete turns keep unobserved activity in other until complete; figures will be revised retrospectively without rerunning physical models."
+  ],
+  "no_reasoning_text_exported": true,
+  "background_numerical_production": {
+    "case": "production_cpu12_n8192_v1",
+    "started_UTC_epoch": 1794569910.952968,
+    "complete": false,
+    "count": 353894400,
+    "measurement": "Dedicated process wall phase including numerical work, read-only observer, output and checkpoints; not pure CPU instructions",
+    "ended_UTC_epoch": 1794575986.449933,
+    "identity_basis": "Live PID and actual Windows creation time match the scoped launch; GetExitCodeProcess=STILL_ACTIVE",
+    "observed_accumulated_CPU_seconds": 57613.875,
+    "CPU_time_note": "Sum across threads, not additive to wall time or Agent activity",
+    "process_creation_UTC_epoch": 1794569910.9539127
+  },
+  "excluded_unrelated_worker_turn_count": 2
+}

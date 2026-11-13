@@ -1,0 +1,184 @@
+{
+  "prototype_only": false,
+  "case": "production_cpu12_n8192_v1",
+  "source_sha256": "474d1db4269826da9fc0c736a50df1ce70614fab1f35dd371ca74f4458c7b9d1",
+  "native_daily_fields_SHA256": "7860e4ee42ceed3a6c36ea081e0a142437674c7030b715a720f6094f7c90908c",
+  "primary_particles": 353894400,
+  "native_shape": [
+    15,
+    52,
+    368,
+    520
+  ],
+  "grid_m": 500,
+  "layers": 52,
+  "step_seconds": 30,
+  "height_AGL_m": [
+    0,
+    25
+  ],
+  "max_mass_closure_kg": 6.230038707144558e-10,
+  "summary": {
+    "case": "production_cpu12_n8192_v1",
+    "status": "COMPLETE",
+    "hour": 360,
+    "hours": 360,
+    "nper": 8192,
+    "primary_particle_total": 353894400,
+    "elapsed_seconds": 7363.081471199999,
+    "estimated_remaining_seconds": 0.0,
+    "active_particles": 5165597,
+    "peak_working_set_bytes": 5679329280,
+    "mass_closure_kg": -1.929933485807475e-10,
+    "observer_replay_mismatches": 0,
+    "max_mass_closure_kg": 6.228901838767342e-10,
+    "observer_segment_count": 594722,
+    "observer_residence_count": 43362,
+    "observer_max_replay_error": 0.0,
+    "source_mass_rate_kg_h": 4.519,
+    "workers": 12,
+    "precision": "float64",
+    "frozen_scalar_operator": true,
+    "surface_desorbed_kg": 0.0
+  },
+  "receptors": [
+    {
+      "id": "LS12",
+      "lon": 120.63809991597867,
+      "lat": 30.24894919215468,
+      "ix": 474,
+      "iy": 268,
+      "ground_orthometric_m": 6.643596707262999
+    },
+    {
+      "id": "LS13",
+      "lon": 120.6377333503414,
+      "lat": 30.24820290083626,
+      "ix": 474,
+      "iy": 267,
+      "ground_orthometric_m": 6.593527295236765
+    },
+    {
+      "id": "LS15",
+      "lon": 120.63844788338125,
+      "lat": 30.253077821227393,
+      "ix": 474,
+      "iy": 268,
+      "ground_orthometric_m": 7.298969245380222
+    },
+    {
+      "id": "LJ01",
+      "lon": 120.62871499584624,
+      "lat": 30.250146152461955,
+      "ix": 472,
+      "iy": 268,
+      "ground_orthometric_m": 6.710257482506997
+    },
+    {
+      "id": "Hangzhou reference",
+      "lon": 120.15,
+      "lat": 30.27,
+      "ix": 380,
+      "iy": 272,
+      "ground_orthometric_m": 14.217901717032344
+    }
+  ],
+  "daily_field_mass_checks": [
+    {
+      "day": 1,
+      "daily_field_airborne_kg": 21.297074825949196,
+      "hourly_ledger_mean_airborne_kg": 21.2970748259492,
+      "difference_kg": -3.552713678800501e-15
+    },
+    {
+      "day": 2,
+      "daily_field_airborne_kg": 26.461330296499415,
+      "hourly_ledger_mean_airborne_kg": 26.461330296499412,
+      "difference_kg": 3.552713678800501e-15
+    },
+    {
+      "day": 3,
+      "daily_field_airborne_kg": 49.057400423504,
+      "hourly_ledger_mean_airborne_kg": 49.057400423504,
+      "difference_kg": 0.0
+    },
+    {
+      "day": 4,
+      "daily_field_airborne_kg": 45.90178945404529,
+      "hourly_ledger_mean_airborne_kg": 45.901789454045286,
+      "difference_kg": 7.105427357601002e-15
+    },
+    {
+      "day": 5,
+      "daily_field_airborne_kg": 6.039565519051311,
+      "hourly_ledger_mean_airborne_kg": 6.039565519051309,
+      "difference_kg": 1.7763568394002505e-15
+    },
+    {
+      "day": 6,
+      "daily_field_airborne_kg": 17.50248427523127,
+      "hourly_ledger_mean_airborne_kg": 17.502484275231264,
+      "difference_kg": 7.105427357601002e-15
+    },
+    {
+      "day": 7,
+      "daily_field_airborne_kg": 9.952003900579188,
+      "hourly_ledger_mean_airborne_kg": 9.952003900579186,
+      "difference_kg": 1.7763568394002505e-15
+    },
+    {
+      "day": 8,
+      "daily_field_airborne_kg": 32.65498405076108,
+      "hourly_ledger_mean_airborne_kg": 32.65498405076108,
+      "difference_kg": 0.0
+    },
+    {
+      "day": 9,
+      "daily_field_airborne_kg": 19.34862078599629,
+      "hourly_ledger_mean_airborne_kg": 19.348620785996285,
+      "difference_kg": 3.552713678800501e-15
+    },
+    {
+      "day": 10,
+      "daily_field_airborne_kg": 29.92364703934096,
+      "hourly_ledger_mean_airborne_kg": 29.92364703934095,
+      "difference_kg": 1.0658141036401503e-14
+    },
+    {
+      "day": 11,
+      "daily_field_airborne_kg": 37.95634583353308,
+      "hourly_ledger_mean_airborne_kg": 37.95634583353307,
+      "difference_kg": 7.105427357601002e-15
+    },
+    {
+      "day": 12,
+      "daily_field_airborne_kg": 32.037021140448665,
+      "hourly_ledger_mean_airborne_kg": 32.03702114044866,
+      "difference_kg": 7.105427357601002e-15
+    },
+    {
+      "day": 13,
+      "daily_field_airborne_kg": 22.767875933197892,
+      "hourly_ledger_mean_airborne_kg": 22.767875933197885,
+      "difference_kg": 7.105427357601002e-15
+    },
+    {
+      "day": 14,
+      "daily_field_airborne_kg": 9.986865430089077,
+      "hourly_ledger_mean_airborne_kg": 9.986865430089075,
+      "difference_kg": 1.7763568394002505e-15
+    },
+    {
+      "day": 15,
+      "daily_field_airborne_kg": 13.081806605353268,
+      "hourly_ledger_mean_airborne_kg": 13.08180660535327,
+      "difference_kg": -1.7763568394002505e-15
+    }
+  ],
+  "hourly_and_daily_receptors_agree": true,
+  "original_GPU_validation_pass": false,
+  "formal_local_convergence_qualified": false,
+  "near_residence_is_authoritative_full_count_field": false,
+  "new_solver_advances": 0,
+  "wall_seconds": 9.557381599996006
+}

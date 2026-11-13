@@ -1,0 +1,217 @@
+{
+  "horizontal_grid_m": 500,
+  "vertical_layer_counts": [
+    13,
+    26,
+    52
+  ],
+  "emitted_particles_per_realization": 353894400,
+  "physical_scheme_changes": [],
+  "same_trajectories_across_vertical_levels": true,
+  "finest_CPU_GPU_validation": {
+    "layers": 52,
+    "rtol": 1e-08,
+    "atol_kg": 1e-09,
+    "max_absolute_error_kg": 2.3447910280083306e-13,
+    "pass": true
+  },
+  "metrics": [
+    {
+      "seed": 20261113,
+      "layers": 52,
+      "lowest_layer_thickness_m": 6.25,
+      "minimum_layer_thickness_m": 6.25,
+      "maximum_layer_thickness_m": 125.0,
+      "GPU_seconds_for_shared_finest_run": 117.54156849998981,
+      "max_mass_residual_kg": 2.4792825570330024e-08,
+      "finite_nonnegative": true,
+      "native_near_surface_height_m": [
+        0,
+        6.25
+      ],
+      "near_surface_fixed_sampling_height_m": [
+        0,
+        25
+      ]
+    },
+    {
+      "seed": 20261113,
+      "layers": 26,
+      "lowest_layer_thickness_m": 12.5,
+      "minimum_layer_thickness_m": 12.5,
+      "maximum_layer_thickness_m": 250.0,
+      "GPU_seconds_for_shared_finest_run": 117.54156849998981,
+      "max_mass_residual_kg": 2.4792825570330024e-08,
+      "finite_nonnegative": true,
+      "native_near_surface_height_m": [
+        0,
+        12.5
+      ],
+      "near_surface_fixed_sampling_height_m": [
+        0,
+        25
+      ]
+    },
+    {
+      "seed": 20261113,
+      "layers": 13,
+      "lowest_layer_thickness_m": 25.0,
+      "minimum_layer_thickness_m": 25.0,
+      "maximum_layer_thickness_m": 500.0,
+      "GPU_seconds_for_shared_finest_run": 117.54156849998981,
+      "max_mass_residual_kg": 2.4792825570330024e-08,
+      "finite_nonnegative": true,
+      "native_near_surface_height_m": [
+        0,
+        25.0
+      ],
+      "near_surface_fixed_sampling_height_m": [
+        0,
+        25
+      ]
+    },
+    {
+      "seed": 20261114,
+      "layers": 52,
+      "lowest_layer_thickness_m": 6.25,
+      "minimum_layer_thickness_m": 6.25,
+      "maximum_layer_thickness_m": 125.0,
+      "GPU_seconds_for_shared_finest_run": 117.71898099999817,
+      "max_mass_residual_kg": 2.479669092281256e-08,
+      "finite_nonnegative": true,
+      "native_near_surface_height_m": [
+        0,
+        6.25
+      ],
+      "near_surface_fixed_sampling_height_m": [
+        0,
+        25
+      ]
+    },
+    {
+      "seed": 20261114,
+      "layers": 26,
+      "lowest_layer_thickness_m": 12.5,
+      "minimum_layer_thickness_m": 12.5,
+      "maximum_layer_thickness_m": 250.0,
+      "GPU_seconds_for_shared_finest_run": 117.71898099999817,
+      "max_mass_residual_kg": 2.479669092281256e-08,
+      "finite_nonnegative": true,
+      "native_near_surface_height_m": [
+        0,
+        12.5
+      ],
+      "near_surface_fixed_sampling_height_m": [
+        0,
+        25
+      ]
+    },
+    {
+      "seed": 20261114,
+      "layers": 13,
+      "lowest_layer_thickness_m": 25.0,
+      "minimum_layer_thickness_m": 25.0,
+      "maximum_layer_thickness_m": 500.0,
+      "GPU_seconds_for_shared_finest_run": 117.71898099999817,
+      "max_mass_residual_kg": 2.479669092281256e-08,
+      "finite_nonnegative": true,
+      "native_near_surface_height_m": [
+        0,
+        25.0
+      ],
+      "near_surface_fixed_sampling_height_m": [
+        0,
+        25
+      ]
+    }
+  ],
+  "native_profile_comparisons": [
+    {
+      "seed": 20261113,
+      "coarse_layers": 13,
+      "fine_layers": 26,
+      "mass_weighted_native_profile_L1": 0.1670700910817709,
+      "outlet_column_native_profile_L1": {
+        "LS12": 0.26776514612920954,
+        "LS13": 0.21983093597905384,
+        "LS15": 0.26776514612920954,
+        "LJ01": 0.25146514879357673
+      },
+      "fixed_0_25m_concentration_max_error_ug_m3": 2.220446049250313e-16,
+      "pass_global_diagnostic": false,
+      "pass_all_outlet_column_diagnostics": false
+    },
+    {
+      "seed": 20261113,
+      "coarse_layers": 26,
+      "fine_layers": 52,
+      "mass_weighted_native_profile_L1": 0.11542800269409938,
+      "outlet_column_native_profile_L1": {
+        "LS12": 0.13995426390938315,
+        "LS13": 0.1358918740646415,
+        "LS15": 0.13995426390938315,
+        "LJ01": 0.19493365760740322
+      },
+      "fixed_0_25m_concentration_max_error_ug_m3": 2.220446049250313e-16,
+      "pass_global_diagnostic": false,
+      "pass_all_outlet_column_diagnostics": false
+    },
+    {
+      "seed": 20261114,
+      "coarse_layers": 13,
+      "fine_layers": 26,
+      "mass_weighted_native_profile_L1": 0.16713559147003568,
+      "outlet_column_native_profile_L1": {
+        "LS12": 0.26930919477250786,
+        "LS13": 0.22206942085853343,
+        "LS15": 0.26930919477250786,
+        "LJ01": 0.25225658178895777
+      },
+      "fixed_0_25m_concentration_max_error_ug_m3": 1.1102230246251565e-16,
+      "pass_global_diagnostic": false,
+      "pass_all_outlet_column_diagnostics": false
+    },
+    {
+      "seed": 20261114,
+      "coarse_layers": 26,
+      "fine_layers": 52,
+      "mass_weighted_native_profile_L1": 0.11550676873068995,
+      "outlet_column_native_profile_L1": {
+        "LS12": 0.14163614783617676,
+        "LS13": 0.13875592053214067,
+        "LS15": 0.14163614783617676,
+        "LJ01": 0.19411515983870797
+      },
+      "fixed_0_25m_concentration_max_error_ug_m3": 1.1102230246251565e-16,
+      "pass_global_diagnostic": false,
+      "pass_all_outlet_column_diagnostics": false
+    }
+  ],
+  "fixed_volume_checks": [
+    {
+      "seed": 20261113,
+      "rebinned_13layer_vs_frozen_13layer_max_error_kg": 1.7015555631161305e-13,
+      "same_physical_trajectories": true
+    },
+    {
+      "seed": 20261114,
+      "rebinned_13layer_vs_frozen_13layer_max_error_kg": 1.700029006457271e-13,
+      "same_physical_trajectories": true
+    }
+  ],
+  "finest_zero_emission_control_pass": true,
+  "declared_diagnostic_tolerances": {
+    "native_mass_weighted_profile_L1": 0.1,
+    "outlet_column_profile_L1": 0.05
+  },
+  "native_vertical_profile_convergence_demonstrated": false,
+  "fixed_0_25m_seed_L1": 0.08416249773407443,
+  "finest_outlet_column_two_seed_L1": {
+    "LS12": 0.015181543035030474,
+    "LS13": 0.019619353124860777,
+    "LS15": 0.015181543035030474,
+    "LJ01": 0.011598313887936184
+  },
+  "recovery_note": "Both completed high-particle runs reused; control expected-emissions wrapper corrected, CPU/GPU validation repeated to recover evidence; no physical scheme changed.",
+  "caution": "Density-estimator refinement; fixed physical 25 m deposition slab retained."
+}

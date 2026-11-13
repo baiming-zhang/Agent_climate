@@ -1,0 +1,221 @@
+{
+  "physical_scheme_changes": [],
+  "timesteps_s": [
+    120,
+    60,
+    30
+  ],
+  "horizontal_grid_m": 500,
+  "vertical_layers": 52,
+  "particle_count_per_realization": 88473600,
+  "emission_release_interval_s": 120,
+  "note_on_particle_count": "Fixed 88.5M per timestep/seed to bound this study cost; smaller than the prior 353.9M count study, not a revised production recommendation.",
+  "random_coupling": "same 30-second elementary Gaussian increments summed for coarser steps",
+  "CPU_GPU_validation": [
+    {
+      "dt_s": 120,
+      "max_abs_error_kg": 2.4158453015843406e-13,
+      "pass": true
+    },
+    {
+      "dt_s": 60,
+      "max_abs_error_kg": 2.7711166694643907e-13,
+      "pass": true
+    },
+    {
+      "dt_s": 30,
+      "max_abs_error_kg": 3.268496584496461e-13,
+      "pass": true
+    }
+  ],
+  "zero_emission_controls": [
+    {
+      "dt_s": 120,
+      "pass": true
+    },
+    {
+      "dt_s": 60,
+      "pass": true
+    },
+    {
+      "dt_s": 30,
+      "pass": true
+    }
+  ],
+  "metrics": [
+    {
+      "dt_s": 120,
+      "seed": 20261113,
+      "steps": 10800,
+      "emitted_particles": 88473600,
+      "GPU_seconds": 51.268178899990744,
+      "max_mass_residual_kg": 6.284608389250934e-10,
+      "final_airborne_kg": 13.007835628823967,
+      "dry_kg": 193.9380168581425,
+      "wet_kg": 42.002430053637,
+      "chemical_kg": 500.31121851505816,
+      "lateral_export_kg": 877.5804989439322,
+      "top_export_kg": 0.0
+    },
+    {
+      "dt_s": 60,
+      "seed": 20261113,
+      "steps": 21600,
+      "emitted_particles": 88473600,
+      "GPU_seconds": 73.5524010000081,
+      "max_mass_residual_kg": 9.999894245993346e-09,
+      "final_airborne_kg": 13.004046036045073,
+      "dry_kg": 194.52153318096504,
+      "wet_kg": 41.982514325347864,
+      "chemical_kg": 500.73696089372106,
+      "lateral_export_kg": 876.5949455739094,
+      "top_export_kg": 0.0
+    },
+    {
+      "dt_s": 30,
+      "seed": 20261113,
+      "steps": 43200,
+      "emitted_particles": 88473600,
+      "GPU_seconds": 122.19533159999992,
+      "max_mass_residual_kg": 1.7014599507092498e-08,
+      "final_airborne_kg": 13.002010259518482,
+      "dry_kg": 194.77299566885503,
+      "wet_kg": 41.97148611869198,
+      "chemical_kg": 500.9460276540456,
+      "lateral_export_kg": 876.1474802832098,
+      "top_export_kg": 0.0
+    },
+    {
+      "dt_s": 120,
+      "seed": 20261114,
+      "steps": 10800,
+      "emitted_particles": 88473600,
+      "GPU_seconds": 51.56848660000833,
+      "max_mass_residual_kg": 6.45741238258779e-10,
+      "final_airborne_kg": 13.015153193201572,
+      "dry_kg": 193.97552085975448,
+      "wet_kg": 42.007374955157985,
+      "chemical_kg": 500.2887165020804,
+      "lateral_export_kg": 877.5532344893833,
+      "top_export_kg": 0.0
+    },
+    {
+      "dt_s": 60,
+      "seed": 20261114,
+      "steps": 21600,
+      "emitted_particles": 88473600,
+      "GPU_seconds": 73.61145260000194,
+      "max_mass_residual_kg": 1.0026269592344761e-08,
+      "final_airborne_kg": 13.012522308945774,
+      "dry_kg": 194.57044279692775,
+      "wet_kg": 41.988136188415346,
+      "chemical_kg": 500.71466818296744,
+      "lateral_export_kg": 876.5542305327589,
+      "top_export_kg": 0.0
+    },
+    {
+      "dt_s": 30,
+      "seed": 20261114,
+      "steps": 43200,
+      "emitted_particles": 88473600,
+      "GPU_seconds": 121.97962169999664,
+      "max_mass_residual_kg": 1.7007550923153758e-08,
+      "final_airborne_kg": 13.013351104106142,
+      "dry_kg": 194.81648490185924,
+      "wet_kg": 41.9775271631742,
+      "chemical_kg": 500.929954357858,
+      "lateral_export_kg": 876.1026824573357,
+      "top_export_kg": 0.0
+    }
+  ],
+  "comparisons": [
+    {
+      "seed": 20261113,
+      "coarse_dt_s": 120,
+      "fine_dt_s": 60,
+      "near_surface_field_L1": 0.14242517732442905,
+      "receptor_series_L1": {
+        "LS12": 0.015698468792469233,
+        "LS13": 0.0341379964523174,
+        "LS15": 0.015698468792469233,
+        "LJ01": 0.03610753544873519
+      },
+      "process_total_relative_changes": {
+        "final_airborne_kg": 0.0002914164382677256,
+        "dry_kg": 0.002999751818117136,
+        "wet_kg": 0.00047438150404227565,
+        "chemical_kg": 0.0008502315824720297,
+        "lateral_export_kg": 0.0011242973450839833
+      },
+      "all_diagnostic_criteria_pass": false
+    },
+    {
+      "seed": 20261113,
+      "coarse_dt_s": 60,
+      "fine_dt_s": 30,
+      "near_surface_field_L1": 0.13553129358005744,
+      "receptor_series_L1": {
+        "LS12": 0.014873180919692298,
+        "LS13": 0.01485395066630045,
+        "LS15": 0.014873180919692298,
+        "LJ01": 0.032489588690024794
+      },
+      "process_total_relative_changes": {
+        "final_airborne_kg": 0.00015657398248100575,
+        "dry_kg": 0.001291054168091768,
+        "wet_kg": 0.0002627547336470237,
+        "chemical_kg": 0.000417343882940105,
+        "lateral_export_kg": 0.0005107191434882131
+      },
+      "all_diagnostic_criteria_pass": false
+    },
+    {
+      "seed": 20261114,
+      "coarse_dt_s": 120,
+      "fine_dt_s": 60,
+      "near_surface_field_L1": 0.1427329478000201,
+      "receptor_series_L1": {
+        "LS12": 0.024489369143181724,
+        "LS13": 0.02145813866648415,
+        "LS15": 0.024489369143181724,
+        "LJ01": 0.04546705459431732
+      },
+      "process_total_relative_changes": {
+        "final_airborne_kg": 0.0002021809602576987,
+        "dry_kg": 0.003057617223979828,
+        "wet_kg": 0.00045819530203264504,
+        "chemical_kg": 0.0008506874432754165,
+        "lateral_export_kg": 0.0011396944100277857
+      },
+      "all_diagnostic_criteria_pass": false
+    },
+    {
+      "seed": 20261114,
+      "coarse_dt_s": 60,
+      "fine_dt_s": 30,
+      "near_surface_field_L1": 0.1357375452095798,
+      "receptor_series_L1": {
+        "LS12": 0.010625380527831024,
+        "LS13": 0.022791074342485416,
+        "LS15": 0.010625380527831024,
+        "LJ01": 0.042989836728499736
+      },
+      "process_total_relative_changes": {
+        "final_airborne_kg": 6.36880657209451e-05,
+        "dry_kg": 0.001262942943742345,
+        "wet_kg": 0.00025273106726619773,
+        "chemical_kg": 0.00042977301121174095,
+        "lateral_export_kg": 0.0005154054250314853
+      },
+      "all_diagnostic_criteria_pass": false
+    }
+  ],
+  "declared_diagnostic_tolerances": {
+    "successive_near_surface_field_L1": 0.1,
+    "successive_receptor_series_L1": 0.05,
+    "cumulative_process_total_relative_change": 0.01
+  },
+  "timestep_convergence_demonstrated": false,
+  "finest_dt_two_seed_field_L1": 0.1670310481228246,
+  "elapsed_seconds": 710.1646139621735
+}

@@ -1,0 +1,50 @@
+{
+  "landcover": {
+    "file": "../geography/landcover_2021.rgba.gz",
+    "shape": [
+      601,
+      1001
+    ],
+    "bbox": [
+      119.8,
+      30.0,
+      120.8,
+      30.6
+    ],
+    "sha256": "608042585e1f1a88674f64d3e27a277eef6887663489ae4e09d00850695d63ea",
+    "source_sha256": "af726dcd5d1447534bc6aebb4d871242557b6180c6e8d15d7eda9bb7678d4773",
+    "historical_year": 2021,
+    "physical_inputs_changed": false,
+    "attribution": "\u00a9 ESA WorldCover project 2021 / Contains modified Copernicus Sentinel data (2021) processed by ESA WorldCover consortium"
+  },
+  "OSM": {
+    "files": [
+      "../geography/osm_outlet_context.json"
+    ],
+    "fallback_height_m": 6,
+    "height_policy": "Use tagged height; otherwise3m times tagged floors; otherwise explicitly schematic6m, matching the Vancouver fallback policy. No assumed building height enters transport or wind."
+  },
+  "physical_model_changed": false,
+  "terrain_height_policy": "Exact unchanged bilinear modeled terrain. Landcover colors supply geographic context only, not a new meteorological grid.",
+  "buildings": "../geography/buildings/metadata.json",
+  "outlet_landcover": {
+    "file": "../geography/outlet_cover10m.rgba.gz",
+    "shape": [
+      960,
+      1080
+    ],
+    "bbox": [
+      120.59004166666666,
+      30.210041666666665,
+      120.67995833333333,
+      30.28995833333333
+    ],
+    "source": "https://esa-worldcover.s3.eu-central-1.amazonaws.com/v200/2021/map/ESA_WorldCover_10m_2021_v200_N30E120_Map.tif",
+    "source_resolution_m": 10,
+    "year": 2021,
+    "categorical": true,
+    "physical_inputs_changed": false,
+    "source_SHA256": "fff4d50d6af76efdf1b9c913c185aa016cc426b6ca0d4c352cfffcc79c2e5d98",
+    "asset_SHA256": "f2569b4fb2e59927a03d6661073cb4612fc3b6b6c63c1c2ced6c193650024774"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "retrieved_UTC": "2026-11-13T10:10:10.671434+00:00",
+  "DEM": "Copernicus DEM GLO-90 public DSM, 3 arcsec, downloaded via public AWS bucket",
+  "vertical_datum": "EGM2008 orthometric heights, per product documentation",
+  "tiles": [
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N29_00_E118_00_DEM/Copernicus_DSM_COG_30_N29_00_E118_00_DEM.tif",
+      "file": "C:\\Users\\ASUS\\Documents\\Codex\\2026-11-13\\hangzhou-so2-blind-v00\\work\\terrain_tiles\\Copernicus_DSM_COG_30_N29_00_E118_00_DEM.tif",
+      "bytes": 5744593,
+      "sha256": "3eac358c4b200e8ea3ac70bf0b64c7c6dcdcf0b279738b4172da49f496bd99fc"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N29_00_E119_00_DEM/Copernicus_DSM_COG_30_N29_00_E119_00_DEM.tif",
+      "file": "C:\\Users\\ASUS\\Documents\\Codex\\2026-11-13\\hangzhou-so2-blind-v00\\work\\terrain_tiles\\Copernicus_DSM_COG_30_N29_00_E119_00_DEM.tif",
+      "bytes": 5803028,
+      "sha256": "7c2ee1492288b9129bdf682431130f6f4a18fb9019639e5f8cdd454d90904b9b"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N29_00_E120_00_DEM/Copernicus_DSM_COG_30_N29_00_E120_00_DEM.tif",
+      "file": "C:\\Users\\ASUS\\Documents\\Codex\\2026-11-13\\hangzhou-so2-blind-v00\\work\\terrain_tiles\\Copernicus_DSM_COG_30_N29_00_E120_00_DEM.tif",
+      "bytes": 5917789,
+      "sha256": "6c8e589e12b6f8fa55d4c6329e181c575bdae0dae0d460c1e2673273be720a8a"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N30_00_E118_00_DEM/Copernicus_DSM_COG_30_N30_00_E118_00_DEM.tif",
+      "file": "C:\\Users\\ASUS\\Documents\\Codex\\2026-11-13\\hangzhou-so2-blind-v00\\work\\terrain_tiles\\Copernicus_DSM_COG_30_N30_00_E118_00_DEM.tif",
+      "bytes": 5833977,
+      "sha256": "5bfa4bc37c7eb08deea7a7b3f78fab6893ccc8607ae46c00e62a5eeef80b07cd"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N30_00_E119_00_DEM/Copernicus_DSM_COG_30_N30_00_E119_00_DEM.tif",
+      "file": "C:\\Users\\ASUS\\Documents\\Codex\\2026-11-13\\hangzhou-so2-blind-v00\\work\\terrain_tiles\\Copernicus_DSM_COG_30_N30_00_E119_00_DEM.tif",
+      "bytes": 5935278,
+      "sha256": "60b18a0d7ea298f54944e0115d6cd1914d057fda9ed7f9a772ab86498e50e375"
+    },
+    {
+      "url": "https://copernicus-dem-90m.s3.amazonaws.com/Copernicus_DSM_COG_30_N30_00_E120_00_DEM/Copernicus_DSM_COG_30_N30_00_E120_00_DEM.tif",
+      "file": "C:\\Users\\ASUS\\Documents\\Codex\\2026-11-13\\hangzhou-so2-blind-v00\\work\\terrain_tiles\\Copernicus_DSM_COG_30_N30_00_E120_00_DEM.tif",
+      "bytes": 5544242,
+      "sha256": "a1d1053b3bbc0ab5e30b2af27134b3ce9581b02f634fecd281616a66b42bc091"
+    }
+  ],
+  "surface_weather_request": "https://single-runs-api.open-meteo.com/v1/forecast?latitude=30.27&longitude=120.15&hourly=temperature_2m,relative_humidity_2m,precipitation,shortwave_radiation&models=gfs_global&forecast_days=16&timezone=Asia%2FShanghai&run=2026-11-13T00:00",
+  "surface_weather_sha256": "f6761b38b8a1a6e572cb3f9976d4a827aeac5569479aec8a6bae8b35b4d0a498",
+  "license": "https://copernicus-dem-30m.s3.amazonaws.com/readme.html",
+  "citation": "Copernicus DEM GLO-90; data provided by European Space Agency / Airbus, accessed via AWS public bucket",
+  "terrain_node_shape": [
+    369,
+    521
+  ],
+  "terrain_min_m": -42.77997589111328,
+  "terrain_max_m": 1703.3052978515625,
+  "model_resolution_m": 500,
+  "resampling": "bilinear sampling of GLO-90 DSM at 500m terrain vertices; continuous bilinear cells",
+  "warning": "DSM includes canopy/buildings; unresolved subgrid ridges and vertical datum differences remain; modeled-surface collision guarantee is not a guarantee against unrepresented real obstacles"
+}

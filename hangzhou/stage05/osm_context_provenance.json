@@ -1,0 +1,21 @@
+{
+  "requested_UTC": "2026-11-13T08:09:59.166695+00:00",
+  "bbox_south_west_north_east": [
+    30.22,
+    120.6,
+    30.28,
+    120.67
+  ],
+  "purpose": "Independent presentation geography; does not alter terrain, emissions, wind or solver data.",
+  "attribution": "\u00a9 OpenStreetMap contributors",
+  "license_url": "https://www.openstreetmap.org/copyright",
+  "query": "[out:json][timeout:40];(way[\"building\"](30.22,120.6,30.28,120.67);way[\"landuse\"=\"industrial\"](30.22,120.6,30.28,120.67);way[\"natural\"=\"water\"](30.22,120.6,30.28,120.67););out geom;",
+  "attempts": [],
+  "status": "downloaded",
+  "endpoint": "https://overpass-api.de/api/interpreter",
+  "sha256": "61ee934828b0595d8295a96e971907d04c2175fb5cd1df8ff13c55e2fc885503",
+  "bytes": 55429,
+  "element_count": 64,
+  "OSM_timestamp": "2026-11-13T08:09:06Z",
+  "completed_UTC": "2026-11-13T08:10:27.827373+00:00"
+}

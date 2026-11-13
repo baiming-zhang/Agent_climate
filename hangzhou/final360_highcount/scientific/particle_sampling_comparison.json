@@ -1,0 +1,889 @@
+{
+  "original_stage": 15,
+  "engineering_case": "production_cpu12_n8192_v1",
+  "original_primary_particles": 345600,
+  "high_primary_particles": 353894400,
+  "count_multiplier": 1024,
+  "same_actual_model_grid_and_terrain": true,
+  "same_model_equations": true,
+  "original_field_SHA256": "97427bc5a4ec14686870255d47eff8f2ac9529f64e3940dd409d2443d01d4e95",
+  "high_daily_field_SHA256": "7860e4ee42ceed3a6c36ea081e0a142437674c7030b715a720f6094f7c90908c",
+  "daily_comparison": [
+    {
+      "day": 1,
+      "full_3D_relative_L1_to_high": 1.0929361857858029,
+      "full_3D_max_abs_ug_m3": 2.308993716710864,
+      "ground0_25_relative_L1_to_high": 1.0320769988138756,
+      "low_mean_airborne_kg": 21.24704570921687,
+      "high_mean_airborne_kg": 21.297074825949196
+    },
+    {
+      "day": 2,
+      "full_3D_relative_L1_to_high": 1.5423836262497457,
+      "full_3D_max_abs_ug_m3": 1.8293982468359884,
+      "ground0_25_relative_L1_to_high": 1.2030098600504757,
+      "low_mean_airborne_kg": 26.45381425450568,
+      "high_mean_airborne_kg": 26.461330296499415
+    },
+    {
+      "day": 3,
+      "full_3D_relative_L1_to_high": 1.6165180023542791,
+      "full_3D_max_abs_ug_m3": 1.2438866470409968,
+      "ground0_25_relative_L1_to_high": 1.3294758855595508,
+      "low_mean_airborne_kg": 49.207592883165454,
+      "high_mean_airborne_kg": 49.057400423504
+    },
+    {
+      "day": 4,
+      "full_3D_relative_L1_to_high": 1.6431608914962834,
+      "full_3D_max_abs_ug_m3": 2.4779518965198175,
+      "ground0_25_relative_L1_to_high": 1.3576724867138206,
+      "low_mean_airborne_kg": 45.80102758986391,
+      "high_mean_airborne_kg": 45.90178945404529
+    },
+    {
+      "day": 5,
+      "full_3D_relative_L1_to_high": 1.2605422181097636,
+      "full_3D_max_abs_ug_m3": 3.4652003711009556,
+      "ground0_25_relative_L1_to_high": 0.8199999980580597,
+      "low_mean_airborne_kg": 6.023504188185692,
+      "high_mean_airborne_kg": 6.039565519051311
+    },
+    {
+      "day": 6,
+      "full_3D_relative_L1_to_high": 1.181602397723634,
+      "full_3D_max_abs_ug_m3": 1.5629455907558043,
+      "ground0_25_relative_L1_to_high": 0.9383278942458507,
+      "low_mean_airborne_kg": 17.45641919130073,
+      "high_mean_airborne_kg": 17.50248427523127
+    },
+    {
+      "day": 7,
+      "full_3D_relative_L1_to_high": 1.289549479793811,
+      "full_3D_max_abs_ug_m3": 1.5801548429954915,
+      "ground0_25_relative_L1_to_high": 1.002932727215687,
+      "low_mean_airborne_kg": 9.936416531662731,
+      "high_mean_airborne_kg": 9.952003900579188
+    },
+    {
+      "day": 8,
+      "full_3D_relative_L1_to_high": 1.3990733839062177,
+      "full_3D_max_abs_ug_m3": 2.0916741603183953,
+      "ground0_25_relative_L1_to_high": 1.182529151701322,
+      "low_mean_airborne_kg": 32.683169790869016,
+      "high_mean_airborne_kg": 32.65498405076108
+    },
+    {
+      "day": 9,
+      "full_3D_relative_L1_to_high": 1.2254208213043274,
+      "full_3D_max_abs_ug_m3": 2.7777441682565986,
+      "ground0_25_relative_L1_to_high": 0.9894394879213237,
+      "low_mean_airborne_kg": 19.348903239548772,
+      "high_mean_airborne_kg": 19.34862078599629
+    },
+    {
+      "day": 10,
+      "full_3D_relative_L1_to_high": 1.4536578081180314,
+      "full_3D_max_abs_ug_m3": 2.2196424609232124,
+      "ground0_25_relative_L1_to_high": 1.2443176517648278,
+      "low_mean_airborne_kg": 29.871746369069513,
+      "high_mean_airborne_kg": 29.92364703934096
+    },
+    {
+      "day": 11,
+      "full_3D_relative_L1_to_high": 1.4320251312422105,
+      "full_3D_max_abs_ug_m3": 1.8134163533756955,
+      "ground0_25_relative_L1_to_high": 1.1357541186416538,
+      "low_mean_airborne_kg": 37.89730010951616,
+      "high_mean_airborne_kg": 37.95634583353308
+    },
+    {
+      "day": 12,
+      "full_3D_relative_L1_to_high": 1.439892242213117,
+      "full_3D_max_abs_ug_m3": 2.19486144228601,
+      "ground0_25_relative_L1_to_high": 1.1341950617001213,
+      "low_mean_airborne_kg": 32.059624516843115,
+      "high_mean_airborne_kg": 32.037021140448665
+    },
+    {
+      "day": 13,
+      "full_3D_relative_L1_to_high": 1.4168573898309489,
+      "full_3D_max_abs_ug_m3": 3.1891102568201575,
+      "ground0_25_relative_L1_to_high": 1.2253006112061562,
+      "low_mean_airborne_kg": 22.675946650284764,
+      "high_mean_airborne_kg": 22.767875933197892
+    },
+    {
+      "day": 14,
+      "full_3D_relative_L1_to_high": 1.498909980694717,
+      "full_3D_max_abs_ug_m3": 1.7571293342950853,
+      "ground0_25_relative_L1_to_high": 1.2965324831290974,
+      "low_mean_airborne_kg": 9.988238929201072,
+      "high_mean_airborne_kg": 9.986865430089077
+    },
+    {
+      "day": 15,
+      "full_3D_relative_L1_to_high": 1.477963176910642,
+      "full_3D_max_abs_ug_m3": 1.6394818899667363,
+      "ground0_25_relative_L1_to_high": 1.1383543068904165,
+      "low_mean_airborne_kg": 13.0878462541318,
+      "high_mean_airborne_kg": 13.081806605353268
+    }
+  ],
+  "receptors": [
+    {
+      "day": 1,
+      "receptor": "LS12",
+      "native_ix": 474,
+      "native_iy": 268,
+      "low0_25_ug_m3": 0.13127511763446725,
+      "high0_25_ug_m3": 0.1925504526726165,
+      "difference_high_minus_low_ug_m3": 0.06127533503814925,
+      "relative_to_high": -0.3182300232881431
+    },
+    {
+      "day": 1,
+      "receptor": "LS13",
+      "native_ix": 474,
+      "native_iy": 267,
+      "low0_25_ug_m3": 0.35228466241446804,
+      "high0_25_ug_m3": 0.38845741058522576,
+      "difference_high_minus_low_ug_m3": 0.03617274817075772,
+      "relative_to_high": -0.09311895509024298
+    },
+    {
+      "day": 1,
+      "receptor": "LS15",
+      "native_ix": 474,
+      "native_iy": 268,
+      "low0_25_ug_m3": 0.13127511763446725,
+      "high0_25_ug_m3": 0.1925504526726165,
+      "difference_high_minus_low_ug_m3": 0.06127533503814925,
+      "relative_to_high": -0.3182300232881431
+    },
+    {
+      "day": 1,
+      "receptor": "LJ01",
+      "native_ix": 472,
+      "native_iy": 268,
+      "low0_25_ug_m3": 0.6967676118695243,
+      "high0_25_ug_m3": 0.2496000064920137,
+      "difference_high_minus_low_ug_m3": -0.4471676053775106,
+      "relative_to_high": 1.7915368339215902
+    },
+    {
+      "day": 1,
+      "receptor": "Hangzhou reference",
+      "native_ix": 380,
+      "native_iy": 272,
+      "low0_25_ug_m3": 0.0,
+      "high0_25_ug_m3": 0.0,
+      "difference_high_minus_low_ug_m3": 0.0,
+      "relative_to_high": 0.0
+    },
+    {
+      "day": 2,
+      "receptor": "LS12",
+      "native_ix": 474,
+      "native_iy": 268,
+      "low0_25_ug_m3": 0.013796081727274588,
+      "high0_25_ug_m3": 0.009736688596300825,
+      "difference_high_minus_low_ug_m3": -0.004059393130973763,
+      "relative_to_high": 0.4169172189111617
+    },
+    {
+      "day": 2,
+      "receptor": "LS13",
+      "native_ix": 474,
+      "native_iy": 267,
+      "low0_25_ug_m3": 0.1776333439894984,
+      "high0_25_ug_m3": 0.16554619026401435,
+      "difference_high_minus_low_ug_m3": -0.012087153725484051,
+      "relative_to_high": 0.07301378368301538
+    },
+    {
+      "day": 2,
+      "receptor": "LS15",
+      "native_ix": 474,
+      "native_iy": 268,
+      "low0_25_ug_m3": 0.013796081727274588,
+      "high0_25_ug_m3": 0.009736688596300825,
+      "difference_high_minus_low_ug_m3": -0.004059393130973763,
+      "relative_to_high": 0.4169172189111617
+    },
+    {
+      "day": 2,
+      "receptor": "LJ01",
+      "native_ix": 472,
+      "native_iy": 268,
+      "low0_25_ug_m3": 0.13387778889294333,
+      "high0_25_ug_m3": 0.09234715567766287,
+      "difference_high_minus_low_ug_m3": -0.04153063321528046,
+      "relative_to_high": 0.44972292769084143
+    },
+    {
+      "day": 2,
+      "receptor": "Hangzhou reference",
+      "native_ix": 380,
+      "native_iy": 272,
+      "low0_25_ug_m3": 0.0,
+      "high0_25_ug_m3": 0.0,
+      "difference_high_minus_low_ug_m3": 0.0,
+      "relative_to_high": 0.0
+    },
+    {
+      "day": 3,
+      "receptor": "LS12",
+      "native_ix": 474,
+      "native_iy": 268,
+      "low0_25_ug_m3": 0.006869738430853853,
+      "high0_25_ug_m3": 0.0116336161999251,
+      "difference_high_minus_low_ug_m3": 0.004763877769071247,
+      "relative_to_high": -0.40949243014411274
+    },
+    {
+      "day": 3,
+      "receptor": "LS13",
+      "native_ix": 474,
+      "native_iy": 267,
+      "low0_25_ug_m3": 0.023387399133886957,
+      "high0_25_ug_m3": 0.02917917772372535,
+      "difference_high_minus_low_ug_m3": 0.005791778589838394,
+      "relative_to_high": -0.19849012349409512
+    },
+    {
+      "day": 3,
+      "receptor": "LS15",
+      "native_ix": 474,
+      "native_iy": 268,
+      "low0_25_ug_m3": 0.006869738430853853,
+      "high0_25_ug_m3": 0.0116336161999251,
+      "difference_high_minus_low_ug_m3": 0.004763877769071247,
+      "relative_to_high": -0.40949243014411274
+    },
+    {
+      "day": 3,
+      "receptor": "LJ01",
+      "native_ix": 472,
+      "native_iy": 268,
+      "low0_25_ug_m3": 0.547090906149106,
+      "high0_25_ug_m3": 0.2830321613887845,
+      "difference_high_minus_low_ug_m3": -0.26405874476032154,
+      "relative_to_high": 0.9329637432885222
+    },
+    {
+      "day": 3,
+      "receptor": "Hangzhou reference",
+      "native_ix": 380,
+      "native_iy": 272,
+      "low0_25_ug_m3": 0.09362794568591729,
+      "high0_25_ug_m3": 0.02473411573617668,
+      "difference_high_minus_low_ug_m3": -0.06889382994974061,
+      "relative_to_high": 2.785376711445355
+    },
+    {
+      "day": 4,
+      "receptor": "LS12",
+      "native_ix": 474,
+      "native_iy": 268,
+      "low0_25_ug_m3": 0.02397106456296342,
+      "high0_25_ug_m3": 0.013916944256338402,
+      "difference_high_minus_low_ug_m3": -0.010054120306625017,
+      "relative_to_high": 0.7224373484176254
+    },
+    {
+      "day": 4,
+      "receptor": "LS13",
+      "native_ix": 474,
+      "native_iy": 267,
+      "low0_25_ug_m3": 0.1553444111497853,
+      "high0_25_ug_m3": 0.15094195464096594,
+      "difference_high_minus_low_ug_m3": -0.0044024565088193746,
+      "relative_to_high": 0.029166552926197097
+    },
+    {
+      "day": 4,
+      "receptor": "LS15",
+      "native_ix": 474,
+      "native_iy": 268,
+      "low0_25_ug_m3": 0.02397106456296342,
+      "high0_25_ug_m3": 0.013916944256338402,
+      "difference_high_minus_low_ug_m3": -0.010054120306625017,
+      "relative_to_high": 0.7224373484176254
+    },
+    {
+      "day": 4,
+      "receptor": "LJ01",
+      "native_ix": 472,
+      "native_iy": 268,
+      "low0_25_ug_m3": 0.04048467683220889,
+      "high0_25_ug_m3": 0.1822223539805913,
+      "difference_high_minus_low_ug_m3": 0.14173767714838242,
+      "relative_to_high": -0.7778281536384886
+    },
+    {
+      "day": 4,
+      "receptor": "Hangzhou reference",
+      "native_ix": 380,
+      "native_iy": 272,
+      "low0_25_ug_m3": 0.0,
+      "high0_25_ug_m3": 0.004204700519108033,
+      "difference_high_minus_low_ug_m3": 0.004204700519108033,
+      "relative_to_high": -1.0
+    },
+    {
+      "day": 5,
+      "receptor": "LS12",
+      "native_ix": 474,
+      "native_iy": 268,
+      "low0_25_ug_m3": 0.0013260839884833369,
+      "high0_25_ug_m3": 0.0012702734236980646,
+      "difference_high_minus_low_ug_m3": -5.581056478527226e-05,
+      "relative_to_high": 0.043935867462923515
+    },
+    {
+      "day": 5,
+      "receptor": "LS13",
+      "native_ix": 474,
+      "native_iy": 267,
+      "low0_25_ug_m3": 0.10722337214242564,
+      "high0_25_ug_m3": 0.15356302565343916,
+      "difference_high_minus_low_ug_m3": 0.04633965351101352,
+      "relative_to_high": -0.3017630924750909
+    },
+    {
+      "day": 5,
+      "receptor": "LS15",
+      "native_ix": 474,
+      "native_iy": 268,
+      "low0_25_ug_m3": 0.0013260839884833369,
+      "high0_25_ug_m3": 0.0012702734236980646,
+      "difference_high_minus_low_ug_m3": -5.581056478527226e-05,
+      "relative_to_high": 0.043935867462923515
+    },
+    {
+      "day": 5,
+      "receptor": "LJ01",
+      "native_ix": 472,
+      "native_iy": 268,
+      "low0_25_ug_m3": 0.0,
+      "high0_25_ug_m3": 0.005048993559676563,
+      "difference_high_minus_low_ug_m3": 0.005048993559676563,
+      "relative_to_high": -1.0
+    },
+    {
+      "day": 5,
+      "receptor": "Hangzhou reference",
+      "native_ix": 380,
+      "native_iy": 272,
+      "low0_25_ug_m3": 0.0,
+      "high0_25_ug_m3": 0.0,
+      "difference_high_minus_low_ug_m3": 0.0,
+      "relative_to_high": 0.0
+    },
+    {
+      "day": 6,
+      "receptor": "LS12",
+      "native_ix": 474,
+      "native_iy": 268,
+      "low0_25_ug_m3": 0.1462564163507391,
+      "high0_25_ug_m3": 0.3283168222865105,
+      "difference_high_minus_low_ug_m3": 0.18206040593577139,
+      "relative_to_high": -0.5545265840106532
+    },
+    {
+      "day": 6,
+      "receptor": "LS13",
+      "native_ix": 474,
+      "native_iy": 267,
+      "low0_25_ug_m3": 0.13601436727726077,
+      "high0_25_ug_m3": 0.16535490582898568,
+      "difference_high_minus_low_ug_m3": 0.029340538551724915,
+      "relative_to_high": -0.1774397826579736
+    },
+    {
+      "day": 6,
+      "receptor": "LS15",
+      "native_ix": 474,
+      "native_iy": 268,
+      "low0_25_ug_m3": 0.1462564163507391,
+      "high0_25_ug_m3": 0.3283168222865105,
+      "difference_high_minus_low_ug_m3": 0.18206040593577139,
+      "relative_to_high": -0.5545265840106532
+    },
+    {
+      "day": 6,
+      "receptor": "LJ01",
+      "native_ix": 472,
+      "native_iy": 268,
+      "low0_25_ug_m3": 0.23476678509453777,
+      "high0_25_ug_m3": 0.39903608267298263,
+      "difference_high_minus_low_ug_m3": 0.16426929757844486,
+      "relative_to_high": -0.4116652721680474
+    },
+    {
+      "day": 6,
+      "receptor": "Hangzhou reference",
+      "native_ix": 380,
+      "native_iy": 272,
+      "low0_25_ug_m3": 0.0,
+      "high0_25_ug_m3": 0.0,
+      "difference_high_minus_low_ug_m3": 0.0,
+      "relative_to_high": 0.0
+    },
+    {
+      "day": 7,
+      "receptor": "LS12",
+      "native_ix": 474,
+      "native_iy": 268,
+      "low0_25_ug_m3": 0.41197600030996373,
+      "high0_25_ug_m3": 0.23073908520350642,
+      "difference_high_minus_low_ug_m3": -0.1812369151064573,
+      "relative_to_high": 0.7854625710534071
+    },
+    {
+      "day": 7,
+      "receptor": "LS13",
+      "native_ix": 474,
+      "native_iy": 267,
+      "low0_25_ug_m3": 0.4587014173995795,
+      "high0_25_ug_m3": 0.386400383168338,
+      "difference_high_minus_low_ug_m3": -0.07230103423124146,
+      "relative_to_high": 0.18711429227476467
+    },
+    {
+      "day": 7,
+      "receptor": "LS15",
+      "native_ix": 474,
+      "native_iy": 268,
+      "low0_25_ug_m3": 0.41197600030996373,
+      "high0_25_ug_m3": 0.23073908520350642,
+      "difference_high_minus_low_ug_m3": -0.1812369151064573,
+      "relative_to_high": 0.7854625710534071
+    },
+    {
+      "day": 7,
+      "receptor": "LJ01",
+      "native_ix": 472,
+      "native_iy": 268,
+      "low0_25_ug_m3": 0.23356706765367355,
+      "high0_25_ug_m3": 0.12967791118666488,
+      "difference_high_minus_low_ug_m3": -0.10388915646700866,
+      "relative_to_high": 0.8011322477076717
+    },
+    {
+      "day": 7,
+      "receptor": "Hangzhou reference",
+      "native_ix": 380,
+      "native_iy": 272,
+      "low0_25_ug_m3": 0.0,
+      "high0_25_ug_m3": 0.0,
+      "difference_high_minus_low_ug_m3": 0.0,
+      "relative_to_high": 0.0
+    },
+    {
+      "day": 8,
+      "receptor": "LS12",
+      "native_ix": 474,
+      "native_iy": 268,
+      "low0_25_ug_m3": 0.21558823751954595,
+      "high0_25_ug_m3": 0.1443336810951903,
+      "difference_high_minus_low_ug_m3": -0.07125455642435566,
+      "relative_to_high": 0.4936793400104732
+    },
+    {
+      "day": 8,
+      "receptor": "LS13",
+      "native_ix": 474,
+      "native_iy": 267,
+      "low0_25_ug_m3": 0.08277079491289964,
+      "high0_25_ug_m3": 0.21435407541518542,
+      "difference_high_minus_low_ug_m3": 0.1315832805022858,
+      "relative_to_high": -0.6138594764173263
+    },
+    {
+      "day": 8,
+      "receptor": "LS15",
+      "native_ix": 474,
+      "native_iy": 268,
+      "low0_25_ug_m3": 0.21558823751954595,
+      "high0_25_ug_m3": 0.1443336810951903,
+      "difference_high_minus_low_ug_m3": -0.07125455642435566,
+      "relative_to_high": 0.4936793400104732
+    },
+    {
+      "day": 8,
+      "receptor": "LJ01",
+      "native_ix": 472,
+      "native_iy": 268,
+      "low0_25_ug_m3": 0.6232671939129827,
+      "high0_25_ug_m3": 0.4195311215049004,
+      "difference_high_minus_low_ug_m3": -0.20373607240808228,
+      "relative_to_high": 0.48562803082941847
+    },
+    {
+      "day": 8,
+      "receptor": "Hangzhou reference",
+      "native_ix": 380,
+      "native_iy": 272,
+      "low0_25_ug_m3": 0.0,
+      "high0_25_ug_m3": 0.000624763224621674,
+      "difference_high_minus_low_ug_m3": 0.000624763224621674,
+      "relative_to_high": -1.0
+    },
+    {
+      "day": 9,
+      "receptor": "LS12",
+      "native_ix": 474,
+      "native_iy": 268,
+      "low0_25_ug_m3": 0.5212675050040747,
+      "high0_25_ug_m3": 0.34989351122002954,
+      "difference_high_minus_low_ug_m3": -0.17137399378404516,
+      "relative_to_high": 0.48978900233527656
+    },
+    {
+      "day": 9,
+      "receptor": "LS13",
+      "native_ix": 474,
+      "native_iy": 267,
+      "low0_25_ug_m3": 0.02008946605629698,
+      "high0_25_ug_m3": 0.0430742162365542,
+      "difference_high_minus_low_ug_m3": 0.022984750180257217,
+      "relative_to_high": -0.5336080882825582
+    },
+    {
+      "day": 9,
+      "receptor": "LS15",
+      "native_ix": 474,
+      "native_iy": 268,
+      "low0_25_ug_m3": 0.5212675050040747,
+      "high0_25_ug_m3": 0.34989351122002954,
+      "difference_high_minus_low_ug_m3": -0.17137399378404516,
+      "relative_to_high": 0.48978900233527656
+    },
+    {
+      "day": 9,
+      "receptor": "LJ01",
+      "native_ix": 472,
+      "native_iy": 268,
+      "low0_25_ug_m3": 0.6982956915142791,
+      "high0_25_ug_m3": 0.38867820334817993,
+      "difference_high_minus_low_ug_m3": -0.30961748816609913,
+      "relative_to_high": 0.7965908185716867
+    },
+    {
+      "day": 9,
+      "receptor": "Hangzhou reference",
+      "native_ix": 380,
+      "native_iy": 272,
+      "low0_25_ug_m3": 0.0,
+      "high0_25_ug_m3": 0.0,
+      "difference_high_minus_low_ug_m3": 0.0,
+      "relative_to_high": 0.0
+    },
+    {
+      "day": 10,
+      "receptor": "LS12",
+      "native_ix": 474,
+      "native_iy": 268,
+      "low0_25_ug_m3": 0.03936048016385291,
+      "high0_25_ug_m3": 0.03679296047250241,
+      "difference_high_minus_low_ug_m3": -0.002567519691350495,
+      "relative_to_high": 0.06978290570744794
+    },
+    {
+      "day": 10,
+      "receptor": "LS13",
+      "native_ix": 474,
+      "native_iy": 267,
+      "low0_25_ug_m3": 0.08595551777942506,
+      "high0_25_ug_m3": 0.0636333038273259,
+      "difference_high_minus_low_ug_m3": -0.022322213952099157,
+      "relative_to_high": 0.35079451497084424
+    },
+    {
+      "day": 10,
+      "receptor": "LS15",
+      "native_ix": 474,
+      "native_iy": 268,
+      "low0_25_ug_m3": 0.03936048016385291,
+      "high0_25_ug_m3": 0.03679296047250241,
+      "difference_high_minus_low_ug_m3": -0.002567519691350495,
+      "relative_to_high": 0.06978290570744794
+    },
+    {
+      "day": 10,
+      "receptor": "LJ01",
+      "native_ix": 472,
+      "native_iy": 268,
+      "low0_25_ug_m3": 0.2777876880069629,
+      "high0_25_ug_m3": 0.13498574746408296,
+      "difference_high_minus_low_ug_m3": -0.14280194054287995,
+      "relative_to_high": 1.0579038396692713
+    },
+    {
+      "day": 10,
+      "receptor": "Hangzhou reference",
+      "native_ix": 380,
+      "native_iy": 272,
+      "low0_25_ug_m3": 0.0,
+      "high0_25_ug_m3": 0.0019333343007572924,
+      "difference_high_minus_low_ug_m3": 0.0019333343007572924,
+      "relative_to_high": -1.0
+    },
+    {
+      "day": 11,
+      "receptor": "LS12",
+      "native_ix": 474,
+      "native_iy": 268,
+      "low0_25_ug_m3": 0.014629216946870428,
+      "high0_25_ug_m3": 0.011693566315008603,
+      "difference_high_minus_low_ug_m3": -0.0029356506318618247,
+      "relative_to_high": 0.2510483587965751
+    },
+    {
+      "day": 11,
+      "receptor": "LS13",
+      "native_ix": 474,
+      "native_iy": 267,
+      "low0_25_ug_m3": 0.10071772457756961,
+      "high0_25_ug_m3": 0.06339669683386179,
+      "difference_high_minus_low_ug_m3": -0.037321027743707824,
+      "relative_to_high": 0.5886904146049091
+    },
+    {
+      "day": 11,
+      "receptor": "LS15",
+      "native_ix": 474,
+      "native_iy": 268,
+      "low0_25_ug_m3": 0.014629216946870428,
+      "high0_25_ug_m3": 0.011693566315008603,
+      "difference_high_minus_low_ug_m3": -0.0029356506318618247,
+      "relative_to_high": 0.2510483587965751
+    },
+    {
+      "day": 11,
+      "receptor": "LJ01",
+      "native_ix": 472,
+      "native_iy": 268,
+      "low0_25_ug_m3": 0.26584712282710493,
+      "high0_25_ug_m3": 0.2446027104591041,
+      "difference_high_minus_low_ug_m3": -0.021244412368000842,
+      "relative_to_high": 0.08685272672623455
+    },
+    {
+      "day": 11,
+      "receptor": "Hangzhou reference",
+      "native_ix": 380,
+      "native_iy": 272,
+      "low0_25_ug_m3": 0.0,
+      "high0_25_ug_m3": 0.023871610331174235,
+      "difference_high_minus_low_ug_m3": 0.023871610331174235,
+      "relative_to_high": -1.0
+    },
+    {
+      "day": 12,
+      "receptor": "LS12",
+      "native_ix": 474,
+      "native_iy": 268,
+      "low0_25_ug_m3": 0.09174250204169837,
+      "high0_25_ug_m3": 0.12432636131957303,
+      "difference_high_minus_low_ug_m3": 0.03258385927787466,
+      "relative_to_high": -0.26208326964641004
+    },
+    {
+      "day": 12,
+      "receptor": "LS13",
+      "native_ix": 474,
+      "native_iy": 267,
+      "low0_25_ug_m3": 0.026689628669612695,
+      "high0_25_ug_m3": 0.04484989226797537,
+      "difference_high_minus_low_ug_m3": 0.018160263598362678,
+      "relative_to_high": -0.40491208964017594
+    },
+    {
+      "day": 12,
+      "receptor": "LS15",
+      "native_ix": 474,
+      "native_iy": 268,
+      "low0_25_ug_m3": 0.09174250204169837,
+      "high0_25_ug_m3": 0.12432636131957303,
+      "difference_high_minus_low_ug_m3": 0.03258385927787466,
+      "relative_to_high": -0.26208326964641004
+    },
+    {
+      "day": 12,
+      "receptor": "LJ01",
+      "native_ix": 472,
+      "native_iy": 268,
+      "low0_25_ug_m3": 0.07426470275244229,
+      "high0_25_ug_m3": 0.42609080825851875,
+      "difference_high_minus_low_ug_m3": 0.35182610550607646,
+      "relative_to_high": -0.8257068650319622
+    },
+    {
+      "day": 12,
+      "receptor": "Hangzhou reference",
+      "native_ix": 380,
+      "native_iy": 272,
+      "low0_25_ug_m3": 0.0,
+      "high0_25_ug_m3": 0.017387976339451806,
+      "difference_high_minus_low_ug_m3": 0.017387976339451806,
+      "relative_to_high": -1.0
+    },
+    {
+      "day": 13,
+      "receptor": "LS12",
+      "native_ix": 474,
+      "native_iy": 268,
+      "low0_25_ug_m3": 0.07315076669737512,
+      "high0_25_ug_m3": 0.07912148130311913,
+      "difference_high_minus_low_ug_m3": 0.0059707146057440125,
+      "relative_to_high": -0.07546262414969011
+    },
+    {
+      "day": 13,
+      "receptor": "LS13",
+      "native_ix": 474,
+      "native_iy": 267,
+      "low0_25_ug_m3": 0.005526601501050742,
+      "high0_25_ug_m3": 0.004089139802090463,
+      "difference_high_minus_low_ug_m3": -0.0014374616989602787,
+      "relative_to_high": 0.35153156128959323
+    },
+    {
+      "day": 13,
+      "receptor": "LS15",
+      "native_ix": 474,
+      "native_iy": 268,
+      "low0_25_ug_m3": 0.07315076669737512,
+      "high0_25_ug_m3": 0.07912148130311913,
+      "difference_high_minus_low_ug_m3": 0.0059707146057440125,
+      "relative_to_high": -0.07546262414969011
+    },
+    {
+      "day": 13,
+      "receptor": "LJ01",
+      "native_ix": 472,
+      "native_iy": 268,
+      "low0_25_ug_m3": 0.20436616364750285,
+      "high0_25_ug_m3": 0.2137430111481887,
+      "difference_high_minus_low_ug_m3": 0.009376847500685848,
+      "relative_to_high": -0.04386972678224716
+    },
+    {
+      "day": 13,
+      "receptor": "Hangzhou reference",
+      "native_ix": 380,
+      "native_iy": 272,
+      "low0_25_ug_m3": 0.0,
+      "high0_25_ug_m3": 0.0009165443640909818,
+      "difference_high_minus_low_ug_m3": 0.0009165443640909818,
+      "relative_to_high": -1.0
+    },
+    {
+      "day": 14,
+      "receptor": "LS12",
+      "native_ix": 474,
+      "native_iy": 268,
+      "low0_25_ug_m3": 0.03955646181496447,
+      "high0_25_ug_m3": 0.103660868270053,
+      "difference_high_minus_low_ug_m3": 0.06410440645508853,
+      "relative_to_high": -0.6184050695782943
+    },
+    {
+      "day": 14,
+      "receptor": "LS13",
+      "native_ix": 474,
+      "native_iy": 267,
+      "low0_25_ug_m3": 0.15759615177368988,
+      "high0_25_ug_m3": 0.23628967638622828,
+      "difference_high_minus_low_ug_m3": 0.0786935246125384,
+      "relative_to_high": -0.3330383528221079
+    },
+    {
+      "day": 14,
+      "receptor": "LS15",
+      "native_ix": 474,
+      "native_iy": 268,
+      "low0_25_ug_m3": 0.03955646181496447,
+      "high0_25_ug_m3": 0.103660868270053,
+      "difference_high_minus_low_ug_m3": 0.06410440645508853,
+      "relative_to_high": -0.6184050695782943
+    },
+    {
+      "day": 14,
+      "receptor": "LJ01",
+      "native_ix": 472,
+      "native_iy": 268,
+      "low0_25_ug_m3": 0.11676057334935686,
+      "high0_25_ug_m3": 0.06467316457061176,
+      "difference_high_minus_low_ug_m3": -0.0520874087787451,
+      "relative_to_high": 0.8053944649928918
+    },
+    {
+      "day": 14,
+      "receptor": "Hangzhou reference",
+      "native_ix": 380,
+      "native_iy": 272,
+      "low0_25_ug_m3": 0.0,
+      "high0_25_ug_m3": 0.0,
+      "difference_high_minus_low_ug_m3": 0.0,
+      "relative_to_high": 0.0
+    },
+    {
+      "day": 15,
+      "receptor": "LS12",
+      "native_ix": 474,
+      "native_iy": 268,
+      "low0_25_ug_m3": 0.0006605247258601285,
+      "high0_25_ug_m3": 0.0006681419138623134,
+      "difference_high_minus_low_ug_m3": 7.617188002184911e-06,
+      "relative_to_high": -0.011400554050190323
+    },
+    {
+      "day": 15,
+      "receptor": "LS13",
+      "native_ix": 474,
+      "native_iy": 267,
+      "low0_25_ug_m3": 0.13759557542174417,
+      "high0_25_ug_m3": 0.12082370395163053,
+      "difference_high_minus_low_ug_m3": -0.016771871470113636,
+      "relative_to_high": 0.1388127571128587
+    },
+    {
+      "day": 15,
+      "receptor": "LS15",
+      "native_ix": 474,
+      "native_iy": 268,
+      "low0_25_ug_m3": 0.0006605247258601285,
+      "high0_25_ug_m3": 0.0006681419138623134,
+      "difference_high_minus_low_ug_m3": 7.617188002184911e-06,
+      "relative_to_high": -0.011400554050190323
+    },
+    {
+      "day": 15,
+      "receptor": "LJ01",
+      "native_ix": 472,
+      "native_iy": 268,
+      "low0_25_ug_m3": 0.0,
+      "high0_25_ug_m3": 0.001933315452000399,
+      "difference_high_minus_low_ug_m3": 0.001933315452000399,
+      "relative_to_high": -1.0
+    },
+    {
+      "day": 15,
+      "receptor": "Hangzhou reference",
+      "native_ix": 380,
+      "native_iy": 272,
+      "low0_25_ug_m3": 0.0,
+      "high0_25_ug_m3": 0.0,
+      "difference_high_minus_low_ug_m3": 0.0,
+      "relative_to_high": 0.0
+    }
+  ],
+  "formal_convergence_qualification": false,
+  "interpretation": "One large count increase with the unchanged CPU scalar physics. Full-domain values are compared without an error-based mask or renormalization. A single new realization does not establish particle-count, grid or timestep convergence; original failed criteria remain unchanged. Systematic near-path display sampling is a separate diagnostic.",
+  "new_model_runs": 0,
+  "wall_seconds": 5.1792830000049435
+}

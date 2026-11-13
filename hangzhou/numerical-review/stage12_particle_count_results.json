@@ -1,0 +1,204 @@
+{
+  "grid_m": 500,
+  "height": "0-25 m AGL volume mean",
+  "physical_scheme_changes": [],
+  "criteria": {
+    "maximum_two_seed_native_field_normalized_L1": 0.1,
+    "maximum_successive_count_field_normalized_L1_both_seeds": 0.1,
+    "maximum_successive_count_receptor_series_normalized_L1_both_seeds": 0.05
+  },
+  "run_metrics": [
+    {
+      "particles_per_source_step": 128,
+      "seed": 20261113,
+      "total_emitted_particles": 5529600,
+      "GPU_seconds": 0.0,
+      "max_mass_residual_kg": 1.1118572729174048e-10,
+      "median_nonzero_cell_day_support": 2.0,
+      "fraction_nonzero_cell_days_below20_samples": 0.9291382558765476,
+      "near_surface_peak_ug_m3": 0.8493551436326775,
+      "final_airborne_kg": 12.992638092949067
+    },
+    {
+      "particles_per_source_step": 128,
+      "seed": 20261114,
+      "total_emitted_particles": 5529600,
+      "GPU_seconds": 0.0,
+      "max_mass_residual_kg": 9.208633855450898e-11,
+      "median_nonzero_cell_day_support": 2.0,
+      "fraction_nonzero_cell_days_below20_samples": 0.9294400620484506,
+      "near_surface_peak_ug_m3": 0.9238100126106867,
+      "final_airborne_kg": 13.012840624656583
+    },
+    {
+      "particles_per_source_step": 512,
+      "seed": 20261113,
+      "total_emitted_particles": 22118400,
+      "GPU_seconds": 7.9839758000016445,
+      "max_mass_residual_kg": 1.467697074986063e-09,
+      "median_nonzero_cell_day_support": 6.0,
+      "fraction_nonzero_cell_days_below20_samples": 0.8151602127680417,
+      "near_surface_peak_ug_m3": 0.8623733336573068,
+      "final_airborne_kg": 13.023272390030451
+    },
+    {
+      "particles_per_source_step": 512,
+      "seed": 20261114,
+      "total_emitted_particles": 22118400,
+      "GPU_seconds": 7.988256399999955,
+      "max_mass_residual_kg": 1.4572378859156743e-09,
+      "median_nonzero_cell_day_support": 6.0,
+      "fraction_nonzero_cell_days_below20_samples": 0.8154237293674369,
+      "near_surface_peak_ug_m3": 0.8831989472841092,
+      "final_airborne_kg": 13.035516363281712
+    },
+    {
+      "particles_per_source_step": 2048,
+      "seed": 20261113,
+      "total_emitted_particles": 88473600,
+      "GPU_seconds": 29.826664299995173,
+      "max_mass_residual_kg": 6.534719432238489e-10,
+      "median_nonzero_cell_day_support": 19.0,
+      "fraction_nonzero_cell_days_below20_samples": 0.5037821893395568,
+      "near_surface_peak_ug_m3": 0.8897071605102086,
+      "final_airborne_kg": 13.013104307186492
+    },
+    {
+      "particles_per_source_step": 2048,
+      "seed": 20261114,
+      "total_emitted_particles": 88473600,
+      "GPU_seconds": 29.83393409999553,
+      "max_mass_residual_kg": 6.432401278289035e-10,
+      "median_nonzero_cell_day_support": 19.0,
+      "fraction_nonzero_cell_days_below20_samples": 0.5039872089251753,
+      "near_surface_peak_ug_m3": 0.8504899520860699,
+      "final_airborne_kg": 13.017294919072771
+    },
+    {
+      "particles_per_source_step": 8192,
+      "seed": 20261113,
+      "total_emitted_particles": 353894400,
+      "GPU_seconds": 117.5138491000107,
+      "max_mass_residual_kg": 2.4793735065031797e-08,
+      "median_nonzero_cell_day_support": 66.0,
+      "fraction_nonzero_cell_days_below20_samples": 0.23363801973427642,
+      "near_surface_peak_ug_m3": 0.8751599896855673,
+      "final_airborne_kg": 13.009525630877416
+    },
+    {
+      "particles_per_source_step": 8192,
+      "seed": 20261114,
+      "total_emitted_particles": 353894400,
+      "GPU_seconds": 117.58935070000007,
+      "max_mass_residual_kg": 2.4794871933409013e-08,
+      "median_nonzero_cell_day_support": 66.0,
+      "fraction_nonzero_cell_days_below20_samples": 0.23419004913890115,
+      "near_surface_peak_ug_m3": 0.8683184545255306,
+      "final_airborne_kg": 13.013338924570675
+    }
+  ],
+  "count_comparisons": [
+    {
+      "particles_per_source_step": 128,
+      "two_seed_native_field_normalized_L1": 0.6036963947008746,
+      "successive_count_comparisons": [],
+      "seed_field_criterion_pass": false,
+      "successive_field_criterion_pass": false,
+      "successive_receptor_criterion_pass": false,
+      "all_diagnostic_criteria_pass": false
+    },
+    {
+      "particles_per_source_step": 512,
+      "two_seed_native_field_normalized_L1": 0.32611845321492167,
+      "successive_count_comparisons": [
+        {
+          "seed": 20261113,
+          "field_normalized_L1": 0.5003837202678357,
+          "receptor_normalized_L1": {
+            "LS12": 0.12734607647510815,
+            "LS13": 0.09104650606125138,
+            "LS15": 0.12734607647510815,
+            "LJ01": 0.18030237421444967
+          }
+        },
+        {
+          "seed": 20261114,
+          "field_normalized_L1": 0.5015249742458173,
+          "receptor_normalized_L1": {
+            "LS12": 0.15165913880194792,
+            "LS13": 0.07996171679405986,
+            "LS15": 0.15165913880194792,
+            "LJ01": 0.09916299316055789
+          }
+        }
+      ],
+      "seed_field_criterion_pass": false,
+      "successive_field_criterion_pass": false,
+      "successive_receptor_criterion_pass": false,
+      "all_diagnostic_criteria_pass": false
+    },
+    {
+      "particles_per_source_step": 2048,
+      "two_seed_native_field_normalized_L1": 0.16704516986868714,
+      "successive_count_comparisons": [
+        {
+          "seed": 20261113,
+          "field_normalized_L1": 0.26308576286099206,
+          "receptor_normalized_L1": {
+            "LS12": 0.040465351672646546,
+            "LS13": 0.0614638859318605,
+            "LS15": 0.040465351672646546,
+            "LJ01": 0.08104556157491782
+          }
+        },
+        {
+          "seed": 20261114,
+          "field_normalized_L1": 0.26254142996652763,
+          "receptor_normalized_L1": {
+            "LS12": 0.04646413653399163,
+            "LS13": 0.052697928889559355,
+            "LS15": 0.04646413653399163,
+            "LJ01": 0.059422997134630125
+          }
+        }
+      ],
+      "seed_field_criterion_pass": false,
+      "successive_field_criterion_pass": false,
+      "successive_receptor_criterion_pass": false,
+      "all_diagnostic_criteria_pass": false
+    },
+    {
+      "particles_per_source_step": 8192,
+      "two_seed_native_field_normalized_L1": 0.08416249773407448,
+      "successive_count_comparisons": [
+        {
+          "seed": 20261113,
+          "field_normalized_L1": 0.13283098917721664,
+          "receptor_normalized_L1": {
+            "LS12": 0.02916229793421906,
+            "LS13": 0.018457308699237777,
+            "LS15": 0.02916229793421906,
+            "LJ01": 0.05327327486009372
+          }
+        },
+        {
+          "seed": 20261114,
+          "field_normalized_L1": 0.13271237960874716,
+          "receptor_normalized_L1": {
+            "LS12": 0.022353899243273787,
+            "LS13": 0.02428825768666049,
+            "LS15": 0.022353899243273787,
+            "LJ01": 0.04585648947899801
+          }
+        }
+      ],
+      "seed_field_criterion_pass": true,
+      "successive_field_criterion_pass": false,
+      "successive_receptor_criterion_pass": false,
+      "all_diagnostic_criteria_pass": false
+    }
+  ],
+  "all_diagnostic_criteria_pass": false,
+  "elapsed_seconds": 331.8299605846405,
+  "note": "two-seed sensitivity and count-refinement diagnostics, not confidence intervals or observational validation"
+}

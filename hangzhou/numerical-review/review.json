@@ -1,0 +1,105 @@
+{
+  "source": "Immutable stage 11\u201314 receipts",
+  "records": [
+    {
+      "stage": 11,
+      "metric": "1 km \u2192 500 m daily field",
+      "value": 0.41961310484060677,
+      "limit": 0.1,
+      "passed": false
+    },
+    {
+      "stage": 11,
+      "metric": "1 km \u2192 500 m outlet series",
+      "value": 0.335589804533759,
+      "limit": 0.05,
+      "passed": false
+    },
+    {
+      "stage": 12,
+      "metric": "Finest-count two-seed daily field",
+      "value": 0.08416249773407448,
+      "limit": 0.1,
+      "passed": true
+    },
+    {
+      "stage": 12,
+      "metric": "Finest successive-count daily field",
+      "value": 0.13283098917721664,
+      "limit": 0.1,
+      "passed": false
+    },
+    {
+      "stage": 12,
+      "metric": "Finest successive-count outlet series",
+      "value": 0.05327327486009372,
+      "limit": 0.05,
+      "passed": false
+    },
+    {
+      "stage": 13,
+      "metric": "26 \u2192 52 layer global native profile",
+      "value": 0.11550676873068995,
+      "limit": 0.1,
+      "passed": false
+    },
+    {
+      "stage": 13,
+      "metric": "26 \u2192 52 layer outlet native profiles",
+      "value": 0.19493365760740322,
+      "limit": 0.05,
+      "passed": false
+    },
+    {
+      "stage": 14,
+      "metric": "60 \u2192 30 s near-surface daily field",
+      "value": 0.1357375452095798,
+      "limit": 0.1,
+      "passed": false
+    },
+    {
+      "stage": 14,
+      "metric": "60 \u2192 30 s outlet series",
+      "value": 0.042989836728499736,
+      "limit": 0.05,
+      "passed": true
+    },
+    {
+      "stage": 14,
+      "metric": "60 \u2192 30 s cumulative process totals",
+      "value": 0.001291054168091768,
+      "limit": 0.01,
+      "passed": true
+    }
+  ],
+  "evidence": [
+    {
+      "stage": 11,
+      "original_path": "outputs/grid_convergence/grid_study_results.json",
+      "sha256": "21e79716e5af21eefafe9a21b6bead2df5492aa96088942d7c0c0d05f57b9edc",
+      "file": "stage11_grid_study_results.json"
+    },
+    {
+      "stage": 12,
+      "original_path": "outputs/particle_count_convergence/particle_count_results.json",
+      "sha256": "f347089ba2d0bbb7bbb92f9e0311eb9624591bbc2bc888c6f4ecd5f065f521b2",
+      "file": "stage12_particle_count_results.json"
+    },
+    {
+      "stage": 13,
+      "original_path": "outputs/vertical_grid_convergence/vertical_grid_results.json",
+      "sha256": "07d57c476bb89fc546a12cc8d8b617c72927efb7196b111a4bfd31c96e1f6816",
+      "file": "stage13_vertical_grid_results.json"
+    },
+    {
+      "stage": 14,
+      "original_path": "outputs/timestep_convergence/timestep_results.json",
+      "sha256": "08401f1b329cb81661ae6078c58b25b1a0b6d752fb39e94117884f655e65b18e",
+      "file": "stage14_timestep_results.json"
+    }
+  ],
+  "criteria_modified": false,
+  "physical_data_modified": false,
+  "solver_runs": 0,
+  "all_four_studies_demonstrate_convergence": false
+}

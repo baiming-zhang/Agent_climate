@@ -1,0 +1,9 @@
+{
+  "frozen_source_sha256": "b35b12950c24c0e0e520a3c1d5080e1ef2a6ac92749637e7ec40741a1c51f1d9",
+  "numerical_solver_rerun": false,
+  "native_data_modified": false,
+  "concentration_conversion": "None",
+  "conservative_display_factor": 1,
+  "query_mode": "display",
+  "maximum_rebin_mass_error_kg": 0.0
+}

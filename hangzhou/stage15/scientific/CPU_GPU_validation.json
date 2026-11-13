@@ -1,0 +1,90 @@
+{
+  "pass": false,
+  "physical_schemes_identical": true,
+  "comparison": {
+    "ledger_max_abs_error_kg": 0.015095028044740388,
+    "reservoir_max_abs_error_kg": 0.0004059362182500998,
+    "same_field_indices": false
+  },
+  "CPU": {
+    "name": "CPU_reference",
+    "backend": "CPU",
+    "hours": 360,
+    "primary_particles_per_source_event": 1,
+    "terrain": true,
+    "release_enabled": true,
+    "zero_emissions": false,
+    "elapsed_seconds": 15.770099401473999,
+    "external_emitted_kg": 1626.8400000002746,
+    "final_airborne_kg": 18.128699090947926,
+    "final_reversible_surface_kg": 0.9517893135284827,
+    "final_irreversible_surface_SO2eq_kg": 228.21616750370978,
+    "chemical_sink_kg": 499.29172546507084,
+    "lateral_export_kg": 880.2516186268465,
+    "top_export_kg": 0.0,
+    "gross_contact_uptake_kg": 189.19131973510625,
+    "gross_wet_deposition_kg": 39.97663708213401,
+    "gross_rereleased_kg": 0.0,
+    "surface_fixation_kg": 17.9673426599827,
+    "max_hourly_mass_residual_kg": 2.2492940843221731e-10,
+    "min_accepted_path_clearance_m": 0.0,
+    "contact_count": 895445,
+    "collision_limit_stops": 1,
+    "penetration_flags": 0,
+    "DDA_failure_flags": 0,
+    "warm_dry_gate_hours": 0,
+    "source_model_ground_m": [
+      6.643596707748393,
+      6.593527295503476,
+      7.298969247882446,
+      6.710257483696232
+    ],
+    "source_outlet_model_AMSL_m": [
+      26.643596707748394,
+      56.59352729550348,
+      87.29896924788244,
+      71.71025748369624
+    ]
+  },
+  "GPU": {
+    "name": "GPU_reference",
+    "backend": "GPU",
+    "hours": 360,
+    "primary_particles_per_source_event": 1,
+    "terrain": true,
+    "release_enabled": true,
+    "zero_emissions": false,
+    "elapsed_seconds": 11.3107750415802,
+    "external_emitted_kg": 1626.8400000002746,
+    "final_airborne_kg": 18.128699090947922,
+    "final_reversible_surface_kg": 0.9517893136780529,
+    "final_irreversible_surface_SO2eq_kg": 228.21602825346775,
+    "chemical_sink_kg": 499.291597809305,
+    "lateral_export_kg": 880.251885532709,
+    "top_export_kg": 0.0,
+    "gross_contact_uptake_kg": 189.1911799448894,
+    "gross_wet_deposition_kg": 39.97663762225965,
+    "gross_rereleased_kg": 0.0,
+    "surface_fixation_kg": 17.967328680811423,
+    "max_hourly_mass_residual_kg": 2.248157215944957e-10,
+    "min_accepted_path_clearance_m": 0.0,
+    "contact_count": 895446,
+    "collision_limit_stops": 1,
+    "penetration_flags": 0,
+    "DDA_failure_flags": 0,
+    "warm_dry_gate_hours": 0,
+    "source_model_ground_m": [
+      6.643596707748393,
+      6.593527295503476,
+      7.298969247882446,
+      6.710257483696232
+    ],
+    "source_outlet_model_AMSL_m": [
+      26.643596707748394,
+      56.59352729550348,
+      87.29896924788244,
+      71.71025748369624
+    ]
+  },
+  "numpy_version": "2.5.4"
+}
