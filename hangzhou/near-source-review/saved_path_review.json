@@ -1,0 +1,101 @@
+{
+  "observed_UTC": "2026-11-14T00:59:22.500513+00:00",
+  "frozen_case": "production_cpu12_n8192_v1",
+  "model_steps_executed": 0,
+  "wall_seconds": 1.845484799996484,
+  "original_birth_segment_count": 43200,
+  "full30s_unreflected_birth_samples": 41839,
+  "coefficient_Kh_m2_s": {
+    "count": 1440,
+    "min": 20.0,
+    "median": 20.0,
+    "p95": 150.0,
+    "max": 150.0
+  },
+  "expected_sigma30s_per_axis_m": {
+    "count": 1440,
+    "min": 34.64101615137755,
+    "median": 34.64101615137755,
+    "p95": 94.86832980505137,
+    "max": 94.86832980505137
+  },
+  "mean_wind30s_distance_m": {
+    "count": 1440,
+    "min": 5.619154483920435,
+    "median": 76.18136771034327,
+    "p95": 232.08122519669823,
+    "max": 334.43397937552857
+  },
+  "actual_unreflected_first30s_horizontal_distance_m": {
+    "count": 41839,
+    "min": 0.7436215757163336,
+    "median": 102.14924382554089,
+    "p95": 276.8069553912266,
+    "max": 584.2526206728453
+  },
+  "standardized_observed_xy_noise": {
+    "mean": [
+      -0.00419848365163379,
+      0.00864109821189956
+    ],
+    "std": [
+      1.0028953430939156,
+      1.0016122486341128
+    ],
+    "correlation": 0.005507479694100745
+  },
+  "representative_hours": [
+    {
+      "hour": 12,
+      "original_saved_pieces": 6771,
+      "original_unique_selected_particles": 177,
+      "original_diagnostic_expansion_factor": 8192
+    },
+    {
+      "hour": 180,
+      "original_saved_pieces": 4253,
+      "original_unique_selected_particles": 172,
+      "original_diagnostic_expansion_factor": 8192
+    },
+    {
+      "hour": 337,
+      "original_saved_pieces": 437,
+      "original_unique_selected_particles": 121,
+      "original_diagnostic_expansion_factor": 8192,
+      "replayed_pieces": 3478,
+      "replayed_unique_selected_particles": 965,
+      "replayed_diagnostic_expansion_factor": 1024
+    },
+    {
+      "hour": 348,
+      "original_saved_pieces": 484,
+      "original_unique_selected_particles": 120,
+      "original_diagnostic_expansion_factor": 8192,
+      "replayed_pieces": 4021,
+      "replayed_unique_selected_particles": 967,
+      "replayed_diagnostic_expansion_factor": 1024
+    },
+    {
+      "hour": 360,
+      "original_saved_pieces": 690,
+      "original_unique_selected_particles": 123,
+      "original_diagnostic_expansion_factor": 8192,
+      "replayed_pieces": 5475,
+      "replayed_unique_selected_particles": 983,
+      "replayed_diagnostic_expansion_factor": 1024
+    }
+  ],
+  "findings": [
+    "Near graphics are fixed-ID systematically subsampled hourly path residence, not full-count native local concentration.",
+    "Display expansion changes weights/opacity but does not lengthen actual trajectories.",
+    "Original30s random-walk step is represented by straight accepted pieces; an hourly accumulation can show a fan of sparse rays.",
+    "The frozen model applies mesoscale bulk Kh at birth; it does not resolve stack jet, entrainment or correlated near-nozzle velocity.",
+    "These checks diagnose saved numerical behavior and display scope; they do not independently validate real atmospheric diffusion coefficients."
+  ],
+  "input_sources": [
+    "outputs/post15_cpu_parallel/production_cpu12_n8192_v1/accepted_near_segments/hour_*.npz",
+    "outputs/post15_cpu_parallel/shared_geometry.npz",
+    "outputs/deposition/actual_flow_parameters.csv",
+    "work/weather_3d.json"
+  ]
+}

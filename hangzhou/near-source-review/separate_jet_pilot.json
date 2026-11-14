@@ -1,0 +1,100 @@
+{
+  "status": "bounded_operator_comparison_complete_not_production",
+  "completed_UTC": "2026-11-14T01:09:01.254638+00:00",
+  "original_forecast_hour_index": 12,
+  "frozen_weather_time": "2026-11-14T11:00",
+  "plume_age_seconds": 60,
+  "source_profiles": 4,
+  "regional_particle_steps": 0,
+  "new_integral_jet_ODE_calculation": true,
+  "model_source_file": "C:\\Users\\ASUS\\Desktop\\Agent_contact\\scripts\\pollution_month_v1\\stack_origin_r04\\integral_plume_density.py",
+  "model_source_SHA256": "5fcafe3ccf4efd60ba7ba3c22dce49b80e84e066a90be5387ac1609daad3b3bc",
+  "total_wall_seconds": 1.0181981999776326,
+  "rows": [
+    {
+      "id": "LS12",
+      "actual_wall_seconds": 0.25298959997599013,
+      "exit_speed_is_conditional_not_measured": true,
+      "conditional_exit_speed_m_s": 14.435822502666246,
+      "initial_radius_m": 0.3499999999999999,
+      "mean_axis_position_at30s_m_AGL": [
+        7.092537792309269,
+        -4.152379440582931,
+        58.17970907035304
+      ],
+      "integral_top_hat_radius_at30s_m": 12.993755998347918,
+      "original_bulk_random_walk_sigma30s_per_horizontal_axis_m": 34.64101615137755,
+      "thermodynamics_column_z_AGL_bounds_m": [
+        8.356403292251606,
+        3103.356403292252
+      ],
+      "source_flow_basis_uncertainty_retained": "not confirmed; do not derive exit velocity"
+    },
+    {
+      "id": "LS13",
+      "actual_wall_seconds": 0.2525535000022501,
+      "exit_speed_is_conditional_not_measured": true,
+      "conditional_exit_speed_m_s": 8.154234738658834,
+      "initial_radius_m": 0.3,
+      "mean_axis_position_at30s_m_AGL": [
+        8.905649458875745,
+        -2.209693863358868,
+        71.00953710514938
+      ],
+      "integral_top_hat_radius_at30s_m": 10.237458419365746,
+      "original_bulk_random_walk_sigma30s_per_horizontal_axis_m": 34.64101615137755,
+      "thermodynamics_column_z_AGL_bounds_m": [
+        8.406472704496522,
+        3103.4064727044965
+      ],
+      "source_flow_basis_uncertainty_retained": "not confirmed; do not derive exit velocity"
+    },
+    {
+      "id": "LS15",
+      "actual_wall_seconds": 0.2511704000062309,
+      "exit_speed_is_conditional_not_measured": true,
+      "conditional_exit_speed_m_s": 0.9018780108540735,
+      "initial_radius_m": 0.4,
+      "mean_axis_position_at30s_m_AGL": [
+        11.09658654637884,
+        -0.07493782172682557,
+        93.03268110408429
+      ],
+      "integral_top_hat_radius_at30s_m": 7.26498578451949,
+      "original_bulk_random_walk_sigma30s_per_horizontal_axis_m": 34.64101615137755,
+      "thermodynamics_column_z_AGL_bounds_m": [
+        7.7010307521175605,
+        3102.7010307521177
+      ],
+      "source_flow_basis_uncertainty_retained": "not confirmed; do not derive exit velocity"
+    },
+    {
+      "id": "LJ01",
+      "actual_wall_seconds": 0.25305800000205636,
+      "exit_speed_is_conditional_not_measured": true,
+      "conditional_exit_speed_m_s": 15.142001285762923,
+      "initial_radius_m": 1.0,
+      "mean_axis_position_at30s_m_AGL": [
+        10.736158570659093,
+        0.001862180388001607,
+        124.98110477281622
+      ],
+      "integral_top_hat_radius_at30s_m": 21.165195121410648,
+      "original_bulk_random_walk_sigma30s_per_horizontal_axis_m": 34.64101615137755,
+      "thermodynamics_column_z_AGL_bounds_m": [
+        8.289742516303761,
+        3103.2897425163037
+      ],
+      "source_flow_basis_uncertainty_retained": "not confirmed; do not derive exit velocity"
+    }
+  ],
+  "assumptions": [
+    "Original conditional actual-volume-flow assumption is reused, not promoted to a measured exit speed.",
+    "Actual frozen GFS surface and pressure-level temperature/pressure are linearly interpolated in height.",
+    "The same original horizontally repeated central-column wind is retained, with original height interpolation and zero ambient vertical velocity.",
+    "This is a dry finite-density entraining integral-jet parameterization, not CFD, a complete 3D transport rerun or an observed plume.",
+    "Top-hat integral radius and random-walk standard deviation are different quantities; values are shown to compare model scales, not to prove truth or calibrate them.",
+    "The pilot is not coupled to the existing regional particle mass, surface exchange or terrain reflection; it must not replace the current result or be added to it."
+  ],
+  "all_original_inputs_and_results_read_only": true
+}

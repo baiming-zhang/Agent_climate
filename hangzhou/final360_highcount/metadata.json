@@ -1387,7 +1387,8 @@
     "SO2 is invisible; graphics opacity is illustrative.",
     "Fixed-ID systematic subset, not full-count trajectories or an unbiased random sample. Expansion is a display-estimator weight, not added physical mass. Final24h use8 actually replayed member IDs instead of1; each frame declares its own expansion factor. This improves diagnostic sampling only, not the native full-count concentration or the30s path resolution.",
     "Near hourly accepted-path residence, different from regional full-count hourly endpoints. Spatial visual partition is not one conservative concentration field.",
-    "City building footprints are actual; most heights are schematic, and buildings do not affect the prescribed meteorology."
+    "City building footprints are actual; most heights are schematic, and buildings do not affect the prescribed meteorology.",
+    "Near-source detail is under review: sampled30s paths are not resolved stack-scale flow."
   ],
   "sources": [
     {
@@ -9625,5 +9626,15 @@
     "temporal_support": "Near hourly accepted-path residence, different from regional full-count hourly endpoints. Spatial visual partition is not one conservative concentration field.",
     "sampling_warning": "Fixed-ID systematic subset, not full-count trajectories or an unbiased random sample. Expansion is a display-estimator weight, not added physical mass. Final24h use8 actually replayed member IDs instead of1; each frame declares its own expansion factor. This improves diagnostic sampling only, not the native full-count concentration or the30s path resolution."
   },
-  "native_archive_url": "https://github.com/baiming-zhang/Agent_climate/tree/c37af8cd9916c3c5a3452834a829e31012f2e4f8/native_hourly"
+  "native_archive_url": "https://github.com/baiming-zhang/Agent_climate/tree/c37af8cd9916c3c5a3452834a829e31012f2e4f8/native_hourly",
+  "near_source_review": {
+    "qualified_for_stack_scale_shape": false,
+    "reason": "Near-source detail is under review: sampled30s paths are not resolved stack-scale flow.",
+    "report_url": "../near-source-review/",
+    "original_regional_values_unchanged": true,
+    "original_diffusion_sigma_per_axis30s_m": [
+      34.64101615137755,
+      94.86832980505137
+    ]
+  }
 }
