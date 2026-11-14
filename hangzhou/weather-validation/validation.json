@@ -1,0 +1,595 @@
+{
+  "schema": "Hangzhou-preserved-weather-validation-r01",
+  "created_UTC": "2026-11-14T08:16:45.751977+00:00",
+  "status": "full24h_original2mm_gate_FAIL",
+  "new360h_production_started": false,
+  "reference": "Native WRF12MPI3x4 vs privateJAX WRF-compatible implementation, same full input and physics",
+  "forecast_init_UTC": "2026-11-13T00:00:00Z",
+  "forecast_forcing": "Frozen NOAA GFS0.25degree, full0..378h input stream; comparison uses first24h only",
+  "configuration": {
+    "grid_m": [
+      9000,
+      3000
+    ],
+    "mass_grid_xy": [
+      [
+        160,
+        140
+      ],
+      [
+        120,
+        120
+      ]
+    ],
+    "vertical_layers": 50,
+    "dt_s": [
+      18,
+      6
+    ],
+    "land_surface": "NoahMP4",
+    "PBL": "YSU",
+    "microphysics": "Thompson8",
+    "cumulus": [
+      3,
+      0
+    ]
+  },
+  "qualification": {
+    "rain_metric": "Spatial gridRMSE of accumulatedRAINNC for each of25 hourly frames, full original grid",
+    "rain_limit_mm": 2,
+    "pass_": false,
+    "all_other_original_field_thresholds_pass": true,
+    "CPU_CFL_exceedance_events": 0,
+    "all_required3D_finite": true,
+    "positive_layer_thickness": true,
+    "gate_SHA256": "09c3dcad1007def5554f5bed7dac80e5ff7ea5a1eb6e7eca22accaaa3aafc9bb",
+    "domains": {
+      "d01": {
+        "hours": [
+          {
+            "lead_h": 0,
+            "rmse_mm": 0.0,
+            "max_abs_mm": 0.0
+          },
+          {
+            "lead_h": 1,
+            "rmse_mm": 1.895304900094325e-05,
+            "max_abs_mm": 0.0007669925689697266
+          },
+          {
+            "lead_h": 2,
+            "rmse_mm": 0.0014468743080410754,
+            "max_abs_mm": 0.0999840497970581
+          },
+          {
+            "lead_h": 3,
+            "rmse_mm": 0.007424456995558548,
+            "max_abs_mm": 0.2741556763648987
+          },
+          {
+            "lead_h": 4,
+            "rmse_mm": 0.014569709766571544,
+            "max_abs_mm": 0.5639943480491638
+          },
+          {
+            "lead_h": 5,
+            "rmse_mm": 0.017795703903654595,
+            "max_abs_mm": 0.6718544363975525
+          },
+          {
+            "lead_h": 6,
+            "rmse_mm": 0.020308944812421386,
+            "max_abs_mm": 0.7122606039047241
+          },
+          {
+            "lead_h": 7,
+            "rmse_mm": 0.023785840646526803,
+            "max_abs_mm": 0.7283163070678711
+          },
+          {
+            "lead_h": 8,
+            "rmse_mm": 0.0294505650305295,
+            "max_abs_mm": 1.0329113006591797
+          },
+          {
+            "lead_h": 9,
+            "rmse_mm": 0.03525772465091907,
+            "max_abs_mm": 1.362823486328125
+          },
+          {
+            "lead_h": 10,
+            "rmse_mm": 0.03987677136603648,
+            "max_abs_mm": 1.217635154724121
+          },
+          {
+            "lead_h": 11,
+            "rmse_mm": 0.048803795859986884,
+            "max_abs_mm": 1.923431396484375
+          },
+          {
+            "lead_h": 12,
+            "rmse_mm": 0.06537121100903885,
+            "max_abs_mm": 2.4158859252929688
+          },
+          {
+            "lead_h": 13,
+            "rmse_mm": 0.09628713057873714,
+            "max_abs_mm": 2.866446018218994
+          },
+          {
+            "lead_h": 14,
+            "rmse_mm": 0.16567213533212788,
+            "max_abs_mm": 7.723404169082642
+          },
+          {
+            "lead_h": 15,
+            "rmse_mm": 0.19897558449078392,
+            "max_abs_mm": 8.918553113937378
+          },
+          {
+            "lead_h": 16,
+            "rmse_mm": 0.23564562377070639,
+            "max_abs_mm": 9.653013706207275
+          },
+          {
+            "lead_h": 17,
+            "rmse_mm": 0.3294129658255214,
+            "max_abs_mm": 10.415112733840942
+          },
+          {
+            "lead_h": 18,
+            "rmse_mm": 0.42889258314562495,
+            "max_abs_mm": 11.340441703796387
+          },
+          {
+            "lead_h": 19,
+            "rmse_mm": 0.6087933520906312,
+            "max_abs_mm": 15.595778465270996
+          },
+          {
+            "lead_h": 20,
+            "rmse_mm": 0.8798138096643645,
+            "max_abs_mm": 19.542234420776367
+          },
+          {
+            "lead_h": 21,
+            "rmse_mm": 1.2117133737580288,
+            "max_abs_mm": 25.979400634765625
+          },
+          {
+            "lead_h": 22,
+            "rmse_mm": 1.502007772049082,
+            "max_abs_mm": 29.68046760559082
+          },
+          {
+            "lead_h": 23,
+            "rmse_mm": 1.9043557384790897,
+            "max_abs_mm": 45.73902702331543
+          },
+          {
+            "lead_h": 24,
+            "rmse_mm": 2.1892540867712382,
+            "max_abs_mm": 57.226510524749756
+          }
+        ],
+        "failures": [
+          {
+            "kind": "frame_tolerance",
+            "field": "RAINNC",
+            "lead_h": 24,
+            "detail": [
+              {
+                "limit": 2.0,
+                "metric": "rmse",
+                "value": 2.1892540867712382
+              }
+            ]
+          }
+        ]
+      },
+      "d02": {
+        "hours": [
+          {
+            "lead_h": 0,
+            "rmse_mm": 0.0,
+            "max_abs_mm": 0.0
+          },
+          {
+            "lead_h": 1,
+            "rmse_mm": 1.5954959620492583e-06,
+            "max_abs_mm": 6.170012056827545e-05
+          },
+          {
+            "lead_h": 2,
+            "rmse_mm": 0.00011102913014562579,
+            "max_abs_mm": 0.0018180608749389648
+          },
+          {
+            "lead_h": 3,
+            "rmse_mm": 0.00019091514272825448,
+            "max_abs_mm": 0.003070451319217682
+          },
+          {
+            "lead_h": 4,
+            "rmse_mm": 0.0002653828778902992,
+            "max_abs_mm": 0.007714980747550726
+          },
+          {
+            "lead_h": 5,
+            "rmse_mm": 0.0006131782172464797,
+            "max_abs_mm": 0.023789972066879272
+          },
+          {
+            "lead_h": 6,
+            "rmse_mm": 0.001106429324743972,
+            "max_abs_mm": 0.03953077644109726
+          },
+          {
+            "lead_h": 7,
+            "rmse_mm": 0.0031876484894029565,
+            "max_abs_mm": 0.2861875295639038
+          },
+          {
+            "lead_h": 8,
+            "rmse_mm": 0.0033221988649743328,
+            "max_abs_mm": 0.1949756145477295
+          },
+          {
+            "lead_h": 9,
+            "rmse_mm": 0.004150780698719963,
+            "max_abs_mm": 0.19214995205402374
+          },
+          {
+            "lead_h": 10,
+            "rmse_mm": 0.004236803331305586,
+            "max_abs_mm": 0.19214995205402374
+          },
+          {
+            "lead_h": 11,
+            "rmse_mm": 0.004346176351498103,
+            "max_abs_mm": 0.19214995205402374
+          },
+          {
+            "lead_h": 12,
+            "rmse_mm": 0.07879675730944545,
+            "max_abs_mm": 3.0472323894500732
+          },
+          {
+            "lead_h": 13,
+            "rmse_mm": 0.2890990584664073,
+            "max_abs_mm": 9.076353669166565
+          },
+          {
+            "lead_h": 14,
+            "rmse_mm": 0.5661082594431874,
+            "max_abs_mm": 9.843008041381836
+          },
+          {
+            "lead_h": 15,
+            "rmse_mm": 0.869347938194568,
+            "max_abs_mm": 16.866857767105103
+          },
+          {
+            "lead_h": 16,
+            "rmse_mm": 1.1299586744186925,
+            "max_abs_mm": 16.163299083709717
+          },
+          {
+            "lead_h": 17,
+            "rmse_mm": 1.363590072580568,
+            "max_abs_mm": 15.846976280212402
+          },
+          {
+            "lead_h": 18,
+            "rmse_mm": 1.5804696303362922,
+            "max_abs_mm": 17.223355293273926
+          },
+          {
+            "lead_h": 19,
+            "rmse_mm": 2.226424026764349,
+            "max_abs_mm": 25.638333797454834
+          },
+          {
+            "lead_h": 20,
+            "rmse_mm": 2.6858400391985806,
+            "max_abs_mm": 25.26390290260315
+          },
+          {
+            "lead_h": 21,
+            "rmse_mm": 2.9623746384754024,
+            "max_abs_mm": 25.284064054489136
+          },
+          {
+            "lead_h": 22,
+            "rmse_mm": 3.0892075030123483,
+            "max_abs_mm": 25.267077922821045
+          },
+          {
+            "lead_h": 23,
+            "rmse_mm": 3.226646142890113,
+            "max_abs_mm": 25.225185871124268
+          },
+          {
+            "lead_h": 24,
+            "rmse_mm": 3.2919997550007847,
+            "max_abs_mm": 25.16047716140747
+          }
+        ],
+        "failures": [
+          {
+            "kind": "frame_tolerance",
+            "field": "RAINNC",
+            "lead_h": 19,
+            "detail": [
+              {
+                "limit": 2.0,
+                "metric": "rmse",
+                "value": 2.226424026764349
+              }
+            ]
+          },
+          {
+            "kind": "frame_tolerance",
+            "field": "RAINNC",
+            "lead_h": 20,
+            "detail": [
+              {
+                "limit": 2.0,
+                "metric": "rmse",
+                "value": 2.6858400391985806
+              }
+            ]
+          },
+          {
+            "kind": "frame_tolerance",
+            "field": "RAINNC",
+            "lead_h": 21,
+            "detail": [
+              {
+                "limit": 2.0,
+                "metric": "rmse",
+                "value": 2.9623746384754024
+              }
+            ]
+          },
+          {
+            "kind": "frame_tolerance",
+            "field": "RAINNC",
+            "lead_h": 22,
+            "detail": [
+              {
+                "limit": 2.0,
+                "metric": "rmse",
+                "value": 3.0892075030123483
+              }
+            ]
+          },
+          {
+            "kind": "frame_tolerance",
+            "field": "RAINNC",
+            "lead_h": 23,
+            "detail": [
+              {
+                "limit": 2.0,
+                "metric": "rmse",
+                "value": 3.226646142890113
+              }
+            ]
+          },
+          {
+            "kind": "frame_tolerance",
+            "field": "RAINNC",
+            "lead_h": 24,
+            "detail": [
+              {
+                "limit": 2.0,
+                "metric": "rmse",
+                "value": 3.2919997550007847
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "actual25h_observation": {
+    "start_h": 24,
+    "end_h": 25,
+    "neutral_parent_child_steps": [
+      200,
+      600
+    ],
+    "observed_parent_child_steps": [
+      200,
+      600
+    ],
+    "neutral_and_observed_each_exit0": true,
+    "endpoint_control": [
+      {
+        "numeric_fields_checked": 377,
+        "all_byteexact": true,
+        "changes": [],
+        "domain": "d01"
+      },
+      {
+        "numeric_fields_checked": 377,
+        "all_byteexact": true,
+        "changes": [],
+        "domain": "d02"
+      }
+    ],
+    "actual_child_step": 14401,
+    "kernel_packet_SHA256": "6dcab591f0ea53620f428c0eb4ed454dfd5f8eebba6c27edef730663ef8971a3",
+    "driver_packet_SHA256": "047d9c22b194016fc5b78a0001a04794152aa8e796eb161b765649eb7af83272",
+    "full_field_control_exact": true,
+    "kernel_returns": [
+      {
+        "field": "qv",
+        "units": "kg/kg",
+        "RMSE": 1.6994946367910603e-10,
+        "max_abs": 9.313225746154785e-10,
+        "bias": 3.627885942276205e-12,
+        "native_min": 1.7132210814452264e-06,
+        "GPU_min": 1.7132210814452264e-06,
+        "native_increment_RMS": 1.2038261089695542e-06
+      },
+      {
+        "field": "qc",
+        "units": "kg/kg",
+        "RMSE": 8.628462974810181e-11,
+        "max_abs": 1.1641532182693481e-09,
+        "bias": -5.869262839646742e-12,
+        "native_min": 0.0,
+        "GPU_min": 0.0,
+        "native_increment_RMS": 1.0456680858840756e-06
+      },
+      {
+        "field": "qr",
+        "units": "kg/kg",
+        "RMSE": 2.362077645931656e-10,
+        "max_abs": 3.361492417752743e-08,
+        "bias": -1.1193112089395146e-12,
+        "native_min": 0.0,
+        "GPU_min": 0.0,
+        "native_increment_RMS": 4.167980952518194e-07
+      },
+      {
+        "field": "qi",
+        "units": "kg/kg",
+        "RMSE": 4.099870049229575e-13,
+        "max_abs": 6.730260793119669e-11,
+        "bias": -8.582744523046258e-17,
+        "native_min": 0.0,
+        "GPU_min": 0.0,
+        "native_increment_RMS": 1.862396396371292e-08
+      },
+      {
+        "field": "qs",
+        "units": "kg/kg",
+        "RMSE": 3.7595340910153125e-11,
+        "max_abs": 7.392372936010361e-09,
+        "bias": 3.14725843988844e-14,
+        "native_min": 0.0,
+        "GPU_min": 0.0,
+        "native_increment_RMS": 1.2835433444268343e-07
+      },
+      {
+        "field": "qg",
+        "units": "kg/kg",
+        "RMSE": 1.2811002872048613e-11,
+        "max_abs": 2.546585164964199e-09,
+        "bias": -1.0597758534843125e-14,
+        "native_min": 0.0,
+        "GPU_min": 0.0,
+        "native_increment_RMS": 4.330625034486242e-08
+      },
+      {
+        "field": "Ni",
+        "units": "number/kg",
+        "RMSE": 0.010424650306052902,
+        "max_abs": 0.7909150719642639,
+        "bias": -8.509185476416153e-05,
+        "native_min": 0.0,
+        "GPU_min": 0.0,
+        "native_increment_RMS": 2351.7326513811904
+      },
+      {
+        "field": "Nr",
+        "units": "number/kg",
+        "RMSE": 0.001393249770152748,
+        "max_abs": 0.267333984375,
+        "bias": -1.242352713441319e-05,
+        "native_min": 0.0,
+        "GPU_min": 0.0,
+        "native_increment_RMS": 2.834508375742708
+      },
+      {
+        "field": "T",
+        "units": "K",
+        "RMSE": 5.600464095342627e-06,
+        "max_abs": 3.0517578125e-05,
+        "bias": 1.6587575276692708e-07,
+        "native_min": 198.23570251464844,
+        "GPU_min": 198.23570251464844,
+        "native_increment_RMS": 0.002951750229320627
+      },
+      {
+        "field": "RAINNCV",
+        "units": "mm/6s",
+        "RMSE": 1.3709546321975488e-08,
+        "max_abs": 6.332993507385254e-07,
+        "bias": 9.026745085972799e-10,
+        "native_min": 0.0,
+        "GPU_min": 0.0
+      },
+      {
+        "field": "SNOWNCV",
+        "units": "mm/6s",
+        "RMSE": 0.0,
+        "max_abs": 0.0,
+        "bias": 0.0,
+        "native_min": 0.0,
+        "GPU_min": 0.0
+      },
+      {
+        "field": "GRAUPELNCV",
+        "units": "mm/6s",
+        "RMSE": 0.0,
+        "max_abs": 0.0,
+        "bias": 0.0,
+        "native_min": 0.0,
+        "GPU_min": 0.0
+      }
+    ],
+    "selected_driver_fields_byteexact": true,
+    "selected_driver_field_count": 30,
+    "native_theta_dynamic_control": {
+      "status": "dynamic_actual_thermo_operands_qualified_against_actual_theta",
+      "UTC": "2026-11-14T08:09:39.184071+00:00",
+      "seconds": 19.599806598999997,
+      "actual_dynamic_theta_byteexact": true,
+      "common_controls": [
+        {
+          "field": "old",
+          "stored_common_byteexact_to_dynamic": false,
+          "max_abs": 3.0517578125e-05
+        },
+        {
+          "field": "qold",
+          "stored_common_byteexact_to_dynamic": true,
+          "max_abs": 0.0
+        },
+        {
+          "field": "new",
+          "stored_common_byteexact_to_dynamic": false,
+          "max_abs": 9.1552734375e-05
+        },
+        {
+          "field": "qnew",
+          "stored_common_byteexact_to_dynamic": true,
+          "max_abs": 0.0
+        }
+      ],
+      "old_native_finish_reused": false,
+      "new_native_finish_calls": 1,
+      "new_MP_calls": 0,
+      "new_forecast_steps": 0,
+      "qualified_native_theta_RMSE_K": 0.0,
+      "qualified_native_theta_max_abs_K": 0.0,
+      "exact_cells": 720000,
+      "cells": 720000,
+      "native_output_SHA256": "7985759c14f1939da3ba6b09ec7f0ddefd9969822b2345dfb4efc4ff6cc15e9d",
+      "original_gate_unchanged_FAIL": true,
+      "root_cause_not_proven": true
+    }
+  },
+  "science_limits": [
+    "Inter-implementation comparison, not observational rain truth or a maximum-cell2mm bound.",
+    "A one-call agreement does not prove complete physics coupling, a15-day forecast or model convergence.",
+    "Actual physics/step/forcing and original acceptance masks/thresholds remain unchanged.",
+    "No field clipping, rain correction, fitting, selection of a better reference or automatic360h launch.",
+    "The privateGPU model includes previously disclosed W/cloud arithmetic predicates; it is not an unmodified NCAR GPU release. FLEXPART transport remainsCPUOpenMP.",
+    "Original00\u201315 and353M films remain preserved experiments with their own approximations. The separate native23h source test is engineering only."
+  ],
+  "archive_branch_URL": "https://github.com/wang-mengdi/Agentic-Physical-Worlds/tree/Climate%28Baiming%29/climate/experiments/hangzhou_vancouver_revision_v1"
+}
