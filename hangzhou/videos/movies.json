@@ -1,0 +1,2226 @@
+{
+  "schema": "hangzhou-preserved-source-movies-r02",
+  "created_UTC": "2026-11-14T06:52:33.570116+00:00",
+  "scope": "Original frozen00\u201315 plus preserved353M CPU scenario, not new Vancouver-model360h production",
+  "movies": 17,
+  "spatial_comparisons": 16,
+  "media": [
+    {
+      "tag": "stage00",
+      "category": "movies",
+      "file": "movies/stage00.mp4",
+      "bytes": 4306440,
+      "SHA256": "ed2f0ce88a3e1b7f1ff200c255c150ffa9a59caecfb55f5d44ed9fd1ad8356c2",
+      "rendering_receipt": {
+        "layout": "geographic-diorama-v2",
+        "route": "stage00/terrain/",
+        "tag": "stage00",
+        "stage": 0,
+        "physical_model_stage": 0,
+        "prototype_only": false,
+        "mode": "approved-full-video",
+        "source_sha256": "4031cbacb2c5d9d5a40c667d18f10d44c3728d0be3923a60d7aec864d9855438",
+        "started_UTC": "2026-11-14T06:29:05.092Z",
+        "completed_UTC": "2026-11-14T06:30:42.102Z",
+        "wall_seconds": 97.0100089,
+        "frame_count": 900,
+        "resolution": [
+          1920,
+          1080
+        ],
+        "fps": 60,
+        "duration_seconds": 15,
+        "camera_mode": "source",
+        "camera_path": "Fixed shared LJ01 geographic source-region camera for comparison. Original all-source fields retained. Early2D cases do not identify a physical outlet here. No camera departure hides the plume.",
+        "scalar_interpolation_before_render": true,
+        "rendered_frame_blending": false,
+        "new_solver_runs": 0,
+        "encoded_metadata": {
+          "programs": [],
+          "streams": [
+            {
+              "width": 1920,
+              "height": 1080,
+              "avg_frame_rate": "60/1",
+              "duration": "15.000000",
+              "nb_frames": "900"
+            }
+          ]
+        },
+        "actual_images_viewed": false,
+        "user_reference_approved": true,
+        "errors": []
+      },
+      "actual_hours": 360,
+      "encoded_seconds": 15,
+      "fps": 60,
+      "source_camera": "Fixed shared source-region camera. Early2D output remains2D; no extra3D plume is invented.",
+      "title": "Initial prompt",
+      "definition": {
+        "stage": 0,
+        "change": "Initial prompt",
+        "result_scope": "2-D relative scenario",
+        "model_period_h": 360,
+        "physical_model": "2-D relative semi-Lagrangian",
+        "meteorology": "Central forecast column; no spatially resolved local weather solver",
+        "source_scope": "Hypothetical sector weights",
+        "conditional_emission_kg": "",
+        "limitation": "Relative index; hypothetical sector sources; repeated-weather spinup; not a concentration forecast.",
+        "frozen_UTC": "2026-11-13T06:09:50.307236+00:00",
+        "manifest_sha256": "d7e3f5cca413e4e03dad1a1a00a92664f69bc958fd96bc1521db8c4abec0f8ba",
+        "whole_worker_turn_seconds": 707.9399998188019,
+        "worker_agent_proxy_seconds": 224.3779993057251,
+        "worker_data_seconds": 20.962780475616455,
+        "worker_rendering_seconds": 0.0,
+        "worker_other_seconds": 462.5992200374603,
+        "timing_note": "Observed intervals may overlap; Agent is a non-tool wall-clock proxy, not internal inference time.",
+        "native_field": "",
+        "native_field_sha256": "",
+        "horizontal_bin_m": "",
+        "vertical_layers": "",
+        "transport_dt_s": "",
+        "particles_per_realization": "",
+        "sampling": "See preserved field definitions",
+        "web_view": "stage00/"
+      },
+      "poster": "posters/stage00.png",
+      "public_movie_URL": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/movies/stage00.mp4",
+      "public_poster": "posters/stage00.png"
+    },
+    {
+      "tag": "stage01",
+      "category": "movies",
+      "file": "movies/stage01.mp4",
+      "bytes": 4296596,
+      "SHA256": "90b1503128d0dfe89d542dde2f66e5667e2a70286f3b61b107cb238fe8d7c0b8",
+      "rendering_receipt": {
+        "layout": "geographic-diorama-v2",
+        "route": "stage01/terrain/",
+        "tag": "stage01",
+        "stage": 1,
+        "physical_model_stage": 1,
+        "prototype_only": false,
+        "mode": "approved-full-video",
+        "source_sha256": "d15f3fced8f92cd80c6823e362e660cff938101a6483ba53c0f2d016d35ffd9b",
+        "started_UTC": "2026-11-14T06:29:05.092Z",
+        "completed_UTC": "2026-11-14T06:30:42.377Z",
+        "wall_seconds": 97.2852773,
+        "frame_count": 900,
+        "resolution": [
+          1920,
+          1080
+        ],
+        "fps": 60,
+        "duration_seconds": 15,
+        "camera_mode": "source",
+        "camera_path": "Fixed shared LJ01 geographic source-region camera for comparison. Original all-source fields retained. Early2D cases do not identify a physical outlet here. No camera departure hides the plume.",
+        "scalar_interpolation_before_render": true,
+        "rendered_frame_blending": false,
+        "new_solver_runs": 0,
+        "encoded_metadata": {
+          "programs": [],
+          "streams": [
+            {
+              "width": 1920,
+              "height": 1080,
+              "avg_frame_rate": "60/1",
+              "duration": "15.000000",
+              "nb_frames": "900"
+            }
+          ]
+        },
+        "actual_images_viewed": false,
+        "user_reference_approved": true,
+        "errors": []
+      },
+      "actual_hours": 360,
+      "encoded_seconds": 15,
+      "fps": 60,
+      "source_camera": "Fixed shared source-region camera. Early2D output remains2D; no extra3D plume is invented.",
+      "title": "Forecast provenance",
+      "definition": {
+        "stage": 1,
+        "change": "Forecast provenance",
+        "result_scope": "2-D relative scenario",
+        "model_period_h": 360,
+        "physical_model": "2-D relative semi-Lagrangian",
+        "meteorology": "Central forecast column; no spatially resolved local weather solver",
+        "source_scope": "Hypothetical sector weights",
+        "conditional_emission_kg": "",
+        "limitation": "Frozen complete GFS run; single surface column; hypothetical sources retained.",
+        "frozen_UTC": "2026-11-13T06:18:30.612182+00:00",
+        "manifest_sha256": "c24906df1f6bd9137c0492e6a1d5a48436a7669c57b5ea6e9600fc6317c21732",
+        "whole_worker_turn_seconds": 194.55200004577637,
+        "worker_agent_proxy_seconds": 145.18700075149536,
+        "worker_data_seconds": 29.514197826385498,
+        "worker_rendering_seconds": 0.3874058723449707,
+        "worker_other_seconds": 19.463395595550537,
+        "timing_note": "Observed intervals may overlap; Agent is a non-tool wall-clock proxy, not internal inference time.",
+        "native_field": "",
+        "native_field_sha256": "",
+        "horizontal_bin_m": "",
+        "vertical_layers": "",
+        "transport_dt_s": "",
+        "particles_per_realization": "",
+        "sampling": "See preserved field definitions",
+        "web_view": "stage01/"
+      },
+      "poster": "posters/stage01.png",
+      "public_movie_URL": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/movies/stage01.mp4",
+      "public_poster": "posters/stage01.png"
+    },
+    {
+      "tag": "stage02",
+      "category": "movies",
+      "file": "movies/stage02.mp4",
+      "bytes": 4228969,
+      "SHA256": "931ea70356535881c877ce77e324c695cab8a31385b1e90d567d089eed355866",
+      "rendering_receipt": {
+        "layout": "geographic-diorama-v2",
+        "route": "stage02/terrain/",
+        "tag": "stage02",
+        "stage": 2,
+        "physical_model_stage": 2,
+        "prototype_only": false,
+        "mode": "approved-full-video",
+        "source_sha256": "69b801e1e1564b37ce01a33005d89579b4cc936e5538635bb645a3d8ce86626e",
+        "started_UTC": "2026-11-14T06:30:43.109Z",
+        "completed_UTC": "2026-11-14T06:32:20.700Z",
+        "wall_seconds": 97.5898804,
+        "frame_count": 900,
+        "resolution": [
+          1920,
+          1080
+        ],
+        "fps": 60,
+        "duration_seconds": 15,
+        "camera_mode": "source",
+        "camera_path": "Fixed shared LJ01 geographic source-region camera for comparison. Original all-source fields retained. Early2D cases do not identify a physical outlet here. No camera departure hides the plume.",
+        "scalar_interpolation_before_render": true,
+        "rendered_frame_blending": false,
+        "new_solver_runs": 0,
+        "encoded_metadata": {
+          "programs": [],
+          "streams": [
+            {
+              "width": 1920,
+              "height": 1080,
+              "avg_frame_rate": "60/1",
+              "duration": "15.000000",
+              "nb_frames": "900"
+            }
+          ]
+        },
+        "actual_images_viewed": false,
+        "user_reference_approved": true,
+        "errors": []
+      },
+      "actual_hours": 360,
+      "encoded_seconds": 15,
+      "fps": 60,
+      "source_camera": "Fixed shared source-region camera. Early2D output remains2D; no extra3D plume is invented.",
+      "title": "Continuous 360-hour integration",
+      "definition": {
+        "stage": 2,
+        "change": "Continuous 360-hour integration",
+        "result_scope": "2-D relative scenario",
+        "model_period_h": 360,
+        "physical_model": "2-D relative semi-Lagrangian",
+        "meteorology": "Central forecast column; no spatially resolved local weather solver",
+        "source_scope": "Hypothetical sector weights",
+        "conditional_emission_kg": "",
+        "limitation": "Continuous state and day-boundary hashes; zero initial load; transport is not strictly conservative.",
+        "frozen_UTC": "2026-11-13T06:22:31.543312+00:00",
+        "manifest_sha256": "f462a7fe6299434cde3c3da31295391c4c14489cd0a1376508f1798bb13b8efb",
+        "whole_worker_turn_seconds": 58.15400004386902,
+        "worker_agent_proxy_seconds": 51.60700011253357,
+        "worker_data_seconds": 0.0,
+        "worker_rendering_seconds": 3.1926968097686768,
+        "worker_other_seconds": 3.3543031215667725,
+        "timing_note": "Observed intervals may overlap; Agent is a non-tool wall-clock proxy, not internal inference time.",
+        "native_field": "",
+        "native_field_sha256": "",
+        "horizontal_bin_m": "",
+        "vertical_layers": "",
+        "transport_dt_s": "",
+        "particles_per_realization": "",
+        "sampling": "See preserved field definitions",
+        "web_view": "stage02/"
+      },
+      "poster": "posters/stage02.png",
+      "public_movie_URL": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/movies/stage02.mp4",
+      "public_poster": "posters/stage02.png"
+    },
+    {
+      "tag": "stage03",
+      "category": "movies",
+      "file": "movies/stage03.mp4",
+      "bytes": 4090332,
+      "SHA256": "d47240739eea3505877267f67cbeec71378d938ff2f740ca9329ddeebacd2a90",
+      "rendering_receipt": {
+        "layout": "geographic-diorama-v2",
+        "route": "stage03/terrain/",
+        "tag": "stage03",
+        "stage": 3,
+        "physical_model_stage": 3,
+        "prototype_only": false,
+        "mode": "approved-full-video",
+        "source_sha256": "8dea6f9c9c7ef1f90d3b1543406b8673c9f2be857c8c9d6a468061de2a0d783f",
+        "started_UTC": "2026-11-14T06:30:43.111Z",
+        "completed_UTC": "2026-11-14T06:32:22.132Z",
+        "wall_seconds": 99.02019739999999,
+        "frame_count": 900,
+        "resolution": [
+          1920,
+          1080
+        ],
+        "fps": 60,
+        "duration_seconds": 15,
+        "camera_mode": "source",
+        "camera_path": "Fixed shared LJ01 geographic source-region camera for comparison. Original all-source fields retained. Early2D cases do not identify a physical outlet here. No camera departure hides the plume.",
+        "scalar_interpolation_before_render": true,
+        "rendered_frame_blending": false,
+        "new_solver_runs": 0,
+        "encoded_metadata": {
+          "programs": [],
+          "streams": [
+            {
+              "width": 1920,
+              "height": 1080,
+              "avg_frame_rate": "60/1",
+              "duration": "15.000000",
+              "nb_frames": "900"
+            }
+          ]
+        },
+        "actual_images_viewed": false,
+        "user_reference_approved": true,
+        "errors": []
+      },
+      "actual_hours": 360,
+      "encoded_seconds": 15,
+      "fps": 60,
+      "source_camera": "Fixed shared source-region camera. Early2D output remains2D; no extra3D plume is invented.",
+      "title": "Documented outlet scenario",
+      "definition": {
+        "stage": 3,
+        "change": "Documented outlet scenario",
+        "result_scope": "2-D conditional column burden",
+        "model_period_h": 360,
+        "physical_model": "2-D conditional column burden",
+        "meteorology": "Central forecast column; no spatially resolved local weather solver",
+        "source_scope": "Four conditional EIA design outlets, not full city inventory",
+        "conditional_emission_kg": 1626.84,
+        "limitation": "Four EIA design outlets; commissioning and operating schedules unverified. Legacy citywide maps are not these outlet results.",
+        "frozen_UTC": "2026-11-13T06:40:48.074445+00:00",
+        "manifest_sha256": "32ba921ce7eeb660c1a230a20ca1eaca9d6e676cfc2031d0f150ee18c3a82731",
+        "whole_worker_turn_seconds": 328.50300002098083,
+        "worker_agent_proxy_seconds": 253.07200002670288,
+        "worker_data_seconds": 63.290998697280884,
+        "worker_rendering_seconds": 0.0,
+        "worker_other_seconds": 12.14000129699707,
+        "timing_note": "Observed intervals may overlap; Agent is a non-tool wall-clock proxy, not internal inference time.",
+        "native_field": "",
+        "native_field_sha256": "",
+        "horizontal_bin_m": "",
+        "vertical_layers": "",
+        "transport_dt_s": "",
+        "particles_per_realization": "",
+        "sampling": "See preserved field definitions",
+        "web_view": "stage03/"
+      },
+      "poster": "posters/stage03.png",
+      "public_movie_URL": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/movies/stage03.mp4",
+      "public_poster": "posters/stage03.png"
+    },
+    {
+      "tag": "stage04",
+      "category": "movies",
+      "file": "movies/stage04.mp4",
+      "bytes": 3335353,
+      "SHA256": "b906d95f4154544b2f7da7493801bf55e0f9857298e0b3197a62c364fe14097c",
+      "rendering_receipt": {
+        "layout": "geographic-diorama-v2",
+        "route": "stage04/terrain/",
+        "tag": "stage04",
+        "stage": 4,
+        "physical_model_stage": 4,
+        "prototype_only": false,
+        "mode": "approved-full-video",
+        "source_sha256": "b35b12950c24c0e0e520a3c1d5080e1ef2a6ac92749637e7ec40741a1c51f1d9",
+        "started_UTC": "2026-11-14T06:32:21.130Z",
+        "completed_UTC": "2026-11-14T06:34:05.338Z",
+        "wall_seconds": 104.2092957,
+        "frame_count": 900,
+        "resolution": [
+          1920,
+          1080
+        ],
+        "fps": 60,
+        "duration_seconds": 15,
+        "camera_mode": "source",
+        "camera_path": "Fixed shared LJ01 geographic source-region camera for comparison. Original all-source fields retained. Early2D cases do not identify a physical outlet here. No camera departure hides the plume.",
+        "scalar_interpolation_before_render": true,
+        "rendered_frame_blending": false,
+        "new_solver_runs": 0,
+        "encoded_metadata": {
+          "programs": [],
+          "streams": [
+            {
+              "width": 1920,
+              "height": 1080,
+              "avg_frame_rate": "60/1",
+              "duration": "15.000000",
+              "nb_frames": "900"
+            }
+          ]
+        },
+        "actual_images_viewed": false,
+        "user_reference_approved": true,
+        "errors": []
+      },
+      "actual_hours": 360,
+      "encoded_seconds": 15,
+      "fps": 60,
+      "source_camera": "Fixed shared source-region camera. Early2D output remains2D; no extra3D plume is invented.",
+      "title": "3-D transport and plume rise",
+      "definition": {
+        "stage": 4,
+        "change": "3-D transport and plume rise",
+        "result_scope": "3-D conditional particle scenario",
+        "model_period_h": 360,
+        "physical_model": "Passive stochastic 3-D particles",
+        "meteorology": "Central forecast column; no spatially resolved local weather solver",
+        "source_scope": "Four conditional EIA design outlets, not full city inventory",
+        "conditional_emission_kg": 1626.84,
+        "limitation": "Horizontally uniform forecast profiles, parameterized turbulent diffusion and buoyant rise; flow basis unresolved; no observed-concentration or convergence validation.",
+        "frozen_UTC": "2026-11-13T07:00:58.731468+00:00",
+        "manifest_sha256": "f82c9520645637afbef801218fc5a022c8ee8ceb2d979ac0bde708c28c9c2a2b",
+        "whole_worker_turn_seconds": 1039.4920001029968,
+        "worker_agent_proxy_seconds": 276.8870007991791,
+        "worker_data_seconds": 12.280593156814575,
+        "worker_rendering_seconds": 1.406898021697998,
+        "worker_other_seconds": 748.9175081253052,
+        "timing_note": "Observed intervals may overlap; Agent is a non-tool wall-clock proxy, not internal inference time.",
+        "native_field": "outputs/three_dimensional/actual_flow_daily_3d.npz",
+        "native_field_sha256": "b35b12950c24c0e0e520a3c1d5080e1ef2a6ac92749637e7ec40741a1c51f1d9",
+        "horizontal_bin_m": 2000,
+        "vertical_layers": 13,
+        "transport_dt_s": 120,
+        "particles_per_realization": 86400,
+        "sampling": "Daily fields; no inferred 360-hour 3-D sequence",
+        "web_view": "stage04/"
+      },
+      "poster": "posters/stage04.png",
+      "public_movie_URL": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/movies/stage04.mp4",
+      "public_poster": "posters/stage04.png"
+    },
+    {
+      "tag": "stage05",
+      "category": "movies",
+      "file": "movies/stage05.mp4",
+      "bytes": 3338412,
+      "SHA256": "058e1482c3cd92b37fbf02114eba8ce33950f1b0392325d5f35e98ef5a503018",
+      "rendering_receipt": {
+        "layout": "geographic-diorama-v2",
+        "route": "stage05/terrain/",
+        "tag": "stage05",
+        "stage": 5,
+        "physical_model_stage": 5,
+        "prototype_only": false,
+        "mode": "approved-full-video",
+        "source_sha256": "8229728ff5dc317ddef8d951977522984cdacd4edec5455941673c5fad672965",
+        "started_UTC": "2026-11-14T06:32:23.133Z",
+        "completed_UTC": "2026-11-14T06:34:07.342Z",
+        "wall_seconds": 104.2093092,
+        "frame_count": 900,
+        "resolution": [
+          1920,
+          1080
+        ],
+        "fps": 60,
+        "duration_seconds": 15,
+        "camera_mode": "source",
+        "camera_path": "Fixed shared LJ01 geographic source-region camera for comparison. Original all-source fields retained. Early2D cases do not identify a physical outlet here. No camera departure hides the plume.",
+        "scalar_interpolation_before_render": true,
+        "rendered_frame_blending": false,
+        "new_solver_runs": 0,
+        "encoded_metadata": {
+          "programs": [],
+          "streams": [
+            {
+              "width": 1920,
+              "height": 1080,
+              "avg_frame_rate": "60/1",
+              "duration": "15.000000",
+              "nb_frames": "900"
+            }
+          ]
+        },
+        "actual_images_viewed": false,
+        "user_reference_approved": true,
+        "errors": []
+      },
+      "actual_hours": 360,
+      "encoded_seconds": 15,
+      "fps": 60,
+      "source_camera": "Fixed shared source-region camera. Early2D output remains2D; no extra3D plume is invented.",
+      "title": "Deposition and mass tracking",
+      "definition": {
+        "stage": 5,
+        "change": "Deposition and mass tracking",
+        "result_scope": "Inspect actual stage outputs",
+        "model_period_h": 360,
+        "physical_model": "Passive stochastic 3-D particles",
+        "meteorology": "Central forecast column; no spatially resolved local weather solver",
+        "source_scope": "Four conditional EIA design outlets, not full city inventory",
+        "conditional_emission_kg": 1626.84,
+        "limitation": "Separate dry, wet, chemical, atmospheric and outflow quantities only where the completed stage actually provides them.",
+        "frozen_UTC": "2026-11-13T07:05:28.509311+00:00",
+        "manifest_sha256": "4fde376b67ccbcdc46b47c504d66f8cb225a94d2daece512a1333ddf90b4457c",
+        "whole_worker_turn_seconds": 160.93499994277954,
+        "worker_agent_proxy_seconds": 152.6459996700287,
+        "worker_data_seconds": 7.16075587272644,
+        "worker_rendering_seconds": 0.4567375183105469,
+        "worker_other_seconds": 0.6715068817138672,
+        "timing_note": "Observed intervals may overlap; Agent is a non-tool wall-clock proxy, not internal inference time.",
+        "native_field": "outputs/deposition/actual_flow_daily_3d.npz",
+        "native_field_sha256": "8229728ff5dc317ddef8d951977522984cdacd4edec5455941673c5fad672965",
+        "horizontal_bin_m": 2000,
+        "vertical_layers": 13,
+        "transport_dt_s": 120,
+        "particles_per_realization": 86400,
+        "sampling": "Daily fields; no inferred 360-hour 3-D sequence",
+        "web_view": "stage05/"
+      },
+      "poster": "posters/stage05.png",
+      "public_movie_URL": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/movies/stage05.mp4",
+      "public_poster": "posters/stage05.png"
+    },
+    {
+      "tag": "stage06",
+      "category": "movies",
+      "file": "movies/stage06.mp4",
+      "bytes": 3338939,
+      "SHA256": "2b8c727c6ae572b9ce4a76d68b3aa25735a05b2bee31133c46e73b509886bb82",
+      "rendering_receipt": {
+        "layout": "geographic-diorama-v2",
+        "route": "stage06/terrain/",
+        "tag": "stage06",
+        "stage": 6,
+        "physical_model_stage": 6,
+        "prototype_only": false,
+        "mode": "approved-full-video",
+        "source_sha256": "8229728ff5dc317ddef8d951977522984cdacd4edec5455941673c5fad672965",
+        "started_UTC": "2026-11-14T06:34:07.163Z",
+        "completed_UTC": "2026-11-14T06:35:50.595Z",
+        "wall_seconds": 103.43190639999999,
+        "frame_count": 900,
+        "resolution": [
+          1920,
+          1080
+        ],
+        "fps": 60,
+        "duration_seconds": 15,
+        "camera_mode": "source",
+        "camera_path": "Fixed shared LJ01 geographic source-region camera for comparison. Original all-source fields retained. Early2D cases do not identify a physical outlet here. No camera departure hides the plume.",
+        "scalar_interpolation_before_render": true,
+        "rendered_frame_blending": false,
+        "new_solver_runs": 0,
+        "encoded_metadata": {
+          "programs": [],
+          "streams": [
+            {
+              "width": 1920,
+              "height": 1080,
+              "avg_frame_rate": "60/1",
+              "duration": "15.000000",
+              "nb_frames": "900"
+            }
+          ]
+        },
+        "actual_images_viewed": false,
+        "user_reference_approved": true,
+        "errors": []
+      },
+      "actual_hours": 360,
+      "encoded_seconds": 15,
+      "fps": 60,
+      "source_camera": "Fixed shared source-region camera. Early2D output remains2D; no extra3D plume is invented.",
+      "title": "Background assessment",
+      "definition": {
+        "stage": 6,
+        "change": "Background assessment",
+        "result_scope": "Source-only3-D scenario",
+        "model_period_h": 360,
+        "physical_model": "Passive stochastic 3-D particles",
+        "meteorology": "Central forecast column; no spatially resolved local weather solver",
+        "source_scope": "Four conditional EIA design outlets, not full city inventory",
+        "conditional_emission_kg": 1626.84,
+        "limitation": "Unvalidated surface-only CAMS background excluded; zero initial and external background is an attribution assumption.",
+        "frozen_UTC": "2026-11-13T07:15:07.247134+00:00",
+        "manifest_sha256": "64230ba89f0bc43f6bd505e675bf2583952bbf4060f0aca43e558163c86babeb",
+        "whole_worker_turn_seconds": 331.85199999809265,
+        "worker_agent_proxy_seconds": 252.78000020980835,
+        "worker_data_seconds": 24.12657141685486,
+        "worker_rendering_seconds": 0.0,
+        "worker_other_seconds": 54.94542837142944,
+        "timing_note": "Observed intervals may overlap; Agent is a non-tool wall-clock proxy, not internal inference time.",
+        "native_field": "outputs/deposition/actual_flow_daily_3d.npz",
+        "native_field_sha256": "8229728ff5dc317ddef8d951977522984cdacd4edec5455941673c5fad672965",
+        "horizontal_bin_m": 2000,
+        "vertical_layers": 13,
+        "transport_dt_s": 120,
+        "particles_per_realization": 86400,
+        "sampling": "Daily fields; no inferred 360-hour 3-D sequence",
+        "web_view": "stage06/"
+      },
+      "poster": "posters/stage06.png",
+      "public_movie_URL": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/movies/stage06.mp4",
+      "public_poster": "posters/stage06.png"
+    },
+    {
+      "tag": "stage07",
+      "category": "movies",
+      "file": "movies/stage07.mp4",
+      "bytes": 3336198,
+      "SHA256": "80921cd02debb2b68ab2f9ad3437aaef73341ec7d556f0b428dbabc84abf4ebd",
+      "rendering_receipt": {
+        "layout": "geographic-diorama-v2",
+        "route": "stage07/terrain/",
+        "tag": "stage07",
+        "stage": 7,
+        "physical_model_stage": 7,
+        "prototype_only": false,
+        "mode": "approved-full-video",
+        "source_sha256": "8229728ff5dc317ddef8d951977522984cdacd4edec5455941673c5fad672965",
+        "started_UTC": "2026-11-14T06:34:09.157Z",
+        "completed_UTC": "2026-11-14T06:35:52.685Z",
+        "wall_seconds": 103.5281588,
+        "frame_count": 900,
+        "resolution": [
+          1920,
+          1080
+        ],
+        "fps": 60,
+        "duration_seconds": 15,
+        "camera_mode": "source",
+        "camera_path": "Fixed shared LJ01 geographic source-region camera for comparison. Original all-source fields retained. Early2D cases do not identify a physical outlet here. No camera departure hides the plume.",
+        "scalar_interpolation_before_render": true,
+        "rendered_frame_blending": false,
+        "new_solver_runs": 0,
+        "encoded_metadata": {
+          "programs": [],
+          "streams": [
+            {
+              "width": 1920,
+              "height": 1080,
+              "avg_frame_rate": "60/1",
+              "duration": "15.000000",
+              "nb_frames": "900"
+            }
+          ]
+        },
+        "actual_images_viewed": false,
+        "user_reference_approved": true,
+        "errors": []
+      },
+      "actual_hours": 360,
+      "encoded_seconds": 15,
+      "fps": 60,
+      "source_camera": "Fixed shared source-region camera. Early2D output remains2D; no extra3D plume is invented.",
+      "title": "Near-surface sampling",
+      "definition": {
+        "stage": 7,
+        "change": "Near-surface sampling",
+        "result_scope": "Sampling qualification failed",
+        "model_period_h": 360,
+        "physical_model": "Passive stochastic 3-D particles",
+        "meteorology": "Central forecast column; no spatially resolved local weather solver",
+        "source_scope": "Four conditional EIA design outlets, not full city inventory",
+        "conditional_emission_kg": 1626.84,
+        "limitation": "0-25m AGL volume means. Four outlets share a2km cell; seed and doubled-count tests expose severe local sampling noise.",
+        "frozen_UTC": "2026-11-13T07:19:34.205518+00:00",
+        "manifest_sha256": "19c720ab51ec372d501694c69919204030f244f2a1f994df05c9d079542a3487",
+        "whole_worker_turn_seconds": 180.79499983787537,
+        "worker_agent_proxy_seconds": 165.16499972343445,
+        "worker_data_seconds": 13.66700005531311,
+        "worker_rendering_seconds": 0.0,
+        "worker_other_seconds": 2.318000078201294,
+        "timing_note": "Observed intervals may overlap; Agent is a non-tool wall-clock proxy, not internal inference time.",
+        "native_field": "outputs/sampling_checks/actual_flow_daily_3d.npz",
+        "native_field_sha256": "8229728ff5dc317ddef8d951977522984cdacd4edec5455941673c5fad672965",
+        "horizontal_bin_m": 2000,
+        "vertical_layers": 13,
+        "transport_dt_s": 120,
+        "particles_per_realization": 86400,
+        "sampling": "Daily fields; no inferred 360-hour 3-D sequence",
+        "web_view": "stage07/"
+      },
+      "poster": "posters/stage07.png",
+      "public_movie_URL": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/movies/stage07.mp4",
+      "public_poster": "posters/stage07.png"
+    },
+    {
+      "tag": "stage08",
+      "category": "movies",
+      "file": "movies/stage08.mp4",
+      "bytes": 3331605,
+      "SHA256": "cce1f39cfce3974b122c63e529b14de7ee0296b8df00c449ee12cd7ae3415332",
+      "rendering_receipt": {
+        "layout": "geographic-diorama-v2",
+        "route": "stage08/terrain/",
+        "tag": "stage08",
+        "stage": 8,
+        "physical_model_stage": 8,
+        "prototype_only": false,
+        "mode": "approved-full-video",
+        "source_sha256": "c4ef47fc67b56d7168b4fd6b620506bfa237c8a0239515b97ab5e0e13e534350",
+        "started_UTC": "2026-11-14T06:35:51.179Z",
+        "completed_UTC": "2026-11-14T06:37:34.519Z",
+        "wall_seconds": 103.3403423,
+        "frame_count": 900,
+        "resolution": [
+          1920,
+          1080
+        ],
+        "fps": 60,
+        "duration_seconds": 15,
+        "camera_mode": "source",
+        "camera_path": "Fixed shared LJ01 geographic source-region camera for comparison. Original all-source fields retained. Early2D cases do not identify a physical outlet here. No camera departure hides the plume.",
+        "scalar_interpolation_before_render": true,
+        "rendered_frame_blending": false,
+        "new_solver_runs": 0,
+        "encoded_metadata": {
+          "programs": [],
+          "streams": [
+            {
+              "width": 1920,
+              "height": 1080,
+              "avg_frame_rate": "60/1",
+              "duration": "15.000000",
+              "nb_frames": "900"
+            }
+          ]
+        },
+        "actual_images_viewed": false,
+        "user_reference_approved": true,
+        "errors": []
+      },
+      "actual_hours": 360,
+      "encoded_seconds": 15,
+      "fps": 60,
+      "source_camera": "Fixed shared source-region camera. Early2D output remains2D; no extra3D plume is invented.",
+      "title": "GPU implementation",
+      "definition": {
+        "stage": 8,
+        "change": "GPU implementation",
+        "result_scope": "Same-physics backend agreement",
+        "model_period_h": 360,
+        "physical_model": "Passive stochastic 3-D particles",
+        "meteorology": "Central forecast column; no spatially resolved local weather solver",
+        "source_scope": "Four conditional EIA design outlets, not full city inventory",
+        "conditional_emission_kg": 1626.84,
+        "limitation": "Shared indexed RNG is new on both CPU/GPU. Compute speed excludes forcing, compilation and disk output; no concentration-skill claim.",
+        "frozen_UTC": "2026-11-13T07:30:57.225054+00:00",
+        "manifest_sha256": "e73c5d4228c044b8cbf6bc9296ae79615357c5b482f562bd1a2852d8c5420f92",
+        "whole_worker_turn_seconds": 543.5320000648499,
+        "worker_agent_proxy_seconds": 452.2910010814667,
+        "worker_data_seconds": 25.37960410118103,
+        "worker_rendering_seconds": 0.0,
+        "worker_other_seconds": 116.79939532279968,
+        "timing_note": "Observed intervals may overlap; Agent is a non-tool wall-clock proxy, not internal inference time.",
+        "native_field": "outputs/gpu_validation/gpu_comparison_fields.npz",
+        "native_field_sha256": "c4ef47fc67b56d7168b4fd6b620506bfa237c8a0239515b97ab5e0e13e534350",
+        "horizontal_bin_m": 2000,
+        "vertical_layers": 13,
+        "transport_dt_s": 120,
+        "particles_per_realization": 86400,
+        "sampling": "Daily fields; no inferred 360-hour 3-D sequence",
+        "web_view": "stage08/"
+      },
+      "poster": "posters/stage08.png",
+      "public_movie_URL": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/movies/stage08.mp4",
+      "public_poster": "posters/stage08.png"
+    },
+    {
+      "tag": "stage09",
+      "category": "movies",
+      "file": "movies/stage09.mp4",
+      "bytes": 3333446,
+      "SHA256": "d86becfb48f8a801ff0ee8d176d02d7ab9bd60387ff793c10ec9511fe2b551a8",
+      "rendering_receipt": {
+        "layout": "geographic-diorama-v2",
+        "route": "stage09/terrain/",
+        "tag": "stage09",
+        "stage": 9,
+        "physical_model_stage": 9,
+        "prototype_only": false,
+        "mode": "approved-full-video",
+        "source_sha256": "59b7ed976fd4e12f274a20df2118c6f20820b45abaf5b189a53cceaa78c15edc",
+        "started_UTC": "2026-11-14T06:35:53.188Z",
+        "completed_UTC": "2026-11-14T06:37:36.895Z",
+        "wall_seconds": 103.7071517,
+        "frame_count": 900,
+        "resolution": [
+          1920,
+          1080
+        ],
+        "fps": 60,
+        "duration_seconds": 15,
+        "camera_mode": "source",
+        "camera_path": "Fixed shared LJ01 geographic source-region camera for comparison. Original all-source fields retained. Early2D cases do not identify a physical outlet here. No camera departure hides the plume.",
+        "scalar_interpolation_before_render": true,
+        "rendered_frame_blending": false,
+        "new_solver_runs": 0,
+        "encoded_metadata": {
+          "programs": [],
+          "streams": [
+            {
+              "width": 1920,
+              "height": 1080,
+              "avg_frame_rate": "60/1",
+              "duration": "15.000000",
+              "nb_frames": "900"
+            }
+          ]
+        },
+        "actual_images_viewed": false,
+        "user_reference_approved": true,
+        "errors": []
+      },
+      "actual_hours": 360,
+      "encoded_seconds": 15,
+      "fps": 60,
+      "source_camera": "Fixed shared source-region camera. Early2D output remains2D; no extra3D plume is invented.",
+      "title": "Release implementation gates",
+      "definition": {
+        "stage": 9,
+        "change": "Release implementation gates",
+        "result_scope": "Implementation agreement only",
+        "model_period_h": 360,
+        "physical_model": "Passive stochastic 3-D particles",
+        "meteorology": "Central forecast column; no spatially resolved local weather solver",
+        "source_scope": "Four conditional EIA design outlets, not full city inventory",
+        "conditional_emission_kg": 1626.84,
+        "limitation": "Exact-zero controls, nonnegativity and budget checks pass. Zero precipitation RMSE compares the same broadcast input; it is not an independent weather-solver validation.",
+        "frozen_UTC": "2026-11-13T07:35:11.334235+00:00",
+        "manifest_sha256": "4c16b885e91b9816a80573c7155816fd718ab363417688ed34e4148e5d48485e",
+        "whole_worker_turn_seconds": 124.32499980926514,
+        "worker_agent_proxy_seconds": 111.52799987792969,
+        "worker_data_seconds": 12.154162883758545,
+        "worker_rendering_seconds": 0.0,
+        "worker_other_seconds": 0.6428370475769043,
+        "timing_note": "Observed intervals may overlap; Agent is a non-tool wall-clock proxy, not internal inference time.",
+        "native_field": "outputs/release_checks/gpu_release_candidate.npz",
+        "native_field_sha256": "59b7ed976fd4e12f274a20df2118c6f20820b45abaf5b189a53cceaa78c15edc",
+        "horizontal_bin_m": 2000,
+        "vertical_layers": 13,
+        "transport_dt_s": 120,
+        "particles_per_realization": 86400,
+        "sampling": "Daily fields; no inferred 360-hour 3-D sequence",
+        "web_view": "stage09/"
+      },
+      "poster": "posters/stage09.png",
+      "public_movie_URL": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/movies/stage09.mp4",
+      "public_poster": "posters/stage09.png"
+    },
+    {
+      "tag": "stage10",
+      "category": "movies",
+      "file": "movies/stage10.mp4",
+      "bytes": 3335125,
+      "SHA256": "c5dedcefa6ca86501a3fba07b77e6f80b245e0925a2caeb9b68f6ae9cfecfdb5",
+      "rendering_receipt": {
+        "layout": "geographic-diorama-v2",
+        "route": "stage10/terrain/",
+        "tag": "stage10",
+        "stage": 10,
+        "physical_model_stage": 10,
+        "prototype_only": false,
+        "mode": "approved-full-video",
+        "source_sha256": "59b7ed976fd4e12f274a20df2118c6f20820b45abaf5b189a53cceaa78c15edc",
+        "started_UTC": "2026-11-14T06:37:35.202Z",
+        "completed_UTC": "2026-11-14T06:39:18.428Z",
+        "wall_seconds": 103.22595689999999,
+        "frame_count": 900,
+        "resolution": [
+          1920,
+          1080
+        ],
+        "fps": 60,
+        "duration_seconds": 15,
+        "camera_mode": "source",
+        "camera_path": "Fixed shared LJ01 geographic source-region camera for comparison. Original all-source fields retained. Early2D cases do not identify a physical outlet here. No camera departure hides the plume.",
+        "scalar_interpolation_before_render": true,
+        "rendered_frame_blending": false,
+        "new_solver_runs": 0,
+        "encoded_metadata": {
+          "programs": [],
+          "streams": [
+            {
+              "width": 1920,
+              "height": 1080,
+              "avg_frame_rate": "60/1",
+              "duration": "15.000000",
+              "nb_frames": "900"
+            }
+          ]
+        },
+        "actual_images_viewed": false,
+        "user_reference_approved": true,
+        "errors": []
+      },
+      "actual_hours": 360,
+      "encoded_seconds": 15,
+      "fps": 60,
+      "source_camera": "Fixed shared source-region camera. Early2D output remains2D; no extra3D plume is invented.",
+      "title": "Physical outlet release height",
+      "definition": {
+        "stage": 10,
+        "change": "Physical outlet release height",
+        "result_scope": "Runtime birth-position verification",
+        "model_period_h": 360,
+        "physical_model": "Passive stochastic 3-D particles",
+        "meteorology": "Central forecast column; no spatially resolved local weather solver",
+        "source_scope": "Four conditional EIA design outlets, not full city inventory",
+        "conditional_emission_kg": 1626.84,
+        "limitation": "Both solvers release at20/50/80/65m AGL before transport/rise. EIA-documented heights are not independently surveyed as-built heights.",
+        "frozen_UTC": "2026-11-13T07:40:07.114458+00:00",
+        "manifest_sha256": "be7a18ecac364687b363c97ba241ee832073db769d908a4a770e41cb832097db",
+        "whole_worker_turn_seconds": 126.93899989128113,
+        "worker_agent_proxy_seconds": 115.44099974632263,
+        "worker_data_seconds": 10.666690587997437,
+        "worker_rendering_seconds": 0.0,
+        "worker_other_seconds": 0.8313095569610596,
+        "timing_note": "Observed intervals may overlap; Agent is a non-tool wall-clock proxy, not internal inference time.",
+        "native_field": "outputs/release_checks/gpu_release_candidate.npz",
+        "native_field_sha256": "59b7ed976fd4e12f274a20df2118c6f20820b45abaf5b189a53cceaa78c15edc",
+        "horizontal_bin_m": 2000,
+        "vertical_layers": 13,
+        "transport_dt_s": 120,
+        "particles_per_realization": 86400,
+        "sampling": "Daily fields; no inferred 360-hour 3-D sequence",
+        "web_view": "stage10/"
+      },
+      "poster": "posters/stage10.png",
+      "public_movie_URL": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/movies/stage10.mp4",
+      "public_poster": "posters/stage10.png"
+    },
+    {
+      "tag": "stage11",
+      "category": "movies",
+      "file": "movies/stage11.mp4",
+      "bytes": 5311166,
+      "SHA256": "4fcb4e88712e1fbd49dfe13f4b34b81ab6e9e4b2a0aa17512f54d708291e0574",
+      "rendering_receipt": {
+        "layout": "geographic-diorama-v2",
+        "route": "stage11/terrain/",
+        "tag": "stage11",
+        "stage": 11,
+        "physical_model_stage": 11,
+        "prototype_only": false,
+        "mode": "approved-full-video",
+        "source_sha256": "038a30e75f177c86ea716658ef99f4ebe7a0ac5a2e7e01702431d14e1521c694",
+        "started_UTC": "2026-11-14T06:37:39.221Z",
+        "completed_UTC": "2026-11-14T06:39:23.692Z",
+        "wall_seconds": 104.47123370000001,
+        "frame_count": 900,
+        "resolution": [
+          1920,
+          1080
+        ],
+        "fps": 60,
+        "duration_seconds": 15,
+        "camera_mode": "source",
+        "camera_path": "Fixed shared LJ01 geographic source-region camera for comparison. Original all-source fields retained. Early2D cases do not identify a physical outlet here. No camera departure hides the plume.",
+        "scalar_interpolation_before_render": true,
+        "rendered_frame_blending": false,
+        "new_solver_runs": 0,
+        "encoded_metadata": {
+          "programs": [],
+          "streams": [
+            {
+              "width": 1920,
+              "height": 1080,
+              "avg_frame_rate": "60/1",
+              "duration": "15.000000",
+              "nb_frames": "900"
+            }
+          ]
+        },
+        "actual_images_viewed": false,
+        "user_reference_approved": true,
+        "errors": []
+      },
+      "actual_hours": 360,
+      "encoded_seconds": 15,
+      "fps": 60,
+      "source_camera": "Fixed shared source-region camera. Early2D output remains2D; no extra3D plume is invented.",
+      "title": "Horizontal estimator refinement",
+      "definition": {
+        "stage": 11,
+        "change": "Horizontal estimator refinement",
+        "result_scope": "Local grid convergence not demonstrated",
+        "model_period_h": 360,
+        "physical_model": "Passive stochastic 3-D particles",
+        "meteorology": "Central forecast column; no spatially resolved local weather solver",
+        "source_scope": "Four conditional EIA design outlets, not full city inventory",
+        "conditional_emission_kg": 1626.84,
+        "limitation": "2 km, 1 km and 500 m density bins use shared particle paths; the meteorological input resolution is unchanged. Fine-bin receptor differences remain above the declared criterion.",
+        "frozen_UTC": "2026-11-13T07:46:23.031128+00:00",
+        "manifest_sha256": "876e285a09183667a3c8b4803af02b6f950b2729f4ed8f747a578a1a0424b191",
+        "whole_worker_turn_seconds": 275.4340000152588,
+        "worker_agent_proxy_seconds": 252.71199989318848,
+        "worker_data_seconds": 41.31699991226196,
+        "worker_rendering_seconds": 0.0,
+        "worker_other_seconds": 2.8680002689361572,
+        "timing_note": "Observed intervals may overlap; Agent is a non-tool wall-clock proxy, not internal inference time.",
+        "native_field": "outputs/grid_convergence/grid_500m_seed20261113.npz",
+        "native_field_sha256": "038a30e75f177c86ea716658ef99f4ebe7a0ac5a2e7e01702431d14e1521c694",
+        "horizontal_bin_m": 500,
+        "vertical_layers": 13,
+        "transport_dt_s": 120,
+        "particles_per_realization": 5529600,
+        "sampling": "Daily fields; no inferred 360-hour 3-D sequence",
+        "web_view": "stage11/"
+      },
+      "poster": "posters/stage11.png",
+      "public_movie_URL": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/movies/stage11.mp4",
+      "public_poster": "posters/stage11.png"
+    },
+    {
+      "tag": "stage12",
+      "category": "movies",
+      "file": "movies/stage12.mp4",
+      "bytes": 5315312,
+      "SHA256": "c0d33fb953c0c6a9f7f736bb1d8166315abbcac6228e0299d127310c4411f8d1",
+      "rendering_receipt": {
+        "layout": "geographic-diorama-v2",
+        "route": "stage12/terrain/",
+        "tag": "stage12",
+        "stage": 12,
+        "physical_model_stage": 12,
+        "prototype_only": false,
+        "mode": "approved-full-video",
+        "source_sha256": "196df95f880970e3f17129cbbc9000d27a48d548a395e14108fa5c6edcc322b7",
+        "started_UTC": "2026-11-14T06:39:19.223Z",
+        "completed_UTC": "2026-11-14T06:41:03.639Z",
+        "wall_seconds": 104.4168703,
+        "frame_count": 900,
+        "resolution": [
+          1920,
+          1080
+        ],
+        "fps": 60,
+        "duration_seconds": 15,
+        "camera_mode": "source",
+        "camera_path": "Fixed shared LJ01 geographic source-region camera for comparison. Original all-source fields retained. Early2D cases do not identify a physical outlet here. No camera departure hides the plume.",
+        "scalar_interpolation_before_render": true,
+        "rendered_frame_blending": false,
+        "new_solver_runs": 0,
+        "encoded_metadata": {
+          "programs": [],
+          "streams": [
+            {
+              "width": 1920,
+              "height": 1080,
+              "avg_frame_rate": "60/1",
+              "duration": "15.000000",
+              "nb_frames": "900"
+            }
+          ]
+        },
+        "actual_images_viewed": false,
+        "user_reference_approved": true,
+        "errors": []
+      },
+      "actual_hours": 360,
+      "encoded_seconds": 15,
+      "fps": 60,
+      "source_camera": "Fixed shared source-region camera. Early2D output remains2D; no extra3D plume is invented.",
+      "title": "Particle-count refinement",
+      "definition": {
+        "stage": 12,
+        "change": "Particle-count refinement",
+        "result_scope": "Sampling noise reduced; criteria not all met",
+        "model_period_h": 360,
+        "physical_model": "Passive stochastic 3-D particles",
+        "meteorology": "Central forecast column; no spatially resolved local weather solver",
+        "source_scope": "Four conditional EIA design outlets, not full city inventory",
+        "conditional_emission_kg": 1626.84,
+        "limitation": "5.53 to 353.89 million particles per realization at fixed physical emission mass. Two-seed daily-field differences fall to 8.42%, but successive-count field and receptor criteria still fail.",
+        "frozen_UTC": "2026-11-13T07:56:43.929422+00:00",
+        "manifest_sha256": "ca68821f12592ed35da1a0523d2576170f783be42cbec6f723056c3b163a372b",
+        "whole_worker_turn_seconds": 473.5919997692108,
+        "worker_agent_proxy_seconds": 237.92299938201904,
+        "worker_data_seconds": 333.05547070503235,
+        "worker_rendering_seconds": 0.0,
+        "worker_other_seconds": 51.46353006362915,
+        "timing_note": "Observed intervals may overlap; Agent is a non-tool wall-clock proxy, not internal inference time.",
+        "native_field": "outputs/particle_count_convergence/particles_8192_seed20261113.npz",
+        "native_field_sha256": "196df95f880970e3f17129cbbc9000d27a48d548a395e14108fa5c6edcc322b7",
+        "horizontal_bin_m": 500,
+        "vertical_layers": 13,
+        "transport_dt_s": 120,
+        "particles_per_realization": 353894400,
+        "sampling": "Daily fields; no inferred 360-hour 3-D sequence",
+        "web_view": "stage12/"
+      },
+      "poster": "posters/stage12.png",
+      "public_movie_URL": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/movies/stage12.mp4",
+      "public_poster": "posters/stage12.png"
+    },
+    {
+      "tag": "stage13",
+      "category": "movies",
+      "file": "movies/stage13.mp4",
+      "bytes": 5344398,
+      "SHA256": "446a0b927359dc2c1a57e7bef80b5ec26a09c6064daee36a66ef33cbe9870d08",
+      "rendering_receipt": {
+        "layout": "geographic-diorama-v2",
+        "route": "stage13/terrain/",
+        "tag": "stage13",
+        "stage": 13,
+        "physical_model_stage": 13,
+        "prototype_only": false,
+        "mode": "approved-full-video",
+        "source_sha256": "83eb869a0102f4a859720467b412c5c95dea612a456bb737e63757d5f83520b1",
+        "started_UTC": "2026-11-14T06:39:25.235Z",
+        "completed_UTC": "2026-11-14T06:41:09.922Z",
+        "wall_seconds": 104.687426,
+        "frame_count": 900,
+        "resolution": [
+          1920,
+          1080
+        ],
+        "fps": 60,
+        "duration_seconds": 15,
+        "camera_mode": "source",
+        "camera_path": "Fixed shared LJ01 geographic source-region camera for comparison. Original all-source fields retained. Early2D cases do not identify a physical outlet here. No camera departure hides the plume.",
+        "scalar_interpolation_before_render": true,
+        "rendered_frame_blending": false,
+        "new_solver_runs": 0,
+        "encoded_metadata": {
+          "programs": [],
+          "streams": [
+            {
+              "width": 1920,
+              "height": 1080,
+              "avg_frame_rate": "60/1",
+              "duration": "15.000000",
+              "nb_frames": "900"
+            }
+          ]
+        },
+        "actual_images_viewed": false,
+        "user_reference_approved": true,
+        "errors": []
+      },
+      "actual_hours": 360,
+      "encoded_seconds": 15,
+      "fps": 60,
+      "source_camera": "Fixed shared source-region camera. Early2D output remains2D; no extra3D plume is invented.",
+      "title": "Vertical estimator refinement",
+      "definition": {
+        "stage": 13,
+        "change": "Vertical estimator refinement",
+        "result_scope": "Native profiles not converged",
+        "model_period_h": 360,
+        "physical_model": "Passive stochastic 3-D particles",
+        "meteorology": "Central forecast column; no spatially resolved local weather solver",
+        "source_scope": "Four conditional EIA design outlets, not full city inventory",
+        "conditional_emission_kg": 1626.84,
+        "limitation": "13, 26 and 52 layers with shared trajectories. The lowest layer is 6.25 m; 26-to-52-layer global and outlet profile changes exceed the declared limits. Fixed 0\u201325 m agreement is a common-volume consistency check.",
+        "frozen_UTC": "2026-11-13T08:11:04.966079+00:00",
+        "manifest_sha256": "2bb90563c5df0c6417195fc65b7bad5ff73a7afb0bc009d7b2f87f831a71a380",
+        "whole_worker_turn_seconds": 584.7870001792908,
+        "worker_agent_proxy_seconds": 388.1090006828308,
+        "worker_data_seconds": 321.4285855293274,
+        "worker_rendering_seconds": 0.0,
+        "worker_other_seconds": 84.36841464042664,
+        "timing_note": "Observed intervals may overlap; Agent is a non-tool wall-clock proxy, not internal inference time.",
+        "native_field": "outputs/vertical_grid_convergence/layers_52_seed20261113_sparse.npz",
+        "native_field_sha256": "83eb869a0102f4a859720467b412c5c95dea612a456bb737e63757d5f83520b1",
+        "horizontal_bin_m": 500,
+        "vertical_layers": 52,
+        "transport_dt_s": 120,
+        "particles_per_realization": 353894400,
+        "sampling": "Daily fields; no inferred 360-hour 3-D sequence",
+        "web_view": "stage13/"
+      },
+      "poster": "posters/stage13.png",
+      "public_movie_URL": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/movies/stage13.mp4",
+      "public_poster": "posters/stage13.png"
+    },
+    {
+      "tag": "stage14",
+      "category": "movies",
+      "file": "movies/stage14.mp4",
+      "bytes": 5320726,
+      "SHA256": "1495eb70681e9e41e41c88768437eed61d1b57d77819208c1b35b51de0278538",
+      "rendering_receipt": {
+        "layout": "geographic-diorama-v2",
+        "route": "stage14/terrain/",
+        "tag": "stage14",
+        "stage": 14,
+        "physical_model_stage": 14,
+        "prototype_only": false,
+        "mode": "approved-full-video",
+        "source_sha256": "4cde6e9375a258a575baaa0306197db25a9434f9b8bbc06151bd0ff6fe26d0d6",
+        "started_UTC": "2026-11-14T06:41:05.247Z",
+        "completed_UTC": "2026-11-14T06:42:50.018Z",
+        "wall_seconds": 104.7700016,
+        "frame_count": 900,
+        "resolution": [
+          1920,
+          1080
+        ],
+        "fps": 60,
+        "duration_seconds": 15,
+        "camera_mode": "source",
+        "camera_path": "Fixed shared LJ01 geographic source-region camera for comparison. Original all-source fields retained. Early2D cases do not identify a physical outlet here. No camera departure hides the plume.",
+        "scalar_interpolation_before_render": true,
+        "rendered_frame_blending": false,
+        "new_solver_runs": 0,
+        "encoded_metadata": {
+          "programs": [],
+          "streams": [
+            {
+              "width": 1920,
+              "height": 1080,
+              "avg_frame_rate": "60/1",
+              "duration": "15.000000",
+              "nb_frames": "900"
+            }
+          ]
+        },
+        "actual_images_viewed": false,
+        "user_reference_approved": true,
+        "errors": []
+      },
+      "actual_hours": 360,
+      "encoded_seconds": 15,
+      "fps": 60,
+      "source_camera": "Fixed shared source-region camera. Early2D output remains2D; no extra3D plume is invented.",
+      "title": "Transport timestep refinement",
+      "definition": {
+        "stage": 14,
+        "change": "Transport timestep refinement",
+        "result_scope": "Partial criteria pass; full-field criterion fails",
+        "model_period_h": 360,
+        "physical_model": "Passive stochastic 3-D particles",
+        "meteorology": "Central forecast column; no spatially resolved local weather solver",
+        "source_scope": "Four conditional EIA design outlets, not full city inventory",
+        "conditional_emission_kg": 1626.84,
+        "limitation": "120, 60 and 30 s with paired stochastic increments and fixed 120 s release events. Process totals and receptors meet their finest-step subcriteria; near-surface fields still differ by 13.6%.",
+        "frozen_UTC": "2026-11-13T08:46:22.167748+00:00",
+        "manifest_sha256": "647f88ebfe0cf6c6688c9750e567e88fe296e9148d3bed174b06479043c28200",
+        "whole_worker_turn_seconds": 1001.7679998874664,
+        "worker_agent_proxy_seconds": 571.0369997024536,
+        "worker_data_seconds": 712.6427280902863,
+        "worker_rendering_seconds": 0.0,
+        "worker_other_seconds": 153.96627163887024,
+        "timing_note": "Observed intervals may overlap; Agent is a non-tool wall-clock proxy, not internal inference time.",
+        "native_field": "outputs/timestep_convergence/dt30s_seed20261113_sparse.npz",
+        "native_field_sha256": "4cde6e9375a258a575baaa0306197db25a9434f9b8bbc06151bd0ff6fe26d0d6",
+        "horizontal_bin_m": 500,
+        "vertical_layers": 52,
+        "transport_dt_s": 30,
+        "particles_per_realization": 88473600,
+        "sampling": "Daily fields; no inferred 360-hour 3-D sequence",
+        "web_view": "stage14/"
+      },
+      "poster": "posters/stage14.png",
+      "public_movie_URL": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/movies/stage14.mp4",
+      "public_poster": "posters/stage14.png"
+    },
+    {
+      "tag": "stage15",
+      "category": "movies",
+      "file": "movies/stage15.mp4",
+      "bytes": 4796171,
+      "SHA256": "0ec00bbaa2046a08e178f0b28eb4544a0518de819969cde1e41705a7228516bc",
+      "rendering_receipt": {
+        "layout": "geographic-diorama-v2",
+        "route": "stage15/",
+        "tag": "stage15",
+        "stage": 15,
+        "physical_model_stage": 15,
+        "prototype_only": false,
+        "mode": "approved-full-video",
+        "source_sha256": "97427bc5a4ec14686870255d47eff8f2ac9529f64e3940dd409d2443d01d4e95",
+        "started_UTC": "2026-11-14T06:41:11.257Z",
+        "completed_UTC": "2026-11-14T06:42:54.407Z",
+        "wall_seconds": 103.1508783,
+        "frame_count": 900,
+        "resolution": [
+          1920,
+          1080
+        ],
+        "fps": 60,
+        "duration_seconds": 15,
+        "camera_mode": "source",
+        "camera_path": "Fixed shared LJ01 geographic source-region camera for comparison. Original all-source fields retained. Early2D cases do not identify a physical outlet here. No camera departure hides the plume.",
+        "scalar_interpolation_before_render": true,
+        "rendered_frame_blending": false,
+        "new_solver_runs": 0,
+        "encoded_metadata": {
+          "programs": [],
+          "streams": [
+            {
+              "width": 1920,
+              "height": 1080,
+              "avg_frame_rate": "60/1",
+              "duration": "15.000000",
+              "nb_frames": "900"
+            }
+          ]
+        },
+        "actual_images_viewed": false,
+        "user_reference_approved": true,
+        "errors": []
+      },
+      "actual_hours": 360,
+      "encoded_seconds": 15,
+      "fps": 60,
+      "source_camera": "Fixed shared source-region camera. Early2D output remains2D; no extra3D plume is invented.",
+      "title": "Terrain and surface exchange",
+      "definition": {
+        "stage": 15,
+        "change": "Terrain and surface exchange",
+        "result_scope": "CPU terrain scenario; new GPU agreement failed",
+        "model_period_h": 360,
+        "physical_model": "Passive stochastic 3-D particles",
+        "meteorology": "Central forecast column; no spatially resolved local weather solver",
+        "source_scope": "Four conditional EIA design outlets, not full city inventory",
+        "conditional_emission_kg": 1626.84,
+        "limitation": "Actual bilinear DSM boundary, contact uptake and reversible/retained stores. Forecast re-release is zero under the assumed wetness gate. The CPU case has only 345,600 primary particles; previous higher-count convergence does not qualify it. Surface chemistry is uncalibrated; wind is not terrain-resolved.",
+        "frozen_UTC": "2026-11-13T10:43:40.745223+00:00",
+        "manifest_sha256": "da8650a8ebb9a2af6a361dcd7b422a7b639a35f51eaa00beff1b53337b57bf5d",
+        "whole_worker_turn_seconds": 6897.353999853134,
+        "worker_agent_proxy_seconds": 1816.423999786377,
+        "worker_data_seconds": 26.102999687194824,
+        "worker_rendering_seconds": 0.0009999275207519531,
+        "worker_other_seconds": 5301.653000593185,
+        "timing_note": "Observed intervals may overlap; Agent is a non-tool wall-clock proxy, not internal inference time.",
+        "native_field": "outputs/terrain_surface_exchange/terrain_conditional_fields.npz",
+        "native_field_sha256": "97427bc5a4ec14686870255d47eff8f2ac9529f64e3940dd409d2443d01d4e95",
+        "horizontal_bin_m": 500,
+        "vertical_layers": 52,
+        "transport_dt_s": 30,
+        "particles_per_realization": 345600,
+        "sampling": "Daily fields; no inferred 360-hour 3-D sequence",
+        "web_view": "stage15/"
+      },
+      "poster": "posters/stage15.png",
+      "public_movie_URL": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/movies/stage15.mp4",
+      "public_poster": "posters/stage15.png"
+    },
+    {
+      "tag": "final360_highcount",
+      "category": "movies",
+      "file": "movies/final360_highcount.mp4",
+      "bytes": 18313537,
+      "SHA256": "5d5f5398020a520bb7202ab36d1e782f31386fde1af5bced210bca59dded8c60",
+      "rendering_receipt": {
+        "layout": "geographic-diorama-v2",
+        "route": "final360_highcount/",
+        "tag": "final360_highcount",
+        "stage": null,
+        "physical_model_stage": 15,
+        "prototype_only": false,
+        "mode": "approved-full-video",
+        "source_sha256": "474d1db4269826da9fc0c736a50df1ce70614fab1f35dd371ca74f4458c7b9d1",
+        "started_UTC": "2026-11-14T06:26:21.035Z",
+        "completed_UTC": "2026-11-14T06:29:03.906Z",
+        "wall_seconds": 162.87079319999998,
+        "frame_count": 900,
+        "resolution": [
+          1920,
+          1080
+        ],
+        "fps": 60,
+        "duration_seconds": 15,
+        "camera_mode": "source",
+        "camera_path": "Fixed shared LJ01 geographic source-region camera for comparison. Original all-source fields retained. Early2D cases do not identify a physical outlet here. No camera departure hides the plume.",
+        "scalar_interpolation_before_render": true,
+        "rendered_frame_blending": false,
+        "new_solver_runs": 0,
+        "encoded_metadata": {
+          "programs": [],
+          "streams": [
+            {
+              "width": 1920,
+              "height": 1080,
+              "avg_frame_rate": "60/1",
+              "duration": "15.000000",
+              "nb_frames": "900"
+            }
+          ]
+        },
+        "actual_images_viewed": false,
+        "user_reference_approved": true,
+        "errors": []
+      },
+      "actual_hours": 360,
+      "encoded_seconds": 15,
+      "fps": 60,
+      "source_camera": "Fixed shared source-region camera. Early2D output remains2D; no extra3D plume is invented.",
+      "title": "Final high-count CPU delivery",
+      "definition": {
+        "change": "Final high-count CPU delivery",
+        "result_scope": "353,894,400-particle preserved360h CPU scenario; independent revised NWP360h not started.",
+        "physical_model": "Original terrain-aware custom particle model; prescribed horizontally repeated weather column"
+      },
+      "poster": "posters/final360_highcount.png",
+      "public_movie_URL": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/movies/final360_highcount.mp4",
+      "public_poster": "posters/final360_highcount.png"
+    },
+    {
+      "tag": "stage00_to_stage01",
+      "category": "comparisons",
+      "file": "comparisons/stage00_to_stage01.mp4",
+      "bytes": 8127300,
+      "SHA256": "32a7aea8c10d2de88bafcf3b112c2d2db4914ce3d0917607c02ed92b5d63837c",
+      "rendering_receipt": {
+        "left": "stage00",
+        "right": "stage01",
+        "layout": "geographic-diorama-v2",
+        "source_receipts": [
+          {
+            "tag": "stage00",
+            "source_sha256": "4031cbacb2c5d9d5a40c667d18f10d44c3728d0be3923a60d7aec864d9855438",
+            "camera_mode": "source"
+          },
+          {
+            "tag": "stage01",
+            "source_sha256": "d15f3fced8f92cd80c6823e362e660cff938101a6483ba53c0f2d016d35ffd9b",
+            "camera_mode": "source"
+          }
+        ],
+        "encoded_metadata": {
+          "programs": [],
+          "streams": [
+            {
+              "width": 3840,
+              "height": 1080,
+              "avg_frame_rate": "60/1",
+              "duration": "15.000000",
+              "nb_frames": "900"
+            }
+          ]
+        },
+        "bytes": 8127300,
+        "model_hours": 360,
+        "spatial_panels": true,
+        "temporal_RGB_blending": false,
+        "crossfade": false,
+        "model_runs": 0,
+        "actual_video_frames_viewed": false,
+        "started_UTC": "2026-11-14T06:42:55.149Z",
+        "completed_UTC": "2026-11-14T06:42:58.957Z",
+        "wall_seconds": 3.807499,
+        "caution": "Panels retain different quantities, units, physics and sampling support as recorded in the version matrix; identical camera geometry is not numerical equivalence."
+      },
+      "actual_hours": 360,
+      "encoded_seconds": 15,
+      "fps": 60,
+      "source_camera": "Fixed shared source-region camera. Early2D output remains2D; no extra3D plume is invented.",
+      "public_movie_URL": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage00_to_stage01.mp4"
+    },
+    {
+      "tag": "stage01_to_stage02",
+      "category": "comparisons",
+      "file": "comparisons/stage01_to_stage02.mp4",
+      "bytes": 7970905,
+      "SHA256": "e7bec5f80e8ecf24308b23571e73976c554767d29ceaaed465488a9bc8ee839c",
+      "rendering_receipt": {
+        "left": "stage01",
+        "right": "stage02",
+        "layout": "geographic-diorama-v2",
+        "source_receipts": [
+          {
+            "tag": "stage01",
+            "source_sha256": "d15f3fced8f92cd80c6823e362e660cff938101a6483ba53c0f2d016d35ffd9b",
+            "camera_mode": "source"
+          },
+          {
+            "tag": "stage02",
+            "source_sha256": "69b801e1e1564b37ce01a33005d89579b4cc936e5538635bb645a3d8ce86626e",
+            "camera_mode": "source"
+          }
+        ],
+        "encoded_metadata": {
+          "programs": [],
+          "streams": [
+            {
+              "width": 3840,
+              "height": 1080,
+              "avg_frame_rate": "60/1",
+              "duration": "15.000000",
+              "nb_frames": "900"
+            }
+          ]
+        },
+        "bytes": 7970905,
+        "model_hours": 360,
+        "spatial_panels": true,
+        "temporal_RGB_blending": false,
+        "crossfade": false,
+        "model_runs": 0,
+        "actual_video_frames_viewed": false,
+        "started_UTC": "2026-11-14T06:42:55.153Z",
+        "completed_UTC": "2026-11-14T06:42:58.957Z",
+        "wall_seconds": 3.8042184000000003,
+        "caution": "Panels retain different quantities, units, physics and sampling support as recorded in the version matrix; identical camera geometry is not numerical equivalence."
+      },
+      "actual_hours": 360,
+      "encoded_seconds": 15,
+      "fps": 60,
+      "source_camera": "Fixed shared source-region camera. Early2D output remains2D; no extra3D plume is invented.",
+      "public_movie_URL": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage01_to_stage02.mp4"
+    },
+    {
+      "tag": "stage02_to_stage03",
+      "category": "comparisons",
+      "file": "comparisons/stage02_to_stage03.mp4",
+      "bytes": 7826962,
+      "SHA256": "d39c51622d9a0de94e59fb3778bca4ab5102908cbfe59a99a692aa0ea9402a11",
+      "rendering_receipt": {
+        "left": "stage02",
+        "right": "stage03",
+        "layout": "geographic-diorama-v2",
+        "source_receipts": [
+          {
+            "tag": "stage02",
+            "source_sha256": "69b801e1e1564b37ce01a33005d89579b4cc936e5538635bb645a3d8ce86626e",
+            "camera_mode": "source"
+          },
+          {
+            "tag": "stage03",
+            "source_sha256": "8dea6f9c9c7ef1f90d3b1543406b8673c9f2be857c8c9d6a468061de2a0d783f",
+            "camera_mode": "source"
+          }
+        ],
+        "encoded_metadata": {
+          "programs": [],
+          "streams": [
+            {
+              "width": 3840,
+              "height": 1080,
+              "avg_frame_rate": "60/1",
+              "duration": "15.000000",
+              "nb_frames": "900"
+            }
+          ]
+        },
+        "bytes": 7826962,
+        "model_hours": 360,
+        "spatial_panels": true,
+        "temporal_RGB_blending": false,
+        "crossfade": false,
+        "model_runs": 0,
+        "actual_video_frames_viewed": false,
+        "started_UTC": "2026-11-14T06:42:59.002Z",
+        "completed_UTC": "2026-11-14T06:43:02.703Z",
+        "wall_seconds": 3.7013887999999997,
+        "caution": "Panels retain different quantities, units, physics and sampling support as recorded in the version matrix; identical camera geometry is not numerical equivalence."
+      },
+      "actual_hours": 360,
+      "encoded_seconds": 15,
+      "fps": 60,
+      "source_camera": "Fixed shared source-region camera. Early2D output remains2D; no extra3D plume is invented.",
+      "public_movie_URL": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage02_to_stage03.mp4"
+    },
+    {
+      "tag": "stage03_to_stage04",
+      "category": "comparisons",
+      "file": "comparisons/stage03_to_stage04.mp4",
+      "bytes": 6956296,
+      "SHA256": "2590eac472461bc7ebd0579bdf196ec2416751abd1c15743298ebfd41e62f8dd",
+      "rendering_receipt": {
+        "left": "stage03",
+        "right": "stage04",
+        "layout": "geographic-diorama-v2",
+        "source_receipts": [
+          {
+            "tag": "stage03",
+            "source_sha256": "8dea6f9c9c7ef1f90d3b1543406b8673c9f2be857c8c9d6a468061de2a0d783f",
+            "camera_mode": "source"
+          },
+          {
+            "tag": "stage04",
+            "source_sha256": "b35b12950c24c0e0e520a3c1d5080e1ef2a6ac92749637e7ec40741a1c51f1d9",
+            "camera_mode": "source"
+          }
+        ],
+        "encoded_metadata": {
+          "programs": [],
+          "streams": [
+            {
+              "width": 3840,
+              "height": 1080,
+              "avg_frame_rate": "60/1",
+              "duration": "15.000000",
+              "nb_frames": "900"
+            }
+          ]
+        },
+        "bytes": 6956296,
+        "model_hours": 360,
+        "spatial_panels": true,
+        "temporal_RGB_blending": false,
+        "crossfade": false,
+        "model_runs": 0,
+        "actual_video_frames_viewed": false,
+        "started_UTC": "2026-11-14T06:42:59.001Z",
+        "completed_UTC": "2026-11-14T06:43:02.704Z",
+        "wall_seconds": 3.70269,
+        "caution": "Panels retain different quantities, units, physics and sampling support as recorded in the version matrix; identical camera geometry is not numerical equivalence."
+      },
+      "actual_hours": 360,
+      "encoded_seconds": 15,
+      "fps": 60,
+      "source_camera": "Fixed shared source-region camera. Early2D output remains2D; no extra3D plume is invented.",
+      "public_movie_URL": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage03_to_stage04.mp4"
+    },
+    {
+      "tag": "stage04_to_stage05",
+      "category": "comparisons",
+      "file": "comparisons/stage04_to_stage05.mp4",
+      "bytes": 6182809,
+      "SHA256": "648cbb96e516e508afec90633b120c76214b1f15d8a85ec4b680c44c34726ea7",
+      "rendering_receipt": {
+        "left": "stage04",
+        "right": "stage05",
+        "layout": "geographic-diorama-v2",
+        "source_receipts": [
+          {
+            "tag": "stage04",
+            "source_sha256": "b35b12950c24c0e0e520a3c1d5080e1ef2a6ac92749637e7ec40741a1c51f1d9",
+            "camera_mode": "source"
+          },
+          {
+            "tag": "stage05",
+            "source_sha256": "8229728ff5dc317ddef8d951977522984cdacd4edec5455941673c5fad672965",
+            "camera_mode": "source"
+          }
+        ],
+        "encoded_metadata": {
+          "programs": [],
+          "streams": [
+            {
+              "width": 3840,
+              "height": 1080,
+              "avg_frame_rate": "60/1",
+              "duration": "15.000000",
+              "nb_frames": "900"
+            }
+          ]
+        },
+        "bytes": 6182809,
+        "model_hours": 360,
+        "spatial_panels": true,
+        "temporal_RGB_blending": false,
+        "crossfade": false,
+        "model_runs": 0,
+        "actual_video_frames_viewed": false,
+        "started_UTC": "2026-11-14T06:43:02.751Z",
+        "completed_UTC": "2026-11-14T06:43:06.487Z",
+        "wall_seconds": 3.7352487,
+        "caution": "Panels retain different quantities, units, physics and sampling support as recorded in the version matrix; identical camera geometry is not numerical equivalence."
+      },
+      "actual_hours": 360,
+      "encoded_seconds": 15,
+      "fps": 60,
+      "source_camera": "Fixed shared source-region camera. Early2D output remains2D; no extra3D plume is invented.",
+      "public_movie_URL": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage04_to_stage05.mp4"
+    },
+    {
+      "tag": "stage05_to_stage06",
+      "category": "comparisons",
+      "file": "comparisons/stage05_to_stage06.mp4",
+      "bytes": 6184680,
+      "SHA256": "6f6a64eda32293cfc63233d099ad36428d63417256f9bbfbcaee3a9229df690c",
+      "rendering_receipt": {
+        "left": "stage05",
+        "right": "stage06",
+        "layout": "geographic-diorama-v2",
+        "source_receipts": [
+          {
+            "tag": "stage05",
+            "source_sha256": "8229728ff5dc317ddef8d951977522984cdacd4edec5455941673c5fad672965",
+            "camera_mode": "source"
+          },
+          {
+            "tag": "stage06",
+            "source_sha256": "8229728ff5dc317ddef8d951977522984cdacd4edec5455941673c5fad672965",
+            "camera_mode": "source"
+          }
+        ],
+        "encoded_metadata": {
+          "programs": [],
+          "streams": [
+            {
+              "width": 3840,
+              "height": 1080,
+              "avg_frame_rate": "60/1",
+              "duration": "15.000000",
+              "nb_frames": "900"
+            }
+          ]
+        },
+        "bytes": 6184680,
+        "model_hours": 360,
+        "spatial_panels": true,
+        "temporal_RGB_blending": false,
+        "crossfade": false,
+        "model_runs": 0,
+        "actual_video_frames_viewed": false,
+        "started_UTC": "2026-11-14T06:43:02.749Z",
+        "completed_UTC": "2026-11-14T06:43:06.493Z",
+        "wall_seconds": 3.7436622,
+        "caution": "Panels retain different quantities, units, physics and sampling support as recorded in the version matrix; identical camera geometry is not numerical equivalence."
+      },
+      "actual_hours": 360,
+      "encoded_seconds": 15,
+      "fps": 60,
+      "source_camera": "Fixed shared source-region camera. Early2D output remains2D; no extra3D plume is invented.",
+      "public_movie_URL": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage05_to_stage06.mp4"
+    },
+    {
+      "tag": "stage06_to_stage07",
+      "category": "comparisons",
+      "file": "comparisons/stage06_to_stage07.mp4",
+      "bytes": 6182086,
+      "SHA256": "1cf6ef7aced19ecca6a01e9e496b6bebf03578382865f174d80776bad237dde2",
+      "rendering_receipt": {
+        "left": "stage06",
+        "right": "stage07",
+        "layout": "geographic-diorama-v2",
+        "source_receipts": [
+          {
+            "tag": "stage06",
+            "source_sha256": "8229728ff5dc317ddef8d951977522984cdacd4edec5455941673c5fad672965",
+            "camera_mode": "source"
+          },
+          {
+            "tag": "stage07",
+            "source_sha256": "8229728ff5dc317ddef8d951977522984cdacd4edec5455941673c5fad672965",
+            "camera_mode": "source"
+          }
+        ],
+        "encoded_metadata": {
+          "programs": [],
+          "streams": [
+            {
+              "width": 3840,
+              "height": 1080,
+              "avg_frame_rate": "60/1",
+              "duration": "15.000000",
+              "nb_frames": "900"
+            }
+          ]
+        },
+        "bytes": 6182086,
+        "model_hours": 360,
+        "spatial_panels": true,
+        "temporal_RGB_blending": false,
+        "crossfade": false,
+        "model_runs": 0,
+        "actual_video_frames_viewed": false,
+        "started_UTC": "2026-11-14T06:43:06.529Z",
+        "completed_UTC": "2026-11-14T06:43:10.233Z",
+        "wall_seconds": 3.703816,
+        "caution": "Panels retain different quantities, units, physics and sampling support as recorded in the version matrix; identical camera geometry is not numerical equivalence."
+      },
+      "actual_hours": 360,
+      "encoded_seconds": 15,
+      "fps": 60,
+      "source_camera": "Fixed shared source-region camera. Early2D output remains2D; no extra3D plume is invented.",
+      "public_movie_URL": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage06_to_stage07.mp4"
+    },
+    {
+      "tag": "stage07_to_stage08",
+      "category": "comparisons",
+      "file": "comparisons/stage07_to_stage08.mp4",
+      "bytes": 6194496,
+      "SHA256": "ad0c21b809945b3b7a05127cfc1c8ebbc8d58cf6bacebac39c49d6b110cc1b52",
+      "rendering_receipt": {
+        "left": "stage07",
+        "right": "stage08",
+        "layout": "geographic-diorama-v2",
+        "source_receipts": [
+          {
+            "tag": "stage07",
+            "source_sha256": "8229728ff5dc317ddef8d951977522984cdacd4edec5455941673c5fad672965",
+            "camera_mode": "source"
+          },
+          {
+            "tag": "stage08",
+            "source_sha256": "c4ef47fc67b56d7168b4fd6b620506bfa237c8a0239515b97ab5e0e13e534350",
+            "camera_mode": "source"
+          }
+        ],
+        "encoded_metadata": {
+          "programs": [],
+          "streams": [
+            {
+              "width": 3840,
+              "height": 1080,
+              "avg_frame_rate": "60/1",
+              "duration": "15.000000",
+              "nb_frames": "900"
+            }
+          ]
+        },
+        "bytes": 6194496,
+        "model_hours": 360,
+        "spatial_panels": true,
+        "temporal_RGB_blending": false,
+        "crossfade": false,
+        "model_runs": 0,
+        "actual_video_frames_viewed": false,
+        "started_UTC": "2026-11-14T06:43:06.531Z",
+        "completed_UTC": "2026-11-14T06:43:10.230Z",
+        "wall_seconds": 3.6986334000000003,
+        "caution": "Panels retain different quantities, units, physics and sampling support as recorded in the version matrix; identical camera geometry is not numerical equivalence."
+      },
+      "actual_hours": 360,
+      "encoded_seconds": 15,
+      "fps": 60,
+      "source_camera": "Fixed shared source-region camera. Early2D output remains2D; no extra3D plume is invented.",
+      "public_movie_URL": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage07_to_stage08.mp4"
+    },
+    {
+      "tag": "stage08_to_stage09",
+      "category": "comparisons",
+      "file": "comparisons/stage08_to_stage09.mp4",
+      "bytes": 6156088,
+      "SHA256": "cde0a5c29a9a07f4f96356bf003fec387cf249429bf08ea19bc8a25a0854a0d2",
+      "rendering_receipt": {
+        "left": "stage08",
+        "right": "stage09",
+        "layout": "geographic-diorama-v2",
+        "source_receipts": [
+          {
+            "tag": "stage08",
+            "source_sha256": "c4ef47fc67b56d7168b4fd6b620506bfa237c8a0239515b97ab5e0e13e534350",
+            "camera_mode": "source"
+          },
+          {
+            "tag": "stage09",
+            "source_sha256": "59b7ed976fd4e12f274a20df2118c6f20820b45abaf5b189a53cceaa78c15edc",
+            "camera_mode": "source"
+          }
+        ],
+        "encoded_metadata": {
+          "programs": [],
+          "streams": [
+            {
+              "width": 3840,
+              "height": 1080,
+              "avg_frame_rate": "60/1",
+              "duration": "15.000000",
+              "nb_frames": "900"
+            }
+          ]
+        },
+        "bytes": 6156088,
+        "model_hours": 360,
+        "spatial_panels": true,
+        "temporal_RGB_blending": false,
+        "crossfade": false,
+        "model_runs": 0,
+        "actual_video_frames_viewed": false,
+        "started_UTC": "2026-11-14T06:43:10.274Z",
+        "completed_UTC": "2026-11-14T06:43:13.995Z",
+        "wall_seconds": 3.7206738,
+        "caution": "Panels retain different quantities, units, physics and sampling support as recorded in the version matrix; identical camera geometry is not numerical equivalence."
+      },
+      "actual_hours": 360,
+      "encoded_seconds": 15,
+      "fps": 60,
+      "source_camera": "Fixed shared source-region camera. Early2D output remains2D; no extra3D plume is invented.",
+      "public_movie_URL": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage08_to_stage09.mp4"
+    },
+    {
+      "tag": "stage09_to_stage10",
+      "category": "comparisons",
+      "file": "comparisons/stage09_to_stage10.mp4",
+      "bytes": 6159355,
+      "SHA256": "ac8b516639af8807f3b2161ed20fdda97a2b83a79ea7ce2806210644d0c1bc26",
+      "rendering_receipt": {
+        "left": "stage09",
+        "right": "stage10",
+        "layout": "geographic-diorama-v2",
+        "source_receipts": [
+          {
+            "tag": "stage09",
+            "source_sha256": "59b7ed976fd4e12f274a20df2118c6f20820b45abaf5b189a53cceaa78c15edc",
+            "camera_mode": "source"
+          },
+          {
+            "tag": "stage10",
+            "source_sha256": "59b7ed976fd4e12f274a20df2118c6f20820b45abaf5b189a53cceaa78c15edc",
+            "camera_mode": "source"
+          }
+        ],
+        "encoded_metadata": {
+          "programs": [],
+          "streams": [
+            {
+              "width": 3840,
+              "height": 1080,
+              "avg_frame_rate": "60/1",
+              "duration": "15.000000",
+              "nb_frames": "900"
+            }
+          ]
+        },
+        "bytes": 6159355,
+        "model_hours": 360,
+        "spatial_panels": true,
+        "temporal_RGB_blending": false,
+        "crossfade": false,
+        "model_runs": 0,
+        "actual_video_frames_viewed": false,
+        "started_UTC": "2026-11-14T06:43:10.272Z",
+        "completed_UTC": "2026-11-14T06:43:14.000Z",
+        "wall_seconds": 3.7274286,
+        "caution": "Panels retain different quantities, units, physics and sampling support as recorded in the version matrix; identical camera geometry is not numerical equivalence."
+      },
+      "actual_hours": 360,
+      "encoded_seconds": 15,
+      "fps": 60,
+      "source_camera": "Fixed shared source-region camera. Early2D output remains2D; no extra3D plume is invented.",
+      "public_movie_URL": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage09_to_stage10.mp4"
+    },
+    {
+      "tag": "stage10_to_stage11",
+      "category": "comparisons",
+      "file": "comparisons/stage10_to_stage11.mp4",
+      "bytes": 8119898,
+      "SHA256": "9dfc48d4de243b1f5ef5094063c056e421863d30f03e9f8269662dd087eaca06",
+      "rendering_receipt": {
+        "left": "stage10",
+        "right": "stage11",
+        "layout": "geographic-diorama-v2",
+        "source_receipts": [
+          {
+            "tag": "stage10",
+            "source_sha256": "59b7ed976fd4e12f274a20df2118c6f20820b45abaf5b189a53cceaa78c15edc",
+            "camera_mode": "source"
+          },
+          {
+            "tag": "stage11",
+            "source_sha256": "038a30e75f177c86ea716658ef99f4ebe7a0ac5a2e7e01702431d14e1521c694",
+            "camera_mode": "source"
+          }
+        ],
+        "encoded_metadata": {
+          "programs": [],
+          "streams": [
+            {
+              "width": 3840,
+              "height": 1080,
+              "avg_frame_rate": "60/1",
+              "duration": "15.000000",
+              "nb_frames": "900"
+            }
+          ]
+        },
+        "bytes": 8119898,
+        "model_hours": 360,
+        "spatial_panels": true,
+        "temporal_RGB_blending": false,
+        "crossfade": false,
+        "model_runs": 0,
+        "actual_video_frames_viewed": false,
+        "started_UTC": "2026-11-14T06:43:14.036Z",
+        "completed_UTC": "2026-11-14T06:43:17.798Z",
+        "wall_seconds": 3.7614565,
+        "caution": "Panels retain different quantities, units, physics and sampling support as recorded in the version matrix; identical camera geometry is not numerical equivalence."
+      },
+      "actual_hours": 360,
+      "encoded_seconds": 15,
+      "fps": 60,
+      "source_camera": "Fixed shared source-region camera. Early2D output remains2D; no extra3D plume is invented.",
+      "public_movie_URL": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage10_to_stage11.mp4"
+    },
+    {
+      "tag": "stage11_to_stage12",
+      "category": "comparisons",
+      "file": "comparisons/stage11_to_stage12.mp4",
+      "bytes": 9979160,
+      "SHA256": "0243f6c9c0e225abff863bd9afe571433768d6eeeb9c209549306d98a4cc2903",
+      "rendering_receipt": {
+        "left": "stage11",
+        "right": "stage12",
+        "layout": "geographic-diorama-v2",
+        "source_receipts": [
+          {
+            "tag": "stage11",
+            "source_sha256": "038a30e75f177c86ea716658ef99f4ebe7a0ac5a2e7e01702431d14e1521c694",
+            "camera_mode": "source"
+          },
+          {
+            "tag": "stage12",
+            "source_sha256": "196df95f880970e3f17129cbbc9000d27a48d548a395e14108fa5c6edcc322b7",
+            "camera_mode": "source"
+          }
+        ],
+        "encoded_metadata": {
+          "programs": [],
+          "streams": [
+            {
+              "width": 3840,
+              "height": 1080,
+              "avg_frame_rate": "60/1",
+              "duration": "15.000000",
+              "nb_frames": "900"
+            }
+          ]
+        },
+        "bytes": 9979160,
+        "model_hours": 360,
+        "spatial_panels": true,
+        "temporal_RGB_blending": false,
+        "crossfade": false,
+        "model_runs": 0,
+        "actual_video_frames_viewed": false,
+        "started_UTC": "2026-11-14T06:43:14.038Z",
+        "completed_UTC": "2026-11-14T06:43:17.803Z",
+        "wall_seconds": 3.7638557,
+        "caution": "Panels retain different quantities, units, physics and sampling support as recorded in the version matrix; identical camera geometry is not numerical equivalence."
+      },
+      "actual_hours": 360,
+      "encoded_seconds": 15,
+      "fps": 60,
+      "source_camera": "Fixed shared source-region camera. Early2D output remains2D; no extra3D plume is invented.",
+      "public_movie_URL": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage11_to_stage12.mp4"
+    },
+    {
+      "tag": "stage12_to_stage13",
+      "category": "comparisons",
+      "file": "comparisons/stage12_to_stage13.mp4",
+      "bytes": 10014456,
+      "SHA256": "a94919cf1d2bf1ed132b88730853d83ea45616aa2b2fd0dde497e75258147258",
+      "rendering_receipt": {
+        "left": "stage12",
+        "right": "stage13",
+        "layout": "geographic-diorama-v2",
+        "source_receipts": [
+          {
+            "tag": "stage12",
+            "source_sha256": "196df95f880970e3f17129cbbc9000d27a48d548a395e14108fa5c6edcc322b7",
+            "camera_mode": "source"
+          },
+          {
+            "tag": "stage13",
+            "source_sha256": "83eb869a0102f4a859720467b412c5c95dea612a456bb737e63757d5f83520b1",
+            "camera_mode": "source"
+          }
+        ],
+        "encoded_metadata": {
+          "programs": [],
+          "streams": [
+            {
+              "width": 3840,
+              "height": 1080,
+              "avg_frame_rate": "60/1",
+              "duration": "15.000000",
+              "nb_frames": "900"
+            }
+          ]
+        },
+        "bytes": 10014456,
+        "model_hours": 360,
+        "spatial_panels": true,
+        "temporal_RGB_blending": false,
+        "crossfade": false,
+        "model_runs": 0,
+        "actual_video_frames_viewed": false,
+        "started_UTC": "2026-11-14T06:43:17.839Z",
+        "completed_UTC": "2026-11-14T06:43:21.639Z",
+        "wall_seconds": 3.7999613,
+        "caution": "Panels retain different quantities, units, physics and sampling support as recorded in the version matrix; identical camera geometry is not numerical equivalence."
+      },
+      "actual_hours": 360,
+      "encoded_seconds": 15,
+      "fps": 60,
+      "source_camera": "Fixed shared source-region camera. Early2D output remains2D; no extra3D plume is invented.",
+      "public_movie_URL": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage12_to_stage13.mp4"
+    },
+    {
+      "tag": "stage13_to_stage14",
+      "category": "comparisons",
+      "file": "comparisons/stage13_to_stage14.mp4",
+      "bytes": 10032855,
+      "SHA256": "e2c89aaa12881a2d3ca1d2b9b6ce42314bd3ef1cb3fb7e675a92f67134e717aa",
+      "rendering_receipt": {
+        "left": "stage13",
+        "right": "stage14",
+        "layout": "geographic-diorama-v2",
+        "source_receipts": [
+          {
+            "tag": "stage13",
+            "source_sha256": "83eb869a0102f4a859720467b412c5c95dea612a456bb737e63757d5f83520b1",
+            "camera_mode": "source"
+          },
+          {
+            "tag": "stage14",
+            "source_sha256": "4cde6e9375a258a575baaa0306197db25a9434f9b8bbc06151bd0ff6fe26d0d6",
+            "camera_mode": "source"
+          }
+        ],
+        "encoded_metadata": {
+          "programs": [],
+          "streams": [
+            {
+              "width": 3840,
+              "height": 1080,
+              "avg_frame_rate": "60/1",
+              "duration": "15.000000",
+              "nb_frames": "900"
+            }
+          ]
+        },
+        "bytes": 10032855,
+        "model_hours": 360,
+        "spatial_panels": true,
+        "temporal_RGB_blending": false,
+        "crossfade": false,
+        "model_runs": 0,
+        "actual_video_frames_viewed": false,
+        "started_UTC": "2026-11-14T06:43:17.840Z",
+        "completed_UTC": "2026-11-14T06:43:21.634Z",
+        "wall_seconds": 3.7938768,
+        "caution": "Panels retain different quantities, units, physics and sampling support as recorded in the version matrix; identical camera geometry is not numerical equivalence."
+      },
+      "actual_hours": 360,
+      "encoded_seconds": 15,
+      "fps": 60,
+      "source_camera": "Fixed shared source-region camera. Early2D output remains2D; no extra3D plume is invented.",
+      "public_movie_URL": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage13_to_stage14.mp4"
+    },
+    {
+      "tag": "stage14_to_stage15",
+      "category": "comparisons",
+      "file": "comparisons/stage14_to_stage15.mp4",
+      "bytes": 9553139,
+      "SHA256": "e0b7cadd2580e64321601cf39e0d3a262b51bca3360d16116196e10ba0f38b3e",
+      "rendering_receipt": {
+        "left": "stage14",
+        "right": "stage15",
+        "layout": "geographic-diorama-v2",
+        "source_receipts": [
+          {
+            "tag": "stage14",
+            "source_sha256": "4cde6e9375a258a575baaa0306197db25a9434f9b8bbc06151bd0ff6fe26d0d6",
+            "camera_mode": "source"
+          },
+          {
+            "tag": "stage15",
+            "source_sha256": "97427bc5a4ec14686870255d47eff8f2ac9529f64e3940dd409d2443d01d4e95",
+            "camera_mode": "source"
+          }
+        ],
+        "encoded_metadata": {
+          "programs": [],
+          "streams": [
+            {
+              "width": 3840,
+              "height": 1080,
+              "avg_frame_rate": "60/1",
+              "duration": "15.000000",
+              "nb_frames": "900"
+            }
+          ]
+        },
+        "bytes": 9553139,
+        "model_hours": 360,
+        "spatial_panels": true,
+        "temporal_RGB_blending": false,
+        "crossfade": false,
+        "model_runs": 0,
+        "actual_video_frames_viewed": false,
+        "started_UTC": "2026-11-14T06:43:21.675Z",
+        "completed_UTC": "2026-11-14T06:43:25.474Z",
+        "wall_seconds": 3.7989746,
+        "caution": "Panels retain different quantities, units, physics and sampling support as recorded in the version matrix; identical camera geometry is not numerical equivalence."
+      },
+      "actual_hours": 360,
+      "encoded_seconds": 15,
+      "fps": 60,
+      "source_camera": "Fixed shared source-region camera. Early2D output remains2D; no extra3D plume is invented.",
+      "public_movie_URL": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage14_to_stage15.mp4"
+    },
+    {
+      "tag": "stage15_to_final360_highcount",
+      "category": "comparisons",
+      "file": "comparisons/stage15_to_final360_highcount.mp4",
+      "bytes": 22733176,
+      "SHA256": "330b44729cbd09c31f3950eda6a82ac0422b35efe7d637bbce806e7d65069609",
+      "rendering_receipt": {
+        "left": "stage15",
+        "right": "final360_highcount",
+        "layout": "geographic-diorama-v2",
+        "source_receipts": [
+          {
+            "tag": "stage15",
+            "source_sha256": "97427bc5a4ec14686870255d47eff8f2ac9529f64e3940dd409d2443d01d4e95",
+            "camera_mode": "source"
+          },
+          {
+            "tag": "final360_highcount",
+            "source_sha256": "474d1db4269826da9fc0c736a50df1ce70614fab1f35dd371ca74f4458c7b9d1",
+            "camera_mode": "source"
+          }
+        ],
+        "encoded_metadata": {
+          "programs": [],
+          "streams": [
+            {
+              "width": 3840,
+              "height": 1080,
+              "avg_frame_rate": "60/1",
+              "duration": "15.000000",
+              "nb_frames": "900"
+            }
+          ]
+        },
+        "bytes": 22733176,
+        "model_hours": 360,
+        "spatial_panels": true,
+        "temporal_RGB_blending": false,
+        "crossfade": false,
+        "model_runs": 0,
+        "actual_video_frames_viewed": false,
+        "started_UTC": "2026-11-14T06:43:21.678Z",
+        "completed_UTC": "2026-11-14T06:43:25.554Z",
+        "wall_seconds": 3.8766308,
+        "caution": "Panels retain different quantities, units, physics and sampling support as recorded in the version matrix; identical camera geometry is not numerical equivalence."
+      },
+      "actual_hours": 360,
+      "encoded_seconds": 15,
+      "fps": 60,
+      "source_camera": "Fixed shared source-region camera. Early2D output remains2D; no extra3D plume is invented.",
+      "public_movie_URL": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage15_to_final360_highcount.mp4"
+    }
+  ],
+  "default_seconds": 15,
+  "fps": 60,
+  "all_original_numerical_fields_unchanged": true,
+  "scalar_geometry_interpolation_before_render": true,
+  "temporal_RGB_blending": false,
+  "weather_revision_2mm_gate_pass": false,
+  "reference_style_approved": true,
+  "reference_style_approved_UTC": "2026-11-14T06:05:41.322Z",
+  "new_model_runs": 0,
+  "public_data_commit": "fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0",
+  "user_archive_commit": "93e552699e6d04d872611b1d59cc9b0211c94563",
+  "actual_archive_blob_verification": true,
+  "prepared_UTC": "2026-11-14T07:03:47.181348+00:00"
+}

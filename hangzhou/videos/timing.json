@@ -1,0 +1,42 @@
+{
+  "updated_UTC": "2026-11-14T06:59:55.720943+00:00",
+  "scope_start_UTC": "2026-11-13T05:34:50.862000+00:00",
+  "main_categories": {
+    "worker": {
+      "agent": 7495.2370018959045,
+      "data": 9530.319815397263,
+      "rendering": 5.444738149642944,
+      "other": 7173.206282615662,
+      "total_busy_union_seconds": 22250.519804239273,
+      "cross_category_overlap_seconds": 1953.6880338191986,
+      "logged_reasoning_item_seconds": 4361.886001586914
+    },
+    "controller": {
+      "agent": 49378.93600010872,
+      "data": 9003.6799659729,
+      "rendering": 2531.809363603592,
+      "other": 11848.642308950424,
+      "total_busy_union_seconds": 57004.86994290352,
+      "cross_category_overlap_seconds": 15758.197695732117,
+      "logged_reasoning_item_seconds": 27155.80200099945
+    },
+    "all": {
+      "agent": 49794.437000989914,
+      "data": 18180.50311613083,
+      "rendering": 2537.254101753235,
+      "other": 18673.33508491516,
+      "total_busy_union_seconds": 58014.12494325638,
+      "cross_category_overlap_seconds": 31171.40436053276,
+      "logged_reasoning_item_seconds": 31517.688002586365,
+      "between_turns_or_unobserved_seconds": 33490.73399972916,
+      "project_elapsed_seconds": 91504.85894298553
+    }
+  },
+  "subcategories": null,
+  "measurement_notes": [
+    "Agent is an observed non-tool wall-clock proxy, not pure server inference time.",
+    "Reasoning-item timestamps are timing metadata; no reasoning text is published.",
+    "Category intervals may overlap; nested GPU/process timings must not be summed twice.",
+    "This is a dated progress snapshot, not a live timer or completed new360h forecast."
+  ]
+}
