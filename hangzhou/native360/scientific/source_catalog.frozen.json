@@ -1,0 +1,139 @@
+{
+  "created_UTC": "2026-11-14T02:22:01.256167+00:00",
+  "independent_revision_not_prompt16": true,
+  "components": [
+    {
+      "component_id": "LS12",
+      "name": "Longshan process superheater outlet LS12",
+      "group_index": 0,
+      "native_species_name": "SO2_LS12",
+      "longitude": 120.63809991597867,
+      "latitude": 30.24894919215468,
+      "kg_s": 5.555555555555556e-05,
+      "kg_h": 0.2,
+      "stack": {
+        "height_AGL_m": 20,
+        "diameter_m": 0.7,
+        "exit_velocity_m_s": 14.435822502666246,
+        "exit_temperature_K": 353.15,
+        "assumed_actual_volume_flow_m3_s": 5.555555555555555,
+        "velocity_is_conditional_not_measured": true,
+        "flow_actual_or_standard_basis_unconfirmed": true
+      },
+      "operation_assumption": "Continuous constant EIA design/normal-operation rate for the selected360h; neither live CEMS nor confirmed2026 operating record",
+      "annual_hours_in_EIA_not_a_future_calendar": 7200,
+      "reported_rate_basis": "EIA normal-operation maximum/design; not 2026 CEMS",
+      "commissioning_status": "unverified",
+      "coordinate_datum_assumption": "WGS84 UTM51N; source lists UTM zone 51, datum not explicit",
+      "primary_EIA_URL": "https://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web3249/site/attach/0/73bc083e3c074d52bc9455bcff45a157.pdf",
+      "primary_table": "6.2.1-6",
+      "model_ground_elevation": "Must be sampled from actual new WRF/FLEX terrain at unchanged outlet coordinates; do not reuse old fine-DSM or Vancouver elevation"
+    },
+    {
+      "component_id": "LS13",
+      "name": "Longshan sulfur-recovery outlet LS13",
+      "group_index": 1,
+      "native_species_name": "SO2_LS13",
+      "longitude": 120.6377333503414,
+      "latitude": 30.24820290083626,
+      "kg_s": 2.3055555555555558e-05,
+      "kg_h": 0.083,
+      "stack": {
+        "height_AGL_m": 50,
+        "diameter_m": 0.6,
+        "exit_velocity_m_s": 8.154234738658834,
+        "exit_temperature_K": 313.15,
+        "assumed_actual_volume_flow_m3_s": 2.3055555555555554,
+        "velocity_is_conditional_not_measured": true,
+        "flow_actual_or_standard_basis_unconfirmed": true
+      },
+      "operation_assumption": "Continuous constant EIA design/normal-operation rate for the selected360h; neither live CEMS nor confirmed2026 operating record",
+      "annual_hours_in_EIA_not_a_future_calendar": 7200,
+      "reported_rate_basis": "EIA normal-operation maximum/design; not 2026 CEMS",
+      "commissioning_status": "unverified",
+      "coordinate_datum_assumption": "WGS84 UTM51N; source lists UTM zone 51, datum not explicit",
+      "primary_EIA_URL": "https://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web3249/site/attach/0/73bc083e3c074d52bc9455bcff45a157.pdf",
+      "primary_table": "6.2.1-6",
+      "model_ground_elevation": "Must be sampled from actual new WRF/FLEX terrain at unchanged outlet coordinates; do not reuse old fine-DSM or Vancouver elevation"
+    },
+    {
+      "component_id": "LS15",
+      "name": "Longshan flare pilot outlet LS15",
+      "group_index": 2,
+      "native_species_name": "SO2_LS15",
+      "longitude": 120.63844788338125,
+      "latitude": 30.253077821227393,
+      "kg_s": 6.666666666666667e-06,
+      "kg_h": 0.024,
+      "stack": {
+        "height_AGL_m": 80,
+        "diameter_m": 0.8,
+        "exit_velocity_m_s": 0.9018780108540735,
+        "exit_temperature_K": 353.15,
+        "assumed_actual_volume_flow_m3_s": 0.4533333333333333,
+        "velocity_is_conditional_not_measured": true,
+        "flow_actual_or_standard_basis_unconfirmed": true
+      },
+      "operation_assumption": "Continuous constant EIA design/normal-operation rate for the selected360h; neither live CEMS nor confirmed2026 operating record",
+      "annual_hours_in_EIA_not_a_future_calendar": 7200,
+      "reported_rate_basis": "EIA normal-operation maximum/design; not 2026 CEMS",
+      "commissioning_status": "unverified",
+      "coordinate_datum_assumption": "WGS84 UTM51N; source lists UTM zone 51, datum not explicit",
+      "primary_EIA_URL": "https://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web3249/site/attach/0/73bc083e3c074d52bc9455bcff45a157.pdf",
+      "primary_table": "6.2.1-6",
+      "model_ground_elevation": "Must be sampled from actual new WRF/FLEX terrain at unchanged outlet coordinates; do not reuse old fine-DSM or Vancouver elevation"
+    },
+    {
+      "component_id": "LJ01",
+      "name": "Linjiang sludge-incinerator outlet LJ01",
+      "group_index": 3,
+      "native_species_name": "SO2_LJ01",
+      "longitude": 120.62871499584624,
+      "latitude": 30.250146152461955,
+      "kg_s": 0.00117,
+      "kg_h": 4.212,
+      "stack": {
+        "height_AGL_m": 65,
+        "diameter_m": 2,
+        "exit_velocity_m_s": 15.142001285762923,
+        "exit_temperature_K": 323.15,
+        "assumed_actual_volume_flow_m3_s": 47.57,
+        "velocity_is_conditional_not_measured": true,
+        "flow_actual_or_standard_basis_unconfirmed": true
+      },
+      "operation_assumption": "Continuous constant EIA design/normal-operation rate for the selected360h; neither live CEMS nor confirmed2026 operating record",
+      "annual_hours_in_EIA_not_a_future_calendar": 7200,
+      "reported_rate_basis": "EIA normal-operation maximum/design; not 2026 CEMS",
+      "commissioning_status": "unverified",
+      "coordinate_datum_assumption": "WGS84 UTM51N; source lists UTM zone 51, datum not explicit",
+      "primary_EIA_URL": "https://zjjcmspublic.oss-cn-hangzhou-zwynet-d01-a.internet.cloud.zj.gov.cn/jcms_files/jcms1/web3249/site/attach/0/73bc083e3c074d52bc9455bcff45a157.pdf",
+      "primary_table": "6.2.1-11",
+      "model_ground_elevation": "Must be sampled from actual new WRF/FLEX terrain at unchanged outlet coordinates; do not reuse old fine-DSM or Vancouver elevation"
+    }
+  ],
+  "source_only": true,
+  "initial_background_mass_kg": 0,
+  "external_chemical_inflow": "Not prescribed; report this limitation",
+  "period": {
+    "source_start_UTC": "2026-11-13T16:00:00Z",
+    "source_end_UTC": "2026-11-28T16:00:00Z",
+    "hours": 360,
+    "weather_start_UTC": "2026-11-13T00:00:00Z",
+    "warmup_hours": 16
+  },
+  "total_kg_h": 4.519,
+  "total_360h_kg": 1626.8400000000001,
+  "chemical_labels": [
+    "SO2_LS12",
+    "SO2_LS13",
+    "SO2_LS15",
+    "SO2_LJ01",
+    "ZERO"
+  ],
+  "ZERO_group_index": 4,
+  "input_sources": {
+    "documented_sources_SHA256": "7bb5e7bfbf5c246a41ba593fe4ad5995894f52e19b176002b574f2484047f0d4",
+    "conditional_flow_csv_SHA256": "7aa50fba7b3038aa270042d6f80a8142b74d67ad7b3fafcbfb1c0f2be06876b7"
+  },
+  "no_pollutant_model_steps": true
+}

@@ -1,0 +1,23 @@
+{
+  "status": "actual360h_scene_URLs_rebased_pending_data_commit_verification_and_public_browser_QA",
+  "UTC": "2026-11-15T09:40:36.540903+00:00",
+  "source_scene": "C:\\Users\\ASUS\\Desktop\\Agent_contact\\execution\\pollution_hangzhou_prompt_sequence_v1\\presentation\\site\\vancouver_revision360",
+  "staged_scene": "C:\\Users\\ASUS\\Desktop\\Agent_contact\\tmp\\hangzhou-native360-public-ui-r01",
+  "actual_source_freeze_SHA256": "ce1563837c9b0768ec47e9f4a64b17c62489f7539b8406432049c984601992c4",
+  "immutable_asset_commit": "74636a43be765946adad32cd6264a47ffd099424",
+  "data_bases": {
+    "/execution/pollution_hangzhou_vancouver_revision_v1/production360/products/": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/74636a43be765946adad32cd6264a47ffd099424/hangzhou-native360/products/",
+    "/execution/pollution_hangzhou_vancouver_revision_v1/production360/near_pack/": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/74636a43be765946adad32cd6264a47ffd099424/hangzhou-native360/near/",
+    "/execution/pollution_hangzhou_vancouver_revision_v1/production360/weather_pack/": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/74636a43be765946adad32cd6264a47ffd099424/hangzhou-native360/weather/"
+  },
+  "changed_text_files": [
+    "metadata.json",
+    "viewer.mjs"
+  ],
+  "physical_data_or_scalar_encoding_changed": false,
+  "not_public_delivery": true,
+  "requirements_remaining": [
+    "Verify actual committed data blobs and all referenced files under hangzhou-native360/ at the given commit.",
+    "Serve UI and perform real CORS/decompression/native ground/cloud queries/playback/rain/4K/mobile/Scientific checks, then actually view output images."
+  ]
+}

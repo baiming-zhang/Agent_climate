@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Three-dimensional passive transport",
+    "tex": "\\mathrm d\\mathbf X_p=\\left[\\mathbf U(\\mathbf X_p,t)+\\mathbf u_p^{\\prime}\\right]\\mathrm dt",
+    "description": "X is particle position(m), U is prescribed three-dimensional weather velocity(m/s), and u-prime is the correlated turbulent velocity. The gas does not change the ambient wind."
+  },
+  {
+    "title": "Parameterized turbulent velocity",
+    "tex": "\\mathrm d u_i^{\\prime}=a_i(\\mathbf u^{\\prime},z,t)\\,\\mathrm dt+\\sum_j b_{ij}(z,t)\\,\\mathrm dW_j",
+    "description": "The native FLEXPART-WRF stochastic closure diagnoses its drift and diffusion from weather/stability/surface closure. This is not a resolved eddy simulation or a manually added random visual texture."
+  },
+  {
+    "title": "Carrier jet state",
+    "tex": "\\dot{\\mathbf x}=\\mathbf V,\\qquad\\mathbf V=\\frac{\\mathbf P}{m},\\qquad H=m\\theta_p",
+    "description": "m is carrier mass flux(kg/s), P momentum flux(kg m/s2), H potential-temperature flux(kg K/s), and the dot differentiates plume travel age(s). This dry integral model parameterizes entrainment."
+  },
+  {
+    "title": "Finite-density cross section",
+    "tex": "\\rho_p=\\frac{p}{R_d T_p},\\qquad b=\\sqrt{\\frac{m}{\\pi\\rho_p\\lVert\\mathbf V\\rVert}},\\qquad T_p=\\frac{H}{m}\\left(\\frac p{p_0}\\right)^{2/7}",
+    "description": "b is plume radius(m); exhaust density uses its own temperature, not ambient density. Rd=287.05J/(kg K), p0=100000Pa; the dry-air carrier approximation and conditional exhaust-volume interpretation remain limitations."
+  },
+  {
+    "title": "Entrainment",
+    "tex": "\\dot m=2\\pi b\\rho_a\\left(0.10\\left|(\\mathbf V-\\mathbf U)\\cdot\\mathbf e\\right|+0.60\\left\\lVert\\mathbf U-(\\mathbf U\\cdot\\mathbf e)\\mathbf e\\right\\rVert\\right)\\lVert\\mathbf V\\rVert,\\quad\\mathbf e=\\frac{\\mathbf V}{\\lVert\\mathbf V\\rVert}",
+    "description": "The0.10/0.60 coefficients are the fixed parallel/crossflow closure of the inherited model, not fitted to these images or observed Hangzhou plumes."
+  },
+  {
+    "title": "Momentum and heat-flux evolution",
+    "tex": "\\dot{\\mathbf P}=\\mathbf U\\dot m+g\\left(\\frac{\\rho_a}{\\rho_p}-1\\right)m\\mathbf e_z,\\qquad\\dot H=\\theta_a\\dot m",
+    "description": "The carrier entrains ambient momentum and potential temperature; the density contrast drives buoyancy. No building wake or resolved heat feedback to the weather is supplied."
+  },
+  {
+    "title": "Hourly regional concentration estimator",
+    "tex": "\\overline C_i=\\frac1{\\Delta t\\,V_i}\\int_{t_0}^{t_1}\\sum_p m_p(t)\\,K_i(\\mathbf X_p(t))\\,\\mathrm dt",
+    "description": "Ki denotes the native spatial weighting/deposition-to-grid estimator. The stored regional outputs are actual one-hour means, not instantaneous endpoints. Do not reconstruct a whole day by repeating one short run."
+  },
+  {
+    "title": "Near residence quadrature",
+    "tex": "\\overline C^{\\mathrm{near}}_{ijk}=\\frac{1}{\\Delta t\\,V_{ijk}}\\sum_{p,q}\\frac{m_p\\,\\delta t_p}{n_q}\\,\\mathbf1_{ijk}(\\mathbf x_{pq})",
+    "description": "The actual native accepted segment is sampled with bounded midpoint quadrature into nonuniform bins. All four active labels contribute to every near box. Fine diagnostic bins do not create CFD resolution; overlapping near/region estimates must never be summed as mass."
+  },
+  {
+    "title": "Units and molar fraction",
+    "tex": "C_{\\mu\\mathrm g/\\mathrm m^3}=C_{\\mathrm{ng}/\\mathrm m^3}/1000,\\qquad\\chi_{\\mathrm{ppb}}=\\chi_{\\mathrm{ppt}}/1000=10^9\\frac{n_{\\mathrm{SO_2}}}{n_{\\mathrm{air}}}",
+    "description": "The inherited native MIXINGRATIO string says by-mass but its gas writer numeric value is molar ppt. Unit-convertedF32 queries are kept separate from log Q8 display; do not infer ppb from smoke opacity."
+  },
+  {
+    "title": "Deposition per interval",
+    "tex": "D_{[a,b]}=D_{\\mathrm{cum}}(b)-D_{\\mathrm{cum}}(a),\\qquad D_{\\mathrm{kg}/\\mathrm m^2}=D_{\\mathrm{ng}/\\mathrm m^2}/10^{12}",
+    "description": "Dry/wet output is cumulative since initialization. A15-day deposition total is the final cumulative snapshot; daily totals are endpoint differences, never a sum of cumulative snapshots."
+  },
+  {
+    "title": "Global mass ledger",
+    "tex": "M_0+M_E=M_{\\mathrm{air}}+M_{\\mathrm{dry}}+M_{\\mathrm{wet}}+M_{\\mathrm{out}}+M_{\\mathrm{other}}+M_{\\mathrm{small}}+M_{\\mathrm{age}}+R",
+    "description": "The ledger is global to all transported particles, not restricted to the output map. The unchanged native tolerance per label is max(1e-7kg,1e-5times emitted mass). Original custom solver absolute1e-7kg and reversible/irreversible surface pools are a different model."
+  },
+  {
+    "title": "Precipitation qualification",
+    "tex": "\\operatorname{RMSE}(h)=\\sqrt{\\frac1{N}\\sum_{i=1}^{N}\\left[R_i^{\\mathrm{GPU}}(h)-R_i^{\\mathrm{CPU}}(h)\\right]^2}",
+    "description": "The preserved complete24h GPU-versus-fixed-nativeCPU comparison FAILED the unchanged2mm criterion (2.189254mm outer /3.292000mm inner); the later gamma and native-GF hybrid attempts also failed. This source run instead uses the original compiled nativeCPU weather model itself, original12MPI3x4 decomposition and genuine same-state restart lineage. Both-domain finite/positive-layer/CFL checks and original-threshold restart comparisons are separately recorded; small native restart roundoff is disclosed. No failed comparison was relabeledPASS and no4mm criterion was introduced. This is not observational rain accuracy or a15day error bound."
+  }
+]

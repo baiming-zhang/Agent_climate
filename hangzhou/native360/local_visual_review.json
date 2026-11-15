@@ -1,0 +1,107 @@
+{
+  "status": "actual_completed_native360_local_numeric_browser_and_primary_agent_image_review_PASS_pending_movie_publication_archive",
+  "completed_UTC": "2026-11-15T09:06:43.859862+00:00",
+  "actual_images_viewed": true,
+  "inspection_method": "Primary agent actually opened listed PNGs using tools.view_image; numerical checks are separate evidence.",
+  "source_transport_freeze_SHA256": "ce1563837c9b0768ec47e9f4a64b17c62489f7539b8406432049c984601992c4",
+  "actual_hours": 360,
+  "checks": [
+    {
+      "path": "UI_review/checks.json",
+      "SHA256": "f1a009720c360bad93ca391a1a4d15602b80a0aa70290fdd46b605267d9471e9"
+    },
+    {
+      "path": "UI_review/ground/browser_control.json",
+      "SHA256": "5b4f4b12bb7422dbf80434e26ec40bf00b677356ea91163aafbee8399f288f22"
+    },
+    {
+      "path": "UI_review/weather_clicks/checks.json",
+      "SHA256": "c2968391fe4ac06ff9a511f8587fb7e044cc706d728dd464425ea2fe48429982"
+    },
+    {
+      "path": "UI_review/scientific/checks.json",
+      "SHA256": "4a308921e87f52d9743a9c757b2df5e28b51a0ef7f0e1e0820921f2b37c90cff"
+    }
+  ],
+  "images": [
+    {
+      "path": "UI_review/actual360h_LJ01_outlet.png",
+      "SHA256": "be928856499a8af6dd18d23dd734396f248af05676962f95bac682bc03a185e9"
+    },
+    {
+      "path": "UI_review/actual360h_source_group.png",
+      "SHA256": "c4b37d1d953df3a5797000c8b521811cc4b0644cc696f88c22ed3df5a019f836"
+    },
+    {
+      "path": "UI_review/actual360h_source_4k.png",
+      "SHA256": "9f74d66aa920d67641d0eac4d45fecb811ecff287badc11e02466cb89f74aaf5"
+    },
+    {
+      "path": "UI_review/actual360h_mobile.png",
+      "SHA256": "978c91a9a609d16963567c21600cc07aa1c2b5d030deffaed469f2835a8c1300"
+    },
+    {
+      "path": "UI_review/weather_clicks/actual_ground_canvas_click.png",
+      "SHA256": "b07ead849fa9116d81c560a201ac0faa81b51969344e887ea29defc4b6ee895b"
+    },
+    {
+      "path": "UI_review/weather_clicks/actual_SO2_cloud_canvas_click.png",
+      "SHA256": "c5009aee8264e0b35cd3d9572be6d16ca385d674ee4af66e3e257c9d4ef0200a"
+    },
+    {
+      "path": "UI_review/weather_clicks/actual_rain_and_computed_wet_removal.png",
+      "SHA256": "8d3e89bbd8e31b7979b2b0fcba29a7a50ace27edb9125fb4327a6714fbd4e1d1"
+    },
+    {
+      "path": "UI_review/weather_clicks/actual_separate_weather_cloud.png",
+      "SHA256": "4520d6523c6f68ac99dd88bc0e8d7d9893eb9409dd04663cb4bebba4efed1795"
+    },
+    {
+      "path": "UI_review/scientific/actual_native_4k.png",
+      "SHA256": "a5e80578172fdd6d51e26923888bf9be633c446e40c4cc0e8f20eeb4c50eb18c"
+    },
+    {
+      "path": "UI_review/scientific/rendered_equations.png",
+      "SHA256": "89182a619fcc64a57493923bb18dfb901fc51ea2c92e4fa14d8867bd8147cc5a"
+    },
+    {
+      "path": "UI_review/scientific/mass_and_rain_equations.png",
+      "SHA256": "28b55ffa365d94764be3bd7b728211f867e1c7f0bad7be86ebe2f9953d796258"
+    },
+    {
+      "path": "native360_video_references/reference_h000.png",
+      "SHA256": "7c419f877ad7860eac12c6f2ce51b605a6ccc94015cf916aee9598edef65fee3"
+    },
+    {
+      "path": "native360_video_references/reference_h012.png",
+      "SHA256": "f676b8881598de6c37ff6553d68a8feb146b44f2e31d551a0b52c445fb2b0cce"
+    },
+    {
+      "path": "native360_video_references/reference_h180.png",
+      "SHA256": "cbce6bb973ff36e92a5220636f0699db8a675f969e6ce76126f987776beb66db"
+    },
+    {
+      "path": "native360_video_references/reference_h348.png",
+      "SHA256": "f4034120e283d0cc7472ea845e73951083a99d3cddb1cd50ab2d6a3abbb8a5ec"
+    },
+    {
+      "path": "native360_video_references/reference_h360.png",
+      "SHA256": "e06731169a8a69758306bd4ab00f0521f779d0733221b1aede248858f381a117"
+    }
+  ],
+  "approved_geographic_style": true,
+  "style_approval_user_message_id": "msg_01a1d8a9-6049-74f3-bac6-359ad04fab39",
+  "new_reference_frames_shown_to_user": true,
+  "source_geometry": "Actual EIA outlet positions/AGL over historical fine display DEM; unknown building heights schematic; weather native terrain is separate.",
+  "limitations": [
+    "SO2 opacity is an illustrative scalar transfer function, not visible real SO2 or a concentration reading.",
+    "50 weather layers and16 output bins; parameterized turbulence, not building CFD or LES.",
+    "Hourly means are centered; endpoints use the nearest available mean, not instantaneous zero-initial concentration.",
+    "Near boxes are alternative all-source residence estimates; not additional emissions or additive boxes.",
+    "No raw-data clipping, RGB temporal blending, random visual smoke or fake rain-driven concentration changes.",
+    "Cloud canvas QA initially selected the ground maximum, then had a missing AGL alias; evidence retained. Corrected QA camera now returns an elevated100\u2013150m native layer without changing viewer or fields."
+  ],
+  "publicly_deployed": false,
+  "full_video_complete": false,
+  "new_physical_steps": 0
+}
