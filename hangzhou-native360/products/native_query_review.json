@@ -1,0 +1,71 @@
+{
+  "status": "actual_saved_native_query_units_layer_coordinates_and_deposition_summary_PASS",
+  "engineering_only": false,
+  "actual_hours": 360,
+  "new_particle_steps": 0,
+  "new_weather_steps": 0,
+  "independent_raw_native_points": [
+    {
+      "index": 0,
+      "longitude": 120.62750244140625,
+      "latitude": 30.252500534057617,
+      "AGL_m": 75.0,
+      "actual_total_ug_m3": 6.35749298799783,
+      "raw_native_total_ug_m3": 6.357493018507957,
+      "actual_fourth_source_ug_m3": 6.355693817138672
+    },
+    {
+      "index": 0,
+      "longitude": 120.63750457763672,
+      "latitude": 30.24250030517578,
+      "AGL_m": 10.0,
+      "actual_total_ug_m3": 0.5392373213544488,
+      "raw_native_total_ug_m3": 0.5392373104095459,
+      "actual_fourth_source_ug_m3": 0.4560656249523163
+    },
+    {
+      "index": 180,
+      "longitude": 120.62750244140625,
+      "latitude": 30.252500534057617,
+      "AGL_m": 75.0,
+      "actual_total_ug_m3": 5.655137559399009,
+      "raw_native_total_ug_m3": 5.6551375669837,
+      "actual_fourth_source_ug_m3": 5.6519575119018555
+    },
+    {
+      "index": 180,
+      "longitude": 120.60750579833984,
+      "latitude": 30.23750114440918,
+      "AGL_m": 10.0,
+      "actual_total_ug_m3": 0.39579278614837676,
+      "raw_native_total_ug_m3": 0.39579277312755584,
+      "actual_fourth_source_ug_m3": 0.38488587737083435
+    },
+    {
+      "index": 359,
+      "longitude": 120.62750244140625,
+      "latitude": 30.252500534057617,
+      "AGL_m": 75.0,
+      "actual_total_ug_m3": 5.239124298095703,
+      "raw_native_total_ug_m3": 5.23912451171875,
+      "actual_fourth_source_ug_m3": 5.239124298095703
+    },
+    {
+      "index": 359,
+      "longitude": 120.65750122070312,
+      "latitude": 29.052499771118164,
+      "AGL_m": 10.0,
+      "actual_total_ug_m3": 1.1759672675980255,
+      "raw_native_total_ug_m3": 1.175967231094837,
+      "actual_fourth_source_ug_m3": 1.1455062627792358
+    }
+  ],
+  "outside_is_null": true,
+  "incomplete24h_window_is_null": true,
+  "background_is_excluded_not_zero_ambient": true,
+  "daily_deposition_differences_telescope_to_final_cumulative": true,
+  "maximum_daily_deposition_roundtrip_error_kg_m2": 1.7384539996589282e-14,
+  "unit_converted_F32_not_native_F64_claim": true,
+  "seconds": 1.412237701995764,
+  "completed_UTC": "2026-11-15T08:33:32.582797+00:00"
+}
