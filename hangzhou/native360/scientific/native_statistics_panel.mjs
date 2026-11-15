@@ -1,0 +1,10 @@
+import {createGroundStatistics} from './native_ground_statistics.mjs';
+const $=id=>document.getElementById(id),form=$('native-statistics-form'),result=$('native-statistics-result');
+try{
+ const scene=await(await fetch('../metadata.json')).json(),meta=scene.native_products,api=createGroundStatistics(meta,scene.native_products_base),g=meta.oracles[0].ground;
+ $('stat-lon').value=g.longitude;$('stat-lat').value=g.latitude;
+ function period(){const p=$('stat-period').value;$('stat-number').disabled=p==='whole';$('stat-number').max=p==='day'?15:360;$('stat-number').value=1;}
+ $('stat-period').onchange=period;period();
+ async function query(e){e?.preventDefault();$('stat-submit').disabled=true;result.textContent='Loading saved native statistics…';try{const q=await api.sample(Number($('stat-lon').value),Number($('stat-lat').value),$('stat-period').value,Number($('stat-number').value));window.NATIVE_GROUND_STATISTICS.last=q;if(!q){result.textContent='Outside the native domain or unavailable complete interval. No value was substituted.';return;}const v=q.fields,dry=v.drydep_increment_kg_m2??v.drydep_cumulative_kg_m2,wet=v.wetdep_increment_kg_m2??v.wetdep_cumulative_kg_m2;result.textContent=`${q.meaning}\n${q.period_UTC[0]} → ${q.period_UTC[1]}\nGround layer:0–20m AGL\nSO2: ${v.total_ppb.toPrecision(7)} ppb · ${v.total_ug_m3.toPrecision(7)} µg/m³\nSource ppb: LS12 ${v.LS12_ppb.toPrecision(5)} · LS13 ${v.LS13_ppb.toPrecision(5)} · LS15 ${v.LS15_ppb.toPrecision(5)} · LJ01 ${v.LJ01_ppb.toPrecision(5)}\nDry deposition: ${dry.toExponential(7)} kg/m²\nWet deposition: ${wet.toExponential(7)} kg/m²\n${q.background}. ${q.encoding}`;}catch(err){result.textContent='Query unavailable: '+err.message;throw err;}finally{$('stat-submit').disabled=false;}}
+ form.onsubmit=query;window.NATIVE_GROUND_STATISTICS={ready:true,query:api.sample,source:meta.source_freeze_SHA256,last:null};await query();
+}catch(e){result.textContent='Statistics unavailable: '+e.message;window.NATIVE_GROUND_STATISTICS={ready:false,error:e.message};}
