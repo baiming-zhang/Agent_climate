@@ -1,5 +1,5 @@
 {
-  "updated_UTC": "2026-11-15T09:19:57.649950+00:00",
+  "updated_UTC": "2026-11-15T10:22:25.113492+00:00",
   "scope_start_UTC": "2026-11-13T05:34:50.862000+00:00",
   "method_version": 1,
   "main_categories": {
@@ -13,36 +13,36 @@
       "logged_reasoning_item_seconds": 4361.886001586914
     },
     "controller": {
-      "agent": 82060.70199608803,
-      "data": 86553.08802604675,
-      "rendering": 2811.1901202201843,
-      "other": 78562.75290060043,
-      "total_busy_union_seconds": 151806.69094967842,
-      "cross_category_overlap_seconds": 98181.04209327698,
-      "logged_reasoning_item_seconds": 44953.19999909401
+      "agent": 84325.59099650383,
+      "data": 86567.81732964516,
+      "rendering": 3624.8351199626923,
+      "other": 81474.42313861847,
+      "total_busy_union_seconds": 155554.15449166298,
+      "cross_category_overlap_seconds": 100438.51209306717,
+      "logged_reasoning_item_seconds": 47218.08899950981
     },
     "all": {
-      "agent": 82476.20299696922,
-      "data": 95729.91117620468,
-      "rendering": 2816.6348583698273,
-      "other": 85387.44567656517,
-      "total_busy_union_seconds": 152815.94595003128,
-      "cross_category_overlap_seconds": 113594.24875807762,
-      "logged_reasoning_item_seconds": 49315.08600068092,
+      "agent": 84741.09199738503,
+      "data": 95744.64047980309,
+      "rendering": 3630.279858112335,
+      "other": 88299.1159145832,
+      "total_busy_union_seconds": 156563.40949201584,
+      "cross_category_overlap_seconds": 115851.71875786781,
+      "logged_reasoning_item_seconds": 51579.975001096725,
       "between_turns_or_unobserved_seconds": 33490.84200000763,
-      "project_elapsed_seconds": 186306.7879500389
+      "project_elapsed_seconds": 190054.25149202347
     }
   },
   "subcategories_all_actors": {
     "agent": {
-      "logged_reasoning_item": 47286.643998384476,
+      "logged_reasoning_item": 49551.53299880028,
       "non_tool_activity_proxy": 38629.78599691391
     },
     "data": {
       "CPU24MPI_existing_native_restart_bounded_cost_probe": 1941.83030295372,
       "CPU_parallel_model_or_control": 257.83499908447266,
       "GPU1440_actual_source_hour_plumes_with7CPU_controls": 46.625,
-      "acquisition_attempt": 202.95817875862122,
+      "acquisition_attempt": 217.68748235702515,
       "actual_GF_single_operator_or_neutral_native_instrumentation": 98.70146346092224,
       "actual_GPU_neutral_or_observed_one_hour_branch": 927.900053024292,
       "actual_GPU_weather_CPU_GF_bounded6h": 679.7281658649445,
@@ -79,6 +79,8 @@
       "actual360h_city_Scientific_browser_preparation_and_checks": 39.52992796897888,
       "actual_GF_stored_array_plot": 0.7834141254425049,
       "actual_osm_footprints_outlet_geometry_review": 2.467651128768921,
+      "actual_public_browser_QA_including_cold_network_loading": 708.5699999332428,
+      "actual_public_optimized_loading_and360h_playback_QA": 105.07399988174438,
       "all_preserved_volume_cases_final_shared_UI": 23.631547927856445,
       "approved_geographic_movie_GPU_capture_and_encoding": 1872.1699998378754,
       "early_stage_english_reference_check": 1.729126214981079,
@@ -86,7 +88,7 @@
       "english_methods_hub_prepare": 0.07863712310791016,
       "frozen_cpu_terrain_native_field_pack": 9.818082094192505,
       "frozen_data_presentation_and_review": 340.2847180366516,
-      "image_review": 0.034999847412109375,
+      "image_review": 0.03599977493286133,
       "independent_native_revision_saved_fields_and_UI": 136.92098188400269,
       "initial_stage_video_reference_aspect_check": 1.1370301246643066,
       "instrumented_phase_wrapper": 107.1363365650177,
@@ -112,19 +114,20 @@
       "video_reference_frames_before_review": 1.3527929782867432
     },
     "other": {
-      "active_turn_unattributed": 764.1779489517212,
-      "environment_or_file_operations": 19092.037252426147,
-      "file_write": 11.748000621795654,
+      "active_turn_unattributed": 1009.6144914627075,
+      "complete_native_SO2_code_Git_archive_upload_and_blob_verification": 1554.9947628974915,
+      "environment_or_file_operations": 22049.174840927124,
+      "file_write": 11.760000228881836,
       "frozen_presentation_catalog": 0.06354784965515137,
-      "immutable_native360_data_Git_upload_and_blob_verification": 692.6963400840759,
+      "immutable_native360_data_Git_upload_and_blob_verification": 1859.9486360549927,
       "instrumented_phase_wrapper": 6.836179971694946,
       "intermediate_delivery_code_native_archival": 3.9882521629333496,
       "lossless_native_SO2_result_archive_copy_and_binary_segmentation": 18.197981119155884,
       "mixed_data_and_render": 21.327617406845093,
       "native_archive_part_and_full_hash_validation": 1.3133621215820312,
-      "other_tool": 59650.975002765656,
+      "other_tool": 59663.57300281525,
       "restore_real_split_native_reference": 1.0449509620666504,
-      "tool_non_execution_wait": 6250.285438299179
+      "tool_non_execution_wait": 6250.301606655121
     }
   },
   "turns": [
@@ -933,10 +936,10 @@
       "actor": "controller",
       "turn_id": "01a1de6e-3aaf-7082-bd34-e47a5d6842ca",
       "start_UTC": "2026-11-15T08:58:48.391000+00:00",
-      "end_UTC": "2026-11-15T09:19:57.649950+00:00",
-      "seconds": 1269.258949995041,
+      "end_UTC": "2026-11-15T10:22:25.113492+00:00",
+      "seconds": 5016.722491979599,
       "completed": false,
-      "observed_reasoning_item_seconds": 282.9030010700226
+      "observed_reasoning_item_seconds": 2547.7920014858246
     }
   ],
   "limitations": [
