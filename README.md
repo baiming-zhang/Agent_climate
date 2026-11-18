@@ -1,5 +1,17 @@
 # Agent Climate
 
+## Project directory
+
+- [Project home](https://baiming-zhang.github.io/Agent_climate/)
+- Hangzhou: [15-day native model](https://baiming-zhang.github.io/Agent_climate/hangzhou/native360/) · [corresponding Scientific](https://baiming-zhang.github.io/Agent_climate/hangzhou/native360/scientific/)
+- Vancouver: [model](https://baiming-zhang.github.io/Agent_climate/forecast/) · [Scientific](https://baiming-zhang.github.io/Agent_climate/forecast/scientific/)
+- Mountain terrain: [model](https://baiming-zhang.github.io/Agent_climate/terrain42/) · [corresponding Scientific](https://baiming-zhang.github.io/Agent_climate/terrain42/scientific/)
+- [Preserved Hangzhou staged experiments](https://baiming-zhang.github.io/Agent_climate/hangzhou/)
+
+The current Hangzhou model and Scientific links refer to the same completed 360-hour native case: four conditional EIA design outlets at two Linjiang facilities. They do not represent complete citywide SO₂ source coverage. The citywide source-screening records are separate from simulated results.
+
+## Vancouver scenario
+
 Interactive Vancouver SO₂ source scenario, initialized 2026-11-04 at 18:00 UTC, through 2026-11-19 at 18:00 UTC.
 
 - [3D viewer](https://baiming-zhang.github.io/Agent_climate/forecast/)
@@ -15,10 +27,10 @@ Weather uses frozen GFS 0–360 h,9/3 km domains, Noah-MP and a documented priva
 Buildings and terrain are simplified display geometry with 1.8× vertical exaggeration. The latest release starts native particles at the reported outlet disks. Finite-density integral momentum, heat and entrainment parameterize thermal rise; prescribed 50-level wind varies with height. SO₂ receives this wind without modifying it. Actual local 96³ particle-residence fields replace the former camera-facing origin guide and are combined with the regional field using weights summing to one. Fine bins do not establish near-nozzle physical accuracy or particle-count convergence. This is not resolved stack/building CFD. SO₂ is invisible; colour and opacity are artificial display choices. See THIRD_PARTY.md for data and software attribution.
 
 
-## Scientific
+### Vancouver Scientific
 
 Scientific view: https://baiming-zhang.github.io/Agent_climate/forecast/scientific/
 
 This subview retains the earlier final-height source calculation and has not been recomputed for outlet-origin r 04. It remains available as Scientific. Blue-white concentration maps with cached Mapzen shaded terrain and no location labels; all 360 hourly selected-source fields, synchronized five-receptor hourly/24 h curves, source mass balance,3840 x 2160/24 fps/30 s MP 4, vector SVG and native F32/CSV/JSON downloads. Maps use declared scalar sigma 0.6-cell filtering and shape-preserving interpolation; native numeric products and curves remain unchanged. No image-frame blending. Initial background evolution and future observations are excluded from this scientific view.
 
-Published views are the current 3D forecast, Scientific, and the methods/results page. Superseded interactive pages and their unused assets have been removed.
+The directory above links each published model to its Scientific view. Preserved Hangzhou experiments remain available through their separate archive link.
