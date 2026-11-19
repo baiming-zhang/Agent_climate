@@ -1,0 +1,34 @@
+{
+  "FLEXPART": {
+    "RMSE_ug_m2": 0.9920811425569165,
+    "NRMSE_percent": 0.9131617506773181,
+    "MAE_ug_m2": 0.4711527481464817,
+    "bias_ug_m2": 0.12541643549089465,
+    "max_absolute_ug_m2": 5.832156382631183,
+    "pairs": 480
+  },
+  "CALPUFF": {
+    "RMSE_ug_m2": 40.40830085065103,
+    "NRMSE_percent": 37.193847522970444,
+    "MAE_ug_m2": 15.468306429924377,
+    "bias_ug_m2": 6.951877989020142,
+    "max_absolute_ug_m2": 204.2221040378081,
+    "pairs": 480
+  },
+  "MPTRAC_native_modules": {
+    "RMSE_ug_m2": 0.9016861509698864,
+    "NRMSE_percent": 0.829957620259792,
+    "MAE_ug_m2": 0.4296336826446888,
+    "bias_ug_m2": 0.028583576876955556,
+    "max_absolute_ug_m2": 7.323565873045311,
+    "pairs": 480
+  },
+  "CALPUFF_own_Draxler_companion": {
+    "RMSE_ug_m2": 0.9391038047708501,
+    "NRMSE_percent": 0.6491668883001372,
+    "MAE_ug_m2": 0.43828271569946914,
+    "bias_ug_m2": -0.23510940015952464,
+    "max_absolute_ug_m2": 11.956145781075065,
+    "pairs": 480
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "reference_sha256": "9a72eef5f64be776e62dcc75c250c6273a6085c13488cd1becc952a3e934df75",
+  "old_design_sha256": "e51c592246021e3f9d589550c78cbc8e9b3ebfeb330c36147f64bb88e8d387f9",
+  "native_core_object_sha256": "4c49c7702ac32c62e7d63d57d4549078dfffbeca7be7e088cd339bf3e2e1d57c",
+  "harness_sha256": "588e7e632a9bdb906e79368529d13d52f2b84ac1fddafaae41ddb3578ddd86b4",
+  "U_m_s": 5,
+  "K_m2_s": 50,
+  "Q_kg_s": 0.001,
+  "duration_s": 7200,
+  "dt_s": 10,
+  "particle_count": 300000,
+  "seed": 42,
+  "cells": 40,
+  "time_means": 12,
+  "source_births": "stratified midpoints over continuous release",
+  "scope": "Native MPTRAC advection and turbulent diffusion modules, matched rectangular cell and 600s time observer. Not full production workflow or terrain validation.",
+  "old_successful_models_recomputed": false
+}

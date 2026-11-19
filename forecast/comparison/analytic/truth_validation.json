@@ -1,0 +1,75 @@
+{
+  "status": "independent_analytical_solution_evaluated_with_controlled_quadrature",
+  "UTC": "2026-11-13T07:42:55.432952+00:00",
+  "inputs_only_no_simulator_outputs": true,
+  "physics": "Exact2D constant-K column advection-diffusion Green function; full3D solver column observable.",
+  "point_kernel_formula": "Q/(4*pi*K*age)*exp(-((x-U*age)^2+y^2)/(4*K*age))",
+  "finite_area_time_mean_formula": "Q/A/dt *integral0^tend (tend-max(tstart,age))*P_rect(age)dage",
+  "source_Q_ug_s": 1000000.0,
+  "U_m_s": 5.0,
+  "K_m2_s": 50.0,
+  "shape": [
+    12,
+    40
+  ],
+  "quad_rel_tolerance": 1e-10,
+  "maximum_tightening_difference_ug_m2": 0.0,
+  "maximum_reported_quad_vector_absolute_bound": 4.6150871351380614e-11,
+  "steady_closed_Bessel_checks": [
+    {
+      "x_m": 1000.0,
+      "closed_Bessel_ug_m2": 562.7946565745806,
+      "Green_integral_ug_m2": 562.7946565745806,
+      "relative_difference": 0.0
+    },
+    {
+      "x_m": 3000.0,
+      "closed_Bessel_ug_m2": 325.4645730195351,
+      "Green_integral_ug_m2": 325.46457301953495,
+      "relative_difference": 5.239595050248017e-16
+    },
+    {
+      "x_m": 5000.0,
+      "closed_Bessel_ug_m2": 252.1873782527914,
+      "Green_integral_ug_m2": 252.18737825279123,
+      "relative_difference": 6.762045656840341e-16
+    },
+    {
+      "x_m": 9000.0,
+      "closed_Bessel_ug_m2": 188.01101988873992,
+      "Green_integral_ug_m2": 188.01101988873992,
+      "relative_difference": 0.0
+    },
+    {
+      "x_m": 15000.0,
+      "closed_Bessel_ug_m2": 145.64886340883223,
+      "Green_integral_ug_m2": 145.64886340883214,
+      "relative_difference": 5.854156791589593e-16
+    },
+    {
+      "x_m": 21000.0,
+      "closed_Bessel_ug_m2": 123.10161176124645,
+      "Green_integral_ug_m2": 123.10161176124642,
+      "relative_difference": 2.308800756039445e-16
+    },
+    {
+      "x_m": 27000.0,
+      "closed_Bessel_ug_m2": 108.56828661454944,
+      "Green_integral_ug_m2": 108.56828661454936,
+      "relative_difference": 6.544661962684773e-16
+    },
+    {
+      "x_m": 33000.0,
+      "closed_Bessel_ug_m2": 98.20536238984961,
+      "Green_integral_ug_m2": 98.20536238984972,
+      "relative_difference": 1.157643889855108e-15
+    }
+  ],
+  "CALPUFF_companion": "Predeclared Draxler Gaussian variance, not the targettruth. No simulator outputs used; source initialhorizontal sigma1m included as virtual age.",
+  "Draxler_virtual_age_s": 1.2052279912359043,
+  "vertical_GL8_initial_Gaussian_mass": 0.9988645254752467,
+  "exact_mass_within_plusminus4sigma": 0.9999366575163338,
+  "vertical_quadrature_relative_error": 0.0010721999568952827,
+  "vertical_truncation_mass_fraction": 6.334248366623996e-05,
+  "elapsed_seconds": 0.42908257899999924
+}
