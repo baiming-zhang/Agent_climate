@@ -1,0 +1,1016 @@
+{
+  "UTC": "2026-11-19T20:46:47.966225+00:00",
+  "FLEX": {
+    "UTC": "2026-11-19T20:40:37.321940+00:00",
+    "actual_times": 40,
+    "particles": 65536,
+    "finite_nonnegative": true,
+    "non_source_exact_zero": true,
+    "all_particle_mass_checks_exact": true,
+    "no_terrain_penetration": true,
+    "trajectory_by_time": [
+      {
+        "seconds": 100,
+        "x_max_error_m": 0.00048826830789039377,
+        "y_max_error_m": 0.0007319592486965121,
+        "AGL_RMSE_m": 0.0005394761542389253,
+        "AGL_max_error_m": 0.010017301793652678,
+        "native_AGL_RMSE_m": 0.0011889960046014372,
+        "native_ground_resampling_max_error_m": 0.012696527518978762,
+        "mass_kg": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "seconds": 200,
+        "x_max_error_m": 0.00048826830789039377,
+        "y_max_error_m": 0.0007319592486965121,
+        "AGL_RMSE_m": 0.002028058408222806,
+        "AGL_max_error_m": 0.02760926059210078,
+        "native_AGL_RMSE_m": 0.0038581758640315166,
+        "native_ground_resampling_max_error_m": 0.02758674307668496,
+        "mass_kg": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "seconds": 300,
+        "x_max_error_m": 0.001460930820030626,
+        "y_max_error_m": 0.0007319592486965121,
+        "AGL_RMSE_m": 0.00540445407375759,
+        "AGL_max_error_m": 0.06274586464246568,
+        "native_AGL_RMSE_m": 0.009508873014954582,
+        "native_ground_resampling_max_error_m": 0.047445621594781606,
+        "mass_kg": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "seconds": 400,
+        "x_max_error_m": 0.001460930820030626,
+        "y_max_error_m": 0.0007319592486965121,
+        "AGL_RMSE_m": 0.012183703361544593,
+        "AGL_max_error_m": 0.121031152983619,
+        "native_AGL_RMSE_m": 0.020616117775715564,
+        "native_ground_resampling_max_error_m": 0.08782131531645909,
+        "mass_kg": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "seconds": 500,
+        "x_max_error_m": 0.001460930820030626,
+        "y_max_error_m": 0.0007319592486965121,
+        "AGL_RMSE_m": 0.02477800283316587,
+        "AGL_max_error_m": 0.21129725603537963,
+        "native_AGL_RMSE_m": 0.04087720265681834,
+        "native_ground_resampling_max_error_m": 0.13118749122237716,
+        "mass_kg": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "seconds": 600,
+        "x_max_error_m": 0.001461417126847664,
+        "y_max_error_m": 0.0007319592486965121,
+        "AGL_RMSE_m": 0.04658345919585468,
+        "AGL_max_error_m": 0.33660438700155737,
+        "native_AGL_RMSE_m": 0.07519605352385375,
+        "native_ground_resampling_max_error_m": 0.20378357570628225,
+        "mass_kg": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "seconds": 700,
+        "x_max_error_m": 0.001461417126847664,
+        "y_max_error_m": 0.0007319592486965121,
+        "AGL_RMSE_m": 0.08175541936091982,
+        "AGL_max_error_m": 0.5097409289429038,
+        "native_AGL_RMSE_m": 0.12889226564938736,
+        "native_ground_resampling_max_error_m": 0.28472816309978555,
+        "mass_kg": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "seconds": 800,
+        "x_max_error_m": 0.001461417126847664,
+        "y_max_error_m": 0.0007319592486965121,
+        "AGL_RMSE_m": 0.1343061867366177,
+        "AGL_max_error_m": 0.6642092780733151,
+        "native_AGL_RMSE_m": 0.20584942716047097,
+        "native_ground_resampling_max_error_m": 0.3557080891394264,
+        "mass_kg": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "seconds": 900,
+        "x_max_error_m": 0.001461417126847664,
+        "y_max_error_m": 0.0007319592486965121,
+        "AGL_RMSE_m": 0.20675905286425555,
+        "AGL_max_error_m": 0.8976640784330812,
+        "native_AGL_RMSE_m": 0.3054974402284348,
+        "native_ground_resampling_max_error_m": 0.44498726333566196,
+        "mass_kg": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "seconds": 1000,
+        "x_max_error_m": 0.001464036886318354,
+        "y_max_error_m": 0.0007319592486965121,
+        "AGL_RMSE_m": 0.2978839110129635,
+        "AGL_max_error_m": 0.9290225678875004,
+        "native_AGL_RMSE_m": 0.4190910743683879,
+        "native_ground_resampling_max_error_m": 0.47248477329961247,
+        "mass_kg": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "seconds": 1100,
+        "x_max_error_m": 0.0014643147515016608,
+        "y_max_error_m": 0.0007319592486965121,
+        "AGL_RMSE_m": 0.4012145849155363,
+        "AGL_max_error_m": 1.1216777862763934,
+        "native_AGL_RMSE_m": 0.526941012717379,
+        "native_ground_resampling_max_error_m": 0.5802238052205553,
+        "mass_kg": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "seconds": 1200,
+        "x_max_error_m": 0.0014647274656454101,
+        "y_max_error_m": 0.0007319592486965121,
+        "AGL_RMSE_m": 0.5042516200299161,
+        "AGL_max_error_m": 1.1113050789889485,
+        "native_AGL_RMSE_m": 0.5988352515830936,
+        "native_ground_resampling_max_error_m": 0.7496460150880466,
+        "mass_kg": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "seconds": 1300,
+        "x_max_error_m": 0.0014648095166194253,
+        "y_max_error_m": 0.0007319592486965121,
+        "AGL_RMSE_m": 0.5908387145471256,
+        "AGL_max_error_m": 1.1208514540162469,
+        "native_AGL_RMSE_m": 0.6001722569878938,
+        "native_ground_resampling_max_error_m": 1.1658454636065017,
+        "mass_kg": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "seconds": 1400,
+        "x_max_error_m": 0.0017672895482974127,
+        "y_max_error_m": 0.0007319592486965121,
+        "AGL_RMSE_m": 0.6457983098045786,
+        "AGL_max_error_m": 1.1236904656435058,
+        "native_AGL_RMSE_m": 0.5070477466467742,
+        "native_ground_resampling_max_error_m": 1.6690007051993234,
+        "mass_kg": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "seconds": 1500,
+        "x_max_error_m": 0.0021706471325160237,
+        "y_max_error_m": 0.0007319592486965121,
+        "AGL_RMSE_m": 0.662146677761151,
+        "AGL_max_error_m": 1.1365892949746694,
+        "native_AGL_RMSE_m": 0.3476383075795591,
+        "native_ground_resampling_max_error_m": 2.1380303785726937,
+        "mass_kg": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "seconds": 1600,
+        "x_max_error_m": 0.0023803993863111828,
+        "y_max_error_m": 0.0007319592486965121,
+        "AGL_RMSE_m": 0.6472921688033229,
+        "AGL_max_error_m": 1.2424195365732658,
+        "native_AGL_RMSE_m": 0.35331037134456456,
+        "native_ground_resampling_max_error_m": 2.5629040320799277,
+        "mass_kg": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "seconds": 1700,
+        "x_max_error_m": 0.0023803993863111828,
+        "y_max_error_m": 0.0007319592486965121,
+        "AGL_RMSE_m": 0.6221462959823658,
+        "AGL_max_error_m": 1.2588378989152602,
+        "native_AGL_RMSE_m": 0.6570861556327878,
+        "native_ground_resampling_max_error_m": 2.6734948635307774,
+        "mass_kg": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "seconds": 1800,
+        "x_max_error_m": 0.0023803993863111828,
+        "y_max_error_m": 0.0007319592486965121,
+        "AGL_RMSE_m": 0.6087933345670264,
+        "AGL_max_error_m": 1.4194218825089706,
+        "native_AGL_RMSE_m": 1.0102093303531963,
+        "native_ground_resampling_max_error_m": 2.687319762264451,
+        "mass_kg": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "seconds": 1900,
+        "x_max_error_m": 0.0023803993863111828,
+        "y_max_error_m": 0.0007319592486965121,
+        "AGL_RMSE_m": 0.6104645880203663,
+        "AGL_max_error_m": 1.4560375700336863,
+        "native_AGL_RMSE_m": 1.2733765452240178,
+        "native_ground_resampling_max_error_m": 2.6919784356459786,
+        "mass_kg": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "seconds": 2000,
+        "x_max_error_m": 0.0023803993863111828,
+        "y_max_error_m": 0.0007319592486965121,
+        "AGL_RMSE_m": 0.6140355552491324,
+        "AGL_max_error_m": 1.454056855964609,
+        "native_AGL_RMSE_m": 1.3700159759422779,
+        "native_ground_resampling_max_error_m": 2.692478982877219,
+        "mass_kg": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "seconds": 2100,
+        "x_max_error_m": 0.0023865531275077956,
+        "y_max_error_m": 0.0007319592486965121,
+        "AGL_RMSE_m": 0.6105839855499976,
+        "AGL_max_error_m": 1.4130864367544973,
+        "native_AGL_RMSE_m": 1.2732441367264273,
+        "native_ground_resampling_max_error_m": 2.691729257005022,
+        "mass_kg": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "seconds": 2200,
+        "x_max_error_m": 0.002396713876805734,
+        "y_max_error_m": 0.0007319592486965121,
+        "AGL_RMSE_m": 0.6090106695624604,
+        "AGL_max_error_m": 1.4307812145516436,
+        "native_AGL_RMSE_m": 1.0099845248689951,
+        "native_ground_resampling_max_error_m": 2.688617412492704,
+        "mass_kg": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "seconds": 2300,
+        "x_max_error_m": 0.0024324088353750994,
+        "y_max_error_m": 0.0007319592486965121,
+        "AGL_RMSE_m": 0.6226460473612767,
+        "AGL_max_error_m": 1.2411688341734362,
+        "native_AGL_RMSE_m": 0.6568581745702888,
+        "native_ground_resampling_max_error_m": 2.6353798655834453,
+        "mass_kg": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "seconds": 2400,
+        "x_max_error_m": 0.002436904156638775,
+        "y_max_error_m": 0.0007319592486965121,
+        "AGL_RMSE_m": 0.6480295883003658,
+        "AGL_max_error_m": 1.1853045709955268,
+        "native_AGL_RMSE_m": 0.3534949176253461,
+        "native_ground_resampling_max_error_m": 2.407496205419534,
+        "mass_kg": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "seconds": 2500,
+        "x_max_error_m": 0.002436904156638775,
+        "y_max_error_m": 0.0007319592486965121,
+        "AGL_RMSE_m": 0.6631777971798368,
+        "AGL_max_error_m": 1.1757521834277895,
+        "native_AGL_RMSE_m": 0.3487230695135132,
+        "native_ground_resampling_max_error_m": 2.2241406516787947,
+        "mass_kg": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "seconds": 2600,
+        "x_max_error_m": 0.002436904156638775,
+        "y_max_error_m": 0.0007319592486965121,
+        "AGL_RMSE_m": 0.6472460070292813,
+        "AGL_max_error_m": 1.174491018752576,
+        "native_AGL_RMSE_m": 0.508478449623955,
+        "native_ground_resampling_max_error_m": 1.5625603392910534,
+        "mass_kg": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "seconds": 2700,
+        "x_max_error_m": 0.002436904156638775,
+        "y_max_error_m": 0.0007319592486965121,
+        "AGL_RMSE_m": 0.5926340115370917,
+        "AGL_max_error_m": 1.1935382146863276,
+        "native_AGL_RMSE_m": 0.601906963705836,
+        "native_ground_resampling_max_error_m": 1.216200087606012,
+        "mass_kg": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "seconds": 2800,
+        "x_max_error_m": 0.002436904156638775,
+        "y_max_error_m": 0.0007319592486965121,
+        "AGL_RMSE_m": 0.5067943640515058,
+        "AGL_max_error_m": 1.1587765328207524,
+        "native_AGL_RMSE_m": 0.6009782031928803,
+        "native_ground_resampling_max_error_m": 0.78985680541291,
+        "mass_kg": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "seconds": 2900,
+        "x_max_error_m": 0.002436904156638775,
+        "y_max_error_m": 0.0007319592486965121,
+        "AGL_RMSE_m": 0.40449248856662406,
+        "AGL_max_error_m": 1.1036037010551354,
+        "native_AGL_RMSE_m": 0.5297077347691871,
+        "native_ground_resampling_max_error_m": 0.4874197692582243,
+        "mass_kg": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "seconds": 3000,
+        "x_max_error_m": 0.002436904156638775,
+        "y_max_error_m": 0.0007319592486965121,
+        "AGL_RMSE_m": 0.30287074362931515,
+        "AGL_max_error_m": 1.0134980690394855,
+        "native_AGL_RMSE_m": 0.4228628414750898,
+        "native_ground_resampling_max_error_m": 0.4658838014826472,
+        "mass_kg": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "seconds": 3100,
+        "x_max_error_m": 0.002436904156638775,
+        "y_max_error_m": 0.0007319592486965121,
+        "AGL_RMSE_m": 0.21406132518080684,
+        "AGL_max_error_m": 0.7954063885867413,
+        "native_AGL_RMSE_m": 0.3109465252572399,
+        "native_ground_resampling_max_error_m": 0.411184855489239,
+        "mass_kg": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "seconds": 3200,
+        "x_max_error_m": 0.002436904156638775,
+        "y_max_error_m": 0.0007319592486965121,
+        "AGL_RMSE_m": 0.14626725834167004,
+        "AGL_max_error_m": 0.6866550548641044,
+        "native_AGL_RMSE_m": 0.21419290912870892,
+        "native_ground_resampling_max_error_m": 0.3419628453391681,
+        "mass_kg": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "seconds": 3300,
+        "x_max_error_m": 0.002440302021568641,
+        "y_max_error_m": 0.0007319592486965121,
+        "AGL_RMSE_m": 0.10099065697523149,
+        "AGL_max_error_m": 0.4773688259822393,
+        "native_AGL_RMSE_m": 0.14240064728316276,
+        "native_ground_resampling_max_error_m": 0.2565019252823788,
+        "mass_kg": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "seconds": 3400,
+        "x_max_error_m": 0.002440302021568641,
+        "y_max_error_m": 0.0007319592486965121,
+        "AGL_RMSE_m": 0.07732049479351993,
+        "AGL_max_error_m": 0.357265793006718,
+        "native_AGL_RMSE_m": 0.09761856805698212,
+        "native_ground_resampling_max_error_m": 0.19650693753416704,
+        "mass_kg": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "seconds": 3500,
+        "x_max_error_m": 0.002440302021568641,
+        "y_max_error_m": 0.0007319592486965121,
+        "AGL_RMSE_m": 0.06843455343969729,
+        "AGL_max_error_m": 0.2813553306859262,
+        "native_AGL_RMSE_m": 0.07613373690266105,
+        "native_ground_resampling_max_error_m": 0.1390684936340918,
+        "mass_kg": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "seconds": 3600,
+        "x_max_error_m": 0.002440302021568641,
+        "y_max_error_m": 0.0007319592486965121,
+        "AGL_RMSE_m": 0.0672992137715707,
+        "AGL_max_error_m": 0.27968921031424543,
+        "native_AGL_RMSE_m": 0.06948678845029163,
+        "native_ground_resampling_max_error_m": 0.0783385242882364,
+        "mass_kg": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "seconds": 3700,
+        "x_max_error_m": 0.003275198381743394,
+        "y_max_error_m": 0.0007319592486965121,
+        "AGL_RMSE_m": 0.06864529818963415,
+        "AGL_max_error_m": 0.2868571820893635,
+        "native_AGL_RMSE_m": 0.0692043484671924,
+        "native_ground_resampling_max_error_m": 0.05251610172658694,
+        "mass_kg": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "seconds": 3800,
+        "x_max_error_m": 0.003275198381743394,
+        "y_max_error_m": 0.0007319592486965121,
+        "AGL_RMSE_m": 0.0707237653106865,
+        "AGL_max_error_m": 0.2923669564901843,
+        "native_AGL_RMSE_m": 0.07083808189603671,
+        "native_ground_resampling_max_error_m": 0.023069458241746776,
+        "mass_kg": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "seconds": 3900,
+        "x_max_error_m": 0.003275198381743394,
+        "y_max_error_m": 0.0007319592486965121,
+        "AGL_RMSE_m": 0.07285253575445134,
+        "AGL_max_error_m": 0.30016073132816246,
+        "native_AGL_RMSE_m": 0.0728815362442564,
+        "native_ground_resampling_max_error_m": 0.014678868907954667,
+        "mass_kg": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "seconds": 4000,
+        "x_max_error_m": 0.003275198381743394,
+        "y_max_error_m": 0.0007319592486965121,
+        "AGL_RMSE_m": 0.07493225208792384,
+        "AGL_max_error_m": 0.3070234917424841,
+        "native_AGL_RMSE_m": 0.07493707444822721,
+        "native_ground_resampling_max_error_m": 0.005161303658119676,
+        "mass_kg": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    ],
+    "frame_center_summary": [
+      [
+        100,
+        10499.999534249306,
+        5999.999598912895,
+        500.0003338261657,
+        500.0600485449106
+      ],
+      [
+        200,
+        10999.999534249306,
+        5999.999598912895,
+        499.9991676618284,
+        500.1602752893572
+      ],
+      [
+        300,
+        11499.999534085393,
+        5999.999598912895,
+        499.99654285667924,
+        500.40849932501715
+      ],
+      [
+        400,
+        11999.99953341484,
+        5999.999598912895,
+        499.9910810319519,
+        500.9894409582554
+      ],
+      [
+        500,
+        12499.99953211844,
+        5999.999598912895,
+        499.98060611783166,
+        502.273709362153
+      ],
+      [
+        600,
+        12999.999530538917,
+        5999.999598912895,
+        499.9619534490961,
+        504.95379493560563
+      ],
+      [
+        700,
+        13499.99952866137,
+        5999.999598912895,
+        499.93105687250505,
+        510.2301436366279
+      ],
+      [
+        800,
+        13999.999525904655,
+        5999.999598912895,
+        499.88367652470714,
+        520.0226550066236
+      ],
+      [
+        900,
+        14499.999522939324,
+        5999.999598912895,
+        499.81674539038875,
+        537.1397828107438
+      ],
+      [
+        1000,
+        14999.9995200485,
+        5999.999598912895,
+        499.7304903445881,
+        565.2872333715422
+      ],
+      [
+        1100,
+        15499.999516278505,
+        5999.999598912895,
+        499.63052665587975,
+        608.7641624030366
+      ],
+      [
+        1200,
+        15999.999507755041,
+        5999.999598912895,
+        499.5289023858038,
+        671.7160611392464
+      ],
+      [
+        1300,
+        16499.999487519264,
+        5999.999598912895,
+        499.44296017311393,
+        756.9231315603829
+      ],
+      [
+        1400,
+        16999.99947142601,
+        5999.999598912895,
+        499.3912693153544,
+        864.3029203478945
+      ],
+      [
+        1500,
+        17499.999464839697,
+        5999.999598912895,
+        499.38739278964823,
+        989.5414354857057
+      ],
+      [
+        1600,
+        17999.999460235238,
+        5999.999598912895,
+        499.43332774768584,
+        1123.4243929305812
+      ],
+      [
+        1700,
+        18499.999455988407,
+        5999.999598912895,
+        499.51607546367035,
+        1252.3948983686278
+      ],
+      [
+        1800,
+        18999.999452114105,
+        5999.999598912895,
+        499.609608921975,
+        1360.5492878109217
+      ],
+      [
+        1900,
+        19499.99944821,
+        5999.999598912895,
+        499.68279379394863,
+        1432.767996411305
+      ],
+      [
+        2000,
+        19999.99944421649,
+        5999.999598912895,
+        499.7103836835217,
+        1458.1633783483412
+      ],
+      [
+        2100,
+        20499.999440044165,
+        5999.999598912895,
+        499.68269506365027,
+        1432.7678401832236
+      ],
+      [
+        2200,
+        20999.999436706305,
+        5999.999598912895,
+        499.60943241065803,
+        1360.5490126312943
+      ],
+      [
+        2300,
+        21499.999432384968,
+        5999.999598912895,
+        499.5158048440033,
+        1252.3945150495274
+      ],
+      [
+        2400,
+        21999.999428480864,
+        5999.999598912895,
+        499.4329935547304,
+        1123.4239607038908
+      ],
+      [
+        2500,
+        22499.999425023794,
+        5999.999598912895,
+        499.3869765440228,
+        989.54095781676
+      ],
+      [
+        2600,
+        22999.999421209097,
+        5999.999598912895,
+        499.3907791294634,
+        864.302415197948
+      ],
+      [
+        2700,
+        23499.99941766262,
+        5999.999598912895,
+        499.4423879675216,
+        756.9225868262001
+      ],
+      [
+        2800,
+        23999.999414533377,
+        5999.999598912895,
+        499.52827963819266,
+        671.7154963842186
+      ],
+      [
+        2900,
+        24499.99941200018,
+        5999.999598912895,
+        499.6298457593417,
+        608.7635565764358
+      ],
+      [
+        3000,
+        24999.99940893054,
+        5999.999598912895,
+        499.72973581081726,
+        565.2865568023917
+      ],
+      [
+        3100,
+        25499.99940598011,
+        5999.999598912895,
+        499.81592886025396,
+        537.1390362073544
+      ],
+      [
+        3200,
+        25999.999403387308,
+        5999.999598912895,
+        499.88284403633236,
+        520.0218785605994
+      ],
+      [
+        3300,
+        26499.999400794506,
+        5999.999598912895,
+        499.93024160133916,
+        510.22936926646616
+      ],
+      [
+        3400,
+        26999.99939650297,
+        5999.999598912895,
+        499.96111137647097,
+        504.9529803494315
+      ],
+      [
+        3500,
+        27499.99939262867,
+        5999.999598912895,
+        499.9797274474415,
+        502.272847800185
+      ],
+      [
+        3600,
+        27999.999389588833,
+        5999.999598912895,
+        499.99015482415786,
+        500.9885246583084
+      ],
+      [
+        3700,
+        28499.999386161566,
+        5999.999598912895,
+        499.99562249783986,
+        500.4075843249055
+      ],
+      [
+        3800,
+        28999.999382823706,
+        5999.999598912895,
+        499.99833364293454,
+        500.1594439831709
+      ],
+      [
+        3900,
+        29499.999378859997,
+        5999.999598912895,
+        499.9996015876995,
+        500.0593175941571
+      ],
+      [
+        4000,
+        29999.999375075102,
+        5999.999598912895,
+        500.00014591605486,
+        500.021123669807
+      ]
+    ],
+    "field_mass_min_kg": 0.9998366987957618,
+    "field_mass_max_kg": 1.0001200107346753,
+    "worst_AGL_RMSE_m": 0.6631777971798368,
+    "original_mass_ledger_not_claimed_valid": "Initial-particle import is checked independently; existing production emission-hook ledger not used as source mass truth."
+  },
+  "CAL": {
+    "UTC": "2026-11-19T20:40:37.397619+00:00",
+    "actual_intervals": 40,
+    "native_restart_reader_passed": true,
+    "actual_final_puffs": 1,
+    "native_final_mass_kg": 1.0,
+    "native_final_sigma_y_m": 400.0,
+    "native_final_sigma_z_m": 100.00003814697266,
+    "sigma_change_gate_m": 0.01,
+    "sigma_change_pass": true,
+    "native_final_x_grid": 30.500089645385742,
+    "native_final_y_grid": 6.5,
+    "native_final_AGL_m": 500.0,
+    "finite_nonnegative": true,
+    "extra_diffusion_not_exactly_zero": true,
+    "original_native_binary_unchanged": true,
+    "model_admission": "Native shared artificial Gaussian initial-condition test, PPC1 fully following. Final-width check passed; per-period width history not retained."
+  },
+  "CAL_forcing": {
+    "UTC": "2026-11-19T20:37:23.167603+00:00",
+    "type": "Manufactured verification meteorology, not a CALMET prediction",
+    "reason": "Original hill CALMET objective analysis altered near-surface winds: max|U-5|0.24437m/s, |V|0.07864m/s. Those completed CAL cases are not admitted as identical forcing.",
+    "original_met_sha256": "9d7d2800987b878c6114ab06e3ea57c245b873b4096249f9dbc8227505727594",
+    "new_met_sha256": "349711c4d13ed1e03c02438aa5771e39bdf1feb156495fa257e303fb7983759d",
+    "prescription": "Every original native-format U-LEV record=5m/s, V-LEV=0; all other byte records untouched. This target came from frozen analytic plan, not future outputs.",
+    "changed_records": 1728,
+    "nonwind_records_byteidentical": true,
+    "reference_source_or_model_closure_parameters_changed": false,
+    "vertical_motion": "Native PPC1 represents prescribed constantAGL advection; WFACE not consumed as physical vertical puff advection, remains original. Do not claim identical 3D wind-dynamics equations.",
+    "old_wind_gate_failure_preserved": true
+  },
+  "CAL_wind_check": {
+    "UTC": "2026-11-19T20:37:34.271799+00:00",
+    "intervals": 72,
+    "actual_horizontal_wind_max_error_m_s": {
+      "U": 0.0,
+      "V": 0.0
+    },
+    "wind_tolerance_m_s": 0.001,
+    "finite_native_fields": true,
+    "terrain_geo_sha256": "9af74cee35c9b099c11079c6ff42686b919bf92c55152917744b3aca590e1b52",
+    "native_met_sha256": "349711c4d13ed1e03c02438aa5771e39bdf1feb156495fa257e303fb7983759d",
+    "vertical_motion_scope": "CALPUFF does not advect puffs with this physicalW. Native PPC1 terrain coupling represents the same prescribed constantAGL kinematics; not identical model equations or a full 3D wind-dynamics test."
+  },
+  "CAL_display": {
+    "UTC": "2026-11-19T20:38:08.477862+00:00",
+    "direct_native": true,
+    "finite_nonnegative": true,
+    "all40_intervals_match": true,
+    "final_puff_state_byteidentical_to_metric_run": true,
+    "all_intermediate_puff_states_checked": false,
+    "Gaussian_reconstruction_rejected_and_not_used": true,
+    "scope": "Native point-observation planes, not volume means; quantitative metrics remain original360 fixed volume cells."
+  },
+  "MP": {
+    "UTC": "2026-11-19T20:06:23.139300+00:00",
+    "completed": true,
+    "elapsed_seconds": 5.171120413000011,
+    "trajectory_x_max_error_m": 1.8189894035458565e-12,
+    "trajectory_y_max_error_m": 0.0,
+    "AGL_RMSE_m": 0.6412768466016412,
+    "AGL_max_error_m": 2.3322257153118926,
+    "nonpenetration": true,
+    "scope": "Native advection module; concentration collector and model comparisons pending"
+  },
+  "MP_observer": {
+    "UTC": "2026-11-19T20:24:43.681333+00:00",
+    "elapsed_seconds": 6.308174822999987,
+    "actual_41_particle_states_byteidentical": true,
+    "finite_nonnegative": true,
+    "initial_mass_kg": 1,
+    "minimum_field_mass_kg": 1.0,
+    "maximum_field_mass_kg": 1.0,
+    "native_physics_unchanged": true
+  },
+  "native_forcing_is_manufactured": true
+}

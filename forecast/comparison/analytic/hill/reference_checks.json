@@ -1,0 +1,13 @@
+{
+  "exact_initial_total_mass_kg": 1,
+  "cell_integrated_mass_min_kg": 0.9999999999999998,
+  "finite_nonnegative": true,
+  "terrain_boundary_normal_velocity_exact": "w-u*dh/dx-v*dh/dy = 0",
+  "incompressible_exact": "du/dx+dv/dy+dw/dz = 0",
+  "analytic_jacobian": 1,
+  "coarse_independent_trapezoid_path_max_error_m": 0.7413046563654007,
+  "initial_particle_mass_kg": 1,
+  "shared_initial_SHA256": "1143f923d6dd487df7ef9c967719131d1e279af4dd93213bc234c2ca33bf37c0",
+  "source_labels": "One initial puff; no continuous source after t=0",
+  "numerical_results_pending": true
+}

@@ -1,0 +1,12 @@
+{
+  "UTC": "2026-11-19T20:21:04.301678+00:00",
+  "cells": 360,
+  "quadrature": "3x3x3 normalized box mean, native250x250x50m cells",
+  "selection": "18 equally spaced frozen x-grid cells x5 fixed crosswind indices x4 fixed AGL bins; no concentration output consulted",
+  "native_FLEX_concentration_read_before_design": false,
+  "cal_receptors": 9720,
+  "time_intervals": 40,
+  "interval_seconds": 100,
+  "all_pairs_retained": true,
+  "reference_instant_and_time_means_distinguished": true
+}

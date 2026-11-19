@@ -1,0 +1,35 @@
+{
+  "created_UTC": "2026-11-19T20:05:23.951145+00:00",
+  "name": "Gaussian hill, terrain-tangent prescribed wind, passive 3D puff",
+  "terrain": "h=1000*exp(-((x-20000)/3000)^2-((y-6000)/2500)^2) m",
+  "wind": "u=5 m/s, v=0, w=5*dh/dx m/s",
+  "equation": "dC/dt+div(u C)=0; no diffusion, deposition, chemistry or later emissions",
+  "exact_solution": "C(x,y,z,t)=F(x-5*t,y,z-h(x,y)); Jacobian d(x,y,eta)/d(x,y,z)=1; eta=z-h is invariant",
+  "initial": {
+    "mass_kg": 1,
+    "center_x_m": 10000,
+    "center_y_m": 6000,
+    "center_AGL_m": 500,
+    "sigma_x_y_m": 400,
+    "sigma_AGL_m": 100,
+    "vertical_distribution": "reflected normal on eta>=0: phi(eta-500)+phi(eta+500)"
+  },
+  "duration_s": 4000,
+  "output_s": 100,
+  "particle_count": 65536,
+  "initial_quadrature": "one scrambled 3D Sobol set, seed42, transformed by Gaussian inverse CDF; same positions/weights required in both particle methods",
+  "geometry_information": "Prescribed analytical terrain and wind, not WRF-generated wind or real geographic data.",
+  "scope": "3D pure-advection/terrain-coupling verification. Not diffusion, turbulent mountain wind generation, or real forecast validation.",
+  "native_admission": {
+    "FLEXPART": "must read shared initial particles via supported initial-particle interface, turbulence disabled; pending",
+    "MPTRAC": "native module_advect with supplied gridded physical wind/omega, diffusion omitted; pending",
+    "CALPUFF": "native terrain coupling candidate MCTADJ3 PPC1; Gaussian initial-state and zero-spreading interfaces must pass before any three-way concentration score"
+  },
+  "all_model_concentration_errors_pending": true,
+  "guards": {
+    "no_fit": true,
+    "no_model_outputs_in_reference": true,
+    "no_false_model_panels": true,
+    "no_RGB_frame_blending": true
+  }
+}

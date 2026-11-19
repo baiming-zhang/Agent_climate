@@ -1,0 +1,32 @@
+{
+  "UTC": "2026-11-19T20:45:12.576464+00:00",
+  "stage": "video_ready_pending_decode_and_publication",
+  "reference_seconds": 1.7746875350000018,
+  "axes_physical_scale_ratio": [
+    1.0000000000000002,
+    0.9999999999999999,
+    1.0,
+    0.9999999999999999,
+    1.0,
+    0.9999999999999999,
+    1.0,
+    0.9999999999999999
+  ],
+  "vertical_exaggeration": 1,
+  "reference_times_s": [
+    1000,
+    2000,
+    3000
+  ],
+  "native_CAL_direct_point_planes": true,
+  "Gaussian_CAL_reconstruction_used": false,
+  "display_interpolation_roundoff_minimum_ug_m3": -5.302509e-317,
+  "display_note": "Native particle voxel means interpolated at500mAGL/centreline; CAL native point planes. Statistics use original common360voxel quadrature means. Advection-aware scalar/position interpolation before each frame; no RGB/frame blending. Only negative interpolation roundoff up to1e-12 bounded in display, native data untouched.",
+  "video_rendered": true,
+  "frames": 900,
+  "fps": 60,
+  "width": 3840,
+  "height": 1440,
+  "encoder": "h264_nvenc",
+  "render_seconds": 129.170996072
+}

@@ -1,0 +1,62 @@
+{
+  "UTC": "2026-11-19T20:41:30.847897+00:00",
+  "scope": "360 preselected3D terrain-following cells x40 common100s means; exact no-diffusion analytical reference, no observation claim",
+  "units": "ug/m3",
+  "models": {
+    "FLEXPART_native_driver": {
+      "pairs": 14400,
+      "RMSE_ug_m3": 0.0010580838763877749,
+      "NRMSE_percent": 0.6197435035158506,
+      "MAE_ug_m3": 0.00019890486089607968,
+      "bias_ug_m3": 4.105677085122934e-05,
+      "max_absolute_ug_m3": 0.02757926323454596
+    },
+    "CALPUFF_native_driver": {
+      "pairs": 14400,
+      "RMSE_ug_m3": 0.0009311863018507039,
+      "NRMSE_percent": 0.5454167424846239,
+      "MAE_ug_m3": 0.00016596048362019876,
+      "bias_ug_m3": -0.00016494614045574354,
+      "max_absolute_ug_m3": 0.010855897001954044
+    },
+    "MPTRAC_native_advection_module": {
+      "pairs": 14400,
+      "RMSE_ug_m3": 0.0010660712672510822,
+      "NRMSE_percent": 0.62442189783604,
+      "MAE_ug_m3": 0.00018834752403899677,
+      "bias_ug_m3": -6.51861725981328e-07,
+      "max_absolute_ug_m3": 0.0336854507344686
+    }
+  },
+  "all_pairs_retained": true,
+  "reference_quadrature_tightening_max_abs_ug_m3": 2.6645352591003757e-15,
+  "sampling_control_vs_continuous_truth": {
+    "pairs": 14400,
+    "RMSE_ug_m3": 0.000745994284437007,
+    "NRMSE_percent": 0.4369456162758444,
+    "MAE_ug_m3": 0.00015463379229832335,
+    "bias_ug_m3": -3.1949932363979928e-06,
+    "max_absolute_ug_m3": 0.012584878468921978
+  },
+  "particle_time_sampling": "Matched10s trapezoids; original MP right-Riemann fields preserved and exact endpoint correction documented",
+  "MP_vs_same_initial_exact_characteristics_with_same10s_bins": {
+    "pairs": 14400,
+    "RMSE_ug_m3": 0.000836857061177226,
+    "NRMSE_percent": 0.49042748393781227,
+    "MAE_ug_m3": 6.846110026041666e-05,
+    "bias_ug_m3": 2.5431315104166665e-06,
+    "max_absolute_ug_m3": 0.03662109375
+  },
+  "CAL_display_reconstruction_vs_raw_native_means": {
+    "pairs": 14400,
+    "RMSE_ug_m3": 0.0009311474675641095,
+    "NRMSE_percent": 0.5454561521433017,
+    "MAE_ug_m3": 0.00016570879545560116,
+    "bias_ug_m3": 0.00016495800653116473,
+    "max_absolute_ug_m3": 0.010856448822409381
+  },
+  "CAL_display_reconstruction_admitted": false,
+  "CAL_actual_display": "Direct9360 native point planes, Gaussian reconstruction remains rejected",
+  "CAL_near_zero_diffusion_disclosed": true,
+  "not_a_complete_three_production_driver_validation": true
+}
