@@ -1,0 +1,45 @@
+{
+  "UTC": "2026-11-18T16:04:23.735518+00:00",
+  "status": "verified_native_end360h_budgets_ready_for_completed_models",
+  "completed_models": [
+    "FLEXPART",
+    "CALPUFF",
+    "MPTRAC"
+  ],
+  "all_three_budgets_available": true,
+  "models": {
+    "FLEXPART": {
+      "emitted_kg": 15805.930855572224,
+      "airborne_end_kg": 176.4937098552473,
+      "wet_total_kg": 1663.8794945745374,
+      "dry_total_kg": 3289.472198545299,
+      "domain_outflow_total_kg": 10676.08544743682,
+      "source": "common_FLEX360_cache4_r03/result.json:mass_ledger, three source species, INIT/ZERO0",
+      "reconstructed_residual_kg": 5.160320142749697e-06
+    },
+    "CALPUFF": {
+      "emitted_kg": 15805.9313,
+      "airborne_end_kg": 181.756,
+      "wet_total_kg": 3145.850833087,
+      "dry_total_kg": 1555.8008300000001,
+      "domain_outflow_total_kg": 10922.524599,
+      "transformed_kg": 0.0,
+      "native_wet_nonzero_hours": 235,
+      "last_hour_wet_increment_kg": 0.0,
+      "source": "common_CAL_volume_cost_r01/massbal.dat. Printed g; timestep Emitted/OUT/Transformed/Wet/Dry are increments; DomainTotal is end-state.",
+      "reconstructed_residual_kg": -0.0009620870005164761
+    },
+    "MPTRAC": {
+      "emitted_kg": 15805.930855572224,
+      "airborne_end_kg": 184.04082932194592,
+      "wet_total_kg": 13.069037952730175,
+      "dry_total_kg": 4463.797693851243,
+      "domain_outflow_total_kg": 11145.023294447517,
+      "source": "/mnt/c/Users/ASUS/Desktop/Agent_contact/execution/pollution_vancouver_open3d_v2/terrain_fairness_review/common_MP_fields360h_r07/result.json",
+      "reconstructed_residual_kg": -1.2132659321650863e-09
+    }
+  },
+  "CAL_wet_zero_summary_correction": "Previous last-hour0 was incorrectly described as fullperiod0. All235 nonzero wet steps sum to3145.850833087kg. Actual simulation and\u539fnative outputs unchanged. No precipitation/parameter repair was needed.",
+  "scope": "Same312km computational absorbing domain, source-only fiveoutlets/threefacilities. AirborneEND differs from hourly-mean mass within110x100km comparison output footprint.",
+  "native_budget_precision": "CAL printed text precision retained; differences are model spread, not error against monitored truth. No initial background or chemistry."
+}

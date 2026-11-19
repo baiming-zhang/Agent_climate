@@ -1,0 +1,24 @@
+{
+  "UTC": "2026-11-19T09:03:50.410358+00:00",
+  "seconds": 42.884210168,
+  "status": "matched_native_point360h_terrain_path_switch_complete",
+  "actual360hour_intervals_match": true,
+  "finite_nonnegative": true,
+  "changed_values": 130781,
+  "total_values": 385920,
+  "RMSE_off_minus_on_ug_m3": 0.029264834961176826,
+  "relativeL2_off_minus_on": 0.03220086375901959,
+  "max_abs_difference_ug_m3": 12.854980013798922,
+  "largest_difference": {
+    "hour_index": 6,
+    "point_index": 1027,
+    "longitude": -122.98500061035156,
+    "latitude": 49.29499816894531,
+    "AGL_m": 125.0,
+    "on_ug_m3": 74.98679042328149,
+    "off_ug_m3": 62.13181040948257
+  },
+  "native_mass_ledger_byteequal": false,
+  "production_data_changed": false,
+  "scope": "1072matched actual point predictions, not voxel means or full-domain sensitivity. WRF terrain-dependent flow remains in both cases. Does not demonstrate identical CALPUFF versus particle-model terrain physics."
+}

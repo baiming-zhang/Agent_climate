@@ -1,0 +1,143 @@
+{
+  "UTC": "2026-11-18T19:49:25.105786+00:00",
+  "seconds": 7.619172410999994,
+  "status": "all3_completed_native_model_spread_ready",
+  "models_included": [
+    "FLEXPART",
+    "CALPUFF",
+    "MPTRAC"
+  ],
+  "all_three_native_arrays_complete": true,
+  "shape": [
+    360,
+    16,
+    91,
+    151
+  ],
+  "model_summary": {
+    "FLEXPART": {
+      "model": "FLEXPART",
+      "input_metadata_SHA256": "826176f9af2c26ae7642c81cb0a44cf21a2c345b036e79ddf342b33cc01057fb",
+      "weights_SHA256": "cee5ed9549a989bd7152c5e7df1a2575bd7797270df1abcd26fa2b4dac430cf31839560f7b2f7e0e0ef3a7eea8954827a751cac379015e47fefb56f6b4de2a2b",
+      "full_space_time_volume_weighted_mean_ug_m3": 0.0011979553918912416,
+      "ground_space_time_area_weighted_mean_ug_m3": 0.0279085141155827,
+      "maximum_native_ug_m3": 44.015509765625,
+      "nonzero_voxels": 7716651,
+      "total_voxels": 79148160,
+      "series_file": "model_FLEXPART_series.npz"
+    },
+    "CALPUFF": {
+      "model": "CALPUFF",
+      "input_metadata_SHA256": "ca94786eba3e9e45555f6c300c9755c0ea825361756f8d9f69a611b922436bbd",
+      "weights_SHA256": "cee5ed9549a989bd7152c5e7df1a2575bd7797270df1abcd26fa2b4dac430cf31839560f7b2f7e0e0ef3a7eea8954827a751cac379015e47fefb56f6b4de2a2b",
+      "full_space_time_volume_weighted_mean_ug_m3": 0.0011673485420452328,
+      "ground_space_time_area_weighted_mean_ug_m3": 0.016909743805902287,
+      "maximum_native_ug_m3": 64.10123700122085,
+      "nonzero_voxels": 19447606,
+      "total_voxels": 79148160,
+      "series_file": "model_CALPUFF_series.npz"
+    },
+    "MPTRAC": {
+      "model": "MPTRAC",
+      "input_metadata_SHA256": "8e78c16adec72c6ad9e3750871d31880832d6cc13e8da13471bfb0d9fb1642e7",
+      "weights_SHA256": "cee5ed9549a989bd7152c5e7df1a2575bd7797270df1abcd26fa2b4dac430cf31839560f7b2f7e0e0ef3a7eea8954827a751cac379015e47fefb56f6b4de2a2b",
+      "full_space_time_volume_weighted_mean_ug_m3": 0.0011871572564119282,
+      "ground_space_time_area_weighted_mean_ug_m3": 0.02675207319696075,
+      "maximum_native_ug_m3": 50.72184753417969,
+      "nonzero_voxels": 5800294,
+      "total_voxels": 79148160,
+      "series_file": "model_MPTRAC_series.npz"
+    }
+  },
+  "pairwise_model_spread": {
+    "FLEXPART__CALPUFF": {
+      "A": "FLEXPART",
+      "B": "CALPUFF",
+      "input_metadata_SHA256": [
+        "826176f9af2c26ae7642c81cb0a44cf21a2c345b036e79ddf342b33cc01057fb",
+        "ca94786eba3e9e45555f6c300c9755c0ea825361756f8d9f69a611b922436bbd"
+      ],
+      "weights_SHA256": "cee5ed9549a989bd7152c5e7df1a2575bd7797270df1abcd26fa2b4dac430cf31839560f7b2f7e0e0ef3a7eea8954827a751cac379015e47fefb56f6b4de2a2b",
+      "metrics": {
+        "all16layers_volume_weighted": {
+          "mean_B_minus_A_ug_m3": -3.060684984600723e-05,
+          "MAE_ug_m3": 0.0013435932276618147,
+          "RMSE_ug_m3": 0.02986347840165211,
+          "RMSE_divided_by_RMS_A": 0.9995759072896322,
+          "weighted_correlation": 0.5421166464174998,
+          "A_native_RMS_ug_m3": 0.02987614865851205
+        },
+        "ground0_20m_area_weighted": {
+          "mean_B_minus_A_ug_m3": -0.010998770309680415,
+          "MAE_ug_m3": 0.03374594595289624,
+          "RMSE_ug_m3": 0.20679940602196994,
+          "RMSE_divided_by_RMS_A": 1.0325113992800765,
+          "weighted_correlation": 0.17882784972272114,
+          "A_native_RMS_ug_m3": 0.20028777034922987
+        }
+      },
+      "all_voxels_included": true,
+      "no_observation_truth_claim": true
+    },
+    "FLEXPART__MPTRAC": {
+      "A": "FLEXPART",
+      "B": "MPTRAC",
+      "input_metadata_SHA256": [
+        "826176f9af2c26ae7642c81cb0a44cf21a2c345b036e79ddf342b33cc01057fb",
+        "8e78c16adec72c6ad9e3750871d31880832d6cc13e8da13471bfb0d9fb1642e7"
+      ],
+      "weights_SHA256": "cee5ed9549a989bd7152c5e7df1a2575bd7797270df1abcd26fa2b4dac430cf31839560f7b2f7e0e0ef3a7eea8954827a751cac379015e47fefb56f6b4de2a2b",
+      "metrics": {
+        "all16layers_volume_weighted": {
+          "mean_B_minus_A_ug_m3": -1.0798135479313546e-05,
+          "MAE_ug_m3": 0.000844439450875292,
+          "RMSE_ug_m3": 0.020116402543491393,
+          "RMSE_divided_by_RMS_A": 0.6733264977833749,
+          "weighted_correlation": 0.820783341890574,
+          "A_native_RMS_ug_m3": 0.02987614865851205
+        },
+        "ground0_20m_area_weighted": {
+          "mean_B_minus_A_ug_m3": -0.001156440918621951,
+          "MAE_ug_m3": 0.030029641436730495,
+          "RMSE_ug_m3": 0.20100870233555213,
+          "RMSE_divided_by_RMS_A": 1.0035994808123592,
+          "weighted_correlation": 0.4922667568652534,
+          "A_native_RMS_ug_m3": 0.20028777034922987
+        }
+      },
+      "all_voxels_included": true,
+      "no_observation_truth_claim": true
+    },
+    "CALPUFF__MPTRAC": {
+      "A": "CALPUFF",
+      "B": "MPTRAC",
+      "input_metadata_SHA256": [
+        "ca94786eba3e9e45555f6c300c9755c0ea825361756f8d9f69a611b922436bbd",
+        "8e78c16adec72c6ad9e3750871d31880832d6cc13e8da13471bfb0d9fb1642e7"
+      ],
+      "weights_SHA256": "cee5ed9549a989bd7152c5e7df1a2575bd7797270df1abcd26fa2b4dac430cf31839560f7b2f7e0e0ef3a7eea8954827a751cac379015e47fefb56f6b4de2a2b",
+      "metrics": {
+        "all16layers_volume_weighted": {
+          "mean_B_minus_A_ug_m3": 1.9808714366693686e-05,
+          "MAE_ug_m3": 0.001405810090604413,
+          "RMSE_ug_m3": 0.0325625103856694,
+          "RMSE_divided_by_RMS_A": 1.0047488967312577,
+          "weighted_correlation": 0.5380196223895969,
+          "A_native_RMS_ug_m3": 0.0324086052660568
+        },
+        "ground0_20m_area_weighted": {
+          "mean_B_minus_A_ug_m3": 0.009842329391058464,
+          "MAE_ug_m3": 0.03329750470010235,
+          "RMSE_ug_m3": 0.20971212980935267,
+          "RMSE_divided_by_RMS_A": 2.0082950803952513,
+          "weighted_correlation": 0.1686143931313514,
+          "A_native_RMS_ug_m3": 0.10442296645375408
+        }
+      },
+      "all_voxels_included": true,
+      "no_observation_truth_claim": true
+    }
+  },
+  "native_global_mass_budgets_separate": "common_native_budgets_r01/three_models.json",
+  "public_or_rendered": false
+}

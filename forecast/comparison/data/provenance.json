@@ -1,0 +1,79 @@
+{
+  "release": "vancouver-qualified-flat-comparison-20261120-r01",
+  "native_fields": {
+    "FLEXPART": {
+      "field_SHA256": "4987198a1e54c6ef1c37e01d6eace6bea675d36ba8b1b29804ed257837f28174",
+      "qualified_result_SHA256": "31a0a04bae08cc7944415ad4d5c16dbdf1d85c5ee24cf646e9e387f5ef8ee754",
+      "shape": [
+        360,
+        16,
+        91,
+        151
+      ],
+      "finite_nonnegative_qualification": true
+    },
+    "CALPUFF": {
+      "field_SHA256": "20236cb0b24847283625206aa65ab7ae17361d6c9910dfae6ee78172bde31643",
+      "qualified_result_SHA256": "0836a72bffe588dfb60732e1cea53c12ce71724a7017ed0ec0c1399bf9fd8d4b",
+      "shape": [
+        360,
+        16,
+        91,
+        151
+      ],
+      "finite_nonnegative_qualification": true
+    },
+    "MPTRAC": {
+      "field_SHA256": "30bdcdd3457f0527a4cdce920eb189dcacf44706ea16eb2b3eeb99e0b784b0ac",
+      "qualified_result_SHA256": "da118622ba8936e9bd16747cb8350805e68a552311a7fff5714022e7219cf248",
+      "shape": [
+        360,
+        16,
+        91,
+        151
+      ],
+      "finite_nonnegative_qualification": true
+    }
+  },
+  "video_QA": {
+    "UTC": "2026-11-19T17:09:58.153594+08:00",
+    "seconds": 7.228546007999967,
+    "status": "qualified_flat_15s60fps_video_actual_decode_and_visual_review_passed",
+    "video_SHA256": "1d09eed4384225b3560912fd7a99e52aa72ab769d91c256534dad60fccef20f9",
+    "duration_seconds": 15.0,
+    "frames": 900,
+    "fps": 60,
+    "dimensions": [
+      1920,
+      1080
+    ],
+    "all_frames_decoded_without_error": true,
+    "extracted_frame_indices": [
+      0,
+      171,
+      828
+    ],
+    "extracted_frames": [
+      "frame_01.png",
+      "frame_02.png",
+      "frame_03.png"
+    ],
+    "extracted_frame_SHA256": [
+      "0681836cb9f12efea2d4e0bd678aa4a9aad5579f067140110aed00223a236bae",
+      "c112f6139428b7b8a7f0f378785c64a46e61ce6b9adf57ce31eea46921090023",
+      "aae26ba6fd4ecd0fd4004202f38b981a340f5ba56db9e13033dd94a4ca324ea6"
+    ],
+    "no_RGB_frame_blending": true,
+    "native_data_changed": false,
+    "actual_extracted_images_viewed": true
+  },
+  "CAL_integration_method": {
+    "13679columns": "original3vs4 qualified, retain4",
+    "55columns": "8vs12 qualified, retain12",
+    "7columns": "width-informed graded4vs6 qualified, retain6"
+  },
+  "original_failed_receipts_preserved": true,
+  "published_assets_do_not_include_CAL_vendor_source_or_binary": true,
+  "raw_full_native3D_fields_retained_locally": "Download links on this page provide numerical summaries and comparisons; full volumetric archives and large meteorological inputs are not hosted here.",
+  "model_terrain_coupling_not_identical": true
+}
