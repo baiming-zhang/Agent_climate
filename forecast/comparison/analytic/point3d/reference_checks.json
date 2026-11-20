@@ -1,0 +1,24 @@
+{
+  "UTC": "2026-11-20T01:00:43.510831+00:00",
+  "status": "independent_continuous_source_reflected_3D_Green_integral",
+  "equation": "C=Q integral0t Gx(x-Ua,Kx*a) Gy(y,Ky*a) [Gz(z-H,Kz*a)+Gz(z+H,Kz*a)] da",
+  "K_m2_s": [
+    50,
+    50,
+    5
+  ],
+  "source_m": [
+    10000,
+    6000,
+    500
+  ],
+  "Q_kg_s": 0.001,
+  "total_mass_kg_at3600s": 3.6,
+  "source_point_singularity_not_sampled": true,
+  "finite_cell_and300s_time_means": true,
+  "quadrature_tightening_max_abs_ug_m3": 0.0,
+  "max_quad_vec_error_estimate": 1.7861981231313004e-12,
+  "ground_normal_flux_exact0": true,
+  "no_simulator_output_consumed": true,
+  "elapsed_seconds": 1.7873601750000034
+}

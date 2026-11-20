@@ -1,0 +1,46 @@
+{
+  "UTC": "2026-11-20T00:57:04.947579+00:00",
+  "duration_s": 3600,
+  "U_m_s": 5,
+  "Q_kg_s": 0.001,
+  "source_xyz_m": [
+    10000,
+    6000,
+    500
+  ],
+  "initial_background": 0,
+  "target_K_m2_s": [
+    50,
+    50,
+    5
+  ],
+  "target_boundary": "flat reflecting z0; unbounded above",
+  "source_is_continuous_fixed_point": true,
+  "physical_source_shape": "delta point; no heat or plume rise",
+  "native_FLEX": {
+    "particles": 200000,
+    "dt_sync_s": 10,
+    "turbulence": "Original diagnosed Hanna PBL closure, PBLH3000 UST0.3 HFX0; NOT constantK target",
+    "code_changes": 0
+  },
+  "CALPUFF": {
+    "closure": "Original Draxler, external sigma_v=sqrt(50/60), sigma_w=sqrt(5/60), MTAULY60; finite-age law differs from constantK; source sigma floor1m explicitly in companion"
+  },
+  "MPTRAC": {
+    "closure": "Original module_advect + module_diff_turb, constant coefficients50/50/5; not complete production driver"
+  },
+  "comparison": {
+    "cells": 320,
+    "intervals": 12,
+    "interval_s": 300,
+    "sampling_s": 10,
+    "cell_size_m": [
+      250,
+      250,
+      50
+    ],
+    "selection": "fixed16downwind locations x5crosswind x4heights, exclude singular source cell a priori; all3840pairs retained"
+  },
+  "scope": "Cross-model discrepancy against common constantK Green target; includes native closure differences. Only matched operators qualify as numerical verification. No ranking inferred.",
+  "input_sha256": "d51c34e845d7e7d8d4d6a6791bbe3877d820673ffb657348e0ce6e9f1c699550"
+}

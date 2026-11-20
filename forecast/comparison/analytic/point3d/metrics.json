@@ -1,0 +1,87 @@
+{
+  "UTC": "2026-11-20T01:11:31.899561+00:00",
+  "units": "ug/m3",
+  "models": {
+    "FLEXPART_native_PBL_driver": {
+      "pairs": 3840,
+      "RMSE_ug_m3": 0.5038436536449278,
+      "NRMSE_percent": 156.43286008745554,
+      "MAE_ug_m3": 0.14459378331747935,
+      "bias_ug_m3": 0.008752089371365738,
+      "max_absolute_ug_m3": 3.6888148115450794
+    },
+    "CALPUFF_native_Draxler_driver": {
+      "pairs": 3840,
+      "RMSE_ug_m3": 0.18785543360080517,
+      "NRMSE_percent": 58.32516207865683,
+      "MAE_ug_m3": 0.05887511367565468,
+      "bias_ug_m3": 0.006947366668109868,
+      "max_absolute_ug_m3": 1.6672972615118107
+    },
+    "MPTRAC_native_advection_diffusion_modules": {
+      "pairs": 3840,
+      "RMSE_ug_m3": 0.008981577124999071,
+      "NRMSE_percent": 2.7885908408202797,
+      "MAE_ug_m3": 0.003971027499473924,
+      "bias_ug_m3": 0.00043512862733751496,
+      "max_absolute_ug_m3": 0.10870496667600316
+    }
+  },
+  "all_pairs": 3840,
+  "all_pairs_retained": true,
+  "source": "Fixed continuous point at500mAGL,1g/s,3600s",
+  "scope": "Differences versus one constantK3D analytical target. FLEX native nonhomogeneous PBL and CAL native finite-age growth are not identical to that PDE. MP retains native density drift. These scores are not pure discretization errors or real-world prediction accuracy and do not rank models.",
+  "reference_K_m2_s": [
+    50,
+    50,
+    5
+  ],
+  "source_widths": {
+    "FLEXPART": "exact fixed point in standard release",
+    "CALPUFF": "volume-source point limit with sigmaY/Z1m required by native controls",
+    "MPTRAC": "exact fixed point"
+  },
+  "FLEXPART_native_vertical_spread_nonzero": true,
+  "CALPUFF_native_vertical_spread_nonzero": true,
+  "MPTRAC_native_Kz_nonzero": true,
+  "closure_specific_companions": {
+    "CALPUFF": {
+      "native_vs_own_companion": {
+        "pairs": 3840,
+        "RMSE_ug_m3": 0.016153948974262696,
+        "NRMSE_percent": 3.61812589719983,
+        "MAE_ug_m3": 0.002247532267215883,
+        "bias_ug_m3": 0.00027677000671190503,
+        "max_absolute_ug_m3": 0.32250525041541245
+      },
+      "own_companion_vs_common_target": {
+        "pairs": 3840,
+        "RMSE_ug_m3": 0.18554047582625646,
+        "NRMSE_percent": 57.606416366500746,
+        "MAE_ug_m3": 0.05746697349626555,
+        "bias_ug_m3": 0.006670596661397964,
+        "max_absolute_ug_m3": 1.6731151151148949
+      }
+    },
+    "MPTRAC": {
+      "native_vs_own_companion": {
+        "pairs": 3840,
+        "RMSE_ug_m3": 0.009038618187386752,
+        "NRMSE_percent": 2.8043421484244364,
+        "MAE_ug_m3": 0.003982979012166804,
+        "bias_ug_m3": 0.00046494092537656233,
+        "max_absolute_ug_m3": 0.10370534472292992
+      },
+      "own_companion_vs_common_target": {
+        "pairs": 3840,
+        "RMSE_ug_m3": 0.0010516504457865514,
+        "NRMSE_percent": 0.3265153502609648,
+        "MAE_ug_m3": 0.0004765555560234424,
+        "bias_ug_m3": -2.981229803904746e-05,
+        "max_absolute_ug_m3": 0.00503405902823606
+      }
+    }
+  },
+  "FLEXPART_own_companion": null,
+  "FLEXPART_own_companion_reason": "Spatially variable native Hanna PBL has no claimed closed-form Gaussian solution; common-target score is total discrepancy only."
+}

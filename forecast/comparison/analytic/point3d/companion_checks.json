@@ -1,0 +1,9 @@
+{
+  "UTC": "2026-11-20T01:02:18.150219+00:00",
+  "no_native_concentration_read": true,
+  "CALPUFF": "Gaussian continuous source with source sigma1m and original unstable Draxler variance; lateral tau60/vertical reciprocal.002; finite-age closure companion only, native puff sampling/cubature may differ",
+  "MPTRAC": "Constant K50/50/5 plus native density drift-5/7000m/s and reflected no-flux z0; exact reflected drift diffusion CDF",
+  "FLEXPART": null,
+  "FLEXPART_reason": "Native Hanna profile is spatially variable; no closed-form Gaussian companion claimed. Its common-target discrepancy cannot be called pure numerical error.",
+  "elapsed_seconds": 1.5918624619999946
+}
