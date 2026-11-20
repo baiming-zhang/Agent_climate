@@ -37,9 +37,11 @@
         "sha256": "90b1503128d0dfe89d542dde2f66e5667e2a70286f3b61b107cb238fe8d7c0b8"
       },
       "comparison": {
-        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage00_to_stage01.mp4",
+        "url": "videos/comparisons/stage00_to_stage01.mp4",
         "bytes": 8127300,
-        "sha256": "32a7aea8c10d2de88bafcf3b112c2d2db4914ce3d0917607c02ed92b5d63837c"
+        "sha256": "ebc99656ce2008e941d1bdf52599a09ee721c707a33a78f21d82d0f93a13f5b8",
+        "operation": "Fast-start stream-copy remux; no decoded frame change",
+        "original_sha256": "32a7aea8c10d2de88bafcf3b112c2d2db4914ce3d0917607c02ed92b5d63837c"
       },
       "before_stage": "00",
       "after_stage": "01",
@@ -60,9 +62,11 @@
         "sha256": "931ea70356535881c877ce77e324c695cab8a31385b1e90d567d089eed355866"
       },
       "comparison": {
-        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage01_to_stage02.mp4",
+        "url": "videos/comparisons/stage01_to_stage02.mp4",
         "bytes": 7970905,
-        "sha256": "e7bec5f80e8ecf24308b23571e73976c554767d29ceaaed465488a9bc8ee839c"
+        "sha256": "815210746f7f2130da912f6a4b450e56494ed3328f7c7ba655bac126d10be581",
+        "operation": "Fast-start stream-copy remux; no decoded frame change",
+        "original_sha256": "e7bec5f80e8ecf24308b23571e73976c554767d29ceaaed465488a9bc8ee839c"
       },
       "before_stage": "01",
       "after_stage": "02",
@@ -83,9 +87,11 @@
         "sha256": "d47240739eea3505877267f67cbeec71378d938ff2f740ca9329ddeebacd2a90"
       },
       "comparison": {
-        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage02_to_stage03.mp4",
+        "url": "videos/comparisons/stage02_to_stage03.mp4",
         "bytes": 7826962,
-        "sha256": "d39c51622d9a0de94e59fb3778bca4ab5102908cbfe59a99a692aa0ea9402a11"
+        "sha256": "83e3a2098e5e7a3f7d3d6e98d3d7b015a1a6b28cfc2be94ea0ba6fe110643047",
+        "operation": "Fast-start stream-copy remux; no decoded frame change",
+        "original_sha256": "d39c51622d9a0de94e59fb3778bca4ab5102908cbfe59a99a692aa0ea9402a11"
       },
       "before_stage": "02",
       "after_stage": "03",
@@ -106,9 +112,11 @@
         "sha256": "b906d95f4154544b2f7da7493801bf55e0f9857298e0b3197a62c364fe14097c"
       },
       "comparison": {
-        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage03_to_stage04.mp4",
+        "url": "videos/comparisons/stage03_to_stage04.mp4",
         "bytes": 6956296,
-        "sha256": "2590eac472461bc7ebd0579bdf196ec2416751abd1c15743298ebfd41e62f8dd"
+        "sha256": "0122a5fb7d7d2478ce52c24a74f9f0e53876d03fba0f46cfed6b2b0aa15ec48c",
+        "operation": "Fast-start stream-copy remux; no decoded frame change",
+        "original_sha256": "2590eac472461bc7ebd0579bdf196ec2416751abd1c15743298ebfd41e62f8dd"
       },
       "before_stage": "03",
       "after_stage": "04",
@@ -150,9 +158,11 @@
         "sha256": "058e1482c3cd92b37fbf02114eba8ce33950f1b0392325d5f35e98ef5a503018"
       },
       "comparison": {
-        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage04_to_stage05.mp4",
+        "url": "videos/comparisons/stage04_to_stage05.mp4",
         "bytes": 6182809,
-        "sha256": "648cbb96e516e508afec90633b120c76214b1f15d8a85ec4b680c44c34726ea7"
+        "sha256": "68df8a5c7ffd567dfecad313c2e44af97d7d55df3949c50986af571f992f83e8",
+        "operation": "Fast-start stream-copy remux; no decoded frame change",
+        "original_sha256": "648cbb96e516e508afec90633b120c76214b1f15d8a85ec4b680c44c34726ea7"
       },
       "before_stage": "04",
       "after_stage": "05",
@@ -194,9 +204,11 @@
         "sha256": "2b8c727c6ae572b9ce4a76d68b3aa25735a05b2bee31133c46e73b509886bb82"
       },
       "comparison": {
-        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage05_to_stage06.mp4",
+        "url": "videos/comparisons/stage05_to_stage06.mp4",
         "bytes": 6184680,
-        "sha256": "6f6a64eda32293cfc63233d099ad36428d63417256f9bbfbcaee3a9229df690c"
+        "sha256": "c6a3887172f3c9f690e114ed792aa0d7253299cf0ad2a7db502df30d8e034f8f",
+        "operation": "Fast-start stream-copy remux; no decoded frame change",
+        "original_sha256": "6f6a64eda32293cfc63233d099ad36428d63417256f9bbfbcaee3a9229df690c"
       },
       "before_stage": "05",
       "after_stage": "06",
@@ -238,9 +250,11 @@
         "sha256": "80921cd02debb2b68ab2f9ad3437aaef73341ec7d556f0b428dbabc84abf4ebd"
       },
       "comparison": {
-        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage06_to_stage07.mp4",
+        "url": "videos/comparisons/stage06_to_stage07.mp4",
         "bytes": 6182086,
-        "sha256": "1cf6ef7aced19ecca6a01e9e496b6bebf03578382865f174d80776bad237dde2"
+        "sha256": "48539afedeb9cb6e169521d2d162e513d74283f8d4ce3140406da59097bd2a27",
+        "operation": "Fast-start stream-copy remux; no decoded frame change",
+        "original_sha256": "1cf6ef7aced19ecca6a01e9e496b6bebf03578382865f174d80776bad237dde2"
       },
       "before_stage": "06",
       "after_stage": "07",
@@ -282,9 +296,11 @@
         "sha256": "cce1f39cfce3974b122c63e529b14de7ee0296b8df00c449ee12cd7ae3415332"
       },
       "comparison": {
-        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage07_to_stage08.mp4",
+        "url": "videos/comparisons/stage07_to_stage08.mp4",
         "bytes": 6194496,
-        "sha256": "ad0c21b809945b3b7a05127cfc1c8ebbc8d58cf6bacebac39c49d6b110cc1b52"
+        "sha256": "2abf3a46aada2375bd3af6ff12855b1182920d7df794be96bed3106956272a9a",
+        "operation": "Fast-start stream-copy remux; no decoded frame change",
+        "original_sha256": "ad0c21b809945b3b7a05127cfc1c8ebbc8d58cf6bacebac39c49d6b110cc1b52"
       },
       "before_stage": "07",
       "after_stage": "08",
@@ -326,9 +342,11 @@
         "sha256": "d86becfb48f8a801ff0ee8d176d02d7ab9bd60387ff793c10ec9511fe2b551a8"
       },
       "comparison": {
-        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage08_to_stage09.mp4",
+        "url": "videos/comparisons/stage08_to_stage09.mp4",
         "bytes": 6156088,
-        "sha256": "cde0a5c29a9a07f4f96356bf003fec387cf249429bf08ea19bc8a25a0854a0d2"
+        "sha256": "a91f547d97b89eb3ae857cec56ad4aee62a463c7cd5aa78eebe4acc88795661b",
+        "operation": "Fast-start stream-copy remux; no decoded frame change",
+        "original_sha256": "cde0a5c29a9a07f4f96356bf003fec387cf249429bf08ea19bc8a25a0854a0d2"
       },
       "before_stage": "08",
       "after_stage": "09",
@@ -370,9 +388,11 @@
         "sha256": "c5dedcefa6ca86501a3fba07b77e6f80b245e0925a2caeb9b68f6ae9cfecfdb5"
       },
       "comparison": {
-        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage09_to_stage10.mp4",
+        "url": "videos/comparisons/stage09_to_stage10.mp4",
         "bytes": 6159355,
-        "sha256": "ac8b516639af8807f3b2161ed20fdda97a2b83a79ea7ce2806210644d0c1bc26"
+        "sha256": "de9dc50889e8730a2aa9a7af717d0290425471136ff5914f18c67877437d4024",
+        "operation": "Fast-start stream-copy remux; no decoded frame change",
+        "original_sha256": "ac8b516639af8807f3b2161ed20fdda97a2b83a79ea7ce2806210644d0c1bc26"
       },
       "before_stage": "09",
       "after_stage": "10",
@@ -414,9 +434,11 @@
         "sha256": "4fcb4e88712e1fbd49dfe13f4b34b81ab6e9e4b2a0aa17512f54d708291e0574"
       },
       "comparison": {
-        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage10_to_stage11.mp4",
+        "url": "videos/comparisons/stage10_to_stage11.mp4",
         "bytes": 8119898,
-        "sha256": "9dfc48d4de243b1f5ef5094063c056e421863d30f03e9f8269662dd087eaca06"
+        "sha256": "f0692bd1184d546663f8417e91f64c0830bd75ab91520eca1c37097ace820461",
+        "operation": "Fast-start stream-copy remux; no decoded frame change",
+        "original_sha256": "9dfc48d4de243b1f5ef5094063c056e421863d30f03e9f8269662dd087eaca06"
       },
       "before_stage": "10",
       "after_stage": "11",
@@ -458,9 +480,11 @@
         "sha256": "c0d33fb953c0c6a9f7f736bb1d8166315abbcac6228e0299d127310c4411f8d1"
       },
       "comparison": {
-        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage11_to_stage12.mp4",
+        "url": "videos/comparisons/stage11_to_stage12.mp4",
         "bytes": 9979160,
-        "sha256": "0243f6c9c0e225abff863bd9afe571433768d6eeeb9c209549306d98a4cc2903"
+        "sha256": "6674745ffb3e60b78f74d46be11b9f29cc9f4e6d62f8f1cdd670d6d1bcc9b7b4",
+        "operation": "Fast-start stream-copy remux; no decoded frame change",
+        "original_sha256": "0243f6c9c0e225abff863bd9afe571433768d6eeeb9c209549306d98a4cc2903"
       },
       "before_stage": "11",
       "after_stage": "12",
@@ -502,9 +526,11 @@
         "sha256": "446a0b927359dc2c1a57e7bef80b5ec26a09c6064daee36a66ef33cbe9870d08"
       },
       "comparison": {
-        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage12_to_stage13.mp4",
+        "url": "videos/comparisons/stage12_to_stage13.mp4",
         "bytes": 10014456,
-        "sha256": "a94919cf1d2bf1ed132b88730853d83ea45616aa2b2fd0dde497e75258147258"
+        "sha256": "4a4b4be39bed347a1c11a8ecc27fc9f29b0f5ffbc0b5358359d763e689e8a577",
+        "operation": "Fast-start stream-copy remux; no decoded frame change",
+        "original_sha256": "a94919cf1d2bf1ed132b88730853d83ea45616aa2b2fd0dde497e75258147258"
       },
       "before_stage": "12",
       "after_stage": "13",
@@ -546,9 +572,11 @@
         "sha256": "1495eb70681e9e41e41c88768437eed61d1b57d77819208c1b35b51de0278538"
       },
       "comparison": {
-        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage13_to_stage14.mp4",
+        "url": "videos/comparisons/stage13_to_stage14.mp4",
         "bytes": 10032855,
-        "sha256": "e2c89aaa12881a2d3ca1d2b9b6ce42314bd3ef1cb3fb7e675a92f67134e717aa"
+        "sha256": "99bd069adbe0fc896be27ba03275806dbf7e886056e3ab3fe2a6a8f3306be2ea",
+        "operation": "Fast-start stream-copy remux; no decoded frame change",
+        "original_sha256": "e2c89aaa12881a2d3ca1d2b9b6ce42314bd3ef1cb3fb7e675a92f67134e717aa"
       },
       "before_stage": "13",
       "after_stage": "14",
@@ -590,9 +618,11 @@
         "sha256": "0ec00bbaa2046a08e178f0b28eb4544a0518de819969cde1e41705a7228516bc"
       },
       "comparison": {
-        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage14_to_stage15.mp4",
+        "url": "videos/comparisons/stage14_to_stage15.mp4",
         "bytes": 9553139,
-        "sha256": "e0b7cadd2580e64321601cf39e0d3a262b51bca3360d16116196e10ba0f38b3e"
+        "sha256": "1720c8e5c7b228c42919943347748ebbeee45539c7ed1fe0c04ea2001a2aca4c",
+        "operation": "Fast-start stream-copy remux; no decoded frame change",
+        "original_sha256": "e0b7cadd2580e64321601cf39e0d3a262b51bca3360d16116196e10ba0f38b3e"
       },
       "before_stage": "14",
       "after_stage": "15",
@@ -634,9 +664,11 @@
         "sha256": "5d5f5398020a520bb7202ab36d1e782f31386fde1af5bced210bca59dded8c60"
       },
       "comparison": {
-        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage15_to_final360_highcount.mp4",
+        "url": "videos/comparisons/stage15_to_final360_highcount.mp4",
         "bytes": 22733176,
-        "sha256": "330b44729cbd09c31f3950eda6a82ac0422b35efe7d637bbce806e7d65069609"
+        "sha256": "5d38e458013a93d46233d6af4e6a6508e5cf954c321badf2d099193cee7b747a",
+        "operation": "Fast-start stream-copy remux; no decoded frame change",
+        "original_sha256": "330b44729cbd09c31f3950eda6a82ac0422b35efe7d637bbce806e7d65069609"
       },
       "before_stage": "15",
       "after_stage": "High count",
