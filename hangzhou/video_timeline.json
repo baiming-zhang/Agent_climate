@@ -1,0 +1,713 @@
+{
+  "schema": "hangzhou-video-timeline-v1",
+  "original_prompt_corrections": 15,
+  "later_entries": 4,
+  "entries": [
+    {
+      "id": "stage00",
+      "label": "00 \u00b7 Initial prompt",
+      "kind": "Initial request",
+      "prompt": "Simulate SO2 emissions and their spatial distribution in Hangzhou over the next 15 days.",
+      "change": "A 2D relative-index prototype with hypothetical sector sources; no physical 3D concentration.",
+      "before": "No previous result",
+      "after": "2-D relative scenario",
+      "limitation": "Relative index; hypothetical sector sources; repeated-weather spinup; not a concentration forecast.",
+      "movie": {
+        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/movies/stage00.mp4",
+        "bytes": 4306440,
+        "sha256": "ed2f0ce88a3e1b7f1ff200c255c150ffa9a59caecfb55f5d44ed9fd1ad8356c2"
+      },
+      "comparison": null,
+      "before_stage": null,
+      "after_stage": "00",
+      "parameters": []
+    },
+    {
+      "id": "stage01",
+      "label": "01 \u00b7 Forecast provenance",
+      "kind": "Prompt correction",
+      "prompt": "Use the latest complete weather forecast; record initialization time, source and resolution.",
+      "change": "Frozen GFS provenance replaced the undocumented weather basis. The early model still uses a single surface column.",
+      "before": "2-D relative scenario",
+      "after": "2-D relative scenario",
+      "limitation": "Frozen complete GFS run; single surface column; hypothetical sources retained.",
+      "movie": {
+        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/movies/stage01.mp4",
+        "bytes": 4296596,
+        "sha256": "90b1503128d0dfe89d542dde2f66e5667e2a70286f3b61b107cb238fe8d7c0b8"
+      },
+      "comparison": {
+        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage00_to_stage01.mp4",
+        "bytes": 8127300,
+        "sha256": "32a7aea8c10d2de88bafcf3b112c2d2db4914ce3d0917607c02ed92b5d63837c"
+      },
+      "before_stage": "00",
+      "after_stage": "01",
+      "parameters": []
+    },
+    {
+      "id": "stage02",
+      "label": "02 \u00b7 Continuous 360-hour integration",
+      "kind": "Prompt correction",
+      "prompt": "Simulate 360 continuous hours; carry pollutant mass forward without daily resets or repeated short runs.",
+      "change": "Continuous state propagation and day-boundary hashes replaced repeated-weather spinup. Early 2D transport remains nonconservative.",
+      "before": "2-D relative scenario",
+      "after": "2-D relative scenario",
+      "limitation": "Continuous state and day-boundary hashes; zero initial load; transport is not strictly conservative.",
+      "movie": {
+        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/movies/stage02.mp4",
+        "bytes": 4228969,
+        "sha256": "931ea70356535881c877ce77e324c695cab8a31385b1e90d567d089eed355866"
+      },
+      "comparison": {
+        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage01_to_stage02.mp4",
+        "bytes": 7970905,
+        "sha256": "e7bec5f80e8ecf24308b23571e73976c554767d29ceaaed465488a9bc8ee839c"
+      },
+      "before_stage": "01",
+      "after_stage": "02",
+      "parameters": []
+    },
+    {
+      "id": "stage03",
+      "label": "03 \u00b7 Documented outlet scenario",
+      "kind": "Prompt correction",
+      "prompt": "Use documented source locations, emission rates and stack parameters; state operating assumptions.",
+      "change": "Four conditional EIA design outlets replaced hypothetical sectors. Future operation and exhaust-flow basis remain unverified.",
+      "before": "2-D relative scenario",
+      "after": "2-D conditional column burden",
+      "limitation": "Four EIA design outlets; commissioning and operating schedules unverified. Legacy citywide maps are not these outlet results.",
+      "movie": {
+        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/movies/stage03.mp4",
+        "bytes": 4090332,
+        "sha256": "d47240739eea3505877267f67cbeec71378d938ff2f740ca9329ddeebacd2a90"
+      },
+      "comparison": {
+        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage02_to_stage03.mp4",
+        "bytes": 7826962,
+        "sha256": "d39c51622d9a0de94e59fb3778bca4ab5102908cbfe59a99a692aa0ea9402a11"
+      },
+      "before_stage": "02",
+      "after_stage": "03",
+      "parameters": []
+    },
+    {
+      "id": "stage04",
+      "label": "04 \u00b7 3-D transport and plume rise",
+      "kind": "Prompt correction",
+      "prompt": "Model 3D transport, turbulence, atmospheric stability and buoyant plume rise; state parameterization limits.",
+      "change": "The model changed from a 2D burden to 3D stochastic particles, height-dependent forecast wind, parameterized mixing and plume rise.",
+      "before": "2-D conditional column burden",
+      "after": "3-D conditional particle scenario",
+      "limitation": "Horizontally uniform forecast profiles, parameterized turbulent diffusion and buoyant rise; flow basis unresolved; no observed-concentration or convergence validation.",
+      "movie": {
+        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/movies/stage04.mp4",
+        "bytes": 3335353,
+        "sha256": "b906d95f4154544b2f7da7493801bf55e0f9857298e0b3197a62c364fe14097c"
+      },
+      "comparison": {
+        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage03_to_stage04.mp4",
+        "bytes": 6956296,
+        "sha256": "2590eac472461bc7ebd0579bdf196ec2416751abd1c15743298ebfd41e62f8dd"
+      },
+      "before_stage": "03",
+      "after_stage": "04",
+      "parameters": [
+        {
+          "name": "Concentration bin",
+          "before": "Not defined",
+          "after": "2000 m"
+        },
+        {
+          "name": "Layers",
+          "before": "Not defined",
+          "after": "13"
+        },
+        {
+          "name": "Timestep",
+          "before": "Not defined",
+          "after": "120 s"
+        },
+        {
+          "name": "Primary particles",
+          "before": "Not defined",
+          "after": "86400"
+        }
+      ]
+    },
+    {
+      "id": "stage05",
+      "label": "05 \u00b7 Deposition and mass tracking",
+      "kind": "Prompt correction",
+      "prompt": "Include dry and wet deposition; track airborne, deposited and exported pollutant mass.",
+      "change": "Added separate dry, wet, chemical and export terms to the mass ledger. This can change concentrations through removal.",
+      "before": "3-D conditional particle scenario",
+      "after": "Inspect actual stage outputs",
+      "limitation": "Separate dry, wet, chemical, atmospheric and outflow quantities only where the completed stage actually provides them.",
+      "movie": {
+        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/movies/stage05.mp4",
+        "bytes": 3338412,
+        "sha256": "058e1482c3cd92b37fbf02114eba8ce33950f1b0392325d5f35e98ef5a503018"
+      },
+      "comparison": {
+        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage04_to_stage05.mp4",
+        "bytes": 6182809,
+        "sha256": "648cbb96e516e508afec90633b120c76214b1f15d8a85ec4b680c44c34726ea7"
+      },
+      "before_stage": "04",
+      "after_stage": "05",
+      "parameters": [
+        {
+          "name": "Concentration bin",
+          "before": "2000 m",
+          "after": "2000 m"
+        },
+        {
+          "name": "Layers",
+          "before": "13",
+          "after": "13"
+        },
+        {
+          "name": "Timestep",
+          "before": "120 s",
+          "after": "120 s"
+        },
+        {
+          "name": "Primary particles",
+          "before": "86400",
+          "after": "86400"
+        }
+      ]
+    },
+    {
+      "id": "stage06",
+      "label": "06 \u00b7 Background assessment",
+      "kind": "Prompt correction",
+      "prompt": "Use traceable initial background; exclude it if unreliable and report source contributions separately.",
+      "change": "The unreliable surface-only background candidate was excluded. Results are source increments; this need not create a visible plume change.",
+      "before": "Inspect actual stage outputs",
+      "after": "Source-only3-D scenario",
+      "limitation": "Unvalidated surface-only CAMS background excluded; zero initial and external background is an attribution assumption.",
+      "movie": {
+        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/movies/stage06.mp4",
+        "bytes": 3338939,
+        "sha256": "2b8c727c6ae572b9ce4a76d68b3aa25735a05b2bee31133c46e73b509886bb82"
+      },
+      "comparison": {
+        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage05_to_stage06.mp4",
+        "bytes": 6184680,
+        "sha256": "6f6a64eda32293cfc63233d099ad36428d63417256f9bbfbcaee3a9229df690c"
+      },
+      "before_stage": "05",
+      "after_stage": "06",
+      "parameters": [
+        {
+          "name": "Concentration bin",
+          "before": "2000 m",
+          "after": "2000 m"
+        },
+        {
+          "name": "Layers",
+          "before": "13",
+          "after": "13"
+        },
+        {
+          "name": "Timestep",
+          "before": "120 s",
+          "after": "120 s"
+        },
+        {
+          "name": "Primary particles",
+          "before": "86400",
+          "after": "86400"
+        }
+      ]
+    },
+    {
+      "id": "stage07",
+      "label": "07 \u00b7 Near-surface sampling",
+      "kind": "Prompt correction",
+      "prompt": "Define near-ground sampling height; check coordinates, units and particle sampling.",
+      "change": "Defined a 0\u201325 m AGL volume mean and exposed severe local sampling noise. A failed sampling test is not a new physical effect.",
+      "before": "Source-only3-D scenario",
+      "after": "Sampling qualification failed",
+      "limitation": "0-25m AGL volume means. Four outlets share a2km cell; seed and doubled-count tests expose severe local sampling noise.",
+      "movie": {
+        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/movies/stage07.mp4",
+        "bytes": 3336198,
+        "sha256": "80921cd02debb2b68ab2f9ad3437aaef73341ec7d556f0b428dbabc84abf4ebd"
+      },
+      "comparison": {
+        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage06_to_stage07.mp4",
+        "bytes": 6182086,
+        "sha256": "1cf6ef7aced19ecca6a01e9e496b6bebf03578382865f174d80776bad237dde2"
+      },
+      "before_stage": "06",
+      "after_stage": "07",
+      "parameters": [
+        {
+          "name": "Concentration bin",
+          "before": "2000 m",
+          "after": "2000 m"
+        },
+        {
+          "name": "Layers",
+          "before": "13",
+          "after": "13"
+        },
+        {
+          "name": "Timestep",
+          "before": "120 s",
+          "after": "120 s"
+        },
+        {
+          "name": "Primary particles",
+          "before": "86400",
+          "after": "86400"
+        }
+      ]
+    },
+    {
+      "id": "stage08",
+      "label": "08 \u00b7 GPU implementation",
+      "kind": "Prompt correction",
+      "prompt": "Prefer validated GPU acceleration; compare against a same-physics CPU baseline.",
+      "change": "Added a CPU/GPU implementation comparison and shared indexed random numbers. Same physics is intended; visually identical panels are expected.",
+      "before": "Sampling qualification failed",
+      "after": "Same-physics backend agreement",
+      "limitation": "Shared indexed RNG is new on both CPU/GPU. Compute speed excludes forcing, compilation and disk output; no concentration-skill claim.",
+      "movie": {
+        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/movies/stage08.mp4",
+        "bytes": 3331605,
+        "sha256": "cce1f39cfce3974b122c63e529b14de7ee0296b8df00c449ee12cd7ae3415332"
+      },
+      "comparison": {
+        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage07_to_stage08.mp4",
+        "bytes": 6194496,
+        "sha256": "ad0c21b809945b3b7a05127cfc1c8ebbc8d58cf6bacebac39c49d6b110cc1b52"
+      },
+      "before_stage": "07",
+      "after_stage": "08",
+      "parameters": [
+        {
+          "name": "Concentration bin",
+          "before": "2000 m",
+          "after": "2000 m"
+        },
+        {
+          "name": "Layers",
+          "before": "13",
+          "after": "13"
+        },
+        {
+          "name": "Timestep",
+          "before": "120 s",
+          "after": "120 s"
+        },
+        {
+          "name": "Primary particles",
+          "before": "86400",
+          "after": "86400"
+        }
+      ]
+    },
+    {
+      "id": "stage09",
+      "label": "09 \u00b7 Release implementation gates",
+      "kind": "Prompt correction",
+      "prompt": "Allow rainfall-grid RMSE up to 2 mm against the fixed CPU baseline; require completeness, nonnegativity, zero-source and mass checks.",
+      "change": "Added implementation controls. The zero rain difference uses identical forecast input, not an independent weather validation.",
+      "before": "Same-physics backend agreement",
+      "after": "Implementation agreement only",
+      "limitation": "Exact-zero controls, nonnegativity and budget checks pass. Zero precipitation RMSE compares the same broadcast input; it is not an independent weather-solver validation.",
+      "movie": {
+        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/movies/stage09.mp4",
+        "bytes": 3333446,
+        "sha256": "d86becfb48f8a801ff0ee8d176d02d7ab9bd60387ff793c10ec9511fe2b551a8"
+      },
+      "comparison": {
+        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage08_to_stage09.mp4",
+        "bytes": 6156088,
+        "sha256": "cde0a5c29a9a07f4f96356bf003fec387cf249429bf08ea19bc8a25a0854a0d2"
+      },
+      "before_stage": "08",
+      "after_stage": "09",
+      "parameters": [
+        {
+          "name": "Concentration bin",
+          "before": "2000 m",
+          "after": "2000 m"
+        },
+        {
+          "name": "Layers",
+          "before": "13",
+          "after": "13"
+        },
+        {
+          "name": "Timestep",
+          "before": "120 s",
+          "after": "120 s"
+        },
+        {
+          "name": "Primary particles",
+          "before": "86400",
+          "after": "86400"
+        }
+      ]
+    },
+    {
+      "id": "stage10",
+      "label": "10 \u00b7 Physical outlet release height",
+      "kind": "Prompt correction",
+      "prompt": "Release numerical particles at the physical stack outlet height, not just a display marker.",
+      "change": "Verified actual birth heights of 20/50/80/65 m AGL. This check does not necessarily change already-correct output.",
+      "before": "Implementation agreement only",
+      "after": "Runtime birth-position verification",
+      "limitation": "Both solvers release at20/50/80/65m AGL before transport/rise. EIA-documented heights are not independently surveyed as-built heights.",
+      "movie": {
+        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/movies/stage10.mp4",
+        "bytes": 3335125,
+        "sha256": "c5dedcefa6ca86501a3fba07b77e6f80b245e0925a2caeb9b68f6ae9cfecfdb5"
+      },
+      "comparison": {
+        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage09_to_stage10.mp4",
+        "bytes": 6159355,
+        "sha256": "ac8b516639af8807f3b2161ed20fdda97a2b83a79ea7ce2806210644d0c1bc26"
+      },
+      "before_stage": "09",
+      "after_stage": "10",
+      "parameters": [
+        {
+          "name": "Concentration bin",
+          "before": "2000 m",
+          "after": "2000 m"
+        },
+        {
+          "name": "Layers",
+          "before": "13",
+          "after": "13"
+        },
+        {
+          "name": "Timestep",
+          "before": "120 s",
+          "after": "120 s"
+        },
+        {
+          "name": "Primary particles",
+          "before": "86400",
+          "after": "86400"
+        }
+      ]
+    },
+    {
+      "id": "stage11",
+      "label": "11 \u00b7 Horizontal estimator refinement",
+      "kind": "Prompt correction",
+      "prompt": "Refine the horizontal grid and test convergence.",
+      "change": "Compared 2 km, 1 km and 500 m concentration bins using shared paths; this does not refine the weather grid. Local convergence remained unmet.",
+      "before": "Runtime birth-position verification",
+      "after": "Local grid convergence not demonstrated",
+      "limitation": "2 km, 1 km and 500 m density bins use shared particle paths; the meteorological input resolution is unchanged. Fine-bin receptor differences remain above the declared criterion.",
+      "movie": {
+        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/movies/stage11.mp4",
+        "bytes": 5311166,
+        "sha256": "4fcb4e88712e1fbd49dfe13f4b34b81ab6e9e4b2a0aa17512f54d708291e0574"
+      },
+      "comparison": {
+        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage10_to_stage11.mp4",
+        "bytes": 8119898,
+        "sha256": "9dfc48d4de243b1f5ef5094063c056e421863d30f03e9f8269662dd087eaca06"
+      },
+      "before_stage": "10",
+      "after_stage": "11",
+      "parameters": [
+        {
+          "name": "Concentration bin",
+          "before": "2000 m",
+          "after": "500 m"
+        },
+        {
+          "name": "Layers",
+          "before": "13",
+          "after": "13"
+        },
+        {
+          "name": "Timestep",
+          "before": "120 s",
+          "after": "120 s"
+        },
+        {
+          "name": "Primary particles",
+          "before": "86400",
+          "after": "5529600"
+        }
+      ]
+    },
+    {
+      "id": "stage12",
+      "label": "12 \u00b7 Particle-count refinement",
+      "kind": "Prompt correction",
+      "prompt": "Increase particle count and test sampling convergence.",
+      "change": "Increased statistical sampling at fixed emitted mass. Two-seed daily-field differences fell to 8.42%; not all convergence criteria passed.",
+      "before": "Local grid convergence not demonstrated",
+      "after": "Sampling noise reduced; criteria not all met",
+      "limitation": "5.53 to 353.89 million particles per realization at fixed physical emission mass. Two-seed daily-field differences fall to 8.42%, but successive-count field and receptor criteria still fail.",
+      "movie": {
+        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/movies/stage12.mp4",
+        "bytes": 5315312,
+        "sha256": "c0d33fb953c0c6a9f7f736bb1d8166315abbcac6228e0299d127310c4411f8d1"
+      },
+      "comparison": {
+        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage11_to_stage12.mp4",
+        "bytes": 9979160,
+        "sha256": "0243f6c9c0e225abff863bd9afe571433768d6eeeb9c209549306d98a4cc2903"
+      },
+      "before_stage": "11",
+      "after_stage": "12",
+      "parameters": [
+        {
+          "name": "Concentration bin",
+          "before": "500 m",
+          "after": "500 m"
+        },
+        {
+          "name": "Layers",
+          "before": "13",
+          "after": "13"
+        },
+        {
+          "name": "Timestep",
+          "before": "120 s",
+          "after": "120 s"
+        },
+        {
+          "name": "Primary particles",
+          "before": "5529600",
+          "after": "353894400"
+        }
+      ]
+    },
+    {
+      "id": "stage13",
+      "label": "13 \u00b7 Vertical estimator refinement",
+      "kind": "Prompt correction",
+      "prompt": "Increase vertical layers and test vertical convergence.",
+      "change": "Compared 13/26/52 vertical bins on shared paths. Finer vertical concentration profiles remained unconverged.",
+      "before": "Sampling noise reduced; criteria not all met",
+      "after": "Native profiles not converged",
+      "limitation": "13, 26 and 52 layers with shared trajectories. The lowest layer is 6.25 m; 26-to-52-layer global and outlet profile changes exceed the declared limits. Fixed 0\u201325 m agreement is a common-volume consistency check.",
+      "movie": {
+        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/movies/stage13.mp4",
+        "bytes": 5344398,
+        "sha256": "446a0b927359dc2c1a57e7bef80b5ec26a09c6064daee36a66ef33cbe9870d08"
+      },
+      "comparison": {
+        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage12_to_stage13.mp4",
+        "bytes": 10014456,
+        "sha256": "a94919cf1d2bf1ed132b88730853d83ea45616aa2b2fd0dde497e75258147258"
+      },
+      "before_stage": "12",
+      "after_stage": "13",
+      "parameters": [
+        {
+          "name": "Concentration bin",
+          "before": "500 m",
+          "after": "500 m"
+        },
+        {
+          "name": "Layers",
+          "before": "13",
+          "after": "52"
+        },
+        {
+          "name": "Timestep",
+          "before": "120 s",
+          "after": "120 s"
+        },
+        {
+          "name": "Primary particles",
+          "before": "353894400",
+          "after": "353894400"
+        }
+      ]
+    },
+    {
+      "id": "stage14",
+      "label": "14 \u00b7 Transport timestep refinement",
+      "kind": "Prompt correction",
+      "prompt": "Reduce timestep, test time convergence and preserve mass.",
+      "change": "Compared 120/60/30 s steps with paired increments. Process totals and receptors passed subcriteria; near-surface field differences remained 13.6%.",
+      "before": "Native profiles not converged",
+      "after": "Partial criteria pass; full-field criterion fails",
+      "limitation": "120, 60 and 30 s with paired stochastic increments and fixed 120 s release events. Process totals and receptors meet their finest-step subcriteria; near-surface fields still differ by 13.6%.",
+      "movie": {
+        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/movies/stage14.mp4",
+        "bytes": 5320726,
+        "sha256": "1495eb70681e9e41e41c88768437eed61d1b57d77819208c1b35b51de0278538"
+      },
+      "comparison": {
+        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage13_to_stage14.mp4",
+        "bytes": 10032855,
+        "sha256": "e2c89aaa12881a2d3ca1d2b9b6ce42314bd3ef1cb3fb7e675a92f67134e717aa"
+      },
+      "before_stage": "13",
+      "after_stage": "14",
+      "parameters": [
+        {
+          "name": "Concentration bin",
+          "before": "500 m",
+          "after": "500 m"
+        },
+        {
+          "name": "Layers",
+          "before": "52",
+          "after": "52"
+        },
+        {
+          "name": "Timestep",
+          "before": "120 s",
+          "after": "30 s"
+        },
+        {
+          "name": "Primary particles",
+          "before": "353894400",
+          "after": "88473600"
+        }
+      ]
+    },
+    {
+      "id": "stage15",
+      "label": "15 \u00b7 Terrain and surface exchange",
+      "kind": "Prompt correction",
+      "prompt": "Include terrain interaction, prevent ground penetration, and model surface uptake and conditional re-release.",
+      "change": "Added actual DSM collision geometry, terrain-normal reflection and surface stores. Forecast re-release stayed zero; terrain GPU agreement failed.",
+      "before": "Partial criteria pass; full-field criterion fails",
+      "after": "CPU terrain scenario; new GPU agreement failed",
+      "limitation": "Actual bilinear DSM boundary, contact uptake and reversible/retained stores. Forecast re-release is zero under the assumed wetness gate. The CPU case has only 345,600 primary particles; previous higher-count convergence does not qualify it. Surface chemistry is uncalibrated; wind is not terrain-resolved.",
+      "movie": {
+        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/movies/stage15.mp4",
+        "bytes": 4796171,
+        "sha256": "0ec00bbaa2046a08e178f0b28eb4544a0518de819969cde1e41705a7228516bc"
+      },
+      "comparison": {
+        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage14_to_stage15.mp4",
+        "bytes": 9553139,
+        "sha256": "e0b7cadd2580e64321601cf39e0d3a262b51bca3360d16116196e10ba0f38b3e"
+      },
+      "before_stage": "14",
+      "after_stage": "15",
+      "parameters": [
+        {
+          "name": "Concentration bin",
+          "before": "500 m",
+          "after": "500 m"
+        },
+        {
+          "name": "Layers",
+          "before": "52",
+          "after": "52"
+        },
+        {
+          "name": "Timestep",
+          "before": "30 s",
+          "after": "30 s"
+        },
+        {
+          "name": "Primary particles",
+          "before": "88473600",
+          "after": "345600"
+        }
+      ]
+    },
+    {
+      "id": "highcount",
+      "label": "16 \u00b7 High-count CPU delivery",
+      "kind": "Later numerical delivery",
+      "prompt": "Increase sampling for the terrain case and preserve every hourly native field.",
+      "change": "A separate same-physics CPU realization increased the terrain case from 345,600 to 353,894,400 primary particles. All 360 hourly fields were saved. This does not establish local convergence.",
+      "before": "Original low-count terrain case",
+      "after": "High-count terrain CPU case",
+      "limitation": "Separate realization; 7,249 collision-limit truncations disclosed. This is not another item in the original 15-prompt experiment.",
+      "movie": {
+        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/movies/final360_highcount.mp4",
+        "bytes": 18313537,
+        "sha256": "5d5f5398020a520bb7202ab36d1e782f31386fde1af5bced210bca59dded8c60"
+      },
+      "comparison": {
+        "url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/fdfe0bb808b4fb39b62ed4b6b6fc1ddd19b5cac0/comparisons/stage15_to_final360_highcount.mp4",
+        "bytes": 22733176,
+        "sha256": "330b44729cbd09c31f3950eda6a82ac0422b35efe7d637bbce806e7d65069609"
+      },
+      "before_stage": "15",
+      "after_stage": "High count",
+      "parameters": [
+        {
+          "name": "Primary particles",
+          "before": "345600",
+          "after": "353894400"
+        }
+      ]
+    },
+    {
+      "id": "native360",
+      "label": "17 \u00b7 Vancouver-model revision",
+      "kind": "Later independent model revision",
+      "prompt": "Use the Vancouver transport and thermal-plume workflow for Hangzhou; allow the original CPU weather route after validating continuation.",
+      "change": "Replaced the custom horizontally repeated forecast-column model with original-native 3D weather and continuous native transport plus GPU source-hour plume tables. The complete 360-hour result uses four conditional outlets.",
+      "before": "Custom terrain particle model; horizontally uniform forecast profiles",
+      "after": "Native 3D weather + native transport + parameterized plume rise",
+      "limitation": "Different physical workflow: a visual comparison is not a controlled solver-error or convergence test. The failed GPU 2 mm rain comparisons remain preserved; the authorized CPU route was used.",
+      "movie": {
+        "url": "native360/video/simulation.mp4",
+        "bytes": 10408763,
+        "sha256": "1dfc810afb3bbffacf8c40ccb51a24aaead5e3da81c7c81b204c2c017cd6acbe"
+      },
+      "comparison": {
+        "url": "videos/highcount_to_native360.mp4"
+      },
+      "before_stage": "High count",
+      "after_stage": "Native 360 h",
+      "parameters": []
+    },
+    {
+      "id": "coverage",
+      "label": "18 \u00b7 Citywide source coverage",
+      "kind": "Research update \u00b7 no new simulation",
+      "prompt": "Find all Hangzhou pollution sources, not only one source or the existing outlet subset.",
+      "change": "Collected 369 official air-emission priority candidates and permit leads. They are not 369 verified SO2 sources. Source coordinates, active operation and emission rates remain incomplete; these candidates were not added to the saved simulation.",
+      "before": "Four conditional EIA outlets in Linjiang",
+      "after": "Same four-outlet fields + a wider research inventory",
+      "limitation": "No new citywide concentration result or before/after movie exists. The playable film remains the explicitly labeled native four-outlet result.",
+      "movie": {
+        "url": "native360/video/simulation.mp4",
+        "bytes": 10408763,
+        "sha256": "1dfc810afb3bbffacf8c40ccb51a24aaead5e3da81c7c81b204c2c017cd6acbe"
+      },
+      "comparison": null,
+      "before_stage": null,
+      "after_stage": "Recorded native result",
+      "parameters": []
+    },
+    {
+      "id": "queries",
+      "label": "19 \u00b7 Ground queries and display repair",
+      "kind": "Postprocessing \u00b7 no new physical run",
+      "prompt": "Check near-ground values, retain native queries and repair the near-source display.",
+      "change": "Added native 0\u201320 m ground statistics and reviewed plume extent/source binding. These are query and presentation changes; the native physical fields and recorded film were not recomputed.",
+      "before": "Native 360-hour physical result",
+      "after": "Same result with additional statistics and display checks",
+      "limitation": "The existing film documents the recorded result, not a newly rendered before/after of every interface repair. See the current Scientific page for the actual ground query.",
+      "movie": {
+        "url": "native360/video/simulation.mp4",
+        "bytes": 10408763,
+        "sha256": "1dfc810afb3bbffacf8c40ccb51a24aaead5e3da81c7c81b204c2c017cd6acbe"
+      },
+      "comparison": null,
+      "before_stage": null,
+      "after_stage": "Recorded native result",
+      "parameters": []
+    }
+  ],
+  "scientific_fields_changed": false,
+  "RGB_frame_blending": false
+}
