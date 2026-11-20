@@ -1,0 +1,206 @@
+{
+  "UTC": "2026-11-20T01:36:27.315138+00:00",
+  "comparison": "Each method versus its own-law analytical reference; not a common concentration target or ranking",
+  "models": {
+    "FLEXPART_source_extracted_homogeneous_operator": {
+      "primary": {
+        "RMSE_ug_m3": 0.008928224726669898,
+        "NRMSE_percent": 2.5540682808178117,
+        "MAE_ug_m3": 0.003898447516008386,
+        "bias_ug_m3": -0.00014641838322255064,
+        "max_abs_ug_m3": 0.11168724405512798,
+        "pairs": 3840
+      },
+      "scope": "New homogeneous source-extracted native operator component; not old full PBL/driver validation",
+      "controls": {
+        "N200k_dt10": {
+          "particle_output_vs_own_continuum": {
+            "RMSE_ug_m3": 0.008928224726669898,
+            "NRMSE_percent": 2.5540682808178117,
+            "MAE_ug_m3": 0.003898447516008386,
+            "bias_ug_m3": -0.00014641838322255064,
+            "max_abs_ug_m3": 0.11168724405512798,
+            "pairs": 3840
+          },
+          "particle_output_vs_discrete_expected_observer": {
+            "RMSE_ug_m3": 0.008866742888975272,
+            "NRMSE_percent": 2.540682348261546,
+            "MAE_ug_m3": 0.003876270713183097,
+            "bias_ug_m3": -0.00011474536600069038,
+            "max_abs_ug_m3": 0.10891893009029907,
+            "pairs": 3840
+          },
+          "deterministic_scheme_and_observer_vs_continuum": {
+            "RMSE_ug_m3": 0.0008513866198756188,
+            "NRMSE_percent": 0.24355340810827317,
+            "MAE_ug_m3": 0.0002449676692673782,
+            "bias_ug_m3": -3.167301722186027e-05,
+            "max_abs_ug_m3": 0.008908361446182234,
+            "pairs": 3840
+          },
+          "deterministic_scheme_matched_time_observer": {
+            "RMSE_ug_m3": 0.0008503954453990883,
+            "NRMSE_percent": 0.2432706740274589,
+            "MAE_ug_m3": 0.00024380024038093555,
+            "bias_ug_m3": -3.168943755967547e-05,
+            "max_abs_ug_m3": 0.008897795040408774,
+            "pairs": 3840
+          },
+          "time_observer_alone": {
+            "RMSE_ug_m3": 1.228505669388853e-05,
+            "NRMSE_percent": 0.003514346310771275,
+            "MAE_ug_m3": 2.22431356653445e-06,
+            "bias_ug_m3": 1.6420337815201074e-08,
+            "max_abs_ug_m3": 0.00032925819101904674,
+            "pairs": 3840
+          }
+        },
+        "N400k_dt10": {
+          "particle_output_vs_own_continuum": {
+            "RMSE_ug_m3": 0.006634620293235994,
+            "NRMSE_percent": 1.8979443019177415,
+            "MAE_ug_m3": 0.0027728244083229697,
+            "bias_ug_m3": 7.935661677811692e-05,
+            "max_abs_ug_m3": 0.0906203937751835,
+            "pairs": 3840
+          },
+          "particle_output_vs_discrete_expected_observer": {
+            "RMSE_ug_m3": 0.006673009986226886,
+            "NRMSE_percent": 1.9120886772142596,
+            "MAE_ug_m3": 0.002767700905518297,
+            "bias_ug_m3": 0.00011102963399997718,
+            "max_abs_ug_m3": 0.099507213329181,
+            "pairs": 3840
+          },
+          "deterministic_scheme_and_observer_vs_continuum": {
+            "RMSE_ug_m3": 0.0008513866198756188,
+            "NRMSE_percent": 0.24355340810827317,
+            "MAE_ug_m3": 0.0002449676692673782,
+            "bias_ug_m3": -3.167301722186027e-05,
+            "max_abs_ug_m3": 0.008908361446182234,
+            "pairs": 3840
+          },
+          "deterministic_scheme_matched_time_observer": {
+            "RMSE_ug_m3": 0.0008503954453990883,
+            "NRMSE_percent": 0.2432706740274589,
+            "MAE_ug_m3": 0.00024380024038093555,
+            "bias_ug_m3": -3.168943755967547e-05,
+            "max_abs_ug_m3": 0.008897795040408774,
+            "pairs": 3840
+          },
+          "time_observer_alone": {
+            "RMSE_ug_m3": 1.228505669388853e-05,
+            "NRMSE_percent": 0.003514346310771275,
+            "MAE_ug_m3": 2.22431356653445e-06,
+            "bias_ug_m3": 1.6420337815201074e-08,
+            "max_abs_ug_m3": 0.00032925819101904674,
+            "pairs": 3840
+          }
+        },
+        "N200k_dt5": {
+          "particle_output_vs_own_continuum": {
+            "RMSE_ug_m3": 0.008718939710018093,
+            "NRMSE_percent": 2.4941987951087334,
+            "MAE_ug_m3": 0.0037382728356081954,
+            "bias_ug_m3": -0.00015704338322255132,
+            "max_abs_ug_m3": 0.10726687545744973,
+            "pairs": 3840
+          },
+          "particle_output_vs_discrete_expected_observer": {
+            "RMSE_ug_m3": 0.00867688379325744,
+            "NRMSE_percent": 2.4836929099004488,
+            "MAE_ug_m3": 0.00372716656554773,
+            "bias_ug_m3": -0.00014831049089616442,
+            "max_abs_ug_m3": 0.10832679771444509,
+            "pairs": 3840
+          },
+          "deterministic_scheme_and_observer_vs_continuum": {
+            "RMSE_ug_m3": 0.000334348062876839,
+            "NRMSE_percent": 0.09564586558800971,
+            "MAE_ug_m3": 9.616039841717419e-05,
+            "bias_ug_m3": -8.732892326386955e-06,
+            "max_abs_ug_m3": 0.003361816946034324,
+            "pairs": 3840
+          },
+          "deterministic_scheme_matched_time_observer": {
+            "RMSE_ug_m3": 0.00033325652998146766,
+            "NRMSE_percent": 0.09533393095090842,
+            "MAE_ug_m3": 9.476536703356401e-05,
+            "bias_ug_m3": -8.749312664202157e-06,
+            "max_abs_ug_m3": 0.003351250540260864,
+            "pairs": 3840
+          },
+          "time_observer_alone": {
+            "RMSE_ug_m3": 1.228505669388853e-05,
+            "NRMSE_percent": 0.003514346310771275,
+            "MAE_ug_m3": 2.22431356653445e-06,
+            "bias_ug_m3": 1.6420337815201074e-08,
+            "max_abs_ug_m3": 0.00032925819101904674,
+            "pairs": 3840
+          }
+        }
+      }
+    },
+    "CALPUFF_native_driver": {
+      "primary": {
+        "RMSE_ug_m3": 0.016153949123287117,
+        "NRMSE_percent": 3.618125951106722,
+        "MAE_ug_m3": 0.002247532310804324,
+        "bias_ug_m3": 0.00027677008650095654,
+        "max_abs_ug_m3": 0.3225052507635593,
+        "pairs": 3840
+      },
+      "native_vs_same_spatial_receptor_observer": {
+        "RMSE_ug_m3": 0.005568547482887469,
+        "NRMSE_percent": 1.2250294470345378,
+        "MAE_ug_m3": 0.0014762556353564186,
+        "bias_ug_m3": -0.0006053397311473933,
+        "max_abs_ug_m3": 0.11669139744597956,
+        "pairs": 3840
+      },
+      "spatial_quadrature_effect": {
+        "RMSE_ug_m3": 0.018168956644819812,
+        "NRMSE_percent": 4.069442898417322,
+        "MAE_ug_m3": 0.001131070558782273,
+        "bias_ug_m3": 0.0008821098176483497,
+        "max_abs_ug_m3": 0.32959283769349135,
+        "pairs": 3840
+      },
+      "scope": "Reuse successful full native driver and its original source/receptors; own Draxler analytical law, continuous source"
+    },
+    "MPTRAC_native_modules": {
+      "primary": {
+        "RMSE_ug_m3": 0.008981577124999097,
+        "NRMSE_percent": 2.788590840820289,
+        "MAE_ug_m3": 0.003971027499473932,
+        "bias_ug_m3": 0.0004351286273376129,
+        "max_abs_ug_m3": 0.10870496667600049,
+        "pairs": 3840
+      },
+      "native_vs_same10s_expected_observer": {
+        "RMSE_ug_m3": 0.008981802449459314,
+        "NRMSE_percent": 2.7886709405222727,
+        "MAE_ug_m3": 0.003970938094279337,
+        "bias_ug_m3": 0.0004351120673678549,
+        "max_abs_ug_m3": 0.10870496667600404,
+        "pairs": 3840
+      },
+      "time_observer_effect": {
+        "RMSE_ug_m3": 1.1451798147484835e-05,
+        "NRMSE_percent": 0.0035555425267254693,
+        "MAE_ug_m3": 2.202536604108894e-06,
+        "bias_ug_m3": 1.6559969758003442e-08,
+        "max_abs_ug_m3": 0.0002892485966775188,
+        "pairs": 3840
+      },
+      "scope": "Reuse successful native advection/diffusion modules; correct physical-height generator; not full driver"
+    }
+  },
+  "pairs_per_primary": 3840,
+  "all_pairs_retained": true,
+  "NRMSE_denominator": "RMS of the corresponding own-law reference, not a shared denominator",
+  "not_pure_solver_error": "Particle rows include finite sampling and observer/source discretization; deterministic FLEX Gaussian recurrence separately quantifies scheme bias",
+  "old_MP_2_804342_companion_withdrawn": true,
+  "old_full_FLEX_PBL_ownlaw_error": null,
+  "old_full_FLEX_PBL_reason": "No strict analytic solution for that heterogeneous configuration; homogeneous component is separate"
+}

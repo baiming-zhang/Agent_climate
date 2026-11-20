@@ -83,5 +83,10 @@
     }
   },
   "FLEXPART_own_companion": null,
-  "FLEXPART_own_companion_reason": "Spatially variable native Hanna PBL has no claimed closed-form Gaussian solution; common-target score is total discrepancy only."
+  "FLEXPART_own_companion_reason": "Spatially variable native Hanna PBL has no claimed closed-form Gaussian solution; common-target score is total discrepancy only.",
+  "ownlaw_supersession": {
+    "report": "ownlaw/",
+    "MPTRAC_old_minus_K_over_H_companion_withdrawn": true,
+    "reason": "Final pressure-to-height Ito contribution cancels explicit density drift to leading order; common-target primary data retained unchanged"
+  }
 }

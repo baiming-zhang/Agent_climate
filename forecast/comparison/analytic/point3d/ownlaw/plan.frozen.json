@@ -1,0 +1,50 @@
+{
+  "UTC": "2026-11-20T01:29:08.281903+00:00",
+  "request": "Each model against its own analytical reference",
+  "FLEX": {
+    "scope": "Source-extracted native update blocks, compiled Fortran REAL32; homogeneous coefficients, stationary Gaussian initial velocities; NOT full driver/PBL validation",
+    "source_sha256": "512074f5ec47a43235717cf0fbedafa079be6d9f14dce70e007a0ff206bd49ae",
+    "horizontal_sha256": "ffe4badc9ff344d8dd2516806380c7fa04f919d9781302c378029e69435ed194",
+    "vertical_sha256": "3ed2d4d42a3885c17c1c903774c0d296fced145436f1eddebf5c3190db56e40d",
+    "sigma_xyz_m_s": [
+      0.9128709435462952,
+      0.9128709435462952,
+      0.28867512941360474
+    ],
+    "T_xyz_s": [
+      60,
+      60,
+      60
+    ],
+    "initial_velocity": "stationary independent Gaussian, not zero",
+    "density": "uniform, gradient0",
+    "source_xyz_m": [
+      10000,
+      6000,
+      500
+    ],
+    "Q_kg_s": 0.001,
+    "duration_s": 3600,
+    "source_particles": 200000,
+    "dt_s": 10,
+    "IFINE": 1,
+    "additional_controls": [
+      {
+        "particles": 400000,
+        "dt_s": 10
+      },
+      {
+        "particles": 200000,
+        "dt_s": 5
+      }
+    ],
+    "seed": 42,
+    "RNG": "Harness Gaussian inputs from seeded Fortran generator/Box-Muller; native random generator is not being verified",
+    "ground": "native specular reflection block, upperh1e6m inactive",
+    "analytical_variance": "2*sigma_i^2*T_i*(age-T_i*(1-exp(-age/T_i)))",
+    "numerical_error_budget": "Independent discrete Gaussian covariance recurrence and common10s time observer separate scheme bias from MonteCarlo/observer residual"
+  },
+  "CALPUFF": "Reuse complete native run; independent Draxler own-law continuum + exact original3x3x3 receptor observer companion; no native rerun",
+  "MPTRAC": "Reuse complete native modules; derive physical-height continuous generator of actual pressure update before choosing analytic reference; no fitted drift",
+  "old_results_preserved": true
+}

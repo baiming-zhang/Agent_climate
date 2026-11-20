@@ -1,0 +1,38 @@
+{
+  "UTC": "2026-11-20T01:30:23.518859+00:00",
+  "actual_header_sha256": "1e46af4a9228e6b7bfb8aa07a03408cbed375aaa5f8df57c8c75f35ad10f5a3d",
+  "actual_core_source_sha256": "a0b540ef2f81f902b42718be07439600501a85e67319c16fd93fc306c15cde3f",
+  "pressure_step": "p_new=p*(1-dz/H), dz=sqrt(2Kdt)*xi-Kdt/H",
+  "physical_increment": "deltaZ=-H*log(1-dz/H)",
+  "Ito_correction": "E[dz^2]/(2H)=+Kdt/H cancels the explicit -Kdt/H as dt->0",
+  "continuous_physical_limit": "dZ=sqrt(2K)dW, reflected atz0; same constantK reflected Green target as earlier independent reference",
+  "quadrature": "64point Gaussian Hermite, no native forecast or MonteCarlo replay",
+  "step_checks": [
+    {
+      "dt_s": 0.01,
+      "physical_mean_per_dt_m_s": 1.0949574580365606e-12,
+      "physical_variance_per_2dt_m2_s": 5.000000015306122,
+      "raw_displacement_drift_m_s": -0.0007142857142857143
+    },
+    {
+      "dt_s": 0.1,
+      "physical_mean_per_dt_m_s": 1.0933476346508542e-11,
+      "physical_variance_per_2dt_m2_s": 5.000000153061237,
+      "raw_displacement_drift_m_s": -0.0007142857142857143
+    },
+    {
+      "dt_s": 1.0,
+      "physical_mean_per_dt_m_s": 1.0932954541686968e-10,
+      "physical_variance_per_2dt_m2_s": 5.000001530613581,
+      "raw_displacement_drift_m_s": -0.0007142857142857143
+    },
+    {
+      "dt_s": 10.0,
+      "physical_mean_per_dt_m_s": 1.0933024263692915e-09,
+      "physical_variance_per_2dt_m2_s": 5.000015306256075,
+      "raw_displacement_drift_m_s": -0.0007142857142857143
+    }
+  ],
+  "old_minus_K_over_H_physical_companion_withdrawn": true,
+  "previous_metric_2_804342_not_valid_as_matched_ownlaw_error": true
+}

@@ -1,0 +1,103 @@
+{
+  "UTC": "2026-11-20T01:33:51.218634+00:00",
+  "no_native_concentrations_consumed": true,
+  "FLEX_continuum": "Stationary-velocity homogeneous integrated OU; native ground specular image, no upper boundary within reachable support",
+  "FLEX_discrete": "Independent4x4 Gaussian covariance propagation of actual horizontal Euler/exponential switch and vertical exact-velocity/right-position update, fractional first source step included; native10s trapezoid observation",
+  "CAL": "Independent Draxler age law,1m virtual source, both exact box integrals and exact original3point-per-axis receptor observer",
+  "MPTRAC": "Physical-height continuous generator checked separately; reflected constantK solution",
+  "checks": {
+    "FLEX_continuum": {
+      "quadrature12_vs24_max_abs_ug_m3": 6.217248937900877e-15
+    },
+    "FLEX_discrete_10": {
+      "quadrature12_vs24_max_abs_ug_m3": 1.0828791197070586e-09
+    },
+    "FLEX_discrete_5": {
+      "quadrature12_vs24_max_abs_ug_m3": 1.1456121606912006e-09
+    },
+    "CAL_continuum": {
+      "quadrature12_vs24_max_abs_ug_m3": 7.993605777301127e-15
+    },
+    "CAL_native_cubature": {
+      "quadrature12_vs24_max_abs_ug_m3": 8.43769498715119e-15
+    },
+    "MPTRAC_continuum": {
+      "quadrature12_vs24_max_abs_ug_m3": 5.10702591327572e-15
+    }
+  },
+  "covariance_controls": [
+    {
+      "age_s": 60.0,
+      "continuum_variance_m2": [
+        2207.276716525474,
+        2207.276716525474,
+        220.727656779523
+      ],
+      "dt10_variance_m2": [
+        2288.3900787540324,
+        2288.3900787540324,
+        222.9926582359201
+      ],
+      "dt5_variance_m2": [
+        2234.996231028247,
+        2234.996231028247,
+        221.29425034407387
+      ]
+    },
+    {
+      "age_s": 300.0,
+      "continuum_variance_m2": [
+        24040.428438915165,
+        24040.428438915165,
+        2404.04268190282
+      ],
+      "dt10_variance_m2": [
+        24380.625511034297,
+        24380.625511034297,
+        2412.362110656172
+      ],
+      "dt5_variance_m2": [
+        24183.473021054564,
+        24183.473021054564,
+        2406.1234452810913
+      ]
+    },
+    {
+      "age_s": 1800.0,
+      "continuum_variance_m2": [
+        174000.00547844692,
+        174000.00547844692,
+        17399.999375401607
+      ],
+      "dt10_variance_m2": [
+        174356.01126825964,
+        174356.01126825964,
+        17443.038593818164
+      ],
+      "dt5_variance_m2": [
+        174151.3633890895,
+        174151.3633890895,
+        17410.76287132845
+      ]
+    },
+    {
+      "age_s": 3600.0,
+      "continuum_variance_m2": [
+        354000.01114580466,
+        354000.01114580466,
+        35399.99872926522
+      ],
+      "dt10_variance_m2": [
+        354355.95914756367,
+        354355.95914756367,
+        35484.69048625756
+      ],
+      "dt5_variance_m2": [
+        354151.46410157386,
+        354151.46410157386,
+        35421.17870068917
+      ]
+    }
+  ],
+  "elapsed_seconds": 6.432697183999991
+}
