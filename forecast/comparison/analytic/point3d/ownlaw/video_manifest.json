@@ -1,0 +1,27 @@
+{
+  "layout": "Three own analytical solutions above three corresponding numerical computations",
+  "duration_seconds": 15,
+  "fps": 60,
+  "pixels": [
+    3840,
+    1440
+  ],
+  "FLEX_scope": "Homogeneous source-extracted OU operator, not full PBL",
+  "analytical": "Direct rolling300s kernel integral at all900 video clocks",
+  "native": "Concentration scalar PCHIP over12 native5min mean fields, then coordinate-aware spatial interpolation",
+  "RGB_frame_blending": false,
+  "videos": {
+    "plan": {
+      "file": "Own_law_plan_15s.mp4",
+      "sha256": "72be75e2ddbea810cefffee73b24ea4797eccd80e988db17fb962edd49733f6f",
+      "bytes": 2329249,
+      "poster": "plan_poster.png"
+    },
+    "section": {
+      "file": "Own_law_section_15s.mp4",
+      "sha256": "09b8a867bfc465fa920de4f7c2d1ffcee0be393616d6d3260ce4f52c07b95480",
+      "bytes": 2586860,
+      "poster": "section_poster.png"
+    }
+  }
+}
