@@ -1,0 +1,16 @@
+stage,classification,turn_wall_seconds,engine_reasoning_tokens,exact_hidden_reasoning_seconds,command_wall_seconds_inclusive,exact_solver_only_seconds,published_field_changed,delta_rmse,delta_max_abs,output_cells,daily_fields
+0,initial simulation,214.231,199,,31.147,,,,,888,15
+1,explicitly skipped as documentation/assessment only,36.807,21,,0.9239999999999999,,False,0.0,0.0,888,15
+2,explicitly skipped as documentation/assessment only,24.12,0,,0.468,,False,0.0,0.0,888,15
+3,explicitly skipped as documentation/assessment only,39.805,9,,0.827,,False,0.0,0.0,888,15
+4,full-period rerun/verification; saved field identical,32.125,30,,2.359,,False,0.0,0.0,888,15
+5,full-period rerun; saved field changed,114.221,279,,9.801,,True,3.0345319354709464,19.295590000000004,888,15
+6,full-period rerun/verification; saved field identical,24.711,112,,1.943,,False,0.0,0.0,888,15
+7,full-period rerun; saved field changed,59.062,148,,3.9450000000000003,,True,52.88911438460551,241.59261000000004,888,15
+8,full-period rerun; saved field changed,111.435,235,,45.173,,True,7.052258253221787,67.96234999999999,888,15
+9,full-period rerun/verification; saved field identical,51.849,70,,3.043,,False,0.0,0.0,888,15
+10,three full-period spatial-grid tests; published grid retained,82.876,304,,19.725,,False,0.0,0.0,888,15
+11,four full-period timestep tests; published field retained,72.542,147,,10.786999999999999,,False,0.0,0.0,888,15
+12,independent 24h hindcast evaluation; future forecast field retained,229.48,763,,63.943,,False,0.0,0.0,888,15
+13,explicitly skipped as documentation/assessment only,30.042,34,,0.42,,False,0.0,0.0,888,15
+14,full-period rerun/verification; saved field identical,66.19,215,,5.346,,False,0.0,0.0,888,15

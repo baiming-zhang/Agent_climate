@@ -1,0 +1,16 @@
+stage,classification,turn_wall_seconds,reasoning_tokens,exact_hidden_reasoning_seconds,command_wall_seconds_total,exact_solver_seconds,represented_daily_outputs,continuous_model_hours_verified,main_grid_changed,main_grid_delta_rmse,main_grid_delta_max_abs
+0,baseline simulation,175.591,242,,12.193,,15,,,,
+1,documentation/provenance only,47.885,12,,0.965,,15,,False,0.0,0.0
+2,documentation/provenance only,22.489,0,,1.134,,15,,False,0.0,0.0
+3,documentation/provenance only,40.835,8,,1.145,,15,,False,0.0,0.0
+4,new isolated source scenario; main city field unchanged,71.71,68,,2.294,,15,,False,0.0,0.0
+5,published numerical field changed,84.982,230,,12.972999999999999,,15,,True,0.03976002312175448,0.929137
+6,continuity verification; published field unchanged,22.063,52,,2.931,,15,,False,0.0,0.0
+7,published numerical field changed,84.241,138,,6.539,,15,,True,0.8765643998574382,8.629163000000002
+8,published numerical field changed,100.819,303,,23.26,,15,,True,0.5386004328926001,16.458897
+9,published numerical field changed,60.893,255,,12.349,,15,,True,0.00018881582584157424,0.0025940000000002073
+10,solver/convergence/benchmark reruns; published field unchanged,131.818,485,,71.29899999999999,,15,,False,0.0,0.0
+11,solver/convergence/benchmark reruns; published field unchanged,155.497,594,,48.153,,15,,False,0.0,0.0
+12,solver/convergence/benchmark reruns; published field unchanged,79.967,395,,7.246,,15,,False,0.0,0.0
+13,documentation/provenance only,27.72,46,,0.468,,15,,False,0.0,0.0
+14,solver/convergence/benchmark reruns; published field unchanged,63.09,128,,11.917,,15,,False,0.0,0.0
