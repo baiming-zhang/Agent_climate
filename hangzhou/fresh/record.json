@@ -1,0 +1,199 @@
+{
+  "release": "hangzhou-fresh-generic-v2-film-r01",
+  "duration_seconds": 15,
+  "fps": 60,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "period": [
+    "2026-11-21",
+    "2026-12-05"
+  ],
+  "daily_mean_fields": 15,
+  "scientific_arrays_unchanged": true,
+  "new_3D_forecast": false,
+  "model_runs_for_film": 0,
+  "interpolation": "Daily scalar fields before colormap; no RGB frame mixing",
+  "movie_SHA256": "f371fc0ea0480943c156644fbfc834a36141340d0ab18a6235a8ed4d4f59d89f",
+  "movie_bytes": 3460725,
+  "stages": [
+    {
+      "stage": 0,
+      "prompt": "Simulate SO₂ emissions and their spatial distribution in Hangzhou over the next 15 days.",
+      "outcome": "Illustrative 2D puff result; hypothetical sources and arbitrary units.",
+      "wall_seconds": 339.344,
+      "reasoning_activity_proxy_seconds": 279.101,
+      "exact_reasoning_seconds": null,
+      "measured_numerical_seconds": null,
+      "measured_render_seconds": null,
+      "saved_data_SHA256": "068012585fdeb0a622ddc7260698bec7558494394fa5e1fba6bf5853126f6249"
+    },
+    {
+      "stage": 1,
+      "prompt": "Prioritize authoritative, traceable sources.",
+      "outcome": "Source register; no verified current citywide emissions inventory.",
+      "wall_seconds": 94.275,
+      "reasoning_activity_proxy_seconds": 93.616,
+      "exact_reasoning_seconds": null,
+      "measured_numerical_seconds": null,
+      "measured_render_seconds": null,
+      "saved_data_SHA256": "8a135ea61e8468c2194a60e4272059034ba39a418114d5f9c75672193d49039d"
+    },
+    {
+      "stage": 2,
+      "prompt": "Define the physical scales and modeling objectives first.",
+      "outcome": "Scale and objective definitions; fields unchanged.",
+      "wall_seconds": 60.575,
+      "reasoning_activity_proxy_seconds": 59.848000000000006,
+      "exact_reasoning_seconds": null,
+      "measured_numerical_seconds": null,
+      "measured_render_seconds": null,
+      "saved_data_SHA256": "8a135ea61e8468c2194a60e4272059034ba39a418114d5f9c75672193d49039d"
+    },
+    {
+      "stage": 3,
+      "prompt": "Prioritize assessing the need for three-dimensional modeling in real-world applications.",
+      "outcome": "3D applicability assessment; no integrated 3D forecast.",
+      "wall_seconds": 85.322,
+      "reasoning_activity_proxy_seconds": 84.71300000000001,
+      "exact_reasoning_seconds": null,
+      "measured_numerical_seconds": null,
+      "measured_render_seconds": null,
+      "saved_data_SHA256": "8a135ea61e8468c2194a60e4272059034ba39a418114d5f9c75672193d49039d"
+    },
+    {
+      "stage": 4,
+      "prompt": "Give source terms a meaningful physical definition and an actual entry location.",
+      "outcome": "Documented outlet example remains disabled; activity and datums unverified.",
+      "wall_seconds": 158.493,
+      "reasoning_activity_proxy_seconds": 157.305,
+      "exact_reasoning_seconds": null,
+      "measured_numerical_seconds": null,
+      "measured_render_seconds": null,
+      "saved_data_SHA256": "8a135ea61e8468c2194a60e4272059034ba39a418114d5f9c75672193d49039d"
+    },
+    {
+      "stage": 5,
+      "prompt": "Ensure initial and boundary conditions are consistent with the real-world scenario.",
+      "outcome": "Initial/boundary readiness assessment; missing physical inputs.",
+      "wall_seconds": 89.196,
+      "reasoning_activity_proxy_seconds": 88.41,
+      "exact_reasoning_seconds": null,
+      "measured_numerical_seconds": null,
+      "measured_render_seconds": null,
+      "saved_data_SHA256": "8a135ea61e8468c2194a60e4272059034ba39a418114d5f9c75672193d49039d"
+    },
+    {
+      "stage": 6,
+      "prompt": "Preserve continuous state propagation throughout the simulation.",
+      "outcome": "Continuous-state/checkpoint code and synthetic tests; not used for the saved maps.",
+      "wall_seconds": 126.852,
+      "reasoning_activity_proxy_seconds": 125.885,
+      "exact_reasoning_seconds": null,
+      "measured_numerical_seconds": null,
+      "measured_render_seconds": null,
+      "saved_data_SHA256": "8a135ea61e8468c2194a60e4272059034ba39a418114d5f9c75672193d49039d"
+    },
+    {
+      "stage": 7,
+      "prompt": "Account for relevant physical processes and their interactions.",
+      "outcome": "Physical-process coverage specification; no new production simulation.",
+      "wall_seconds": 120.402,
+      "reasoning_activity_proxy_seconds": 119.714,
+      "exact_reasoning_seconds": null,
+      "measured_numerical_seconds": null,
+      "measured_render_seconds": null,
+      "saved_data_SHA256": "8a135ea61e8468c2194a60e4272059034ba39a418114d5f9c75672193d49039d"
+    },
+    {
+      "stage": 8,
+      "prompt": "Make geometry and physical objects participate in the computation.",
+      "outcome": "3D voxel geometry prototype and synthetic tests; not integrated into Hangzhou.",
+      "wall_seconds": 134.437,
+      "reasoning_activity_proxy_seconds": 133.453,
+      "exact_reasoning_seconds": null,
+      "measured_numerical_seconds": null,
+      "measured_render_seconds": null,
+      "saved_data_SHA256": "8a135ea61e8468c2194a60e4272059034ba39a418114d5f9c75672193d49039d"
+    },
+    {
+      "stage": 9,
+      "prompt": "Check conservation, units, and physical constraints.",
+      "outcome": "Stored-data accounting, units and synthetic conservation checks.",
+      "wall_seconds": 116.834,
+      "reasoning_activity_proxy_seconds": 115.747,
+      "exact_reasoning_seconds": null,
+      "measured_numerical_seconds": null,
+      "measured_render_seconds": null,
+      "saved_data_SHA256": "8a135ea61e8468c2194a60e4272059034ba39a418114d5f9c75672193d49039d"
+    },
+    {
+      "stage": 10,
+      "prompt": "Verify spatial grid convergence.",
+      "outcome": "8/4/2/1 km sampling study: 4→2 km field difference 6.32%; 2→1 km 3.36%.",
+      "wall_seconds": 167.162,
+      "reasoning_activity_proxy_seconds": 161.013,
+      "exact_reasoning_seconds": null,
+      "measured_numerical_seconds": 4.6395531,
+      "measured_render_seconds": null,
+      "saved_data_SHA256": "8a135ea61e8468c2194a60e4272059034ba39a418114d5f9c75672193d49039d"
+    },
+    {
+      "stage": 11,
+      "prompt": "Verify timestep and statistical sampling convergence.",
+      "outcome": "60/30/15/7.5 min study: peak difference 8.60% then 0.26%.",
+      "wall_seconds": 157.956,
+      "reasoning_activity_proxy_seconds": 151.94,
+      "exact_reasoning_seconds": null,
+      "measured_numerical_seconds": 5.0345933,
+      "measured_render_seconds": null,
+      "saved_data_SHA256": "8a135ea61e8468c2194a60e4272059034ba39a418114d5f9c75672193d49039d"
+    },
+    {
+      "stage": 12,
+      "prompt": "Validate the model using independent evidence.",
+      "outcome": "No comparable observation pairs; forecast error remains unevaluated.",
+      "wall_seconds": 161.703,
+      "reasoning_activity_proxy_seconds": 160.66,
+      "exact_reasoning_seconds": null,
+      "measured_numerical_seconds": null,
+      "measured_render_seconds": null,
+      "saved_data_SHA256": "8a135ea61e8468c2194a60e4272059034ba39a418114d5f9c75672193d49039d"
+    },
+    {
+      "stage": 13,
+      "prompt": "Define acceptance criteria appropriate to the application in advance.",
+      "outcome": "Prospective research acceptance protocol; not retrospective validation.",
+      "wall_seconds": 100.228,
+      "reasoning_activity_proxy_seconds": 99.38199999999999,
+      "exact_reasoning_seconds": null,
+      "measured_numerical_seconds": null,
+      "measured_render_seconds": null,
+      "saved_data_SHA256": "8a135ea61e8468c2194a60e4272059034ba39a418114d5f9c75672193d49039d"
+    },
+    {
+      "stage": 14,
+      "prompt": "Preserve scientific traceability through acceleration and visualization.",
+      "outcome": "Input/model/display hashes and quantization checks; saved fields unchanged.",
+      "wall_seconds": 233.08,
+      "reasoning_activity_proxy_seconds": 143.303,
+      "exact_reasoning_seconds": null,
+      "measured_numerical_seconds": null,
+      "measured_render_seconds": null,
+      "saved_data_SHA256": "8a135ea61e8468c2194a60e4272059034ba39a418114d5f9c75672193d49039d"
+    }
+  ],
+  "timing": {
+    "worker_activity_wall_seconds_sum": 2145.859,
+    "reasoning_activity_proxy_seconds_sum": 1974.09,
+    "exact_reasoning_seconds": null,
+    "historical_numeric_total_seconds": null,
+    "note": "Uninstrumented historical phases stay null. Proxy durations include unmeasured tools/waiting and are not exact inference. Parallel intervals are not a disjoint elapsed-time partition.",
+    "film_canvas_draw_seconds": 13.781400000572143,
+    "film_capture_write_seconds": 58.384328799999864,
+    "film_render_command_wall_seconds": 73.2571487,
+    "film_encoder_command_wall_seconds": 21.3176767,
+    "film_encoder": "h264_nvenc GPU"
+  }
+}
