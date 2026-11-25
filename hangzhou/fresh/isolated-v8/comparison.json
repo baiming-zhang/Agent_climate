@@ -1,0 +1,122 @@
+{
+  "release": "hangzhou-isolated-v8-sampling09-deeper-blue-r01",
+  "case": "Hangzhou V8",
+  "full15day_result": false,
+  "final15day_status": "Production in progress; this page contains the completed short sampling experiment.",
+  "reporting_window_UTC": [
+    "2026-11-24T16:00:00Z",
+    "2026-11-24T19:00:00Z"
+  ],
+  "reporting_hours": 3,
+  "spinup_hours": 10,
+  "video_comparison": "Uniform384-equivalent versus mass-aware384-equivalent: identical total particle count, release masses, positions, heights and timing.",
+  "displayed_ground_layer_m_AGL": [
+    0,
+    25
+  ],
+  "concentration_unit": "ug m-3",
+  "model_difference_RMSE_ug_m3": [
+    0.11911462858642674,
+    0.18710277440911074,
+    0.2298101919866377
+  ],
+  "RMSE_is_observed_error": false,
+  "weather_spacing_m": [
+    9000,
+    3000
+  ],
+  "weather_layers": 50,
+  "concentration_bins": [
+    100,
+    75,
+    15
+  ],
+  "background_included": false,
+  "separate_sampling_test": {
+    "comparison": "Weighted384 versus weighted768",
+    "hourly_metrics": [
+      {
+        "end_lead_h": 11,
+        "volume_3D": {
+          "relative_L1": 0.09371106635425593,
+          "relative_peak_difference": 0.008470435953242967,
+          "relative_integral_difference": 0.00022249844819206426,
+          "weighted_RMSE_ug_m3": 0.003983702724158542,
+          "all_original_criteria_passed": true
+        },
+        "area_0_25m": {
+          "relative_L1": 0.14857121606142853,
+          "relative_peak_difference": 0.001580618848153667,
+          "relative_integral_difference": 0.018341384457336633,
+          "weighted_RMSE_ug_m3": 0.04656478057409559,
+          "all_original_criteria_passed": true
+        }
+      },
+      {
+        "end_lead_h": 12,
+        "volume_3D": {
+          "relative_L1": 0.09213769578865366,
+          "relative_peak_difference": 0.024760067565568887,
+          "relative_integral_difference": 0.0007646415203102086,
+          "weighted_RMSE_ug_m3": 0.004520733418439578,
+          "all_original_criteria_passed": true
+        },
+        "area_0_25m": {
+          "relative_L1": 0.1377541520265169,
+          "relative_peak_difference": 0.029864745738512867,
+          "relative_integral_difference": 0.00676515819572573,
+          "weighted_RMSE_ug_m3": 0.06080629995034812,
+          "all_original_criteria_passed": true
+        }
+      },
+      {
+        "end_lead_h": 13,
+        "volume_3D": {
+          "relative_L1": 0.0911839194780844,
+          "relative_peak_difference": 0.021985905281443657,
+          "relative_integral_difference": 0.0006220316560018887,
+          "weighted_RMSE_ug_m3": 0.005084211470714318,
+          "all_original_criteria_passed": true
+        },
+        "area_0_25m": {
+          "relative_L1": 0.1449960812372398,
+          "relative_peak_difference": 0.13711569160957246,
+          "relative_integral_difference": 0.008513819322904332,
+          "weighted_RMSE_ug_m3": 0.07727632677038788,
+          "all_original_criteria_passed": true
+        }
+      }
+    ],
+    "maximum_regional_residual_kg": 7.238255102492985e-05,
+    "predeclared_regional_tolerance_kg": 0.001,
+    "passed": true,
+    "meaning": "Short-case pairwise sensitivity, not observed accuracy or all-weather convergence."
+  },
+  "phase09_timing": {
+    "reasoning_tokens": 3159,
+    "exposed_reasoning_item_s": 0.973,
+    "exact_hidden_reasoning_s": null,
+    "active_agent_turn_wall_s": 2825.483,
+    "native_process_wall_s": {
+      "384_equivalent": 509.21,
+      "768_equivalent": 1010.32
+    },
+    "native_wall_includes_IO": true,
+    "video_render_and_encode_s": 219.82815191400005,
+    "hardware_video_encoding": true
+  },
+  "video": {
+    "duration_s": 15,
+    "fps": 60,
+    "width": 3240,
+    "height": 1080,
+    "temporal_interpolation": "Hourly mean scientific scalar fields interpolated before coloring and rerendered each frame.",
+    "RGB_frame_blending": false,
+    "sha256": "95beaa6dc28a08704dfb5c02ab53ff8c61bbebc6b8720478128be9853af5c112"
+  },
+  "limits": [
+    "Historical source/inventory scenario; ambient background and external chemical inflow excluded.",
+    "Parameterized turbulence and integral-plume entrainment; not building-resolving CFD or LES.",
+    "This allocation comparison does not change physical weather or source strength."
+  ]
+}
