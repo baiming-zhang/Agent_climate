@@ -1,0 +1,72 @@
+{
+  "pair": "08_09",
+  "before_stage": 8,
+  "after_stage": 9,
+  "reporting_hours": 3,
+  "temporal_support": "Three matched hourly means; UTC2026-11-24T16:00..19:00",
+  "scalar_frames": 3,
+  "ground_layer_after_m_AGL": [
+    0,
+    25
+  ],
+  "before_layer": "0..25m AGL",
+  "source_before": "/mnt/c/Users/ASUS/Desktop/Agent_contact/execution/pollution_hangzhou_isolated_v8/stages/08/work/linux-runner/results/hz-c08-raster-high-r02/artifacts/work/flex08/combined13-192.nc",
+  "source_after": "/mnt/c/Users/ASUS/Desktop/Agent_contact/execution/pollution_hangzhou_isolated_v8/stages/09/work/linux-runner/results/hz-c09-z-weighted-r01/artifacts/work/flex08/native-resolution13-768-weighted.nc",
+  "output_npz": "/mnt/c/Users/ASUS/Desktop/Agent_contact/execution/pollution_hangzhou_isolated_v8/adjacent_video_data/08_09.npz",
+  "npz_sha256": "6ca5c084e16fb55902ffefe7b9a97a48130b18b9863443bd8b87eac209f99a45",
+  "unit": "ug m-3",
+  "shape": [
+    3,
+    75,
+    100
+  ],
+  "weighted_model_difference_RMSE": [
+    0.19464207560072308,
+    0.20035626457774797,
+    0.24661204455015276
+  ],
+  "RMSE_definition": "Spherical-cell-area weighted over the complete shared output rectangle, after declared conservative remapping when grids differ; not observed error.",
+  "native_archives_modified": false,
+  "new_forecast_steps": 0,
+  "terrain_note": "Same actual native terrain used as gray visual context; this does not mean early coarse-weather solvers resolved local terrain.",
+  "no_error_based_mask": true,
+  "grid_note": "Comparison of recorded output footprints, not a claim of complete citywide coverage or a convergence gate.",
+  "daily_baseline_not_fabricated_into_hours": false,
+  "confounders": [],
+  "render": {
+    "completed_UTC": "2026-11-25T20:56:27.418843+00:00",
+    "video": "/mnt/c/Users/ASUS/Desktop/Agent_contact/execution/pollution_hangzhou_isolated_v8/adjacent_videos/08_09/comparison.mp4",
+    "video_sha256": "1e1b0be3520005804cfd89d9195e1f81ff4d640a7418147f98f046bc1fc7cea6",
+    "image_size": [
+      3240,
+      1080
+    ],
+    "frames": 900,
+    "fps": 60,
+    "duration_s": 15,
+    "new_forecast_steps": 0,
+    "encoder": "h264",
+    "hardware_encoding": true,
+    "codec_probe_s": 0.005961127011687495,
+    "preparation_wall_s": 0.20137301200884394,
+    "render_and_encode_wall_s": 206.10671281900431,
+    "total_wall_s": 206.4339356470009,
+    "actual_input_reporting_window_UTC": [
+      "2026-11-24T16:00:00Z",
+      "2026-11-24T19:00:00Z"
+    ],
+    "temporal_display": "Actual first3 hourly means interpolated as scalar data; no solver replay.",
+    "comparison": "Adjacent preserved stages 08_09; Spherical-cell-area weighted over the complete shared output rectangle, after declared conservative remapping when grids differ; not observed error.",
+    "RMSE_definition": "Area-weighted native-grid model difference, not observed error. Recomputed from the interpolated native scalar difference.",
+    "blue_style": "Reviewed layout with user-requested deeper blue; common Blues0.30..1.00 and identical absolute transfer/color limits.",
+    "all_text_English": true,
+    "RGB_frame_interpolation": false,
+    "crossfade": false,
+    "frame_overlay": false,
+    "decoded_video_QA_pending": true,
+    "full15day_result": false
+  },
+  "title": "Native geometry and sampling",
+  "interpretation": "Native terrain, bin geometry and areas are aligned; mass-aware particle allocation and higher sampling are introduced. The selected short-case pair passes its predeclared sensitivity checks, not a monitoring-error or all-weather accuracy test.",
+  "actual_decoded_first_middle_last_viewed": true
+}

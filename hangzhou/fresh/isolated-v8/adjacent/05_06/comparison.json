@@ -1,0 +1,72 @@
+{
+  "pair": "05_06",
+  "before_stage": 5,
+  "after_stage": 6,
+  "reporting_hours": 3,
+  "temporal_support": "Three matched hourly means; UTC2026-11-24T16:00..19:00",
+  "scalar_frames": 3,
+  "ground_layer_after_m_AGL": [
+    0,
+    25
+  ],
+  "before_layer": "0..25m AGL",
+  "source_before": "/mnt/c/Users/ASUS/Desktop/Agent_contact/execution/pollution_hangzhou_isolated_v8/stages/09/work/scope72/comparisons/05-double.nc",
+  "source_after": "/mnt/c/Users/ASUS/Desktop/Agent_contact/execution/pollution_hangzhou_isolated_v8/stages/09/work/scope72/comparisons/06.nc",
+  "output_npz": "/mnt/c/Users/ASUS/Desktop/Agent_contact/execution/pollution_hangzhou_isolated_v8/adjacent_video_data/05_06.npz",
+  "npz_sha256": "73f2c919314f74eb22d5c61ba1c5f265d045d7b147e4392b3ae310b0b7e570f0",
+  "unit": "ug m-3",
+  "shape": [
+    3,
+    42,
+    60
+  ],
+  "weighted_model_difference_RMSE": [
+    3.6548522178657166,
+    4.487016380026088,
+    3.278216648113235
+  ],
+  "RMSE_definition": "Spherical-cell-area weighted over the complete shared output rectangle, after declared conservative remapping when grids differ; not observed error.",
+  "native_archives_modified": false,
+  "new_forecast_steps": 0,
+  "terrain_note": "Same actual native terrain used as gray visual context; this does not mean early coarse-weather solvers resolved local terrain.",
+  "no_error_based_mask": true,
+  "grid_note": "Comparison of recorded output footprints, not a claim of complete citywide coverage or a convergence gate.",
+  "daily_baseline_not_fabricated_into_hours": false,
+  "confounders": [],
+  "render": {
+    "completed_UTC": "2026-11-25T20:44:45.670709+00:00",
+    "video": "/mnt/c/Users/ASUS/Desktop/Agent_contact/execution/pollution_hangzhou_isolated_v8/adjacent_videos/05_06/comparison.mp4",
+    "video_sha256": "722cb2f2c7a3d9a7c7e25e40250028a185f1fc7b6b2f282602880061dd5a7397",
+    "image_size": [
+      3240,
+      1080
+    ],
+    "frames": 900,
+    "fps": 60,
+    "duration_s": 15,
+    "new_forecast_steps": 0,
+    "encoder": "h264",
+    "hardware_encoding": true,
+    "codec_probe_s": 0.0030016429955139756,
+    "preparation_wall_s": 0.13031518401112407,
+    "render_and_encode_wall_s": 221.09388589000446,
+    "total_wall_s": 221.33350469000288,
+    "actual_input_reporting_window_UTC": [
+      "2026-11-24T16:00:00Z",
+      "2026-11-24T19:00:00Z"
+    ],
+    "temporal_display": "Actual first3 hourly means interpolated as scalar data; no solver replay.",
+    "comparison": "Adjacent preserved stages 05_06; Spherical-cell-area weighted over the complete shared output rectangle, after declared conservative remapping when grids differ; not observed error.",
+    "RMSE_definition": "Area-weighted native-grid model difference, not observed error. Recomputed from the interpolated native scalar difference.",
+    "blue_style": "Reviewed layout with user-requested deeper blue; common Blues0.30..1.00 and identical absolute transfer/color limits.",
+    "all_text_English": true,
+    "RGB_frame_interpolation": false,
+    "crossfade": false,
+    "frame_overlay": false,
+    "decoded_video_QA_pending": true,
+    "full15day_result": false
+  },
+  "title": "Terrain-driven local weather",
+  "interpretation": "A 3 km local WRF wind field replaces coarse forcing. This provisional WSM6/Noah run was superseded by the user; the compared first three reporting hours were genuinely computed.",
+  "actual_decoded_first_middle_last_viewed": true
+}

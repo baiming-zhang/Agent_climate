@@ -1,0 +1,484 @@
+{
+  "release": "hangzhou-isolated-v8-adjacent00-09-deeper-blue-r01",
+  "updated_UTC": "2026-11-25T21:16:22.780318+00:00",
+  "full15day_selected_method_complete": false,
+  "final15day_status": "Weather production in progress; final SO2 fields not yet complete.",
+  "items": [
+    {
+      "id": "00_01",
+      "title": "00 → 01 · Three-dimensional transport",
+      "change": "A single-layer baseline is replaced by height-dependent 3D transport. Forcing and vertical definitions also change; this is not an isolated dimensionality experiment.",
+      "video": "adjacent/00_01/comparison.mp4",
+      "poster": "adjacent/00_01/poster.png",
+      "record": "adjacent/00_01/comparison.json",
+      "reporting_hours": 360,
+      "scope": "15 matched daily means",
+      "metric": [
+        0.6231608290235837,
+        0.724306126241221,
+        0.4925666694781722,
+        0.5470875899408149,
+        0.6459767730123883,
+        0.6423636311921823,
+        0.8054846095086203,
+        1.7032246918437857,
+        0.9285180519809412,
+        0.3642369491855758,
+        0.6174529980615441,
+        0.12775736300715526,
+        0.31032129011050386,
+        0.3493546523832472,
+        0.12672970286762045
+      ],
+      "metric_times": [
+        "Day 1",
+        "Day 2",
+        "Day 3",
+        "Day 4",
+        "Day 5",
+        "Day 6",
+        "Day 7",
+        "Day 8",
+        "Day 9",
+        "Day 10",
+        "Day 11",
+        "Day 12",
+        "Day 13",
+        "Day 14",
+        "Day 15"
+      ],
+      "sha256": "f3bb9af216dda13a337e84672d4e436bdffe7d2b78e5b03af8cb02b925bd204f",
+      "render_and_encode_s": 234.53564096499758,
+      "bytes": 15607838,
+      "prompt_stage": 1
+    },
+    {
+      "id": "01_02",
+      "title": "01 → 02 · Dry and wet deposition",
+      "change": "Weather-dependent dry and wet removal replace an atmospheric-lifetime substitute; removed and exported mass are tracked separately.",
+      "video": "adjacent/01_02/comparison.mp4",
+      "poster": "adjacent/01_02/poster.png",
+      "record": "adjacent/01_02/comparison.json",
+      "reporting_hours": 3,
+      "scope": "3 matched hourly means",
+      "metric": [
+        0.605785455948905,
+        0.6467350647858393,
+        0.7065238146727767
+      ],
+      "metric_times": [
+        "00:00–01:00 CST",
+        "01:00–02:00 CST",
+        "02:00–03:00 CST"
+      ],
+      "sha256": "59b6fdc383d0df6ba823fb42c088fb32673671f1906a477e49f102c17c94e645",
+      "render_and_encode_s": 235.10159144600038,
+      "bytes": 3014863,
+      "prompt_stage": 2
+    },
+    {
+      "id": "02_03",
+      "title": "02 → 03 · Documented outlets and plume rise",
+      "change": "Documented stacks replace district proxies, with momentum/buoyancy plume rise. This intermediate run covers only about 0.6814% of the city inventory; lower concentrations do not establish better accuracy.",
+      "video": "adjacent/02_03/comparison.mp4",
+      "poster": "adjacent/02_03/poster.png",
+      "record": "adjacent/02_03/comparison.json",
+      "reporting_hours": 3,
+      "scope": "3 matched hourly means",
+      "metric": [
+        0.8217662717031294,
+        0.9759416170845845,
+        1.1136141066879737
+      ],
+      "metric_times": [
+        "00:00–01:00 CST",
+        "01:00–02:00 CST",
+        "02:00–03:00 CST"
+      ],
+      "sha256": "ed5abb04f8c79ba079df959eec447b826c5887de397de834dfe8ab859a4be190",
+      "render_and_encode_s": 227.4292014120001,
+      "bytes": 2654979,
+      "prompt_stage": 3
+    },
+    {
+      "id": "03_04",
+      "title": "03 → 04 · Citywide emissions coverage",
+      "change": "Estimated distributed historical emissions restore citywide inventory coverage alongside documented stacks, with double counting avoided. This is not a census of all operating 2026 facilities.",
+      "video": "adjacent/03_04/comparison.mp4",
+      "poster": "adjacent/03_04/poster.png",
+      "record": "adjacent/03_04/comparison.json",
+      "reporting_hours": 3,
+      "scope": "3 matched hourly means",
+      "metric": [
+        3.4714107625420603,
+        4.071369407794801,
+        3.8165610689849587
+      ],
+      "metric_times": [
+        "00:00–01:00 CST",
+        "01:00–02:00 CST",
+        "02:00–03:00 CST"
+      ],
+      "sha256": "5a1f73ff1646faf2d91eb38b9a44e9678fe34a9bd537c26863a2b7a429065c50",
+      "render_and_encode_s": 215.05325524399814,
+      "bytes": 3086801,
+      "prompt_stage": 4
+    },
+    {
+      "id": "04_05",
+      "title": "04 → 05 · Particle sampling",
+      "change": "Particle count increases without changing emissions. This intermediate sampling comparison was not locally converged.",
+      "video": "adjacent/04_05/comparison.mp4",
+      "poster": "adjacent/04_05/poster.png",
+      "record": "adjacent/04_05/comparison.json",
+      "reporting_hours": 3,
+      "scope": "3 matched hourly means",
+      "metric": [
+        2.2140204946736475,
+        2.33476779339472,
+        2.3370552888981524
+      ],
+      "metric_times": [
+        "00:00–01:00 CST",
+        "01:00–02:00 CST",
+        "02:00–03:00 CST"
+      ],
+      "sha256": "2302ef9cce3352ad0baf721304aad863643dc3396ae64c7176d7e89b24ebfa01",
+      "render_and_encode_s": 238.1300000360061,
+      "bytes": 4345609,
+      "prompt_stage": 5
+    },
+    {
+      "id": "05_06",
+      "title": "05 → 06 · Terrain-driven local weather",
+      "change": "A 3 km local WRF wind field replaces coarse forcing. This provisional WSM6/Noah run was superseded by the user; the compared first three reporting hours were genuinely computed.",
+      "video": "adjacent/05_06/comparison.mp4",
+      "poster": "adjacent/05_06/poster.png",
+      "record": "adjacent/05_06/comparison.json",
+      "reporting_hours": 3,
+      "scope": "3 matched hourly means",
+      "metric": [
+        3.6548522178657166,
+        4.487016380026088,
+        3.278216648113235
+      ],
+      "metric_times": [
+        "00:00–01:00 CST",
+        "01:00–02:00 CST",
+        "02:00–03:00 CST"
+      ],
+      "sha256": "722cb2f2c7a3d9a7c7e25e40250028a185f1fc7b6b2f282602880061dd5a7397",
+      "render_and_encode_s": 221.09388589000446,
+      "bytes": 4369829,
+      "prompt_stage": 6
+    },
+    {
+      "id": "06_07",
+      "title": "06 → 07 · Consolidated weather physics",
+      "change": "Nested 9/3 km, 50-level WRF with Thompson, Noah-MP and YSU replaces provisional physics. Weather and transport change together; this is not an isolated test of one scheme.",
+      "video": "adjacent/06_07/comparison.mp4",
+      "poster": "adjacent/06_07/poster.png",
+      "record": "adjacent/06_07/comparison.json",
+      "reporting_hours": 3,
+      "scope": "3 matched hourly means",
+      "metric": [
+        1.2251791070749278,
+        1.8740480492339475,
+        3.1617695290647996
+      ],
+      "metric_times": [
+        "00:00–01:00 CST",
+        "01:00–02:00 CST",
+        "02:00–03:00 CST"
+      ],
+      "sha256": "daf998dbbf151e183977764b87ed861707dd307f31ccc115befa688ab9b37273",
+      "render_and_encode_s": 221.17713238598662,
+      "bytes": 4434122,
+      "prompt_stage": 7
+    },
+    {
+      "id": "07_08",
+      "title": "07 → 08 · Native transport and finite-travel plume",
+      "change": "A native FLEXPART-WRF derivative and finite-travel-time integral plume replace the previous transport/handoff implementation. Native reader and negative-coordinate kernel repairs are preserved and disclosed; this candidate remained sampling-sensitive.",
+      "video": "adjacent/07_08/comparison.mp4",
+      "poster": "adjacent/07_08/poster.png",
+      "record": "adjacent/07_08/comparison.json",
+      "reporting_hours": 3,
+      "scope": "3 matched hourly means",
+      "metric": [
+        0.8437697875732165,
+        1.1237860586556627,
+        1.9405764321820806
+      ],
+      "metric_times": [
+        "00:00–01:00 CST",
+        "01:00–02:00 CST",
+        "02:00–03:00 CST"
+      ],
+      "sha256": "cbbe694c36a8633fc71cabbfc7d32e54c4236d629113457438e9e3b38cb9f2dc",
+      "render_and_encode_s": 234.83752896700753,
+      "bytes": 4180442,
+      "prompt_stage": 8
+    },
+    {
+      "id": "08_09",
+      "title": "08 → 09 · Native geometry and sampling",
+      "change": "Native terrain, bin geometry and areas are aligned; mass-aware particle allocation and higher sampling are introduced. The selected short-case pair passes its predeclared sensitivity checks, not a monitoring-error or all-weather accuracy test.",
+      "video": "adjacent/08_09/comparison.mp4",
+      "poster": "adjacent/08_09/poster.png",
+      "record": "adjacent/08_09/comparison.json",
+      "reporting_hours": 3,
+      "scope": "3 matched hourly means",
+      "metric": [
+        0.19464207560072308,
+        0.20035626457774797,
+        0.24661204455015276
+      ],
+      "metric_times": [
+        "00:00–01:00 CST",
+        "01:00–02:00 CST",
+        "02:00–03:00 CST"
+      ],
+      "sha256": "1e1b0be3520005804cfd89d9195e1f81ff4d640a7418147f98f046bc1fc7cea6",
+      "render_and_encode_s": 206.10671281900431,
+      "bytes": 4486439,
+      "prompt_stage": 9
+    },
+    {
+      "id": "sampling09",
+      "title": "09 · Allocation mechanism (same total budget)",
+      "change": "Uniform versus mass-aware allocation at the same total particle budget. This separates allocation from the higher-count 08 → 09 comparison.",
+      "video": "sampling.mp4",
+      "poster": "poster.png",
+      "record": "comparison.json",
+      "reporting_hours": 3,
+      "scope": "3 matched hourly means · same budget",
+      "metric": [
+        0.11911462858642674,
+        0.18710277440911074,
+        0.2298101919866377
+      ],
+      "metric_times": [
+        "00:00–01:00 CST",
+        "01:00–02:00 CST",
+        "02:00–03:00 CST"
+      ],
+      "sha256": "95beaa6dc28a08704dfb5c02ab53ff8c61bbebc6b8720478128be9853af5c112",
+      "render_and_encode_s": 219.82815191400005,
+      "bytes": 4434055,
+      "prompt_stage": 9
+    }
+  ],
+  "default": "08_09",
+  "duration_s": 15,
+  "fps": 60,
+  "width": 3240,
+  "height": 1080,
+  "RMSE_is_observation_error": false,
+  "notes": [
+    "Before / after / signed difference. RMSE is a model difference, not accuracy against monitoring.",
+    "00 → 01 uses real daily means because baseline00 has no hourly fields; all other adjacent pairs use the preserved first3 reporting hours.",
+    "Different grids are conservatively compared on their shared output footprint. The historical municipal-only metrics are not overwritten.",
+    "Gray terrain is common visual context, not a claim that early coarse-weather models resolved it.",
+    "Scientific scalar fields are interpolated before coloring and rerendering; no RGB frame blending."
+  ],
+  "historical_sources": true,
+  "ambient_background_included": false,
+  "visual_review": {
+    "reviewed_UTC": "2026-11-25T21:15:01.361352+00:00",
+    "all_27_decoded_frames_actually_viewed": true,
+    "review_method": "Actual video-decoded first/middle/last PNGs viewed by the supervising agent; earlier pairs00..03 retained across session summary, pairs04..08 viewed this check-in.",
+    "findings": "English labels, proportional metric axes, matching per-pair concentration scales, aligned colorbar/map heights, signed correction and numeric RMSE readable, gray terrain and reviewed deeper-blue style. No new scientific fields computed.",
+    "files": [
+      {
+        "pair": "00_01",
+        "frame": 1,
+        "path": "execution\\pollution_hangzhou_isolated_v8\\adjacent_videos\\00_01\\decoded_01.png",
+        "sha256": "075b4a9e75eda0be4f0a8c4e8d2bc38ffde29c6fee662287a51aaeadb80b6b1d",
+        "actually_viewed": true
+      },
+      {
+        "pair": "00_01",
+        "frame": 2,
+        "path": "execution\\pollution_hangzhou_isolated_v8\\adjacent_videos\\00_01\\decoded_02.png",
+        "sha256": "6c25605965ea823a5c8ccb418bb87373cc96219c27d8cbfc5edd661ee17c09f3",
+        "actually_viewed": true
+      },
+      {
+        "pair": "00_01",
+        "frame": 3,
+        "path": "execution\\pollution_hangzhou_isolated_v8\\adjacent_videos\\00_01\\decoded_03.png",
+        "sha256": "a455566eb7df4e85b8c45e178c22bf12b90e8f0e5d2a781e05b1b0dc665ca604",
+        "actually_viewed": true
+      },
+      {
+        "pair": "01_02",
+        "frame": 1,
+        "path": "execution\\pollution_hangzhou_isolated_v8\\adjacent_videos\\01_02\\decoded_01.png",
+        "sha256": "c3e51378ea733ebedb4a8e01bf8adfc0f21c7c7e3bc50ff45a67c6d84c21c6b4",
+        "actually_viewed": true
+      },
+      {
+        "pair": "01_02",
+        "frame": 2,
+        "path": "execution\\pollution_hangzhou_isolated_v8\\adjacent_videos\\01_02\\decoded_02.png",
+        "sha256": "f1d981feff5288fb20aa2fb8ba21745f1e3ef9d9247b9749d5d542bc7fb584c2",
+        "actually_viewed": true
+      },
+      {
+        "pair": "01_02",
+        "frame": 3,
+        "path": "execution\\pollution_hangzhou_isolated_v8\\adjacent_videos\\01_02\\decoded_03.png",
+        "sha256": "4c98c2ea04694506a075f7087e03401c5606ba08f1ae7df8820d0d96117d0e4f",
+        "actually_viewed": true
+      },
+      {
+        "pair": "02_03",
+        "frame": 1,
+        "path": "execution\\pollution_hangzhou_isolated_v8\\adjacent_videos\\02_03\\decoded_01.png",
+        "sha256": "3411d3ef3d7acb2cc728e40eddfb8e005a453e2a2fee33ac937e094503c3fc0e",
+        "actually_viewed": true
+      },
+      {
+        "pair": "02_03",
+        "frame": 2,
+        "path": "execution\\pollution_hangzhou_isolated_v8\\adjacent_videos\\02_03\\decoded_02.png",
+        "sha256": "30a9654287aae5863e048a1db1f2aaec46534bf1bcfb66068e7026ae676b74c3",
+        "actually_viewed": true
+      },
+      {
+        "pair": "02_03",
+        "frame": 3,
+        "path": "execution\\pollution_hangzhou_isolated_v8\\adjacent_videos\\02_03\\decoded_03.png",
+        "sha256": "21503e731fe81858b2d413ddf6f8dd91ecf8d2c7c09909b9bd358589302db02e",
+        "actually_viewed": true
+      },
+      {
+        "pair": "03_04",
+        "frame": 1,
+        "path": "execution\\pollution_hangzhou_isolated_v8\\adjacent_videos\\03_04\\decoded_01.png",
+        "sha256": "d13d53ead74f8d7e3ca86cf183ff22decc5afbb3413e0d36f9a4f925a0e78ee9",
+        "actually_viewed": true
+      },
+      {
+        "pair": "03_04",
+        "frame": 2,
+        "path": "execution\\pollution_hangzhou_isolated_v8\\adjacent_videos\\03_04\\decoded_02.png",
+        "sha256": "fb6af0be542c85b10548794d602813107b6155dbfd736825e5f212aa93e7e89b",
+        "actually_viewed": true
+      },
+      {
+        "pair": "03_04",
+        "frame": 3,
+        "path": "execution\\pollution_hangzhou_isolated_v8\\adjacent_videos\\03_04\\decoded_03.png",
+        "sha256": "b8457cf9fba976ccf21ff97cbfe679caae95e1c3cb4e2aac152e260c224867fa",
+        "actually_viewed": true
+      },
+      {
+        "pair": "04_05",
+        "frame": 1,
+        "path": "execution\\pollution_hangzhou_isolated_v8\\adjacent_videos\\04_05\\decoded_01.png",
+        "sha256": "bced024768ca5a424279ad0098887176b6d9911f5cb82e4a8b4ff2bc421594a6",
+        "actually_viewed": true
+      },
+      {
+        "pair": "04_05",
+        "frame": 2,
+        "path": "execution\\pollution_hangzhou_isolated_v8\\adjacent_videos\\04_05\\decoded_02.png",
+        "sha256": "65f6b90449848b9db314cc056dcd1125a417633490b52fa6b14b662ae32c05ce",
+        "actually_viewed": true
+      },
+      {
+        "pair": "04_05",
+        "frame": 3,
+        "path": "execution\\pollution_hangzhou_isolated_v8\\adjacent_videos\\04_05\\decoded_03.png",
+        "sha256": "dbe5af968236193abf6301d6432aaefcb6c37e8f0f70ebf6f42c135989017593",
+        "actually_viewed": true
+      },
+      {
+        "pair": "05_06",
+        "frame": 1,
+        "path": "execution\\pollution_hangzhou_isolated_v8\\adjacent_videos\\05_06\\decoded_01.png",
+        "sha256": "df9f829817d0785161714beaae96b1a791cdf3a1fc9447aee43c9e852b90a2a4",
+        "actually_viewed": true
+      },
+      {
+        "pair": "05_06",
+        "frame": 2,
+        "path": "execution\\pollution_hangzhou_isolated_v8\\adjacent_videos\\05_06\\decoded_02.png",
+        "sha256": "b5104dc90b9abbec527b957fae5046cf2f64b097af66b43ffeec46c15e4ba9e6",
+        "actually_viewed": true
+      },
+      {
+        "pair": "05_06",
+        "frame": 3,
+        "path": "execution\\pollution_hangzhou_isolated_v8\\adjacent_videos\\05_06\\decoded_03.png",
+        "sha256": "269fe5783a012d6b5cabcd4b08348687735943f845201c54c647ce59a9cede29",
+        "actually_viewed": true
+      },
+      {
+        "pair": "06_07",
+        "frame": 1,
+        "path": "execution\\pollution_hangzhou_isolated_v8\\adjacent_videos\\06_07\\decoded_01.png",
+        "sha256": "a935c88a27653773558ab333cebc660763dcf604810953710f6ee89b2d3c44e9",
+        "actually_viewed": true
+      },
+      {
+        "pair": "06_07",
+        "frame": 2,
+        "path": "execution\\pollution_hangzhou_isolated_v8\\adjacent_videos\\06_07\\decoded_02.png",
+        "sha256": "190155022bd72282bf2096dc8898ca97dc9346d3ab3aafd960ec95cf57d75e4c",
+        "actually_viewed": true
+      },
+      {
+        "pair": "06_07",
+        "frame": 3,
+        "path": "execution\\pollution_hangzhou_isolated_v8\\adjacent_videos\\06_07\\decoded_03.png",
+        "sha256": "3c56d68f8145840a6a06e9f5e6571c37dbdb14f9ced9740865a2a6196dd08799",
+        "actually_viewed": true
+      },
+      {
+        "pair": "07_08",
+        "frame": 1,
+        "path": "execution\\pollution_hangzhou_isolated_v8\\adjacent_videos\\07_08\\decoded_01.png",
+        "sha256": "17057066b63b271f15d23575f39038b80a7d49cb9bc6c209b2ddb8cad85ff46c",
+        "actually_viewed": true
+      },
+      {
+        "pair": "07_08",
+        "frame": 2,
+        "path": "execution\\pollution_hangzhou_isolated_v8\\adjacent_videos\\07_08\\decoded_02.png",
+        "sha256": "f2196e96c9638536c70e36e78c077a1898363c21653caab5e4c5aa59c4bce1df",
+        "actually_viewed": true
+      },
+      {
+        "pair": "07_08",
+        "frame": 3,
+        "path": "execution\\pollution_hangzhou_isolated_v8\\adjacent_videos\\07_08\\decoded_03.png",
+        "sha256": "abc7b53575b0299db35bad912ae0db434a09567ce96d725b765c663d0ddb6f0d",
+        "actually_viewed": true
+      },
+      {
+        "pair": "08_09",
+        "frame": 1,
+        "path": "execution\\pollution_hangzhou_isolated_v8\\adjacent_videos\\08_09\\decoded_01.png",
+        "sha256": "b8abd245c3ea2a03cc1db69de0e2a3287b7b1f3b08be26e44f2e60ae7b1a51be",
+        "actually_viewed": true
+      },
+      {
+        "pair": "08_09",
+        "frame": 2,
+        "path": "execution\\pollution_hangzhou_isolated_v8\\adjacent_videos\\08_09\\decoded_02.png",
+        "sha256": "3bdd1a6fcd950f0990cbdf4be36cbd68831efd1fa753af5c0c36ae88b52da5de",
+        "actually_viewed": true
+      },
+      {
+        "pair": "08_09",
+        "frame": 3,
+        "path": "execution\\pollution_hangzhou_isolated_v8\\adjacent_videos\\08_09\\decoded_03.png",
+        "sha256": "b90f3e22dd7f5982e1c4e310df6c33b45acdcf2c7d0ce54defd3e94e22b5c348",
+        "actually_viewed": true
+      }
+    ]
+  }
+}
