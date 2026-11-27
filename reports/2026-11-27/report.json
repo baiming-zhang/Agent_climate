@@ -1,0 +1,1832 @@
+{
+  "schema": "agent-climate-weekly-report-v1",
+  "release": "weekly-review-2026-11-27-r01",
+  "generated_UTC": "2026-11-27T02:05:28.934436+00:00",
+  "period": {
+    "start": "2026-11-16",
+    "end": "2026-11-27",
+    "scope": "Previous calendar week and current week through this snapshot"
+  },
+  "static_snapshot": true,
+  "new_simulation_for_report": false,
+  "new_video_render_for_report": false,
+  "collections": [
+    {
+      "id": "v8",
+      "title": "Latest V8 · 9 corrections + sampling control",
+      "default": "08_09",
+      "items": [
+        {
+          "id": "00_01",
+          "title": "00 → 01 · Three-dimensional transport",
+          "video": "../../hangzhou/fresh/isolated-v8/adjacent/00_01/comparison.mp4",
+          "poster": "../../hangzhou/fresh/isolated-v8/adjacent/00_01/poster.png",
+          "change": "A single-layer baseline is replaced by height-dependent 3D transport. Forcing and vertical definitions also change; this is not an isolated dimensionality experiment.",
+          "scope": "15 matched daily means",
+          "prompt": "Replace any single-layer approximation with a genuinely three-dimensional, meteorology-driven simulation of SO2 transport and diffusion for the full 15 days. Compute horizontal and vertical transport using winds that vary with location, height and time, with physically based turbulent mixing. Prefer an established, applicable 3D transport solver. Do not turn a two-dimensional field into an apparent 3D result by extruding it, repeating it over height, or only changing the visualization.\n\nDesign and state the spatial discretization explicitly. Distinguish the meteorological grid, the pollutant calculation or concentration-sampling grid, and the display resolution. For each computational grid, report its horizontal domain, spacing and dimensions; its vertical layer count, layer boundaries and reference (AGL or MSL); and its top height. Use closer vertical spacing near the ground and release heights and a defensible horizontal resolution for the source and terrain scales. Retain vertical wind shear rather than applying one wind vector to all heights. Use actual 3D meteorological inputs, not an invented vertical wind profile. Explain the supported physical scales without claiming building-resolving CFD or resolved small eddies on a regional grid. Preserve the full time-resolved 3D concentration output and the model code and settings.\n\nUse the same reporting period and forecast initialization cycle as your saved first version so that this correction can be compared with it. If an input or runtime obstacle prevents a complete run, report the actual incomplete status instead of silently reverting to the previous approximation.\n\nAfter applying this correction, rerun the complete requested simulation from its declared initial state through the entire requested reporting period. This rerun is required even if you believe that this correction leaves the numerical model unchanged. You may reuse unchanged raw input data and built executables, but do not substitute old simulated fields, a short test, or relabelled outputs for the new complete run. Preserve the previous version and save the new code, settings and computed outputs separately. Keep the same forecast cycle, source period and comparable random seed where compatible with the correction; record any necessary changes. Record actual computation wall time and simulated duration. If a real blocker prevents completion, report it as incomplete rather than claiming that the full rerun finished.",
+          "record": "../../hangzhou/fresh/isolated-v8/adjacent/00_01/comparison.json",
+          "metrics": [
+            0.6231608290235837,
+            0.724306126241221,
+            0.4925666694781722,
+            0.5470875899408149,
+            0.6459767730123883,
+            0.6423636311921823,
+            0.8054846095086203,
+            1.7032246918437857,
+            0.9285180519809412,
+            0.3642369491855758,
+            0.6174529980615441,
+            0.12775736300715526,
+            0.31032129011050386,
+            0.3493546523832472,
+            0.12672970286762045
+          ],
+          "metric_times": [
+            "Day 1",
+            "Day 2",
+            "Day 3",
+            "Day 4",
+            "Day 5",
+            "Day 6",
+            "Day 7",
+            "Day 8",
+            "Day 9",
+            "Day 10",
+            "Day 11",
+            "Day 12",
+            "Day 13",
+            "Day 14",
+            "Day 15"
+          ],
+          "metric_units": "µg/m³",
+          "new_full360_result": false,
+          "source_sha256": "f3bb9af216dda13a337e84672d4e436bdffe7d2b78e5b03af8cb02b925bd204f"
+        },
+        {
+          "id": "01_02",
+          "title": "01 → 02 · Dry and wet deposition",
+          "video": "../../hangzhou/fresh/isolated-v8/adjacent/01_02/comparison.mp4",
+          "poster": "../../hangzhou/fresh/isolated-v8/adjacent/01_02/poster.png",
+          "change": "Weather-dependent dry and wet removal replace an atmospheric-lifetime substitute; removed and exported mass are tracked separately.",
+          "scope": "3 matched hourly means",
+          "prompt": "Calculate physically based SO2 dry and wet deposition, coupled to the weather and the pollutant's actual height and contact with the relevant removal region. Track airborne, dry-deposited, wet-deposited and exported mass separately. Do not use a uniform atmospheric lifetime as a substitute for surface deposition, or delete surviving pollutant simply because it reaches a fixed age; distinguish any justified chemical loss from deposition. State the applicable parameterizations and assumptions. Keep the existing source scenario, forecast cycle, reporting period and spatial grids fixed for this correction.\n\nAfter applying this correction, rerun the complete requested simulation from its declared initial state through the entire requested reporting period. This rerun is required even if you believe that this correction leaves the numerical model unchanged. You may reuse unchanged raw input data and built executables, but do not substitute old simulated fields, a short test, or relabelled outputs for the new complete run. Preserve the previous version and save the new code, settings and computed outputs separately. Keep the same forecast cycle, source period and comparable random seed where compatible with the correction; record any necessary changes. Record actual computation wall time and simulated duration. If a real blocker prevents completion, report it as incomplete rather than claiming that the full rerun finished.",
+          "record": "../../hangzhou/fresh/isolated-v8/adjacent/01_02/comparison.json",
+          "metrics": [
+            0.605785455948905,
+            0.6467350647858393,
+            0.7065238146727767
+          ],
+          "metric_times": [
+            "00:00–01:00 CST",
+            "01:00–02:00 CST",
+            "02:00–03:00 CST"
+          ],
+          "metric_units": "µg/m³",
+          "new_full360_result": false,
+          "source_sha256": "59b6fdc383d0df6ba823fb42c088fb32673671f1906a477e49f102c17c94e645"
+        },
+        {
+          "id": "02_03",
+          "title": "02 → 03 · Documented outlets and plume rise",
+          "video": "../../hangzhou/fresh/isolated-v8/adjacent/02_03/comparison.mp4",
+          "poster": "../../hangzhou/fresh/isolated-v8/adjacent/02_03/poster.png",
+          "change": "Documented stacks replace district proxies, with momentum/buoyancy plume rise. This intermediate run covers only about 0.6814% of the city inventory; lower concentrations do not establish better accuracy.",
+          "scope": "3 matched hourly means",
+          "prompt": "Use real source locations and physically meaningful outlets, not district-centre proxies. Use traceable emission rates, stack heights and exit conditions where available, and distinguish measurements, design limits and assumptions. Compute momentum- and buoyancy-driven plume rise from those outlets in the height-dependent weather, conserving mass, momentum and energy, before handing pollutants to the 3D transport model. Keep unresolved emissions separate rather than inventing facilities or silently dropping mass. Keep the forecast cycle, reporting period and sampling grids unchanged.\n\nAfter applying this correction, rerun the complete requested simulation from its declared initial state through the entire requested reporting period. This rerun is required even if you believe that this correction leaves the numerical model unchanged. You may reuse unchanged raw input data and built executables, but do not substitute old simulated fields, a short test, or relabelled outputs for the new complete run. Preserve the previous version and save the new code, settings and computed outputs separately. Keep the same forecast cycle, source period and comparable random seed where compatible with the correction; record any necessary changes. Record actual computation wall time and simulated duration. If a real blocker prevents completion, report it as incomplete rather than claiming that the full rerun finished.",
+          "record": "../../hangzhou/fresh/isolated-v8/adjacent/02_03/comparison.json",
+          "metrics": [
+            0.8217662717031294,
+            0.9759416170845845,
+            1.1136141066879737
+          ],
+          "metric_times": [
+            "00:00–01:00 CST",
+            "01:00–02:00 CST",
+            "02:00–03:00 CST"
+          ],
+          "metric_units": "µg/m³",
+          "new_full360_result": false,
+          "source_sha256": "ed5abb04f8c79ba079df959eec447b826c5887de397de834dfe8ab859a4be190"
+        },
+        {
+          "id": "03_04",
+          "title": "03 → 04 · Citywide emissions coverage",
+          "video": "../../hangzhou/fresh/isolated-v8/adjacent/03_04/comparison.mp4",
+          "poster": "../../hangzhou/fresh/isolated-v8/adjacent/03_04/poster.png",
+          "change": "Estimated distributed historical emissions restore citywide inventory coverage alongside documented stacks, with double counting avoided. This is not a census of all operating 2026 facilities.",
+          "scope": "3 matched hourly means",
+          "prompt": "Make the emissions coverage match the requested citywide scenario, rather than transporting only one facility and leaving the remaining emissions in an unlocated ledger. Add traceable real sources where supported and use an appropriate published spatial inventory for the unresolved component, clearly separating documented point sources from estimated distributed emissions. Avoid double counting, fabricated facility locations or assigning all unresolved emissions to the known stacks. Preserve a transparent mass allocation and report each component separately. Keep the forecast cycle, reporting period and computational grids unchanged.\n\nAfter applying this correction, rerun the complete requested simulation from its declared initial state through the entire requested reporting period. This rerun is required even if you believe that this correction leaves the numerical model unchanged. You may reuse unchanged raw input data and built executables, but do not substitute old simulated fields, a short test, or relabelled outputs for the new complete run. Preserve the previous version and save the new code, settings and computed outputs separately. Keep the same forecast cycle, source period and comparable random seed where compatible with the correction; record any necessary changes. Record actual computation wall time and simulated duration. If a real blocker prevents completion, report it as incomplete rather than claiming that the full rerun finished.",
+          "record": "../../hangzhou/fresh/isolated-v8/adjacent/03_04/comparison.json",
+          "metrics": [
+            3.4714107625420603,
+            4.071369407794801,
+            3.8165610689849587
+          ],
+          "metric_times": [
+            "00:00–01:00 CST",
+            "01:00–02:00 CST",
+            "02:00–03:00 CST"
+          ],
+          "metric_units": "µg/m³",
+          "new_full360_result": false,
+          "source_sha256": "5a1f73ff1646faf2d91eb38b9a44e9678fe34a9bd537c26863a2b7a429065c50"
+        },
+        {
+          "id": "04_05",
+          "title": "04 → 05 · Particle sampling",
+          "video": "../../hangzhou/fresh/isolated-v8/adjacent/04_05/comparison.mp4",
+          "poster": "../../hangzhou/fresh/isolated-v8/adjacent/04_05/poster.png",
+          "change": "Particle count increases without changing emissions. This intermediate sampling comparison was not locally converged.",
+          "scope": "3 matched hourly means",
+          "prompt": "Increase particle sampling and check whether the concentration patterns, near-ground peaks and deposition are reasonably stable. Use a small, measured particle-number comparison and report the remaining sampling uncertainty. Increasing particle count must not increase emitted mass or change the spatial emissions inventory. Keep the weather, source scenario, physical parameterizations, reporting period and computational grids fixed, so this step tests statistical sampling rather than changing the physical problem.\n\nAfter applying this correction, rerun the complete requested simulation from its declared initial state through the entire requested reporting period. This rerun is required even if you believe that this correction leaves the numerical model unchanged. You may reuse unchanged raw input data and built executables, but do not substitute old simulated fields, a short test, or relabelled outputs for the new complete run. Preserve the previous version and save the new code, settings and computed outputs separately. Keep the same forecast cycle, source period and comparable random seed where compatible with the correction; record any necessary changes. Record actual computation wall time and simulated duration. If a real blocker prevents completion, report it as incomplete rather than claiming that the full rerun finished.",
+          "record": "../../hangzhou/fresh/isolated-v8/adjacent/04_05/comparison.json",
+          "metrics": [
+            2.2140204946736475,
+            2.33476779339472,
+            2.3370552888981524
+          ],
+          "metric_times": [
+            "00:00–01:00 CST",
+            "01:00–02:00 CST",
+            "02:00–03:00 CST"
+          ],
+          "metric_units": "µg/m³",
+          "new_full360_result": false,
+          "source_sha256": "2302ef9cce3352ad0baf721304aad863643dc3396ae64c7176d7e89b24ebfa01"
+        },
+        {
+          "id": "05_06",
+          "title": "05 → 06 · Terrain-driven local weather",
+          "video": "../../hangzhou/fresh/isolated-v8/adjacent/05_06/comparison.mp4",
+          "poster": "../../hangzhou/fresh/isolated-v8/adjacent/05_06/poster.png",
+          "change": "A 3 km local WRF wind field replaces coarse forcing. This provisional WSM6/Noah run was superseded by the user; the compared first three reporting hours were genuinely computed.",
+          "scope": "3 matched hourly means",
+          "prompt": "Let real terrain and land-surface processes shape the winds and pollutant transport. Use an established local three-dimensional weather model driven by the same frozen GFS cycle, targeting about 3 km horizontal spacing and 50 vertical levels with finer spacing near the ground. Cover all of Hangzhou plus a transport buffer; interpolating coarse weather pixels does not count as a finer wind simulation. Keep the current emission scenario, doubled particle sampling and reporting period. First measure stability and cost with a short weather benchmark, then complete the full-period weather and SO2 recalculation. Explain the main grid and physics choices.\n\nExecution environment: the existing project-only linux-runner now has a large writable /work and read-only standard WRF/WPS tools. Its own README describes their paths and use. No other case configurations or results are supplied.\n\nAfter applying this correction, rerun the complete requested simulation from its declared initial state through the entire requested reporting period. This rerun is required even if you believe that this correction leaves the numerical model unchanged. You may reuse unchanged raw input data and built executables, but do not substitute old simulated fields, a short test, or relabelled outputs for the new complete run. Preserve the previous version and save the new code, settings and computed outputs separately. Keep the same forecast cycle, source period and comparable random seed where compatible with the correction; record any necessary changes. Record actual computation wall time and simulated duration. If a real blocker prevents completion, report it as incomplete rather than claiming that the full rerun finished.",
+          "record": "../../hangzhou/fresh/isolated-v8/adjacent/05_06/comparison.json",
+          "metrics": [
+            3.6548522178657166,
+            4.487016380026088,
+            3.278216648113235
+          ],
+          "metric_times": [
+            "00:00–01:00 CST",
+            "01:00–02:00 CST",
+            "02:00–03:00 CST"
+          ],
+          "metric_units": "µg/m³",
+          "new_full360_result": false,
+          "source_sha256": "722cb2f2c7a3d9a7c7e25e40250028a185f1fc7b6b2f282602880061dd5a7397"
+        },
+        {
+          "id": "06_07",
+          "title": "06 → 07 · Consolidated weather physics",
+          "video": "../../hangzhou/fresh/isolated-v8/adjacent/06_07/comparison.mp4",
+          "poster": "../../hangzhou/fresh/isolated-v8/adjacent/06_07/poster.png",
+          "change": "Nested 9/3 km, 50-level WRF with Thompson, Noah-MP and YSU replaces provisional physics. Weather and transport change together; this is not an isolated test of one scheme.",
+          "scope": "3 matched hourly means",
+          "prompt": "Combine the changes that would require another expensive weather simulation into this correction. The user permits further inexpensive transport corrections separately. Preserve the provisional WSM6/Noah run as incomplete; do not finish it merely before replacing it.\n\nUse the complete target weather configuration together: WRF with 9/3 km nested domains, about 50 terrain-following levels refined near ground, Thompson microphysics, Noah-MP land surface, YSU boundary-layer physics, actual terrain and land cover, and suitable stable time steps, initially 18/6 seconds. Keep the frozen GFS cycle and reporting period. Test this complete configuration and its numerical stability in short actual benchmarks, measure efficient local execution, then make one continuous full-period weather integration from the original initial state. Do not continue the incompatible WSM6/Noah atmospheric state under new physics. Reuse unchanged raw inputs and public executables. Use real restart state between bounded jobs and preserve native 3D winds, vertical motion, thermodynamics, clouds and rain. Prefer validated GPU execution where available; use reliable native CPU execution otherwise.\n\nFreeze the resulting weather as the fixed driver for subsequent inexpensive pollutant experiments. For this weather comparison, keep the current supported citywide emissions, doubled particle sampling and transport/removal settings, and freshly recompute the full 360-hour SO2 reporting period. Later source, plume, particle, deposition or transport-solver corrections may remain separate full-period pollutant runs without regenerating unchanged weather. Record computation and simulated duration, reasoning tokens and available reasoning timing, rendering and other work separately. Preserve original results and disclose unresolved approximations; do not fabricate measurements, old-case answers or visual plume structure. Rendering is handled separately with the approved visual system.\n\nAfter applying this correction, rerun the complete requested simulation from its declared initial state through the entire requested reporting period. This rerun is required even if you believe that this correction leaves the numerical model unchanged. You may reuse unchanged raw input data and built executables, but do not substitute old simulated fields, a short test, or relabelled outputs for the new complete run. Preserve the previous version and save the new code, settings and computed outputs separately. Keep the same forecast cycle, source period and comparable random seed where compatible with the correction; record any necessary changes. Record actual computation wall time and simulated duration. If a real blocker prevents completion, report it as incomplete rather than claiming that the full rerun finished.",
+          "record": "../../hangzhou/fresh/isolated-v8/adjacent/06_07/comparison.json",
+          "metrics": [
+            1.2251791070749278,
+            1.8740480492339475,
+            3.1617695290647996
+          ],
+          "metric_times": [
+            "00:00–01:00 CST",
+            "01:00–02:00 CST",
+            "02:00–03:00 CST"
+          ],
+          "metric_units": "µg/m³",
+          "new_full360_result": false,
+          "source_sha256": "daf998dbbf151e183977764b87ed861707dd307f31ccc115befa688ab9b37273"
+        },
+        {
+          "id": "07_08",
+          "title": "07 → 08 · Native transport and finite-travel plume",
+          "video": "../../hangzhou/fresh/isolated-v8/adjacent/07_08/comparison.mp4",
+          "poster": "../../hangzhou/fresh/isolated-v8/adjacent/07_08/poster.png",
+          "change": "A native FLEXPART-WRF derivative and finite-travel-time integral plume replace the previous transport/handoff implementation. Native reader and negative-coordinate kernel repairs are preserved and disclosed; this candidate remained sampling-sensitive.",
+          "scope": "3 matched hourly means",
+          "prompt": "Keep the existing frozen three-day nested WRF weather, source inventory and emission rates. Use native FLEXPART-WRF for continuous three-dimensional Lagrangian transport, with terrain-following winds, atmospheric stability, parameterized turbulence, dry and wet removal. Add a finite-travel-time buoyant plume with entrainment and height-dependent wind, starting at each documented chimney outlet. Retain pollutant mass during near-source travel and transfer it once into regional transport; do not teleport it to a final effective height or double-count the handoff. Keep uncertain distributed emissions separate from documented stacks. Produce physical three-dimensional concentration fields from conserved mass and sampling volumes, including near-ground exposure and terrain exclusion. Cover the whole municipal source area plus a suitable buffer, and distinguish weather resolution, output-bin spacing and continuous particle positions. Use measured short tests to choose practical particle sampling and supported GPU acceleration, then recompute the complete72-hour pollutant period without rerunning unchanged weather. Save both versions, genuine particle restart state, mass budgets, zero-emission checks, numerical timing and remaining limitations. No decorative smoke or invented subgrid eddies.\n\nThe user has changed the iterative experiment to 72 continuous reporting hours (three days) per version. Keep the declared reporting start and the required spin-up; the current case has 10 spin-up hours, hence model lead 0 through 82 with reporting lead 10 through 82. Preserve emissions rates and physical units; do not compress 360 hours of emissions into 72 hours. Only after the method is settled will the final selected method be run for 360 reporting hours (15 days). Preserve earlier archives unchanged.\n\nAfter applying this correction, rerun the complete requested simulation from its declared initial state through the entire requested reporting period. This rerun is required even if you believe that this correction leaves the numerical model unchanged. You may reuse unchanged raw input data and built executables, but do not substitute old simulated fields, a short test, or relabelled outputs for the new complete run. Preserve the previous version and save the new code, settings and computed outputs separately. Keep the same forecast cycle, source period and comparable random seed where compatible with the correction; record any necessary changes. Record actual computation wall time and simulated duration. If a real blocker prevents completion, report it as incomplete rather than claiming that the full rerun finished.",
+          "record": "../../hangzhou/fresh/isolated-v8/adjacent/07_08/comparison.json",
+          "metrics": [
+            0.8437697875732165,
+            1.1237860586556627,
+            1.9405764321820806
+          ],
+          "metric_times": [
+            "00:00–01:00 CST",
+            "01:00–02:00 CST",
+            "02:00–03:00 CST"
+          ],
+          "metric_units": "µg/m³",
+          "new_full360_result": false,
+          "source_sha256": "cbbe694c36a8633fc71cabbfc7d32e54c4236d629113457438e9e3b38cb9f2dc"
+        },
+        {
+          "id": "08_09",
+          "title": "08 → 09 · Native geometry and sampling",
+          "video": "../../hangzhou/fresh/isolated-v8/adjacent/08_09/comparison.mp4",
+          "poster": "../../hangzhou/fresh/isolated-v8/adjacent/08_09/poster.png",
+          "change": "Native terrain, bin geometry and areas are aligned; mass-aware particle allocation and higher sampling are introduced. The selected short-case pair passes its predeclared sensitivity checks, not a monitoring-error or all-weather accuracy test.",
+          "scope": "3 matched hourly means",
+          "prompt": "Improve and verify numerical resolution before any long run. Keep the current physical model, frozen weather, source rates and three-hour reporting window fixed. Use consistent native coordinates, cell areas, terrain and vertical references when representing and combining the near-source and regional three-dimensional fields. Preserve each raw contribution and document any coordinate conversion.\n\nIncrease particle sampling to practical levels chosen from measured runtime and memory, using supported parallel execution where it preserves the model. Measure convergence on the same fixed physical grid and time intervals: include hourly near-ground exposure, three-dimensional fields, integrated mass and local peaks, with appropriate area or volume weighting and an honest estimate of stochastic uncertainty. Do not blur saved fields, change the output bins, discard inconvenient cells or alter source mass to make the comparison agree. Use a small, purposeful set of short tests rather than an open parameter matrix, and record the intended accuracy criteria before running them. Distinguish continuous particle transport, native weather resolution and concentration sampling resolution.\n\nRecompute the complete three-hour pollutant reporting case with the selected numerical settings, retaining required preparation separately and reusing unchanged weather. Save the previous and new versions, physical units, raw fields, timings, numerical sensitivity and mass/zero-source checks. Report remaining limitations honestly. Only when short-case evidence supports the method should the final15-day calculation begin.\n\nBefore any long simulation, run a short calculation with the intended physical model and representative actual inputs, check its physical behavior, numerical integrity and measured runtime, and iterate. Launch the full-duration simulation only after those short tests are satisfactory.\n\nThe user has changed the iterative experiment to 3 continuous reporting hours per version. Keep the declared reporting start and the required spin-up; the current case has 10 spin-up hours, hence model lead 0 through 13 with reporting lead 10 through 13. Preserve emissions rates and physical units; do not compress 360 hours of emissions into 3 hours. Only after the method is settled will the final selected method be run for 360 reporting hours (15 days). Preserve earlier archives unchanged.\n\nAfter applying this correction, rerun the complete requested simulation from its declared initial state through the entire requested reporting period. This rerun is required even if you believe that this correction leaves the numerical model unchanged. You may reuse unchanged raw input data and built executables, but do not substitute old simulated fields, a short test, or relabelled outputs for the new complete run. Preserve the previous version and save the new code, settings and computed outputs separately. Keep the same forecast cycle, source period and comparable random seed where compatible with the correction; record any necessary changes. Record actual computation wall time and simulated duration. If a real blocker prevents completion, report it as incomplete rather than claiming that the full rerun finished.",
+          "record": "../../hangzhou/fresh/isolated-v8/adjacent/08_09/comparison.json",
+          "metrics": [
+            0.19464207560072308,
+            0.20035626457774797,
+            0.24661204455015276
+          ],
+          "metric_times": [
+            "00:00–01:00 CST",
+            "01:00–02:00 CST",
+            "02:00–03:00 CST"
+          ],
+          "metric_units": "µg/m³",
+          "new_full360_result": false,
+          "source_sha256": "1e1b0be3520005804cfd89d9195e1f81ff4d640a7418147f98f046bc1fc7cea6"
+        },
+        {
+          "id": "sampling09",
+          "title": "09 · Allocation mechanism (same total budget)",
+          "video": "../../hangzhou/fresh/isolated-v8/sampling.mp4",
+          "poster": "../../hangzhou/fresh/isolated-v8/poster.png",
+          "change": "Uniform versus mass-aware allocation at the same total particle budget. This separates allocation from the higher-count 08 → 09 comparison.",
+          "scope": "3 matched hourly means · same budget",
+          "prompt": "Improve and verify numerical resolution before any long run. Keep the current physical model, frozen weather, source rates and three-hour reporting window fixed. Use consistent native coordinates, cell areas, terrain and vertical references when representing and combining the near-source and regional three-dimensional fields. Preserve each raw contribution and document any coordinate conversion.\n\nIncrease particle sampling to practical levels chosen from measured runtime and memory, using supported parallel execution where it preserves the model. Measure convergence on the same fixed physical grid and time intervals: include hourly near-ground exposure, three-dimensional fields, integrated mass and local peaks, with appropriate area or volume weighting and an honest estimate of stochastic uncertainty. Do not blur saved fields, change the output bins, discard inconvenient cells or alter source mass to make the comparison agree. Use a small, purposeful set of short tests rather than an open parameter matrix, and record the intended accuracy criteria before running them. Distinguish continuous particle transport, native weather resolution and concentration sampling resolution.\n\nRecompute the complete three-hour pollutant reporting case with the selected numerical settings, retaining required preparation separately and reusing unchanged weather. Save the previous and new versions, physical units, raw fields, timings, numerical sensitivity and mass/zero-source checks. Report remaining limitations honestly. Only when short-case evidence supports the method should the final15-day calculation begin.\n\nBefore any long simulation, run a short calculation with the intended physical model and representative actual inputs, check its physical behavior, numerical integrity and measured runtime, and iterate. Launch the full-duration simulation only after those short tests are satisfactory.\n\nThe user has changed the iterative experiment to 3 continuous reporting hours per version. Keep the declared reporting start and the required spin-up; the current case has 10 spin-up hours, hence model lead 0 through 13 with reporting lead 10 through 13. Preserve emissions rates and physical units; do not compress 360 hours of emissions into 3 hours. Only after the method is settled will the final selected method be run for 360 reporting hours (15 days). Preserve earlier archives unchanged.\n\nAfter applying this correction, rerun the complete requested simulation from its declared initial state through the entire requested reporting period. This rerun is required even if you believe that this correction leaves the numerical model unchanged. You may reuse unchanged raw input data and built executables, but do not substitute old simulated fields, a short test, or relabelled outputs for the new complete run. Preserve the previous version and save the new code, settings and computed outputs separately. Keep the same forecast cycle, source period and comparable random seed where compatible with the correction; record any necessary changes. Record actual computation wall time and simulated duration. If a real blocker prevents completion, report it as incomplete rather than claiming that the full rerun finished.",
+          "record": "../../hangzhou/fresh/isolated-v8/comparison.json",
+          "metrics": [
+            0.11911462858642674,
+            0.18710277440911074,
+            0.2298101919866377
+          ],
+          "metric_times": [
+            "00:00–01:00 CST",
+            "01:00–02:00 CST",
+            "02:00–03:00 CST"
+          ],
+          "metric_units": "µg/m³",
+          "new_full360_result": false,
+          "source_sha256": "95beaa6dc28a08704dfb5c02ab53ff8c61bbebc6b8720478128be9853af5c112"
+        }
+      ],
+      "note": "Before / after / signed difference. Most pairs compare three genuinely computed hours; 00–01 compares 15 daily means."
+    },
+    {
+      "id": "rerun",
+      "title": "Earlier 14-step study · Rerun requested",
+      "default": "06_07",
+      "items": [
+        {
+          "id": "00_01",
+          "title": "00 → 01 · Prioritize authoritative, traceable sources",
+          "video": "../../hangzhou/fresh/isolated-sol/rerun/00_01_terrain-v4.mp4",
+          "poster": "../../hangzhou/fresh/isolated-sol/rerun/00_01_terrain-v4.png",
+          "change": "explicitly skipped as documentation/assessment only",
+          "scope": "Earlier single-layer model · saved 15-day fields",
+          "prompt": "Prioritize authoritative, traceable sources.",
+          "record": "../../hangzhou/fresh/isolated-sol/rerun-stage-metrics.csv",
+          "metrics": [
+            0.0
+          ],
+          "metric_times": [
+            "Matched saved field"
+          ],
+          "metric_units": "µg/m³"
+        },
+        {
+          "id": "01_02",
+          "title": "01 → 02 · Define the physical scales and modeling objectives first",
+          "video": "../../hangzhou/fresh/isolated-sol/rerun/01_02_terrain-v4.mp4",
+          "poster": "../../hangzhou/fresh/isolated-sol/rerun/01_02_terrain-v4.png",
+          "change": "explicitly skipped as documentation/assessment only",
+          "scope": "Earlier single-layer model · saved 15-day fields",
+          "prompt": "Define the physical scales and modeling objectives first.",
+          "record": "../../hangzhou/fresh/isolated-sol/rerun-stage-metrics.csv",
+          "metrics": [
+            0.0
+          ],
+          "metric_times": [
+            "Matched saved field"
+          ],
+          "metric_units": "µg/m³"
+        },
+        {
+          "id": "02_03",
+          "title": "02 → 03 · Prioritize assessing the need for three-dimensional modeling in real-world applications",
+          "video": "../../hangzhou/fresh/isolated-sol/rerun/02_03_terrain-v4.mp4",
+          "poster": "../../hangzhou/fresh/isolated-sol/rerun/02_03_terrain-v4.png",
+          "change": "explicitly skipped as documentation/assessment only",
+          "scope": "Earlier single-layer model · saved 15-day fields",
+          "prompt": "Prioritize assessing the need for three-dimensional modeling in real-world applications.",
+          "record": "../../hangzhou/fresh/isolated-sol/rerun-stage-metrics.csv",
+          "metrics": [
+            0.0
+          ],
+          "metric_times": [
+            "Matched saved field"
+          ],
+          "metric_units": "µg/m³"
+        },
+        {
+          "id": "03_04",
+          "title": "03 → 04 · Give source terms a meaningful physical definition and an actual entry location",
+          "video": "../../hangzhou/fresh/isolated-sol/rerun/03_04_terrain-v4.mp4",
+          "poster": "../../hangzhou/fresh/isolated-sol/rerun/03_04_terrain-v4.png",
+          "change": "full-period rerun/verification; saved field identical",
+          "scope": "Earlier single-layer model · saved 15-day fields",
+          "prompt": "Give source terms a meaningful physical definition and an actual entry location.",
+          "record": "../../hangzhou/fresh/isolated-sol/rerun-stage-metrics.csv",
+          "metrics": [
+            0.0
+          ],
+          "metric_times": [
+            "Matched saved field"
+          ],
+          "metric_units": "µg/m³"
+        },
+        {
+          "id": "04_05",
+          "title": "04 → 05 · Ensure initial and boundary conditions are consistent with the real-world scenario",
+          "video": "../../hangzhou/fresh/isolated-sol/rerun/04_05_terrain-v4.mp4",
+          "poster": "../../hangzhou/fresh/isolated-sol/rerun/04_05_terrain-v4.png",
+          "change": "full-period rerun; saved field changed",
+          "scope": "Earlier single-layer model · saved 15-day fields",
+          "prompt": "Ensure initial and boundary conditions are consistent with the real-world scenario.",
+          "record": "../../hangzhou/fresh/isolated-sol/rerun-stage-metrics.csv",
+          "metrics": [
+            2.789200033865648
+          ],
+          "metric_times": [
+            "Matched saved field"
+          ],
+          "metric_units": "µg/m³"
+        },
+        {
+          "id": "05_06",
+          "title": "05 → 06 · Preserve continuous state propagation throughout the simulation",
+          "video": "../../hangzhou/fresh/isolated-sol/rerun/05_06_terrain-v4.mp4",
+          "poster": "../../hangzhou/fresh/isolated-sol/rerun/05_06_terrain-v4.png",
+          "change": "full-period rerun/verification; saved field identical",
+          "scope": "Earlier single-layer model · saved 15-day fields",
+          "prompt": "Preserve continuous state propagation throughout the simulation.",
+          "record": "../../hangzhou/fresh/isolated-sol/rerun-stage-metrics.csv",
+          "metrics": [
+            0.0
+          ],
+          "metric_times": [
+            "Matched saved field"
+          ],
+          "metric_units": "µg/m³"
+        },
+        {
+          "id": "06_07",
+          "title": "06 → 07 · Account for relevant physical processes and their interactions",
+          "video": "../../hangzhou/fresh/isolated-sol/rerun/06_07_terrain-v4.mp4",
+          "poster": "../../hangzhou/fresh/isolated-sol/rerun/06_07_terrain-v4.png",
+          "change": "full-period rerun; saved field changed",
+          "scope": "Earlier single-layer model · saved 15-day fields",
+          "prompt": "Account for relevant physical processes and their interactions.",
+          "record": "../../hangzhou/fresh/isolated-sol/rerun-stage-metrics.csv",
+          "metrics": [
+            47.083101853761825
+          ],
+          "metric_times": [
+            "Matched saved field"
+          ],
+          "metric_units": "µg/m³"
+        },
+        {
+          "id": "07_08",
+          "title": "07 → 08 · Make geometry and physical objects participate in the computation",
+          "video": "../../hangzhou/fresh/isolated-sol/rerun/07_08_terrain-v4.mp4",
+          "poster": "../../hangzhou/fresh/isolated-sol/rerun/07_08_terrain-v4.png",
+          "change": "full-period rerun; saved field changed",
+          "scope": "Earlier single-layer model · saved 15-day fields",
+          "prompt": "Make geometry and physical objects participate in the computation.",
+          "record": "../../hangzhou/fresh/isolated-sol/rerun-stage-metrics.csv",
+          "metrics": [
+            4.296747652918209
+          ],
+          "metric_times": [
+            "Matched saved field"
+          ],
+          "metric_units": "µg/m³"
+        },
+        {
+          "id": "08_09",
+          "title": "08 → 09 · Check conservation, units, and physical constraints",
+          "video": "../../hangzhou/fresh/isolated-sol/rerun/08_09_terrain-v4.mp4",
+          "poster": "../../hangzhou/fresh/isolated-sol/rerun/08_09_terrain-v4.png",
+          "change": "full-period rerun/verification; saved field identical",
+          "scope": "Earlier single-layer model · saved 15-day fields",
+          "prompt": "Check conservation, units, and physical constraints.",
+          "record": "../../hangzhou/fresh/isolated-sol/rerun-stage-metrics.csv",
+          "metrics": [
+            0.0
+          ],
+          "metric_times": [
+            "Matched saved field"
+          ],
+          "metric_units": "µg/m³"
+        },
+        {
+          "id": "09_10",
+          "title": "09 → 10 · Verify spatial grid convergence",
+          "video": "../../hangzhou/fresh/isolated-sol/rerun/09_10_terrain-v4.mp4",
+          "poster": "../../hangzhou/fresh/isolated-sol/rerun/09_10_terrain-v4.png",
+          "change": "three full-period spatial-grid tests; published grid retained",
+          "scope": "Earlier single-layer model · saved 15-day fields",
+          "prompt": "Verify spatial grid convergence.",
+          "record": "../../hangzhou/fresh/isolated-sol/rerun-stage-metrics.csv",
+          "metrics": [
+            0.0
+          ],
+          "metric_times": [
+            "Matched saved field"
+          ],
+          "metric_units": "µg/m³"
+        },
+        {
+          "id": "10_11",
+          "title": "10 → 11 · Verify timestep and statistical sampling convergence",
+          "video": "../../hangzhou/fresh/isolated-sol/rerun/10_11_terrain-v4.mp4",
+          "poster": "../../hangzhou/fresh/isolated-sol/rerun/10_11_terrain-v4.png",
+          "change": "four full-period timestep tests; published field retained",
+          "scope": "Earlier single-layer model · saved 15-day fields",
+          "prompt": "Verify timestep and statistical sampling convergence.",
+          "record": "../../hangzhou/fresh/isolated-sol/rerun-stage-metrics.csv",
+          "metrics": [
+            0.0
+          ],
+          "metric_times": [
+            "Matched saved field"
+          ],
+          "metric_units": "µg/m³"
+        },
+        {
+          "id": "11_12",
+          "title": "11 → 12 · Validate the model using independent evidence",
+          "video": "../../hangzhou/fresh/isolated-sol/rerun/11_12_terrain-v4.mp4",
+          "poster": "../../hangzhou/fresh/isolated-sol/rerun/11_12_terrain-v4.png",
+          "change": "independent 24h hindcast evaluation; future forecast field retained",
+          "scope": "Earlier single-layer model · saved 15-day fields",
+          "prompt": "Validate the model using independent evidence.",
+          "record": "../../hangzhou/fresh/isolated-sol/rerun-stage-metrics.csv",
+          "metrics": [
+            0.0
+          ],
+          "metric_times": [
+            "Matched saved field"
+          ],
+          "metric_units": "µg/m³"
+        },
+        {
+          "id": "12_13",
+          "title": "12 → 13 · Define acceptance criteria appropriate to the application in advance",
+          "video": "../../hangzhou/fresh/isolated-sol/rerun/12_13_terrain-v4.mp4",
+          "poster": "../../hangzhou/fresh/isolated-sol/rerun/12_13_terrain-v4.png",
+          "change": "explicitly skipped as documentation/assessment only",
+          "scope": "Earlier single-layer model · saved 15-day fields",
+          "prompt": "Define acceptance criteria appropriate to the application in advance.",
+          "record": "../../hangzhou/fresh/isolated-sol/rerun-stage-metrics.csv",
+          "metrics": [
+            0.0
+          ],
+          "metric_times": [
+            "Matched saved field"
+          ],
+          "metric_units": "µg/m³"
+        },
+        {
+          "id": "13_14",
+          "title": "13 → 14 · Preserve scientific traceability through acceleration and visualization",
+          "video": "../../hangzhou/fresh/isolated-sol/rerun/13_14_terrain-v4.mp4",
+          "poster": "../../hangzhou/fresh/isolated-sol/rerun/13_14_terrain-v4.png",
+          "change": "full-period rerun/verification; saved field identical",
+          "scope": "Earlier single-layer model · saved 15-day fields",
+          "prompt": "Preserve scientific traceability through acceleration and visualization.",
+          "record": "../../hangzhou/fresh/isolated-sol/rerun-stage-metrics.csv",
+          "metrics": [
+            0.0
+          ],
+          "metric_times": [
+            "Matched saved field"
+          ],
+          "metric_units": "µg/m³"
+        }
+      ],
+      "note": "Single mixed-layer model; not a 3D stack simulation. After each correction, rerun the entire simulation unless judged unnecessary."
+    },
+    {
+      "id": "original",
+      "title": "Earlier 14-step study · Original prompts only",
+      "default": "06_07",
+      "items": [
+        {
+          "id": "00_01",
+          "title": "00 → 01 · Prioritize authoritative, traceable sources",
+          "video": "../../hangzhou/fresh/isolated-sol/original/00_01_terrain-v4.mp4",
+          "poster": "../../hangzhou/fresh/isolated-sol/original/00_01_terrain-v4.png",
+          "change": "documentation/provenance only",
+          "scope": "Earlier single-layer model · saved 15-day fields",
+          "prompt": "Prioritize authoritative, traceable sources.",
+          "record": "../../hangzhou/fresh/isolated-sol/original-stage-metrics.csv",
+          "metrics": [
+            0.0
+          ],
+          "metric_times": [
+            "Matched saved field"
+          ],
+          "metric_units": "µg/m³"
+        },
+        {
+          "id": "01_02",
+          "title": "01 → 02 · Define the physical scales and modeling objectives first",
+          "video": "../../hangzhou/fresh/isolated-sol/original/01_02_terrain-v4.mp4",
+          "poster": "../../hangzhou/fresh/isolated-sol/original/01_02_terrain-v4.png",
+          "change": "documentation/provenance only",
+          "scope": "Earlier single-layer model · saved 15-day fields",
+          "prompt": "Define the physical scales and modeling objectives first.",
+          "record": "../../hangzhou/fresh/isolated-sol/original-stage-metrics.csv",
+          "metrics": [
+            0.0
+          ],
+          "metric_times": [
+            "Matched saved field"
+          ],
+          "metric_units": "µg/m³"
+        },
+        {
+          "id": "02_03",
+          "title": "02 → 03 · Prioritize assessing the need for three-dimensional modeling in real-world applications",
+          "video": "../../hangzhou/fresh/isolated-sol/original/02_03_terrain-v4.mp4",
+          "poster": "../../hangzhou/fresh/isolated-sol/original/02_03_terrain-v4.png",
+          "change": "documentation/provenance only",
+          "scope": "Earlier single-layer model · saved 15-day fields",
+          "prompt": "Prioritize assessing the need for three-dimensional modeling in real-world applications.",
+          "record": "../../hangzhou/fresh/isolated-sol/original-stage-metrics.csv",
+          "metrics": [
+            0.0
+          ],
+          "metric_times": [
+            "Matched saved field"
+          ],
+          "metric_units": "µg/m³"
+        },
+        {
+          "id": "03_04",
+          "title": "03 → 04 · Give source terms a meaningful physical definition and an actual entry location",
+          "video": "../../hangzhou/fresh/isolated-sol/original/03_04_terrain-v4.mp4",
+          "poster": "../../hangzhou/fresh/isolated-sol/original/03_04_terrain-v4.png",
+          "change": "new isolated source scenario; main city field unchanged",
+          "scope": "Earlier single-layer model · saved 15-day fields",
+          "prompt": "Give source terms a meaningful physical definition and an actual entry location.",
+          "record": "../../hangzhou/fresh/isolated-sol/original-stage-metrics.csv",
+          "metrics": [
+            0.0
+          ],
+          "metric_times": [
+            "Matched saved field"
+          ],
+          "metric_units": "µg/m³"
+        },
+        {
+          "id": "04_05",
+          "title": "04 → 05 · Ensure initial and boundary conditions are consistent with the real-world scenario",
+          "video": "../../hangzhou/fresh/isolated-sol/original/04_05_terrain-v4.mp4",
+          "poster": "../../hangzhou/fresh/isolated-sol/original/04_05_terrain-v4.png",
+          "change": "published numerical field changed",
+          "scope": "Earlier single-layer model · saved 15-day fields",
+          "prompt": "Ensure initial and boundary conditions are consistent with the real-world scenario.",
+          "record": "../../hangzhou/fresh/isolated-sol/original-stage-metrics.csv",
+          "metrics": [
+            0.03976002324934021
+          ],
+          "metric_times": [
+            "Matched saved field"
+          ],
+          "metric_units": "µg/m³"
+        },
+        {
+          "id": "05_06",
+          "title": "05 → 06 · Preserve continuous state propagation throughout the simulation",
+          "video": "../../hangzhou/fresh/isolated-sol/original/05_06_terrain-v4.mp4",
+          "poster": "../../hangzhou/fresh/isolated-sol/original/05_06_terrain-v4.png",
+          "change": "continuity verification; published field unchanged",
+          "scope": "Earlier single-layer model · saved 15-day fields",
+          "prompt": "Preserve continuous state propagation throughout the simulation.",
+          "record": "../../hangzhou/fresh/isolated-sol/original-stage-metrics.csv",
+          "metrics": [
+            0.0
+          ],
+          "metric_times": [
+            "Matched saved field"
+          ],
+          "metric_units": "µg/m³"
+        },
+        {
+          "id": "06_07",
+          "title": "06 → 07 · Account for relevant physical processes and their interactions",
+          "video": "../../hangzhou/fresh/isolated-sol/original/06_07_terrain-v4.mp4",
+          "poster": "../../hangzhou/fresh/isolated-sol/original/06_07_terrain-v4.png",
+          "change": "published numerical field changed",
+          "scope": "Earlier single-layer model · saved 15-day fields",
+          "prompt": "Account for relevant physical processes and their interactions.",
+          "record": "../../hangzhou/fresh/isolated-sol/original-stage-metrics.csv",
+          "metrics": [
+            0.8765643997070451
+          ],
+          "metric_times": [
+            "Matched saved field"
+          ],
+          "metric_units": "µg/m³"
+        },
+        {
+          "id": "07_08",
+          "title": "07 → 08 · Make geometry and physical objects participate in the computation",
+          "video": "../../hangzhou/fresh/isolated-sol/original/07_08_terrain-v4.mp4",
+          "poster": "../../hangzhou/fresh/isolated-sol/original/07_08_terrain-v4.png",
+          "change": "published numerical field changed",
+          "scope": "Earlier single-layer model · saved 15-day fields",
+          "prompt": "Make geometry and physical objects participate in the computation.",
+          "record": "../../hangzhou/fresh/isolated-sol/original-stage-metrics.csv",
+          "metrics": [
+            0.5386004331047782
+          ],
+          "metric_times": [
+            "Matched saved field"
+          ],
+          "metric_units": "µg/m³"
+        },
+        {
+          "id": "08_09",
+          "title": "08 → 09 · Check conservation, units, and physical constraints",
+          "video": "../../hangzhou/fresh/isolated-sol/original/08_09_terrain-v4.mp4",
+          "poster": "../../hangzhou/fresh/isolated-sol/original/08_09_terrain-v4.png",
+          "change": "published numerical field changed",
+          "scope": "Earlier single-layer model · saved 15-day fields",
+          "prompt": "Check conservation, units, and physical constraints.",
+          "record": "../../hangzhou/fresh/isolated-sol/original-stage-metrics.csv",
+          "metrics": [
+            0.0001888162105442518
+          ],
+          "metric_times": [
+            "Matched saved field"
+          ],
+          "metric_units": "µg/m³"
+        },
+        {
+          "id": "09_10",
+          "title": "09 → 10 · Verify spatial grid convergence",
+          "video": "../../hangzhou/fresh/isolated-sol/original/09_10_terrain-v4.mp4",
+          "poster": "../../hangzhou/fresh/isolated-sol/original/09_10_terrain-v4.png",
+          "change": "solver/convergence/benchmark reruns; published field unchanged",
+          "scope": "Earlier single-layer model · saved 15-day fields",
+          "prompt": "Verify spatial grid convergence.",
+          "record": "../../hangzhou/fresh/isolated-sol/original-stage-metrics.csv",
+          "metrics": [
+            0.0
+          ],
+          "metric_times": [
+            "Matched saved field"
+          ],
+          "metric_units": "µg/m³"
+        },
+        {
+          "id": "10_11",
+          "title": "10 → 11 · Verify timestep and statistical sampling convergence",
+          "video": "../../hangzhou/fresh/isolated-sol/original/10_11_terrain-v4.mp4",
+          "poster": "../../hangzhou/fresh/isolated-sol/original/10_11_terrain-v4.png",
+          "change": "solver/convergence/benchmark reruns; published field unchanged",
+          "scope": "Earlier single-layer model · saved 15-day fields",
+          "prompt": "Verify timestep and statistical sampling convergence.",
+          "record": "../../hangzhou/fresh/isolated-sol/original-stage-metrics.csv",
+          "metrics": [
+            0.0
+          ],
+          "metric_times": [
+            "Matched saved field"
+          ],
+          "metric_units": "µg/m³"
+        },
+        {
+          "id": "11_12",
+          "title": "11 → 12 · Validate the model using independent evidence",
+          "video": "../../hangzhou/fresh/isolated-sol/original/11_12_terrain-v4.mp4",
+          "poster": "../../hangzhou/fresh/isolated-sol/original/11_12_terrain-v4.png",
+          "change": "solver/convergence/benchmark reruns; published field unchanged",
+          "scope": "Earlier single-layer model · saved 15-day fields",
+          "prompt": "Validate the model using independent evidence.",
+          "record": "../../hangzhou/fresh/isolated-sol/original-stage-metrics.csv",
+          "metrics": [
+            0.0
+          ],
+          "metric_times": [
+            "Matched saved field"
+          ],
+          "metric_units": "µg/m³"
+        },
+        {
+          "id": "12_13",
+          "title": "12 → 13 · Define acceptance criteria appropriate to the application in advance",
+          "video": "../../hangzhou/fresh/isolated-sol/original/12_13_terrain-v4.mp4",
+          "poster": "../../hangzhou/fresh/isolated-sol/original/12_13_terrain-v4.png",
+          "change": "documentation/provenance only",
+          "scope": "Earlier single-layer model · saved 15-day fields",
+          "prompt": "Define acceptance criteria appropriate to the application in advance.",
+          "record": "../../hangzhou/fresh/isolated-sol/original-stage-metrics.csv",
+          "metrics": [
+            0.0
+          ],
+          "metric_times": [
+            "Matched saved field"
+          ],
+          "metric_units": "µg/m³"
+        },
+        {
+          "id": "13_14",
+          "title": "13 → 14 · Preserve scientific traceability through acceleration and visualization",
+          "video": "../../hangzhou/fresh/isolated-sol/original/13_14_terrain-v4.mp4",
+          "poster": "../../hangzhou/fresh/isolated-sol/original/13_14_terrain-v4.png",
+          "change": "solver/convergence/benchmark reruns; published field unchanged",
+          "scope": "Earlier single-layer model · saved 15-day fields",
+          "prompt": "Preserve scientific traceability through acceleration and visualization.",
+          "record": "../../hangzhou/fresh/isolated-sol/original-stage-metrics.csv",
+          "metrics": [
+            0.0
+          ],
+          "metric_times": [
+            "Matched saved field"
+          ],
+          "metric_units": "µg/m³"
+        }
+      ],
+      "note": "Single mixed-layer model; not a 3D stack simulation. Only the original sentence and each correction; no extra execution instruction."
+    },
+    {
+      "id": "legacy",
+      "title": "Original Hangzhou timeline · 17 before/after films",
+      "default": "stage01",
+      "items": [
+        {
+          "id": "stage01",
+          "title": "01 · Forecast provenance",
+          "video": "../../hangzhou/videos/comparisons/stage00_to_stage01.mp4",
+          "poster": null,
+          "change": "Frozen GFS provenance replaced the undocumented weather basis. The early model still uses a single surface column.",
+          "scope": "2-D relative scenario / 2-D relative scenario",
+          "prompt": "Use the latest complete weather forecast; record initialization time, source and resolution.",
+          "record": "../../hangzhou/video_timeline.json",
+          "metrics": [],
+          "metric_times": [],
+          "limitation": "Frozen complete GFS run; single surface column; hypothetical sources retained.",
+          "source_sha256": "ebc99656ce2008e941d1bdf52599a09ee721c707a33a78f21d82d0f93a13f5b8"
+        },
+        {
+          "id": "stage02",
+          "title": "02 · Continuous 360-hour integration",
+          "video": "../../hangzhou/videos/comparisons/stage01_to_stage02.mp4",
+          "poster": null,
+          "change": "Continuous state propagation and day-boundary hashes replaced repeated-weather spinup. Early 2D transport remains nonconservative.",
+          "scope": "2-D relative scenario / 2-D relative scenario",
+          "prompt": "Simulate 360 continuous hours; carry pollutant mass forward without daily resets or repeated short runs.",
+          "record": "../../hangzhou/video_timeline.json",
+          "metrics": [],
+          "metric_times": [],
+          "limitation": "Continuous state and day-boundary hashes; zero initial load; transport is not strictly conservative.",
+          "source_sha256": "815210746f7f2130da912f6a4b450e56494ed3328f7c7ba655bac126d10be581"
+        },
+        {
+          "id": "stage03",
+          "title": "03 · Documented outlet scenario",
+          "video": "../../hangzhou/videos/comparisons/stage02_to_stage03.mp4",
+          "poster": null,
+          "change": "Four conditional EIA design outlets replaced hypothetical sectors. Future operation and exhaust-flow basis remain unverified.",
+          "scope": "2-D relative scenario / 2-D conditional column burden",
+          "prompt": "Use documented source locations, emission rates and stack parameters; state operating assumptions.",
+          "record": "../../hangzhou/video_timeline.json",
+          "metrics": [],
+          "metric_times": [],
+          "limitation": "Four EIA design outlets; commissioning and operating schedules unverified. Legacy citywide maps are not these outlet results.",
+          "source_sha256": "83e3a2098e5e7a3f7d3d6e98d3d7b015a1a6b28cfc2be94ea0ba6fe110643047"
+        },
+        {
+          "id": "stage04",
+          "title": "04 · 3-D transport and plume rise",
+          "video": "../../hangzhou/videos/comparisons/stage03_to_stage04.mp4",
+          "poster": null,
+          "change": "The model changed from a 2D burden to 3D stochastic particles, height-dependent forecast wind, parameterized mixing and plume rise.",
+          "scope": "2-D conditional column burden / 3-D conditional particle scenario",
+          "prompt": "Model 3D transport, turbulence, atmospheric stability and buoyant plume rise; state parameterization limits.",
+          "record": "../../hangzhou/video_timeline.json",
+          "metrics": [],
+          "metric_times": [],
+          "limitation": "Horizontally uniform forecast profiles, parameterized turbulent diffusion and buoyant rise; flow basis unresolved; no observed-concentration or convergence validation.",
+          "source_sha256": "0122a5fb7d7d2478ce52c24a74f9f0e53876d03fba0f46cfed6b2b0aa15ec48c"
+        },
+        {
+          "id": "stage05",
+          "title": "05 · Deposition and mass tracking",
+          "video": "../../hangzhou/videos/comparisons/stage04_to_stage05.mp4",
+          "poster": null,
+          "change": "Added separate dry, wet, chemical and export terms to the mass ledger. This can change concentrations through removal.",
+          "scope": "3-D conditional particle scenario / Inspect actual stage outputs",
+          "prompt": "Include dry and wet deposition; track airborne, deposited and exported pollutant mass.",
+          "record": "../../hangzhou/video_timeline.json",
+          "metrics": [],
+          "metric_times": [],
+          "limitation": "Separate dry, wet, chemical, atmospheric and outflow quantities only where the completed stage actually provides them.",
+          "source_sha256": "68df8a5c7ffd567dfecad313c2e44af97d7d55df3949c50986af571f992f83e8"
+        },
+        {
+          "id": "stage06",
+          "title": "06 · Background assessment",
+          "video": "../../hangzhou/videos/comparisons/stage05_to_stage06.mp4",
+          "poster": null,
+          "change": "The unreliable surface-only background candidate was excluded. Results are source increments; this need not create a visible plume change.",
+          "scope": "Inspect actual stage outputs / Source-only3-D scenario",
+          "prompt": "Use traceable initial background; exclude it if unreliable and report source contributions separately.",
+          "record": "../../hangzhou/video_timeline.json",
+          "metrics": [],
+          "metric_times": [],
+          "limitation": "Unvalidated surface-only CAMS background excluded; zero initial and external background is an attribution assumption.",
+          "source_sha256": "c6a3887172f3c9f690e114ed792aa0d7253299cf0ad2a7db502df30d8e034f8f"
+        },
+        {
+          "id": "stage07",
+          "title": "07 · Near-surface sampling",
+          "video": "../../hangzhou/videos/comparisons/stage06_to_stage07.mp4",
+          "poster": null,
+          "change": "Defined a 0–25 m AGL volume mean and exposed severe local sampling noise. A failed sampling test is not a new physical effect.",
+          "scope": "Source-only3-D scenario / Sampling qualification failed",
+          "prompt": "Define near-ground sampling height; check coordinates, units and particle sampling.",
+          "record": "../../hangzhou/video_timeline.json",
+          "metrics": [],
+          "metric_times": [],
+          "limitation": "0-25m AGL volume means. Four outlets share a2km cell; seed and doubled-count tests expose severe local sampling noise.",
+          "source_sha256": "48539afedeb9cb6e169521d2d162e513d74283f8d4ce3140406da59097bd2a27"
+        },
+        {
+          "id": "stage08",
+          "title": "08 · GPU implementation",
+          "video": "../../hangzhou/videos/comparisons/stage07_to_stage08.mp4",
+          "poster": null,
+          "change": "Added a CPU/GPU implementation comparison and shared indexed random numbers. Same physics is intended; visually identical panels are expected.",
+          "scope": "Sampling qualification failed / Same-physics backend agreement",
+          "prompt": "Prefer validated GPU acceleration; compare against a same-physics CPU baseline.",
+          "record": "../../hangzhou/video_timeline.json",
+          "metrics": [],
+          "metric_times": [],
+          "limitation": "Shared indexed RNG is new on both CPU/GPU. Compute speed excludes forcing, compilation and disk output; no concentration-skill claim.",
+          "source_sha256": "2abf3a46aada2375bd3af6ff12855b1182920d7df794be96bed3106956272a9a"
+        },
+        {
+          "id": "stage09",
+          "title": "09 · Release implementation gates",
+          "video": "../../hangzhou/videos/comparisons/stage08_to_stage09.mp4",
+          "poster": null,
+          "change": "Added implementation controls. The zero rain difference uses identical forecast input, not an independent weather validation.",
+          "scope": "Same-physics backend agreement / Implementation agreement only",
+          "prompt": "Allow rainfall-grid RMSE up to 2 mm against the fixed CPU baseline; require completeness, nonnegativity, zero-source and mass checks.",
+          "record": "../../hangzhou/video_timeline.json",
+          "metrics": [],
+          "metric_times": [],
+          "limitation": "Exact-zero controls, nonnegativity and budget checks pass. Zero precipitation RMSE compares the same broadcast input; it is not an independent weather-solver validation.",
+          "source_sha256": "a91f547d97b89eb3ae857cec56ad4aee62a463c7cd5aa78eebe4acc88795661b"
+        },
+        {
+          "id": "stage10",
+          "title": "10 · Physical outlet release height",
+          "video": "../../hangzhou/videos/comparisons/stage09_to_stage10.mp4",
+          "poster": null,
+          "change": "Verified actual birth heights of 20/50/80/65 m AGL. This check does not necessarily change already-correct output.",
+          "scope": "Implementation agreement only / Runtime birth-position verification",
+          "prompt": "Release numerical particles at the physical stack outlet height, not just a display marker.",
+          "record": "../../hangzhou/video_timeline.json",
+          "metrics": [],
+          "metric_times": [],
+          "limitation": "Both solvers release at20/50/80/65m AGL before transport/rise. EIA-documented heights are not independently surveyed as-built heights.",
+          "source_sha256": "de9dc50889e8730a2aa9a7af717d0290425471136ff5914f18c67877437d4024"
+        },
+        {
+          "id": "stage11",
+          "title": "11 · Horizontal estimator refinement",
+          "video": "../../hangzhou/videos/comparisons/stage10_to_stage11.mp4",
+          "poster": null,
+          "change": "Compared 2 km, 1 km and 500 m concentration bins using shared paths; this does not refine the weather grid. Local convergence remained unmet.",
+          "scope": "Runtime birth-position verification / Local grid convergence not demonstrated",
+          "prompt": "Refine the horizontal grid and test convergence.",
+          "record": "../../hangzhou/video_timeline.json",
+          "metrics": [],
+          "metric_times": [],
+          "limitation": "2 km, 1 km and 500 m density bins use shared particle paths; the meteorological input resolution is unchanged. Fine-bin receptor differences remain above the declared criterion.",
+          "source_sha256": "f0692bd1184d546663f8417e91f64c0830bd75ab91520eca1c37097ace820461"
+        },
+        {
+          "id": "stage12",
+          "title": "12 · Particle-count refinement",
+          "video": "../../hangzhou/videos/comparisons/stage11_to_stage12.mp4",
+          "poster": null,
+          "change": "Increased statistical sampling at fixed emitted mass. Two-seed daily-field differences fell to 8.42%; not all convergence criteria passed.",
+          "scope": "Local grid convergence not demonstrated / Sampling noise reduced; criteria not all met",
+          "prompt": "Increase particle count and test sampling convergence.",
+          "record": "../../hangzhou/video_timeline.json",
+          "metrics": [],
+          "metric_times": [],
+          "limitation": "5.53 to 353.89 million particles per realization at fixed physical emission mass. Two-seed daily-field differences fall to 8.42%, but successive-count field and receptor criteria still fail.",
+          "source_sha256": "6674745ffb3e60b78f74d46be11b9f29cc9f4e6d62f8f1cdd670d6d1bcc9b7b4"
+        },
+        {
+          "id": "stage13",
+          "title": "13 · Vertical estimator refinement",
+          "video": "../../hangzhou/videos/comparisons/stage12_to_stage13.mp4",
+          "poster": null,
+          "change": "Compared 13/26/52 vertical bins on shared paths. Finer vertical concentration profiles remained unconverged.",
+          "scope": "Sampling noise reduced; criteria not all met / Native profiles not converged",
+          "prompt": "Increase vertical layers and test vertical convergence.",
+          "record": "../../hangzhou/video_timeline.json",
+          "metrics": [],
+          "metric_times": [],
+          "limitation": "13, 26 and 52 layers with shared trajectories. The lowest layer is 6.25 m; 26-to-52-layer global and outlet profile changes exceed the declared limits. Fixed 0–25 m agreement is a common-volume consistency check.",
+          "source_sha256": "4a4b4be39bed347a1c11a8ecc27fc9f29b0f5ffbc0b5358359d763e689e8a577"
+        },
+        {
+          "id": "stage14",
+          "title": "14 · Transport timestep refinement",
+          "video": "../../hangzhou/videos/comparisons/stage13_to_stage14.mp4",
+          "poster": null,
+          "change": "Compared 120/60/30 s steps with paired increments. Process totals and receptors passed subcriteria; near-surface field differences remained 13.6%.",
+          "scope": "Native profiles not converged / Partial criteria pass; full-field criterion fails",
+          "prompt": "Reduce timestep, test time convergence and preserve mass.",
+          "record": "../../hangzhou/video_timeline.json",
+          "metrics": [],
+          "metric_times": [],
+          "limitation": "120, 60 and 30 s with paired stochastic increments and fixed 120 s release events. Process totals and receptors meet their finest-step subcriteria; near-surface fields still differ by 13.6%.",
+          "source_sha256": "99bd069adbe0fc896be27ba03275806dbf7e886056e3ab3fe2a6a8f3306be2ea"
+        },
+        {
+          "id": "stage15",
+          "title": "15 · Terrain and surface exchange",
+          "video": "../../hangzhou/videos/comparisons/stage14_to_stage15.mp4",
+          "poster": null,
+          "change": "Added actual DSM collision geometry, terrain-normal reflection and surface stores. Forecast re-release stayed zero; terrain GPU agreement failed.",
+          "scope": "Partial criteria pass; full-field criterion fails / CPU terrain scenario; new GPU agreement failed",
+          "prompt": "Include terrain interaction, prevent ground penetration, and model surface uptake and conditional re-release.",
+          "record": "../../hangzhou/video_timeline.json",
+          "metrics": [],
+          "metric_times": [],
+          "limitation": "Actual bilinear DSM boundary, contact uptake and reversible/retained stores. Forecast re-release is zero under the assumed wetness gate. The CPU case has only 345,600 primary particles; previous higher-count convergence does not qualify it. Surface chemistry is uncalibrated; wind is not terrain-resolved.",
+          "source_sha256": "1720c8e5c7b228c42919943347748ebbeee45539c7ed1fe0c04ea2001a2aca4c"
+        },
+        {
+          "id": "highcount",
+          "title": "16 · High-count CPU delivery",
+          "video": "../../hangzhou/videos/comparisons/stage15_to_final360_highcount.mp4",
+          "poster": null,
+          "change": "A separate same-physics CPU realization increased the terrain case from 345,600 to 353,894,400 primary particles. All 360 hourly fields were saved. This does not establish local convergence.",
+          "scope": "Original low-count terrain case / High-count terrain CPU case",
+          "prompt": "Increase sampling for the terrain case and preserve every hourly native field.",
+          "record": "../../hangzhou/video_timeline.json",
+          "metrics": [],
+          "metric_times": [],
+          "limitation": "Separate realization; 7,249 collision-limit truncations disclosed. This is not another item in the original 15-prompt experiment.",
+          "source_sha256": "5d38e458013a93d46233d6af4e6a6508e5cf954c321badf2d099193cee7b747a"
+        },
+        {
+          "id": "native360",
+          "title": "17 · Vancouver-model revision",
+          "video": "../../hangzhou/videos/highcount_to_native360.mp4",
+          "poster": null,
+          "change": "Replaced the custom horizontally repeated forecast-column model with original-native 3D weather and continuous native transport plus GPU source-hour plume tables. The complete 360-hour result uses four conditional outlets.",
+          "scope": "Custom terrain particle model; horizontally uniform forecast profiles / Native 3D weather + native transport + parameterized plume rise",
+          "prompt": "Use the Vancouver transport and thermal-plume workflow for Hangzhou; allow the original CPU weather route after validating continuation.",
+          "record": "../../hangzhou/video_timeline.json",
+          "metrics": [],
+          "metric_times": [],
+          "limitation": "Different physical workflow: a visual comparison is not a controlled solver-error or convergence test. The failed GPU 2 mm rain comparisons remain preserved; the authorized CPU route was used.",
+          "source_sha256": null
+        }
+      ],
+      "note": "Preserved original versions and later model revisions. Each keeps its original physical scope and units."
+    }
+  ],
+  "early_studies": [
+    {
+      "id": "rerun",
+      "title": "Rerun requested",
+      "stages": 14,
+      "changed_stages": [
+        5,
+        7,
+        8
+      ],
+      "stage_totals": {
+        "stage_turn_wall_seconds": 1189.496,
+        "stage_engine_reasoning_tokens": 2566,
+        "policy_turn_wall_seconds": 6.496,
+        "policy_reasoning_tokens": 0,
+        "actual_full_period_or_test_rerun_stages": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          14
+        ],
+        "hindcast_stage": 12,
+        "explicit_skip_stages": [
+          1,
+          2,
+          3,
+          13
+        ],
+        "published_field_changed_stages": [
+          5,
+          7,
+          8
+        ],
+        "comparison_with_V6_note": "Both were independently initialized; baseline inputs/models differ. Differences between arms cannot be attributed solely to the rerun instruction."
+      },
+      "render_wall_s": 300.4865567810002,
+      "model": "Single mixed-layer model; not a 3D stack simulation."
+    },
+    {
+      "id": "original",
+      "title": "Original prompts only",
+      "stages": 14,
+      "changed_stages": [
+        5,
+        7,
+        8,
+        9
+      ],
+      "stage_totals": {
+        "turn_wall_seconds_sum": 1169.6000000000001,
+        "reasoning_tokens_sum": 2956,
+        "published_city_field_changed_stages": [
+          5,
+          7,
+          8,
+          9
+        ],
+        "note": "Token input totals include repeated context and cached input; reasoning tokens are engine-reported. Turn/command durations are inclusive observed wall time, not exact hidden inference or solver-only time. No numerical computation was repeated for this review."
+      },
+      "render_wall_s": 306.2246466450006,
+      "model": "Single mixed-layer model; not a 3D stack simulation."
+    }
+  ],
+  "own_law": [
+    {
+      "model": "FLEXPART_source_extracted_homogeneous_operator",
+      "RMSE_ug_m3": 0.008928224726669898,
+      "NRMSE_percent": 2.5540682808178117,
+      "MAE_ug_m3": 0.003898447516008386,
+      "bias_ug_m3": -0.00014641838322255064,
+      "max_abs_ug_m3": 0.11168724405512798,
+      "pairs": 3840,
+      "scope": "New homogeneous source-extracted native operator component; not old full PBL/driver validation"
+    },
+    {
+      "model": "CALPUFF_native_driver",
+      "RMSE_ug_m3": 0.016153949123287117,
+      "NRMSE_percent": 3.618125951106722,
+      "MAE_ug_m3": 0.002247532310804324,
+      "bias_ug_m3": 0.00027677008650095654,
+      "max_abs_ug_m3": 0.3225052507635593,
+      "pairs": 3840,
+      "scope": "Reuse successful full native driver and its original source/receptors; own Draxler analytical law, continuous source"
+    },
+    {
+      "model": "MPTRAC_native_modules",
+      "RMSE_ug_m3": 0.008981577124999097,
+      "NRMSE_percent": 2.788590840820289,
+      "MAE_ug_m3": 0.003971027499473932,
+      "bias_ug_m3": 0.0004351286273376129,
+      "max_abs_ug_m3": 0.10870496667600049,
+      "pairs": 3840,
+      "scope": "Reuse successful native advection/diffusion modules; correct physical-height generator; not full driver"
+    }
+  ],
+  "own_law_controls": {
+    "N200k_dt10": {
+      "particle_output_vs_own_continuum": {
+        "RMSE_ug_m3": 0.008928224726669898,
+        "NRMSE_percent": 2.5540682808178117,
+        "MAE_ug_m3": 0.003898447516008386,
+        "bias_ug_m3": -0.00014641838322255064,
+        "max_abs_ug_m3": 0.11168724405512798,
+        "pairs": 3840
+      },
+      "particle_output_vs_discrete_expected_observer": {
+        "RMSE_ug_m3": 0.008866742888975272,
+        "NRMSE_percent": 2.540682348261546,
+        "MAE_ug_m3": 0.003876270713183097,
+        "bias_ug_m3": -0.00011474536600069038,
+        "max_abs_ug_m3": 0.10891893009029907,
+        "pairs": 3840
+      },
+      "deterministic_scheme_and_observer_vs_continuum": {
+        "RMSE_ug_m3": 0.0008513866198756188,
+        "NRMSE_percent": 0.24355340810827317,
+        "MAE_ug_m3": 0.0002449676692673782,
+        "bias_ug_m3": -3.167301722186027e-05,
+        "max_abs_ug_m3": 0.008908361446182234,
+        "pairs": 3840
+      },
+      "deterministic_scheme_matched_time_observer": {
+        "RMSE_ug_m3": 0.0008503954453990883,
+        "NRMSE_percent": 0.2432706740274589,
+        "MAE_ug_m3": 0.00024380024038093555,
+        "bias_ug_m3": -3.168943755967547e-05,
+        "max_abs_ug_m3": 0.008897795040408774,
+        "pairs": 3840
+      },
+      "time_observer_alone": {
+        "RMSE_ug_m3": 1.228505669388853e-05,
+        "NRMSE_percent": 0.003514346310771275,
+        "MAE_ug_m3": 2.22431356653445e-06,
+        "bias_ug_m3": 1.6420337815201074e-08,
+        "max_abs_ug_m3": 0.00032925819101904674,
+        "pairs": 3840
+      }
+    },
+    "N400k_dt10": {
+      "particle_output_vs_own_continuum": {
+        "RMSE_ug_m3": 0.006634620293235994,
+        "NRMSE_percent": 1.8979443019177415,
+        "MAE_ug_m3": 0.0027728244083229697,
+        "bias_ug_m3": 7.935661677811692e-05,
+        "max_abs_ug_m3": 0.0906203937751835,
+        "pairs": 3840
+      },
+      "particle_output_vs_discrete_expected_observer": {
+        "RMSE_ug_m3": 0.006673009986226886,
+        "NRMSE_percent": 1.9120886772142596,
+        "MAE_ug_m3": 0.002767700905518297,
+        "bias_ug_m3": 0.00011102963399997718,
+        "max_abs_ug_m3": 0.099507213329181,
+        "pairs": 3840
+      },
+      "deterministic_scheme_and_observer_vs_continuum": {
+        "RMSE_ug_m3": 0.0008513866198756188,
+        "NRMSE_percent": 0.24355340810827317,
+        "MAE_ug_m3": 0.0002449676692673782,
+        "bias_ug_m3": -3.167301722186027e-05,
+        "max_abs_ug_m3": 0.008908361446182234,
+        "pairs": 3840
+      },
+      "deterministic_scheme_matched_time_observer": {
+        "RMSE_ug_m3": 0.0008503954453990883,
+        "NRMSE_percent": 0.2432706740274589,
+        "MAE_ug_m3": 0.00024380024038093555,
+        "bias_ug_m3": -3.168943755967547e-05,
+        "max_abs_ug_m3": 0.008897795040408774,
+        "pairs": 3840
+      },
+      "time_observer_alone": {
+        "RMSE_ug_m3": 1.228505669388853e-05,
+        "NRMSE_percent": 0.003514346310771275,
+        "MAE_ug_m3": 2.22431356653445e-06,
+        "bias_ug_m3": 1.6420337815201074e-08,
+        "max_abs_ug_m3": 0.00032925819101904674,
+        "pairs": 3840
+      }
+    },
+    "N200k_dt5": {
+      "particle_output_vs_own_continuum": {
+        "RMSE_ug_m3": 0.008718939710018093,
+        "NRMSE_percent": 2.4941987951087334,
+        "MAE_ug_m3": 0.0037382728356081954,
+        "bias_ug_m3": -0.00015704338322255132,
+        "max_abs_ug_m3": 0.10726687545744973,
+        "pairs": 3840
+      },
+      "particle_output_vs_discrete_expected_observer": {
+        "RMSE_ug_m3": 0.00867688379325744,
+        "NRMSE_percent": 2.4836929099004488,
+        "MAE_ug_m3": 0.00372716656554773,
+        "bias_ug_m3": -0.00014831049089616442,
+        "max_abs_ug_m3": 0.10832679771444509,
+        "pairs": 3840
+      },
+      "deterministic_scheme_and_observer_vs_continuum": {
+        "RMSE_ug_m3": 0.000334348062876839,
+        "NRMSE_percent": 0.09564586558800971,
+        "MAE_ug_m3": 9.616039841717419e-05,
+        "bias_ug_m3": -8.732892326386955e-06,
+        "max_abs_ug_m3": 0.003361816946034324,
+        "pairs": 3840
+      },
+      "deterministic_scheme_matched_time_observer": {
+        "RMSE_ug_m3": 0.00033325652998146766,
+        "NRMSE_percent": 0.09533393095090842,
+        "MAE_ug_m3": 9.476536703356401e-05,
+        "bias_ug_m3": -8.749312664202157e-06,
+        "max_abs_ug_m3": 0.003351250540260864,
+        "pairs": 3840
+      },
+      "time_observer_alone": {
+        "RMSE_ug_m3": 1.228505669388853e-05,
+        "NRMSE_percent": 0.003514346310771275,
+        "MAE_ug_m3": 2.22431356653445e-06,
+        "bias_ug_m3": 1.6420337815201074e-08,
+        "max_abs_ug_m3": 0.00032925819101904674,
+        "pairs": 3840
+      }
+    }
+  },
+  "analytical_hill": {
+    "FLEXPART_native_driver": {
+      "pairs": 14400,
+      "RMSE_ug_m3": 0.0010580838763877749,
+      "NRMSE_percent": 0.6197435035158506,
+      "MAE_ug_m3": 0.00019890486089607968,
+      "bias_ug_m3": 4.105677085122934e-05,
+      "max_absolute_ug_m3": 0.02757926323454596
+    },
+    "CALPUFF_native_driver": {
+      "pairs": 14400,
+      "RMSE_ug_m3": 0.0009311863018507039,
+      "NRMSE_percent": 0.5454167424846239,
+      "MAE_ug_m3": 0.00016596048362019876,
+      "bias_ug_m3": -0.00016494614045574354,
+      "max_absolute_ug_m3": 0.010855897001954044
+    },
+    "MPTRAC_native_advection_module": {
+      "pairs": 14400,
+      "RMSE_ug_m3": 0.0010660712672510822,
+      "NRMSE_percent": 0.62442189783604,
+      "MAE_ug_m3": 0.00018834752403899677,
+      "bias_ug_m3": -6.51861725981328e-07,
+      "max_absolute_ug_m3": 0.0336854507344686
+    }
+  },
+  "flat_reference": {
+    "FLEXPART": {
+      "RMSE_ug_m2": 0.9920811425569165,
+      "NRMSE_percent": 0.9131617506773181,
+      "MAE_ug_m2": 0.4711527481464817,
+      "bias_ug_m2": 0.12541643549089465,
+      "max_absolute_ug_m2": 5.832156382631183,
+      "pairs": 480
+    },
+    "CALPUFF": {
+      "RMSE_ug_m2": 40.40830085065103,
+      "NRMSE_percent": 37.193847522970444,
+      "MAE_ug_m2": 15.468306429924377,
+      "bias_ug_m2": 6.951877989020142,
+      "max_absolute_ug_m2": 204.2221040378081,
+      "pairs": 480
+    },
+    "MPTRAC_native_modules": {
+      "RMSE_ug_m2": 0.9016861509698864,
+      "NRMSE_percent": 0.829957620259792,
+      "MAE_ug_m2": 0.4296336826446888,
+      "bias_ug_m2": 0.028583576876955556,
+      "max_absolute_ug_m2": 7.323565873045311,
+      "pairs": 480
+    },
+    "CALPUFF_own_Draxler_companion": {
+      "RMSE_ug_m2": 0.9391038047708501,
+      "NRMSE_percent": 0.6491668883001372,
+      "MAE_ug_m2": 0.43828271569946914,
+      "bias_ug_m2": -0.23510940015952464,
+      "max_absolute_ug_m2": 11.956145781075065,
+      "pairs": 480
+    }
+  },
+  "common_point_target": {
+    "FLEXPART_native_PBL_driver": {
+      "pairs": 3840,
+      "RMSE_ug_m3": 0.5038436536449278,
+      "NRMSE_percent": 156.43286008745554,
+      "MAE_ug_m3": 0.14459378331747935,
+      "bias_ug_m3": 0.008752089371365738,
+      "max_absolute_ug_m3": 3.6888148115450794
+    },
+    "CALPUFF_native_Draxler_driver": {
+      "pairs": 3840,
+      "RMSE_ug_m3": 0.18785543360080517,
+      "NRMSE_percent": 58.32516207865683,
+      "MAE_ug_m3": 0.05887511367565468,
+      "bias_ug_m3": 0.006947366668109868,
+      "max_absolute_ug_m3": 1.6672972615118107
+    },
+    "MPTRAC_native_advection_diffusion_modules": {
+      "pairs": 3840,
+      "RMSE_ug_m3": 0.008981577124999071,
+      "NRMSE_percent": 2.7885908408202797,
+      "MAE_ug_m3": 0.003971027499473924,
+      "bias_ug_m3": 0.00043512862733751496,
+      "max_absolute_ug_m3": 0.10870496667600316
+    }
+  },
+  "model_spread": [
+    {
+      "A": "FLEXPART",
+      "B": "CALPUFF",
+      "full_RMSE": 0.02986347840165211,
+      "ground_RMSE": 0.20679940602196994
+    },
+    {
+      "A": "FLEXPART",
+      "B": "MPTRAC",
+      "full_RMSE": 0.020116402543491393,
+      "ground_RMSE": 0.20100870233555213
+    },
+    {
+      "A": "CALPUFF",
+      "B": "MPTRAC",
+      "full_RMSE": 0.0325625103856694,
+      "ground_RMSE": 0.20971212980935267
+    }
+  ],
+  "terrain_switch": {
+    "relative_L2": 0.03220086375901959,
+    "changed_values": 130781,
+    "total_values": 385920
+  },
+  "earlier_AERMOD_screen": {
+    "hours": 360,
+    "pairs": 40320,
+    "units": "µg/m³",
+    "hourly_RMSE": {
+      "FLEXPART / CALPUFF": 0.22676845546021038,
+      "FLEXPART / AERMOD": 0.21012209762408635,
+      "AERMOD / CALPUFF": 0.16058137705528513
+    },
+    "scope": "Earlier fixed-cell comparison, distinct from the later full-domain MPTRAC comparison."
+  },
+  "earlier_deposition": [
+    {
+      "pair": "FLEXPART / CALPUFF",
+      "dry_RMSE": 208.43950709256544,
+      "wet_RMSE": 210.03424702572948,
+      "units": "µg/m²"
+    },
+    {
+      "pair": "FLEXPART / AERMOD",
+      "dry_RMSE": 298.2013001616873,
+      "wet_RMSE": 207.35996556951412,
+      "units": "µg/m²"
+    },
+    {
+      "pair": "AERMOD / CALPUFF",
+      "dry_RMSE": 128.75212307220377,
+      "wet_RMSE": 396.80336365759075,
+      "units": "µg/m²"
+    }
+  ],
+  "benchmark": {
+    "launched_models": 7,
+    "launched_submissions": 14,
+    "questions": 10,
+    "values_per_complete_submission": 49998,
+    "rows": [
+      {
+        "model": "gpt-6.2-sol",
+        "paired_cases": 10,
+        "improved": 2,
+        "tied": 0,
+        "worse": 8,
+        "mean_control_relative_l2": 2.595658274439683e-12,
+        "mean_with_prompts_relative_l2": 1.0388433963630377e-08
+      },
+      {
+        "model": "gpt-6.2-astra",
+        "paired_cases": 10,
+        "improved": 2,
+        "tied": 0,
+        "worse": 8,
+        "mean_control_relative_l2": 2.6680412273553133e-07,
+        "mean_with_prompts_relative_l2": 1.0454563553608587e-07
+      },
+      {
+        "model": "gpt-6.1-sol",
+        "paired_cases": 10,
+        "improved": 1,
+        "tied": 5,
+        "worse": 4,
+        "mean_control_relative_l2": 2.056210924545087e-10,
+        "mean_with_prompts_relative_l2": 2.0586977770740647e-10
+      },
+      {
+        "model": "gpt-6.1-terra",
+        "paired_cases": 10,
+        "improved": 4,
+        "tied": 1,
+        "worse": 5,
+        "mean_control_relative_l2": 0.0004166525752166589,
+        "mean_with_prompts_relative_l2": 1.9801676077518526e-05
+      },
+      {
+        "model": "gpt-6-astra",
+        "paired_cases": 10,
+        "improved": 4,
+        "tied": 1,
+        "worse": 5,
+        "mean_control_relative_l2": 1.631865644058381e-08,
+        "mean_with_prompts_relative_l2": 4.488610499518612e-09
+      },
+      {
+        "model": "gpt-6-sol",
+        "paired_cases": 10,
+        "improved": 0,
+        "tied": 1,
+        "worse": 9,
+        "mean_control_relative_l2": 2.5677382690124316e-07,
+        "mean_with_prompts_relative_l2": 0.00019635245197907426
+      },
+      {
+        "model": "gpt-6-luna",
+        "paired_cases": 0,
+        "improved": 0,
+        "tied": 0,
+        "worse": 0,
+        "mean_control_relative_l2": null,
+        "mean_with_prompts_relative_l2": null
+      }
+    ],
+    "comparable_models": 6,
+    "scored_pairs": 60,
+    "improved": 13,
+    "tied": 8,
+    "worse": 39,
+    "reference_max_relative_L2": 8.160996402301936e-14,
+    "audit_scope": "Independent analytical reference and core scoring audit; not a proof that every agent used genuine time-marching dynamics.",
+    "label_dependent_export_issue_retained": true
+  },
+  "production": {
+    "observed_UTC": "2026-11-27T02:03:04.366038+00:00",
+    "weather_h": 370,
+    "weather_states_per_domain": 371,
+    "reporting_target_h": 360,
+    "preparation_h": 10,
+    "transport_total_h": 166.0,
+    "transport_report_h": 156.0,
+    "transport_complete": false,
+    "transport_start_UTC": "2026-11-26T22:26:50.243080+00:00",
+    "current_process_monotonic_s": 11901.54836832598,
+    "source_worker_h": {
+      "case0": 169.0,
+      "case1": 167.0,
+      "case2": 167.0,
+      "case3": 166.0
+    },
+    "resource_limits_removed": true,
+    "science_checks_retained": true,
+    "weather_extension_h": 245,
+    "weather_extension_wall_s": 67074.981,
+    "met_wall_s": 1679.82,
+    "plume_wall_s": 1639.37,
+    "production_agent_wall_s": 345.466,
+    "production_reasoning_tokens": 2502,
+    "hidden_reasoning_seconds": null,
+    "whole_delivery_ETA_UTC": null,
+    "source_freeze": "2026-11-24 06:00 UTC",
+    "report_start_UTC": "2026-11-24T16:00:00Z",
+    "report_end_UTC_exclusive": "2026-12-09T16:00:00Z",
+    "sources": "Two documented facilities / five catalogue flues + estimated distributed emissions; no ambient background.",
+    "raw_negative_weather_retained": true,
+    "weather_display_state": "actual360h_weather_display_packed_pending_renderer_and_phase_review",
+    "weather_display_states": 361,
+    "weather_display_wall_s": 414.6702691949904,
+    "plume_geometry_cylinders": 25906945,
+    "plume_geometry_wall_s": 735.7769977250136,
+    "geometry_display_bytes": 133123970,
+    "geometry_compression_s": 16.718757545982953,
+    "max_geometry_display_error_m": 6.103515625e-05,
+    "final_web_scene_complete": false
+  },
+  "timing": {
+    "prompt_stages": [
+      {
+        "stage": 0,
+        "completion_status": "complete",
+        "agent_turn_wall_s": 160.53,
+        "reasoning_tokens": 231,
+        "exposed_reasoning_item_s": 0.108,
+        "exact_hidden_reasoning_s": null,
+        "solver_wall_s": null,
+        "successful_run_job_wall_s": null,
+        "solver_run_wall_s": null,
+        "total_simulated_h": 384,
+        "reporting_h": 360,
+        "adjacent_video_render_and_encode_s": null
+      },
+      {
+        "stage": 1,
+        "completion_status": "complete",
+        "agent_turn_wall_s": 1592.305,
+        "reasoning_tokens": 8164,
+        "exposed_reasoning_item_s": 4.521,
+        "exact_hidden_reasoning_s": null,
+        "solver_wall_s": null,
+        "successful_run_job_wall_s": 387.8922582230007,
+        "solver_run_wall_s": null,
+        "total_simulated_h": 370,
+        "reporting_h": 360,
+        "adjacent_video_render_and_encode_s": 234.53564096499758
+      },
+      {
+        "stage": 2,
+        "completion_status": "complete",
+        "agent_turn_wall_s": 2238.815,
+        "reasoning_tokens": 18043,
+        "exposed_reasoning_item_s": 1.56,
+        "exact_hidden_reasoning_s": null,
+        "solver_wall_s": 695.0881255,
+        "successful_run_job_wall_s": null,
+        "solver_run_wall_s": null,
+        "total_simulated_h": 370,
+        "reporting_h": 360,
+        "adjacent_video_render_and_encode_s": 235.10159144600038
+      },
+      {
+        "stage": 3,
+        "completion_status": "complete",
+        "agent_turn_wall_s": 950.751,
+        "reasoning_tokens": 6534,
+        "exposed_reasoning_item_s": 1.375,
+        "exact_hidden_reasoning_s": null,
+        "solver_wall_s": 548.2789044,
+        "successful_run_job_wall_s": null,
+        "solver_run_wall_s": null,
+        "total_simulated_h": 370,
+        "reporting_h": 360,
+        "adjacent_video_render_and_encode_s": 227.4292014120001
+      },
+      {
+        "stage": 4,
+        "completion_status": "complete",
+        "agent_turn_wall_s": 930.301,
+        "reasoning_tokens": 7834,
+        "exposed_reasoning_item_s": 2.19,
+        "exact_hidden_reasoning_s": null,
+        "solver_wall_s": 518.4314105,
+        "successful_run_job_wall_s": null,
+        "solver_run_wall_s": null,
+        "total_simulated_h": 370,
+        "reporting_h": 360,
+        "adjacent_video_render_and_encode_s": 215.05325524399814
+      },
+      {
+        "stage": 5,
+        "completion_status": "complete",
+        "agent_turn_wall_s": 1098.53,
+        "reasoning_tokens": 3151,
+        "exposed_reasoning_item_s": 1.983,
+        "exact_hidden_reasoning_s": null,
+        "solver_wall_s": null,
+        "successful_run_job_wall_s": null,
+        "solver_run_wall_s": {
+          "baseline": 537.721993,
+          "double": 984.7613905
+        },
+        "total_simulated_h": 370,
+        "reporting_h": 360,
+        "adjacent_video_render_and_encode_s": 238.1300000360061
+      },
+      {
+        "stage": 6,
+        "completion_status": "partial_user_superseded",
+        "agent_turn_wall_s": null,
+        "reasoning_tokens": 17086,
+        "exposed_reasoning_item_s": 2.379,
+        "exact_hidden_reasoning_s": null,
+        "solver_wall_s": null,
+        "successful_run_job_wall_s": null,
+        "solver_run_wall_s": null,
+        "total_simulated_h": 96,
+        "reporting_h": 86,
+        "adjacent_video_render_and_encode_s": 221.09388589000446
+      },
+      {
+        "stage": 7,
+        "completion_status": "complete72h_numerical_checks_scientific_limitations_disclosed",
+        "agent_turn_wall_s": null,
+        "reasoning_tokens": 39275,
+        "exposed_reasoning_item_s": 7.636,
+        "exact_hidden_reasoning_s": null,
+        "solver_wall_s": null,
+        "successful_run_job_wall_s": null,
+        "solver_run_wall_s": null,
+        "total_simulated_h": 82,
+        "reporting_h": 72,
+        "adjacent_video_render_and_encode_s": 221.17713238598662
+      },
+      {
+        "stage": 8,
+        "completion_status": "three_hour_candidate_saved_method_not_selected",
+        "agent_turn_wall_s": 1921.415,
+        "reasoning_tokens": 4795,
+        "exposed_reasoning_item_s": 2.407,
+        "exact_hidden_reasoning_s": null,
+        "solver_wall_s": null,
+        "successful_run_job_wall_s": null,
+        "solver_run_wall_s": {
+          "96_per_event": 138.07,
+          "192_per_event": 266.58
+        },
+        "total_simulated_h": 13,
+        "reporting_h": 3,
+        "adjacent_video_render_and_encode_s": 234.83752896700753
+      },
+      {
+        "stage": 9,
+        "completion_status": "three_hour_weighted_sampling_pair_passed",
+        "agent_turn_wall_s": 2825.483,
+        "reasoning_tokens": 3159,
+        "exposed_reasoning_item_s": 0.973,
+        "exact_hidden_reasoning_s": null,
+        "solver_wall_s": null,
+        "successful_run_job_wall_s": null,
+        "solver_run_wall_s": {
+          "384_equivalent": 509.21,
+          "768_equivalent": 1010.32
+        },
+        "total_simulated_h": 13,
+        "reporting_h": 3,
+        "adjacent_video_render_and_encode_s": 206.10671281900431
+      }
+    ],
+    "recorded_stage_reasoning_tokens": 108272,
+    "adjacent_videos_render_encode_s": 2033.4649491650052,
+    "early_render_s": 606.7112034260008,
+    "hidden_reasoning_time": null,
+    "whole_project_total_wall_s": null,
+    "note": "Clocks overlap and are not additive. Agent wall includes tools and waiting; known timers are scoped to their named jobs."
+  },
+  "interrupted_runs": {
+    "accounted_UTC": "2026-11-26T22:49:34.853051+00:00",
+    "elapsed_time_not_CPU_core_hours": true,
+    "events": [
+      {
+        "event": "unbuffered_native_replaced_for_IO",
+        "elapsed_s": 3490.23,
+        "basis": "Actual GNU time transport-timing.txt, includes IO",
+        "native_final_reporting_trajectory_usable": false
+      },
+      {
+        "event": "buffered_native_replaced_for_qualified_source_parallelism",
+        "elapsed_s": 13370,
+        "basis": "Actual GNU time transport-timing.txt, includes IO; UTC timestamps agree approximately",
+        "native_final_reporting_trajectory_usable": false
+      },
+      {
+        "event": "source_cohort_R03_memory_guard_stop",
+        "elapsed_s": 4864.950719,
+        "basis": "Recorded UTC start to resource-guard status; process monotonic final timing missing after SIGKILL",
+        "concurrent_native_workers": 4,
+        "native_final_reporting_trajectory_usable": false
+      }
+    ],
+    "unused_for_complete_trajectory_elapsed_s": 21725.180719,
+    "memory_guard_repair_and_restart_gap_s": 1275.437965,
+    "sum_including_repair_gap_s": 23000.618684,
+    "small_handover_gaps_not_included": true,
+    "weather_met_plume_and_required_short_tests_excluded": true,
+    "some_partial_fields_reused_as_diagnostic_references": true,
+    "latest_user_no_soft_limits_handoff_solver_restarts": 0,
+    "four_parallel_process_elapsed_not_multiplied_by_four": true
+  },
+  "acceleration": {
+    "cpu_minutes_per_arm": 12,
+    "cpu": [
+      {
+        "ranks": 12,
+        "wall_s": 67.1181462079985,
+        "fields_byte_exact_to12": true
+      },
+      {
+        "ranks": 16,
+        "wall_s": 62.87104207102675,
+        "fields_byte_exact_to12": true
+      },
+      {
+        "ranks": 24,
+        "wall_s": 96.9213525079831,
+        "fields_byte_exact_to12": false
+      }
+    ],
+    "cache": [
+      {
+        "variant": "original100",
+        "wall_s": 33.21598254897981,
+        "peak_RSS_KiB": 6036676,
+        "field_hash_records": 1872
+      },
+      {
+        "variant": "bounded4",
+        "wall_s": 26.26471754699014,
+        "peak_RSS_KiB": 305832,
+        "field_hash_records": 1872
+      }
+    ],
+    "cache_native_fields_exact": true
+  },
+  "source_records": [
+    {
+      "path": "WORK/hangzhou_v8_publication_20261125/hangzhou/fresh/isolated-v8/library.json",
+      "sha256": "2d45b8154ac9483ce21408995982deb277a54785dbe6001a44b7dd9ec5a34a8d"
+    },
+    {
+      "path": "WORK/hangzhou_v8_publication_20261125/hangzhou/fresh/isolated-v8/prompts.json",
+      "sha256": "6a0dcd685be4e5e6042d5b39ae869c9beb9a1b473fb02a6cb7588eac86176188"
+    },
+    {
+      "path": "WORK/hangzhou_v8_publication_20261125/hangzhou/fresh/isolated-v8/timing.json",
+      "sha256": "e1bd1102b84ce62ef5f6c968fe83cf50f79d8d84a30dc6167d557af297e11452"
+    },
+    {
+      "path": "WORK/hangzhou_v8_publication_20261125/hangzhou/fresh/isolated-sol/experiments-terrain-v4.json",
+      "sha256": "7a2140a4cf31598b690425b134d420b990ba4281d5d17deb52ea551083499347"
+    },
+    {
+      "path": "WORK/hangzhou_v8_publication_20261125/hangzhou/video_timeline.json",
+      "sha256": "198337b57fbbdec8bab9e122e4a2e7bc16b24aa81d03567a3bbfc14de6b7c9ea"
+    },
+    {
+      "path": "WORK/hangzhou_v8_publication_20261125/forecast/comparison/data/comparison.json",
+      "sha256": "2a51e295d96a0e54f3884e87dcdbdcf7d9dd0cbed34d2521c643c73f2a2be7f4"
+    },
+    {
+      "path": "execution/pollution_vancouver_three_model_v1/comparison/result.json",
+      "sha256": "240db09f48f0f4cee20a02760588417128998d38e9723977fc6c6937a01ef5ad"
+    },
+    {
+      "path": "WORK/hangzhou_v8_publication_20261125/forecast/comparison/analytic/point3d/ownlaw/metrics.json",
+      "sha256": "ee93af1c69b8fd13679f465cb7cd89186c1a1757bc0c700943fea3b578177693"
+    },
+    {
+      "path": "WORK/hangzhou_v8_publication_20261125/forecast/comparison/analytic/hill/metrics.json",
+      "sha256": "41db3e507d677532e730d1bcf02ada1297d0a6f891eea812f81d19389c44fd43"
+    },
+    {
+      "path": "WORK/hangzhou_v8_publication_20261125/forecast/comparison/analytic/metrics.json",
+      "sha256": "0ca86ba4e9e24f5c9d389716406de38da1d4eae4cb162bf79f725952d493c55e"
+    },
+    {
+      "path": "WORK/hangzhou_v8_publication_20261125/forecast/comparison/analytic/point3d/metrics.json",
+      "sha256": "d91d74f0d60f91825447aded54bc57d9deeea334c99d146771cec5236915e11e"
+    },
+    {
+      "path": "execution/analytic_prompt_ab_v1/scores/summary.json",
+      "sha256": "0dfc4cfb04598ea5e560a62f1a52dee651fb5056d1546adde0ecc38c021e9e7e"
+    },
+    {
+      "path": "execution/analytic_prompt_ab_v1/context_audit/lock.json",
+      "sha256": "515a23c693b818140fc49a5c57029cb60f8c149920bfc3254a041c44bb4dbb30"
+    },
+    {
+      "path": "execution/pollution_hangzhou_isolated_v8/monitor_latest.json",
+      "sha256": "6caf2d96f4a40368e4958179ae1b46c10de21cfa6a1c8cc2e39c9086ac6ff7cf"
+    },
+    {
+      "path": "execution/pollution_hangzhou_isolated_v8/review/final360_timing_inprogress.json",
+      "sha256": "6d26fa419a7e3720ec4c7a2779068171b1cf214d2a17a1232ccccc82c46c44fe"
+    },
+    {
+      "path": "execution/pollution_hangzhou_isolated_v8/review/interrupted_transport_time_accounting.json",
+      "sha256": "1be2276955f0590958a65fe314c91a988f6dc1779bfe465bd9ab231531cf0793"
+    },
+    {
+      "path": "execution/pollution_hangzhou_isolated_v8/presentation/weather_display_status.json",
+      "sha256": "151751710c17dda5ea7ac9326df026548a5740cfd7a3101a134ded9257431b1a"
+    },
+    {
+      "path": "execution/pollution_hangzhou_isolated_v8/review/mpi_resource_benchmark_r02/result.json",
+      "sha256": "d1dead1773619500bfe413a762c94d45b8baaed34493c9bb5459396c0bd3d174"
+    },
+    {
+      "path": "execution/pollution_hangzhou_isolated_v8/review/native_file_cache_r04/status.json",
+      "sha256": "2132b7fd7be71f974fa0e021347938d025d93a977522aa1a1a49085a223dfab3"
+    },
+    {
+      "path": "execution/pollution_hangzhou_isolated_v8/presentation/plume_geometry_status.json",
+      "sha256": "03a84964b6f00e171a85108b4521b1e711d349c2380f9b3848c5515fa66e907a"
+    },
+    {
+      "path": "execution/pollution_hangzhou_isolated_v8/presentation/plume-display-geometry-metadata.json",
+      "sha256": "c2dbd2c0013c5ffe1ee72cf4337f6c79f8bd4834a4c82cd32a4f6e700affc5b6"
+    }
+  ],
+  "links": {
+    "ownlaw": "../../forecast/comparison/analytic/point3d/ownlaw/",
+    "hill": "../../forecast/comparison/analytic/hill/",
+    "comparison": "../../forecast/comparison/",
+    "earlier_model": "../../hangzhou/native360/",
+    "earlier_scientific": "../../hangzhou/native360/scientific/",
+    "latest_prompts": "../../hangzhou/fresh/isolated-v8/",
+    "earlier_prompts": "../../hangzhou/fresh/isolated-sol/?render=terrain-v4",
+    "harness": "https://baiming-zhang.github.io/project/agent-climate/harness/",
+    "archive": "https://github.com/wang-mengdi/Agentic-Physical-Worlds/tree/Climate(Baiming)",
+    "mountain": "../../terrain42/",
+    "mountain_scientific": "../../terrain42/scientific/"
+  }
+}
