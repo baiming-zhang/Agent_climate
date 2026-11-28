@@ -1,0 +1,130 @@
+{
+  "index": 0,
+  "report_hour": 0,
+  "lead_hour": 10,
+  "actual_UTC": "2026-11-24_16:00:00",
+  "wind": {
+    "file": "wind-000.f16.gz",
+    "shape": [
+      15,
+      75,
+      100,
+      3
+    ],
+    "dtype": "<f2",
+    "raw_bytes": 675000,
+    "bytes": 615507,
+    "sha256": "626f373618616ab446e00d76b4c1d45d7832e0623cabd993370dbc72684bf26c"
+  },
+  "cloud_fraction": {
+    "file": "cloud-000.u8.gz",
+    "shape": [
+      15,
+      75,
+      100
+    ],
+    "dtype": "|u1",
+    "raw_bytes": 112500,
+    "bytes": 260,
+    "sha256": "e214f555f332bbeb0879fd3134c6fe2f3545c738fbabd3137384e1f3858c9fcd"
+  },
+  "surface": {
+    "file": "surface-000.f32.gz",
+    "shape": [
+      75,
+      100,
+      11
+    ],
+    "dtype": "<f4",
+    "raw_bytes": 330000,
+    "bytes": 149501,
+    "sha256": "6b88107a2a68c6e9f27b534da6eeebca09914076c3bcfa9271815dd80fb461f1"
+  },
+  "phase_cumulative": {
+    "file": "phase-000.f64.gz",
+    "shape": [
+      75,
+      100,
+      7
+    ],
+    "dtype": "<f8",
+    "raw_bytes": 420000,
+    "bytes": 4202,
+    "sha256": "a612468f8162dea601c371ae17b26ddc884e08218d56cb7f69c02cb2fe920e14"
+  },
+  "sources": [
+    {
+      "domain": 1,
+      "path": "/home/research/hangzhou_v8_runtime_20261124/work/hangzhou-nested/full/wrfout_d01_2026-11-24_16:00:00",
+      "bytes": 13768704,
+      "selected_native_variables_SHA256": "6c904c337cd8ccb500eaf3b0f6aabafd61a128c2c965fa4c1a6d1dd63447b360",
+      "hash_scope": "Unmodified named native F32 arrays read by this pack, including shape; not a whole-NetCDF file hash."
+    },
+    {
+      "domain": 2,
+      "path": "/home/research/hangzhou_v8_runtime_20261124/work/hangzhou-nested/full/wrfout_d02_2026-11-24_16:00:00",
+      "bytes": 30955359,
+      "selected_native_variables_SHA256": "ed2558e849c5efabd2a862b50d743c8464a3c02a12c056625e6161aab449fb29",
+      "hash_scope": "Unmodified named native F32 arrays read by this pack, including shape; not a whole-NetCDF file hash."
+    }
+  ],
+  "controls": [
+    {
+      "domain": 1,
+      "pixel": 0,
+      "max_wind_difference_m_s": 7.105427357601002e-15,
+      "max_cloud_difference": 0.0
+    },
+    {
+      "domain": 1,
+      "pixel": 3750,
+      "max_wind_difference_m_s": 8.881784197001252e-16,
+      "max_cloud_difference": 0.0
+    },
+    {
+      "domain": 1,
+      "pixel": 7499,
+      "max_wind_difference_m_s": 3.552713678800501e-15,
+      "max_cloud_difference": 0.0
+    },
+    {
+      "domain": 2,
+      "pixel": 0,
+      "max_wind_difference_m_s": 7.105427357601002e-15,
+      "max_cloud_difference": 0.0
+    },
+    {
+      "domain": 2,
+      "pixel": 3750,
+      "max_wind_difference_m_s": 7.105427357601002e-15,
+      "max_cloud_difference": 0.0
+    },
+    {
+      "domain": 2,
+      "pixel": 7499,
+      "max_wind_difference_m_s": 1.7763568394002505e-15,
+      "max_cloud_difference": 0.0
+    }
+  ],
+  "wind_F16_max_error_m_s": 0.015623341448055328,
+  "cloud_Q8_max_error": 0.0019191280027667423,
+  "GPU_compile_and_resample_s": 1.653455852996558,
+  "phase_minima": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "phase_maxima": [
+    0.01968058208026117,
+    0.01968058208026117,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ]
+}

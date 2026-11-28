@@ -1,0 +1,118 @@
+{
+  "index": 267,
+  "report_hour": 267,
+  "lead_hour": 277,
+  "actual_UTC": "2026-12-05_19:00:00",
+  "wind": {
+    "file": "wind-267.f16.gz",
+    "shape": [
+      15,
+      75,
+      100,
+      3
+    ],
+    "dtype": "<f2",
+    "raw_bytes": 675000,
+    "bytes": 614183,
+    "sha256": "41aa27a85dce49f24b69ee3ba6551f4d92b8c1c0c6a1a66ee8b46fd1569a0c3a"
+  },
+  "cloud_fraction": {
+    "file": "cloud-267.u8.gz",
+    "shape": [
+      15,
+      75,
+      100
+    ],
+    "dtype": "|u1",
+    "raw_bytes": 112500,
+    "bytes": 44877,
+    "sha256": "a3cd5f4ab45711fb6ef063eb9017601130048344f376a30538f449b4c4fa09d7"
+  },
+  "surface": {
+    "file": "surface-267.f32.gz",
+    "shape": [
+      75,
+      100,
+      11
+    ],
+    "dtype": "<f4",
+    "raw_bytes": 330000,
+    "bytes": 176480,
+    "sha256": "ca592f2165086a672b785603e618ecfec693534726cf2337b1cd5c9875dfd0ba"
+  },
+  "phase_cumulative": {
+    "file": "phase-267.f64.gz",
+    "shape": [
+      75,
+      100,
+      7
+    ],
+    "dtype": "<f8",
+    "raw_bytes": 420000,
+    "bytes": 80397,
+    "sha256": "0d45d8840401e32fba2a5e30daa81f36ff176915b22f9349b0940c00562b4c84"
+  },
+  "sources": [
+    {
+      "domain": 1,
+      "path": "/home/research/hangzhou_v8_runtime_20261124/work/hangzhou-production15/full/wrfout_d01_2026-12-05_19:00:00",
+      "bytes": 16977069,
+      "selected_native_variables_SHA256": "f009b9c47545c4c883454bc105888b38d182d04fbe2a5b5d26c2a945eaa22e34",
+      "hash_scope": "Unmodified named native F32 arrays read by this pack, including shape; not a whole-NetCDF file hash."
+    },
+    {
+      "domain": 2,
+      "path": "/home/research/hangzhou_v8_runtime_20261124/work/hangzhou-production15/full/wrfout_d02_2026-12-05_19:00:00",
+      "bytes": 39108205,
+      "selected_native_variables_SHA256": "0044f75671e36d19e0af570deed6722996852e3a0db7f404185b4b5e2edff36e",
+      "hash_scope": "Unmodified named native F32 arrays read by this pack, including shape; not a whole-NetCDF file hash."
+    }
+  ],
+  "controls": [],
+  "wind_F16_max_error_m_s": 0.01561812364740689,
+  "cloud_Q8_max_error": 0.001960776019975047,
+  "GPU_compile_and_resample_s": 0.19248883097316138,
+  "phase_minima": [
+    1.6966360424243234,
+    1.6966360424243234,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "phase_maxima": [
+    100.44831885434182,
+    100.44831885434182,
+    0.0,
+    0.0043113142812575556,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "phase_increment": {
+    "file": "phase-increment-266.f32.gz",
+    "shape": [
+      75,
+      100,
+      7
+    ],
+    "dtype": "<f4",
+    "raw_bytes": 210000,
+    "bytes": 42098,
+    "sha256": "178c9d0b0a87bd011977a55fd99b85949f98301d6815cd61d2fbef134ed89572"
+  },
+  "increment_interval_reporting_h": [
+    266,
+    267
+  ],
+  "phase_increment_minimum": [
+    0.002582293395498425,
+    0.002582293395498425,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ]
+}

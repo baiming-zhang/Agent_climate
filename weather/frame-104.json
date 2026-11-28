@@ -1,0 +1,118 @@
+{
+  "index": 104,
+  "report_hour": 104,
+  "lead_hour": 114,
+  "actual_UTC": "2026-11-29_00:00:00",
+  "wind": {
+    "file": "wind-104.f16.gz",
+    "shape": [
+      15,
+      75,
+      100,
+      3
+    ],
+    "dtype": "<f2",
+    "raw_bytes": 675000,
+    "bytes": 628433,
+    "sha256": "032ba0659e6f36cacee8faae6f52fca171d2ff09f6bbe9ed3a991eac03ce62f0"
+  },
+  "cloud_fraction": {
+    "file": "cloud-104.u8.gz",
+    "shape": [
+      15,
+      75,
+      100
+    ],
+    "dtype": "|u1",
+    "raw_bytes": 112500,
+    "bytes": 633,
+    "sha256": "cce6b1a39336386ef2d8ad2d3860fd6e88e91abfd86a576090dabbaa6e949700"
+  },
+  "surface": {
+    "file": "surface-104.f32.gz",
+    "shape": [
+      75,
+      100,
+      11
+    ],
+    "dtype": "<f4",
+    "raw_bytes": 330000,
+    "bytes": 163738,
+    "sha256": "9b6c0eb608662030db978c513baf618f6bfce0702e72f5bc5609ad196b1a7650"
+  },
+  "phase_cumulative": {
+    "file": "phase-104.f64.gz",
+    "shape": [
+      75,
+      100,
+      7
+    ],
+    "dtype": "<f8",
+    "raw_bytes": 420000,
+    "bytes": 40445,
+    "sha256": "bd7934207bc74742c561e29d2d4ab0ee7596f5f96ccc7d8d02f6fd1d83cd2e2e"
+  },
+  "sources": [
+    {
+      "domain": 1,
+      "path": "/home/research/hangzhou_v8_runtime_20261124/work/hangzhou-nested/long-runs/089-161-12rank/wrfout_d01_2026-11-29_00:00:00",
+      "bytes": 13606318,
+      "selected_native_variables_SHA256": "fb97bff11a998a9fe478bf9e16866dd2f716e6ae8ff540b6b57914ad21dbb7a1",
+      "hash_scope": "Unmodified named native F32 arrays read by this pack, including shape; not a whole-NetCDF file hash."
+    },
+    {
+      "domain": 2,
+      "path": "/home/research/hangzhou_v8_runtime_20261124/work/hangzhou-nested/long-runs/089-161-12rank/wrfout_d02_2026-11-29_00:00:00",
+      "bytes": 31709374,
+      "selected_native_variables_SHA256": "101139aeca93a0615db40ab0d5aa864b68a6a5043cd1fee63bd1d7a692e2ba3c",
+      "hash_scope": "Unmodified named native F32 arrays read by this pack, including shape; not a whole-NetCDF file hash."
+    }
+  ],
+  "controls": [],
+  "wind_F16_max_error_m_s": 0.007811486676644108,
+  "cloud_Q8_max_error": 0.0019307479784272,
+  "GPU_compile_and_resample_s": 0.1844745189882815,
+  "phase_minima": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "phase_maxima": [
+    1.1616227369210832,
+    1.1616227369210832,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "phase_increment": {
+    "file": "phase-increment-103.f32.gz",
+    "shape": [
+      75,
+      100,
+      7
+    ],
+    "dtype": "<f4",
+    "raw_bytes": 210000,
+    "bytes": 1166,
+    "sha256": "40da3ec804a6241ba3ed22b42ffa132ff83a4e7136d5b6f707d9fb2ce1ef5a6a"
+  },
+  "increment_interval_reporting_h": [
+    103,
+    104
+  ],
+  "phase_increment_minimum": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ]
+}
