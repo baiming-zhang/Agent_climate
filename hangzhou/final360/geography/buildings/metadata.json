@@ -1,0 +1,3536 @@
+{
+  "version": "hangzhou-real-footprints-v1",
+  "completed_UTC": "2026-11-13T12:12:56.110285+00:00",
+  "wall_seconds": 27.422000000005937,
+  "source_features": 464909,
+  "display_building_parts": 464983,
+  "stats": {
+    "schematic_6m": 459585,
+    "source_courtyard_holes_omitted_in_display": 1164,
+    "levels_times_assumed3m": 842,
+    "source_height": 4556
+  },
+  "tile_size_km": 4,
+  "coarse": {
+    "file": "../geography/buildings/coarse_boxes.f32.gz",
+    "bytes": 11773992,
+    "sha256": "8fd52ddd282e9806e93fef839a3aa01cd19ce632297c5cb2d94fa53d095188d2",
+    "shape": [
+      464983,
+      7
+    ],
+    "columns": [
+      "east_km",
+      "north_km",
+      "base_orthometric_m",
+      "width_km",
+      "depth_km",
+      "display_height_m",
+      "rotation_rad"
+    ]
+  },
+  "tiles": [
+    {
+      "tile": "x-4_y-4",
+      "coarse_start": 0,
+      "count": 2270,
+      "centre_east_north_km": [
+        -14.0,
+        -14.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x-4_y-4_points.f32.gz",
+        "bytes": 62219,
+        "sha256": "0edbaee0c781b9a4ac9eef9d8f00d76e06622f5615fafab7f8ca56c25a80b783"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x-4_y-4_offsets.u32.gz",
+        "bytes": 3289,
+        "sha256": "52e2c7ffb6529a9127857b352cf2fad687679493f1090ef85f67e4527e7411fd"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x-4_y-4_base_roof.f32.gz",
+        "bytes": 15761,
+        "sha256": "6630030bc357ec40bb1424d3a96991eba907fa3eeb183d20a9fd59e1838a527e"
+      },
+      "vertices": 9794
+    },
+    {
+      "tile": "x-4_y-3",
+      "coarse_start": 2270,
+      "count": 475,
+      "centre_east_north_km": [
+        -14.0,
+        -10.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x-4_y-3_points.f32.gz",
+        "bytes": 13458,
+        "sha256": "198c65fba404275f401f254d2c7fbd9398d60a9ecc19e3040703a52522f8402b"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x-4_y-3_offsets.u32.gz",
+        "bytes": 775,
+        "sha256": "7082788bf7bd20c37183212eba15dac5b2ec18745bccb71bcc4f71f19f44ff0f"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x-4_y-3_base_roof.f32.gz",
+        "bytes": 3416,
+        "sha256": "83bfe77dfe3951c10e2325e6af7768d7b14562f64f1a8f13a3b606463bc08805"
+      },
+      "vertices": 2099
+    },
+    {
+      "tile": "x-4_y-2",
+      "coarse_start": 2745,
+      "count": 2299,
+      "centre_east_north_km": [
+        -14.0,
+        -6.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x-4_y-2_points.f32.gz",
+        "bytes": 73884,
+        "sha256": "40888db7ba9c752b528cdee8efea04f0feeafd1846ff08158c3bbb168fd4f427"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x-4_y-2_offsets.u32.gz",
+        "bytes": 3337,
+        "sha256": "1d990413513689f3ff2f63ee5ed20d4554b2499e98eb5b3fc90ede4aa08c88ce"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x-4_y-2_base_roof.f32.gz",
+        "bytes": 16336,
+        "sha256": "b1947d77ddf71197d9ce074ab475518727e047c01b27ca6bdb04585e192e1a46"
+      },
+      "vertices": 11245
+    },
+    {
+      "tile": "x-4_y-1",
+      "coarse_start": 5044,
+      "count": 3160,
+      "centre_east_north_km": [
+        -14.0,
+        -2.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x-4_y-1_points.f32.gz",
+        "bytes": 101331,
+        "sha256": "4171978f6e3c75ee4a0b079d6d0f3087b31f1988fcea1fbbfed6abcdbfc4442a"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x-4_y-1_offsets.u32.gz",
+        "bytes": 4545,
+        "sha256": "856be589b08d43c9b52e21fdd808abf8e464dc544679911ce0e334aea5da855b"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x-4_y-1_base_roof.f32.gz",
+        "bytes": 22386,
+        "sha256": "e80b79b68e487ae4c5900cfb75617681636da20cc19809c579d26a523ae96636"
+      },
+      "vertices": 14858
+    },
+    {
+      "tile": "x-4_y0",
+      "coarse_start": 8204,
+      "count": 2688,
+      "centre_east_north_km": [
+        -14.0,
+        2.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x-4_y0_points.f32.gz",
+        "bytes": 105016,
+        "sha256": "d84f4042f3080afcffccff7a36e00eac3a0bf73032d20a26e2fd971f7e0fa31a"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x-4_y0_offsets.u32.gz",
+        "bytes": 3897,
+        "sha256": "bc181bedee55af92e8aa3c69ab063a166d8638ee0db03b0422a0f0457e85aef8"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x-4_y0_base_roof.f32.gz",
+        "bytes": 18940,
+        "sha256": "b1b60515e279d1419be40e4f20866c0f5b4acb33f146381ead0d55b728601e25"
+      },
+      "vertices": 15714
+    },
+    {
+      "tile": "x-4_y1",
+      "coarse_start": 10892,
+      "count": 2707,
+      "centre_east_north_km": [
+        -14.0,
+        6.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x-4_y1_points.f32.gz",
+        "bytes": 78732,
+        "sha256": "d2c7f3d364c1fa969b22deddf2ea99d8ea161ea5aa68b3cd6c523e40f6a619b3"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x-4_y1_offsets.u32.gz",
+        "bytes": 3906,
+        "sha256": "a38cacb1cc4eb0aa76d7eca426eae253a87cc5f8892af52ad19ca0e32e34c2ea"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x-4_y1_base_roof.f32.gz",
+        "bytes": 19003,
+        "sha256": "40309809b32cbfb8361d1fd23a5957307947fa2e33b7c1a31610de9e648a966d"
+      },
+      "vertices": 11822
+    },
+    {
+      "tile": "x-4_y2",
+      "coarse_start": 13599,
+      "count": 3011,
+      "centre_east_north_km": [
+        -14.0,
+        10.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x-4_y2_points.f32.gz",
+        "bytes": 106122,
+        "sha256": "7d9b894f5a5ad889b79c752f4d09707650229224c7afbcf88ca00bc712f18e8b"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x-4_y2_offsets.u32.gz",
+        "bytes": 4352,
+        "sha256": "9b028e854454ae9e7280a8a3de9fb015f7aeba67d8c76228a1bc19f313dfb25e"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x-4_y2_base_roof.f32.gz",
+        "bytes": 21587,
+        "sha256": "d2d27a72d5ad28e2e1689dc0669dd3f95154e6aaa25a706e64a26a5956c38056"
+      },
+      "vertices": 16319
+    },
+    {
+      "tile": "x-4_y3",
+      "coarse_start": 16610,
+      "count": 2040,
+      "centre_east_north_km": [
+        -14.0,
+        14.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x-4_y3_points.f32.gz",
+        "bytes": 59618,
+        "sha256": "87cebe95dc6b082a324a98a1baa29f5e2687a5bf18d1a3107e4487fa0f58c484"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x-4_y3_offsets.u32.gz",
+        "bytes": 2962,
+        "sha256": "f82512c63de19df166fbe6cd75753f335bcec1a86baa488f46ef1996242de352"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x-4_y3_base_roof.f32.gz",
+        "bytes": 14453,
+        "sha256": "c50ad1316ee233bdbab78cdc249f40947da86fa30a90b05dfd987f425c8c32db"
+      },
+      "vertices": 9157
+    },
+    {
+      "tile": "x-3_y-4",
+      "coarse_start": 18650,
+      "count": 1504,
+      "centre_east_north_km": [
+        -10.0,
+        -14.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x-3_y-4_points.f32.gz",
+        "bytes": 46565,
+        "sha256": "a29f7f80385efbc0be01da266368429df68a9d278840ad254c4368fd5b8d5d38"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x-3_y-4_offsets.u32.gz",
+        "bytes": 2227,
+        "sha256": "8eb8029023b77801129d7a55f123843eb3fbe8a0dd700e3f250e4ee463e9f9be"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x-3_y-4_base_roof.f32.gz",
+        "bytes": 10692,
+        "sha256": "d4b73593673472322b29047a11d425fbd0812364987735b4746404dd19fefc09"
+      },
+      "vertices": 7225
+    },
+    {
+      "tile": "x-3_y-3",
+      "coarse_start": 20154,
+      "count": 3096,
+      "centre_east_north_km": [
+        -10.0,
+        -10.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x-3_y-3_points.f32.gz",
+        "bytes": 88492,
+        "sha256": "8af81c9bc9dd557eba222e2cd7536142e05e90f23c726ed1efe539c8ae802f26"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x-3_y-3_offsets.u32.gz",
+        "bytes": 4448,
+        "sha256": "bed9f97004d830c376254b53e5abd5abc3300849d83118f4170353cac4c5e359"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x-3_y-3_base_roof.f32.gz",
+        "bytes": 21581,
+        "sha256": "7fa14e53dcbe816ed98684dd8978cfba67059cc3bc4a6aaaedbc6c1613670bd0"
+      },
+      "vertices": 13913
+    },
+    {
+      "tile": "x-3_y-2",
+      "coarse_start": 23250,
+      "count": 2350,
+      "centre_east_north_km": [
+        -10.0,
+        -6.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x-3_y-2_points.f32.gz",
+        "bytes": 74747,
+        "sha256": "dad13cf9cef87f3ef0cab13536c8829fabdb6e8f17ed82aa754283b579a6dd4e"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x-3_y-2_offsets.u32.gz",
+        "bytes": 3419,
+        "sha256": "8dbb753bddf89513cf776446e82fcc950e28d4f7f1f54bef9451418df8eec56b"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x-3_y-2_base_roof.f32.gz",
+        "bytes": 16555,
+        "sha256": "b8b365fb90bd281cf40faaefcbcec7847ac48de44d7b9b4b458fceb7e6fdba64"
+      },
+      "vertices": 11380
+    },
+    {
+      "tile": "x-3_y-1",
+      "coarse_start": 25600,
+      "count": 4175,
+      "centre_east_north_km": [
+        -10.0,
+        -2.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x-3_y-1_points.f32.gz",
+        "bytes": 141860,
+        "sha256": "6b092a78869427366879889a3da5d5943899e5e44712ca2aa5d5bb4ce268a408"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x-3_y-1_offsets.u32.gz",
+        "bytes": 5976,
+        "sha256": "85a990e357dd2b1846e78ed35f81525b3ebeec94b2f08a117929ba659995d325"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x-3_y-1_base_roof.f32.gz",
+        "bytes": 29728,
+        "sha256": "f098eef7e90b755296d1b5f36d4934c648fb46d53356c5770e523f42579ad747"
+      },
+      "vertices": 21140
+    },
+    {
+      "tile": "x-3_y0",
+      "coarse_start": 29775,
+      "count": 4120,
+      "centre_east_north_km": [
+        -10.0,
+        2.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x-3_y0_points.f32.gz",
+        "bytes": 135721,
+        "sha256": "f88a95e2308ab28a7da71460e0d1f86c75fe26f90f303c8cd2ee35ff50025330"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x-3_y0_offsets.u32.gz",
+        "bytes": 5894,
+        "sha256": "e5f282a7b7ecbf71818df0c93afec160a61833a8be1db4ffb44c7c0c596555cb"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x-3_y0_base_roof.f32.gz",
+        "bytes": 28993,
+        "sha256": "6b6147957a3ed5924edd5ef67142096ac79c8607c87c58b6179419e1db928424"
+      },
+      "vertices": 20408
+    },
+    {
+      "tile": "x-3_y1",
+      "coarse_start": 33895,
+      "count": 1704,
+      "centre_east_north_km": [
+        -10.0,
+        6.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x-3_y1_points.f32.gz",
+        "bytes": 60054,
+        "sha256": "ae494c3ac8c2faa0bb7beb1051043e6da450e9ce726061c45301ce5e821f29e6"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x-3_y1_offsets.u32.gz",
+        "bytes": 2505,
+        "sha256": "8e2906d0928ca4f54eca96d759bdd98470e5e764d5103b2a7951d32dc3ed00f2"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x-3_y1_base_roof.f32.gz",
+        "bytes": 11994,
+        "sha256": "53c9c26877eb8da34639bde95b0c00fd883cdc26c1f5480d6242aed7e097d429"
+      },
+      "vertices": 9070
+    },
+    {
+      "tile": "x-3_y2",
+      "coarse_start": 35599,
+      "count": 3490,
+      "centre_east_north_km": [
+        -10.0,
+        10.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x-3_y2_points.f32.gz",
+        "bytes": 105189,
+        "sha256": "8bb97645852d20842358b2279c9dc2e72fdc65ba95e58482342f284ca9e1c6f7"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x-3_y2_offsets.u32.gz",
+        "bytes": 4974,
+        "sha256": "06465f9783bcf2a4dd230eb0bfe19da5ff76d8456d2d4b6c4a386c826184157f"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x-3_y2_base_roof.f32.gz",
+        "bytes": 24536,
+        "sha256": "1a5e7be1320eecb9c66c78e0386254043ee6d641a4e3e0175ecae78b5ddc7214"
+      },
+      "vertices": 16249
+    },
+    {
+      "tile": "x-3_y3",
+      "coarse_start": 39089,
+      "count": 4170,
+      "centre_east_north_km": [
+        -10.0,
+        14.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x-3_y3_points.f32.gz",
+        "bytes": 117726,
+        "sha256": "ab990829c89109ceff5fa81971a082d83d1ac9c519ff8d3cc3ca746677a1d721"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x-3_y3_offsets.u32.gz",
+        "bytes": 5932,
+        "sha256": "613a59f76215a1181436342440db984267fecebc700dbc259e6a9ba0a8d8d7e0"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x-3_y3_base_roof.f32.gz",
+        "bytes": 29219,
+        "sha256": "70ff0734ec4e0ebaec92573a50b3bdf5a65e6a1a9bbcfd98499b54b412a80214"
+      },
+      "vertices": 18134
+    },
+    {
+      "tile": "x-2_y-4",
+      "coarse_start": 43259,
+      "count": 1325,
+      "centre_east_north_km": [
+        -6.0,
+        -14.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x-2_y-4_points.f32.gz",
+        "bytes": 46945,
+        "sha256": "51671af90e4cf417d6bd5a566f3923fbc41c4e7f3e2402524ec4cf3f26b3b3b0"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x-2_y-4_offsets.u32.gz",
+        "bytes": 1981,
+        "sha256": "e59d93e719e7a71207843e50946977a56900562daaa64877c65ec42174f11441"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x-2_y-4_base_roof.f32.gz",
+        "bytes": 9312,
+        "sha256": "2541cbff081b4e91de1a99efc2f2f2757a6923fe44f81e706308de76e0810392"
+      },
+      "vertices": 7004
+    },
+    {
+      "tile": "x-2_y-3",
+      "coarse_start": 44584,
+      "count": 3264,
+      "centre_east_north_km": [
+        -6.0,
+        -10.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x-2_y-3_points.f32.gz",
+        "bytes": 103031,
+        "sha256": "68d7e4539453fae29242d7201223099b13d153bbd44052c3750fd92617f75dc5"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x-2_y-3_offsets.u32.gz",
+        "bytes": 4680,
+        "sha256": "33d30b7513e4ce96b9cad998140279be571fe45d747c26702a00f264cae0c388"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x-2_y-3_base_roof.f32.gz",
+        "bytes": 23012,
+        "sha256": "188a95001f6b5fd5b69677db391b303576a49552c469daaa1b9635fbb8bbe3ca"
+      },
+      "vertices": 15565
+    },
+    {
+      "tile": "x-2_y-2",
+      "coarse_start": 47848,
+      "count": 1163,
+      "centre_east_north_km": [
+        -6.0,
+        -6.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x-2_y-2_points.f32.gz",
+        "bytes": 35330,
+        "sha256": "64767b4144859ce411404dcd777f2c24f02e8ca73e5c4b0546bb67739a2ed760"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x-2_y-2_offsets.u32.gz",
+        "bytes": 1743,
+        "sha256": "752197776f470d34405f25a604d8a8ca34d77ce18eadef1c39a7e710ef7d6955"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x-2_y-2_base_roof.f32.gz",
+        "bytes": 8229,
+        "sha256": "b2c1a8338cca67e2079e3cfb5347f2d1a525e0f35cce9dfa7d4d2bc35358fe53"
+      },
+      "vertices": 5579
+    },
+    {
+      "tile": "x-2_y-1",
+      "coarse_start": 49011,
+      "count": 3105,
+      "centre_east_north_km": [
+        -6.0,
+        -2.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x-2_y-1_points.f32.gz",
+        "bytes": 102160,
+        "sha256": "25d5d46f1c506806da1e63b1d70eaf99fdb8595dfc0d2a1ef1b80f8ad1e2a037"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x-2_y-1_offsets.u32.gz",
+        "bytes": 4469,
+        "sha256": "a618f3e991aa7a323317400ab1e2258ea943671dab36e164bdda75378af2fe0c"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x-2_y-1_base_roof.f32.gz",
+        "bytes": 22125,
+        "sha256": "29a6fc9d4b29eab947776f5c2deb6cb15af4d8b0261a5002f15572d13e58092d"
+      },
+      "vertices": 15135
+    },
+    {
+      "tile": "x-2_y0",
+      "coarse_start": 52116,
+      "count": 7049,
+      "centre_east_north_km": [
+        -6.0,
+        2.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x-2_y0_points.f32.gz",
+        "bytes": 242635,
+        "sha256": "f621429ecb0e8492f977fcadaff33271c48baa7e85d96f929f4b499be058ff58"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x-2_y0_offsets.u32.gz",
+        "bytes": 10027,
+        "sha256": "0bbd9965aec6e5aee894a384c9024cc69e7385045ae03d52c5b5328454d4ba07"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x-2_y0_base_roof.f32.gz",
+        "bytes": 49247,
+        "sha256": "f58345fc519273dd14c026d0d8c1f36a5e59b49faf9d264452abde5d27f3b81a"
+      },
+      "vertices": 36065
+    },
+    {
+      "tile": "x-2_y1",
+      "coarse_start": 59165,
+      "count": 5204,
+      "centre_east_north_km": [
+        -6.0,
+        6.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x-2_y1_points.f32.gz",
+        "bytes": 171496,
+        "sha256": "f7b59de132e06b1a2d8557c36663dffda0ddcc3bc563409c8fb02079e1941e42"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x-2_y1_offsets.u32.gz",
+        "bytes": 7421,
+        "sha256": "4d4dccfa63bd45b7788a8ae6b952e7ea449de215edff361b4802b5bf92798c0f"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x-2_y1_base_roof.f32.gz",
+        "bytes": 36536,
+        "sha256": "90bb8ec426d6dd2290040f9da8b071ef306457446e9a3e29438850d6c29b3ed0"
+      },
+      "vertices": 25471
+    },
+    {
+      "tile": "x-2_y2",
+      "coarse_start": 64369,
+      "count": 3559,
+      "centre_east_north_km": [
+        -6.0,
+        10.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x-2_y2_points.f32.gz",
+        "bytes": 111194,
+        "sha256": "34fb3ff04be28a2e83c72910a0fcdab24deb2110e592edbf16b3375b63617d07"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x-2_y2_offsets.u32.gz",
+        "bytes": 5100,
+        "sha256": "e6cd51fb1750f15d2773f1e68f48272755018d1e4cce57375bafa8d2a8e479eb"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x-2_y2_base_roof.f32.gz",
+        "bytes": 25099,
+        "sha256": "b82751d2b4190a8bbef1e855a34805304b8d7e9ee3a84b91af12ee6041a1d3e0"
+      },
+      "vertices": 16646
+    },
+    {
+      "tile": "x-2_y3",
+      "coarse_start": 67928,
+      "count": 2991,
+      "centre_east_north_km": [
+        -6.0,
+        14.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x-2_y3_points.f32.gz",
+        "bytes": 88318,
+        "sha256": "8a9f6e175ca435b6aad0e7b0766203e2885ffd74d935c692783c07c80dcb06a7"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x-2_y3_offsets.u32.gz",
+        "bytes": 4280,
+        "sha256": "9a8cfc6a55f6933e4974f4c043a3d7970f0b8c5eff3eec68e5a81ee1a5c34e8c"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x-2_y3_base_roof.f32.gz",
+        "bytes": 20954,
+        "sha256": "09c46a0d27b2569b0624bf1b6b76c9b060ddf2d137fff6508ad5720cd14cac00"
+      },
+      "vertices": 13353
+    },
+    {
+      "tile": "x-1_y-4",
+      "coarse_start": 70919,
+      "count": 1180,
+      "centre_east_north_km": [
+        -2.0,
+        -14.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x-1_y-4_points.f32.gz",
+        "bytes": 38099,
+        "sha256": "a553467dc35a7beedf32b5eb4701c426154a51ac45b3393b16deae83451be5e3"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x-1_y-4_offsets.u32.gz",
+        "bytes": 1763,
+        "sha256": "0d90139765f7e4dd20a99c2444f24dadb6e05c1e56761b963d703a84ba95d195"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x-1_y-4_base_roof.f32.gz",
+        "bytes": 8058,
+        "sha256": "a2b3dd378c58788203b349018922998e3818c4313cfa59622a5913dcea1f4b51"
+      },
+      "vertices": 5480
+    },
+    {
+      "tile": "x-1_y-3",
+      "coarse_start": 72099,
+      "count": 3692,
+      "centre_east_north_km": [
+        -2.0,
+        -10.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x-1_y-3_points.f32.gz",
+        "bytes": 157150,
+        "sha256": "30229825bac3dbab6ce8c083ad22f94fcdc0be7be5ef1f3b27a751b75997fc82"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x-1_y-3_offsets.u32.gz",
+        "bytes": 5327,
+        "sha256": "f51a5f80c529f7f6e133555d04e709b5ae5d0de65495fcf963f24a0623bb720b"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x-1_y-3_base_roof.f32.gz",
+        "bytes": 25608,
+        "sha256": "31a881a0410168de3a713c6fe40ffc70139863f1c534015c6e89f2fe3b644b17"
+      },
+      "vertices": 23443
+    },
+    {
+      "tile": "x-1_y-2",
+      "coarse_start": 75791,
+      "count": 2883,
+      "centre_east_north_km": [
+        -2.0,
+        -6.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x-1_y-2_points.f32.gz",
+        "bytes": 99586,
+        "sha256": "ecea6e004d5a0119e1e7abd2444b26a0b12de98c09c00e1431b42f388dc5cc52"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x-1_y-2_offsets.u32.gz",
+        "bytes": 4158,
+        "sha256": "5b4aa4e437b60d1297edb49190cffb50734ef2e3416c1aba7897e6d44863ee2d"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x-1_y-2_base_roof.f32.gz",
+        "bytes": 20584,
+        "sha256": "d936a4818054f8c0906934c3f6192caa0efa02932dd68a9e25616a73a78e6b62"
+      },
+      "vertices": 14859
+    },
+    {
+      "tile": "x-1_y-1",
+      "coarse_start": 78674,
+      "count": 3203,
+      "centre_east_north_km": [
+        -2.0,
+        -2.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x-1_y-1_points.f32.gz",
+        "bytes": 127173,
+        "sha256": "737e6360d7a66364f9ff1a4abd97e542d0c68e0c1b171d78899f1a6ad1f11b13"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x-1_y-1_offsets.u32.gz",
+        "bytes": 4632,
+        "sha256": "8c6a859f5bd2657e8ca1c1f9ca070ac4a2ab38bd1711a03d3a60c012715a6000"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x-1_y-1_base_roof.f32.gz",
+        "bytes": 22635,
+        "sha256": "4e0b88140595f367177a05783043db727e400ba1bf2a81297225f01a700fbc75"
+      },
+      "vertices": 19100
+    },
+    {
+      "tile": "x-1_y0",
+      "coarse_start": 81877,
+      "count": 7857,
+      "centre_east_north_km": [
+        -2.0,
+        2.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x-1_y0_points.f32.gz",
+        "bytes": 280749,
+        "sha256": "4430c497304f2f2dfa35b99828570c382bde0368d1c7f98078cc128edffd31e5"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x-1_y0_offsets.u32.gz",
+        "bytes": 11153,
+        "sha256": "447dbc8ba516d3238bfae98b3c98464d731cd05b81f7ae6169a8500d03e8a18b"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x-1_y0_base_roof.f32.gz",
+        "bytes": 54229,
+        "sha256": "b2cb50a7f35ac4e59a72ceaf8b840ab0a7fe0121dde6a6f578d0191afb5f159f"
+      },
+      "vertices": 40480
+    },
+    {
+      "tile": "x-1_y1",
+      "coarse_start": 89734,
+      "count": 5444,
+      "centre_east_north_km": [
+        -2.0,
+        6.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x-1_y1_points.f32.gz",
+        "bytes": 197898,
+        "sha256": "bb35f3800984e280c6b4f6e2bb3c6024ec6d69578850a5cd9709f773e5ae8769"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x-1_y1_offsets.u32.gz",
+        "bytes": 7787,
+        "sha256": "276a44e32344051cd7b1b6bb3a8e532e49d633a372194a41fcf25c54bb2fe7c4"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x-1_y1_base_roof.f32.gz",
+        "bytes": 38320,
+        "sha256": "59698abbb7566e4b6910b6993607e8ae917a35405f28cda2d3f3e99dad66558c"
+      },
+      "vertices": 29897
+    },
+    {
+      "tile": "x-1_y2",
+      "coarse_start": 95178,
+      "count": 2905,
+      "centre_east_north_km": [
+        -2.0,
+        10.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x-1_y2_points.f32.gz",
+        "bytes": 92658,
+        "sha256": "24955cb10192f5efd3193b04904c9f34135742ce3c231c37f1248f3175eb6ae3"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x-1_y2_offsets.u32.gz",
+        "bytes": 4175,
+        "sha256": "74a16e4b2fc560bdb5ac32136678836f9603c4f1994244ebc6fbc0e99369f205"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x-1_y2_base_roof.f32.gz",
+        "bytes": 20507,
+        "sha256": "62be41c3aae74b7ead5746d070466d1e00dcfa2d4397dce07b7c6caf18c48078"
+      },
+      "vertices": 13650
+    },
+    {
+      "tile": "x-1_y3",
+      "coarse_start": 98083,
+      "count": 2162,
+      "centre_east_north_km": [
+        -2.0,
+        14.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x-1_y3_points.f32.gz",
+        "bytes": 67671,
+        "sha256": "8fc9bed23e67a8b26bef36b7fd35212fc385631ae74454a58df05dbd1d00b02a"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x-1_y3_offsets.u32.gz",
+        "bytes": 3122,
+        "sha256": "88576f8f5e683772c5374054eab5c665c0bad85327bdbeb215bb8b9ea57d1da2"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x-1_y3_base_roof.f32.gz",
+        "bytes": 15263,
+        "sha256": "2a0b5d5e04b89f97ac0f0d14de6e8abb68b9e67aa0b4dee4f44c08387e8ae58c"
+      },
+      "vertices": 10057
+    },
+    {
+      "tile": "x0_y-4",
+      "coarse_start": 100245,
+      "count": 3824,
+      "centre_east_north_km": [
+        2.0,
+        -14.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x0_y-4_points.f32.gz",
+        "bytes": 122170,
+        "sha256": "49307347833d7a0caf4d96132ce3bd63d94c4286c37661804f270bf447be741e"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x0_y-4_offsets.u32.gz",
+        "bytes": 5469,
+        "sha256": "5b8b3d152f0db7a2bd59538355d019d16fbfdaa5a6151ece29ef84f6aa58b750"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x0_y-4_base_roof.f32.gz",
+        "bytes": 26487,
+        "sha256": "1567d8c9f416871eefb2ff163a37ecffda43bba3478f55cb0518be2931ad291e"
+      },
+      "vertices": 17955
+    },
+    {
+      "tile": "x0_y-3",
+      "coarse_start": 104069,
+      "count": 5550,
+      "centre_east_north_km": [
+        2.0,
+        -10.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x0_y-3_points.f32.gz",
+        "bytes": 186314,
+        "sha256": "d21f47cc01755ef3400c46d8ad2aa910e898b5ba34fc8f8e915084fca204f130"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x0_y-3_offsets.u32.gz",
+        "bytes": 7915,
+        "sha256": "40871b95c8c6c3beeab26043b2cb1c99a4fc9cbec142c56c55666091562527b9"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x0_y-3_base_roof.f32.gz",
+        "bytes": 38209,
+        "sha256": "fb5987373fb50a72104c39c77949ea22af6b8d11bd5555ff60bb6671e9d78a7d"
+      },
+      "vertices": 27730
+    },
+    {
+      "tile": "x0_y-2",
+      "coarse_start": 109619,
+      "count": 3022,
+      "centre_east_north_km": [
+        2.0,
+        -6.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x0_y-2_points.f32.gz",
+        "bytes": 111400,
+        "sha256": "f1b23e13872f0583941da89fb9e032729404301d49a5678fc7c708dd410fbe5e"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x0_y-2_offsets.u32.gz",
+        "bytes": 4370,
+        "sha256": "464c5ba0dfa721ba5838d58c0cf2bc5e067e67826ec8e424b7a148dd44f490f5"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x0_y-2_base_roof.f32.gz",
+        "bytes": 21429,
+        "sha256": "b5463b821b682a4310b40839acdf69cbcdc02730ec6f22fcabf6cd64e6a10796"
+      },
+      "vertices": 16246
+    },
+    {
+      "tile": "x0_y-1",
+      "coarse_start": 112641,
+      "count": 7457,
+      "centre_east_north_km": [
+        2.0,
+        -2.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x0_y-1_points.f32.gz",
+        "bytes": 273523,
+        "sha256": "8d70e0adaa98bb57b856d2e8d895595ed4939fc03479442f80e9783b4acdab46"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x0_y-1_offsets.u32.gz",
+        "bytes": 10602,
+        "sha256": "2b7300718bc3984216df00f234d54c7006a1d3a694a2ff30b4c9d9027774fd17"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x0_y-1_base_roof.f32.gz",
+        "bytes": 50812,
+        "sha256": "8dd37132b7f0a0a482bd0062863b69509cfc7308bf47efc476d093b9f4452ed1"
+      },
+      "vertices": 39529
+    },
+    {
+      "tile": "x0_y0",
+      "coarse_start": 120098,
+      "count": 6657,
+      "centre_east_north_km": [
+        2.0,
+        2.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x0_y0_points.f32.gz",
+        "bytes": 268481,
+        "sha256": "7cf6aaeed9476d8e08f92ff0dca02c793f314e5e4809fb38844c0118961f329e"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x0_y0_offsets.u32.gz",
+        "bytes": 9508,
+        "sha256": "4eb29093e1721e36c28ef34148fc1da4b74343055a76adfd34e25400d5e52f59"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x0_y0_base_roof.f32.gz",
+        "bytes": 45567,
+        "sha256": "6102a4a67208186d721034b410599b38a0fc073e1c181253325c84444bf1db01"
+      },
+      "vertices": 39198
+    },
+    {
+      "tile": "x0_y1",
+      "coarse_start": 126755,
+      "count": 6931,
+      "centre_east_north_km": [
+        2.0,
+        6.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x0_y1_points.f32.gz",
+        "bytes": 244058,
+        "sha256": "a76c156104898d6c128d0b51ce684f9e7f88c76b0ae073e68ad1e25761c1a5c8"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x0_y1_offsets.u32.gz",
+        "bytes": 9854,
+        "sha256": "ec614566aa6bd61e547b7e8924a16d16992441cd68c146b2e584ee67cc5116d3"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x0_y1_base_roof.f32.gz",
+        "bytes": 48038,
+        "sha256": "ef9de77625ad158069bdbc1a823272384e65c2c1bb9b68c202af918f0ec1b2a9"
+      },
+      "vertices": 37529
+    },
+    {
+      "tile": "x0_y2",
+      "coarse_start": 133686,
+      "count": 3275,
+      "centre_east_north_km": [
+        2.0,
+        10.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x0_y2_points.f32.gz",
+        "bytes": 116605,
+        "sha256": "7958dde6ff2ba830615880bcb44b479f093e79b8482cdcb9d320d0cd7c53da39"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x0_y2_offsets.u32.gz",
+        "bytes": 4710,
+        "sha256": "b9644b829c9ea8d02bf9b8dde2dfc74a6781b0398acfb6125093d07edc37a414"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x0_y2_base_roof.f32.gz",
+        "bytes": 23335,
+        "sha256": "6e5270c3c5012d789a9ba7eceade8b4b6a6aef3f1a2a3aa4ef1516b382a8be6a"
+      },
+      "vertices": 17461
+    },
+    {
+      "tile": "x0_y3",
+      "coarse_start": 136961,
+      "count": 2241,
+      "centre_east_north_km": [
+        2.0,
+        14.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x0_y3_points.f32.gz",
+        "bytes": 73578,
+        "sha256": "2055ab141b2cc726c10e655124b85c5e2fbc745b6c6bb206a7b9058f4ee93509"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x0_y3_offsets.u32.gz",
+        "bytes": 3251,
+        "sha256": "3e3a07f393a091aa0af1c2e9fe3a645b12bee45d0d2ad9f06b9d0ae596c088f0"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x0_y3_base_roof.f32.gz",
+        "bytes": 15896,
+        "sha256": "aea64ee10a06d2a1ba527a11e6f08c97f6f2b20b032d169e87026b6cc98cb3c5"
+      },
+      "vertices": 10755
+    },
+    {
+      "tile": "x1_y-4",
+      "coarse_start": 139202,
+      "count": 1286,
+      "centre_east_north_km": [
+        6.0,
+        -14.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x1_y-4_points.f32.gz",
+        "bytes": 46067,
+        "sha256": "159955196099804e476d62ab3a2d6c1bae74ba9dc20cf63397bacdbe2531a2e8"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x1_y-4_offsets.u32.gz",
+        "bytes": 1917,
+        "sha256": "f7c0561df3b9c20d8024a29019b9c5e79b9be51481fcd8eeb20d00159ea419b7"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x1_y-4_base_roof.f32.gz",
+        "bytes": 9175,
+        "sha256": "f76950e1377d9952e0cb63b28a2d97b35a250de97e7765c47a66a6fb05c92c4c"
+      },
+      "vertices": 6882
+    },
+    {
+      "tile": "x1_y-3",
+      "coarse_start": 140488,
+      "count": 5743,
+      "centre_east_north_km": [
+        6.0,
+        -10.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x1_y-3_points.f32.gz",
+        "bytes": 190161,
+        "sha256": "f3193e77ae0c8b00c9b3a3d05a8b9ebe58cdf13abd5f3c6ef2ed70c7ac63838e"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x1_y-3_offsets.u32.gz",
+        "bytes": 8178,
+        "sha256": "e253daef4d31d0282b30a39072b6c28fd4f79b26087a72e35e8d02095a163d77"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x1_y-3_base_roof.f32.gz",
+        "bytes": 40130,
+        "sha256": "4d38b464b41066755689ab138131e07607955564b3704087a663acb881bc31c4"
+      },
+      "vertices": 28975
+    },
+    {
+      "tile": "x1_y-2",
+      "coarse_start": 146231,
+      "count": 3562,
+      "centre_east_north_km": [
+        6.0,
+        -6.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x1_y-2_points.f32.gz",
+        "bytes": 148606,
+        "sha256": "91943bafbf30eb01be1c5616b2a34b7d6fb355cef8b3fa1eaf88b0c9a5c8960f"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x1_y-2_offsets.u32.gz",
+        "bytes": 5155,
+        "sha256": "be92856386970366cb99b31f34966dca3219c932dd09263fef8347f6e058e572"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x1_y-2_base_roof.f32.gz",
+        "bytes": 25446,
+        "sha256": "9726fc02b763328d5bf9e878b4e521a2376bd623e122766be65014a574534e65"
+      },
+      "vertices": 22821
+    },
+    {
+      "tile": "x1_y-1",
+      "coarse_start": 149793,
+      "count": 3542,
+      "centre_east_north_km": [
+        6.0,
+        -2.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x1_y-1_points.f32.gz",
+        "bytes": 132244,
+        "sha256": "bd5e14df8ec09345b6113afddc7b89b844b4725497de4af2145f51ec08c8ad25"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x1_y-1_offsets.u32.gz",
+        "bytes": 5087,
+        "sha256": "1895ecbe2b00205a2a8ac67ce060a7b52ba0e0b150e657a7ae6c0a8bccd5f291"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x1_y-1_base_roof.f32.gz",
+        "bytes": 24664,
+        "sha256": "68bb4e9352ea5072c380c213e9e915b8649fb4b4b3c7c61d7d62cc910966a733"
+      },
+      "vertices": 19425
+    },
+    {
+      "tile": "x1_y0",
+      "coarse_start": 153335,
+      "count": 7337,
+      "centre_east_north_km": [
+        6.0,
+        2.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x1_y0_points.f32.gz",
+        "bytes": 238147,
+        "sha256": "bb7e3119159aebc4f836aed65ccc94436f0fdc1b274930270ace2f5acd4c3f57"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x1_y0_offsets.u32.gz",
+        "bytes": 10399,
+        "sha256": "e56f1bf57f5d43e6596d8cdcc172fa83894bb95864a262ed27cc1e3abe93be93"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x1_y0_base_roof.f32.gz",
+        "bytes": 51011,
+        "sha256": "cf18fa87a87bd0b0c6727cd6d527c458d13b97a6446fdab1cbd639119ea6be24"
+      },
+      "vertices": 35088
+    },
+    {
+      "tile": "x1_y1",
+      "coarse_start": 160672,
+      "count": 7798,
+      "centre_east_north_km": [
+        6.0,
+        6.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x1_y1_points.f32.gz",
+        "bytes": 236985,
+        "sha256": "d836d3e5adc0d8457bd30f78ac2fea3a76ac352827224f7ceec271f4e7575204"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x1_y1_offsets.u32.gz",
+        "bytes": 11035,
+        "sha256": "db6605cb28cf309e58fbcba49e836e5a632981f63e30fd2cce227316aef8b528"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x1_y1_base_roof.f32.gz",
+        "bytes": 54219,
+        "sha256": "0060130ef673298e53f2c3abf87131f329ef86074d047aa9b9258332a46b491a"
+      },
+      "vertices": 36661
+    },
+    {
+      "tile": "x1_y2",
+      "coarse_start": 168470,
+      "count": 3815,
+      "centre_east_north_km": [
+        6.0,
+        10.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x1_y2_points.f32.gz",
+        "bytes": 127476,
+        "sha256": "8d754462a987500078a931c79b611be74e1d56b2d444656fec1a930e5958586b"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x1_y2_offsets.u32.gz",
+        "bytes": 5459,
+        "sha256": "a12fca3129f455c08ad00196f6f2beb317563f1a00124e3f013acc88d1c19a83"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x1_y2_base_roof.f32.gz",
+        "bytes": 26930,
+        "sha256": "9b04452b6a9e2748b3250f27ead0348e9e29ece9b7d8377be2b7f517d73a5d56"
+      },
+      "vertices": 19111
+    },
+    {
+      "tile": "x1_y3",
+      "coarse_start": 172285,
+      "count": 826,
+      "centre_east_north_km": [
+        6.0,
+        14.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x1_y3_points.f32.gz",
+        "bytes": 26040,
+        "sha256": "41906b60bcd6c083a7c9bf01c28c14e3c7ec568ed1695692ae1dc5d954d5ec4a"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x1_y3_offsets.u32.gz",
+        "bytes": 1279,
+        "sha256": "a96fddb8a1405a798f159bf292832340c54f0bb8fc99376a14c5df2137667e88"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x1_y3_base_roof.f32.gz",
+        "bytes": 5954,
+        "sha256": "7ecce2a7d9aa609f597ad6dffdf607cefdb1aba410eca4f798b76282bab287f5"
+      },
+      "vertices": 3876
+    },
+    {
+      "tile": "x2_y-4",
+      "coarse_start": 173111,
+      "count": 5499,
+      "centre_east_north_km": [
+        10.0,
+        -14.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x2_y-4_points.f32.gz",
+        "bytes": 164986,
+        "sha256": "589b63de08399d3c3828a9c8f70c74f49487eedcbdd1d5ac530770ed14190052"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x2_y-4_offsets.u32.gz",
+        "bytes": 7837,
+        "sha256": "7bc4b7bc37734bc1e1250e40424373fc09263757f8902b4705ac497b5953c271"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x2_y-4_base_roof.f32.gz",
+        "bytes": 38485,
+        "sha256": "f03344fe134e6d6a12a7fdbdb353a0c52303b6223ba6d0c800e78822219823d5"
+      },
+      "vertices": 26066
+    },
+    {
+      "tile": "x2_y-3",
+      "coarse_start": 178610,
+      "count": 8633,
+      "centre_east_north_km": [
+        10.0,
+        -10.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x2_y-3_points.f32.gz",
+        "bytes": 271863,
+        "sha256": "acafff62f08ac0bb0587e76dac18dc6f1c4005c232488d24e372fead80dd3429"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x2_y-3_offsets.u32.gz",
+        "bytes": 12300,
+        "sha256": "98cd4f24255aa31a1bbf572ac30841141f9ed2ea3288d13e78def5a1f34594e4"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x2_y-3_base_roof.f32.gz",
+        "bytes": 60204,
+        "sha256": "cac3b95b6963304d04f01efdd08d072910b1d5c0fb10222ce2771c905a3ca54a"
+      },
+      "vertices": 42937
+    },
+    {
+      "tile": "x2_y-2",
+      "coarse_start": 187243,
+      "count": 6150,
+      "centre_east_north_km": [
+        10.0,
+        -6.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x2_y-2_points.f32.gz",
+        "bytes": 201259,
+        "sha256": "18295d4b25a527c62b9b1aca5fd5d99cbb28ee1abd9b3d28ada0d5e22bff73af"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x2_y-2_offsets.u32.gz",
+        "bytes": 8764,
+        "sha256": "48d786e2737356aa75aee967d7838dfc134e1f7ece790c568c68bcc1e8628f73"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x2_y-2_base_roof.f32.gz",
+        "bytes": 43118,
+        "sha256": "3c12e7e4fa9fc3df3bfd2ad3d07e749f36cac15978e32131e6c34c991acd1e47"
+      },
+      "vertices": 30987
+    },
+    {
+      "tile": "x2_y-1",
+      "coarse_start": 193393,
+      "count": 3597,
+      "centre_east_north_km": [
+        10.0,
+        -2.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x2_y-1_points.f32.gz",
+        "bytes": 121582,
+        "sha256": "1c70334820e836daceb68de05a1403b1490ae94a41bd33698e368a985f0ae2bc"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x2_y-1_offsets.u32.gz",
+        "bytes": 5162,
+        "sha256": "d0f4011bd0ca42ac7df7c6636d9fb28b06b3fb9865440951c7073e305b4e4f85"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x2_y-1_base_roof.f32.gz",
+        "bytes": 25341,
+        "sha256": "2a0e0950a53455395dbae15ee9094af19a20b9d97fe1fa5d42e1bb4daab1ad77"
+      },
+      "vertices": 17866
+    },
+    {
+      "tile": "x2_y0",
+      "coarse_start": 196990,
+      "count": 4608,
+      "centre_east_north_km": [
+        10.0,
+        2.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x2_y0_points.f32.gz",
+        "bytes": 144037,
+        "sha256": "49b836cd3403c6bc05c52167b1e9588dc873a6936d383b819618dc64f324046b"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x2_y0_offsets.u32.gz",
+        "bytes": 6558,
+        "sha256": "0519db247b699534b0c1672c3fc47d13b97804a8ec8853106507a837cd960ab7"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x2_y0_base_roof.f32.gz",
+        "bytes": 32115,
+        "sha256": "e9f8e6325b9dec58f357bb0ea9110337a462a1129e4de26f8621fee083a6957b"
+      },
+      "vertices": 21300
+    },
+    {
+      "tile": "x2_y1",
+      "coarse_start": 201598,
+      "count": 7214,
+      "centre_east_north_km": [
+        10.0,
+        6.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x2_y1_points.f32.gz",
+        "bytes": 220928,
+        "sha256": "f8a4820e32d27435b99d82d9a2c48e26055bcd60fa5fe5477e59f48446525b2f"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x2_y1_offsets.u32.gz",
+        "bytes": 10207,
+        "sha256": "b2df27e9ddfb88dd0dad9739e33e8a708f29f67f423293eb616d982f870062a0"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x2_y1_base_roof.f32.gz",
+        "bytes": 50563,
+        "sha256": "edb5bc99531428cc1fad976452b6d089f0043345b2493dcae7cf4e0a0907e514"
+      },
+      "vertices": 33466
+    },
+    {
+      "tile": "x2_y2",
+      "coarse_start": 208812,
+      "count": 5700,
+      "centre_east_north_km": [
+        10.0,
+        10.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x2_y2_points.f32.gz",
+        "bytes": 158876,
+        "sha256": "a376fe19deb86263679504f40e7133fd779ac98ee9e94bd3b6ed19c21a1b9db3"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x2_y2_offsets.u32.gz",
+        "bytes": 8088,
+        "sha256": "8e98dfa04f7ec2c9bfa80f45aa8e02576e77921cb16da00a7ce93b979ed6590d"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x2_y2_base_roof.f32.gz",
+        "bytes": 40076,
+        "sha256": "ee124fa41764dc30a63cb4a7f6e948b837389899176bc8e3f5dc114ed93ae487"
+      },
+      "vertices": 25238
+    },
+    {
+      "tile": "x2_y3",
+      "coarse_start": 214512,
+      "count": 2528,
+      "centre_east_north_km": [
+        10.0,
+        14.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x2_y3_points.f32.gz",
+        "bytes": 82121,
+        "sha256": "3af97c8b02b1cc518daade2397e819287141b3c5997964679b541ab9f5b843f0"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x2_y3_offsets.u32.gz",
+        "bytes": 3655,
+        "sha256": "df9db187550a38bd49f515730c111241df4b7b024d4c3602676d26e1bb5b06e2"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x2_y3_base_roof.f32.gz",
+        "bytes": 17927,
+        "sha256": "affb6563f23efe007ec004a8320e2fd556b82a772e172539e1f84d7882acdaf7"
+      },
+      "vertices": 12783
+    },
+    {
+      "tile": "x3_y-4",
+      "coarse_start": 217040,
+      "count": 4739,
+      "centre_east_north_km": [
+        14.0,
+        -14.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x3_y-4_points.f32.gz",
+        "bytes": 141213,
+        "sha256": "25e70381217307785bba80be918bb76fad19f4f077a8e92dfaad37d4b0522231"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x3_y-4_offsets.u32.gz",
+        "bytes": 6752,
+        "sha256": "b25f8ed2022590c7837975cafc2b2cc7b10146279ad4613ba31bc19bc181528b"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x3_y-4_base_roof.f32.gz",
+        "bytes": 33057,
+        "sha256": "2d4024846209bdbee4865132f336aa3b57e8c0b8ef294982d2782364a8511cba"
+      },
+      "vertices": 22257
+    },
+    {
+      "tile": "x3_y-3",
+      "coarse_start": 221779,
+      "count": 8301,
+      "centre_east_north_km": [
+        14.0,
+        -10.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x3_y-3_points.f32.gz",
+        "bytes": 250504,
+        "sha256": "6bac4c5bbf6e8dae7718654184b9a38a533db94124c79ed28e50abfb71baaae6"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x3_y-3_offsets.u32.gz",
+        "bytes": 11804,
+        "sha256": "5ca60609f242948df8f6f1422a09777c6b244b973bcc5fc07100977f5bb4165e"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x3_y-3_base_roof.f32.gz",
+        "bytes": 57631,
+        "sha256": "4ceebdf797261880b334ca839f9597544305a5969baa5c4732e5db231f9088ed"
+      },
+      "vertices": 38907
+    },
+    {
+      "tile": "x3_y-2",
+      "coarse_start": 230080,
+      "count": 6644,
+      "centre_east_north_km": [
+        14.0,
+        -6.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x3_y-2_points.f32.gz",
+        "bytes": 226356,
+        "sha256": "00d6b35c4f3f61451b57581b664b7147333f10ba4b53bc3ce5426d783169a37b"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x3_y-2_offsets.u32.gz",
+        "bytes": 9450,
+        "sha256": "34e7420884d2cdddec98a6112768dbeb71eeed8a6ad51a48988ad25a8261bc1f"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x3_y-2_base_roof.f32.gz",
+        "bytes": 46369,
+        "sha256": "fc14694d8a6f778b3a3be1ec8f1c261a4e75d58829151058ba2733389b90912c"
+      },
+      "vertices": 34225
+    },
+    {
+      "tile": "x3_y-1",
+      "coarse_start": 236724,
+      "count": 3064,
+      "centre_east_north_km": [
+        14.0,
+        -2.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x3_y-1_points.f32.gz",
+        "bytes": 106405,
+        "sha256": "8fb2758bbe871444b9d65b7281cb5eb91d254ead8fb1cc2a56b242aa3ac20abc"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x3_y-1_offsets.u32.gz",
+        "bytes": 4416,
+        "sha256": "79fa7feee2c11944041ce20f4e60f45c48446d8aa3d5c618921d9a5ae2b37075"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x3_y-1_base_roof.f32.gz",
+        "bytes": 21579,
+        "sha256": "9b66b45927d06d4574f3b580fbc05f55baf40b88b44ef52e563cb033fec7505d"
+      },
+      "vertices": 15634
+    },
+    {
+      "tile": "x3_y0",
+      "coarse_start": 239788,
+      "count": 2046,
+      "centre_east_north_km": [
+        14.0,
+        2.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x3_y0_points.f32.gz",
+        "bytes": 67068,
+        "sha256": "1140c1991bf27dbfec6c53d00978932f8dc4e35b0d70e389d4b6470afde794f7"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x3_y0_offsets.u32.gz",
+        "bytes": 2976,
+        "sha256": "5c51f57c783612ace53bca976431a19def57ae750948744929fe1382e4a67a35"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x3_y0_base_roof.f32.gz",
+        "bytes": 14443,
+        "sha256": "b682ba889228ea649a4dbc2a225d5accc1eee5d21b39ff63fe6be73c119f5bcf"
+      },
+      "vertices": 9840
+    },
+    {
+      "tile": "x3_y1",
+      "coarse_start": 241834,
+      "count": 2471,
+      "centre_east_north_km": [
+        14.0,
+        6.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x3_y1_points.f32.gz",
+        "bytes": 81941,
+        "sha256": "d89bbe8e3944ed6547123d1a4544d3448664d9ea569987e8431d484600f517ce"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x3_y1_offsets.u32.gz",
+        "bytes": 3579,
+        "sha256": "b859cf05d9840eaedc785b7f085e4e84a3689eb5a966b3ddcc911ff3fda7099c"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x3_y1_base_roof.f32.gz",
+        "bytes": 17355,
+        "sha256": "e92148f3eed0ae4f07b5018fe8427429cf31a09efe056b65d3f390237467b78c"
+      },
+      "vertices": 12285
+    },
+    {
+      "tile": "x3_y2",
+      "coarse_start": 244305,
+      "count": 4199,
+      "centre_east_north_km": [
+        14.0,
+        10.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x3_y2_points.f32.gz",
+        "bytes": 124620,
+        "sha256": "ad6f1c75f54b50010c958f63e517445f3ef1d7074de5f87e7e364fef6cc92732"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x3_y2_offsets.u32.gz",
+        "bytes": 5992,
+        "sha256": "0890372c1598c2824bb138665beb9cd1027037ac6c1cd1c99237ce9bf1c18b0a"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x3_y2_base_roof.f32.gz",
+        "bytes": 29472,
+        "sha256": "e513dfef3a86a4e6ab4c7abf258480bad8774ea6c9120a40b7d5964f28f67af1"
+      },
+      "vertices": 19435
+    },
+    {
+      "tile": "x3_y3",
+      "coarse_start": 248504,
+      "count": 1709,
+      "centre_east_north_km": [
+        14.0,
+        14.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x3_y3_points.f32.gz",
+        "bytes": 50082,
+        "sha256": "1f07160e7feb20ab80236951de0fe65990d46a8e3f5f196c3792bce49ec5f21f"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x3_y3_offsets.u32.gz",
+        "bytes": 2506,
+        "sha256": "65c71c7b1d7bdb3caa9f1aa6d7b8ce7f353d863e93aae84937a9e9ecf9e61caf"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x3_y3_base_roof.f32.gz",
+        "bytes": 12008,
+        "sha256": "179f0ccbd78e1d74f2b3b0e67f70e6caa7d22c477b140e5aa96504c62f581eb5"
+      },
+      "vertices": 7839
+    },
+    {
+      "tile": "x4_y-4",
+      "coarse_start": 250213,
+      "count": 3518,
+      "centre_east_north_km": [
+        18.0,
+        -14.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x4_y-4_points.f32.gz",
+        "bytes": 104797,
+        "sha256": "73d547567eb9fa87155afba33b2eb5a8e9f19345690bd5e4c410ad63dd0f95a3"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x4_y-4_offsets.u32.gz",
+        "bytes": 5014,
+        "sha256": "ec049c41fafa60553a56f71197626feabc13a90be065d748c08da3f7c3b27aac"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x4_y-4_base_roof.f32.gz",
+        "bytes": 24802,
+        "sha256": "a1c84ba4ca31d9ba3d8bc79666df94dddbc4792c012e3063a0a40826f2fa991c"
+      },
+      "vertices": 16559
+    },
+    {
+      "tile": "x4_y-3",
+      "coarse_start": 253731,
+      "count": 6730,
+      "centre_east_north_km": [
+        18.0,
+        -10.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x4_y-3_points.f32.gz",
+        "bytes": 199229,
+        "sha256": "6f7cc4a65f2b07b2abce40ce6377c2ff5a05ad8da9ceaf008f64374d66a1cd10"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x4_y-3_offsets.u32.gz",
+        "bytes": 9552,
+        "sha256": "2a998759f7febab8d0535a96ae6d5ab3545146da26b80e38ab2c766cebf9a8a0"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x4_y-3_base_roof.f32.gz",
+        "bytes": 47250,
+        "sha256": "9106508f2b729477208c391665c1220c0bb916c20f7aa2cf6fd23cd7b6c2cd47"
+      },
+      "vertices": 31244
+    },
+    {
+      "tile": "x4_y-2",
+      "coarse_start": 260461,
+      "count": 3929,
+      "centre_east_north_km": [
+        18.0,
+        -6.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x4_y-2_points.f32.gz",
+        "bytes": 124242,
+        "sha256": "f7dbce1dd6181185d4eee1902811f6ce2f166bdcc682af3352b1e57be20c611e"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x4_y-2_offsets.u32.gz",
+        "bytes": 5632,
+        "sha256": "9c33d26505d3d43b0f7fb2e5eddeed80bc31eb25cd4512446249669ee8faae8c"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x4_y-2_base_roof.f32.gz",
+        "bytes": 27482,
+        "sha256": "5f55b15384c873aa4d8e73107fc7e79db055f8946bd4c5792516b087c4ad7da1"
+      },
+      "vertices": 19054
+    },
+    {
+      "tile": "x4_y-1",
+      "coarse_start": 264390,
+      "count": 507,
+      "centre_east_north_km": [
+        18.0,
+        -2.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x4_y-1_points.f32.gz",
+        "bytes": 18278,
+        "sha256": "63ca55689b4307ba12f10f64a1a817ab3451cb2929d461498be0de516fc6d849"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x4_y-1_offsets.u32.gz",
+        "bytes": 824,
+        "sha256": "5521c1549edc797da222c7e40fa81506a177a220736eea8741a06435fda66182"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x4_y-1_base_roof.f32.gz",
+        "bytes": 3639,
+        "sha256": "1abec4ea3ad3882ebd395acfa4b526e50acd820ea88d3d22da3326f9bba1bc43"
+      },
+      "vertices": 2668
+    },
+    {
+      "tile": "x4_y0",
+      "coarse_start": 264897,
+      "count": 2457,
+      "centre_east_north_km": [
+        18.0,
+        2.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x4_y0_points.f32.gz",
+        "bytes": 89218,
+        "sha256": "9d15a21bc2aaaa9c2a3c675a7d38f702a8bed31f69986b2c29580237970f71c6"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x4_y0_offsets.u32.gz",
+        "bytes": 3553,
+        "sha256": "caf37a5e5cb04c6385d570914d91cbdfb0ec3a8bea859b092eacb11a3c28317d"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x4_y0_base_roof.f32.gz",
+        "bytes": 16932,
+        "sha256": "030bfd2d2f74203becac46783d2425c2ae90ad34f1ce8ad08b8fb9dbd1141c12"
+      },
+      "vertices": 13327
+    },
+    {
+      "tile": "x4_y1",
+      "coarse_start": 267354,
+      "count": 2569,
+      "centre_east_north_km": [
+        18.0,
+        6.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x4_y1_points.f32.gz",
+        "bytes": 88080,
+        "sha256": "cf4a1a74d0e9eb0598c60a0490290ca2db36e27959f1289d0119929f15d8603a"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x4_y1_offsets.u32.gz",
+        "bytes": 3720,
+        "sha256": "b3b0fcf7a01a8afaf7735a72fcc2bdeb62f758645ee5d3f4b36a1b91d1942e6e"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x4_y1_base_roof.f32.gz",
+        "bytes": 17996,
+        "sha256": "64e1ebdf6742832aa7dc37e8a0745bf861555ae1bcc72f77a122e56d95f884ad"
+      },
+      "vertices": 14035
+    },
+    {
+      "tile": "x4_y2",
+      "coarse_start": 269923,
+      "count": 1904,
+      "centre_east_north_km": [
+        18.0,
+        10.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x4_y2_points.f32.gz",
+        "bytes": 53818,
+        "sha256": "a9cc387ec952bdfdee38e44fb2666481493c455bd6467caf3e230f848694d1ba"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x4_y2_offsets.u32.gz",
+        "bytes": 2772,
+        "sha256": "dfac5a35afda24114a95879020f2891b332e62a195eeed3842dc5cc8520ea0b7"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x4_y2_base_roof.f32.gz",
+        "bytes": 13331,
+        "sha256": "7d82ea8c7a3b031eea8d5e205516ebed0a13874573314ef689ea995e84496130"
+      },
+      "vertices": 8528
+    },
+    {
+      "tile": "x4_y3",
+      "coarse_start": 271827,
+      "count": 1007,
+      "centre_east_north_km": [
+        18.0,
+        14.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x4_y3_points.f32.gz",
+        "bytes": 30739,
+        "sha256": "4f302d88b732f55f32dde678074e4b5caa005b0164366f30d6ccb4e970953c3f"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x4_y3_offsets.u32.gz",
+        "bytes": 1521,
+        "sha256": "7bcfde774722c5ce09fa89fe78aead117c3fc6498e20f851816eb8f046b16f6e"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x4_y3_base_roof.f32.gz",
+        "bytes": 7025,
+        "sha256": "2be720e6e38a961b8672be51526eaa0b54de4993975d5f7a69d27b2c94ac95ad"
+      },
+      "vertices": 4837
+    },
+    {
+      "tile": "x5_y-4",
+      "coarse_start": 272834,
+      "count": 2370,
+      "centre_east_north_km": [
+        22.0,
+        -14.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x5_y-4_points.f32.gz",
+        "bytes": 73472,
+        "sha256": "e311258b15e51ce28b5cc63cd5bc0c24eaf51d02e5bd0a4ebd35f6b50f5e6e09"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x5_y-4_offsets.u32.gz",
+        "bytes": 3442,
+        "sha256": "84c0c4c9634d4a96fd0f16854e6970dfa87fefe995e1b825bb7876e6fa825f77"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x5_y-4_base_roof.f32.gz",
+        "bytes": 16685,
+        "sha256": "2af22fdc24677f72fdb8666b58cb40965d5a731cfb979e961c11bf248426ea36"
+      },
+      "vertices": 11483
+    },
+    {
+      "tile": "x5_y-3",
+      "coarse_start": 275204,
+      "count": 7801,
+      "centre_east_north_km": [
+        22.0,
+        -10.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x5_y-3_points.f32.gz",
+        "bytes": 236985,
+        "sha256": "c0fc31ce6b5ecc708b68acab3b5569e7f57f9af1f626300dbd94e9093356ff95"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x5_y-3_offsets.u32.gz",
+        "bytes": 11049,
+        "sha256": "e034959f2776d7d34caf9c1d2de9e1b120a99083e37f0a5a4ecc5feaab51d481"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x5_y-3_base_roof.f32.gz",
+        "bytes": 54458,
+        "sha256": "52dd77f050c116148c3ac52522da163dfc33adcd733d459b6a6f13b2c7fbc54b"
+      },
+      "vertices": 37411
+    },
+    {
+      "tile": "x5_y-2",
+      "coarse_start": 283005,
+      "count": 4627,
+      "centre_east_north_km": [
+        22.0,
+        -6.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x5_y-2_points.f32.gz",
+        "bytes": 143990,
+        "sha256": "70494badac980d2f6f1c6fc87b1a2efadd15aa3206262e7abb3853c4fd593d4e"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x5_y-2_offsets.u32.gz",
+        "bytes": 6572,
+        "sha256": "422a2ccbf9d0fb6ad11ff0a40a3ec148a8b8ab06c057748db754154136f93d5b"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x5_y-2_base_roof.f32.gz",
+        "bytes": 32424,
+        "sha256": "594406aea71586c1eb21a487ff0400c420c97e0e527720f4cbc09a45efc443f6"
+      },
+      "vertices": 22225
+    },
+    {
+      "tile": "x5_y-1",
+      "coarse_start": 287632,
+      "count": 2465,
+      "centre_east_north_km": [
+        22.0,
+        -2.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x5_y-1_points.f32.gz",
+        "bytes": 80411,
+        "sha256": "6ac821e4f6336ca8ec3ae0c4f6aa11a91e1c653fcffae8eda014146d2cf56a7e"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x5_y-1_offsets.u32.gz",
+        "bytes": 3565,
+        "sha256": "77adf41f4e40d771151b0ae7efd8e78771702e3838a14fea828ab828ed21f16d"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x5_y-1_base_roof.f32.gz",
+        "bytes": 17202,
+        "sha256": "23249678fd4dde41fa5c46704e3b80d1f3277efd52f9beab8135793dc7c1222e"
+      },
+      "vertices": 12002
+    },
+    {
+      "tile": "x5_y0",
+      "coarse_start": 290097,
+      "count": 1422,
+      "centre_east_north_km": [
+        22.0,
+        2.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x5_y0_points.f32.gz",
+        "bytes": 51799,
+        "sha256": "91359c6518891ee1976a08eb8e501c27f12e46df429e3afaeaaf878e72e59a12"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x5_y0_offsets.u32.gz",
+        "bytes": 2115,
+        "sha256": "76e88177f88a8d474008e2ce2285bba6a07bf84dcaa0e404098b7a4c7366e318"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x5_y0_base_roof.f32.gz",
+        "bytes": 9829,
+        "sha256": "ced3f43a1320b126f94697611e64e0c6b456d950db4f3e9224c15988b3c91f3e"
+      },
+      "vertices": 7906
+    },
+    {
+      "tile": "x5_y1",
+      "coarse_start": 291519,
+      "count": 1827,
+      "centre_east_north_km": [
+        22.0,
+        6.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x5_y1_points.f32.gz",
+        "bytes": 64532,
+        "sha256": "059c9d000236cdc1e4e391d88f8b3821439748fac876e32671480a1281bc1b9c"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x5_y1_offsets.u32.gz",
+        "bytes": 2682,
+        "sha256": "d11980a6ea5234f07bc01a7d0cf823433197319fb230e8d25aaaf058325a1a2e"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x5_y1_base_roof.f32.gz",
+        "bytes": 12768,
+        "sha256": "3270988bb4a827f01e006c572f85e0a2ac919d8f6261c020204b37edb6479622"
+      },
+      "vertices": 10178
+    },
+    {
+      "tile": "x5_y2",
+      "coarse_start": 293346,
+      "count": 856,
+      "centre_east_north_km": [
+        22.0,
+        10.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x5_y2_points.f32.gz",
+        "bytes": 32534,
+        "sha256": "b8b1a5da401f73e6f0d93634e64bd41e76974bfb781d7ee8257181409d2568f2"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x5_y2_offsets.u32.gz",
+        "bytes": 1326,
+        "sha256": "40ffb5201c9a0fd287a7eacdf22f5ea998bb5f172deff275c9fd04049526a959"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x5_y2_base_roof.f32.gz",
+        "bytes": 6064,
+        "sha256": "a45f41e7c8e5f0a5ad532e291b195106eba11f996242c5d8fb7d04969c35f7bf"
+      },
+      "vertices": 5062
+    },
+    {
+      "tile": "x5_y3",
+      "coarse_start": 294202,
+      "count": 448,
+      "centre_east_north_km": [
+        22.0,
+        14.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x5_y3_points.f32.gz",
+        "bytes": 16430,
+        "sha256": "6a71bfeb2b77b26b857361fe4c8a57d0d1b290302dc74193027f478be06f5b92"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x5_y3_offsets.u32.gz",
+        "bytes": 747,
+        "sha256": "ded48897325b0f37a793f9dc36b8dc65aff6035809806931264c5696d8b6dca5"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x5_y3_base_roof.f32.gz",
+        "bytes": 3214,
+        "sha256": "f6e28817e4429f463aede485b0e05cf9598f2d89ecf25f457bee42bbbd05b4ee"
+      },
+      "vertices": 2590
+    },
+    {
+      "tile": "x6_y-4",
+      "coarse_start": 294650,
+      "count": 3126,
+      "centre_east_north_km": [
+        26.0,
+        -14.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x6_y-4_points.f32.gz",
+        "bytes": 94457,
+        "sha256": "991e4a07c075548b383434c7a844748ecab53492aed9bba3809c738c9efc8c21"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x6_y-4_offsets.u32.gz",
+        "bytes": 4492,
+        "sha256": "d6e9ca2596c652e37fb0d644ef6f8cfc3cebe664ce1c2d47a48c681e2b4231fc"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x6_y-4_base_roof.f32.gz",
+        "bytes": 21989,
+        "sha256": "70ae40346c779d1980f17ad6ad76dd0d44b9bf6d20d36e72fd05999d9557541c"
+      },
+      "vertices": 14966
+    },
+    {
+      "tile": "x6_y-3",
+      "coarse_start": 297776,
+      "count": 6128,
+      "centre_east_north_km": [
+        26.0,
+        -10.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x6_y-3_points.f32.gz",
+        "bytes": 182801,
+        "sha256": "c7fad07fcc19468fffd655caa10468503acd40721c05f621df9d584b607e3c69"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x6_y-3_offsets.u32.gz",
+        "bytes": 8702,
+        "sha256": "8485d7c11a31d2ca69a512c777a3c0d82973a38e28735a73086783685f654965"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x6_y-3_base_roof.f32.gz",
+        "bytes": 43022,
+        "sha256": "90e9e3e196a1cc1a1b7e251960db56692d4d9676c2769dc446fd6f0611d34b9d"
+      },
+      "vertices": 28825
+    },
+    {
+      "tile": "x6_y-2",
+      "coarse_start": 303904,
+      "count": 5183,
+      "centre_east_north_km": [
+        26.0,
+        -6.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x6_y-2_points.f32.gz",
+        "bytes": 161401,
+        "sha256": "9eb665c8a4c2188a1509d3bf5a90b0d16bd78f400461aa90e11af0064794b4de"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x6_y-2_offsets.u32.gz",
+        "bytes": 7369,
+        "sha256": "63cafab7dc48c9596258d8619193db05c29d13ebd39489321e1206aeb4afa0a0"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x6_y-2_base_roof.f32.gz",
+        "bytes": 36065,
+        "sha256": "b89d2cf4aeff914ea1b188e0ea2966ceb51744a63d1a9158a68eecfb0ec01770"
+      },
+      "vertices": 24894
+    },
+    {
+      "tile": "x6_y-1",
+      "coarse_start": 309087,
+      "count": 4458,
+      "centre_east_north_km": [
+        26.0,
+        -2.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x6_y-1_points.f32.gz",
+        "bytes": 145380,
+        "sha256": "ed2434e01186d689b604ba2d38dc475fd710811242c28281662756bef9ed673c"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x6_y-1_offsets.u32.gz",
+        "bytes": 6356,
+        "sha256": "608e43ef5165a34913045fd3a25de1d551784f161247eb3317ab1f7eae260ab1"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x6_y-1_base_roof.f32.gz",
+        "bytes": 31309,
+        "sha256": "4287d07e6a0f359db81a3afbb1ec6cff774dabf57f9443a28edfca64d654463f"
+      },
+      "vertices": 21643
+    },
+    {
+      "tile": "x6_y0",
+      "coarse_start": 313545,
+      "count": 3567,
+      "centre_east_north_km": [
+        26.0,
+        2.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x6_y0_points.f32.gz",
+        "bytes": 114999,
+        "sha256": "165aac814a14060bc76aa77e97b1c3a839b0a7c1f9ff8b63640965de7f815ed6"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x6_y0_offsets.u32.gz",
+        "bytes": 5093,
+        "sha256": "a7392cd13d971dfdf504222e34cfe826e8406429cf61ff10a314affdc8368736"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x6_y0_base_roof.f32.gz",
+        "bytes": 25032,
+        "sha256": "59882174666f463ab370998dbbdb31ec4e7769e92164cb05fa6eb9335fef86e1"
+      },
+      "vertices": 17144
+    },
+    {
+      "tile": "x6_y1",
+      "coarse_start": 317112,
+      "count": 1353,
+      "centre_east_north_km": [
+        26.0,
+        6.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x6_y1_points.f32.gz",
+        "bytes": 40838,
+        "sha256": "358c51b445912b1cfddcdedb52821a57a75506e5d6d106a672b3b35d6e12035d"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x6_y1_offsets.u32.gz",
+        "bytes": 2001,
+        "sha256": "00b8fc6fb2fbdbb9385286cee8463e03f546ca0ed72b0ee147738535a83c98b6"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x6_y1_base_roof.f32.gz",
+        "bytes": 9395,
+        "sha256": "1797bbf0344ff73f9e1f7310295601d2b380f1ffb9ad2ecfd8205570b5f207ba"
+      },
+      "vertices": 6388
+    },
+    {
+      "tile": "x6_y2",
+      "coarse_start": 318465,
+      "count": 1242,
+      "centre_east_north_km": [
+        26.0,
+        10.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x6_y2_points.f32.gz",
+        "bytes": 41751,
+        "sha256": "8245d6477389da43557d655fcb909bf636937a664615e9b34741214647486476"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x6_y2_offsets.u32.gz",
+        "bytes": 1858,
+        "sha256": "babb5524212967b5c329cf1da3e5929ca1697db8e5289e2da32280ed55da93d5"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x6_y2_base_roof.f32.gz",
+        "bytes": 8757,
+        "sha256": "98d16457302ac172360bd9c9204404a565dc252aa7ca1b1d406b4a9ac7358d3d"
+      },
+      "vertices": 6562
+    },
+    {
+      "tile": "x6_y3",
+      "coarse_start": 319707,
+      "count": 1086,
+      "centre_east_north_km": [
+        26.0,
+        14.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x6_y3_points.f32.gz",
+        "bytes": 34953,
+        "sha256": "aeb2d33282302445cfc6b4f9c71d44cb767fe0aa21e8784ef278432a6621bddb"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x6_y3_offsets.u32.gz",
+        "bytes": 1639,
+        "sha256": "4f9a87adcf6922f071941bb971b8b5dc0626db33934dd02b4021cf716f24aabe"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x6_y3_base_roof.f32.gz",
+        "bytes": 7659,
+        "sha256": "4b526be1e848b9c0cb874331d93d8f4f30bbdbe276761fa86789f61cfb3990bd"
+      },
+      "vertices": 5605
+    },
+    {
+      "tile": "x7_y-4",
+      "coarse_start": 320793,
+      "count": 2706,
+      "centre_east_north_km": [
+        30.0,
+        -14.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x7_y-4_points.f32.gz",
+        "bytes": 78433,
+        "sha256": "674741ca37845222fab69917c594b8a2c7c9360dde8e02a23c85994eb5645a3c"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x7_y-4_offsets.u32.gz",
+        "bytes": 3904,
+        "sha256": "3c4d4e20f13950803dd001afc6862d2835694243f0f14265f48c59fc096d626c"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x7_y-4_base_roof.f32.gz",
+        "bytes": 18981,
+        "sha256": "2df8723a707c8d4d9e6e952423f26b9539404c57de4b71b42ea1414768e9df34"
+      },
+      "vertices": 12503
+    },
+    {
+      "tile": "x7_y-3",
+      "coarse_start": 323499,
+      "count": 7984,
+      "centre_east_north_km": [
+        30.0,
+        -10.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x7_y-3_points.f32.gz",
+        "bytes": 234538,
+        "sha256": "1a1a744639845f16799142ab9dc1ca50b086614782e8274b0e02084bfa1960c2"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x7_y-3_offsets.u32.gz",
+        "bytes": 11302,
+        "sha256": "a6e30c6cd99086f5803548b90d3b4e242cb47e842c7673954e08cc0baac70124"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x7_y-3_base_roof.f32.gz",
+        "bytes": 55851,
+        "sha256": "e43e649b20d26491ee2965e2da91f67a21919fa8e0610e527443e920a322c60c"
+      },
+      "vertices": 37020
+    },
+    {
+      "tile": "x7_y-2",
+      "coarse_start": 331483,
+      "count": 7759,
+      "centre_east_north_km": [
+        30.0,
+        -6.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x7_y-2_points.f32.gz",
+        "bytes": 234475,
+        "sha256": "2d47f20d01708a2bbf747ec6f45e46ab731205d3c8363c6e07e62c5a1a97cb8b"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x7_y-2_offsets.u32.gz",
+        "bytes": 10988,
+        "sha256": "9a993fb29e658cfde2bba5e30394eabde3f5ea24ea25c1c9a1b989c538b80525"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x7_y-2_base_roof.f32.gz",
+        "bytes": 53557,
+        "sha256": "0e078254d16a1b3d3213114e43aadea4718d4f3b3f66e0b79ef143ea943bfef5"
+      },
+      "vertices": 36119
+    },
+    {
+      "tile": "x7_y-1",
+      "coarse_start": 339242,
+      "count": 5686,
+      "centre_east_north_km": [
+        30.0,
+        -2.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x7_y-1_points.f32.gz",
+        "bytes": 178947,
+        "sha256": "472448d892222c277625c75f1e094673bb2b37461551a1bbf254de75d92f8257"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x7_y-1_offsets.u32.gz",
+        "bytes": 8086,
+        "sha256": "b5f7957126658ecda29ddd09ed83e3c538382741b5967f46e6cc348498b1f30f"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x7_y-1_base_roof.f32.gz",
+        "bytes": 39680,
+        "sha256": "966f584739a7338b547f2415a8d5c5d7662b7051a1a2fb118458ce37b6749a70"
+      },
+      "vertices": 26754
+    },
+    {
+      "tile": "x7_y0",
+      "coarse_start": 344928,
+      "count": 6669,
+      "centre_east_north_km": [
+        30.0,
+        2.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x7_y0_points.f32.gz",
+        "bytes": 205733,
+        "sha256": "5055f53b673ce2faba79b8c61afaf229e526b0dc1a1358a4ecd130f55b0b4ed3"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x7_y0_offsets.u32.gz",
+        "bytes": 9444,
+        "sha256": "1f3abd91c0b07db6d7158e6f11c17014eb237c4f6bb903f1fc40ed2dfe1ca757"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x7_y0_base_roof.f32.gz",
+        "bytes": 46419,
+        "sha256": "6158997a36dea245124448d26e39976a8ad912b6468c187fd54d5e71588dc9f8"
+      },
+      "vertices": 31051
+    },
+    {
+      "tile": "x7_y1",
+      "coarse_start": 351597,
+      "count": 3196,
+      "centre_east_north_km": [
+        30.0,
+        6.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x7_y1_points.f32.gz",
+        "bytes": 94373,
+        "sha256": "fd9337583824845d40a89572443e063fcad141a57ffb5ce335cbf3ae49a24d1e"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x7_y1_offsets.u32.gz",
+        "bytes": 4597,
+        "sha256": "a38a134dfc7a6f66a09c33498b0b318bdebb388456ae767866565a0a7c0e071e"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x7_y1_base_roof.f32.gz",
+        "bytes": 22218,
+        "sha256": "4d0c7ca43f7674e0751fa21a575e5c9d6a5592c8646df2d2b288b9963b53942a"
+      },
+      "vertices": 14833
+    },
+    {
+      "tile": "x7_y2",
+      "coarse_start": 354793,
+      "count": 2055,
+      "centre_east_north_km": [
+        30.0,
+        10.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x7_y2_points.f32.gz",
+        "bytes": 58728,
+        "sha256": "133d71b61f7e1ab639694f3a5ce39e52f79604c93868af86f284bb856e3a1f16"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x7_y2_offsets.u32.gz",
+        "bytes": 2965,
+        "sha256": "4e9822029a63b380140a9c7b93c30dae671c7514a82a8b07c8621aecd1071dd4"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x7_y2_base_roof.f32.gz",
+        "bytes": 14142,
+        "sha256": "d0fc339ea3097898c6eecadab82975b530117e820a8ef092de389cd075e2e222"
+      },
+      "vertices": 9528
+    },
+    {
+      "tile": "x7_y3",
+      "coarse_start": 356848,
+      "count": 59,
+      "centre_east_north_km": [
+        30.0,
+        14.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x7_y3_points.f32.gz",
+        "bytes": 1636,
+        "sha256": "704c265c88835c867549061466ebc4d11709de56bf6e1b2e5c6b4e23094a5de7"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x7_y3_offsets.u32.gz",
+        "bytes": 164,
+        "sha256": "e26185e3fe7d485f6d53647ef6bbc1e210d145442a63785c9fb8a019b1541225"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x7_y3_base_roof.f32.gz",
+        "bytes": 509,
+        "sha256": "54fa138827dda51efdaec0857c39494a212d70daf96f23ad6d418285a44e3c21"
+      },
+      "vertices": 249
+    },
+    {
+      "tile": "x8_y-4",
+      "coarse_start": 356907,
+      "count": 5368,
+      "centre_east_north_km": [
+        34.0,
+        -14.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x8_y-4_points.f32.gz",
+        "bytes": 152615,
+        "sha256": "e8ca04447afaeba5724c96807ec8631d78a681eefbe0eeba355db719bbbe6039"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x8_y-4_offsets.u32.gz",
+        "bytes": 7643,
+        "sha256": "749b722abe3bea40af2f2f6952dd16eb8ec6a72218ddb9e54348280f2e24c9e6"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x8_y-4_base_roof.f32.gz",
+        "bytes": 37395,
+        "sha256": "2d15263afea481d19cd394877009417ae9382282c302b699dff869a940da5d88"
+      },
+      "vertices": 25438
+    },
+    {
+      "tile": "x8_y-3",
+      "coarse_start": 362275,
+      "count": 7438,
+      "centre_east_north_km": [
+        34.0,
+        -10.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x8_y-3_points.f32.gz",
+        "bytes": 217912,
+        "sha256": "b31a3063025a265678d0a8dc4214954594902e32e07b15a610abb114ddf0b8ca"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x8_y-3_offsets.u32.gz",
+        "bytes": 10542,
+        "sha256": "24e184da0a28edbfaf9a05e8c987ba5c7d15023fcbe184075997c9bdced0a4f2"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x8_y-3_base_roof.f32.gz",
+        "bytes": 51771,
+        "sha256": "439ffb98e16606e636da62ebfeb0320cdb1308e23dc75bf5ae69dd742e51f14e"
+      },
+      "vertices": 35227
+    },
+    {
+      "tile": "x8_y-2",
+      "coarse_start": 369713,
+      "count": 7344,
+      "centre_east_north_km": [
+        34.0,
+        -6.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x8_y-2_points.f32.gz",
+        "bytes": 211309,
+        "sha256": "fd887338b29b6ebf8ec69c3a47ee3a29072472b473846321661a2839c6b7bbe4"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x8_y-2_offsets.u32.gz",
+        "bytes": 10384,
+        "sha256": "9acb73286373a95db7863059d8fd4fd004eb106fcf6702c74c7bc51b381a8810"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x8_y-2_base_roof.f32.gz",
+        "bytes": 50678,
+        "sha256": "2aca09acb02975dcf33aa41607fff7ec72ef5d98e75aa69e52636eca7c960195"
+      },
+      "vertices": 33474
+    },
+    {
+      "tile": "x8_y-1",
+      "coarse_start": 377057,
+      "count": 9203,
+      "centre_east_north_km": [
+        34.0,
+        -2.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x8_y-1_points.f32.gz",
+        "bytes": 262031,
+        "sha256": "7e1f1a888d07e062b43faf8bbafae2403a268fbd41bfa2ace18ae542a5e706ee"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x8_y-1_offsets.u32.gz",
+        "bytes": 13047,
+        "sha256": "962680e43e0130ae1701aa728ecfa00cafea8df4a65838e6cfe84d44e5cf6ed9"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x8_y-1_base_roof.f32.gz",
+        "bytes": 63499,
+        "sha256": "07b6c08bf47e101da0174b4d8af8be2559561984159cbcfcb03c2d7b78c56884"
+      },
+      "vertices": 40962
+    },
+    {
+      "tile": "x8_y0",
+      "coarse_start": 386260,
+      "count": 6595,
+      "centre_east_north_km": [
+        34.0,
+        2.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x8_y0_points.f32.gz",
+        "bytes": 190069,
+        "sha256": "0c048448d8cc43de9f0c31f1f2c67635e54ef8b486daf9db2cd1e88c3ca02df4"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x8_y0_offsets.u32.gz",
+        "bytes": 9325,
+        "sha256": "26999cd1b4bdbae8a26e264624e04f27fb7f3e810a2db686807b0a48f52b96f6"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x8_y0_base_roof.f32.gz",
+        "bytes": 45285,
+        "sha256": "a3f1aa3ba32b520c1ede81b03c78a22ace2f1ff32600445e249d578b0e4d54f3"
+      },
+      "vertices": 29744
+    },
+    {
+      "tile": "x8_y1",
+      "coarse_start": 392855,
+      "count": 4687,
+      "centre_east_north_km": [
+        34.0,
+        6.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x8_y1_points.f32.gz",
+        "bytes": 129955,
+        "sha256": "40f3aa2649f3189ca41da78154469c9b3d941f3742b0a5b474e84cd02569307c"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x8_y1_offsets.u32.gz",
+        "bytes": 6674,
+        "sha256": "216e1fd2f4d518419e8e58ef6a5abf9a24a5507ba2758243a95672ad71c5f8f6"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x8_y1_base_roof.f32.gz",
+        "bytes": 32422,
+        "sha256": "58803fa45fa6aef5f32b70f2e3bc518cfd44b7c02310db6b9a2bad9692362408"
+      },
+      "vertices": 21258
+    },
+    {
+      "tile": "x8_y2",
+      "coarse_start": 397542,
+      "count": 864,
+      "centre_east_north_km": [
+        34.0,
+        10.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x8_y2_points.f32.gz",
+        "bytes": 26856,
+        "sha256": "8a6fa0c4b9403a13ebbd8cc42bcccddde57e11b04efe85f0a22292c9548b84ae"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x8_y2_offsets.u32.gz",
+        "bytes": 1334,
+        "sha256": "54347dd637bca482b2df154e328007d7b1bee16388ea9124ed5985896f7125e7"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x8_y2_base_roof.f32.gz",
+        "bytes": 6111,
+        "sha256": "2c35726ea8c1a9206780568b5a434e37883cbc0c356cc80a91f122b682fed497"
+      },
+      "vertices": 4352
+    },
+    {
+      "tile": "x8_y3",
+      "coarse_start": 398406,
+      "count": 97,
+      "centre_east_north_km": [
+        34.0,
+        14.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x8_y3_points.f32.gz",
+        "bytes": 2908,
+        "sha256": "207ef0bc24b7387967922365cc2352ed528d7a6eb707da0c3c2ffd91b9f65427"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x8_y3_offsets.u32.gz",
+        "bytes": 229,
+        "sha256": "404dc54c7d310028adda80139412856ed53fcc72f337206fef3e001f0b588341"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x8_y3_base_roof.f32.gz",
+        "bytes": 775,
+        "sha256": "5832dbfbd3fe087ed65b65182e1ca72fabd373a23d70669f8056e48a4ca31edd"
+      },
+      "vertices": 471
+    },
+    {
+      "tile": "x9_y-4",
+      "coarse_start": 398503,
+      "count": 4987,
+      "centre_east_north_km": [
+        38.0,
+        -14.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x9_y-4_points.f32.gz",
+        "bytes": 137451,
+        "sha256": "d8558dfd59b67a076331d6b26842695888b3d203915a5afcb46c8e17faad12b9"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x9_y-4_offsets.u32.gz",
+        "bytes": 7107,
+        "sha256": "48fbaad1ebec770166cd2cd0706c560152b837c5882507f646e1a12154722b52"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x9_y-4_base_roof.f32.gz",
+        "bytes": 34540,
+        "sha256": "307f1da5e22b1912bb175b2cdb62bfbd9b25b447a4de208bbdc50431da354338"
+      },
+      "vertices": 22853
+    },
+    {
+      "tile": "x9_y-3",
+      "coarse_start": 403490,
+      "count": 7066,
+      "centre_east_north_km": [
+        38.0,
+        -10.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x9_y-3_points.f32.gz",
+        "bytes": 203188,
+        "sha256": "e586f62f84a2f5333ed46dd556a3be3c3098b0cdd5599446f273b7f414a4434f"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x9_y-3_offsets.u32.gz",
+        "bytes": 10022,
+        "sha256": "dcc141b3f3cda48f5649c2d232c215b228e27746857f28592cc5477dbb6f00d6"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x9_y-3_base_roof.f32.gz",
+        "bytes": 48730,
+        "sha256": "b737374229a1b9fc0ce22f3f3e2538947d923f506a5e4a3958978d6e56124755"
+      },
+      "vertices": 32871
+    },
+    {
+      "tile": "x9_y-2",
+      "coarse_start": 410556,
+      "count": 7456,
+      "centre_east_north_km": [
+        38.0,
+        -6.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x9_y-2_points.f32.gz",
+        "bytes": 216000,
+        "sha256": "9133b14ef9b832cd3108e1a3bba4f78bf8b40d91fcc92b2a62778d985d100dad"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x9_y-2_offsets.u32.gz",
+        "bytes": 10550,
+        "sha256": "9ad69cfbe6c3f4a0fba19ecd41db1c461170a9863da83beddc2da6bbbdf4875c"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x9_y-2_base_roof.f32.gz",
+        "bytes": 51448,
+        "sha256": "a0484e7e0940fd861d378d9ae03d4d8098c4123bde2c146b80d716f7a04ce00f"
+      },
+      "vertices": 34417
+    },
+    {
+      "tile": "x9_y-1",
+      "coarse_start": 418012,
+      "count": 6425,
+      "centre_east_north_km": [
+        38.0,
+        -2.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x9_y-1_points.f32.gz",
+        "bytes": 184557,
+        "sha256": "2397923856e97284ac449cfaeb3de99a67bb5f20ad9aa2f814b24373356a6660"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x9_y-1_offsets.u32.gz",
+        "bytes": 9101,
+        "sha256": "71411013fc6df107816a1ec78f4b3a3ae47743d8bffd49e648f082536123be66"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x9_y-1_base_roof.f32.gz",
+        "bytes": 43947,
+        "sha256": "1a161de0192d01ffe306cd9974ca566626ca823550db93a8d33b8527e69c95a0"
+      },
+      "vertices": 28790
+    },
+    {
+      "tile": "x9_y0",
+      "coarse_start": 424437,
+      "count": 5479,
+      "centre_east_north_km": [
+        38.0,
+        2.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x9_y0_points.f32.gz",
+        "bytes": 164819,
+        "sha256": "f5903e3eedc3954b7cdf88215ff6d86a841b2b60f2ac1d5b1f6b3c80206ca97e"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x9_y0_offsets.u32.gz",
+        "bytes": 7783,
+        "sha256": "5065af85801896d383ed37f9f7e12bbb32e242b0d9dbcd543fcfc948f09badf1"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x9_y0_base_roof.f32.gz",
+        "bytes": 38222,
+        "sha256": "fd6f9e8c0cf7a09c0893820fc326338171f99d3480c587c531c98cfbef669418"
+      },
+      "vertices": 25659
+    },
+    {
+      "tile": "x9_y1",
+      "coarse_start": 429916,
+      "count": 1460,
+      "centre_east_north_km": [
+        38.0,
+        6.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x9_y1_points.f32.gz",
+        "bytes": 41944,
+        "sha256": "286e50a133d92ba4f7ca703d1a256a98adc8e1933b43d6795baaa751da0ebf23"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x9_y1_offsets.u32.gz",
+        "bytes": 2132,
+        "sha256": "b590525b2f8c2b4808e74d1c911ac9b761282593862ed58b2def8760c3b35cf7"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x9_y1_base_roof.f32.gz",
+        "bytes": 10122,
+        "sha256": "4ac46c206e3f51dacdd0fc0cccf24682e2963cdedd820e7f03c28248d55b934e"
+      },
+      "vertices": 6769
+    },
+    {
+      "tile": "x9_y2",
+      "coarse_start": 431376,
+      "count": 815,
+      "centre_east_north_km": [
+        38.0,
+        10.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x9_y2_points.f32.gz",
+        "bytes": 25959,
+        "sha256": "5ee3e3470e1a370a256464cb75da3390f930ae8b4303f494e153b29dd26df62a"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x9_y2_offsets.u32.gz",
+        "bytes": 1258,
+        "sha256": "d8326b85506847e55919327d6a559745e2b91940fcc5be28fc26982f48531463"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x9_y2_base_roof.f32.gz",
+        "bytes": 5772,
+        "sha256": "103ed27375a8589d8db1a08ddfdaab09d5a53e09b3ef38adc53f0b0fd967d457"
+      },
+      "vertices": 4199
+    },
+    {
+      "tile": "x9_y3",
+      "coarse_start": 432191,
+      "count": 17,
+      "centre_east_north_km": [
+        38.0,
+        14.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x9_y3_points.f32.gz",
+        "bytes": 603,
+        "sha256": "de42bf1762cc7a1d8b9acf5ba4d2c73311c8478d07c18d7a8944aa4cc63c1ddb"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x9_y3_offsets.u32.gz",
+        "bytes": 84,
+        "sha256": "c685da279f420bbf2d41da1edc978a8d7e72444654e0657b5dc3fc776911fd7c"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x9_y3_base_roof.f32.gz",
+        "bytes": 179,
+        "sha256": "5b769df437d3768d2265618ec9f0c2d6884d9317a0748e89c43b8f6d3cea34b0"
+      },
+      "vertices": 85
+    },
+    {
+      "tile": "x10_y-4",
+      "coarse_start": 432208,
+      "count": 4661,
+      "centre_east_north_km": [
+        42.0,
+        -14.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x10_y-4_points.f32.gz",
+        "bytes": 128958,
+        "sha256": "11be80ea6f7fc5d7ae8dc47e1e5c0f0b289cbb887eb80a3d280a9fcc8330069d"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x10_y-4_offsets.u32.gz",
+        "bytes": 6652,
+        "sha256": "9a2899fe8ef1243e636539d5e9ba03b631b58b4b9d219a1a529e64356af9689c"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x10_y-4_base_roof.f32.gz",
+        "bytes": 32610,
+        "sha256": "62d59a517147c2190d615b9466771c350d04d8cc8b9975b13f5b707d303fe37d"
+      },
+      "vertices": 21493
+    },
+    {
+      "tile": "x10_y-3",
+      "coarse_start": 436869,
+      "count": 5699,
+      "centre_east_north_km": [
+        42.0,
+        -10.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x10_y-3_points.f32.gz",
+        "bytes": 156099,
+        "sha256": "1e8d576db622c017056cc2f0e8250d553a5dcb4b1601a6ed09cc6b324b5d2809"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x10_y-3_offsets.u32.gz",
+        "bytes": 8088,
+        "sha256": "1b7b85804372d9e180d8c0c92ca1a1f79b5f209a794b0067ec18a900c384ff43"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x10_y-3_base_roof.f32.gz",
+        "bytes": 39819,
+        "sha256": "6a810631421f749c5573820e9e9ed4db610c14ad58ec5dbe5f25939376afc35a"
+      },
+      "vertices": 25536
+    },
+    {
+      "tile": "x10_y-2",
+      "coarse_start": 442568,
+      "count": 2183,
+      "centre_east_north_km": [
+        42.0,
+        -6.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x10_y-2_points.f32.gz",
+        "bytes": 63252,
+        "sha256": "b739eb7b3b3b19daf21041f780702d79de306b905a14191f583d34d00f75855d"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x10_y-2_offsets.u32.gz",
+        "bytes": 3165,
+        "sha256": "c2f294e0cf9579c9ba21f35d9a6ac88a6718c9c1b6d4e07aba825cd768310e07"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x10_y-2_base_roof.f32.gz",
+        "bytes": 15242,
+        "sha256": "85c8b817db8f65000add9293444d0d5dcdf82de1b829ac84be17ec9d34731649"
+      },
+      "vertices": 9960
+    },
+    {
+      "tile": "x10_y-1",
+      "coarse_start": 444751,
+      "count": 936,
+      "centre_east_north_km": [
+        42.0,
+        -2.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x10_y-1_points.f32.gz",
+        "bytes": 32629,
+        "sha256": "62045ce25fc9c4ae6f69aac798a4212a4ae220ebe1db7c8b0554336e612e994d"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x10_y-1_offsets.u32.gz",
+        "bytes": 1424,
+        "sha256": "724e94809dbee7ecd3743406790f032dbb06c8fbc2eb95a8f2e4abe51d049e0d"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x10_y-1_base_roof.f32.gz",
+        "bytes": 6621,
+        "sha256": "0843aa24eb489789dc7f4b7ddae290f3860edd0d7fd76569e36380923c295a74"
+      },
+      "vertices": 4923
+    },
+    {
+      "tile": "x10_y0",
+      "coarse_start": 445687,
+      "count": 2183,
+      "centre_east_north_km": [
+        42.0,
+        2.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x10_y0_points.f32.gz",
+        "bytes": 82659,
+        "sha256": "959d915ff31a58f281d1bc2a5edf8bea275ac60eb857594b7c8461623d7c09f8"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x10_y0_offsets.u32.gz",
+        "bytes": 3195,
+        "sha256": "e55d156754aeca7e8ae01618f91cc0584d69244ca01484e046e1f9006a474eaa"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x10_y0_base_roof.f32.gz",
+        "bytes": 15447,
+        "sha256": "39394bd7af0e94909eddc2f39c49b655364d28a6730f9388297a4b9e7e3823b5"
+      },
+      "vertices": 12672
+    },
+    {
+      "tile": "x10_y1",
+      "coarse_start": 447870,
+      "count": 2939,
+      "centre_east_north_km": [
+        42.0,
+        6.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x10_y1_points.f32.gz",
+        "bytes": 82398,
+        "sha256": "5d2024aa20c682045edf41e336fcb94dea4358570bcb34fb0e9463dc0437b9f2"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x10_y1_offsets.u32.gz",
+        "bytes": 4227,
+        "sha256": "274f36a09808a458117a3b674c88b70117c31b9b89040742b3d63f8bbbf00d7e"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x10_y1_base_roof.f32.gz",
+        "bytes": 20183,
+        "sha256": "23548866ca736349081d65f98133cb70e78ef84635fab5d7ff8dd201f45bae07"
+      },
+      "vertices": 13386
+    },
+    {
+      "tile": "x10_y2",
+      "coarse_start": 450809,
+      "count": 753,
+      "centre_east_north_km": [
+        42.0,
+        10.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x10_y2_points.f32.gz",
+        "bytes": 21665,
+        "sha256": "734ce85e9c58b3613b1ac686b61c813556c07b7411fd6204f00637d718b1953a"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x10_y2_offsets.u32.gz",
+        "bytes": 1161,
+        "sha256": "a081decf23ea86c7d6c1324df2e57e6fddc9a44ac7e0d3a052d3b0ffed80dfc7"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x10_y2_base_roof.f32.gz",
+        "bytes": 5304,
+        "sha256": "6a1f7b1dd5d60ff79aac85c1f739bc529165bed717f764d9f72027b3b889cdd0"
+      },
+      "vertices": 3432
+    },
+    {
+      "tile": "x11_y-4",
+      "coarse_start": 451562,
+      "count": 1327,
+      "centre_east_north_km": [
+        46.0,
+        -14.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x11_y-4_points.f32.gz",
+        "bytes": 41032,
+        "sha256": "5d154fd62493d28493fb02fb43b673845685f26922da28795733a806f11e1917"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x11_y-4_offsets.u32.gz",
+        "bytes": 1975,
+        "sha256": "a1f779af21cb4b0fb49ffc8a4499cb0c16321fea43832ffaa547a3f3f62093e7"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x11_y-4_base_roof.f32.gz",
+        "bytes": 9299,
+        "sha256": "079ce0b69d0da5ecf66017ffb7d0df8198cd8889819e5147af2866269d10b9f7"
+      },
+      "vertices": 6671
+    },
+    {
+      "tile": "x11_y-3",
+      "coarse_start": 452889,
+      "count": 1746,
+      "centre_east_north_km": [
+        46.0,
+        -10.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x11_y-3_points.f32.gz",
+        "bytes": 55233,
+        "sha256": "d31e9ab6774287d8db73311a463c5533a07e89aa86bf31300b1c4c99bec17928"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x11_y-3_offsets.u32.gz",
+        "bytes": 2566,
+        "sha256": "cc2bf850b321e49f8b1dbc46ccbc5f2dd17695f2e18caf989133decf0a8f7bd6"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x11_y-3_base_roof.f32.gz",
+        "bytes": 12165,
+        "sha256": "f09cd86c3d8047ba4d2fba5f17bc176787cc0342da4286ee6ed36be1c26db936"
+      },
+      "vertices": 8870
+    },
+    {
+      "tile": "x11_y-2",
+      "coarse_start": 454635,
+      "count": 1023,
+      "centre_east_north_km": [
+        46.0,
+        -6.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x11_y-2_points.f32.gz",
+        "bytes": 30319,
+        "sha256": "fe08d004e903c6836d1ac6059d32bcfa93cd53cea80f93392d89ae0666cdf82f"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x11_y-2_offsets.u32.gz",
+        "bytes": 1550,
+        "sha256": "7015cdb14e638b9333c1c92e4a10e48ac3d2271eba473cdb4f033bc33ffaae1f"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x11_y-2_base_roof.f32.gz",
+        "bytes": 7095,
+        "sha256": "e3d0e9179bb39cf190dd7e43894289b08d5c336fa803c9d659981973616e59ac"
+      },
+      "vertices": 4775
+    },
+    {
+      "tile": "x11_y-1",
+      "coarse_start": 455658,
+      "count": 1333,
+      "centre_east_north_km": [
+        46.0,
+        -2.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x11_y-1_points.f32.gz",
+        "bytes": 42046,
+        "sha256": "f84a19411b9e0922ba71ea010bda72dee5fe0ade8367da10b590a6f5eb408365"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x11_y-1_offsets.u32.gz",
+        "bytes": 1974,
+        "sha256": "5922fc621b443703197a16ee43f149ee4fde63b8be1cf184d47643bb6edb48e2"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x11_y-1_base_roof.f32.gz",
+        "bytes": 9320,
+        "sha256": "8f89a956555176396dac77f0d459f4f7befc0853e164fc8e243777a552f95373"
+      },
+      "vertices": 6301
+    },
+    {
+      "tile": "x11_y0",
+      "coarse_start": 456991,
+      "count": 878,
+      "centre_east_north_km": [
+        46.0,
+        2.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x11_y0_points.f32.gz",
+        "bytes": 29431,
+        "sha256": "b4bb6203198b34b05ffbd9b1e2874ac5903d22b46076148497cc8f419219668e"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x11_y0_offsets.u32.gz",
+        "bytes": 1349,
+        "sha256": "13c732e47b7c41b05214121715ef37b445339d9be7879e904eac07ac552564af"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x11_y0_base_roof.f32.gz",
+        "bytes": 6208,
+        "sha256": "3a980aea34ff76de8cbaabc20fee9a0b2d04b418590a724c13cb05a34fbdd562"
+      },
+      "vertices": 4435
+    },
+    {
+      "tile": "x11_y1",
+      "coarse_start": 457869,
+      "count": 1156,
+      "centre_east_north_km": [
+        46.0,
+        6.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x11_y1_points.f32.gz",
+        "bytes": 35316,
+        "sha256": "3e6e59e79928f69e96cf32e3b598aab561a989885e0ba9a90b9bb472b949b294"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x11_y1_offsets.u32.gz",
+        "bytes": 1726,
+        "sha256": "c2e5807de4b6923ebcb14e1affa7ed2cd20da3f91de71b7267802abe791402fd"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x11_y1_base_roof.f32.gz",
+        "bytes": 8079,
+        "sha256": "ef4dabd998340629c732b8c5ef4215a5bb1390c445635874f5c6f4d193b8d4f4"
+      },
+      "vertices": 5630
+    },
+    {
+      "tile": "x11_y2",
+      "coarse_start": 459025,
+      "count": 461,
+      "centre_east_north_km": [
+        46.0,
+        10.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x11_y2_points.f32.gz",
+        "bytes": 13603,
+        "sha256": "60f3bb3619c27796c2be3f169c23fd8a364d13824851660a71e8c0f17f9df92e"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x11_y2_offsets.u32.gz",
+        "bytes": 755,
+        "sha256": "64166f8f1473eb58d6bc0b22e3f0ca097b537fbb8c14dd8b443f6d0ea73ee734"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x11_y2_base_roof.f32.gz",
+        "bytes": 3281,
+        "sha256": "835d5a078a57cec386036413c3148becc125c5b066f67bf81bc3fb07f445bb73"
+      },
+      "vertices": 2162
+    },
+    {
+      "tile": "x12_y-4",
+      "coarse_start": 459486,
+      "count": 19,
+      "centre_east_north_km": [
+        50.0,
+        -14.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x12_y-4_points.f32.gz",
+        "bytes": 634,
+        "sha256": "6c6d10cb61426477dd7be0af8a7901216a205fbbfe4933a36c1da5d5cce4833b"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x12_y-4_offsets.u32.gz",
+        "bytes": 90,
+        "sha256": "e29852c8a43e3f21b01b3f93c5d9afea1dd029196560c37c9b9239588e02f234"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x12_y-4_base_roof.f32.gz",
+        "bytes": 197,
+        "sha256": "c11823178a5dafb8f282e71f93c0132d9ccce597c27b4dab8770e7c16b3b976c"
+      },
+      "vertices": 88
+    },
+    {
+      "tile": "x12_y-3",
+      "coarse_start": 459505,
+      "count": 1711,
+      "centre_east_north_km": [
+        50.0,
+        -10.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x12_y-3_points.f32.gz",
+        "bytes": 64050,
+        "sha256": "e10b87398dbf2502cfb1546d121d54acdca7805cdd85b7ee738b5cda1ff6647c"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x12_y-3_offsets.u32.gz",
+        "bytes": 2515,
+        "sha256": "c2dd16334a70bdffdb5ad6e2c4c698add65cc82993044e903db0261a370b9834"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x12_y-3_base_roof.f32.gz",
+        "bytes": 12071,
+        "sha256": "4ac41c13c654e1d94d113de5802545c10a82fd1eb5adc065e74257a1f5778f42"
+      },
+      "vertices": 10096
+    },
+    {
+      "tile": "x12_y-2",
+      "coarse_start": 461216,
+      "count": 912,
+      "centre_east_north_km": [
+        50.0,
+        -6.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x12_y-2_points.f32.gz",
+        "bytes": 35819,
+        "sha256": "56125a705ef04bffe7ecebd74a8d53dadd2b5e1d320f9a98586a21fcfae45001"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x12_y-2_offsets.u32.gz",
+        "bytes": 1406,
+        "sha256": "fd61bc7c58bf1090e62cd441120a44fb441538510fc078cc25ad8a62f961f797"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x12_y-2_base_roof.f32.gz",
+        "bytes": 6451,
+        "sha256": "b6db5963dac1dae227aefe19aadb11f81752ae0527f5061428650e226e6b673d"
+      },
+      "vertices": 5512
+    },
+    {
+      "tile": "x12_y-1",
+      "coarse_start": 462128,
+      "count": 1021,
+      "centre_east_north_km": [
+        50.0,
+        -2.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x12_y-1_points.f32.gz",
+        "bytes": 36348,
+        "sha256": "dcfcda5e2ad0caa2dabd85d9f9c9bee138ecab15ee7c23197bf80131b31b3711"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x12_y-1_offsets.u32.gz",
+        "bytes": 1524,
+        "sha256": "f3ea0872d21b2ccfb17e4f260f686439d09b5d0911fc0add7024a991516fd170"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x12_y-1_base_roof.f32.gz",
+        "bytes": 7235,
+        "sha256": "3618189fc3db1faab547148d05320607b3b3265bf55713f1c3bfe327a04f35db"
+      },
+      "vertices": 5377
+    },
+    {
+      "tile": "x12_y0",
+      "coarse_start": 463149,
+      "count": 719,
+      "centre_east_north_km": [
+        50.0,
+        2.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x12_y0_points.f32.gz",
+        "bytes": 24809,
+        "sha256": "620d5ca82fee444db94fa276c977ca30ca0ad2606c08eb69292588ece24b0a3d"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x12_y0_offsets.u32.gz",
+        "bytes": 1111,
+        "sha256": "0075281a3a541755bde4d0cce1bb2ff8501021ffb69bb298b6237b9ecd035ba4"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x12_y0_base_roof.f32.gz",
+        "bytes": 5069,
+        "sha256": "56324cf5c72301aa07373b7433a2c5c3448de452972fb7c39106ed44b504d3ac"
+      },
+      "vertices": 3686
+    },
+    {
+      "tile": "x12_y1",
+      "coarse_start": 463868,
+      "count": 308,
+      "centre_east_north_km": [
+        50.0,
+        6.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x12_y1_points.f32.gz",
+        "bytes": 10294,
+        "sha256": "a8a91b5bd66a9909ab21ad6b1e4a3d8e3042d20bbde8aee8174afa0359c104f6"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x12_y1_offsets.u32.gz",
+        "bytes": 508,
+        "sha256": "d26032d3a02d4f2d937dea57b0be8846fc2aa93ebe151a837f3a95b60140a42a"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x12_y1_base_roof.f32.gz",
+        "bytes": 2253,
+        "sha256": "8d7ef3743c74cdac8f65aec3d9231e8baeafb05d4bc9112e2d11715e4eb140d7"
+      },
+      "vertices": 1586
+    },
+    {
+      "tile": "x12_y2",
+      "coarse_start": 464176,
+      "count": 40,
+      "centre_east_north_km": [
+        50.0,
+        10.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x12_y2_points.f32.gz",
+        "bytes": 1170,
+        "sha256": "7d175c5c2f3ec11f16970ef86694cf79dd3a55c47c5c7d67c851220e2c4c420c"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x12_y2_offsets.u32.gz",
+        "bytes": 131,
+        "sha256": "149e4f71bb6fe1869257c453aabf6af83e5c444b42811a33d7326460404084b1"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x12_y2_base_roof.f32.gz",
+        "bytes": 362,
+        "sha256": "353ab2a45d535bc64b7ff399dc3c2e9dc44efae4d69b1bd833bed7b4d2db493b"
+      },
+      "vertices": 170
+    },
+    {
+      "tile": "x12_y3",
+      "coarse_start": 464216,
+      "count": 119,
+      "centre_east_north_km": [
+        50.0,
+        14.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x12_y3_points.f32.gz",
+        "bytes": 3617,
+        "sha256": "44fc95b49c0ad1efe758cef2f64831e6f18efc0e6715262c00174b588fb25eb1"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x12_y3_offsets.u32.gz",
+        "bytes": 261,
+        "sha256": "3a9ca7d597af08e0ac910fb32a0c4633ad82cbae53588f92f12793be891f7dd1"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x12_y3_base_roof.f32.gz",
+        "bytes": 925,
+        "sha256": "a2937767037d07be64cd0d40e24248a79895a8c36bebefbae0f647b1cb52ba2b"
+      },
+      "vertices": 562
+    },
+    {
+      "tile": "x13_y-4",
+      "coarse_start": 464335,
+      "count": 4,
+      "centre_east_north_km": [
+        54.0,
+        -14.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x13_y-4_points.f32.gz",
+        "bytes": 142,
+        "sha256": "1f53c749ee480f5db43044305db9f67e9f9078c8f0fcea57a448cb0229ec88c2"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x13_y-4_offsets.u32.gz",
+        "bytes": 54,
+        "sha256": "1ac41cc500b140c1655d245bfc89986c4386a73bcdac40289fcd3e678e2a1139"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x13_y-4_base_roof.f32.gz",
+        "bytes": 65,
+        "sha256": "a1b216b7bbce716a262da657a6afd3e10be3630fe50c7753d8fbb3ef4e8d651f"
+      },
+      "vertices": 20
+    },
+    {
+      "tile": "x13_y-3",
+      "coarse_start": 464339,
+      "count": 11,
+      "centre_east_north_km": [
+        54.0,
+        -10.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x13_y-3_points.f32.gz",
+        "bytes": 469,
+        "sha256": "586f48190622e5dd54cbece38f727f13adf7b7079deb7873b9c44f904cec2e26"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x13_y-3_offsets.u32.gz",
+        "bytes": 71,
+        "sha256": "1124518682b52d88af8148dda6265bf51215f34ca03bc30d829eb65723c87a62"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x13_y-3_base_roof.f32.gz",
+        "bytes": 133,
+        "sha256": "9b192f314da8cc348af2fdfd5a914feab6f4f190310a8ff5e26866d97b054d7d"
+      },
+      "vertices": 58
+    },
+    {
+      "tile": "x13_y-2",
+      "coarse_start": 464350,
+      "count": 441,
+      "centre_east_north_km": [
+        54.0,
+        -6.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x13_y-2_points.f32.gz",
+        "bytes": 19426,
+        "sha256": "3df3eaa780a2f833b09bcc28b06887f577c95b5ee9d0401aa93264e581d7587c"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x13_y-2_offsets.u32.gz",
+        "bytes": 737,
+        "sha256": "c2b1c58056c134a6a8b028c53946d4fb13df4638dd64a0f8beefd0ce9cccf4ed"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x13_y-2_base_roof.f32.gz",
+        "bytes": 3130,
+        "sha256": "12923f85ff3c88f5585c5b75addb5c70079e37af8fad57b01d3ddc1ee515c3db"
+      },
+      "vertices": 2983
+    },
+    {
+      "tile": "x13_y-1",
+      "coarse_start": 464791,
+      "count": 33,
+      "centre_east_north_km": [
+        54.0,
+        -2.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x13_y-1_points.f32.gz",
+        "bytes": 1593,
+        "sha256": "361b00489555917644a7988133fb7643009a8b3ff61b58e2084b4185b2c25b78"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x13_y-1_offsets.u32.gz",
+        "bytes": 120,
+        "sha256": "64d64bfffed4ec489f0f41dc552f18a8a17950fd35acef3a03f0406362a1e073"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x13_y-1_base_roof.f32.gz",
+        "bytes": 309,
+        "sha256": "1fd0e60c81c935b8a14c2d7513de60920bcbba84cf2d058bf8f0d2c31fe3a08f"
+      },
+      "vertices": 230
+    },
+    {
+      "tile": "x13_y3",
+      "coarse_start": 464824,
+      "count": 159,
+      "centre_east_north_km": [
+        54.0,
+        14.0
+      ],
+      "points": {
+        "file": "../geography/buildings/x13_y3_points.f32.gz",
+        "bytes": 4235,
+        "sha256": "79ca050a5eb379711edfa2f9e61ce32dc08d33dd9611ffc2572621923063a7a6"
+      },
+      "offsets": {
+        "file": "../geography/buildings/x13_y3_offsets.u32.gz",
+        "bytes": 328,
+        "sha256": "8ddecb6cca53127e767959913e860ed18c1fb45c8526f83a3346978384b43a73"
+      },
+      "base_roof": {
+        "file": "../geography/buildings/x13_y3_base_roof.f32.gz",
+        "bytes": 1199,
+        "sha256": "6d1ad273a9feec4c4af1463b7ee9033dbd8e98c0a0151e7ac974b400dd15fd39"
+      },
+      "vertices": 677
+    }
+  ],
+  "height_policy": "Use supplied height. Otherwise tagged number of floors times assumed3m; otherwise schematic6m. These are not surveyed building models or airflow inputs.",
+  "LOD_policy": "Far: oriented bounding boxes of actual footprints. Near: original outer footprint extrusions, courtyard holes omitted in display; complete source geometry retained in GeoParquet.",
+  "actual_source_dataset": {
+    "started_UTC": "2026-11-13T12:02:47.602219+00:00",
+    "PID": 23680,
+    "purpose": "Real building display geometry only; running particle physics unchanged",
+    "status": "COMPLETE",
+    "elapsed_seconds": 228.29700000000594,
+    "release": "2026-10-21.0",
+    "source": "s3://overturemaps-us-west-2/release/2026-10-21.0/theme=buildings/type=building/*.parquet",
+    "bbox_west_south_east_north": [
+      119.99,
+      30.14,
+      120.7,
+      30.4
+    ],
+    "attribution": "\u00a9 Overture Maps Foundation; individual source records retained. \u00a9 OpenStreetMap contributors where applicable.",
+    "license": "https://docs.overturemaps.org/attribution/",
+    "features": 464909,
+    "file": "hangzhou_buildings.parquet",
+    "bytes": 45104997,
+    "sha256": "e8d92613e223e60f8850e1d8b3155883808f34d98638b0fc819c5b033a913619"
+  },
+  "physical_fields_changed": false,
+  "original_native_model_terrain_SHA256": "bdb5422f89da2437be94c70ae04042df020cd04c64588e2ed5f44aee11adcf58",
+  "attribution": "\u00a9 Overture Maps Foundation / \u00a9 OpenStreetMap contributors and individual source providers; sources retained in original GeoParquet.",
+  "license": "https://docs.overturemaps.org/attribution/"
+}

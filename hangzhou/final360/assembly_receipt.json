@@ -1,0 +1,33 @@
+{
+  "state": "actual_final360_site_assembled_pending_browser_and_image_review",
+  "source_sha256": "808fd8a21fee29a1b7cc88bcb30743ea32d5c793032a557f9689295f07bf3c35",
+  "prepared_UTC": "2026-11-27T23:52:30.543313+00:00",
+  "original_packs_reused": true,
+  "new_weather_or_transport_or_video_renders": 0,
+  "copied_module_sha256": {
+    "final360_viewer_v8.mjs": "45abf717a25e18c0f9bcc03d9403deb5a8f4d01305672d5f1009b36a7f60e1f4",
+    "final360_viewer_v8.css": "924b189df9a971e251cb76394580c26ae22ff90e653f0b20c0aab917434ed37e",
+    "field_data_v8.mjs": "77577fdd3ef48c667fdce8715c770d0f80070a19fbe92fc4ae85d0ceb2bf122c",
+    "native_query_v8.mjs": "68274e72c7e51398a060cf6abfa5deaedb04f9dc0dc33a51488f1dd4655aa023",
+    "display_scalar_v8.mjs": "ef16f8aa04e8fddff4c48a68a2e604a75808f4b12550848bf140bb7ee83f58ba",
+    "temporal_scalar.mjs": "78edbac04247f6dd4b971bc132cff47f248d1e3c405c4fca2d2571eec0c1f4ec",
+    "model_terrain_v8.mjs": "79cd853c1bee6e0842524db5722be886fe3e7df9acb1c6aea4e3929b7ea66daf",
+    "city_context_v8.mjs": "e609ff45412110a1fe1c225f6d5ad6d9fe7938b0777858d7ab005e351f9890f6",
+    "building_layer_v8.mjs": "4cbda34da47d4807ef1f4796054fd309c3a043e9626aa6a1de5cd6fbd77e263c",
+    "weather_data_v8.mjs": "9f592e49be531dbd28b420b8d8bd78383a2c49b9f52e0add88fd02f1ccc7b6d3",
+    "weather_effects_v8.mjs": "9bd03557d7d6461d08768fe95974111e3023364045b505cb964af615e2a93a24",
+    "volume_shader_v8.mjs": "49a9fdf44116d48ee7ec0b9900219740e615c3d4dac4f4d1b8d9f8a7947fbac1",
+    "plume_geometry_volume_v8.mjs": "6cea342e7edd29f69902ffad154fe32967d4095ef0b64e29a174c04af585d91e",
+    "plume_geometry_codec_v8.mjs": "ab7923a82aaf660031a05d146b8d123beaa7185ac20efb5a87237a23204ab15a",
+    "plume_geometry_shader_v8.mjs": "21635229c34e0d2c664a09ddeb1dccc151a26b3fbf4d09b56d00e0459ede8a10"
+  },
+  "site_file_bytes": 841825203,
+  "browser_UI_checked": false,
+  "actual_images_viewed": false,
+  "repository_writes": false,
+  "wall_s": 122.62219321099838,
+  "display_only_adjustments": [
+    "Clear stale query when reporting time changes",
+    "Increase rain glyph contrast; unchanged actual rainfall, count and opacity binding"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "state": "actual_scientific_figure_and_page_generated_UI_review_pending",
+  "source_sha256": "808fd8a21fee29a1b7cc88bcb30743ea32d5c793032a557f9689295f07bf3c35",
+  "new_forecast_steps": 0,
+  "new_particle_steps": 0,
+  "actual_reporting_hours": 360,
+  "rendered_figures": 1,
+  "output_pixels": [
+    3840,
+    2160
+  ],
+  "display_colour_transform": "power0.35; actual unmodified numeric units",
+  "actual_images_viewed": false,
+  "public_site_modified": false,
+  "wall_s": 1.4083808930008672,
+  "completed_UTC": "2026-11-27T23:50:12.381772+00:00"
+}

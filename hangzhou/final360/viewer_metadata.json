@@ -1,0 +1,39 @@
+{
+  "schema": "hangzhou-v8-final360-viewer-v1",
+  "reporting_hours": 360,
+  "source_sha256": "808fd8a21fee29a1b7cc88bcb30743ea32d5c793032a557f9689295f07bf3c35",
+  "native_manifest_url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/03fbe5e3fcfe922b59522ec2e4c5c65d5a2cfd45/native/manifest.json",
+  "display_manifest_url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/03fbe5e3fcfe922b59522ec2e4c5c65d5a2cfd45/display/display_manifest.json",
+  "plume_metadata_url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/03fbe5e3fcfe922b59522ec2e4c5c65d5a2cfd45/plume/plume-geometry.json",
+  "weather_metadata_url": "https://raw.githubusercontent.com/baiming-zhang/Agent_climate/03fbe5e3fcfe922b59522ec2e4c5c65d5a2cfd45/weather/metadata.json",
+  "terrain_metadata_url": "./terrain/metadata.json",
+  "city_context_url": "./geography/context.json",
+  "plume_trace_sha256": "18accbf0021161d826608f600ce4a4b2dd1406f2cfe6e7036903039de2080ec2",
+  "weather_integrity_sha256": "a74bfbadddc1d498cc7f961c577b5c78caa322c4ce273eb5315d877d613170f8",
+  "origin_lon_lat": [
+    120.15,
+    30.27
+  ],
+  "km_per_degree": [
+    96.14258692674386,
+    111.0
+  ],
+  "report_start_UTC": "2026-11-24T16:00:00Z",
+  "report_end_UTC_exclusive": "2026-12-09T16:00:00Z",
+  "ground_layer_m_AGL": [
+    0,
+    25
+  ],
+  "default_playback_seconds": 15,
+  "vertical_display_scale": 1.8,
+  "source_model": "Native regional stack + distributed + finite-travel integral plume + pending hand-off, once each.",
+  "fine_display_replaces_only_coarse_near_plume": true,
+  "native_query_role": "Original float64 native cell/hour means; residence reconstruction is explicitly separate.",
+  "new_forecast_steps": 0,
+  "new_particle_steps": 0,
+  "full_city_UI_checked": true,
+  "actual_images_viewed": true,
+  "public_site_modified": false,
+  "immutable_data_commit": "03fbe5e3fcfe922b59522ec2e4c5c65d5a2cfd45",
+  "public_data_binding_checked": false
+}
